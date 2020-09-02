@@ -1,0 +1,85 @@
+### YamlMime:Landing
+title: Microsoft Edge エンタープライズのドキュメント
+summary: Microsoft Edge は、ブラウザーのエクスペリエンスを強化および拡張します。 Windows、macOS、iOS、Android デバイスで動作します。
+metadata:
+  title: Microsoft Edge
+  description: Microsoft Edge は、ブラウザーのエクスペリエンスを強化および拡張します。 Windows、macOS、iOS、Android デバイスで動作します。
+  services: service
+  ms.service: service
+  ms.subservice: subservice
+  ms.topic: landing-page
+  ms.collection: collection
+  author: dan-wesley
+  ms.author: kvice
+  ms.date: 08/21/2020
+  ms.openlocfilehash: 0a725b99799d7a2476994f1cbddf12fcd688f1e4
+  ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 08/31/2020
+  ms.locfileid: "10980509"
+landingContent:
+- title: エンタープライズ環境での Microsoft Edge について
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Microsoft Edge チャネル概要
+      url: microsoft-edge-channels.md
+    - text: Microsoft Edge チャネルをダウンロードする
+      url: https://aka.ms/EdgeEnterprise
+    - text: エンタープライズ機能を使用する
+      url: edge-ie-mode.md
+    - text: Microsoft Edge および Microsoft Search のビデオ
+      url: microsoft-edge-video-search.md
+- title: Microsoft Edge を展開および更新する
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: Microsoft Edge の展開を計画する
+      url: deploy-edge-plan-deployment.md
+    - text: ビデオ - Microsoft Edge の展開
+      url: microsoft-edge-video-deploy.md
+    - text: Windows に展開する
+      url: https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json
+    - text: macOS に展開する
+      url: https://docs.microsoft.com/intune/apps/apps-edge-macos/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json
+- title: Microsoft Edge を構成する
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Windows で Microsoft Edge を構成する
+      url: configure-microsoft-edge.md
+    - text: MacOS で Microsoft Edge を構成する
+      url: configure-microsoft-edge-on-mac.md
+    - text: Microsoft Edge を既定のブラウザーとして設定する
+      url: edge-default-browser.md
+- title: セキュリティとプライバシーを管理する
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: ビデオ - セキュリティ、互換性、管理性
+      url: microsoft-edge-video-security-compatibility-manageability.md
+    - text: セキュリティ
+      url: security-overview.md
+    - text: プライバシー
+      url: microsoft-edge-enterprise-privacy-settings.md
+- title: ポリシー リファレンス
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: ブラウザー ポリシー リファレンス
+      url: microsoft-edge-policies.md
+    - text: 更新ポリシー リファレンス
+      url: microsoft-edge-update-policies.md
+    - text: ポリシー マッピングの概要
+      url: microsoft-edge-policy-map-overview.md
+    - text: Microsoft Office セキュリティ ベースライン ブログ
+      url: https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines
+- title: エンタープライズ コミュニティに参加する、ヘルプを利用する
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: エンタープライズ テクニカル コミュニティ
+      url: https://techcommunity.microsoft.com/t5/Enterprise/bd-p/EdgeInsiderEnterprise
+    - text: Microsoft Edge サポートに問い合わせる
+      url: https://microsoftedgesupport.microsoft.com/hc/

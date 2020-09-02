@@ -1,0 +1,165 @@
+# last revised 08/21/2020
+- name: Microsoft Edge エンタープライズのドキュメント
+  href: index.yml
+- name: Microsoft Edge ドキュメント
+  href: 'https://docs.microsoft.com/microsoft-edge/'
+- name: Microsoft Edge コンテンツの更新プログラム
+  href: microsoft-edge-content-updates.md
+- name: Microsoft Edge の使用を開始する
+  items:
+    - name: Microsoft Edge チャネルの詳細
+      href: microsoft-edge-channels.md
+    - name: 新着情報を見る
+      href: 'https://www.microsoftedgeinsider.com/whats-new'
+    - name: 顧客導入資料
+      href: microsoft-edge-customer-adoption-kit.md
+    - name: ドキュメントのリソースを探す
+      href: 'https://docs.microsoft.com/microsoft-edge/'
+    - name: Microsoft Edge の実践的な展開ラボ
+      href: deploy-edge-hands-on-lab.md
+    - name: Windows Blogs - Microsoft Edge 開発者
+      href: 'https://blogs.windows.com/msedgedev/'
+- name: Microsoft Edge のプラン
+  items:
+    - name: Microsoft Edge エンタープライズロードマップ
+      href: microsoft-edge-roadmap.md
+    - name: Microsoft Edge の展開を計画する
+      href: deploy-edge-plan-deployment.md
+    - name: リリース情報
+      items:
+        - name: リリーススケジュール
+          href: microsoft-edge-release-schedule.md
+        - name: Beta チャネルのリリース ノート
+          href: microsoft-edge-relnote-beta-channel.md
+        - name: Stable チャネルのリリース ノート
+          href: microsoft-edge-relnote-stable-channel.md
+        - name: セキュリティ更新プログラム
+          href: microsoft-edge-relnotes-security.md
+    - name: Microsoft Edge ポリシー マッピング
+      items:
+        - name: ポリシー マッピングの概要
+          href: microsoft-edge-policy-map-overview.md
+        - name: Microsoft Edge Legacy から Microsoft Edge ポリシーへのマッピング
+          href: microsoft-edge-policy-map-legacy-to-newedge.md
+        - name: Google Chrome から Microsoft Edge ポリシーへのマッピング
+          href: microsoft-edge-policy-map-chrome-to-newedge.md
+    - name: サポートされるオペレーティング システム
+      href: microsoft-edge-supported-operating-systems.md
+    - name: ライフサイクル ポリシー
+      href: microsoft-edge-support-lifecycle.md
+    - name: サポートされている言語
+      href: microsoft-edge-supported-languages.md
+    - name: Microsoft Edge 用システム更新
+      items:
+        - name: Microsoft Edge 更新プログラム用の Blocker Toolkit
+          href: microsoft-edge-blocker-toolkit.md
+        - name: 旧バージョンの Microsoft Edge にアクセスする方法
+          href: microsoft-edge-sysupdate-access-old-edge.md
+        - name: Microsoft Edge をサポートする Windows 更新プログラム
+          href: microsoft-edge-sysupdate-windows-updates.md
+- name: Microsoft Edge の展開
+  items:
+    - name: ビデオ - Microsoft Edge の展開
+      href: microsoft-edge-video-deploy.md
+    - name: Configuration Manager による Windows への展開
+      href: 'https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
+    - name: Intune による Windows への展開
+      href: 'https://docs.microsoft.com/intune/apps/apps-windows-edge/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
+    - name: Jamf による macOS への展開
+      href: deploy-edge-mac-jamf.md
+    - name: Intune による macOS への展開
+      href: 'https://docs.microsoft.com/intune/apps/apps-edge-macos/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
+- name: Microsoft Edge を構成する
+  items:
+    - name: Windows 用に構成する
+      href: configure-microsoft-edge.md
+    - name: Intune で Windows 用に構成する
+      href: configure-edge-with-intune.md
+    - name: モバイル デバイス管理で Windows 用に構成する
+      href: configure-edge-with-mdm.md
+    - name: .plist を使用して macOS 用に構成する
+      href: configure-microsoft-edge-on-mac.md
+    - name: Jamf を使用して macOS 用に構成する
+      href: configure-microsoft-edge-on-mac-jamf.md
+- name: Microsoft Edge エンタープライズ機能を使用する
+  items:
+    - name: Microsoft Edge および Microsoft Search のビデオ
+      href: microsoft-edge-video-search.md
+    - name: 構成とテスト
+      href: edge-configuration-and-experiments.md
+    - name: ID サポートと構成
+      href: microsoft-edge-security-identity.md
+    - name: Microsoft Edge と Enterprise State Roaming
+      href: microsoft-edge-enterprise-state-roaming.md
+    - name: Microsoft Edge キオスク モード
+      href: microsoft-edge-kiosk-mode.md
+    - name: Microsoft Edge の同期
+      href: microsoft-edge-enterprise-sync.md
+    - name: Active Directory ユーザー用のオンプレミス同期
+      href: microsoft-edge-on-premises-sync.md
+    - name: Microsoft Edge の PDF リーダー
+      href: microsoft-edge-pdf.md
+    - name: Microsoft Edge を既定のブラウザーとして設定する
+      href: edge-default-browser.md
+    - name: Microsoft Edge を IE モードで使用する
+      items:
+        - name: IE モードの概要
+          href: edge-ie-mode.md
+        - name: エンタープライズ モード サイト リストでのサイトの構成
+          href: edge-ie-mode-sitelist.md
+        - name: IE モード ポリシーの構成
+          href: edge-ie-mode-policies.md
+        - name: Enterprise Site Discovery ステップ バイ ステップ ガイド
+          href: edge-ie-mode-site-discovery.md
+        - name: IE モードに関する FAQ
+          href: edge-ie-mode-faq.md
+- name: Microsoft Edge のセキュリティ
+  items:
+    - name: ビデオ - セキュリティ、互換性、管理性
+      href: microsoft-edge-video-security-compatibility-manageability.md
+    - name: セキュリティの概要
+      href: security-overview.md
+    - name: Microsoft Edge エンドポイントの許可リスト
+      href: microsoft-edge-security-endpoints.md
+    - name: 望ましくない可能性のあるアプリケーションから保護する
+      href: microsoft-edge-potentially-unwanted-apps.md
+    - name: Application Guard のサポート
+      href: microsoft-edge-security-windows-defender-application-guard.md
+    - name: Microsoft Defender SmartScreen のサポート
+      href: microsoft-edge-security-smartscreen.md
+    - name: Windows Information Protectionのサポート
+      href: microsoft-edge-security-windows-information-protection.md
+- name: Microsoft Edge プライバシー
+  items:
+    - name: プライバシー設定を構成する
+      href: microsoft-edge-enterprise-privacy-settings.md
+    - name: Microsoft Edge プライバシー ホワイトペーパー
+      href: 'https://docs.microsoft.com/microsoft-edge/privacy-whitepaper'
+- name: Microsoft Edge リファレンス
+  items:
+    - name: ブラウザー ポリシー リファレンス
+      href: microsoft-edge-policies.md
+    - name: 更新ポリシー リファレンス
+      href: microsoft-edge-update-policies.md
+    - name: 詳細情報
+      items:
+        - name: ClickOnce および DirectInvoke
+          href: edge-learn-more-co-di.md
+        - name: プロキシ設定を構成するためのコマンド ライン オプション
+          href: edge-learnmore-cmdline-options-proxy-settings.md
+        - name: IE モードで構成可能なサイト
+          href: edge-learnmore-configurable-sites-ie-mode.md
+        - name: URL 一覧ベースのポリシーのフィルター形式
+          href: edge-learnmmore-url-list-filter format.md
+        - name: IE モードでページ内ナビゲーションを保持する
+          href: edge-learnmore-inpage-nav.md
+        - name: 混在したコンテンツのダウンロード
+          href: edge-learnmore-mixed-content-downloads.md
+        - name: Stable チャネル更新プログラムの段階的なロールアウト
+          href: microsoft-edge-update-progressive-rollout.md
+        - name: Regular Expression 2 (re2.h) の構文
+          href: edge-learnmore-regex.md
+        - name: ユーザー データ ディレクトリ変数
+          href: edge-learnmore-create-user-directory-vars.md
+- name: よく寄せられる質問
+  href: faqs-edge-in-the-enterprise.md
