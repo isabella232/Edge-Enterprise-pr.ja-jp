@@ -3,7 +3,7 @@ title: Microsoft Edge ブラウザー ポリシーに関するドキュメント
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 08/12/2020
+ms.date: 09/01/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
-ms.openlocfilehash: 8b514b1c1cbcaf64e8c44497522c368f71e7a0a0
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 9320d7e7b161e6d92421b05262391642b0fe1c2d
+ms.sourcegitcommit: 827a47d641c7ddc1d89be5d5fc0615373dec18b0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980535"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "10993727"
 ---
 # Microsoft Edge - ポリシー
 最新バージョンの Microsoft Edge には、次のポリシーが含まれています。 これらのポリシーを使用して、組織内での Microsoft Edge の動作方法を構成することができます。
@@ -82,6 +82,8 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[PopupsAllowedForUrls](#popupsallowedforurls)|特定のサイトでのポップアップ ウィンドウの表示を許可する|
 |[PopupsBlockedForUrls](#popupsblockedforurls)|特定のサイトでのポップアップ ウィンドウのブロック|
 |[RegisteredProtocolHandlers](#registeredprotocolhandlers)|プロトコル ハンドラーを登録する|
+|[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|ユーザーがカスタマイズされた背景画像およびテキスト、提案、通知を受け取ることができるようにするかどうか選択する
+そしてMicrosoft サービスのヒントも受け取るのかどうか|
 |[WebUsbAllowDevicesForUrls](#webusballowdevicesforurls)|特定の USB デバイスに接続するために、特定のサイトへのアクセスを許可する|
 |[WebUsbAskForUrls](#webusbaskforurls)|特定のサイトでの WebUSB を許可する|
 |[WebUsbBlockedForUrls](#webusbblockedforurls)|特定のサイトでの WebUSB のブロック|
@@ -224,6 +226,8 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled)|DNS の傍受チェックを有効にする|
 |[DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)|Microsoft Edge を既定のブラウザーとして設定する|
 |[DefaultSearchProviderContextMenuAccessAllowed](#defaultsearchprovidercontextmenuaccessallowed)|既定の検索プロバイダーのコンテキスト メニューへのアクセスを許可する|
+|[DefaultSensorsSetting](#defaultsensorssetting)|既定のセンサーの設定|
+|[DefaultSerialGuardSetting](#defaultserialguardsetting)|シリアル API の使用を制御する|
 |[DelayNavigationsForInitialSiteListDownload](#delaynavigationsforinitialsitelistdownload)|タブ ナビゲーションの前にエンタープライズ モード サイト一覧が使用できるようにする|
 |[DeleteDataOnMigration](#deletedataonmigration)|移行時に古いブラウザー データを削除する|
 |[DeveloperToolsAvailability](#developertoolsavailability)|開発者ツールの使用を制御する|
@@ -256,6 +260,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[ForceGoogleSafeSearch](#forcegooglesafesearch)|Google セーフサーチを強制する|
 |[ForceLegacyDefaultReferrerPolicy](#forcelegacydefaultreferrerpolicy)|no-referrer-when-downgrade の既定の参照元ポリシーを使用する (非推奨)|
 |[ForceNetworkInProcess](#forcenetworkinprocess)|ブラウザー プロセスでネットワーク コードを強制的に実行する (不使用)|
+|[ForceSync](#forcesync)|ブラウザーのデータを強制的に同期し、同期の同意プロンプトを表示しない|
 |[ForceYouTubeRestrict](#forceyoutuberestrict)|最小限の YouTube 制限モードを強制的に実行する|
 |[FullscreenAllowed](#fullscreenallowed)|全画面表示モードを許可する|
 |[GloballyScopeHTTPAuthCacheEnabled](#globallyscopehttpauthcacheenabled)|グローバルにスコープが設定された HTTP 認証キャッシュを有効にする|
@@ -276,11 +281,13 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[ImportSearchEngine](#importsearchengine)|検索エンジンの設定のインポートを許可する|
 |[ImportShortcuts](#importshortcuts)|ショートカットのインポートを許可する|
 |[InPrivateModeAvailability](#inprivatemodeavailability)|InPrivate モードの可用性を構成する|
+|[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|セキュリティのないフォームに対する警告を有効にする|
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|IntensiveWakeUpThrottling 機能を制御する|
 |[InternetExplorerIntegrationEnhancedHangDetection](#internetexplorerintegrationenhancedhangdetection)|Internet Explorer モードの拡張ハング検出を構成する|
 |[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)|Internet Explorer 統合を構成する|
 |[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|エンタープライズ モード サイト一覧を構成する|
 |[InternetExplorerIntegrationSiteRedirect](#internetexplorerintegrationsiteredirect)|Internet Explorer モード ページから起動したときに未構成サイトへの「ページ内」ナビゲーションの動作を指定する|
+|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Internet Explorer モードテストを許可する|
 |[IsolateOrigins](#isolateorigins)|特定のオリジンでのサイトの分離を有効にする|
 |[LocalProvidersEnabled](#localprovidersenabled)|ローカル プロバイダーからのおすすめを許可する|
 |[ManagedFavorites](#managedfavorites)|お気に入りを構成する|
@@ -319,6 +326,10 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[SecurityKeyPermitAttestation](#securitykeypermitattestation)|直接的なセキュリティ キーの構成証明を使用するためのアクセス許可を必要としない Web サイトやドメイン|
 |[SendIntranetToInternetExplorer](#sendintranettointernetexplorer)|すべてのイントラネット サイトを Internet Explorer に送る|
 |[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices)|Microsoft サービスの品質向上のためにサイト情報を送信する (非推奨)|
+|[SensorsAllowedForUrls](#sensorsallowedforurls)|特定のサイトでのセンサーへのアクセスを許可する|
+|[SensorsBlockedForUrls](#sensorsblockedforurls)|特定のサイトでのセンサーへのアクセスをブロックする|
+|[SerialAskForUrls](#serialaskforurls)|特定のサイトでのシリアル API を許可する|
+|[SerialBlockedForUrls](#serialblockedforurls)|特定のサイトでのシリアル API をブロックする|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|お気に入り バーに Microsoft Office のショートカットを表示する|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Signed HTTP Exchange (SXG) のサポートを有効にする|
 |[SitePerProcess](#siteperprocess)|すべてのサイトでのサイトの分離を有効にする|
@@ -340,6 +351,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[URLBlocklist](#urlblocklist)|URL の一覧へのアクセスをブロックする|
 |[UserAgentClientHintsEnabled](#useragentclienthintsenabled)|ユーザー エージェント クライアント ヒント機能を有効にする (非推奨)|
 |[UserDataDir](#userdatadir)|ユーザー データ ディレクトリを設定する|
+|[UserDataSnapshotRetentionLimit](#userdatasnapshotretentionlimit)|緊急ロールバック時の使用のために保持するユーザーデータのスナップショット数を制限します。|
 |[UserFeedbackAllowed](#userfeedbackallowed)|ユーザー フィードバックを許可する|
 |[VideoCaptureAllowed](#videocaptureallowed)|ビデオ キャプチャの許可またはブロック|
 |[VideoCaptureAllowedUrls](#videocaptureallowedurls)|アクセス許可を要求することなくビデオ キャプチャ デバイスにアクセスできるサイト|
@@ -568,7 +580,7 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = {"pattern":"https://www.contoso.com","filter":{"ISSUER":{"CN":"certificate issuer name", "L": "certificate issuer location", "O": "certificate issuer org", "OU": "certificate issuer org unit"}, "SUBJECT":{"CN":"certificate subject name", "L": "certificate subject location", "O": "certificate subject org", "OU": "certificate subject org unit"}}}
+SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":\"https://www.contoso.com\",\"filter\":{\"ISSUER\":{\"CN\":\"certificate issuer name\", \"L\": \"certificate issuer location\", \"O\": \"certificate issuer org\", \"OU\": \"certificate issuer org unit\"}, \"SUBJECT\":{\"CN\":\"certificate subject name\", \"L\": \"certificate subject location\", \"O\": \"certificate subject org\", \"OU\": \"certificate subject org unit\"}}}"
 
 ```
 
@@ -631,8 +643,8 @@ SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = {"pattern":"ht
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -694,8 +706,8 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = [*.]contoso.edu
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -761,8 +773,8 @@ Microsoft Edge がバックグラウンド モードで実行されている場�
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1134,13 +1146,13 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = [*.]contoso.edu
   - Windows と macOS での 77 以降
 
   #### 説明
-  [PluginsAllowedForUrls](#pluginsallowedforurls) または [PluginsBlockedForUrls](#pluginsblockedforurls) の対象になっていない Web サイトが、自動的に Adobe Flash プラグインを実行できるかどうかを決定します。 "BlockPlugins" を選択してすべてのサイトで Adobe Flash をブロックするか、または "ClickToPlay" を選択して Adobe Flash を実行できるようにするかを選択することができますが、それを開始するにはユーザーがプレースホルダーをクリックする必要があります。 [PluginsAllowedForUrls](#pluginsallowedforurls) と [PluginsBlockedForUrls](#pluginsblockedforurls) ポリシーは、いつでも "DefaultPluginsSetting" よりも優先されます。
+  [PluginsAllowedForUrls](#pluginsallowedforurls) と [PluginsBlockedForUrls](#pluginsblockedforurls) が最初にチェックされ、その後、このポリシーがあります。 [ClickToPlay] と [BlockPlugins] のどちらかを選択できます。 このポリシーを ' BlockPlugins ' に設定すると、すべての web サイトでこのプラグインが拒否されます。 [ClickToPlay] は、フラッシュプラグインを実行しますが、ユーザーはプレースホルダーをクリックして起動します。
 
-自動再生は、[ PrauginsAllowedForUrls](#pluginsallowedforurls) ポリシーに明示的にリストされているドメインにのみ許可されます。 すべてのサイトの自動再生を有効にする場合は、http://* と https://* をこの一覧に追加します。
+                                                                                                                                                                                                                                            
 
-このポリシーを構成していない場合、ユーザーはこの設定を手動で変更することができます。
+このポリシーを設定しない場合は、BlockPlugins が使用されますが、ユーザーはこの設定を変更できます。
 
-以前の "1" オプションはすべてを許可する設定になっていましたが、この機能は [PluginsAllowedForUrls](#pluginsallowedforurls) ポリシーでのみ処理されるようになりました。  "1" を使用している既存のポリシーは、"ClickToPlay" モードで動作します。
+注: 自動再生は、[PluginsAllowedForUrls](#pluginsallowedforurls) ポリシーに明示的にリストされているドメインにのみ許可されます。 すべてのサイトに対して自動再生をオンにするには、許可されている Url のリストに http://* および https://* を追加します。
 
 ポリシー オプション マッピング:
 
@@ -1390,8 +1402,8 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = [*.]contoso.edu
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1443,8 +1455,8 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = [*.]contoso.edu
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1496,8 +1508,8 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = [*.]contoso.edu
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\1 = https://www.example.com
-SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = [*.]example.edu
+SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.edu"
 
 ```
 
@@ -1549,8 +1561,8 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = [*.]example.e
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\1 = https://www.example.com
-SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = [*.]example.edu
+SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.edu"
 
 ```
 
@@ -1602,8 +1614,8 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = [*.]example.e
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1655,8 +1667,8 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = [*.]contoso.edu
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1770,8 +1782,8 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = [*.]contoso.edu
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList\1 = www.example.com
-SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList\2 = [*.]example.edu
+SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList\1 = "www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList\2 = "[*.]example.edu"
 
 ```
 
@@ -1823,8 +1835,8 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1876,8 +1888,8 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = [*.]contoso.edu
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1931,8 +1943,8 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = [*.]contoso.edu
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = http://contoso.edu:8080
+SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8080"
 
 ```
 
@@ -1986,8 +1998,8 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = http://contoso.edu:80
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = http://contoso.edu:8080
+SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8080"
 
 ```
 
@@ -2039,8 +2051,8 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = http://contoso.edu:80
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -2092,8 +2104,8 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = [*.]contoso.edu
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -2176,6 +2188,51 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
   </dict>
 </array>
 ```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### SpotlightExperiencesAndRecommendationsEnabled
+  #### ユーザーがカスタマイズされた背景画像およびテキスト、提案、通知を受け取ることができるようにするかどうか選択する
+そしてMicrosoft サービスのヒントも受け取るのかどうか
+  
+  
+  #### サポートされているバージョン:
+  - Windows での 86 以降
+
+  #### 説明
+  ユーザーがカスタマイズされた背景画像およびテキスト、提案、通知、Microsoft サービスのヒントを受信できるかどうかを選択します。
+
+この設定を有効にした場合、またはこの設定を構成しなかった場合は、スポットライトの機能と推奨事項が有効になります。
+
+この設定を無効にした場合は、スポットライトのエクスペリエンスと推奨事項が無効になります。
+
+  #### サポートされている機能:
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: いいえ - ブラウザの再起動が必要
+
+  #### ［データの種類］:
+  - ブール値
+
+  #### Windows の情報と設定
+  ##### グループ ポリシー (ADMX) 情報
+  - GP 固有の名前: SpotlightExperiencesAndRecommendationsEnabled
+  - [GP name]: カスタマイズされた背景画像およびテキスト、提案、通知、Microsoft サービスのヒントをユーザーが受信できるかどうかを選択します。
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/コンテンツの設定
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+  ##### Windows レジストリの設定
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - 値の名前: SpotlightExperiencesAndRecommendationsEnabled
+  - 値の種類: REG_DWORD
+  ##### サンプル値:
+```
+0x00000001
+```
+
+
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -2299,8 +2356,8 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -2354,8 +2411,8 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = [*.]contoso.edu
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -2475,10 +2532,10 @@ Microsoft Edge 84 以降、このポリシーは推奨されるポリシーと�
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\1 = UTF-8
-SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\2 = UTF-16
-SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\3 = GB2312
-SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = ISO-8859-1
+SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\1 = "UTF-8"
+SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\2 = "UTF-16"
+SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\3 = "GB2312"
+SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
 
 ```
 
@@ -2542,7 +2599,7 @@ Microsoft Edge 84 以降、このポリシーは推奨されるポリシーと�
   - 値の種類: REG_SZ
   ##### サンプル値:
 ```
-https://search.contoso.com/searchbyimage/upload
+"https://search.contoso.com/searchbyimage/upload"
 ```
 
 
@@ -2596,7 +2653,7 @@ Microsoft Edge 84 以降、このポリシーは推奨されるポリシーと�
   - 値の種類: REG_SZ
   ##### サンプル値:
 ```
-content={imageThumbnail},url={imageURL},sbisrc={SearchSource}
+"content={imageThumbnail},url={imageURL},sbisrc={SearchSource}"
 ```
 
 
@@ -2648,7 +2705,7 @@ Microsoft Edge 84 以降、このポリシーは推奨されるポリシーと�
   - 値の種類: REG_SZ
   ##### サンプル値:
 ```
-mis
+"mis"
 ```
 
 
@@ -2702,7 +2759,7 @@ Microsoft Edge 84 以降、このポリシーは推奨されるポリシーと�
   - 値の種類: REG_SZ
   ##### サンプル値:
 ```
-My Intranet Search
+"My Intranet Search"
 ```
 
 
@@ -2758,7 +2815,7 @@ Microsoft Edge 84 以降、このポリシーは推奨されるポリシーと�
   - 値の種類: REG_SZ
   ##### サンプル値:
 ```
-https://search.contoso.com/search?q={searchTerms}
+"https://search.contoso.com/search?q={searchTerms}"
 ```
 
 
@@ -2816,7 +2873,7 @@ Microsoft Edge 84 以降、このポリシーは推奨されるポリシーと�
   - 値の種類: REG_SZ
   ##### サンプル値:
 ```
-https://search.contoso.com/suggest?q={searchTerms}
+"https://search.contoso.com/suggest?q={searchTerms}"
 ```
 
 
@@ -2852,7 +2909,7 @@ https://search.contoso.com/suggest?q={searchTerms}
 - [アドレス バー] (リダイレクト)、新しいタブ ページの検索ボックスはアドレス バーを使用して新しいタブを検索します。
 
 ポリシー オプション マッピング:
-        
+  
 
 * bing (bing) = 検索ボックス (推奨)
 
@@ -2882,7 +2939,7 @@ https://search.contoso.com/suggest?q={searchTerms}
   - 値の種類: REG_SZ
   ##### サンプル値:
 ```
-bing
+"bing"
 ```
 
 
@@ -2940,7 +2997,7 @@ bing
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = hosted_app
+SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
 ```
 
@@ -2989,8 +3046,8 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = hosted_app
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\1 = extension_id1
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = extension_id2
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\1 = "extension_id1"
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
 ```
 
@@ -3044,8 +3101,8 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = extension_id2
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\1 = extension_id1
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = extension_id2
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\1 = "extension_id1"
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
 ```
 
@@ -3075,7 +3132,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = extension_id2
 
 このポリシーは、競合の可能性がある [ExtensionInstallBlocklist](#extensioninstallblocklist) ポリシーよりも優先されます。 強制インストール リストから拡張機能を外すと、その拡張機能は Microsoft Edge により自動的にアンインストールされます。
 
-Microsoft Active Directory ドメインに参加していない Windows デバイスについては、強制インストールは Microsoft Store で利用できる拡張機能に限定されます。
+強制的なインストールは、Microsoft Edge アドオンの web サイトに記載されているアプリと拡張機能に限られます。この web サイトのインスタンスには以下のものは含まれません：Microsoft Active Directory ドメインに参加している Windows インスタンス、またはデバイス管理用に登録されている Windows 10 Pro またはエンタープライズインスタンス、および MDM 経由で管理されている macOS インスタンス、または MCX 経由でドメインに参加しているインスタンス
 
 ユーザーは開発者ツールを使用して拡張機能のソース コードを変更することができ、その結果として拡張機能が機能不全に陥る可能性があります。 これが問題になる場合は、[DeveloperToolsAvailability](#developertoolsavailability) ポリシーを設定します。
 
@@ -3115,8 +3172,8 @@ Microsoft Active Directory ドメインに参加していない Windows デバ�
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\1 = gbchcmhmhahfdphkhkmpfmihenigjmpp;https://edge.microsoft.com/extensionwebstorebase/v1/crx
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = abcdefghijklmnopabcdefghijklmnop
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\1 = "gbchcmhmhahfdphkhkmpfmihenigjmpp;https://edge.microsoft.com/extensionwebstorebase/v1/crx"
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnopabcdefghijklmnop"
 
 ```
 
@@ -3172,7 +3229,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = abcdefghijklmnopa
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = https://corp.contoso.com/*
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.contoso.com/*"
 
 ```
 
@@ -3483,7 +3540,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   - 値の種類: REG_SZ
   ##### サンプル値:
 ```
-contoso.com
+"contoso.com"
 ```
 
 
@@ -3533,7 +3590,7 @@ contoso.com
   - 値の種類: REG_SZ
   ##### サンプル値:
 ```
-basic,digest,ntlm,negotiate
+"basic,digest,ntlm,negotiate"
 ```
 
 
@@ -3583,7 +3640,7 @@ basic,digest,ntlm,negotiate
   - 値の種類: REG_SZ
   ##### サンプル値:
 ```
-*contoso.com,contoso.com
+"*contoso.com,contoso.com"
 ```
 
 
@@ -3769,8 +3826,8 @@ Samba と Windows Server の最新バージョンは、すべて NTLMv2 をサ�
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\1 = com.native.messaging.host.name1
-SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = com.native.messaging.host.name2
+SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\1 = "com.native.messaging.host.name1"
+SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messaging.host.name2"
 
 ```
 
@@ -3824,8 +3881,8 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = com.native.messagi
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\1 = com.native.messaging.host.name1
-SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = com.native.messaging.host.name2
+SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\1 = "com.native.messaging.host.name1"
+SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messaging.host.name2"
 
 ```
 
@@ -4055,7 +4112,7 @@ Microsoft Edge が安全でないパスワードを検出する方法の詳細�
   - 値の種類: REG_SZ
   ##### サンプル値:
 ```
-https://contoso.com/change_password.html
+"https://contoso.com/change_password.html"
 ```
 
 
@@ -4107,8 +4164,8 @@ https://contoso.com/change_password.html
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\1 = https://contoso.com/login.html
-SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = https://login.contoso.com
+SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\1 = "https://contoso.com/login.html"
+SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.contoso.com"
 
 ```
 
@@ -4234,7 +4291,7 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = https://login.c
   - 値の種類: REG_SZ
   ##### サンプル値:
 ```
-{ "idPattern": ".*public", "namePattern": ".*Color" }
+"{ \"idPattern\": \".*public\", \"namePattern\": \".*Color\" }"
 ```
 
 
@@ -4494,7 +4551,7 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = https://login.c
   - 値の種類: REG_SZ
   ##### サンプル値:
 ```
-https://www.contoso.com, https://www.fabrikam.com
+"https://www.contoso.com, https://www.fabrikam.com"
 ```
 
 
@@ -4570,7 +4627,7 @@ https://www.contoso.com, https://www.fabrikam.com
   - 値の種類: REG_SZ
   ##### サンプル値:
 ```
-direct
+"direct"
 ```
 
 
@@ -4624,7 +4681,7 @@ direct
   - 値の種類: REG_SZ
   ##### サンプル値:
 ```
-https://internal.contoso.com/example.pac
+"https://internal.contoso.com/example.pac"
 ```
 
 
@@ -4678,7 +4735,7 @@ https://internal.contoso.com/example.pac
   - 値の種類: REG_SZ
   ##### サンプル値:
 ```
-123.123.123.123:8080
+"123.123.123.123:8080"
 ```
 
 
@@ -4930,8 +4987,8 @@ Microsoft Defender SmartScreen ダウンロード保護サービスは、これ�
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\1 = mydomain.com
-SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = myuniversity.edu
+SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\1 = "mydomain.com"
+SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.edu"
 
 ```
 
@@ -5203,7 +5260,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = myuniversity.ed
   - 値の種類: REG_SZ
   ##### サンプル値:
 ```
-https://www.contoso.com
+"https://www.contoso.com"
 ```
 
 
@@ -5222,18 +5279,18 @@ https://www.contoso.com
   
   
   #### サポートされているバージョン:
-  - Windows と macOS での 85 以降
+  - Windows と macOS での 86 以降
 
   #### 説明
   Microsoft Edge の新しいタブページレイアウトに使用できる、背景画像の種類を構成できます。
 
 このポリシーを設定しない場合、新しいタブ ページのすべての背景画像の種類が有効になります。
 
-                                           
+             
 
-                                            
+           
 
-                                          
+            
 
 ポリシー オプション マッピング:
 
@@ -5460,7 +5517,7 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
   - 値の種類: REG_SZ
   ##### サンプル値:
 ```
-https://www.fabrikam.com
+"https://www.fabrikam.com"
 ```
 
 
@@ -5772,8 +5829,8 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\1 = https://contoso.com
-SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = https://www.fabrikam.com
+SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\1 = "https://contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.com"
 
 ```
 
@@ -6245,9 +6302,9 @@ Microsoft Edge 86 以降、このポリシーでは動的更新はサポート�
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\1 = mydomain.com
-SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\2 = [*.]mydomain2.com
-SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\3 = [*.].mydomain2.com
+SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\1 = "mydomain.com"
+SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\2 = "[*.]mydomain2.com"
+SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\3 = "[*.].mydomain2.com"
 
 ```
 
@@ -6292,8 +6349,8 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\3 = [*.].mydomain2.com
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -6570,7 +6627,7 @@ Microsoft Edge のバージョン 81 以降では、ポリシーを設定しな�
   - 値の種類: REG_SZ
   ##### サンプル値:
 ```
-en
+"en"
 ```
 
 
@@ -6662,8 +6719,8 @@ en
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\1 = https://www.contoso.com/
-SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = https://[*.]contoso.edu/
+SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\1 = "https://www.contoso.com/"
+SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contoso.edu/"
 
 ```
 
@@ -6748,17 +6805,17 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = https://[*.]contoso
 
  
 
-                                                
+            
 
-                       
+        
 
-                        
+      
 
-                       
+        
 
-                   
+       
 
-                         
+       
 
 Microsoft Edge 従来版からのブラウザー データは、このポリシーの値に関係なく、初回実行時に常に警告なしで移行されます。
 
@@ -6999,11 +7056,11 @@ URL パターンは [https://go.microsoft.com/fwlink/?linkid=2095322](https://go
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\1 = example.com
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\2 = https://ssl.server.com
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\3 = hosting.com/good_path
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\4 = https://server:8080/path
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = .exact.hostname.com
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\1 = "example.com"
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\2 = "https://ssl.server.com"
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\3 = "hosting.com/good_path"
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\4 = "https://server:8080/path"
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = ".exact.hostname.com"
 
 ```
 
@@ -7042,7 +7099,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = .exact.hostname.com
 
 このポリシーを設定しない場合、ユーザーが自動的に開くように既に指定したファイルの種類のみ、ダウンロードしても実行されます。
 
-                                                                                                                                                                                                           
+                                                     
 
 このポリシーは、Microsoft Active Directory ドメインに参加している Windows インスタンス、デバイス管理用に登録されている Windows 10 Pro または Enterprise インスタンス、もしくは MDM を使用するか MDM を使用してドメインに参加する macOS インスタンスでのみ利用可能です。
 
@@ -7068,8 +7125,8 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = .exact.hostname.com
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\1 = exe
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = txt
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\1 = "exe"
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 ```
 
@@ -7799,8 +7856,8 @@ Mac OS X のレガシ証明書検証機能のサポートの削除が予定さ�
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas\1 = sha256/AAAAAAAAAAAAAAAAAAAAAA==
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas\2 = sha256//////////////////////w==
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas\1 = "sha256/AAAAAAAAAAAAAAAAAAAAAA=="
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas\2 = "sha256//////////////////////w=="
 
 ```
 
@@ -7858,8 +7915,8 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCa
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas\1 = sha256/AAAAAAAAAAAAAAAAAAAAAA==
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas\2 = sha256//////////////////////w==
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas\1 = "sha256/AAAAAAAAAAAAAAAAAAAAAA=="
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas\2 = "sha256//////////////////////w=="
 
 ```
 
@@ -7915,8 +7972,8 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\1 = contoso.com
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\2 = .contoso.com
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\1 = "contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\2 = ".contoso.com"
 
 ```
 
@@ -8106,7 +8163,7 @@ ClickOnce の詳細については、「[https://go.microsoft.com/fwlink/?linkid
 
 このポリシーを構成しない場合、使用可能なサービスとエクスポート ターゲットに対する制限は強制されません。
 
-                                                     
+              
 
 ポリシー オプション マッピング:
 
@@ -8136,7 +8193,7 @@ ClickOnce の詳細については、「[https://go.microsoft.com/fwlink/?linkid
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = pinterest_suggestions
+SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pinterest_suggestions"
 
 ```
 
@@ -8501,7 +8558,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = pint
   - 値の種類: REG_SZ
   ##### サンプル値:
 ```
-https://go.microsoft.com/fwlink/?linkid=2080734
+"https://go.microsoft.com/fwlink/?linkid=2080734"
 ```
 
 
@@ -8575,7 +8632,7 @@ https://go.microsoft.com/fwlink/?linkid=2080734
   - Windows 7 と macOS での 77 以降
 
   #### 説明
-      
+   
 
   このポリシーを True に設定すると、Microsoft Edge は起動時に既定のブラウザーであるかどうかを常にチェックし、可能であれば自動的に登録します。
 
@@ -8668,6 +8725,127 @@ Windows 管理者への注意: このポリシーは、Windows 7 を実行して
   - サンプル値:
 ``` xml
 <true/>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### DefaultSensorsSetting
+  #### 既定のセンサーの設定
+  
+  
+  #### サポートされているバージョン:
+  - Windows と macOS での 86 以降
+
+  #### 説明
+  Web サイトが動画センサーや光センサーなどのセンサーにアクセスして使用できるかどうかを設定します。 Web サイトがセンサーにアクセスするのを阻止することも、許可することもできます。
+
+ポリシーを1に設定すると、web サイトがセンサーにアクセスして使用できるようになります。 ポリシーを2に設定すると、センサーへのアクセスが拒否されます。
+
+[SensorsAllowedForUrls](#sensorsallowedforurls)および[SensorsBlockedForUrls](#sensorsblockedforurls)ポリシーを使用して、 特定の URL パターンに対するこのポリシーを上書きできます。
+
+このポリシーを構成していない場合、web サイトはセンサーにアクセスして使用することができますが、ユーザーはこの設定を変更できます。 これは、 [SensorsAllowedForUrls](#sensorsallowedforurls)および [SensorsBlockedForUrls](#sensorsblockedforurls)のグローバル既定値です。
+
+ポリシー オプション マッピング:
+
+* AllowSensors (1) = サイトがセンサーにアクセスできるようにする
+
+* BlockSensors (2) = センサーへのアクセスを許可しない
+
+このポリシーを構成する場合は、上記の情報を使用します。
+
+  #### サポートされている機能:
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+  - Integer
+
+  #### Windows の情報と設定
+  ##### グループ ポリシー (ADMX) 情報
+  - GP 固有の名前: DefaultSensorsSetting
+  - GP 名: 既定のセンサーの設定
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+  ##### Windows レジストリの設定
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - 値の名前: DefaultSensorsSetting
+  - 値の種類: REG_DWORD
+  ##### サンプル値:
+```
+0x00000002
+```
+
+
+  #### Mac の情報と設定
+  - 優先キー名: DefaultSensorsSetting
+  - サンプル値:
+``` xml
+<integer>2</integer>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### DefaultSerialGuardSetting
+  #### シリアル API の使用を制御する
+  
+  
+  #### サポートされているバージョン:
+  - Windows と macOS での 86 以降
+
+  #### 説明
+  
+Web サイトがシリアルポートにアクセスできるかどうかを設定します。 アクセスを完全にブロックするか、Web サイトがシリアルポートにアクセスするときに毎回ユーザーに確認を求めるように設定することができます。
+
+ポリシーを3に設定すると、web サイトがシリアルポートへのアクセス許可を要求します。 ポリシーを2に設定すると、シリアルポートへのアクセスが拒否されます。
+
+特定の URL パターンに対するこのポリシーは、[WebUsbAskForUrls](#serialaskforurls) と [WebUsbBlockedForUrls](#serialblockedforurls) ポリシーを使用して、上書きすることができます。
+
+このポリシーを構成していない場合、既定でウェブサイトはシリアルポート にアクセス可能かどうかをユーザーに確認することができ、ユーザーはこの設定を変更することができます。
+
+ポリシー オプション マッピング:
+
+* BlockSerial (2) =いかなるサイトも シリアル API を経由してシリアルポートへのアクセスを要求することはできません。
+
+* AskSerial (3) = ユーザーがシリアルポートにアクセスするためのアクセス許可をユーザーに要求できるようにします。
+
+このポリシーを構成する場合は、上記の情報を使用します。
+
+  #### サポートされている機能:
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+  - Integer
+
+  #### Windows の情報と設定
+  ##### グループ ポリシー (ADMX) 情報
+  - GP 固有の名前: DefaultSerialGuardSetting
+  - GP 名: Serial APIの使用を制御する
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+  ##### Windows レジストリの設定
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - 値の名前: DefaultSerialGuardSetting
+  - 値の種類: REG_DWORD
+  ##### サンプル値:
+```
+0x00000002
+```
+
+
+  #### Mac の情報と設定
+  - 基本設定キーの名前: DefaultWebUsbGuardSetting
+  - サンプル値:
+``` xml
+<integer>2</integer>
 ```
   
 
@@ -9097,7 +9275,7 @@ DirectInvoke の詳細については、「[https://go.microsoft.com/fwlink/?lin
   - 値の種類: REG_SZ
   ##### サンプル値:
 ```
-${user_home}/Edge_cache
+"${user_home}/Edge_cache"
 ```
 
 
@@ -9213,7 +9391,7 @@ ${user_home}/Edge_cache
   - 値の種類: REG_SZ
   ##### サンプル値:
 ```
-off
+"off"
 ```
 
 
@@ -9267,7 +9445,7 @@ URI テンプレートが dns 変数を含んでいる場合、リゾルバー�
   - 値の種類: REG_SZ
   ##### サンプル値:
 ```
-https://dns.example.net/dns-query{?dns}
+"https://dns.example.net/dns-query{?dns}"
 ```
 
 
@@ -9322,8 +9500,8 @@ https://dns.example.net/dns-query{?dns}
   ##### サンプル値:
 ```
 
-      Linux-based OSes (including Mac): /home/${user_name}/Downloads
-      Windows: C:\Users\${user_name}\Downloads
+"\n      Linux-based OSes (including Mac): /home/${user_name}/Downloads\n      Windows: C:\\Users\\${user_name}\\Downloads"
+                                              
 ```
 
 
@@ -9553,7 +9731,7 @@ Microsoft Defender SmartScreen の詳細については、「[https://go.microso
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = ExampleDeprecatedFeature_EffectiveUntil20080902
+SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "ExampleDeprecatedFeature_EffectiveUntil20080902"
 
 ```
 
@@ -9572,8 +9750,8 @@ SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = Example
 
   ### EnableDomainActionsDownload
   #### Microsoft からのドメイン アクションのダウンロードを有効にする (不使用)
-                       
         
+  
   
   
   >不使用: このポリシーは廃止されており、Microsoft Edge 84 以降は機能しません。
@@ -9874,8 +10052,8 @@ Microsoft は、互換性の理由から特定のドメインで選択するア�
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {'domains': ['https://contoso.com', 'contoso2.com'], 'file_extension': 'jnlp'}
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {'domains': ['*'], 'file_extension': 'swf'}
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {"domains": ["https://contoso.com", "contoso2.com"], "file_extension": "jnlp"}
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"domains": ["*"], "file_extension": "swf"}
 
 ```
 
@@ -10393,8 +10571,8 @@ Microsoft Edge の既定の参照元ポリシーは、段階的なロールア�
 
   ### ForceNetworkInProcess
   #### ブラウザー プロセスでネットワーク コードを強制的に実行する (不使用)
-                       
         
+  
   
   
   
@@ -10439,6 +10617,60 @@ Microsoft Edge の既定の参照元ポリシーは、段階的なロールア�
 ```
 
 
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### ForceSync
+  #### ブラウザーのデータを強制的に同期し、同期の同意プロンプトを表示しない
+  
+  
+  #### サポートされているバージョン:
+  - Windows と macOS での 86 以降
+
+  #### 説明
+  Microsoft Edge でのデータを強制的に同期します。 このポリシーでは、ユーザーも同期をオフにすることはできません。
+
+このポリシーを構成しない場合、ユーザーは同期をオンまたはオフにすることができます。 このポリシーを有効にした場合、ユーザーは同期をオフにすることはできません。
+
+このポリシーが意図したとおりに動作するためには、 [BrowserSignin](#browsersignin) ポリシーが構成されていないか、または有効に設定する必要があります。 [ForceSync](#forcesync) が [無効] に設定されている場合、[BrowserSignin](#browsersignin) は有効になりません。
+
+[SyncDisabled](#syncdisabled)を構成することはできません。または False に設定する必要があります。  この設定が True に設定されている場合、 [ForceSync](#forcesync) は有効になりません。
+
+0 = 自動的に同期が開始されず、同期の同意が表示されない(既定) 1 = Azure AD/Azure AD-Degradedユーザープロファイルに対して強制的に同期を有効にする-同期の同意のプロンプトが表示されない
+
+  #### サポートされている機能:
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+  - ブール値
+
+  #### Windows の情報と設定
+  ##### グループ ポリシー (ADMX) 情報
+  - GP 固有の名前: ForceSync
+  - GP 名: ブラウザーデータを強制的に同期し、同期の同意のプロンプトを表示しない
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+  ##### Windows レジストリの設定
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - 値の名前: ForceSync
+  - 値の種類: REG_DWORD
+  ##### サンプル値:
+```
+0x00000001
+```
+
+
+  #### Mac の情報と設定
+  - 基本設定キーの名前: ForceSync
+  - サンプル値:
+``` xml
+<true/>
+```
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -10693,7 +10925,7 @@ Microsoft Edge の既定の参照元ポリシーは、段階的なロールア�
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = meet
+SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 ```
 
@@ -11558,6 +11790,54 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = meet
 
   [ページのトップへ](#microsoft-edge---policies)
 
+  ### InsecureFormsWarningsEnabled
+  #### セキュリティのないフォームに対する警告を有効にする
+  
+  
+  #### サポートされているバージョン:
+  - Windows と macOS での 86 以降
+
+  #### 説明
+  このポリシーでは、ブラウザーのセキュリティで保護された (HTTPS) サイトに埋め込まれたセキュリティで保護されていないフォーム (HTTP 経由で送信されたフォーム) の処理を制御します。
+このポリシーを有効にした場合、または設定しない場合は、セキュリティで保護されていないフォームが送信されると、ページ全体の警告が表示されます。 フォーカスがある場合は、フォームフィールドの横に警告バブルが表示されます。そのようなフォームのオートフィルは無効になります。
+このポリシーを無効にすると、セキュリティで保護されていないフォームの警告が表示されなくなります。オートフィルは正常に機能します。
+
+  #### サポートされている機能:
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+  - ブール値
+
+  #### Windows の情報と設定
+  ##### グループ ポリシー (ADMX) 情報
+  - GP 固有の名前: InsecureFormsWarningsEnabled
+  - GP 名: セキュリティで保護されていないフォームに対する警告を有効にする
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+  ##### Windows レジストリの設定
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - 値の名前: InsecureFormsWarningsEnabled
+  - 値の種類: REG_DWORD
+  ##### サンプル値:
+```
+0x00000001
+```
+
+
+  #### Mac の情報と設定
+  - 優先順位キーの名前: InsecureFormsWarningsEnabled
+  - サンプル値:
+``` xml
+<true/>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
   ### IntensiveWakeUpThrottlingEnabled
   #### IntensiveWakeUpThrottling 機能を制御する
   
@@ -11753,7 +12033,7 @@ Internet Explorer モードの詳細については、「[https://go.microsoft.c
   - 値の種類: REG_SZ
   ##### サンプル値:
 ```
-https://internal.contoso.com/sitelist.xml
+"https://internal.contoso.com/sitelist.xml"
 ```
 
 
@@ -11826,6 +12106,54 @@ Internet Explorer モードの詳細については、「[https://go.microsoft.c
 
   [ページのトップへ](#microsoft-edge---policies)
 
+  ### InternetExplorerIntegrationTestingAllowed
+  #### Internet Explorer モードテストを許可する
+  
+  
+  #### サポートされているバージョン:
+  - Windows での 86 以降
+
+  #### 説明
+  このポリシーは ie-mode-testフラグポリシーの代替です。 UI メニューオプションから IE モードタブを開くことができます。
+
+       この設定は、"IEMode" に設定されている [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) と、一覧に少なくとも 1 つのエントリがある [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) ポリシーと連動します。
+
+       このポリシーを有効にすると、ユーザーが UI オプションから IE モードタブを開き、現在のサイトを IE モードサイトに移動することができます。
+
+       このポリシーを無効にすると、ユーザーのメニューに UI オプションが直接表示されません。
+
+       このポリシーを構成していない場合は、手動でie-mode-testフラグを設定できます。
+
+  #### サポートされている機能:
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: いいえ - ブラウザの再起動が必要
+
+  #### ［データの種類］:
+  - ブール値
+
+  #### Windows の情報と設定
+  ##### グループ ポリシー (ADMX) 情報
+  - GP 固有の名前: InternetExplorerIntegrationTestingAllowed
+  - GP 名: Internet Explorer モードテストを許可する
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+  ##### Windows レジストリの設定
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - 値の名前: InternetExplorerIntegrationTestingAllowed
+  - 値の種類: REG_DWORD
+  ##### サンプル値:
+```
+0x00000000
+```
+
+
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
   ### IsolateOrigins
   #### 特定のオリジンでのサイトの分離を有効にする
   
@@ -11862,7 +12190,7 @@ Internet Explorer モードの詳細については、「[https://go.microsoft.c
   - 値の種類: REG_SZ
   ##### サンプル値:
 ```
-https://contoso.com/,https://fabrikam.com/
+"https://contoso.com/,https://fabrikam.com/"
 ```
 
 
@@ -12314,7 +12642,7 @@ Windows 10 では、このポリシーを構成していない場合、Microsoft
 Windows 7、Windows 8、macOS では、このポリシーによって、使用状況とクラッシュに関連するデータの送信が制御されます。 このポリシーを構成しない場合、Microsoft Edge は既定でユーザーの設定に従います。
 
 このポリシーを有効にするには、[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) を有効に設定する必要があります。 [MetricsReportingEnabled](#metricsreportingenabled) または [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) が構成されていないか、または無効になっている場合は、このデータは Microsoft に送信されません。
-                                                                                                                                                                                
+                                            
 
 このポリシーは、Microsoft Active Directory ドメインに参加している Windows インスタンス、デバイス管理用に登録されている Windows 10 Pro または Enterprise インスタンス、もしくは MDM を使用するか MDM を使用してドメインに参加する macOS インスタンスでのみ利用可能です。
 
@@ -12642,8 +12970,8 @@ Windows 7、Windows 8、macOS では、このポリシーによって、使用�
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\1 = http://testserver.contoso.com/
-SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 = *.contoso.com
+SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\1 = "http://testserver.contoso.com/"
+SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 = "*.contoso.com"
 
 ```
 
@@ -13300,7 +13628,7 @@ QUIC は、現在 TCP を使用している Web アプリケーションのパ�
   - 値の種類: REG_SZ
   ##### サンプル値:
 ```
-.*@contoso.com
+".*@contoso.com"
 ```
 
 
@@ -13352,15 +13680,15 @@ QUIC は、現在 TCP を使用している Web アプリケーションのパ�
   - 値の種類: REG_SZ
   ##### サンプル値:
 ```
-${roaming_app_data}\edge-profile
+"${roaming_app_data}\\edge-profile"
 ```
 
 
-           
-              
-      
+     
+     
+   
+ 
     
-             
    
   
 
@@ -13408,11 +13736,11 @@ ${roaming_app_data}\edge-profile
 ```
 
 
-           
-              
-      
-    
-    
+     
+     
+   
+ 
+ 
    
   
 
@@ -13562,7 +13890,7 @@ Adobe Flash の実行を許可する Web サイトを制御するには、[Defau
   - 値の種類: REG_SZ
   ##### サンプル値:
 ```
-tls1
+"tls1"
 ```
 
 
@@ -13619,8 +13947,8 @@ tls1
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 
 ```
 
@@ -13871,7 +14199,7 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = [*.]contoso.edu
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = https://contoso.com
+SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://contoso.com"
 
 ```
 
@@ -13950,7 +14278,7 @@ Windows 10 では、このポリシーを構成していない場合、Microsoft
 Windows 7、windows 8、macOS では、このポリシーはアクセスした Web サイトに関する情報の送信を制御します。 このポリシーを構成しない場合、Microsoft Edge は既定でユーザーの設定に従います。
 
 このポリシーを有効にするには、 [MetricsReportingEnabled](#metricsreportingenabled) を有効に設定する必要があります。 [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) または [MetricsReportingEnabled](#metricsreportingenabled) が構成されていないか、または無効になっている場合は、このデータは Microsoft に送信されません。
-                                                                                                                                                                            
+                                           
 
   #### サポートされている機能:
   - 必須にすることができるか: はい
@@ -13983,6 +14311,242 @@ Windows 7、windows 8、macOS では、このポリシーはアクセスした W
   - サンプル値:
 ``` xml
 <false/>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### SensorsAllowedForUrls
+  #### 特定のサイトでのセンサーへのアクセスを許可する
+  
+  
+  #### サポートされているバージョン:
+  - Windows と macOS での 86 以降
+
+  #### 説明
+  モーションセンサーや光センサーなどのセンサーにアクセスして使用できるサイトのリストを URL パターンに基づいて定義します。
+
+このポリシーを構成していない場合、 [DefaultPopupsSetting](#defaultsensorssetting) ポリシー (設定されている場合) からのグローバルな既定値またはユーザーの個人用の構成がすべてのサイトで使用されます。
+
+このポリシーと一致しない URL のパターンの場合、以下が優先順位となります： [SensorsBlockedForUrls](#sensorsblockedforurls) ポリシー (一致している場合)、 [DefaultSensorsSetting](#defaultsensorssetting) ポリシー (設定されている場合)、またはユーザーの個人用設定
+
+このポリシーで定義されている URL パターンは、 [SensorsBlockedForUrls](#sensorsblockedforurls) ポリシーで構成されているものと競合することはできません。 URL を許可することも、ブロックすることもできません。
+
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。
+
+  #### サポートされている機能:
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+  - 文字列のリスト
+
+  #### Windows の情報と設定
+  ##### グループ ポリシー (ADMX) 情報
+  - GP 固有の名前: SensorsAllowedForUrls
+  - GP 名: 特定のサイトのセンサーへのアクセスを許可する
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+  ##### Windows レジストリの設定
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls
+  - パス (推奨): なし
+  - 値の名前: 1、2、3、...
+  - 値の種類: REG_SZ の一覧
+  ##### サンプル値:
+```
+SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
+
+```
+
+
+  #### Mac の情報と設定
+  - 基本設定キー名: SensorsAllowedForUrls
+  - サンプル値:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### SensorsBlockedForUrls
+  #### 特定のサイトでのセンサーへのアクセスをブロックする
+  
+  
+  #### サポートされているバージョン:
+  - Windows と macOS での 86 以降
+
+  #### 説明
+  モーションセンサーや光センサーなどのセンサーにアクセスできないサイトのリストを、URL パターンに基づいて定義します。
+
+このポリシーを構成していない場合、 [DefaultPopupsSetting](#defaultsensorssetting) ポリシー (設定されている場合) からのグローバルな既定値またはユーザーの個人用の構成がすべてのサイトで使用されます。
+
+このポリシーと一致しない URL のパターンの場合、次の優先順位が使用されます。 [SensorsAllowedForUrls Urls](#sensorsallowedforurls)ポリシー (一致するものがある場合)、[DefaultSensorsSetting](#defaultsensorssetting) policy (設定されている場合)、またはユーザーの個人用設定です。
+
+このポリシーで定義されている URL パターンは、 [SensorsAllowedForUrls](#sensorsallowedforurls) ポリシーで構成されているものと競合することはできません。 URL を許可することも、ブロックすることもできません。
+
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。
+
+  #### サポートされている機能:
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+  - 文字列のリスト
+
+  #### Windows の情報と設定
+  ##### グループ ポリシー (ADMX) 情報
+  - GP 固有の名前: SensorsBlockedForUrls
+  - GP 名: 特定のサイトのセンサーへのアクセスをブロックする
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+  ##### Windows レジストリの設定
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls
+  - パス (推奨): なし
+  - 値の名前: 1、2、3、...
+  - 値の種類: REG_SZ の一覧
+  ##### サンプル値:
+```
+SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
+
+```
+
+
+  #### Mac の情報と設定
+  - 基本設定キーの名前: SensorsBlockedForUrls
+  - サンプル値:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### SerialAskForUrls
+  #### 特定のサイトでのシリアル API を許可する
+  
+  
+  #### サポートされているバージョン:
+  - Windows と macOS での 86 以降
+
+  #### 説明
+  シリアルポートへのアクセスをユーザーに対して確認することができるサイトの一覧を URL パターンに基づいて定義します。
+
+このポリシーを構成していない場合、[DefaultWebUsbGuardSetting](#defaultserialguardsetting) ポリシー (設定されている場合) からのグローバルな既定値または、ユーザーの個人用の構成がすべてのサイトで使用されます。
+
+このポリシーと一致しない URL のパターンの場合、以下が優先順位です：[SerialBlockedForUrls](#serialblockedforurls) ポリシー (一致している場合)、 [DefaultSerialGuardSetting](#defaultserialguardsetting) ポリシー (設定されている場合)、またはユーザーの個人用設定
+
+このポリシーで定義されている URL パターンは、 [SerialBlockedForUrls](#serialblockedforurls) ポリシーで構成されているものと競合することはできません。 URL を許可することも、ブロックすることもできません。
+
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください
+
+  #### サポートされている機能:
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+  - 文字列のリスト
+
+  #### Windows の情報と設定
+  ##### グループ ポリシー (ADMX) 情報
+  - GP 固有の名前: SerialAskForUrls
+  - GP 名: 特定のサイトのシリアル API を許可する
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+  ##### Windows レジストリの設定
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls
+  - パス (推奨): なし
+  - 値の名前: 1、2、3、...
+  - 値の種類: REG_SZ の一覧
+  ##### サンプル値:
+```
+SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
+
+```
+
+
+  #### Mac の情報と設定
+  - 基本設定キーの名前: SerialAskForUrls
+  - サンプル値:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### SerialBlockedForUrls
+  #### 特定のサイトでのシリアル API をブロックする
+  
+  
+  #### サポートされているバージョン:
+  - Windows と macOS での 86 以降
+
+  #### 説明
+  シリアルポートへのアクセス権の付与をユーザーに対して確認することができないサイトの一覧を URL パターンに基づいて定義します。
+
+このポリシーを構成していない場合、[DefaultWebUsbGuardSetting](#defaultserialguardsetting) ポリシー (設定されている場合) からのグローバルな既定値または、ユーザーの個人用の構成がすべてのサイトで使用されます。
+
+このポリシーと一致しない URL のパターンの場合、以下の優先順位が使用されます： [SerialAskForUrls](#serialaskforurls) ポリシー (一致している場合)、 [DefaultSerialGuardSetting](#defaultserialguardsetting) ポリシー (設定されている場合)、またはユーザーの個人用設定
+
+このポリシーの URL パターンは、[WebUsbAskForUrls](#serialaskforurls) ポリシーで構成されたものと競合することはできません。 URL を許可することも、ブロックすることもできません。
+
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。
+
+  #### サポートされている機能:
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+  - 文字列のリスト
+
+  #### Windows の情報と設定
+  ##### グループ ポリシー (ADMX) 情報
+  - GP 固有の名前: SerialBlockedForUrls
+  - GP 名: 特定のサイトのシリアル API をブロックする
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+  ##### Windows レジストリの設定
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls
+  - パス (推奨): なし
+  - 値の名前: 1、2、3、...
+  - 値の種類: REG_SZ の一覧
+  ##### サンプル値:
+```
+SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
+
+```
+
+
+  #### Mac の情報と設定
+  - 基本設定キーの名前: SerialBlockedForUrls
+  - サンプル値:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
 ```
   
 
@@ -14228,8 +14792,8 @@ Windows 7、windows 8、macOS では、このポリシーはアクセスした W
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\1 = fr
-SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = es
+SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\1 = "fr"
+SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = "es"
 
 ```
 
@@ -14280,8 +14844,8 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = es
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\1 = fr
-SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = es
+SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\1 = "fr"
+SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
 ```
 
@@ -14480,7 +15044,7 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = es
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = favorites
+SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 
 ```
 
@@ -14514,9 +15078,9 @@ SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = favorites
 
 このポリシーを無効にしている場合、Microsoft Edge は、ローカルにインストールされた CA 証明書で認証された接続に対して、これらのセキュリティ保護を無効にします。 これらの保護は、公的に信頼されている CA 証明書で認証された接続に対しては常に有効になっています。
 
-                                                                                                                                                                                                                                                      
+                                                               
 
-                                                                                                                                                                                                             
+                                                    
 
 このポリシーは、影響を受けるプロキシのテストやそれらのアップグレードに使用される場合があります。 影響を受けるプロキシは、ERR_TLS13_DOWNGRADE_DETECTED のエラー コードとともに接続に失敗することが予想されます。
 
@@ -14598,9 +15162,9 @@ TLS 1.3 暗号スイート TLS_AES_128_GCM_SHA256 (0x1301) は TLS 1.3 に必要
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\1 = 0x1303
-SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\2 = 0xcca8
-SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = 0xcca9
+SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\1 = "0x1303"
+SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\2 = "0xcca8"
+SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
 ```
 
@@ -14925,11 +15489,11 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = 0xcca9
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\1 = contoso.com
-SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\2 = https://ssl.server.com
-SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\3 = hosting.com/good_path
-SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\4 = https://server:8080/path
-SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = .exact.hostname.com
+SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\1 = "contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\2 = "https://ssl.server.com"
+SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\3 = "hosting.com/good_path"
+SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\4 = "https://server:8080/path"
+SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 
 ```
 
@@ -14992,14 +15556,14 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = .exact.hostname.com
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\1 = contoso.com
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\2 = https://ssl.server.com
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\3 = hosting.com/bad_path
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\4 = https://server:8080/path
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\5 = .exact.hostname.com
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\6 = file://*
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\7 = custom_scheme:*
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = *
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\1 = "contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\2 = "https://ssl.server.com"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\3 = "hosting.com/bad_path"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\4 = "https://server:8080/path"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\5 = ".exact.hostname.com"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\6 = "file://*"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\7 = "custom_scheme:*"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
 ```
 
@@ -15115,7 +15679,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = *
   - 値の種類: REG_SZ
   ##### サンプル値:
 ```
-${users}/${user_name}/Edge
+"${users}/${user_name}/Edge"
 ```
 
 
@@ -15125,6 +15689,50 @@ ${users}/${user_name}/Edge
 ``` xml
 <string>${users}/${user_name}/Edge</string>
 ```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### UserDataSnapshotRetentionLimit
+  #### 緊急ロールバック時の使用のために保持するユーザーデータのスナップショット数を制限します。
+  
+  
+  #### サポートされているバージョン:
+  - Windows での 86 以降
+
+  #### 説明
+  主要なバージョンの更新の後、Microsoft Edge では、一時的なバージョンロールバックを必要とするような緊急事態に備えて、ユーザーの閲覧データの部分的スナップショットを作成します。 ユーザーが対応するスナップショットを持つバージョンについて一時的なロールバックを実行すると、スナップショット内のデータが復元されます。 これにより、ユーザーがブックマークやオートフィルデータなどの設定を保持できます。
+
+このポリシーを設定しない場合、既定値の3スナップショットが使用されます。
+
+このポリシーが設定されている場合、ユーザーが設定した制限数に応じて、古いスナップショットが削除されます。 このポリシーを0に設定すると、スナップショットは作成されません。
+
+  #### サポートされている機能:
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: いいえ - ブラウザの再起動が必要
+
+  #### ［データの種類］:
+  - Integer
+
+  #### Windows の情報と設定
+  ##### グループ ポリシー (ADMX) 情報
+  - GP 固有の名前: UserDataSnapshotRetentionLimit
+  - GP 名: 緊急ロールバックの場合に使用されるユーザーデータのスナップショット数を制限します。
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+  ##### Windows レジストリの設定
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - 値の名前: UserDataSnapshotRetentionLimit
+  - 値の種類: REG_DWORD
+  ##### サンプル値:
+```
+0x00000003
+```
+
+
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -15263,8 +15871,8 @@ ${users}/${user_name}/Edge
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\1 = https://www.contoso.com/
-SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = https://[*.]contoso.edu/
+SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\1 = "https://www.contoso.com/"
+SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contoso.edu/"
 
 ```
 
@@ -15417,8 +16025,8 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
   ### WebComponentsV0Enabled
   #### M84 まで Web コンポーネント v0 API をもう一度有効にする (不使用)
-                       
         
+  
   
   
   >不使用: このポリシーは廃止されており、Microsoft Edge 84 以降は機能しません。
@@ -15470,8 +16078,8 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
   ### WebDriverOverridesIncompatiblePolicies
   #### WebDriver が互換性のないポリシーを上書きすることを許可する (不使用)
-                       
         
+  
   
   
   >不使用: このポリシーは廃止されており、Microsoft Edge 84 以降は機能しません。
@@ -15566,8 +16174,8 @@ WebDriver は既存のすべてのポリシーと互換性を持つようにな�
   - 値の種類: REG_SZ の一覧
   ##### サンプル値:
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = *contoso.com*
+SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
 ```
 
@@ -15635,7 +16243,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = *contoso.com*
   - 値の種類: REG_SZ
   ##### サンプル値:
 ```
-default
+"default"
 ```
 
 
@@ -15685,7 +16293,7 @@ default
   - 値の種類: REG_SZ
   ##### サンプル値:
 ```
-10000-11999
+"10000-11999"
 ```
 
 
@@ -15707,7 +16315,7 @@ default
   - Windows での 84 以降
 
   #### 説明
-  このポリシーは、将来のリリースで同様の機能に置き換えられるため、廃止されました。https://crbug.com/1032820 を参照してください。 Microsoft Edge バージョン 87 では機能しません。
+  このポリシーは、将来のリリースで同様の機能に置き換えられるため、廃止されました。https://crbug.com/1032820 を参照してください。
 
 Windows を使用して、Microsoft Edge に組み込まれているプロキシ リゾルバーの代わりに、すべてのブラウザー ネットワークのプロキシを解決します。 Windows プロキシ リゾルバーは、DirectAccess/NRPT などの Windows プロキシ機能を有効にします。
 
