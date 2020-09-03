@@ -1,4 +1,4 @@
-# last revised 08/21/2020
+# last revised 09/02/2020
 - name: Microsoft Edge エンタープライズのドキュメント
   href: index.yml
 - name: Microsoft Edge ドキュメント
@@ -161,5 +161,7 @@
           href: edge-learnmore-regex.md
         - name: ユーザー データ ディレクトリ変数
           href: edge-learnmore-create-user-directory-vars.md
+        - name: 企業向け Microsoft Edge ロールバックの使用
+          href: edge-learnmore-rollback.md
 - name: よく寄せられる質問
   href: faqs-edge-in-the-enterprise.md
