@@ -3,19 +3,19 @@ title: Microsoft Edge で ClickOnce と DirectInvoke を使用する
 ms.author: kele
 author: dan-wesley
 manager: srugh
-ms.date: 04/30/2020
+ms.date: 09/10/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge での ClickOnce と DirectInvoke の使用について説明します。
-ms.openlocfilehash: 8290c34bd29ca72678e3fa68f74b689d0cf797e3
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 1d4e08c0ce3ee2afec7968cd892f77ef7bdc3fff
+ms.sourcegitcommit: 4c0b84b03e686a7a2989ce2187dbadf35418104a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980455"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11012797"
 ---
 # Microsoft Edge での ClickOnce と DirectInvoke の機能について
 
@@ -55,13 +55,12 @@ DirectInvoke の使用方法は、DirectInvoke を要求している Web サイ�
 
 ClickOnce と DirectInvoke のサポート状況は次のとおりです。
 
-- DirectInvoke は、すべての Windows ユーザーに対して既定でサポートされていますが、ClickOnce はすべての Windows ユーザーに対して無効になっています。
+- ClickOnce と DirectInvoke は、すべての Windows ユーザーが標準でサポートしています。
 
   > [!NOTE]
-  > ClickOnce のサポートが必要なユーザーは、edge://flags/#edge-click-once に移動し、ドロップダウン リストから **[有効にする]** を選択してください。 ブラウザーを**再起動**する必要があります。
+  > ClickOnce のサポートを無効にするユーザーは、*edge://flags/#edge-click-once* に移動し、ドロップダウン リストから **[無効にする]** を選択してください。 ブラウザーを**再起動**する必要があります。
 
 - ClickOnce と DirectInvoke は、Windows 以外のプラットフォームではサポートされていません。
-- ClickOnce は、エンタープライズ対応の機能であり、特定のパワー ユーザー グループによる使用が想定されています。一般的な使用を意図していないため、ClickOnce は既定で無効になっています。
 
 ## ClickOnce と DirectInvoke のファイル処理のセキュリティ
 
