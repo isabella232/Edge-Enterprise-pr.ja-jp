@@ -3,19 +3,19 @@ title: Microsoft Edge エンタープライズ プライバシー設定
 ms.author: likravit
 author: dan-wesley
 manager: srugh
-ms.date: 05/26/2020
+ms.date: 09/09/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge エンタープライズ プライバシー設定を構成する
-ms.openlocfilehash: 2b7a33087ae5110c53d18b3192486d4ae62fa540
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 25b475206734634df9995f568a6d4e8c52e9f9de
+ms.sourcegitcommit: 16984537c8f5c9c60e92f41f0f869231fb79ccd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980508"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "11005495"
 ---
 # 企業のプライバシーをサポートするように Microsoft Edge ポリシーを構成する
 
@@ -23,22 +23,47 @@ Microsoft では、Microsoft Edge のデータ収集に関する選択を行う�
 
 ## 概要
 
-既定では、Windows 以外のプラットフォームに展開された Microsoft Edge では、診断データやサイト情報は Microsoft に送信されません。 Microsoft Edge が Windows 10 に導入されている場合、規定では、ユーザーの [Windows 診断データ設定](https://go.microsoft.com/fwlink/?linkid=2099569)に基づいて診断データが送信されます。
+Microsoft Edge が Windows 10 に導入されている場合、規定では、ユーザーの [Windows 診断データ設定](https://go.microsoft.com/fwlink/?linkid=2099569)に基づいて診断データが送信されます。
 
-次のグループポリシーを使用して、Microsoft Edge が組織のデータ収集を処理する方法を構成することもできます。
+Microsoft Edge が Windows 以外のプラットフォームで展開されるとき、以下のグループ ポリシーに従って診断データが収集されます。
 
-- [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) - 使用状況とクラッシュ関連のデータレポートを有効にします。
-- [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) - Microsoft サービスを改善するためにサイト情報を送信します。
+- (非推奨) [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) - 使用状況とクラッシュ関連データのレポートを有効にします。 このポリシーは Microsoft Edge バージョン 89 で廃止されます。
+- (非推奨) [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) - Microsoft サービスの品質向上のためにサイト情報を送信します。 このポリシーは Microsoft Edge バージョン 89 で廃止されます。
+
+上記の非推奨のポリシーは、Windows 10 では[利用統計情報の許可](https://go.microsoft.com/fwlink/?linkid=2099569)に、その他のすべてのプラットフォームでは[DiagnosticData](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#diagnosticdata) ポリシーに置き換えられます。  
 
 ## ポリシー設定を構成する
 
 始める前に、最新の Microsoft Edge ポリシーテンプレートをダウンロードして使用してください (詳細については、「[Microsoft Edge を構成する](configure-microsoft-edge.md)」を参照してください)。
 
-### 使用状況とクラッシュ関連データのレポートを有効にする
+### ブラウザーの使用状況に関する必須およびオプションの診断データを送信する
 
-このポリシーによって、Microsoft Edge の使用状況およびクラッシュに関連するデータの Microsoft への送信が有効になります。
+[DiagnosticData](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#diagnosticdata) ポリシーが構成されている場合、[MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled)  と [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) よりも優先されます。
 
-Microsoft Edge では、製品を最新の状態に保ち、セキュリティで保護し、適切に実行するために必要な一連のデータが収集されます。 このデータには、現在のデータ収集の同意、アプリのバージョン、Microsoft Edge のインストール状態に関する、Microsoft Edgeからの基本的なデバイス接続と構成情報が含まれています。このデータ収集は、ポリシーを無効にすることでオフにできます。
+#### 必須診断データとオプションの診断データ
+
+必須の診断データは、Microsoft Edge のセキュリティ、最新の状態、期待どおりの動作を維持するために収集されます。
+
+オプションの診断データには、ブラウザーの使用方法に関するデータ、アクセスした Web サイト、Microsoft Edge のセキュリティ、最新の状態、期待どおりの動作を維持するためのクラッシュ レポートが含まれます。このデータは、Microsoft Edge とすべてのユーザー向けのその他の Microsoft 製品とサービスの品質向上のために使用されます。
+
+> [!NOTE]
+> このポリシーは、Windows 10 デバイスではサポートされていません。 Windows 10 でデータの収集を制御するには、IT 管理者が Windows 診断データ グループ ポリシーを使用する必要があります。 このポリシーは、使用している Windows のバージョンに応じて、**利用統計情報を許可する**、または**診断データを許可する**、となります。 詳細については、「[Windows 10 の診断データの構成](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)」を参照してください。
+
+**DiagnosticData** を構成するには、次のいずれかの設定を使用します。
+
+- オフ (非推奨) (0) にすると、必須診断データおよびオプションの診断データの収集をオフにします。 
+- 必須データ (1) は、必須診断データを送信しますが、オプションの診断データの収集をオフにします。 Microsoft Edge では、セキュリティ、最新の状態、期待どおりの動作を維持するために必要な必須の診断データが送信されます。 
+- オプションのデータ (2) は、ブラウザーの使用状況、アクセスした Web サイト、Microsoft Edge のセキュリティ、最新の状態、期待どおりの動作を維持するために Microsoft に送信されたクラッシュ レポートを含むオプションの診断データを送信します。このデータは、Microsoft Edge とすべてのユーザー向けのその他の Microsoft 製品とサービスの品質向上のために使用されます。
+
+Windows 7、Windows 8/8.1、macOS では、このポリシーによって必須診断データとオプションの診断データの Microsoft への送信が制御されます。
+
+このポリシーを構成しなかった場合、または無効にした場合は、Microsoft Edge は既定でユーザーの設定に従います。
+
+### (非推奨) 使用状況とクラッシュ関連データのレポートを有効にする
+
+**MetricsReportingEnabled** ポリシーによって、Microsoft Edge の使用状況とクラッシュに関連するデータの Microsoft への送信が有効になります。
+
+Microsoft Edge では、製品の最新の状態、セキュリティによる保護、期待どおりの動作を維持するために必要な、一連の必須データが収集されます。 このデータには、現在のデータ収集の同意、アプリのバージョン、Microsoft Edge のインストール状態に関する、Microsoft Edgeからの基本的なデバイス接続と構成情報が含まれています。このデータ収集は、ポリシーを無効にすることでオフにできます。
 
 使用状況およびクラッシュに関連するデータのレポートを Microsoft に送信するには、このポリシーを有効にします。 このデータを Microsoft に送信しない場合は、このポリシーを無効にします。 いずれの場合でも、ユーザーがこの設定を変更または上書きすることはできません。
 
@@ -46,15 +71,17 @@ Microsoft Edge が Windows 10 で実行されている場合:
 
 - このポリシーが構成されていない場合、Microsoft Edge は既定で Windows 診断データの設定になります。
 - このポリシーが有効になっている場合、Microsoft Edge は、Windows 診断データの設定が **[拡張]** または **[完全]** に設定されている場合にのみ使用状況データを送信します。
+  - このポリシーを有効にすると、[SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) も有効になっている場合にのみ、Microsoft Edge は使用状況データを送信します。
 - このポリシーが無効になっている場合、Microsoft Edge は使用状況データを送信しません。 クラッシュに関連するデータは、Windows 診断データの設定に基づいて送信されます。 [Windows 診断データ設定の詳細を参照してください](https://go.microsoft.com/fwlink/?linkid=2099569)。
 
 Microsoft Edge が Windows 7、8、または macOS で実行されている場合：
 
 - このポリシーが構成されていない場合、Microsoft Edge は既定でユーザーの設定に従います。
+-  このポリシーを有効にすると、[SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) も有効になっている場合にのみ、Microsoft Edge は使用状況データを送信します。
 
-### Microsoft サービスの品質向上のためにサイト情報を送信する
+### (非推奨) Microsoft サービスの品質向上のためにサイト情報を送信する
 
-このポリシーでは、検索などの Microsoft 製品やサービスの品質を向上させるために Microsoft Edge で訪問した Web サイトに関する情報を Microsoft に送信できます。
+**SendSiteInformationToImproveServices** ポリシーは、検索などの Microsoft 製品やサービスの品質向上のために、Microsoft Edge でアクセスした Web サイトに関する情報を Microsoft に送信できるようにします。
 
 Microsoft Edge でアクセスした Web サイトに関する情報を Microsoft に送信する場合は、このポリシーを有効にします。 Microsoft Edge でアクセスした Web サイトに関する情報を Microsoft に送信しない場合は、このポリシーを無効にします。 いずれの場合でも、ユーザーがこの設定を変更または上書きすることはできません。
 
@@ -62,31 +89,31 @@ Microsoft Edge が Windows 10 で実行されている場合:
 
 - このポリシーが構成されていない場合、Microsoft Edge は既定で Windows 診断データの設定になります。
 - このポリシーが有効になっている場合、Microsoft Edge は、Windows 診断データの設定が **[完全]** に設定されている場合にのみ、アクセスした Web サイトに関する情報を送信します。
+  - このポリシーを有効にすると、[MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) も有効になっている場合にのみ、Microsoft Edge は使用状況データを送信します。 
 - このポリシーが無効になっている場合、Microsoft Edge はアクセスした Web サイトに関する情報を送信しません。 詳細については、[Windows 診断データの設定に関するトピック](https://go.microsoft.com/fwlink/?linkid=2099569)を参照してください。
 
 Microsoft Edge が Windows 7、8、または macOS で実行されている場合：
 
+- このポリシーを有効にすると、[MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) も有効になっている場合にのみ、Microsoft Edge は使用状況データを送信します。
 - このポリシーが構成されていない場合、Microsoft Edge は既定でユーザーの設定に従います。
 
 ## 実装の詳細
 
-Windows 10 で、実装が Windows 診断データの設定にどのように依存しているかを説明するために、**[使用状況とクラッシュ関連データのレポートを有効にする]** と **[Microsoft サービスの品質向上のためにサイト情報を送信する]** が構成されていない場合の構成を次の表に示します。。
+Windows 10 以外のデバイスの場合: 
+- [DiagnosticData](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#diagnosticdata) ポリシーが構成されている場合、[MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled)  と [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) よりも優先されます。 
+- [DiagnosticData](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#diagnosticdata) ポリシーが構成されていない場合、Microsoft Edge は [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled)  と [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) をリッスンします。  
 
-| Windows 診断データの設定 | 使用状況とクラッシュ関連データのレポートを有効にする | Microsoft サービスの品質向上のためにサイト情報を送信する |
+Windows 10 については、実装と Windows 診断データの設定への依存関係を説明するために、 **必須**または**オプション**のどちらの診断データが Microsoft に送信されるかを次の表に示します。
+
+| Windows 診断データの設定 | 必須診断データ  | オプションの診断データ |
 |---------------------------------|-----------------------------------------------|-----------------------------------------------------|
 | セキュリティ                        | 送信されない                                      | 送信されない                                            |
-| 基本                           | 送信されない                                      | 送信されない                                            |
+| 基本                           | 送信される                                      | 送信されない                                            |
 | 拡張                        | 送信される                                          | 送信されない                                            |
 | 完全                            | 送信される                                          | 送信される                                                |
 
-Windows 10 の構成が上記の表に従って正しく構成されていない場合は、より少ないデータ収集設定に戻されます。
-
-次に、例を示します。
-
-- [使用状況とクラッシュ関連データのレポートを有効にする] ポリシーは **[有効]** に設定されていますが、Windows 診断データの設定が **[基本]** に設定されています。 この場合、使用状況やクラッシュに関連するデータは送信されません。
-- [Microsoft サービスの品質向上のためにサイト情報を送信する] ポリシーは **[無効]** に設定されていますが、Windows 診断データの設定が **[完全]** に設定されています。 この場合、アクセスしたサイトに関する情報は送信されません。
-
-以前の設定の正しい実装は、「使用状況とクラッシュ関連のデータレポートを有効にする」ポリシーを **[有効]** に設定し、Windows診断データ設定を **[拡張]** または **[完全]** に設定することです。
+> [!IMPORTANT]
+> Microsoft Edge は、Microsoft Edge バージョン 86 〜 88 では **MetricsReportingEnabled**  と **SendSiteInfoToImproveServices** をサポートします。 Microsoft Edge バージョン 89 で **MetricsReportingEnabled**  と **SendSiteInfoToImproveServices** はサポートされなくなり、既定で Windows 10 以外のプラットフォームでは **DiagnosticData**、Windows 10 では **利用統計情報の許可** ポリシーに従います。
 
 ## その他のプライバシー ポリシー オプション
 
