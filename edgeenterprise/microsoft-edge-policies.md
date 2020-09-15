@@ -3,7 +3,7 @@ title: Microsoft Edge ブラウザー ポリシーに関するドキュメント
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/01/2020
+ms.date: 09/10/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
-ms.openlocfilehash: 9320d7e7b161e6d92421b05262391642b0fe1c2d
-ms.sourcegitcommit: 827a47d641c7ddc1d89be5d5fc0615373dec18b0
+ms.openlocfilehash: d19d12dbda0e4b40b4b91b94ca92c58f2a469105
+ms.sourcegitcommit: 1f9149bf2e7c751520b68ef96e18e1f959975fb9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993727"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11005820"
 ---
 # Microsoft Edge - ポリシー
 最新バージョンの Microsoft Edge には、次のポリシーが含まれています。 これらのポリシーを使用して、組織内での Microsoft Edge の動作方法を構成することができます。
@@ -58,6 +58,8 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[CookiesBlockedForUrls](#cookiesblockedforurls)|特定のサイトでの Cookie のブロック|
 |[CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)|特定の Web サイトからの Cookie を現在のセッションに制限する|
 |[DefaultCookiesSetting](#defaultcookiessetting)|Cookie を構成する|
+|[DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting)|読み取り用にファイル システム API の使用を制御する|
+|[DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting)|書き込み用にファイル システム API の使用を制御する|
 |[DefaultGeolocationSetting](#defaultgeolocationsetting)|既定の位置情報の設定|
 |[DefaultImagesSetting](#defaultimagessetting)|既定の画像の設定|
 |[DefaultInsecureContentSetting](#defaultinsecurecontentsetting)|安全でないコンテンツの例外の使用を制御する|
@@ -67,6 +69,10 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[DefaultPopupsSetting](#defaultpopupssetting)|既定のポップアップ ウィンドウの設定|
 |[DefaultWebBluetoothGuardSetting](#defaultwebbluetoothguardsetting)|Web Bluetooth API の使用を制御する|
 |[DefaultWebUsbGuardSetting](#defaultwebusbguardsetting)|WebUSB API の使用を制御する|
+|[FileSystemReadAskForUrls](#filesystemreadaskforurls)|これらのサイトのファイル システム API を通して読み取りアクセスを許可する|
+|[FileSystemReadBlockedForUrls](#filesystemreadblockedforurls)|これらのサイトのファイル システム API を通して読み取りアクセスをブロックする|
+|[FileSystemWriteAskForUrls](#filesystemwriteaskforurls)|これらのサイトのファイルとディレクトリへの書き込みアクセスを許可する|
+|[FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls)|これらのサイトのファイルとディレクトリへの書き込みアクセスをブロックする|
 |[ImagesAllowedForUrls](#imagesallowedforurls)|これらのサイトでの画像の使用を許可する|
 |[ImagesBlockedForUrls](#imagesblockedforurls)|特定のサイトでの 画像 のブロック|
 |[InsecureContentAllowedForUrls](#insecurecontentallowedforurls)|特定のサイトでの安全でないコンテンツの使用を許可する|
@@ -139,6 +145,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[PrintHeaderFooter](#printheaderfooter)|ヘッダーとフッターを印刷する|
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|システムの既定のプリンターを通常使うプリンターに設定する|
 |[PrintingEnabled](#printingenabled)|印刷を有効にする|
+|[PrintingPaperSizeDefault](#printingpapersizedefault)|印刷の既定のページ サイズ|
 |[UseSystemPrintDialog](#usesystemprintdialog)|システムの印刷ダイアログを使用して印刷する|
 ### [*プロキシ サーバー*](#proxy-server-policies)
 |ポリシー名|キャプション|
@@ -163,7 +170,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[HomepageIsNewTabPage](#homepageisnewtabpage)|新規タブ ページをホーム ページとして設定する|
 |[HomepageLocation](#homepagelocation)|ホーム ページの URL を構成する|
 |[NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes)|新しいタブページレイアウトに使用できる背景の種類を構成する|
-|[NewTabPageCompanyLogo](#newtabpagecompanylogo)|新規タブ ページの会社のロゴを設定する (非推奨)|
+|[NewTabPageCompanyLogo](#newtabpagecompanylogo)|新規タブ ページの会社のロゴを設定する (不使用)|
 |[NewTabPageHideDefaultTopSites](#newtabpagehidedefaulttopsites)|新規タブ ページから既定のトップ サイトを非表示にする|
 |[NewTabPageLocation](#newtabpagelocation)|新規タブ ページの URL を構成する|
 |[NewTabPageManagedQuickLinks](#newtabpagemanagedquicklinks)|新規タブ ページのクイック リンクを設定する|
@@ -852,6 +859,118 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
   [ページのトップへ](#microsoft-edge---policies)
 
+  ### DefaultFileSystemReadGuardSetting
+  #### 読み取り用にファイル システム API の使用を制御する
+  
+  
+  #### サポートされているバージョン:
+  - Windows と macOS での 86 以降
+
+  #### 説明
+  このポリシーを 3 に設定すると、Web サイトでファイル システム API を使用して、ホスト オペレーティング システムのファイルシステムに対する読み取りアクセスを要求することができます。 このポリシーを 2 に設定すると、アクセスが拒否されます。
+
+このポリシーを設定しない場合は、Web サイトでアクセスを要求することができます。 ユーザーはこの設定を変更できます。
+
+ポリシー オプション マッピング:
+
+* BlockFileSystemRead (2) = ファイル システム API を通してファイルとディレクトリへの読み取りアクセスを要求することはできません。
+
+* AskFileSystemRead (3) = ファイル システム API を通してユーザーにファイルとディレクトリへの読み取りアクセス権を付与するよう要求することはできません。
+
+このポリシーを構成する場合は、上記の情報を使用します。
+
+  #### サポートされている機能:
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+  - Integer
+
+  #### Windows の情報と設定
+  ##### グループ ポリシー (ADMX) 情報
+  - GP 固有の名前: DefaultFileSystemReadGuardSetting
+  - GP 名: 読み取り用にファイル システム API の使用を制御する
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/コンテンツの設定
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+  ##### Windows レジストリの設定
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - 値の名前: DefaultFileSystemReadGuardSetting
+  - 値の種類: REG_DWORD
+  ##### サンプル値:
+```
+0x00000002
+```
+
+
+  #### Mac の情報と設定
+  - 基本設定キーの名前: DefaultFileSystemReadGuardSetting
+  - サンプル値:
+``` xml
+<integer>2</integer>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### DefaultFileSystemWriteGuardSetting
+  #### 書き込み用にファイル システム API の使用を制御する
+  
+  
+  #### サポートされているバージョン:
+  - Windows と macOS での 86 以降
+
+  #### 説明
+  このポリシーを 3 に設定すると、Web サイトでファイル システム API を使用して、ホスト オペレーティング システムのファイルシステムに対する書き込みアクセスを要求することができます。 このポリシーを 2 に設定すると、アクセスが拒否されます。
+
+このポリシーを設定しない場合は、Web サイトでアクセスを要求することができます。 ユーザーはこの設定を変更できます。
+
+ポリシー オプション マッピング:
+
+* BlockFileSystemWrite (2) = ファイルとディレクトリへの書き込みアクセスを要求することはできません。
+
+* AskFileSystemWrite (3) = ユーザーにファイルとディレクトリへの書き込みアクセス権を付与するよう要求することはできません。
+
+このポリシーを構成する場合は、上記の情報を使用します。
+
+  #### サポートされている機能:
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+  - Integer
+
+  #### Windows の情報と設定
+  ##### グループ ポリシー (ADMX) 情報
+  - GP 固有の名前: DefaultFileSystemWriteGuardSetting
+  - GP 名: 書き込み用にファイル システム API の使用を制御する
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/コンテンツの設定
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+  ##### Windows レジストリの設定
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - 値の名前: DefaultFileSystemWriteGuardSetting
+  - 値の種類: REG_DWORD
+  ##### サンプル値:
+```
+0x00000002
+```
+
+
+  #### Mac の情報と設定
+  - 基本設定キーの名前: DefaultFileSystemWriteGuardSetting
+  - サンプル値:
+``` xml
+<integer>2</integer>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
   ### DefaultGeolocationSetting
   #### 既定の位置情報の設定
   
@@ -1148,7 +1267,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   #### 説明
   [PluginsAllowedForUrls](#pluginsallowedforurls) と [PluginsBlockedForUrls](#pluginsblockedforurls) が最初にチェックされ、その後、このポリシーがあります。 [ClickToPlay] と [BlockPlugins] のどちらかを選択できます。 このポリシーを ' BlockPlugins ' に設定すると、すべての web サイトでこのプラグインが拒否されます。 [ClickToPlay] は、フラッシュプラグインを実行しますが、ユーザーはプレースホルダーをクリックして起動します。
 
-                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                    
 
 このポリシーを設定しない場合は、BlockPlugins が使用されますが、ユーザーはこの設定を変更できます。
 
@@ -1363,6 +1482,234 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   - サンプル値:
 ``` xml
 <integer>2</integer>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### FileSystemReadAskForUrls
+  #### これらのサイトのファイル システム API を通して読み取りアクセスを許可する
+  
+  
+  #### サポートされているバージョン:
+  - Windows と macOS での 86 以降
+
+  #### 説明
+  ポリシーを設定すると、ファイル システム API を使用して、ユーザーにホスト オペレーティング システムのファイルまたはディレクトリに対する読み取りアクセス権を付与することを要求することができる URL パターンを指定できます。
+
+ポリシーが設定されていないままだと、設定された場合に、[DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting) がすべてのサイトに適用されます。 それ以外の場合、ユーザーの個人用設定が適用されます。
+
+URL パターンは、 [FileSystemReadBlockedForUrls](#filesystemreadblockedforurls) と競合することはできません。 URL が両方と一致する場合、どちらのポリシーも優先されません。
+
+有効な URL パターンの詳細については、https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns をご覧ください。
+
+  #### サポートされている機能:
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+  - 文字列のリスト
+
+  #### Windows の情報と設定
+  ##### グループ ポリシー (ADMX) 情報
+  - GP 固有の名前: FileSystemReadAskForUrls
+  - GP 名: これらのサイトのファイル システム API を通して読み取りアクセスを許可する
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/コンテンツの設定
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+  ##### Windows レジストリの設定
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls
+  - パス (推奨): なし
+  - 値の名前: 1、2、3、...
+  - 値の種類: REG_SZ の一覧
+  ##### サンプル値:
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Mac の情報と設定
+  - GP 固有の名前: FileSystemReadAskForUrls
+  - サンプル値:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### FileSystemReadBlockedForUrls
+  #### これらのサイトのファイル システム API を通して読み取りアクセスをブロックする
+  
+  
+  #### サポートされているバージョン:
+  - Windows と macOS での 86 以降
+
+  #### 説明
+  このポリシーを設定した場合、ファイル システム API を使用して、ユーザーにホスト オペレーティング システムのファイルまたはディレクトリに対する読み取りアクセス権を付与することを要求することができる URL パターンを指定できます。
+
+ポリシーが設定されない場合、設定された場合に、[DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting) がすべてのサイトに適用されます。 それ以外の場合、ユーザーの個人用設定が適用されます。
+
+URL パターンは、 [FileSystemReadAskForUrls](#filesystemreadaskforurls) と競合することはできません。 URL が両方と一致する場合、どちらのポリシーも優先されません。
+
+有効な URL パターンの詳細については、https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns をご覧ください。
+
+  #### サポートされている機能:
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+  - 文字列のリスト
+
+  #### Windows の情報と設定
+  ##### グループ ポリシー (ADMX) 情報
+  - GP 固有の名前: FileSystemReadBlockedForUrls
+  - GP 名: これらのサイトのファイル システム API を通して読み取りアクセスをブロックする
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/コンテンツの設定
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+  ##### Windows レジストリの設定
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls
+  - パス (推奨): なし
+  - 値の名前: 1、2、3、...
+  - 値の種類: REG_SZ の一覧
+  ##### サンプル値:
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Mac の情報と設定
+  - 基本設定キーの名前: FileSystemReadBlockedForUrls
+  - サンプル値:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### FileSystemWriteAskForUrls
+  #### これらのサイトのファイルとディレクトリへの書き込みアクセスを許可する
+  
+  
+  #### サポートされているバージョン:
+  - Windows と macOS での 86 以降
+
+  #### 説明
+  このポリシーを設定した場合、ユーザーにホスト オペレーティング システムのファイルまたはディレクトリに対する書き込みアクセス権を付与することを要求することができる URL パターンを指定できます。
+
+ポリシーが設定されない場合、設定された場合に、[DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting) がすべてのサイトに適用されます。 それ以外の場合、ユーザーの個人用設定が適用されます。
+
+URL パターンは、 [FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls) と競合することはできません。 URL が両方と一致する場合、どちらのポリシーも優先されません。
+
+有効な URL パターンの詳細については、https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns をご覧ください。
+
+  #### サポートされている機能:
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+  - 文字列のリスト
+
+  #### Windows の情報と設定
+  ##### グループ ポリシー (ADMX) 情報
+  - GP 固有の名前: FileSystemWriteAskForUrls
+  - GP 名: これらのサイトのファイルとディレクトリへの書き込みアクセスを許可する
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/コンテンツの設定
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+  ##### Windows レジストリの設定
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls
+  - パス (推奨): なし
+  - 値の名前: 1、2、3、...
+  - 値の種類: REG_SZ の一覧
+  ##### サンプル値:
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Mac の情報と設定
+  - 基本設定キーの名前: FileSystemWriteAskForUrls
+  - サンプル値:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### FileSystemWriteBlockedForUrls
+  #### これらのサイトのファイルとディレクトリへの書き込みアクセスをブロックする
+  
+  
+  #### サポートされているバージョン:
+  - Windows と macOS での 86 以降
+
+  #### 説明
+  このポリシーを設定した場合、ユーザーにホスト オペレーティング システムのファイルまたはディレクトリに対する書き込みアクセス権を付与することを要求できなくする URL パターンを指定できます。
+
+ポリシーが設定されない場合、設定された場合に、[DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting) がすべてのサイトに適用されます。 それ以外の場合、ユーザーの個人用設定が適用されます。
+
+URL パターンは、 [FileSystemWriteAskForUrls](#filesystemwriteaskforurls) と競合することはできません。 URL が両方と一致する場合、どちらのポリシーも優先されません。
+
+有効な URL パターンの詳細については、https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns をご覧ください。
+
+  #### サポートされている機能:
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+  - 文字列のリスト
+
+  #### Windows の情報と設定
+  ##### グループ ポリシー (ADMX) 情報
+  - GP 固有の名前: FileSystemWriteBlockedForUrls
+  - GP 名: これらのサイトのファイルとディレクトリへの書き込みアクセスをブロックする
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/コンテンツの設定
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+  ##### Windows レジストリの設定
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls
+  - パス (推奨): なし
+  - 値の名前: 1、2、3、...
+  - 値の種類: REG_SZ の一覧
+  ##### サンプル値:
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Mac の情報と設定
+  - 基本設定キーの名前: FileSystemWriteBlockedForUrls
+  - サンプル値:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
 ```
   
 
@@ -4457,6 +4804,73 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 
   [ページのトップへ](#microsoft-edge---policies)
 
+  ### PrintingPaperSizeDefault
+  #### 印刷の既定のページ サイズ
+  
+  
+  #### サポートされているバージョン:
+  - Windows と macOS での 86 以降
+
+  #### 説明
+  印刷の既定のページ サイズを上書きします。
+
+名前には、一覧に必要な用紙サイズが含まれていない場合に、指定した書式または 'Custom' のいずれかを含める必要があります。 'Custom' 値が指定されている場合は custom_size プロパティを指定する必要があります。 このファイルでは、必要な高さと幅がマイクロメートル単位で示されます。 それ以外の custom_size プロパティは指定できません。 これらのルールに違反するポリシーは無視されます。
+
+ユーザーが選んだプリンターのページ サイズが使用できない場合、このポリシーは無視されます。
+
+  #### サポートされている機能:
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+  - Dictionary
+
+  #### Windows の情報と設定
+  ##### グループ ポリシー (ADMX) 情報
+  - GP 固有の名前: PrintingPaperSizeDefault
+  - GP 名: 印刷の既定のページ サイズ
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/印刷
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+  ##### Windows レジストリの設定
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - 値の名前: PrintingPaperSizeDefault
+  - 値の種類: REG_SZ
+  ##### サンプル値:
+```
+SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
+  "custom_size": {
+    "height": 297000, 
+    "width": 210000
+  }, 
+  "name": "custom"
+}
+```
+
+
+  #### Mac の情報と設定
+  - 基本設定キーの名前: PrintingPaperSizeDefault
+  - サンプル値:
+``` xml
+<key>PrintingPaperSizeDefault</key>
+<dict>
+  <key>custom_size</key>
+  <dict>
+    <key>height</key>
+    <integer>297000</integer>
+    <key>width</key>
+    <integer>210000</integer>
+  </dict>
+  <key>name</key>
+  <string>custom</string>
+</dict>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
   ### UseSystemPrintDialog
   #### システムの印刷ダイアログを使用して印刷する
   
@@ -5286,11 +5700,11 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
 このポリシーを設定しない場合、新しいタブ ページのすべての背景画像の種類が有効になります。
 
-             
+    
 
-           
+     
 
-            
+   
 
 ポリシー オプション マッピング:
 
@@ -5339,14 +5753,15 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
   [ページのトップへ](#microsoft-edge---policies)
 
   ### NewTabPageCompanyLogo
-  #### 新規タブ ページの会社のロゴを設定する (非推奨)
-  >非推奨: このポリシーは推奨されなくなっています。 現在はサポートされていますが、将来のリリースで廃止されます。
+  #### 新規タブ ページの会社のロゴを設定する (不使用)
+                                                                                                                 
   
+  >不使用: このポリシーは廃止されており、Microsoft Edge 85 以降は機能しません。
   #### サポートされているバージョン:
-  - Windows と macOS での 79 以降
+  - Windows と macOS での 79 以降、85 まで
 
   #### 説明
-  このポリシーは期待通りに動作しないため、Microsoft はこれを非推奨とし、使用しないことをお勧めしています。 Microsoft Edge バージョン 86 では機能しません。
+  このポリシーは、運用要件の変更のため、期待どおりに動作しませんでした。 そのため、使用しないでください。
 
 Microsoft Edge の新規タブ ページで使用する会社のロゴを指定します。
 
@@ -5373,7 +5788,7 @@ SHA-256 ハッシュの確認方法については、「https://docs.microsoft.c
   #### Windows の情報と設定
   ##### グループ ポリシー (ADMX) 情報
   - GP 固有の名前: NewTabPageCompanyLogo
-  - GP 名: 新規タブ ページの会社のロゴを設定する (非推奨)
+  - GP 名: 新規タブ ページの会社のロゴを設定する (不使用)
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/スタートアップ、ホーム ページ、新規タブ ページ
   - GP パス (推奨): なし
   - GP ADMX ファイル名: MSEdge.admx
@@ -6805,17 +7220,17 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contos
 
  
 
-            
+   
 
-        
+  
 
-      
+   
 
-        
+  
 
-       
+    
 
-       
+    
 
 Microsoft Edge 従来版からのブラウザー データは、このポリシーの値に関係なく、初回実行時に常に警告なしで移行されます。
 
@@ -7099,7 +7514,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = ".exact.hostname.com
 
 このポリシーを設定しない場合、ユーザーが自動的に開くように既に指定したファイルの種類のみ、ダウンロードしても実行されます。
 
-                                                     
+              
 
 このポリシーは、Microsoft Active Directory ドメインに参加している Windows インスタンス、デバイス管理用に登録されている Windows 10 Pro または Enterprise インスタンス、もしくは MDM を使用するか MDM を使用してドメインに参加する macOS インスタンスでのみ利用可能です。
 
@@ -8163,7 +8578,7 @@ ClickOnce の詳細については、「[https://go.microsoft.com/fwlink/?linkid
 
 このポリシーを構成しない場合、使用可能なサービスとエクスポート ターゲットに対する制限は強制されません。
 
-              
+     
 
 ポリシー オプション マッピング:
 
@@ -9501,7 +9916,7 @@ URI テンプレートが dns 変数を含んでいる場合、リゾルバー�
 ```
 
 "\n      Linux-based OSes (including Mac): /home/${user_name}/Downloads\n      Windows: C:\\Users\\${user_name}\\Downloads"
-                                              
+             
 ```
 
 
@@ -9750,7 +10165,7 @@ SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "Exampl
 
   ### EnableDomainActionsDownload
   #### Microsoft からのドメイン アクションのダウンロードを有効にする (不使用)
-        
+  
   
   
   
@@ -10571,7 +10986,7 @@ Microsoft Edge の既定の参照元ポリシーは、段階的なロールア�
 
   ### ForceNetworkInProcess
   #### ブラウザー プロセスでネットワーク コードを強制的に実行する (不使用)
-        
+  
   
   
   
@@ -12642,7 +13057,7 @@ Windows 10 では、このポリシーを構成していない場合、Microsoft
 Windows 7、Windows 8、macOS では、このポリシーによって、使用状況とクラッシュに関連するデータの送信が制御されます。 このポリシーを構成しない場合、Microsoft Edge は既定でユーザーの設定に従います。
 
 このポリシーを有効にするには、[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) を有効に設定する必要があります。 [MetricsReportingEnabled](#metricsreportingenabled) または [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) が構成されていないか、または無効になっている場合は、このデータは Microsoft に送信されません。
-                                            
+           
 
 このポリシーは、Microsoft Active Directory ドメインに参加している Windows インスタンス、デバイス管理用に登録されている Windows 10 Pro または Enterprise インスタンス、もしくは MDM を使用するか MDM を使用してドメインに参加する macOS インスタンスでのみ利用可能です。
 
@@ -13684,11 +14099,11 @@ QUIC は、現在 TCP を使用している Web アプリケーションのパ�
 ```
 
 
-     
-     
+  
+  
    
  
-    
+ 
    
   
 
@@ -13736,8 +14151,8 @@ QUIC は、現在 TCP を使用している Web アプリケーションのパ�
 ```
 
 
-     
-     
+  
+  
    
  
  
@@ -14278,7 +14693,7 @@ Windows 10 では、このポリシーを構成していない場合、Microsoft
 Windows 7、windows 8、macOS では、このポリシーはアクセスした Web サイトに関する情報の送信を制御します。 このポリシーを構成しない場合、Microsoft Edge は既定でユーザーの設定に従います。
 
 このポリシーを有効にするには、 [MetricsReportingEnabled](#metricsreportingenabled) を有効に設定する必要があります。 [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) または [MetricsReportingEnabled](#metricsreportingenabled) が構成されていないか、または無効になっている場合は、このデータは Microsoft に送信されません。
-                                           
+             
 
   #### サポートされている機能:
   - 必須にすることができるか: はい
@@ -15078,9 +15493,9 @@ SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 
 このポリシーを無効にしている場合、Microsoft Edge は、ローカルにインストールされた CA 証明書で認証された接続に対して、これらのセキュリティ保護を無効にします。 これらの保護は、公的に信頼されている CA 証明書で認証された接続に対しては常に有効になっています。
 
-                                                               
+                                                            
 
-                                                    
+             
 
 このポリシーは、影響を受けるプロキシのテストやそれらのアップグレードに使用される場合があります。 影響を受けるプロキシは、ERR_TLS13_DOWNGRADE_DETECTED のエラー コードとともに接続に失敗することが予想されます。
 
@@ -16025,7 +16440,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
   ### WebComponentsV0Enabled
   #### M84 まで Web コンポーネント v0 API をもう一度有効にする (不使用)
-        
+  
   
   
   
@@ -16078,7 +16493,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
   ### WebDriverOverridesIncompatiblePolicies
   #### WebDriver が互換性のないポリシーを上書きすることを許可する (不使用)
-        
+  
   
   
   
