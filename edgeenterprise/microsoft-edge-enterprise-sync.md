@@ -3,19 +3,19 @@ title: Microsoft Edge エンタープライズの同期
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 08/03/2020
+ms.date: 09/15/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge エンタープライズの同期
-ms.openlocfilehash: a6d01356db478871a7c6b386bbb731b32dc4739a
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: d9cd643142d0f6744664a5071c5000b820583e41
+ms.sourcegitcommit: 06c365faeea6070f103fe867cc2da13539ae4680
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980507"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "11016346"
 ---
 # Microsoft Edge エンタープライズの同期
 
@@ -33,6 +33,8 @@ Microsoft Edge の同期を使用すると、ユーザーは、サインイン�
 - 住所など (フォームの入力情報)
 - コレクション
 - 設定
+- 閲覧の履歴
+- タブを開く
 
 同期機能はユーザーの同意によって有効になり、ユーザーは上記の各データ タイプについて同期をオンまたはオフにすることができます。
 
@@ -41,38 +43,22 @@ Microsoft Edge の同期を使用すると、ユーザーは、サインイン�
 
 ## 前提条件
 
-現時点では、Azure Active Directory (Azure AD) アカウントでの Microsoft Edge の同期は、次のサブスクリプションで使用できます。
+Azure Active Directory (Azure AD) アカウントでの Microsoft Edge の同期は、次のサブスクリプションのいずれかで使用できます。
 
 - Azure AD Premium (P1 および P2)
 - Microsoft 365 Business Premium
 - Office 365 E3 以上
 - Azure Information Protection (AIP) (P1& P2)
-- すべての EDU サブスクリプション (O365 A1 以上、M365 A1 以上、学生または教職員向けの Azure Information Protection P1 または P2)
+- すべての EDU サブスクリプション (学生または教職員向けの Microsoft Apps、学生または教職員向けの Exchange Online、O365 A1 以上、M365 A1 以上、学生または教職員向けの Azure Information Protection P1 または P2)
 
-> [!NOTE]
-> 同期は、同期データを保護するために Azure Information Protection (AIP) によって提供される保護サービスに依存しています。 このサービスは、現在、前述のサブスクリプションで利用できます。 AIP で SKU の完全な一覧を表示するには、[Information Protection の価格に関するトピック](https://azure.microsoft.com/pricing/details/information-protection/)を参照してください。
+## Microsoft Edge の同期の構成
 
-## Microsoft Edge の同期の構成オプション
+Microsoft Edge の同期の構成オプションは、Azure Information Protection (AIP) サービスを介して利用できます。 テナントの AIP が有効になっている場合、ライセンスに関係なくすべてのユーザーが Microsoft Edge のデータを同期できます。 AIP を有効にする方法は、[ここ](https://docs.microsoft.com/azure/information-protection/activate-office365)で説明されています。
 
-Microsoft Edge の同期を有効にするには、次の構成オプションを使用できます。
-
-- Azure Information Protection (AIP)
-- Azure AD Enterprise State Roaming (ESR)
-
-AIP と ESR の両方が無効になっている場合、ユーザーのアカウントで同期が利用できないことを示すエラー メッセージが表示されます。
-
-### Azure Information Protection (AIP)
-
-テナントの Azure Information Protection (AIP) サービスが有効になっている場合、ライセンスに関係なく、すべてのユーザーが Microsoft Edge データを同期できます。 AIP を有効にする方法は、[ここ](https://docs.microsoft.com/azure/information-protection/activate-office365)で説明されています。
-
-特定のユーザー セットに対して同期を制限するために、これらのユーザーに対して [AADRM のオンボード制御ポリシー](https://docs.microsoft.com/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy?view=azureipps)を有効にすることができます。 必要なユーザーがすべてオンボードされた後でも同期ができない場合には、[Get-AIPServiceIPCv3](https://docs.microsoft.com/powershell/module/aipservice/Get-AipServiceIPCv3?view=azureipps) PowerShell コマンドレット を使用して IPCv3Service が有効になっていることをご確認ください。
+特定のユーザー セットに対して同期を制限するために、これらのユーザーに対して [AIP のオンボード制御ポリシー](https://docs.microsoft.com/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy?view=azureipps) を有効にすることができます。 必要なユーザーがすべてオンボードされた後でも同期ができない場合には、[Get-AIPServiceIPCv3](https://docs.microsoft.com/powershell/module/aipservice/get-aipserviceipcv3?view=azureipps) PowerShell コマンドレット を使用して IPCv3Service が有効になっていることをご確認ください。
 
 > [!CAUTION]
-> Azure Information Protection を有効にすると、Microsoft Word や Microsoft Outlook など、AIP を使用する他のアプリケーションのアクセスも制限されます。
-
-### Azure AD Enterprise State Roaming (ESR)
-
-任意のユーザーまたはテナントについて、Azure Active Directory [Enterprise State Roaming](https://docs.microsoft.com/azure/active-directory/devices/enterprise-state-roaming-overview) (ESR) 機能が有効になっている場合、オンボード制御ポリシー設定に関係なく、Microsoft Edge の同期機能を使用できます。
+> Azure Information Protection を有効にすると、AIP を使用してコンテンツを保護するために Microsoft Word や Microsoft Outlook などの他のアプリケーションも許可されます。 また、エッジ同期を制限するために使用されるオンボード制御ポリシーは、他のアプリケーションが AIP を使用してコンテンツを保護することも制限します。
 
 ## Microsoft Edge と Enterprise State Roaming
 
@@ -85,6 +71,8 @@ AIP と ESR の両方が無効になっている場合、ユーザーのアカ�
 - [SyncDisabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#syncdisabled): 同期を完全に無効にします。
 - [SavingBrowserHistoryDisabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#savingbrowserhistorydisabled): 閲覧の履歴の保存と同期を無効にします。このポリシーにより、開いているタブの同期も無効になります。
 - [SyncTypesListDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#synctypeslistdisabled): 同期から除外される種類の一覧を構成します。
+- [RoamingProfileSupportEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#roamingprofilesupportenabled): Active Directory (AD) プロファイルがオンプレミスの記憶域を使用できるようにします。 詳細については、「[Active Directory (AD) ユーザー用のオンプレミス同期](https://docs.microsoft.com/DeployEdge/microsoft-edge-on-premises-sync)」を参照してください。
+- [ForceSync]( https://docs.microsoft.com/deployedge/microsoft-edge-policies#forcesync): 既定で同期をオンにします。同期にはユーザーの同意を必要としません。  
 
 ## よく寄せられる質問
 
@@ -92,7 +80,7 @@ AIP と ESR の両方が無効になっている場合、ユーザーのアカ�
 
 #### 同期したデータは暗号化されていますか? 
 
-転送中のデータは TLS 1.2 以降を使用して暗号化され、Microsoft のサービスでの保存時にはさらに AES256 を使用して暗号化されます。
+データは TLS 1.2 以上を使用してトランスポートで暗号化されます。 ほとんどのデータ型は、AES256 を使用して、ブラウザの履歴と開いているタブのデータ型を除いて、Microsoft のサービスでは保存中にさらに暗号化されます。 これらのデータ型が同期されないようにするには、[SavingBrowserHistoryDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#savingbrowserhistorydisabled) ポリシーを適用します。
 
 #### Microsoft Edge の同期データはどこに保存されますか?
 
