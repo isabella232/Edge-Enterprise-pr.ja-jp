@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Beta チャネルに関する Microsoft Edge のリリース ノート
-ms.openlocfilehash: 2bcd18cd18c9b5be1f4b3b39137aea09889bbc2f
-ms.sourcegitcommit: db44b524973df8ac811b09e6b71c25be9ba92bbc
+ms.openlocfilehash: 75ae113b7e4b39a76b70d9c0f85bc484f63e3c1a
+ms.sourcegitcommit: 468b75d86803ad1531d7bed8e6c1a562a00ebe50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "11015363"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "11026897"
 ---
 # Microsoft Edge Beta チャネルのリリースノート
 
@@ -35,7 +35,6 @@ ms.locfileid: "11015363"
 * **Internet Explorer モード:**
 
    * ユーザーが Microsoft Edge ユーザー インターフェイス (UI) を使用して、Internet Explorer モードでサイトをテストできるようにします。 Microsoft Edge バージョン 86 以降、管理者はユーザーがテスト目的で、またはサイトがサイト一覧の XML に追加されるまでの臨時措置として Internet Explorer モードでタブを読み込むことができるよう、UI オプションを有効にできます。
-   * ユーザーが IE モードを必要とするサイトに関するフィードバックを提供できるようにします。 ユーザーは、Microsoft Edge UI オプションを使用してフィードバックを送信できます。 この UI オプションは、グループ ポリシーを使用して表示されるように構成できます。また、この情報を受け取る方法 (メールまたはユーザー設定のフォーム) を選ぶことができます。
 
 * **ダウンロード マネージャーを使用して、ダウンロードをディスクから削除できます。** ユーザーは、ブラウザーを離れることなくダウンロードしたファイルをディスクから削除できるようになりました。 ダウンロード削除のこの新しい機能は、ダウンロード シェルフのコンテキスト メニューまたはダウンロード ページに存在します。
 
