@@ -1,4 +1,4 @@
-# last revised 09/02/2020
+# last revised 09/20/2020
 - name: Microsoft Edge エンタープライズのドキュメント
   href: index.yml
 - name: Microsoft Edge ドキュメント
@@ -59,8 +59,6 @@
           href: microsoft-edge-sysupdate-windows-updates.md
 - name: Microsoft Edge の展開
   items:
-    - name: ビデオ - Microsoft Edge の展開
-      href: microsoft-edge-video-deploy.md
     - name: Configuration Manager による Windows への展開
       href: 'https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
     - name: Intune による Windows への展開
@@ -83,8 +81,6 @@
       href: configure-microsoft-edge-on-mac-jamf.md
 - name: Microsoft Edge エンタープライズ機能を使用する
   items:
-    - name: Microsoft Edge および Microsoft Search のビデオ
-      href: microsoft-edge-video-search.md
     - name: 構成とテスト
       href: edge-configuration-and-experiments.md
     - name: ID サポートと構成
@@ -115,8 +111,6 @@
           href: edge-ie-mode-faq.md
 - name: Microsoft Edge のセキュリティ
   items:
-    - name: ビデオ - セキュリティ、互換性、管理性
-      href: microsoft-edge-video-security-compatibility-manageability.md
     - name: セキュリティの概要
       href: security-overview.md
     - name: Microsoft Edge エンドポイントの許可リスト
@@ -163,5 +157,15 @@
           href: edge-learnmore-create-user-directory-vars.md
         - name: 企業向け Microsoft Edge ロールバックの使用
           href: edge-learnmore-rollback.md
+- name: Microsoft Edge のビデオ
+  items:
+    - name: Microsoft Edge ビデオのコレクション
+      href: microsoft-edge-videos.md
+    - name: ビデオ - Microsoft Edge の展開
+      href: microsoft-edge-video-deploy.md
+    - name: Microsoft Edge および Microsoft Search のビデオ
+      href: microsoft-edge-video-search.md
+    - name: ビデオ - セキュリティ、互換性、管理性
+      href: microsoft-edge-video-security-compatibility-manageability.md
 - name: よく寄せられる質問
   href: faqs-edge-in-the-enterprise.md
