@@ -1,4 +1,4 @@
-# last revised 09/20/2020
+# last revised 09/21/2020
 - name: Microsoft Edge エンタープライズのドキュメント
   href: index.yml
 - name: Microsoft Edge ドキュメント
@@ -89,6 +89,8 @@
       href: microsoft-edge-enterprise-state-roaming.md
     - name: Microsoft Edge キオスク モード
       href: microsoft-edge-kiosk-mode.md
+    - name: Microsoft Edge キオスクモードを構成する
+      href: microsoft-edge-configure-kiosk-mode.md
     - name: Microsoft Edge の同期
       href: microsoft-edge-enterprise-sync.md
     - name: Active Directory ユーザー用のオンプレミス同期
@@ -111,6 +113,8 @@
           href: edge-ie-mode-faq.md
 - name: Microsoft Edge のセキュリティ
   items:
+    - name: ビジネス向けのセキュリティ
+      href: ms-edge-security-for-business.md
     - name: セキュリティの概要
       href: security-overview.md
     - name: Microsoft Edge エンドポイントの許可リスト
