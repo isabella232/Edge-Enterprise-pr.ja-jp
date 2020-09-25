@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
-ms.openlocfilehash: 0561f403bb385792767c3666be18bb6cf680edaf
+ms.openlocfilehash: 146043b518f02b8581498c273db4327682993609
 ms.sourcegitcommit: d4f2b62b41f0e40ec6b22aeca436b2c261658bd8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/25/2020
-ms.locfileid: "11078125"
+ms.locfileid: "11078273"
 ---
 # Microsoft Edge - ポリシー
 最新バージョンの Microsoft Edge には、次のポリシーが含まれています。 これらのポリシーを使用して、組織内での Microsoft Edge の動作方法を構成することができます。
@@ -1268,8 +1268,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   [PluginsAllowedForUrls](#pluginsallowedforurls) と [PluginsBlockedForUrls](#pluginsblockedforurls) が最初にチェックされ、その後、このポリシーがあります。 [ClickToPlay] と [BlockPlugins] のどちらかを選択できます。 このポリシーを ' BlockPlugins ' に設定すると、すべての web サイトでこのプラグインが拒否されます。 [ClickToPlay] は、フラッシュプラグインを実行しますが、ユーザーはプレースホルダーをクリックして起動します。
 
 このポリシーを構成していない場合、ユーザーはこの設定を手動で変更することができます。
-
-                                                                                     
 
 注: 自動再生は、[PluginsAllowedForUrls](#pluginsallowedforurls) ポリシーに明示的にリストされているドメインにのみ許可されます。 すべてのサイトに対して自動再生をオンにするには、許可されている Url のリストに http://* および https://* を追加します。
 
@@ -3256,7 +3254,6 @@ Microsoft Edge 84 以降、このポリシーは推奨されるポリシーと�
 - [アドレス バー] (リダイレクト)、新しいタブ ページの検索ボックスはアドレス バーを使用して新しいタブを検索します。
 
 ポリシー オプション マッピング:
-  
 
 * bing (bing) = 検索ボックス (推奨)
 
@@ -4409,12 +4406,6 @@ Microsoft Edge が安全でないパスワードを検出する方法の詳細�
 ```
 
 
-  
-  
-   
- 
- 
-   
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -5700,12 +5691,6 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
 このポリシーを設定しない場合、新しいタブ ページのすべての背景画像の種類が有効になります。
 
-    
-
-     
-
-   
-
 ポリシー オプション マッピング:
 
 * DisableImageOfTheDay (1) = 日ごとの背景画像を無効にする
@@ -5754,7 +5739,6 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
   ### NewTabPageCompanyLogo
   #### 新規タブ ページの会社のロゴを設定する (不使用)
-                                                                                                                 
   
   >不使用: このポリシーは廃止されており、Microsoft Edge 85 以降は機能しません。
   #### サポートされているバージョン:
@@ -6639,8 +6623,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 
 このポリシーを無効にしているか、構成していない場合、ページは同期 XHR 要求をページの解除中に送信することができません。
 
-  
-
   #### サポートされている機能:
   - 必須にすることができるか: はい
   - 推奨にすることができるか: いいえ
@@ -7218,20 +7200,6 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contos
   #### 説明
   このポリシーを有効にしている場合、指定したブラウザーからサポートされているすべてのデータの種類と設定が、初回実行時に警告なしに自動でインポートされます。 最初の実行エクスペリエンスの間は、インポート セクションもスキップされます。
 
- 
-
-   
-
-  
-
-   
-
-  
-
-    
-
-    
-
 Microsoft Edge 従来版からのブラウザー データは、このポリシーの値に関係なく、初回実行時に常に警告なしで移行されます。
 
 このポリシーが [FromDefaultBrowser] に設定されている場合、管理対象デバイスの既定のブラウザーに対応するデータの種類がインポートされます。
@@ -7262,7 +7230,6 @@ Microsoft Edge 従来版からのブラウザー データは、このポリシ�
 
 このポリシーを [FromSafari] に設定すると、ユーザー データは Microsoft Edge にインポートされなくなります。 これは、Mac でのフルディスクアクセスの仕組みによるものです。
 macOS Mojave 以降では、Safari データを自動的に、または無人で Microsoft Edge にインポートすることはできません。
- 
 
 Microsoft Edge のバージョン 83 以降で、このポリシーを [FromMozillaFirefox] に設定している場合、以下のデータの種類が Mozilla Firefox からインポートされます。
 1. お気に入りまたはブックマーク
@@ -7513,8 +7480,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = ".exact.hostname.com
 ユーザーが自動的に開くように既に指定したファイルの種類は、ダウンロードしても引き続き実行されます。 ユーザーは引き続き、自動的に開くファイルの種類を指定できます。
 
 このポリシーを設定しない場合、ユーザーが自動的に開くように既に指定したファイルの種類のみ、ダウンロードしても実行されます。
-
-              
 
 このポリシーは、Microsoft Active Directory ドメインに参加している Windows インスタンス、デバイス管理用に登録されている Windows 10 Pro または Enterprise インスタンス、もしくは MDM を使用するか MDM を使用してドメインに参加する macOS インスタンスでのみ利用可能です。
 
@@ -8200,10 +8165,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   #### 説明
   このポリシーは、企業の環境が組み込みの証明書検証ツールとは互換していないことが判明した場合に、環境の更新と問題の報告に時間を割くための短期のメカニズムとしてのみ機能することを目的としているため、推奨されていません。
- 
-  
-
-  
 
 Mac OS X のレガシ証明書検証機能のサポートの削除が予定されている Microsoft Edge のバージョン 87 では機能しません。
 
@@ -8577,8 +8538,6 @@ ClickOnce の詳細については、「[https://go.microsoft.com/fwlink/?linkid
 このポリシーを有効にすると、指定したリストと一致するサービスとエクスポート ターゲットがブロックされます。
 
 このポリシーを構成しない場合、使用可能なサービスとエクスポート ターゲットに対する制限は強制されません。
-
-     
 
 ポリシー オプション マッピング:
 
@@ -9047,8 +9006,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
   - Windows 7 と macOS での 77 以降
 
   #### 説明
-   
-
   このポリシーを True に設定すると、Microsoft Edge は起動時に既定のブラウザーであるかどうかを常にチェックし、可能であれば自動的に登録します。
 
 このポリシーを False に設定すると、Microsoft Edge はそれが既定であるかどうかの確認を停止し、このオプションのユーザー コントロールをオフにします。
@@ -9914,9 +9871,7 @@ URI テンプレートが dns 変数を含んでいる場合、リゾルバー�
   - 値の種類: REG_SZ
   ##### サンプル値:
 ```
-
 "\n      Linux-based OSes (including Mac): /home/${user_name}/Downloads\n      Windows: C:\\Users\\${user_name}\\Downloads"
-             
 ```
 
 
@@ -10165,9 +10120,6 @@ SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "Exampl
 
   ### EnableDomainActionsDownload
   #### Microsoft からのドメイン アクションのダウンロードを有効にする (不使用)
-  
-  
-  
   
   >不使用: このポリシーは廃止されており、Microsoft Edge 84 以降は機能しません。
   #### サポートされているバージョン:
@@ -10987,10 +10939,6 @@ Microsoft Edge の既定の参照元ポリシーは、段階的なロールア�
   ### ForceNetworkInProcess
   #### ブラウザー プロセスでネットワーク コードを強制的に実行する (不使用)
   
-  
-  
-  
-  
   >不使用: このポリシーは廃止されており、Microsoft Edge 83 以降は機能しません。
   #### サポートされているバージョン:
   - Windows での 78 以降 83 まで
@@ -11002,10 +10950,6 @@ Microsoft Edge の既定の参照元ポリシーは、段階的なロールア�
 
 このポリシーは、既定では無効になっています。 有効にしている場合、ネットワーキング プロセスがサンドボックス内で動作しているときに、ユーザーはセキュリティの問題にさらされます。
 
-
- 
-
-  
   #### サポートされている機能:
   - 必須にすることができるか: はい
   - 推奨にすることができるか: いいえ
@@ -12481,7 +12425,6 @@ Internet Explorer モードの詳細については、「[https://go.microsoft.c
 Internet Explorer モードの詳細については、「[https://go.microsoft.com/fwlink/?linkid=2105106](https://go.microsoft.com/fwlink/?linkid=2105106)」を参照してください
 
 ポリシー オプション マッピング:
-  
 
 * 既定値 (0) = 既定値
 
@@ -12531,13 +12474,13 @@ Internet Explorer モードの詳細については、「[https://go.microsoft.c
   #### 説明
   このポリシーは ie-mode-testフラグポリシーの代替です。 UI メニューオプションから IE モードタブを開くことができます。
 
-  この設定は、"IEMode" に設定されている [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) と、一覧に少なくとも 1 つのエントリがある [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) ポリシーと連動します。
+       この設定は、"IEMode" に設定されている [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) と、一覧に少なくとも 1 つのエントリがある [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) ポリシーと連動します。
 
-  このポリシーを有効にすると、ユーザーが UI オプションから IE モードタブを開き、現在のサイトを IE モードサイトに移動することができます。
+       このポリシーを有効にすると、ユーザーが UI オプションから IE モードタブを開き、現在のサイトを IE モードサイトに移動することができます。
 
-  このポリシーを無効にすると、ユーザーのメニューに UI オプションが直接表示されません。 
-  
-  このポリシーを構成していない場合は、手動でie-mode-testフラグを設定できます。
+       このポリシーを無効にすると、ユーザーのメニューに UI オプションが直接表示されません。
+
+       このポリシーを構成していない場合は、手動でie-mode-testフラグを設定できます。
 
   #### サポートされている機能:
   - 必須にすることができるか: はい
@@ -13039,8 +12982,6 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
   ### MetricsReportingEnabled
   #### 使用状況とクラッシュ関連データのレポートを有効にする (非推奨)
   >非推奨: このポリシーは推奨されなくなっています。 現在はサポートされていますが、将来のリリースで廃止されます。
-   
-  
   
   #### サポートされているバージョン:
   - Windows と macOS での 77 以降
@@ -13057,11 +12998,9 @@ Windows 10 では、このポリシーを構成していない場合、Microsoft
 Windows 7、Windows 8、macOS では、このポリシーによって、使用状況とクラッシュに関連するデータの送信が制御されます。 このポリシーを構成しない場合、Microsoft Edge は既定でユーザーの設定に従います。
 
 このポリシーを有効にするには、[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) を有効に設定する必要があります。 [MetricsReportingEnabled](#metricsreportingenabled) または [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) が構成されていないか、または無効になっている場合は、このデータは Microsoft に送信されません。
-           
 
 このポリシーは、Microsoft Active Directory ドメインに参加している Windows インスタンス、デバイス管理用に登録されている Windows 10 Pro または Enterprise インスタンス、もしくは MDM を使用するか MDM を使用してドメインに参加する macOS インスタンスでのみ利用可能です。
 
-  
   #### サポートされている機能:
   - 必須にすることができるか: はい
   - 推奨にすることができるか: いいえ
@@ -13298,53 +13237,6 @@ Windows 7、Windows 8、macOS では、このポリシーによって、使用�
 
   
 
-
- 
-   
- 
-
-   
-  
-
-   
-
-   
-
-  
- 
-  
- 
-
-  
-   
-
-   
-  
-   
-   
-  
-   
- 
-   
-   
-   
-  
- 
- 
-   
- 
-   
-
-
-  
-  
-   
- 
- 
-   
-  
-
- 
   [ページのトップへ](#microsoft-edge---policies)
 
   ### OverrideSecurityRestrictionsOnInsecureOrigin
@@ -14100,12 +13992,6 @@ QUIC は、現在 TCP を使用している Web アプリケーションのパ�
 
 
   
-  
-   
- 
- 
-   
-  
 
   [ページのトップへ](#microsoft-edge---policies)
 
@@ -14151,12 +14037,6 @@ QUIC は、現在 TCP を使用している Web アプリケーションのパ�
 ```
 
 
-  
-  
-   
- 
- 
-   
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -14674,8 +14554,6 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
   ### SendSiteInfoToImproveServices
   #### Microsoft サービスの品質向上のためにサイト情報を送信する (非推奨)
   >非推奨: このポリシーは推奨されなくなっています。 現在はサポートされていますが、将来のリリースで廃止されます。
-   
-  
   
   #### サポートされているバージョン:
   - Windows と macOS での 77 以降
@@ -14685,7 +14563,6 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
 このポリシーでは、検索などのサービスの品質を向上させるために Microsoft Edge で訪問した Web サイトに関する情報を Microsoft に送信できます。
 
-   
 Microsoft Edge でアクセスした Web サイトに関する情報を Microsoft に送信する場合は、このポリシーを有効にします。 Microsoft Edge でアクセスした Web サイトに関する情報を Microsoft に送信しない場合は、このポリシーを無効にします。 いずれの場合でも、ユーザーがこの設定を変更または上書きすることはできません。
 
 Windows 10 では、このポリシーを構成していない場合、Microsoft Edge は Windows 診断データの設定を既定値として設定します。 このポリシーが有効になっている場合、Microsoft Edge は、Windows 診断データの設定が [完全] に設定されている場合にのみ、Microsoft Edge でアクセスした Web サイトに関する情報を送信します。 このポリシーが無効になっている場合、Microsoft Edge はアクセスした Web サイトに関する情報を送信しません。 Windows 診断データの設定については、「[https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)」を参照してください
@@ -14693,7 +14570,6 @@ Windows 10 では、このポリシーを構成していない場合、Microsoft
 Windows 7、windows 8、macOS では、このポリシーはアクセスした Web サイトに関する情報の送信を制御します。 このポリシーを構成しない場合、Microsoft Edge は既定でユーザーの設定に従います。
 
 このポリシーを有効にするには、 [MetricsReportingEnabled](#metricsreportingenabled) を有効に設定する必要があります。 [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) または [MetricsReportingEnabled](#metricsreportingenabled) が構成されていないか、または無効になっている場合は、このデータは Microsoft に送信されません。
-             
 
   #### サポートされている機能:
   - 必須にすることができるか: はい
@@ -14979,8 +14855,6 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
 お気に入り バーに Office.com へのショートカットを表示するどうかを指定します。 Microsoft Edge にサインインしているユーザーの場合、ショートカットキーを使用して、ユーザーが Microsoft Office のアプリやドキュメントに移動します。このポリシーを有効にするか、未構成にした場合、ユーザーは、[お気に入り] バーのコンテキストメニューでトグルを変更して、ショートカットを表示するかどうかを選ぶことができます。
 このポリシーを無効にすると、ショートカットが表示されなくなります。
-
-                                                       
 
   #### サポートされている機能:
   - 必須にすることができるか: はい
@@ -15288,8 +15162,6 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
 このポリシーは、音声、動画、画像以外の混在したコンテンツには影響しません。
 
-
-  
   #### サポートされている機能:
   - 必須にすることができるか: はい
   - 推奨にすることができるか: いいえ
@@ -15384,8 +15256,6 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
   #### 説明
   Microsoft Edge でのデータ同期を無効にします。 また、このポリシーにより、同期に対する同意を確認するメッセージも表示されなくなります。
 
-
- 
 このポリシーを設定していないか、推奨通りに適用していない場合、ユーザーは同期のオン/オフを切り替えることができるようになります。 このポリシーを必須として適用している場合、ユーザーは同期をオンにすることができなくなります。
 
   #### サポートされている機能:
@@ -15480,7 +15350,6 @@ SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
   ### TLS13HardeningForLocalAnchorsEnabled
   #### ローカル トラスト アンカーの TLS 1.3 セキュリティ機能を有効にする (不使用)
   
-  
   >不使用: このポリシーは廃止されており、Microsoft Edge 85 以降は機能しません。
   #### サポートされているバージョン:
   - Windows と macOS での 81 以降、85 まで
@@ -15493,10 +15362,6 @@ SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 このポリシーを有効にしているか、設定していない場合、Microsoft Edge はすべての接続に対してこれらのセキュリティ保護を有効にします。
 
 このポリシーを無効にしている場合、Microsoft Edge は、ローカルにインストールされた CA 証明書で認証された接続に対して、これらのセキュリティ保護を無効にします。 これらの保護は、公的に信頼されている CA 証明書で認証された接続に対しては常に有効になっています。
-
-                                                            
-
-             
 
 このポリシーは、影響を受けるプロキシのテストやそれらのアップグレードに使用される場合があります。 影響を受けるプロキシは、ERR_TLS13_DOWNGRADE_DETECTED のエラー コードとともに接続に失敗することが予想されます。
 
@@ -15760,8 +15625,6 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 このポリシーを無効にしているか、構成していない場合、ユーザーは追跡防止のレベルを独自に設定することができます。
 
 ポリシー オプション マッピング:
-   
- 
 
 * TrackingPreventionOff (0) = オフ (追跡防止なし)
 
@@ -16442,9 +16305,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ### WebComponentsV0Enabled
   #### M84 まで Web コンポーネント v0 API をもう一度有効にする (不使用)
   
-  
-  
-  
   >不使用: このポリシーは廃止されており、Microsoft Edge 84 以降は機能しません。
   #### サポートされているバージョン:
   - Windows と macOS での 80 以降、84 まで
@@ -16495,15 +16355,11 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ### WebDriverOverridesIncompatiblePolicies
   #### WebDriver が互換性のないポリシーを上書きすることを許可する (不使用)
   
-  
-  
-  
   >不使用: このポリシーは廃止されており、Microsoft Edge 84 以降は機能しません。
   #### サポートされているバージョン:
   - Windows と macOS での 77 以降、84 まで
 
   #### 説明
-  
   
 WebDriver は既存のすべてのポリシーと互換性を持つようになったため、このポリシーは機能しません。
 
