@@ -3,23 +3,23 @@ title: Microsoft Edge の顧客導入資料
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 06/30/2020
+ms.date: 09/22/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge の顧客導入資料
-ms.openlocfilehash: ce3db319fb813e069131700b8de97c51e510333a
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 68b984faad3b36c0926ece070ca052e81e764e0e
+ms.sourcegitcommit: 858227653fc89532d1d274735f53280e27b2a8c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980521"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "11072634"
 ---
 # Microsoft Edge のための顧客導入資料
 
-新しい Microsoft Edge の展開と導入をサポートするには、以下の収集された教材とリソースを参照してください。
+新しい Microsoft Edge の展開と導入をサポートするには、収集された教材とリソースを参照してください。 ダウンロードするために収集された zip ファイルが提供されています。
 
 追加の資料が利用可能になったら、確認してください。
 
@@ -29,31 +29,40 @@ ms.locfileid: "10980521"
 
 - IT 展開ガイド
 - 入門ユーザーガイド
+- お知らせのメール
+- ヒントとコツのメール
 - デジタル サイネージ
 
-## IT 展開ガイド
+[顧客導入キットをダウンロードする](https://www.microsoft.com/download/details.aspx?id=102119)
+
+### IT 展開ガイド
 
 このガイドを使用して、展開の計画を開始し、使用している環境で Microsoft Edge の展開を開始する方法について説明します。
 
-[IT 展開ガイドを入手する](media/customer-adoption-not-md/commercial-deployment-guide-microsoft-edge.pdf)
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-deployment-guide-4.png" alt-text="Microsoft Mechanics のビデオ シリーズ":::
 
-## 入門ユーザーガイド
+### 入門ユーザーガイド
 
 このガイドを使用して、新しい Microsoft Edge のユーザーを教育します。 このガイドには、UI、メニュー、機能の概要が含まれています。 ユーザーを支援するためのヒントも紹介しています。
 
-[入門ユーザーガイドを入手する](media/customer-adoption-not-md/microsoft-edge-how-to-get-started-user-guide.pdf)
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-get-started-guide.png" alt-text="入門ユーザー ガイドの利用方法":::
 
-## デジタル サイネージ
+### メール テンプレート
+
+これらのメール テンプレートを使用して、ユーザーが新しい Microsoft Edge を利用できることを通知し、ブラウザーを最大限に活用するためのヒントとコツを提供します。
+
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-email-template.png" alt-text="ヒントとコツに関するメール テンプレート":::
+
+### デジタル サイネージ
 
 次のデジタル サイネージを使用して、新しい Microsoft Edge についてユーザーに通知します。
 
-[Microsoft Edge - Enterprise 新しいタブ ページ](media/customer-adoption-not-md/microsoft-edge-digital-signage-enterprise-new-tab-page.pdf)
+- Enterprise [新しいタブ] ページ
+- 複数のプロファイルとクロス プラットフォーム
+- Bing の Microsoft Search
+- セキュリティ
 
-[Microsoft Edge – 複数のプロファイルとクロス プラットフォーム](https://officedocs-cdn.azureedge.net/microsoft-edge-digital-signage-multiple-profiles-and-cross-platform.pdf)
-
-[Microsoft Edge – Bing での Microsoft Search](https://officedocs-cdn.azureedge.net/microsoft-edge-digital-signage-microsoft-search-in-bing.pdf)
-
-[Microsoft Edge - セキュリティ](media/customer-adoption-not-md/microsoft-edge-digital-signage-security.pdf)
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-new-tab-page.png" alt-text="新規タブ ページ":::
 
 ## その他の学習リソース
 
