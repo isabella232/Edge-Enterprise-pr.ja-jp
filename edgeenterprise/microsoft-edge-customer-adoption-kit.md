@@ -3,62 +3,71 @@ title: Microsoft Edge の顧客導入資料
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 06/30/2020
+ms.date: 09/22/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge の顧客導入資料
-ms.openlocfilehash: ce3db319fb813e069131700b8de97c51e510333a
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 68b984faad3b36c0926ece070ca052e81e764e0e
+ms.sourcegitcommit: 858227653fc89532d1d274735f53280e27b2a8c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980521"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "11072634"
 ---
-# <span data-ttu-id="b85c7-103">Microsoft Edge のための顧客導入資料</span><span class="sxs-lookup"><span data-stu-id="b85c7-103">Customer adoption materials for Microsoft Edge</span></span>
+# <span data-ttu-id="222d8-103">Microsoft Edge のための顧客導入資料</span><span class="sxs-lookup"><span data-stu-id="222d8-103">Customer adoption materials for Microsoft Edge</span></span>
 
-<span data-ttu-id="b85c7-104">新しい Microsoft Edge の展開と導入をサポートするには、以下の収集された教材とリソースを参照してください。</span><span class="sxs-lookup"><span data-stu-id="b85c7-104">To support the deployment and adoption of the new Microsoft Edge, look at the following collected materials and resources below.</span></span>
+<span data-ttu-id="222d8-104">新しい Microsoft Edge の展開と導入をサポートするには、収集された教材とリソースを参照してください。</span><span class="sxs-lookup"><span data-stu-id="222d8-104">To support the deployment and adoption of the new Microsoft Edge, please see the collected materials and resources below.</span></span> <span data-ttu-id="222d8-105">ダウンロードするために収集された zip ファイルが提供されています。</span><span class="sxs-lookup"><span data-stu-id="222d8-105">A collected zip file is provided for you to download.</span></span>
 
-<span data-ttu-id="b85c7-105">追加の資料が利用可能になったら、確認してください。</span><span class="sxs-lookup"><span data-stu-id="b85c7-105">Check back for additional materials as they become available.</span></span>
+<span data-ttu-id="222d8-106">追加の資料が利用可能になったら、確認してください。</span><span class="sxs-lookup"><span data-stu-id="222d8-106">Please check back for additional materials as they are available.</span></span>
 
-## <span data-ttu-id="b85c7-106">顧客導入キット</span><span class="sxs-lookup"><span data-stu-id="b85c7-106">Customer adoption kit</span></span>
+## <span data-ttu-id="222d8-107">顧客導入キット</span><span class="sxs-lookup"><span data-stu-id="222d8-107">Customer adoption kit</span></span>
 
-<span data-ttu-id="b85c7-107">顧客導入キットには、次の内容が含まれます:</span><span class="sxs-lookup"><span data-stu-id="b85c7-107">The customer adoption kit contains the following material:</span></span>
+<span data-ttu-id="222d8-108">顧客導入キットには、次の内容が含まれます:</span><span class="sxs-lookup"><span data-stu-id="222d8-108">The customer adoption kit contains the following material:</span></span>
 
-- <span data-ttu-id="b85c7-108">IT 展開ガイド</span><span class="sxs-lookup"><span data-stu-id="b85c7-108">IT Deployment Guide</span></span>
-- <span data-ttu-id="b85c7-109">入門ユーザーガイド</span><span class="sxs-lookup"><span data-stu-id="b85c7-109">How to Get Started User Guide</span></span>
-- <span data-ttu-id="b85c7-110">デジタル サイネージ</span><span class="sxs-lookup"><span data-stu-id="b85c7-110">Digital Signage</span></span>
+- <span data-ttu-id="222d8-109">IT 展開ガイド</span><span class="sxs-lookup"><span data-stu-id="222d8-109">IT Deployment Guide</span></span>
+- <span data-ttu-id="222d8-110">入門ユーザーガイド</span><span class="sxs-lookup"><span data-stu-id="222d8-110">How to Get Started User Guide</span></span>
+- <span data-ttu-id="222d8-111">お知らせのメール</span><span class="sxs-lookup"><span data-stu-id="222d8-111">Announcement Email</span></span>
+- <span data-ttu-id="222d8-112">ヒントとコツのメール</span><span class="sxs-lookup"><span data-stu-id="222d8-112">Tips & Tricks Email</span></span>
+- <span data-ttu-id="222d8-113">デジタル サイネージ</span><span class="sxs-lookup"><span data-stu-id="222d8-113">Digital Signage</span></span>
 
-## <span data-ttu-id="b85c7-111">IT 展開ガイド</span><span class="sxs-lookup"><span data-stu-id="b85c7-111">IT Deployment Guide</span></span>
+[<span data-ttu-id="222d8-114">顧客導入キットをダウンロードする</span><span class="sxs-lookup"><span data-stu-id="222d8-114">Download customer adoption kit</span></span>](https://www.microsoft.com/download/details.aspx?id=102119)
 
-<span data-ttu-id="b85c7-112">このガイドを使用して、展開の計画を開始し、使用している環境で Microsoft Edge の展開を開始する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="b85c7-112">Use this guide to begin planning deployment and learn how to get started deploying Microsoft Edge in your environment.</span></span>
+### <span data-ttu-id="222d8-115">IT 展開ガイド</span><span class="sxs-lookup"><span data-stu-id="222d8-115">IT Deployment Guide</span></span>
 
-[<span data-ttu-id="b85c7-113">IT 展開ガイドを入手する</span><span class="sxs-lookup"><span data-stu-id="b85c7-113">Get the IT Deployment Guide</span></span>](media/customer-adoption-not-md/commercial-deployment-guide-microsoft-edge.pdf)
+<span data-ttu-id="222d8-116">このガイドを使用して、展開の計画を開始し、使用している環境で Microsoft Edge の展開を開始する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="222d8-116">Use this guide to begin planning deployment and learn how to get started deploying Microsoft Edge in your environment.</span></span>
 
-## <span data-ttu-id="b85c7-114">入門ユーザーガイド</span><span class="sxs-lookup"><span data-stu-id="b85c7-114">How to Get Started User Guide</span></span>
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-deployment-guide-4.png" alt-text="Microsoft Mechanics のビデオ シリーズ":::
 
-<span data-ttu-id="b85c7-115">このガイドを使用して、新しい Microsoft Edge のユーザーを教育します。</span><span class="sxs-lookup"><span data-stu-id="b85c7-115">Use this guide to educate users on the new Microsoft Edge.</span></span> <span data-ttu-id="b85c7-116">このガイドには、UI、メニュー、機能の概要が含まれています。</span><span class="sxs-lookup"><span data-stu-id="b85c7-116">The guide includes overviews of the UI, menus, and features.</span></span> <span data-ttu-id="b85c7-117">ユーザーを支援するためのヒントも紹介しています。</span><span class="sxs-lookup"><span data-stu-id="b85c7-117">We've also included tips to help users get started.</span></span>
+### <span data-ttu-id="222d8-118">入門ユーザーガイド</span><span class="sxs-lookup"><span data-stu-id="222d8-118">How to Get Started User Guide</span></span>
 
-[<span data-ttu-id="b85c7-118">入門ユーザーガイドを入手する</span><span class="sxs-lookup"><span data-stu-id="b85c7-118">Get the How to Get Started User Guide</span></span>](media/customer-adoption-not-md/microsoft-edge-how-to-get-started-user-guide.pdf)
+<span data-ttu-id="222d8-119">このガイドを使用して、新しい Microsoft Edge のユーザーを教育します。</span><span class="sxs-lookup"><span data-stu-id="222d8-119">Use this guide to educate users on the new Microsoft Edge.</span></span> <span data-ttu-id="222d8-120">このガイドには、UI、メニュー、機能の概要が含まれています。</span><span class="sxs-lookup"><span data-stu-id="222d8-120">The guide includes overviews of the UI, menus, and features.</span></span> <span data-ttu-id="222d8-121">ユーザーを支援するためのヒントも紹介しています。</span><span class="sxs-lookup"><span data-stu-id="222d8-121">We've also included tips to help users get started.</span></span>
 
-## <span data-ttu-id="b85c7-119">デジタル サイネージ</span><span class="sxs-lookup"><span data-stu-id="b85c7-119">Digital Signage</span></span>
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-get-started-guide.png" alt-text="入門ユーザー ガイドの利用方法":::
 
-<span data-ttu-id="b85c7-120">次のデジタル サイネージを使用して、新しい Microsoft Edge についてユーザーに通知します。</span><span class="sxs-lookup"><span data-stu-id="b85c7-120">Use the following digital signage to inform users about the new Microsoft Edge.</span></span>
+### <span data-ttu-id="222d8-123">メール テンプレート</span><span class="sxs-lookup"><span data-stu-id="222d8-123">Email templates</span></span>
 
-[<span data-ttu-id="b85c7-121">Microsoft Edge - Enterprise 新しいタブ ページ</span><span class="sxs-lookup"><span data-stu-id="b85c7-121">Microsoft Edge – Enterprise new tab page</span></span>](media/customer-adoption-not-md/microsoft-edge-digital-signage-enterprise-new-tab-page.pdf)
+<span data-ttu-id="222d8-124">これらのメール テンプレートを使用して、ユーザーが新しい Microsoft Edge を利用できることを通知し、ブラウザーを最大限に活用するためのヒントとコツを提供します。</span><span class="sxs-lookup"><span data-stu-id="222d8-124">Use these email templates to announce that the new Microsoft Edge is available for users and to provide tips and tricks on how to get the most out of the browser.</span></span>
 
-[<span data-ttu-id="b85c7-122">Microsoft Edge – 複数のプロファイルとクロス プラットフォーム</span><span class="sxs-lookup"><span data-stu-id="b85c7-122">Microsoft Edge – Multiple Profiles and Cross Platform</span></span>](https://officedocs-cdn.azureedge.net/microsoft-edge-digital-signage-multiple-profiles-and-cross-platform.pdf)
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-email-template.png" alt-text="ヒントとコツに関するメール テンプレート":::
 
-[<span data-ttu-id="b85c7-123">Microsoft Edge – Bing での Microsoft Search</span><span class="sxs-lookup"><span data-stu-id="b85c7-123">Microsoft Edge – Microsoft Search in Bing</span></span>](https://officedocs-cdn.azureedge.net/microsoft-edge-digital-signage-microsoft-search-in-bing.pdf)
+### <span data-ttu-id="222d8-126">デジタル サイネージ</span><span class="sxs-lookup"><span data-stu-id="222d8-126">Digital Signage</span></span>
 
-[<span data-ttu-id="b85c7-124">Microsoft Edge - セキュリティ</span><span class="sxs-lookup"><span data-stu-id="b85c7-124">Microsoft Edge - Security</span></span>](media/customer-adoption-not-md/microsoft-edge-digital-signage-security.pdf)
+<span data-ttu-id="222d8-127">次のデジタル サイネージを使用して、新しい Microsoft Edge についてユーザーに通知します。</span><span class="sxs-lookup"><span data-stu-id="222d8-127">Use the following digital signage to inform users about the new Microsoft Edge:</span></span>
 
-## <span data-ttu-id="b85c7-125">その他の学習リソース</span><span class="sxs-lookup"><span data-stu-id="b85c7-125">Other learning resources</span></span>
+- <span data-ttu-id="222d8-128">Enterprise [新しいタブ] ページ</span><span class="sxs-lookup"><span data-stu-id="222d8-128">Enterprise new tab page</span></span>
+- <span data-ttu-id="222d8-129">複数のプロファイルとクロス プラットフォーム</span><span class="sxs-lookup"><span data-stu-id="222d8-129">Multiple Profiles and Cross Platform</span></span>
+- <span data-ttu-id="222d8-130">Bing の Microsoft Search</span><span class="sxs-lookup"><span data-stu-id="222d8-130">Microsoft Search in Bing</span></span>
+- <span data-ttu-id="222d8-131">セキュリティ</span><span class="sxs-lookup"><span data-stu-id="222d8-131">Security</span></span>
 
-<span data-ttu-id="b85c7-126">Microsoft Edge の利点について知りたい場合は、[Web ページにアクセスしてください](https://www.microsoft.com/edge/business)。</span><span class="sxs-lookup"><span data-stu-id="b85c7-126">If you're interested in learning more about the benefits of Microsoft Edge, [visit our webpage](https://www.microsoft.com/edge/business).</span></span>
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-new-tab-page.png" alt-text="新規タブ ページ":::
 
-## <span data-ttu-id="b85c7-127">関連項目</span><span class="sxs-lookup"><span data-stu-id="b85c7-127">See also</span></span>
+## <span data-ttu-id="222d8-133">その他の学習リソース</span><span class="sxs-lookup"><span data-stu-id="222d8-133">Other learning resources</span></span>
 
-- [<span data-ttu-id="b85c7-128">Microsoft Edge Enterprise ランディング ページ</span><span class="sxs-lookup"><span data-stu-id="b85c7-128">Microsoft Edge Enterprise landing page</span></span>](https://aka.ms/EdgeEnterprise)
+<span data-ttu-id="222d8-134">Microsoft Edge の利点について知りたい場合は、[Web ページにアクセスしてください](https://www.microsoft.com/edge/business)。</span><span class="sxs-lookup"><span data-stu-id="222d8-134">If you're interested in learning more about the benefits of Microsoft Edge, [visit our webpage](https://www.microsoft.com/edge/business).</span></span>
+
+## <span data-ttu-id="222d8-135">関連項目</span><span class="sxs-lookup"><span data-stu-id="222d8-135">See also</span></span>
+
+- [<span data-ttu-id="222d8-136">Microsoft Edge Enterprise ランディング ページ</span><span class="sxs-lookup"><span data-stu-id="222d8-136">Microsoft Edge Enterprise landing page</span></span>](https://aka.ms/EdgeEnterprise)
