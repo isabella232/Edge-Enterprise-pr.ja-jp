@@ -1,4 +1,4 @@
-# last revised 09/21/2020
+# last revised 09/29/2020
 - name: Microsoft Edge エンタープライズのドキュメント
   href: index.yml
 - name: Microsoft Edge ドキュメント
@@ -89,7 +89,7 @@
       href: microsoft-edge-enterprise-state-roaming.md
     - name: Microsoft Edge キオスク モード
       href: microsoft-edge-kiosk-mode.md
-    - name: Microsoft Edge キオスクモードを構成する
+    - name: Microsoft Edge キオスク モードを構成する
       href: microsoft-edge-configure-kiosk-mode.md
     - name: Microsoft Edge の同期
       href: microsoft-edge-enterprise-sync.md
@@ -155,6 +155,8 @@
           href: edge-learnmore-mixed-content-downloads.md
         - name: Stable チャネル更新プログラムの段階的なロールアウト
           href: microsoft-edge-update-progressive-rollout.md
+        - name: Microsoft Edge のお気に入りのプロビジョニング
+          href: edge-learnmore-provision-favorites.md
         - name: Regular Expression 2 (re2.h) の構文
           href: edge-learnmore-regex.md
         - name: ユーザー データ ディレクトリ変数
