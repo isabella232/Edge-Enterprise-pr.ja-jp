@@ -3,19 +3,19 @@ title: Microsoft Edge キオスク モードを構成する
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 09/22/2020
+ms.date: 09/24/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge キオスク モードを構成する
-ms.openlocfilehash: d7c9df82079f8343d43ccfd312623e6e01358fa9
-ms.sourcegitcommit: 858227653fc89532d1d274735f53280e27b2a8c0
+ms.openlocfilehash: 17852cc7c7e4921a0fbef7d09a3f1c3d3cccf49f
+ms.sourcegitcommit: b1285b7745eb41b241d706b401f8ce78fa33b227
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "11072698"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "11078667"
 ---
 # Microsoft Edge キオスク モードを構成する
 
@@ -77,7 +77,7 @@ Microsoft Edge キオスク モードの機能は、Windows 10 の次のコマ�
 
 ## 割り当てられたアクセスによるキオスク モードをセットアップする
 
-現在、割り当てられたアクセスによる Microsoft Edge のキオスク モードは、最新の [Windows 10 Insider Preview ビルド](https://insider.windows.com/) (バージョン 20215 以降) と [Microsoft Edge Dev チャネル](https://www.microsoftedgeinsider.com/download) (バージョン 87.0.644 以降) でテストに使用できます。
+現在、割り当てられたアクセスによる Microsoft Edge のキオスク モードは、最新の [Windows 10 Insider Preview ビルド](https://insider.windows.com/) (バージョン 20215 以降) と [Microsoft Edge Dev チャネル](https://www.microsoftedgeinsider.com/download) (バージョン 87.0.644.4 以降) でテストに使用できます。
 
 **Windows Insiders Preview を入手するにはどうすればよいですか?**
 
@@ -88,7 +88,7 @@ PC に Windows 10 Insider Preview ビルドをインストールするには、�
 Windows の設定は、1 つか 2 つのシングル アプリのキオスク デバイスを設定する最も簡単な方法です。 シングル アプリのキオスク コンピューターをセットアップするには、次の手順に従います。
 
 1. 最新の Windows 10 Insider Preview (バージョン 20215 以降) をインストールします。 「[Windows 10 Insider Preview ビルドの概要](https://docs.microsoft.com/windows-insider/get-started)」の指示に従います。
-2. 最新の [Microsoft Edge Dev チャネル](https://www.microsoftedgeinsider.com/download) (87.0.644 以降) をインストールします。
+2. 最新の [Microsoft Edge Dev チャネル](https://www.microsoftedgeinsider.com/download) (87.0.644.4 以降) をインストールします。
 
    > [!IMPORTANT]
    > デバイス レベルのインストールが必要であるため、Canary 以外のチャネルのみがサポートされています。
@@ -99,39 +99,39 @@ Windows の設定は、1 つか 2 つのシングル アプリのキオスク �
 
 4. **[Set up a kiosk]**  (キオスク モードを設定する) ページで、 **[開始する]** をクリックします。
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-2-get-started.png" alt-text="キオスク ページ - 開始する":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-2-get-started.png" alt-text="割り当てられたアクセスによるキオスクの設定":::
 
 5. 名前を入力して新しいキオスク アカウントを作成するか、または入力されているドロップダウン リストから既存のアカウントを選択して、 **[次へ]** をクリックします。
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-3-create-account.png" alt-text="キオスク モード - アカウントの作成":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-3-create-account.png" alt-text="割り当てられたアクセスによるキオスクの設定":::
 
 6. **[キオスク アプリを選ぶ]**  ページで、**[Microsoft Edge]** を選択し、 **[次へ]** をクリックします。
 
    > [!NOTE]
    > これは、Microsoft Edge Dev、Beta、Stable チャネルにのみ適用されます。
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="キオスク モード - アプリを選ぶ":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="割り当てられたアクセスによるキオスクの設定":::
 
 7. Microsoft Edge がキオスク モードで実行しているときの表示方法について、次のいずれかのオプションを選びます。
 
    - デジタル/対話型サイネージ - 全画面表示モードで特定のサイトを表示し、Microsoft Edge を実行します。
    - パブリック ブラウザー - Microsoft Edge の限定的な複数タブのバージョンを実行します。
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="キオスク モードの表示 - 全画面表示デジタル署名":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="割り当てられたアクセスによるキオスクの設定":::
 
 8.  **[次へ]** を選択します。
 9. キオスクが起動したときに読み込む URL を入力します。
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-6-enter-url.png" alt-text="キオスク モード - URL の入力":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-6-enter-url.png" alt-text="割り当てられたアクセスによるキオスクの設定":::
 
 10. アイドル時間に、既定値の 5 分をそのまま使用するか、独自の値を入力します。
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-7-enter-idle-time.png" alt-text="キオスク モード - アイドル時間の入力":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-7-enter-idle-time.png" alt-text="割り当てられたアクセスによるキオスクの設定":::
 
 11.  **[次へ]** をクリックします。
 12.  **[設定]**  ウィンドウを閉じて、選択内容を保存して適用します。
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="キオスク モード - 設定の終了":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="割り当てられたアクセスによるキオスクの設定":::
 
 13. キオスク デバイスからサインオフし、ローカル キオスク アカウントでサインインして、構成を確認します。
 
@@ -176,6 +176,6 @@ Windows の設定は、1 つか 2 つのシングル アプリのキオスク �
 ## 関連項目
 
 - [Windows デスクトップ エディションでのキオスクおよびデジタル サイネージの構成](https://docs.microsoft.com/windows/configuration/kiosk-methods)
-- [Microsoft Edge レガシ キオスク モードの展開](https://aka.ms/edgekioskmode) 
+- [Microsoft Edge レガシ キオスク モードの展開](https://aka.ms/edgekioskmode)
 - [Microsoft Edge の展開を計画する](deploy-edge-plan-deployment.md)
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
