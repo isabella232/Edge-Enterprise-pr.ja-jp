@@ -3,23 +3,23 @@ title: Microsoft Edge ビジネス向けのセキュリティ
 ms.author: seanlynd
 author: seanongit
 manager: chuckf
-ms.date: 09/22/2020
+ms.date: 09/30/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge ビジネス向けのセキュリティ
-ms.openlocfilehash: b9ad039b699c036b16506d360f75d46c303ce301
-ms.sourcegitcommit: 7b1c5a2a768a7418f8b25128df92442d63f0f87b
+ms.openlocfilehash: 313d1837d85fe23ab910741e28f95b77ffd7029d
+ms.sourcegitcommit: fbfe796b2717573dc221b9d4509a1662d9bbb452
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "11068388"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "11091686"
 ---
 # Microsoft Edge ビジネス向けのセキュリティ
 
-Microsoft Edge は、Google Chrome の中核と同じプロジェクトである、Chromium オープン ソース プロジェクト上に構築されます。これは、技術的に優れ、十分なテストを経た同じアーキテクチャと設計が基盤となっていることを意味しています。 Microsoft Edge のセキュリティの話はそれだけではありません。 実際、**お客様のビジネスにとって Windows 10 上の Microsoft Edge は Google Chrome よりも安全です**。 Microsoft Edge にはフィッシングや悪意のあるソフトウェアに対する強力な防御策が組み込まれ、Windows 10 でハードウェア分離をネイティブにサポートします。この安全なベースラインを実現するのに追加のソフトウェアは必要ありません。 さらに、Microsoft 365 セキュリティとコンプライアンス サービスと組み合わせて使用すると、Microsoft Edge は強力なセキュリティ機能をさらに実現し、データを損失から保護することでより多くのメリットをもたらすのに役立ちます。
+Microsoft Edge は、Google Chrome の中核と同じプロジェクトである、Chromium オープン ソース プロジェクト上に構築されます。これは、その基盤に、技術的に優れ、十分なテストを経た同じセキュリティ アーキテクチャと設計を共有していることを意味しています。 Microsoft Edge のセキュリティの話はそれだけではありません。 実際、**お客様のビジネスにとって Windows 10 上の Microsoft Edge は Google Chrome よりも安全です**。 Microsoft Edge にはフィッシングや悪意のあるソフトウェアに対する強力な防御策が組み込まれ、Windows 10 でハードウェア分離をネイティブにサポートします。この安全なベースラインを実現するのに追加のソフトウェアは必要ありません。 さらに、Microsoft 365 セキュリティとコンプライアンス サービスと組み合わせて使用すると、Microsoft Edge は強力なセキュリティ機能をさらに実現し、データを損失から保護することでより多くのメリットをもたらすのに役立ちます。
 
 まず**外部の脅威**について、次に**内部リスクと情報保護**について、詳細を説明します。
 

@@ -3,19 +3,19 @@ title: Microsoft Edge エンタープライズの同期
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 09/15/2020
+ms.date: 09/30/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge エンタープライズの同期
-ms.openlocfilehash: d9cd643142d0f6744664a5071c5000b820583e41
-ms.sourcegitcommit: 06c365faeea6070f103fe867cc2da13539ae4680
+ms.openlocfilehash: d5868fb496c036d750925bb5ae6dfa3de0293fd2
+ms.sourcegitcommit: 8a4479a1b034c3c13ea03ee3a2374a1af332cb38
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "11016346"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "11091949"
 ---
 # Microsoft Edge エンタープライズの同期
 
@@ -33,8 +33,6 @@ Microsoft Edge の同期を使用すると、ユーザーは、サインイン�
 - 住所など (フォームの入力情報)
 - コレクション
 - 設定
-- 閲覧の履歴
-- タブを開く
 
 同期機能はユーザーの同意によって有効になり、ユーザーは上記の各データ タイプについて同期をオンまたはオフにすることができます。
 
@@ -80,7 +78,7 @@ Microsoft Edge の同期の構成オプションは、Azure Information Protecti
 
 #### 同期したデータは暗号化されていますか? 
 
-データは TLS 1.2 以上を使用してトランスポートで暗号化されます。 ほとんどのデータ型は、AES256 を使用して、ブラウザの履歴と開いているタブのデータ型を除いて、Microsoft のサービスでは保存中にさらに暗号化されます。 これらのデータ型が同期されないようにするには、[SavingBrowserHistoryDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#savingbrowserhistorydisabled) ポリシーを適用します。
+データは TLS 1.2 以上を使用してトランスポートで暗号化されます。 ほとんどのデータ型は、さらに AES256 を使用する Microsoft のサービスで保存時に暗号化されています。 
 
 #### Microsoft Edge の同期データはどこに保存されますか?
 
