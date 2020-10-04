@@ -1,6 +1,6 @@
 ### YamlMime:Landing
-title: Microsoft Edge エンタープライズのドキュメント
-summary: Microsoft Edge は、ブラウザーのエクスペリエンスを強化および拡張します。 Windows、macOS、iOS、Android デバイスで動作します。
+title: Microsoft Edge Enterprise documentation
+summary: Microsoft Edge enhances and extends the browser experience. Windows、macOS、iOS、Android デバイスで動作します。
 metadata:
   title: Microsoft Edge
   description: Microsoft Edge は、ブラウザーのエクスペリエンスを強化および拡張します。 Windows、macOS、iOS、Android デバイスで動作します。
@@ -11,73 +11,73 @@ metadata:
   ms.collection: collection
   author: dan-wesley
   ms.author: kvice
-  ms.date: 09/20/2020
-  ms.openlocfilehash: 796f769ae61be5db023ebe0c9fb12ab1ac62cd42
-  ms.sourcegitcommit: 71d2e7ddcec4a34a6f052f1ccdff9431928ab4db
+  ms.date: 10/02/2020
+  ms.openlocfilehash: 16320883e56f65142a0d99e7cd62d4d7a5555b29
+  ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 09/20/2020
-  ms.locfileid: "11030538"
+  ms.lasthandoff: 10/03/2020
+  ms.locfileid: "11094461"
 landingContent:
-- title: エンタープライズ環境での Microsoft Edge について
+- title: Learn about Microsoft Edge in the enterprise
   linkLists:
   - linkListType: overview
     links:
-    - text: Microsoft Edge のビデオ
+    - text: Microsoft Edge Videos
       url: microsoft-edge-videos.md
-    - text: Microsoft Edge チャネル概要
+    - text: Microsoft Edge channel overview
       url: microsoft-edge-channels.md
     - text: Microsoft Edge チャネルをダウンロードする
       url: https://aka.ms/EdgeEnterprise
-    - text: エンタープライズ機能を使用する
+    - text: Use enterprise features
       url: edge-ie-mode.md
-    - text: Microsoft Edge および Microsoft Search のビデオ
+    - text: Video - Microsoft Edge and Microsoft Search
       url: microsoft-edge-video-search.md
-- title: Microsoft Edge を展開および更新する
+- title: Deploy and update Microsoft Edge
   linkLists:
   - linkListType: deploy
     links:
-    - text: Microsoft Edge の展開を計画する
+    - text: Plan your deployment of Microsoft Edge
       url: deploy-edge-plan-deployment.md
-    - text: ビデオ - Microsoft Edge の展開
+    - text: Video - Deploy Microsoft Edge
       url: microsoft-edge-video-deploy.md
-    - text: Windows に展開する
+    - text: Deploy to Windows
       url: https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json
     - text: macOS に展開する
       url: https://docs.microsoft.com/intune/apps/apps-edge-macos/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json
-- title: Microsoft Edge を構成する
+- title: Configure Microsoft Edge
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Windows で Microsoft Edge を構成する
+    - text: Configure Microsoft Edge on Windows
       url: configure-microsoft-edge.md
-    - text: MacOS で Microsoft Edge を構成する
+    - text: Configure Microsoft Edge on macOS
       url: configure-microsoft-edge-on-mac.md
-    - text: Microsoft Edge を既定のブラウザーとして設定する
+    - text: Set Microsoft Edge as the default browser
       url: edge-default-browser.md
-- title: セキュリティとプライバシーを管理する
+- title: Manage security and privacy
   linkLists:
   - linkListType: concept
     links:
-    - text: ビデオ - セキュリティ、互換性、管理性
+    - text: Video - Security, compatibility, and manageability
       url: microsoft-edge-video-security-compatibility-manageability.md
-    - text: セキュリティ
-      url: security-overview.md
-    - text: プライバシー
+    - text: Security
+      url: ms-edge-security-for-business.md
+    - text: Privacy
       url: microsoft-edge-enterprise-privacy-settings.md
-- title: ポリシー リファレンス
+- title: Policy reference
   linkLists:
   - linkListType: reference
     links:
     - text: ブラウザー ポリシー リファレンス
       url: microsoft-edge-policies.md
-    - text: 更新ポリシー リファレンス
+    - text: Update policy reference
       url: microsoft-edge-update-policies.md
-    - text: ポリシー マッピングの概要
+    - text: Policy mapping overview
       url: microsoft-edge-policy-map-overview.md
-    - text: Microsoft Office セキュリティ ベースライン ブログ
+    - text: Microsoft Security Baselines Blog
       url: https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines
-- title: エンタープライズ コミュニティに参加する、ヘルプを利用する
+- title: Engage with enterprise community or get help
   linkLists:
   - linkListType: get-started
     links:
