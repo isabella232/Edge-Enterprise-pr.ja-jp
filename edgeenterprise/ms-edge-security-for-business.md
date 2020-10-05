@@ -3,19 +3,19 @@ title: Microsoft Edge ビジネス向けのセキュリティ
 ms.author: seanlynd
 author: seanongit
 manager: chuckf
-ms.date: 09/30/2020
+ms.date: 10/02/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge ビジネス向けのセキュリティ
-ms.openlocfilehash: 313d1837d85fe23ab910741e28f95b77ffd7029d
-ms.sourcegitcommit: fbfe796b2717573dc221b9d4509a1662d9bbb452
+ms.openlocfilehash: 018353c4f85bc380d85554d058d029dfde959257
+ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "11091686"
+ms.lasthandoff: 10/03/2020
+ms.locfileid: "11094741"
 ---
 # Microsoft Edge ビジネス向けのセキュリティ
 
@@ -46,7 +46,7 @@ Chrome では、Windows 10 のハードウェア分離を利用するための�
 
 IT 管理者は、外部の脅威以外にも、内部リスクに対して保護する必要があります。 企業の機密データを規模に応じて確実に保護することは、特に従業員が分散している今、IT 管理者にとっての最優先事項です。 Microsoft Edge は、Azure AD の条件付きアクセス、Windows 情報保護、新しい Microsoft エンドポイントのデータ損失防止 (DLP) を追加のソフトウェアなしでネイティブでサポートする唯一のブラウザーです。
 
-**Microsoft Edge は、条件付きアクセスをネイティブにサポートする唯一のブラウザーです**。 [Microsoft Edge による条件付きアクセスのサポート](https://docs.microsoft.com/DeployEdge/security-overview#conditional-access)により、組織は ID シグナルをアクセス制御に関する決定事項の一部として簡単に活用できます。 [条件付きアクセス](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)は、Azure Active Directory がシグナルをまとめ、決定を行い、組織のポリシーを強制するのに使用するツールです。 条件付きアクセスは、新しい ID を活用したコントロール プレーンの中核をなしています。 Chrome で条件付きアクセスがサポートされるようにするには、追加のプラグインが必要です。
+**Microsoft Edge は、条件付きアクセスをネイティブにサポートする唯一のブラウザーです**。 [Microsoft Edge による条件付きアクセスのサポート](ms-edge-security-conditional-access.md)により、組織は ID シグナルをアクセス制御に関する決定事項の一部として簡単に活用できます。 [条件付きアクセス](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)は、Azure Active Directory がシグナルをまとめ、決定を行い、組織のポリシーを強制するのに使用するツールです。 条件付きアクセスは、新しい ID を活用したコントロール プレーンの中核をなしています。 Chrome で条件付きアクセスがサポートされるようにするには、追加のプラグインが必要です。
 
 > [!NOTE]
 > Azure AD の条件付きアクセスには、Microsoft 365 E3 以降のサブスクリプションが必要です。
