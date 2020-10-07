@@ -3,19 +3,19 @@ title: Active Directory (AD) ユーザー用のオンプレミス同期
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 08/21/2020
+ms.date: 10/05/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Active Directory (AD) ユーザー用のオンプレミス同期
-ms.openlocfilehash: 89f061072fdaa748d317ca8dc0c290893cfdfd6c
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: ce7fd912bc8cbd71e12444d58073e43df6b138db
+ms.sourcegitcommit: bd68077356a944b99a424d03b444b04aa60272dd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980522"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "11099746"
 ---
 # Active Directory (AD) ユーザー用のオンプレミス同期
 
@@ -30,7 +30,7 @@ Microsoft Edge でユーザー データを同期するには、通常 Microsoft
 
 ## 動作のしくみ
 
-Microsoft Edge では、クラウド同期には使用できない Active Directory (AD) アカウントとプロファイルを関連付けることができます。オンプレミス同期を有効にすると、AD プロファイルのデータは profile.pb という名前のファイルに保存されます。 既定では、このファイルは *%APP_DATA%/Microsoft/Edge* に保存されます。 このファイルが作成された後は、異なるコンピューター間で移動することができるようになり、ユーザー データはそれぞれのコンピューターで読み書きされます。
+Microsoft Edge では、クラウド同期には使用できない Active Directory (AD) アカウントとプロファイルを関連付けることができます。オンプレミス同期を有効にすると、AD プロファイルのデータは profile.pb という名前のファイルに保存されます。 既定では、このファイルは *%APPDATA%/Microsoft/Edge* に保存されます。 このファイルが作成された後は、異なるコンピューター間で移動することができるようになり、ユーザー データはそれぞれのコンピューターで読み書きされます。
 
 ## オンプレミス同期を使用する
 
@@ -46,7 +46,7 @@ Microsoft Edge でオンプレミス同期を有効にするには、[RoamingPro
 
 ### ユーザー データの場所を変更する (オプション)
 
-既定では、ユーザー データは *%APP_DATA%/Microsoft/Edge* の **profile.pb** という名前のファイルに保存されます。 このファイルの場所を変更するには、[RoamingProfileLocation](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#roamingprofilelocation) ポリシーを構成します。
+既定では、ユーザー データは *%APPDATA%/Microsoft/Edge* の **profile.pb** という名前のファイルに保存されます。 このファイルの場所を変更するには、[RoamingProfileLocation](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#roamingprofilelocation) ポリシーを構成します。
 
 ## オンプレミス同期が有効になっている場合のユーザー エクスペリエンスの変更
 

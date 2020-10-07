@@ -3,19 +3,19 @@ title: Microsoft Edge キオスク モードを構成する
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 09/24/2020
+ms.date: 10/05/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge キオスク モードを構成する
-ms.openlocfilehash: 17852cc7c7e4921a0fbef7d09a3f1c3d3cccf49f
-ms.sourcegitcommit: b1285b7745eb41b241d706b401f8ce78fa33b227
+ms.openlocfilehash: 799b3dd4b7fc96f0b8e5cb718bca98fd4f38ec15
+ms.sourcegitcommit: 78905f66f4a6590a57c8f2bf808af92106b62996
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "11078667"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "11094864"
 ---
 # Microsoft Edge キオスク モードを構成する
 
@@ -23,8 +23,6 @@ ms.locfileid: "11078667"
 
 > [!NOTE]
 > この記事は Microsoft Edge version 87 以降に適用されます。
-
-Microsoft Edge レガシのキオスク モード (version 45 以前) については、「[Microsoft Edge キオスク モードの展開](https://aka.ms/edgekioskmode)」をご覧ください。
 
 ## 概要
 
@@ -35,7 +33,7 @@ Microsoft Edge キオスク モードは、ブラウザーの 2 つのロック�
 
 どちらのエクスペリエンスでも、ユーザー データを保護する Microsoft Edge InPrivate セッションを実行します。
 
-## Microsoft Edge キオスク モードのセットアップ  
+## Microsoft Edge キオスク モードのセットアップ
 
 キオスク モード機能の初期セットが Microsoft Edge Canary チャネルのバージョン 87 でテストに使用できるようになりました。 Microsoft Edge Canary は、[Microsoft Edge Insider Channels](https://www.microsoftedgeinsider.com/download) ページからダウンロードできます。
 
@@ -43,9 +41,9 @@ Microsoft Edge キオスク モードは、ブラウザーの 2 つのロック�
 
 次の機能を使用できます。
 
-- InPrivate ナビゲーション。 セッション終了時にブラウザー データとダウンロードを削除して、ユーザー データを保護します。
+- InPrivate ナビゲーションは、セッションの終了時にブラウザー データとダウンロードを削除することにより、ユーザー データを保護します。
 - 終了時のダウンロード削除を構成するためのポリシー。
-- 非アクティブ状態が特定期間続いた後に、ユーザー セッションをリセットする。
+- 非アクティブ状態が一定期間続いた後に、ユーザー セッションをリセットするオプション。
 - ロックダウン機能の初期セット。 次の機能を使用できます。
 
   - マウスのコンテキスト メニュー
@@ -56,14 +54,14 @@ Microsoft Edge キオスク モードは、ブラウザーの 2 つのロック�
 > [!NOTE]
 > キオスク モードの進化に伴い、より多くの機能を使用できるようになります。
 
-### キオスク モードの機能を使用する
+## キオスク モードの機能を使用する
 
 Microsoft Edge キオスク モードの機能は、Windows 10 の次のコマンド ライン オプションで起動できます。
 
 - キオスク モードのデジタル/対話型サイネージ: `msedge.exe --kiosk www.contoso.com --edge-kiosk-type=fullscreen`
 - キオスク モードのパブリック ブラウジング: `msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing`
 
-#### その他のコマンド ライン オプション
+### その他のコマンド ライン オプション
 
 - `--no-first-run` : Microsoft Edge の最初の実行エクスペリエンスを無効にします。
 - `--kiosk-idle-timeout-minutes` : Microsoft Edge キオスク モードでユーザーのセッションがリセットされる前に、最後のユーザー アクティビティから時間 (分単位) を変更します。 次の値がサポートされています。
@@ -75,13 +73,23 @@ Microsoft Edge キオスク モードの機能は、Windows 10 の次のコマ�
     - 0 - タイマーをオフにします
     - 1 - 1440 分 (アイドル タイマー時のリセット)
 
-## 割り当てられたアクセスによるキオスク モードをセットアップする
+## 割り当てられたアクセスによる Microsoft Edge の使用
 
-現在、割り当てられたアクセスによる Microsoft Edge のキオスク モードは、最新の [Windows 10 Insider Preview ビルド](https://insider.windows.com/) (バージョン 20215 以降) と [Microsoft Edge Dev チャネル](https://www.microsoftedgeinsider.com/download) (バージョン 87.0.644.4 以降) でテストに使用できます。
+### シングル アプリ キオスク
+
+Microsoft Edge は現在、次のロックダウン エクスペリエンス、デジタル/対話型サイネージ、およびパブリックブラウジングを備えた、単一アプリに割り当てられたアクセス用の同じ Microsoft Edge レガシ キオスク モード タイプのサブセットをサポートしています。  
+
+現在、割り当てられたアクセスによるキオスク モードは、最新の  [Windows 10 Insider Preview ビルド](https://insider.windows.com/) (バージョン 20215 以降) と  [Microsoft Edge Dev チャネル](https://www.microsoftedgeinsider.com/download) (バージョン 87.0.644.4 以降) でテストに使用できます。
 
 **Windows Insiders Preview を入手するにはどうすればよいですか?**
 
-PC に Windows 10 Insider Preview ビルドをインストールするには、「[Windows 10 Insider Preview ビルドの概要](https://docs.microsoft.com/windows-insider/get-started)」の指示に従います。
+PC に Windows 10 Insider Preview ビルドをインストールするには、「 [Windows 10 Insider Preview ビルドの概要](https://docs.microsoft.com/windows-insider/get-started)」の指示に従います。
+
+### 複数アプリ キオスク
+
+Microsoft Edge は、Windows 10 で[複数アプリの割り当てられたアクセス](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) によって実行できます。これは Microsoft Edge レガシでの "通常の閲覧" タイプのキオスク モードに相当します。 複数アプリの割り当てられたアクセスで Microsoft Edge を構成するには、[複数アプリ キオスクの設定](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps)方法の手順に従います。 (Microsoft Edge Stable チャネルの AUMID は **MSEdge** です)。
+
+Microsoft Edge キオスク モードを構成する複数アプリが割り当てられたアクセスで Microsoft Edge を使用する場合は、[Microsoft Edge ブラウザー ポリシー](https://review.docs.microsoft.com/en-us/DeployEdge/microsoft-edge-policies) を使用して、固有の要件を満たすように閲覧エクスペリエンスを構成できます。
 
 ### Windows の設定を使用して構成する
 
@@ -153,9 +161,9 @@ Windows の設定は、1 つか 2 つのシングル アプリのキオスク �
 次の機能を追加します。
 
 - [セッションの終了] ボタン
-- 読み取り専用 URL アドレス バー  
+- 読み取り専用アドレス バー  
   - グループ ポリシーで構成可能
-  - 有効にすると、ユーザーはアドレス バーの URL を編集して別のページに移動することができません。
+  - 有効にすると、ユーザーはアドレス バーを編集したり別のページに移動したりできなくなります。
 
 - その他のロックダウン機能:
 
