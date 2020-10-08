@@ -3,7 +3,7 @@ title: Microsoft Edge ブラウザー ポリシーに関するドキュメント
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/24/2020
+ms.date: 09/28/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
-ms.openlocfilehash: 146043b518f02b8581498c273db4327682993609
-ms.sourcegitcommit: d4f2b62b41f0e40ec6b22aeca436b2c261658bd8
+ms.openlocfilehash: dc780166f05afd7d667f901a1198ce125831d01b
+ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "11078273"
+ms.lasthandoff: 10/03/2020
+ms.locfileid: "11094611"
 ---
 # Microsoft Edge - ポリシー
 最新バージョンの Microsoft Edge には、次のポリシーが含まれています。 これらのポリシーを使用して、組織内での Microsoft Edge の動作方法を構成することができます。
@@ -36,10 +36,11 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[Application Guard の設定](#application-guard-settings)|[キャスト](#cast)|
 |[コンテンツの設定](#content-settings)|[既定の検索プロバイダー](#default-search-provider)|
 |[拡張機能](#extensions)|[HTTP 認証](#http-authentication)|
-|[ネイティブ メッセージング](#native-messaging)|[パスワード マネージャーと保護](#password-manager-and-protection)|
-|[印刷](#printing)|[プロキシ サーバー](#proxy-server)|
-|[SmartScreen の設定](#smartscreen-settings)|[スタートアップ、ホーム ページ、新規タブ ページ](#startup-home-page-and-new-tab-page)|
-|[補足](#additional)|
+|[キオスク モードの設定](#kiosk-mode-settings)|[ネイティブ メッセージング](#native-messaging)|
+|[パスワード マネージャーと保護](#password-manager-and-protection)|[印刷](#printing)|
+|[プロキシ サーバー](#proxy-server)|[SmartScreen の設定](#smartscreen-settings)|
+|[スタートアップ、ホーム ページ、新規タブ ページ](#startup-home-page-and-new-tab-page)|[補足](#additional)|
+
 
 ### [*Application Guard の設定*](#application-guard-settings-policies)
 |ポリシー名|キャプション|
@@ -117,13 +118,17 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 ### [*HTTP 認証*](#http-authentication-policies)
 |ポリシー名|キャプション|
 |-|-|
-|[AllowCrossOriginAuthPrompt](#allowcrossoriginauthprompt)|クロスオリジン HTTP 基本認証のプロンプトを許可する|
+|[AllowCrossOriginAuthPrompt](#allowcrossoriginauthprompt)|cross-origin HTTP 認証プロンプトを許可する|
 |[AuthNegotiateDelegateAllowlist](#authnegotiatedelegateallowlist)|Microsoft Edge がユーザーの資格情報を委任できるサーバーの一覧を指定する|
 |[AuthSchemes](#authschemes)|サポートされる認証スキーム|
 |[AuthServerAllowlist](#authserverallowlist)|許可されている認証サーバーの一覧を構成する|
 |[DisableAuthNegotiateCnameLookup](#disableauthnegotiatecnamelookup)|Kerberos 認証をネゴシエートするときの CNAME ルックアップを無効にする|
 |[EnableAuthNegotiatePort](#enableauthnegotiateport)|Kerberos SPN に標準以外のポートを含める|
 |[NtlmV2Enabled](#ntlmv2enabled)|NTLMv2 認証を有効にするかどうかを制御する|
+### [*キオスク モードの設定*](#kiosk-mode-settings-policies)
+|ポリシー名|キャプション|
+|-|-|
+|[KioskDeleteDownloadsOnExit](#kioskdeletedownloadsonexit)|Microsoft Edge が閉じたときに、キオスク セッションの一部としてダウンロードされたファイルを削除する|
 ### [*ネイティブ メッセージング*](#native-messaging-policies)
 |ポリシー名|キャプション|
 |-|-|
@@ -559,11 +564,21 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
   - Windows と macOS での 77 以降
 
   #### 説明
-  サイトがクライアント証明書を要求した場合、Microsoft Edge が自動的にクライアント証明書を選択するサイトの一覧を URL パターンに基づいて指定します。
+  ポリシーを設定すると、Microsoft Edge がクライアント証明書を自動的に選択できるサイトを指定する URL パターンのリストを作成できます。 値は文字列化された JSON 辞書の配列であり、それぞれの形式は { "pattern": "$URL_PATTERN", "filter" : $FILTER } です。ここで、$URL_PATTERN はコンテンツ設定パターンです。 $FILTER は、ブラウザが自動的に選択するクライアント証明書を制限します。 フィルターとは関係なく、サーバーの証明書要求に一致する証明書のみが選択されます。
 
-値は文字列化された JSON 辞書の配列である必要があります。 各辞書は { "パターン": "$URL_PATTERN", "フィルター" : $FILTER } という形式にする必要があり、ここでの $URL_PATTERN はコンテンツの設定パターンです。 $FILTER は、ブラウザーが自動的に選択するクライアント証明書を制限します。 フィルターとは無関係に、サーバーの証明書要求に一致する証明書のみが選択されます。 たとえば、$FILTER が { "ISSUER": { "CN": "$ISSUER_CN" } } の形式を持つ場合、CommonName $ISSUER_CN を持つ証明書が発行したクライアント証明書のみが選択されます。 $FILTER に "ISSUER" と "SUBJECT" セクションが含まれている場合、両方の条件を満たしたクライアント証明書でなければ選択されません。 $FILTER が組織 ("O") を指定した場合、選択される証明書には、指定された値に一致する組織が少なくとも 1 つ必要です。 $FILTER が組織単位 ("OU") を指定した場合、選択される証明書には、指定された値に一致する組織単位が少なくとも 1 つ必要です。 $FILTER が空の辞書 {} である場合、クライアント証明書の選択が追加で制限されることはありません。
+$FILTER セクションの使用例:
 
-このポリシーを構成していない場合、自動選択はどのサイトに対しても行われません。
+* $FILTER が { "ISSUER": { "CN": "$ISSUER_CN" } } に設定されている場合、CommonName $ISSUER_CN の証明書によって発行されたクライアント証明書のみが選択されます。
+
+* $FILTER に "ISSUER" セクションと "SUBJECT" セクションの両方が含まれている場合、両方の条件を満たすクライアント証明書のみが選択されます。
+
+* $FILTER に "O" 値の "SUBJECT" セクションが含まれている場合、証明書を選択するには、指定した値に一致する組織が少なくとも 1 つ必要です。
+
+* $FILTER に "OU" 値の "SUBJECT" セクションが含まれている場合、証明書を選択するには、指定した値に一致する組織単位が少なくとも 1 つ必要です。
+
+* $FILTER が {} に設定されている場合、クライアント証明書の選択が追加で制限されることはありません。 Web サーバーが提供するフィルターが引き続き適用されることに注意してください。
+
+ポリシーを未設定のままにすると、どのサイトに対しても自動選択は行われません。
 
   #### サポートされている機能:
   - 必須にすることができるか: はい
@@ -2039,9 +2054,9 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
   - Windows と macOS での 80 以降
 
   #### 説明
-  すべての Cookie をレガシ SameSite の動作に戻します。 レガシ動作に戻すと、SameSite 属性を指定していない Cookie は "SameSite=None" であるかのように扱われ、"SameSite=None" Cookie に "Secure" 属性を付与する必要がなくなります。
+  すべての Cookie をレガシ SameSite の動作に戻します。 従来の動作に戻すと、SameSite 属性を指定しない Cookie は、"SameSite=None" であるかのように扱われ、"SameSite=None" Cookie が "Secure" 属性を保持する必要がなくなり、2 つのサイトが同じサイトであるかどうかを評価するときにスキームの比較がスキップされます。
 
-このポリシーを設定していない場合、SameSite 属性を指定しない Cookie の既定の動作は、SameSite-by-default 機能のその他の構成ソースに依存します。 この機能は、フィールド トライアルで設定するか、または edge://flags で same-site-by-default-cookies フラグを有効にすることで設定することができる可能性があります。
+このポリシーを設定しない場合、Cookie に対する既定の SameSite の動作は、SameSite-by-default 機能、Cookies-without-SameSite-must-be-secure 機能、および Schemeful Same-Site 機能の他の構成ソースに依存します。 これらの機能は、フィールド トライアルまたは edge://flags のsame-site-by-default-cookies フラグ、cookies-without-same-site-must-be-secure フラグ、または schemeful-same-site フラグによって構成することもできます。
 
 ポリシー オプション マッピング:
 
@@ -2097,7 +2112,7 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
   #### 説明
   指定されたパターンに一致するドメインに設定された Cookie は、レガシ SameSite の動作に戻ります。
 
-レガシ動作に戻すと、SameSite 属性を指定していない Cookie は "SameSite=None" であるかのように扱われ、"SameSite=None" Cookie に "Secure" 属性を付与する必要がなくなります。
+従来の動作に戻すと、SameSite 属性を指定しない Cookie は、"SameSite=None" であるかのように扱われ、"SameSite=None" Cookie が "Secure" 属性を保持する必要がなくなり、2 つのサイトが同じサイトであるかどうかを評価するときにスキームの比較がスキップされます。
 
 このポリシーを設定していない場合、グローバルな既定値が使用されます。 グローバルな既定値では、指定したパターンの対象外ドメインの Cookie にも使用されます。
 
@@ -3801,16 +3816,16 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   [ページのトップへ](#microsoft-edge---policies)
 
   ### AllowCrossOriginAuthPrompt
-  #### クロスオリジン HTTP 基本認証のプロンプトを許可する
+  #### cross-origin HTTP 認証プロンプトを許可する
   
   
   #### サポートされているバージョン:
   - Windows と macOS での 77 以降
 
   #### 説明
-  ページ上のサードパーティのサブコンテンツが [HTTP 基本認証] ダイアログ ボックスを開くことができるかどうかを制御します。
+  ページ上のサードパーティの画像に認証プロンプトを表示できるかどうかを制御します。
 
-通常、これはフィッシング詐欺への防御として無効になっています。 このポリシーを構成していない場合、これは無効となり、サードパーティのサブコンテンツが [HTTP 基本認証] ダイアログ ボックスを開くことができなくなります。
+通常、これはフィッシング詐欺への防御として無効になっています。 このポリシーを設定しない場合、ポリシーは無効になり、サードパーティの画像は認証プロンプトを表示できません。
 
   #### サポートされている機能:
   - 必須にすることができるか: はい
@@ -3823,7 +3838,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   #### Windows の情報と設定
   ##### グループ ポリシー (ADMX) 情報
   - GP 固有の名前: AllowCrossOriginAuthPrompt
-  - GP 名: クロスオリジン HTTP 基本認証のプロンプトを許可する
+  - GP 名: cross-origin HTTP 認証プロンプトを許可する
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/HTTP 認証
   - GP パス (推奨): なし
   - GP ADMX ファイル名: MSEdge.admx
@@ -4128,6 +4143,56 @@ Samba と Windows Server の最新バージョンは、すべて NTLMv2 をサ�
 ``` xml
 <true/>
 ```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ## キオスク モードの設定ポリシー
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### KioskDeleteDownloadsOnExit
+  #### Microsoft Edge が閉じたときに、キオスク セッションの一部としてダウンロードされたファイルを削除する
+  
+  
+  #### サポートされているバージョン:
+  - Windows での 87 以降
+
+  #### 説明
+  注: このポリシーは、Edge が "--edge-kiosk-type" コマンドライン パラメーターで起動された場合にのみサポートされます。
+
+このポリシーを有効にすると、キオスク セッションの一部としてダウンロードされたファイルは、Microsoft Edge が閉じるたびに削除されます。
+
+このポリシーを無効にするか、構成しない場合、キオスク セッションの一部としてダウンロードされたファイルは、Microsoft Edge を閉じても削除されません。
+
+キオスク モードの構成の詳細については、「[https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578)」を参照してください。
+
+  #### サポートされている機能:
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: いいえ - ブラウザの再起動が必要
+
+  #### ［データの種類］:
+  - ブール値
+
+  #### Windows の情報と設定
+  ##### グループ ポリシー (ADMX) 情報
+  - GP 固有の名前: KioskDeleteDownloadsOnExit
+  - GP 名: Microsoft Edge が閉じたときに、キオスク セッションの一部としてダウンロードされたファイルを削除する
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/キオスク モードの設定
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+  ##### Windows レジストリの設定
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - 値の名前: KioskDeleteDownloadsOnExit
+  - 値の種類: REG_DWORD
+  ##### サンプル値:
+```
+0x00000001
+```
+
+
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -9170,8 +9235,7 @@ Windows 管理者への注意: このポリシーは、Windows 7 を実行して
   - Windows と macOS での 86 以降
 
   #### 説明
-  
-Web サイトがシリアルポートにアクセスできるかどうかを設定します。 アクセスを完全にブロックするか、Web サイトがシリアルポートにアクセスするときに毎回ユーザーに確認を求めるように設定することができます。
+  Web サイトがシリアルポートにアクセスできるかどうかを設定します。 アクセスを完全にブロックするか、Web サイトがシリアルポートにアクセスするときに毎回ユーザーに確認を求めるように設定することができます。
 
 ポリシーを3に設定すると、web サイトがシリアルポートへのアクセス許可を要求します。 ポリシーを2に設定すると、シリアルポートへのアクセスが拒否されます。
 
@@ -10892,7 +10956,7 @@ Microsoft Edge 84 以降、このポリシーを構成しない場合、外部�
   - Windows と macOS での 81 以降
 
   #### 説明
-  このポリシーは、企業の Web コンテンツが現在の既定の参照元ポリシーと互換していないことが判明した場合に、Web コンテンツの更新に時間を割くための短期のメカニズムとしてのみ機能することを目的としているため、推奨されていません。 Microsoft Edge バージョン 86 では機能しません。
+  このポリシーは、企業の Web コンテンツが現在の既定の参照元ポリシーと互換していないことが判明した場合に、Web コンテンツの更新に時間を割くための短期のメカニズムとしてのみ機能することを目的としているため、推奨されていません。 Microsoft Edge バージョン 88 では機能しません。
 
 Microsoft Edge の既定の参照元ポリシーは、段階的なロールアウトにより、現在の no-referrer-when-downgrade から、より安全性の高い strict-origin-when-cross-origin へと強化されています。
 
@@ -10992,7 +11056,7 @@ Microsoft Edge の既定の参照元ポリシーは、段階的なロールア�
 
 このポリシーを構成しない場合、ユーザーは同期をオンまたはオフにすることができます。 このポリシーを有効にした場合、ユーザーは同期をオフにすることはできません。
 
-このポリシーが意図したとおりに動作するためには、 [BrowserSignin](#browsersignin) ポリシーが構成されていないか、または有効に設定する必要があります。 [ForceSync](#forcesync) が [無効] に設定されている場合、[BrowserSignin](#browsersignin) は有効になりません。
+このポリシーが意図したとおりに動作するためには、 [BrowserSignin](#browsersignin) ポリシーが構成されていないか、または有効に設定する必要があります。 [BrowserSignin](#browsersignin) が無効に設定されている場合、[ForceSync](#forcesync) は有効になりません。
 
 [SyncDisabled](#syncdisabled)を構成することはできません。または False に設定する必要があります。  この設定が True に設定されている場合、 [ForceSync](#forcesync) は有効になりません。
 
@@ -11365,7 +11429,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 - Windows アカウントが Azure AD または MSA の種類の場合でも、ユーザーは自動的に Microsoft Edge へとサインインします。
 
-- 同期は既定では有効になっておらず、ユーザーは同期設定から同期を有効にすることができます。
+- 同期は既定では有効になりません。ユーザーはブラウザーの起動時に同期するかどうかを選択するように求められます。 [ForceSync](#forcesync) または [SyncDisabled](#syncdisabled) ポリシーを使用して、同期および同期の同意プロンプトを構成できます。
 
 このポリシーを無効にしているか、構成していない場合、初回実行時のエクスペリエンスとスプラッシュ画面は表示されます。
 
@@ -11376,6 +11440,8 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 -[NewTabPageLocation](#newtabpagelocation)
 
 -[NewTabPageSetFeedType](#newtabpagesetfeedtype)
+
+-[ForceSync](#forcesync)
 
 -[SyncDisabled](#syncdisabled)
 
@@ -12474,13 +12540,13 @@ Internet Explorer モードの詳細については、「[https://go.microsoft.c
   #### 説明
   このポリシーは ie-mode-testフラグポリシーの代替です。 UI メニューオプションから IE モードタブを開くことができます。
 
-       この設定は、"IEMode" に設定されている [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) と、一覧に少なくとも 1 つのエントリがある [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) ポリシーと連動します。
+この設定は、"IEMode" に設定されている [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) と、一覧に少なくとも 1 つのエントリがある [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) ポリシーと連動します。
 
-       このポリシーを有効にすると、ユーザーが UI オプションから IE モードタブを開き、現在のサイトを IE モードサイトに移動することができます。
+このポリシーを有効にすると、ユーザーが UI オプションから IE モードタブを開き、現在のサイトを IE モードサイトに移動することができます。
 
-       このポリシーを無効にすると、ユーザーのメニューに UI オプションが直接表示されません。
+このポリシーを無効にすると、ユーザーのメニューに UI オプションが直接表示されません。
 
-       このポリシーを構成していない場合は、手動でie-mode-testフラグを設定できます。
+このポリシーを構成していない場合は、手動でie-mode-testフラグを設定できます。
 
   #### サポートされている機能:
   - 必須にすることができるか: はい
@@ -12521,9 +12587,13 @@ Internet Explorer モードの詳細については、「[https://go.microsoft.c
 
   #### 説明
   独自のプロセスで分離して実行するオリジンを指定します。
+
 このポリシーは、サブドメインで指定されたオリジンも分離します。たとえば https://contoso.com/ を指定すると、https://foo.contoso.com/ が https://contoso.com/ サイトの一部として分離されます。
+
 このポリシーを有効にしている場合、コンマで区切られた一覧に含まれる指定されたオリジンは、それぞれ独自のプロセスで実行されます。
+
 このポリシーを無効にしている場合、“IsolateOrigins“ と “SitePerProcess“ の両方の機能が無効になります。 ユーザーは、コマンドライン フラグを使用して手動で “IsolateOrigins“ ポリシーを有効にすることができます。
+
 このポリシーを構成していない場合、ユーザーはこの設定を変更することができます。
 
   #### サポートされている機能:
@@ -14149,9 +14219,9 @@ Adobe Flash の実行を許可する Web サイトを制御するには、[Defau
   - Windows と macOS での 77 以降
 
   #### 説明
-  SSL の最小限のサポート バージョンを設定します。 このポリシーを構成していない場合、Microsoft Edge は既定の最小バージョンである TLS 1.0 を使用します。
+  サポートされている TLS の最小バージョンを設定します。 このポリシーを構成していない場合、Microsoft Edge は既定の最小バージョンである TLS 1.0 を使用します。
 
-このポリシーを有効にしている場合、最小限のバージョンを以下のいずれかの値に設定することができます: "TLSv1"、"TLSv1.1"、"TLSv1.2"。 この設定をしている場合、Microsoft Edge は指定されたバージョンよりも低いバージョンの SSL/TLS を使用しません。 認識されない値は、無視されます。
+このポリシーを有効にすると、Microsoft Edge は指定されたバージョンより前のバージョンの SSL/TLS を使用しなくなります。 認識されない値は、無視されます。
 
 ポリシー オプション マッピング:
 
@@ -14851,9 +14921,9 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   - Windows と macOS での 77 以降
 
   #### 説明
-  このポリシーは、運用要件の変更のため、期待どおりに動作しませんでした。 よって非推奨です。使用しないでください。
+  このポリシーは、運用要件の変更のため、期待どおりに動作しませんでした。 Therefore it's deprecated and should not be used.
 
-お気に入り バーに Office.com へのショートカットを表示するどうかを指定します。 Microsoft Edge にサインインしているユーザーの場合、ショートカットキーを使用して、ユーザーが Microsoft Office のアプリやドキュメントに移動します。このポリシーを有効にするか、未構成にした場合、ユーザーは、[お気に入り] バーのコンテキストメニューでトグルを変更して、ショートカットを表示するかどうかを選ぶことができます。
+お気に入り バーに Office.com へのショートカットを表示するどうかを指定します。 For users signed into Microsoft Edge the shortcut takes users to their Microsoft Office apps and docs. If you enable or don't configure this policy, users can choose whether to see the shortcut by changing the toggle in the favorites bar context menu.
 このポリシーを無効にすると、ショートカットが表示されなくなります。
 
   #### サポートされている機能:
@@ -14950,9 +15020,10 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   - Windows と macOS での 77 以降
 
   #### 説明
-  
-"SitePerProcess" ポリシーは、すべてのサイトを分離する既定の動作をユーザーがオプトアウトしないようにするために使用することができます。 [IsolateOrigins](#isolateorigins) ポリシーを使用して、さらに詳細な追加のオリジンを分離することもできます。
+  "SitePerProcess" ポリシーは、すべてのサイトを分離する既定の動作をユーザーがオプトアウトしないようにするために使用することができます。 [IsolateOrigins](#isolateorigins) ポリシーを使用して、さらに詳細な追加のオリジンを分離することもできます。
+
 このポリシーを有効にしている場合、各サイトが独自のプロセスで実行する既定の動作をユーザーがオプトアウトすることができなくなります。
+
 このポリシーを無効にしているか、構成していない場合、ユーザーはサイトの分離をオプトアウトすることができます。  (たとえば edge://flags の "サイトの分離を無効にする" エントリを使用して) ポリシーを無効にしたり、または構成しなかったりしても、サイトの分離はオフにはなりません。
 
 
@@ -16229,16 +16300,9 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
   - Windows と macOS での 80 以降
 
   #### 説明
-  ユーザーの操作なしにサイレント インストールされ、ユーザーがアンインストールしたり無効にしたりすることができない Web サイトの一覧を指定します。
+  このポリシーを構成して、ユーザーの操作なしでサイレント インストールし、ユーザーがアンインストールまたはオフにできない Web アプリの一覧を指定します。
 
-ポリシーの各リスト アイテムは、次のメンバーを持つオブジェクトです。
-  - "url" は必須です。 "url" にはインストールする Web アプリの URL を指定します。
-
-オプションのメンバーの値は、次のとおりです。
-  - "launch_container" は "window" または "tab" のいずれかの値に設定し、Web アプリがインストールされた後にどのように開かれるかを指定します。
-  - "create_desktop_shortcut" には、Windows にデスクトップ ショートカットを作成する場合に true を指定する必要があります。
-
-"default_launch_container" が省略されている場合、既定ではアプリはタブで開きます。 "default_launch_container" の値に関わらず、ユーザーはアプリを開くコンテナーを変更することができます。 "create_desktop_shortcuts" が省略されている場合、デスクトップ ショートカットは作成されません。
+ポリシーの各リスト アイテムは、必須メンバー: URL （インストールする Web アプリの URL） と 2 つのオプション メンバー: default_launch_container （Web アプリが開くウィンドウ モードを指定する - 新しいタブが既定） および create_desktop_shortcut （Linux および Windows デスクトップ ショートカットを作成する場合は True） を持つオブジェクトです。
 
   #### サポートされている機能:
   - 必須にすることができるか: はい
@@ -16360,8 +16424,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   - Windows と macOS での 77 以降、84 まで
 
   #### 説明
-  
-WebDriver は既存のすべてのポリシーと互換性を持つようになったため、このポリシーは機能しません。
+  WebDriver は既存のすべてのポリシーと互換性を持つようになったため、このポリシーは機能しません。
 
 このポリシーでは、WebDriver 機能のユーザーがその操作を妨げる可能性のあるポリシーを上書きすることができます。
 
