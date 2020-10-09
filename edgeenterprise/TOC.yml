@@ -1,4 +1,4 @@
-# last revised 10/05/2020
+# last revised 10/08/2020
 - name: Microsoft Edge エンタープライズのドキュメント
   href: index.yml
 - name: Microsoft Edge ドキュメント
@@ -79,17 +79,17 @@
       href: configure-microsoft-edge-on-mac.md
     - name: Jamf を使用して macOS 用に構成する
       href: configure-microsoft-edge-on-mac-jamf.md
-- name: Use Microsoft Edge enterprise features
+- name: Microsoft Edge エンタープライズ機能を使用する
   items:
-    - name: Configurations and experimentation
+    - name: 構成とテスト
       href: edge-configuration-and-experiments.md
     - name: ID サポートと構成
       href: microsoft-edge-security-identity.md
-    - name: Microsoft Edge and Enterprise State Roaming
+    - name: Microsoft Edge と Enterprise State Roaming
       href: microsoft-edge-enterprise-state-roaming.md
-    - name: Configure Microsoft Edge kiosk mode
+    - name: Microsoft Edge キオスク モードを構成する
       href: microsoft-edge-configure-kiosk-mode.md
-    - name: Microsoft Edge Sync
+    - name: Microsoft Edge の同期
       href: microsoft-edge-enterprise-sync.md
     - name: Active Directory ユーザー用のオンプレミス同期
       href: microsoft-edge-on-premises-sync.md
@@ -109,17 +109,19 @@
           href: edge-ie-mode-site-discovery.md
         - name: IE モードに関する FAQ
           href: edge-ie-mode-faq.md
-- name: Microsoft Edge Security
+- name: Microsoft Edge のセキュリティ
   items:
-    - name: Security for your business
+    - name: ビジネス向けのセキュリティ
       href: ms-edge-security-for-business.md
-    - name: Allow list for Microsoft Edge endpoints
+    - name: Microsoft Edge エンドポイントの許可リスト
       href: microsoft-edge-security-endpoints.md
-    - name: Protect against potentially unwanted applications
+    - name: データ損失防止 (DLP)
+      href: microsoft-edge-security-dlp.md
+    - name: 望ましくない可能性のあるアプリケーションから保護する
       href: microsoft-edge-potentially-unwanted-apps.md
-    - name: Support for Azure AD Conditional Access
+    - name: Azure AD の条件付きアクセスのサポート
       href: ms-edge-security-conditional-access.md
-    - name: Support for Application Guard
+    - name: Application Guard のサポート
       href: microsoft-edge-security-windows-defender-application-guard.md
     - name: Microsoft Defender SmartScreen のサポート
       href: microsoft-edge-security-smartscreen.md
@@ -151,25 +153,27 @@
           href: edge-learnmore-inpage-nav.md
         - name: 混在したコンテンツのダウンロード
           href: edge-learnmore-mixed-content-downloads.md
-        - name: Progressive rollouts for Stable channel updates
+        - name: Stable チャネル更新プログラムの段階的なロールアウト
           href: microsoft-edge-update-progressive-rollout.md
-        - name: Provision favorites for Microsoft Edge
+        - name: Microsoft Edge のお気に入りをプロビジョニングする
           href: edge-learnmore-provision-favorites.md
-        - name: Regular Expression 2 (re2.h) syntax
+        - name: Regular Expression 2 (re2.h) の構文
           href: edge-learnmore-regex.md
-        - name: User data directory variables
+        - name: ユーザー データ ディレクトリ変数
           href: edge-learnmore-create-user-directory-vars.md
-        - name: Using Microsoft Edge rollback for enterprises
+        - name: 企業向け Microsoft Edge ロールバックの使用
           href: edge-learnmore-rollback.md
-- name: Microsoft Edge Videos
+- name: Microsoft Edge のビデオ
   items:
-    - name: Microsoft Edge video collection
+    - name: Microsoft Edge ビデオのコレクション
       href: microsoft-edge-videos.md
-    - name: Video - Deploy Microsoft Edge
+    - name: ビデオ - Microsoft Edge の展開
       href: microsoft-edge-video-deploy.md
-    - name: Video - Microsoft Edge and Microsoft Search
+    - name: ビデオ-Microsoft Edge およびデータ損失防止 (DLP)
+      href: microsoft-edge-video-security-dlp.md
+    - name: Microsoft Edge および Microsoft Search のビデオ
       href: microsoft-edge-video-search.md
-    - name: 'Video - Security, compatibility, and manageability'
+    - name: ビデオ - セキュリティ、互換性、管理性
       href: microsoft-edge-video-security-compatibility-manageability.md
-- name: Frequently asked questions
+- name: よく寄せられる質問
   href: faqs-edge-in-the-enterprise.md
