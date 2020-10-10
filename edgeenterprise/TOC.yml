@@ -139,6 +139,8 @@
       href: microsoft-edge-policies.md
     - name: 更新ポリシー リファレンス
       href: microsoft-edge-update-policies.md
+    - name: WebView2 ポリシーリファレンス
+      href: microsoft-edge-webview-policies.md
     - name: 詳細情報
       items:
         - name: ClickOnce および DirectInvoke
@@ -167,9 +169,11 @@
   items:
     - name: Microsoft Edge ビデオのコレクション
       href: microsoft-edge-videos.md
+    - name: 'ビデオ: Application Guard を使用したブラウザ分離'
+      href: microsoft-edge-video-security-application-guard.md
     - name: ビデオ - Microsoft Edge の展開
       href: microsoft-edge-video-deploy.md
-    - name: ビデオ-Microsoft Edge およびデータ損失防止 (DLP)
+    - name: 'ビデオ: データ損失防止 (DLP)'
       href: microsoft-edge-video-security-dlp.md
     - name: Microsoft Edge および Microsoft Search のビデオ
       href: microsoft-edge-video-search.md
