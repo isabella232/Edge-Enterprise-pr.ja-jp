@@ -3,7 +3,7 @@ title: Microsoft Edge Update のポリシーに関するドキュメント
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 06/10/2020
+ms.date: 10/07/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,28 +11,26 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge アップデーターでサポートされているすべてのポリシーに関するドキュメント
-ms.openlocfilehash: d772d8dd6f60b89e9bd12a77b740e5fad699756a
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: feb7859f062ae39e2bbfe08d8e478386defb85cf
+ms.sourcegitcommit: 4e6188ade942ca6fd599a4ce1c8e0d90d3d03399
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980472"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "11105571"
 ---
 # Microsoft Edge - 更新ポリシー
 最新バージョンの Microsoft Edge には、Microsoft Edge をいつどのように更新するかを制御するために使用できる以下のポリシーが含まれています。
 
-           
 Microsoft Edge で使用できるその他のポリシーについて詳しくは、[Microsoft Edge ブラウザー ポリシー リファレンス](microsoft-edge-policies.md)をご覧ください。
 > [!NOTE]
 > この記事は、Microsoft Edge version 77 以降に適用されます。
-
 ## 使用可能なポリシー
 次の表は、このリリースの Microsoft Edge で使用可能な、更新関連のすべてのグループ ポリシーの一覧を示しています。 個々のポリシーに関する詳しい情報を取得するには、表内のリンクをお使いください。
 
 |||
 |-|-|
 |[アプリケーション](#applications)|[基本設定](#preferences)|
-|[プロキシ サーバー](#proxy-server)||
+|[プロキシ サーバー](#proxy-server)|[Microsoft Edge WebView](#microsoft-edge-webview)|
 
 ### [アプリケーション](#applications-policies)
 |ポリシー名|キャプション|
@@ -44,6 +42,7 @@ Microsoft Edge で使用できるその他のポリシーについて詳しく�
 |[Allowsxs](#allowsxs)|Microsoft Edge でのブラウザーの同時実行エクスペリエンスを許可する|
 |[CreateDesktopShortcutDefault](#createdesktopshortcutdefault)|既定値のインストール時にデスクトップへのショートカットの作成を禁止する|
 |[CreateDesktopShortcut](#createdesktopshortcut)|インストール時にデスクトップへのショートカットの作成を禁止する (チャネル単位)|
+|[RollbackToTargetVersion](#rollbacktotargetversion)|ターゲットバージョンにロールバック (チャネル単位)|
 |[TargetVersionPrefix](#targetversionprefix)|ターゲットバージョンの上書き (チャネルごと) |
 
 ### [基本設定](#preferences-policies)
@@ -59,12 +58,11 @@ Microsoft Edge で使用できるその他のポリシーについて詳しく�
 |[ProxyPacUrl](#proxypacurl)|プロキシ .pac ファイルへの URL|
 |[ProxyServer](#proxyserver)|プロキシ サーバーのアドレスまたは URL|
 
-                 
-      
-  
-             
-            
-                  
+### [Microsoft Edge WebView](#microsoft-edge-webview-policies)
+|ポリシー名|キャプション|
+|-|-|
+|[Install](#install-webview)|インストールを許可する|
+|[更新](#update-webview)|更新ポリシーのオーバーライド|
 
 ## アプリケーションに関するポリシー
 
@@ -74,19 +72,21 @@ Microsoft Edge で使用できるその他のポリシーについて詳しく�
 >Microsoft Edge Update 1.2.145.5 以降
 
 #### 説明
-Microsoft Edge の更新プログラムを使用するときに、すべてのチャネルの既定の動作を指定して、Microsoft Edge の更新を許可または禁止することができます。
+すべてのチャネルに既定の動作を指定して、ドメインに参加しているデバイスで Microsoft Edge を許可またはブロックすることができます。
 
 特定のチャネルの['インストールを許可する'](#install)ポリシーを有効にすることで、チャネルごとにポリシーを上書きできます。
 
-このポリシーを無効にした場合、Microsoft Edge Update を使用した Microsoft Edge のインストールは禁止されます。 これは、ユーザーが Microsoft Edge Update を実行していて、['インストールを許可する'](#install) ポリシーを設定していない場合にのみ、Microsoft Edgeソフトウェアのインストールに影響します。
+このポリシーを無効にすると、Microsoft Edge のインストールがブロックされます。 これは、[[インストールの許可](#install)] ポリシーが未構成に設定されている場合は、Microsoft Edge ソフトウェアのインストールにのみ影響します。
 
 このポリシーによって、Microsoft Edge Update の実行は禁止されません。また、ユーザーが Microsoft Edge ソフトウェアを他の方法を使用してインストールすることも禁止されません。
+
+このポリシーは、Microsoft® Active Directory®ドメインに参加している Windows インスタンスでのみ使用できます。
 #### Windows の情報と設定
 ##### グループ ポリシー (ADMX) 情報
 - GP 固有の名前: InstallDefault
 - GP の名前: インストールの既定の動作を許可する
 - GP パス: 管理用テンプレート/Microsoft Edge Update/アプリケーション
-- GP ADMX ファイル名: edgeupdate.admx
+- GP ADMX ファイル名:  msedgeupdate.admx
 ##### Windows レジストリの設定
 - パス: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - 値の名前: InstallDefault
@@ -114,12 +114,14 @@ Microsoft Edge で利用できる更新プログラムを Microsoft Edge Update 
   手動更新を選択した場合は、アプリの手動更新メカニズムを使用して、必ず定期的に更新プログラムをチェックしてください (手動更新メカニズムが利用できる場合)。 更新を無効にした場合は、定期的に更新プログラムをチェックして、ユーザーに配布してください。
 
   このポリシーを有効にして構成しない場合、Microsoft Edge Update は、['更新ポリシーの上書き'](#update) ポリシーで指定された使用可能な更新を処理します。
+
+  このポリシーは、Microsoft® Active Directory®ドメインに参加している Windows インスタンスでのみ使用できます。
 #### Windows の情報と設定
 ##### グループ ポリシー (ADMX) 情報
 - GP 固有の名前: UpdateDefault
 - GP の名前: 更新ポリシーのオーバーライドの既定値
 - GP パス: 管理用テンプレート/Microsoft Edge Update/アプリケーション
-- GP ADMX ファイル名: edgeupdate.admx
+- GP ADMX ファイル名:  msedgeupdate.admx
 ##### Windows レジストリの設定
 - パス: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - 値の名前: UpdateDefault
@@ -136,13 +138,15 @@ Microsoft Edge で利用できる更新プログラムを Microsoft Edge Update 
 >Microsoft Edge Update 1.2.145.5 以降
 
 #### 説明
-Microsoft Edge Update を使用して Microsoft Edge チャネルをインストールできるかどうかを指定します。
+ドメインに参加しているデバイスに Microsoft Edge チャネルをインストールできるかどうかを示します。
 
-  チャネルに対してこのポリシーを有効にした場合、ユーザーは Microsoft Edge Update を使用して、Microsoft Edge の該当するチャネルをインストールすることができます。
+  このポリシーをチャネルに対して有効にすると、Microsoft Edge はインストールのブロックをされなくなります。
 
-  チャネルに対してこのポリシーを無効にした場合、ユーザーは Microsoft Edge Update を使用して、Microsoft Edge の該当するチャネルをインストールすることはできません。
+  チャネルに対してこのポリシーを無効にすると、Microsoft Edge はインストールされなくなります。
 
-  チャネルにこのポリシーを構成しない場合、「[インストールの既定の動作を許可する](#installdefault)」 ポリシー構成により、ユーザーがMicrosoft Edge Update を通じて Microsoft Edge のそのチャネルをインストールできるかどうかが決まります。
+  チャネルにこのポリシーを構成しない場合、「[インストールの既定の動作を許可する](#installdefault)」 ポリシー構成により、ユーザーがMicrosoft Edge のそのチャネルをインストールできるかどうかが決まります。
+
+  このポリシーは、Microsoft® Active Directory®ドメインに参加している Windows インスタンスでのみ使用できます。
 #### Windows の情報と設定
 ##### グループ ポリシー (ADMX) 情報
 - GP 固有の名前: Install
@@ -152,10 +156,10 @@ Microsoft Edge Update を使用して Microsoft Edge チャネルをインスト
   - 管理用テンプレート/Microsoft Edge Update/アプリケーション/Microsoft Edge Beta
   - 管理用テンプレート/Microsoft Edge Update/アプリケーション/Microsoft Edge Canary
   - 管理用テンプレート/Microsoft Edge Update/アプリケーション/Microsoft Edge Dev
-- GP ADMX ファイル名: edgeupdate.admx
+- GP ADMX ファイル名:  msedgeupdate.admx
 ##### Windows レジストリの設定
 - パス: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
-- キーの値:  
+- 値の名前:  
   - (Stable): Install{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
   - (Beta): Install{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}
   - (Canary): Install{65C35B14-6C1D-4122-AC46-7148CC9D6497}
@@ -175,15 +179,19 @@ Microsoft Edge Update を使用して Microsoft Edge チャネルをインスト
 #### 説明
 Microsoft Edge で利用できる更新プログラムを Microsoft Edge Update でどのように処理するかを指定します。
 
-  このポリシーを有効にした場合、Microsoft Edge Update では、以下のオプションの構成方法に従って Microsoft Edge の更新プログラムを処理します。
-   - [常に更新を許可する]: 定期的な更新チェックまたは手動更新チェックで検出された場合に、更新プログラムを必ず適用します。
-   - [自動サイレント更新のみ]: 更新プログラムは、定期的な更新チェックで検出された場合にのみ適用されます。
-   - [手動更新のみ]: 更新プログラムは、ユーザーが実行した手動更新チェックで検出された場合にのみ適用されます。 (アプリによっては、このオプション用のインターフェイスがない場合もあります。)
-   - [更新を無効にする]: 更新プログラムは適用されません。
+このポリシーを有効にした場合、Microsoft Edge Update では、以下のオプションの構成方法に従って Microsoft Edge の更新プログラムを処理します。
+  - [常に更新を許可する]: 定期的な更新チェックまたは手動更新チェックで検出された場合に、更新プログラムを必ず適用します。
+  - [自動サイレント更新のみ]: 更新プログラムは、定期的な更新チェックで検出された場合にのみ適用されます。
+  - [手動更新のみ]: 更新プログラムは、ユーザーが実行した手動更新チェックで検出された場合にのみ適用されます。 (アプリによっては、このオプション用のインターフェイスがない場合もあります。)
+  - [更新を無効にする]: 更新プログラムは適用されません。
 
-  手動更新を選択した場合は、アプリの手動更新メカニズムを使用して、必ず定期的に更新プログラムをチェックしてください (手動更新メカニズムが利用できる場合)。 更新を無効にした場合は、定期的に更新プログラムをチェックして、ユーザーに配布してください。
+手動更新を選択した場合は、アプリの手動更新メカニズムを使用して、必ず定期的に更新プログラムをチェックしてください (手動更新メカニズムが利用できる場合)。 更新を無効にした場合は、定期的に更新プログラムをチェックして、ユーザーに配布してください。
 
-  このポリシーを有効にせず、構成しない場合、Microsoft Edge Update は、[「更新ポリシー上書きの既定値」](#updatedefault) ポリシーで指定された使用可能な更新プログラムを処理します。
+このポリシーを有効にせず、構成しない場合、Microsoft Edge Update は、[「更新ポリシー上書きの既定値」](#updatedefault) ポリシーで指定された使用可能な更新プログラムを処理します。
+
+詳細については、「[https://go.microsoft.com/fwlink/?linkid=2136406](https://go.microsoft.com/fwlink/?linkid=2136406)」を参照してください。
+
+このポリシーは、Microsoft® Active Directory®ドメインに参加している Windows インスタンスでのみ使用できます。
 #### Windows の情報と設定
 ##### グループ ポリシー (ADMX) 情報
 - GP 固有の名前: Update
@@ -193,7 +201,7 @@ Microsoft Edge で利用できる更新プログラムを Microsoft Edge Update 
   - 管理用テンプレート/Microsoft Edge Update/アプリケーション/Microsoft Edge Beta
   - 管理用テンプレート/Microsoft Edge Update/アプリケーション/Microsoft Edge Canary
   - 管理用テンプレート/Microsoft Edge Update/アプリケーション/Microsoft Edge Dev
-- GP ADMX ファイル名: edgeupdate.admx
+- GP ADMX ファイル名:  msedgeupdate.admx
 ##### Windows レジストリの設定
 - パス: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - 値の名前:  
@@ -228,7 +236,7 @@ Microsoft Edge で利用できる更新プログラムを Microsoft Edge Update 
 - GP 固有の名前: Allowsxs
 - GP の名前: Microsoft Edge でのブラウザーの同時実行エクスペリエンスを許可する
 - GP パス: 管理用テンプレート/Microsoft Edge Update/アプリケーション
-- GP ADMX ファイル名: edgeupdate.admx
+- GP ADMX ファイル名:  msedgeupdate.admx
 ##### Windows レジストリの設定
 - パス: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - 値の名前: Allowsxs
@@ -256,7 +264,7 @@ Microsoft Edge が既にインストールされている場合、このポリ�
 - GP 固有の名前: CreateDesktopShortcutDefault
 - GP の名前: 既定値のインストール時にデスクトップへのショートカットの作成を禁止する
 - GP パス: 管理用テンプレート/Microsoft Edge Update/アプリケーション
-- GP ADMX ファイル名: edgeupdate.admx
+- GP ADMX ファイル名:  msedgeupdate.admx
 ##### Windows レジストリの設定
 - パス: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - 値の名前: CreateDesktopShortcutDefault
@@ -288,7 +296,7 @@ Microsoft Edge が既にインストールされている場合、このポリ�
   - 管理用テンプレート/Microsoft Edge Update/アプリケーション/Microsoft Edge Beta
   - 管理用テンプレート/Microsoft Edge Update/アプリケーション/Microsoft Edge Canary
   - 管理用テンプレート/Microsoft Edge Update/アプリケーション/Microsoft Edge Dev
-- GP ADMX ファイル名: edgeupdate.admx
+- GP ADMX ファイル名:  msedgeupdate.admx
 ##### Windows レジストリの設定
 - パス: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - キーの値:  
@@ -296,6 +304,55 @@ Microsoft Edge が既にインストールされている場合、このポリ�
   - (Beta): CreateDesktopShortcut{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}
   - (Canary): CreateDesktopShortcut{65C35B14-6C1D-4122-AC46-7148CC9D6497}
   - (Dev): CreateDesktopShortcut{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}
+- 値の種類: REG_DWORD
+##### サンプル値:
+```
+0x00000001
+```
+[ページのトップへ](#microsoft-edge---update-policies)
+
+
+### RollbackToTargetVersion
+#### ターゲットバージョンにロールバックする
+>Microsoft Edge Update 1.3.133.3以降
+
+#### 説明
+Microsoft Edge の更新プログラムで、Microsoft Edge のインストールを '[ターゲットバージョンの上書き](#targetversionprefix)' で指定されたバージョンにロールバックするように指定します。
+
+このポリシーは、[[ターゲットバージョンが上書きする]](#targetversionprefix)' が設定されていて、[[更新ポリシーの上書き]](#update)' がオン状態のいずれかに設定されている場合を除き (常に更新プログラム、自動サイレント更新のみ、手動更新のみを許可します)何も影響がありません。
+
+このポリシーを無効にした場合、または構成しなかった場合、'[ターゲットバージョンの上書き](#targetversionprefix)' で指定されているバージョンよりも高いバージョンにするようなインストールは変化せずそのまま残ります。
+
+このポリシーを有効にした場合、["ターゲットバージョンの上書き](#targetversionprefix)" によって指定されたよりも高いバージョンにするようなインストールは、ターゲットバージョンにダウングレードされます。
+
+最新のセキュリティ更新プログラムによる保護機能を使用するには、Microsoft Edge ブラウザーの最新バージョンをインストールすることをお勧めします。 以前のバージョンにロールバックすると、既知のセキュリティ問題にさらされるリスクがあります。 このポリシーは、Microsoft Edge ブラウザーの更新プログラムの問題に対処するための一時的な修正プログラムとして使用されます。
+
+ブラウザーのバージョンを一時的にロールバックする前に、組織内のすべてのユーザーの同期 ([https://go.microsoft.com/fwlink/?linkid=2133032](https://go.microsoft.com/fwlink/?linkid=2133032)) を有効にすることを強くお勧めします。 同期を有効にしない場合、閲覧データが永久に失われる危険性があります。 このポリシーは、自己の責任においてご使用ください。
+
+注: ロールバック可能なすべてのバージョンは、ここにあります [https://aka.ms/EdgeEnterprise](https://aka.ms/EdgeEnterprise)。
+
+これは、Microsoft Edge バージョン 86以降に適用されます。
+
+詳細については、「[https://go.microsoft.com/fwlink/?linkid=2133918](https://go.microsoft.com/fwlink/?linkid=2133918)」を参照してください。
+
+このポリシーは、Microsoft® Active Directory®ドメインに参加している Windows インスタンスでのみ使用できます。
+#### Windows の情報と設定
+##### グループ ポリシー (ADMX) 情報
+- GP 固有の名前: RollbackToTargetVersion
+- GP 名: ターゲットバージョンにロールバックする
+- GP パス:  
+  - 管理用テンプレート/Microsoft Edge Update/アプリケーション/Microsoft Edge
+  - 管理用テンプレート/Microsoft Edge Update/アプリケーション/Microsoft Edge Beta
+  - 管理用テンプレート/Microsoft Edge Update/アプリケーション/Microsoft Edge Canary
+  - 管理用テンプレート/Microsoft Edge Update/アプリケーション/Microsoft Edge Dev
+- GP ADMX ファイル名:  msedgeupdate.admx
+##### Windows レジストリの設定
+- パス: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- キーの値:  
+  - (Stable): RollbackToTargetVersion{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
+  - (ベータ): RollbackToTargetVersion{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}
+  - (カナリア): RollbackToTargetVersion{65C35B14-6C1D-4122-AC46-7148CC9D6497}
+  - (Dev): RollbackToTargetVersion{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}
 - 値の種類: REG_DWORD
 ##### サンプル値:
 ```
@@ -316,6 +373,10 @@ Microsoft Edge が既にインストールされている場合、このポリ�
 指定した値より新しいバージョンの Microsoft Edge がデバイスにある場合、Microsoft Edge は新しいバージョンのままとなり、指定されたバージョンにダウングレードされません。
 
 指定したバージョンが存在しない場合、または正しく書式設定されていない場合は、Microsoft Edge は現在のバージョンにとどまり、将来のバージョンに自動的に更新されません。
+
+詳細については、「[https://go.microsoft.com/fwlink/?linkid=2136707](https://go.microsoft.com/fwlink/?linkid=2136707)」を参照してください。
+
+このポリシーは、Microsoft® Active Directory®ドメインに参加している Windows インスタンスでのみ使用できます。
 #### Windows の情報と設定
 ##### グループ ポリシー (ADMX) 情報
 - GP 固有の名前: TargetVersionPrefix
@@ -325,7 +386,7 @@ Microsoft Edge が既にインストールされている場合、このポリ�
   - 管理用テンプレート/Microsoft Edge Update/アプリケーション/Microsoft Edge Beta
   - 管理用テンプレート/Microsoft Edge Update/アプリケーション/Microsoft Edge Canary
   - 管理用テンプレート/Microsoft Edge Update/アプリケーション/Microsoft Edge Dev
-- GP ADMX ファイル名: edgeupdate.admx
+- GP ADMX ファイル名:  msedgeupdate.admx
 ##### Windows レジストリの設定
 - パス: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - キーの値:  
@@ -357,7 +418,7 @@ Microsoft Edge が既にインストールされている場合、このポリ�
 - GP 固有の名前: AutoUpdateCheckPeriodMinutes
 - GP の名前: 自動更新チェック期間のオーバーライド
 - GP パス: 管理用テンプレート/Microsoft Edge Update/基本設定
-- GP ADMX ファイル名: edgeupdate.admx
+- GP ADMX ファイル名:  msedgeupdate.admx
 ##### Windows レジストリの設定
 - パス: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - 値の名前: AutoUpdateCheckPeriodMinutes
@@ -383,7 +444,7 @@ Microsoft Edge が既にインストールされている場合、このポリ�
 - GP の名前: 自動更新チェックを停止する 1 日あたりの時間帯
   - オプション { Hour, Minute, Duration }
 - GP パス: 管理用テンプレート/Microsoft Edge Update/基本設定
-- GP ADMX ファイル名: edgeupdate.admx
+- GP ADMX ファイル名:  msedgeupdate.admx
 ##### Windows レジストリの設定
 - パス: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - 値の名前:  
@@ -401,8 +462,6 @@ start min  : 0x00000002
 
 
 ## プロキシ サーバーに関するポリシー
-  
-  
 
 [ページのトップへ](#microsoft-edge---update-policies)
 ### ProxyMode
@@ -426,7 +485,7 @@ Microsoft Edge Update で使用されるプロキシ サーバーの設定を指
 - GP 固有の名前: ProxyMode
 - GP の名前: プロキシ サーバーの設定をどのように指定するかを選択する
 - GP パス: 管理用テンプレート/Microsoft Edge Update/プロキシ サーバー
-- GP ADMX ファイル名: edgeupdate.admx
+- GP ADMX ファイル名:  msedgeupdate.admx
 ##### Windows レジストリの設定
 - パス: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - 値の名前: ProxyMode
@@ -455,7 +514,7 @@ fixed_servers
 - GP 固有の名前: ProxyPacUrl
 - GP の名前: プロキシ .pac ファイルへの URL
 - GP パス: 管理用テンプレート/Microsoft Edge Update/プロキシ サーバー
-- GP ADMX ファイル名: edgeupdate.admx
+- GP ADMX ファイル名:  msedgeupdate.admx
 ##### Windows レジストリの設定
 - パス: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - 値の名前: ProxyPacUrl
@@ -484,7 +543,7 @@ Microsoft Edge Update で使用するプロキシ サーバーの URL を指定�
 - GP 固有の名前: ProxyServer
 - GP の名前: プロキシ サーバーのアドレスまたは URL
 - GP パス: 管理用テンプレート/Microsoft Edge Update/プロキシ サーバー
-- GP ADMX ファイル名: edgeupdate.admx
+- GP ADMX ファイル名:  msedgeupdate.admx
 ##### Windows レジストリの設定
 - パス: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - 値の名前: ProxyServer
@@ -492,6 +551,68 @@ Microsoft Edge Update で使用するプロキシ サーバーの URL を指定�
 ##### サンプル値:
 ```
 https://www.microsoft.com
+```
+[ページのトップへ](#microsoft-edge---update-policies)
+
+
+## Microsoft Edge WebView に関するポリシー
+
+[ページのトップへ](#microsoft-edge---update-policies)
+### インストール (WebView)
+#### インストールを許可する
+>Microsoft Edge Update 1.3.127.1 以降
+
+#### 説明
+Microsoft Edge Update を使用して Microsoft Edge WebView をインストールできるかどうかを指定します。
+
+  - このポリシーを有効にした場合、ユーザーは Microsoft Edge Update を使用して、Microsoft Edge WebView をインストールできます。
+  - このポリシーを無効にした場合、ユーザーは Microsoft Edge Update を使用して Microsoft Edge WebView をインストールできません。
+  - このポリシーを構成しなかった場合、"[インストールの既定の動作を許可する](#installdefault)" ポリシーの構成に従って、ユーザーが Microsoft Edge Update を使用して Microsoft Edge WebView をインストールできるかどうかが決まります。
+#### Windows の情報と設定
+##### グループ ポリシー (ADMX) 情報
+- GP 固有の名前: Install
+- GP の名前: インストールを許可する
+- GP パス: 管理用テンプレート/Microsoft Edge Update/Microsoft Edge WebView
+- GP ADMX ファイル名:  msedgeupdate.admx
+##### Windows レジストリの設定
+- パス: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- キーの値:  
+  - Install{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}
+- 値の種類: REG_DWORD
+##### サンプル値:
+```
+0x00000001
+```
+[ページのトップへ](#microsoft-edge---update-policies)
+
+
+### 更新 (WebView)
+#### 更新ポリシーのオーバーライド
+>Microsoft Edge Update 1.3.127.1 以降
+
+#### 説明
+Microsoft Edge WebView の自動更新を有効にするかどうかを指定できます。 Microsoft Edge WebView は、アプリケーションが Web コンテンツを表示するために使用するコンポーネントです。
+自動更新は、既定で有効になっています。 Microsoft Edge WebView の自動更新を無効にすると、このコンポーネントに依存するアプリケーションで互換性の問題が発生する可能性があります。
+
+  このポリシーを有効にした場合、Microsoft Edge Update では、以下のオプションの構成方法に従って Microsoft Edge WebView の更新プログラムを処理します。
+  - [常に更新プログラムを許可する]: 更新プログラムは自動的にダウンロードされ、適用されるます
+  - [更新を無効にする]: 更新プログラムはダウンロードまたは適用されません
+
+  このポリシーを有効にしないと、更新プログラムが自動的にダウンロードされ、適用されます。
+#### Windows の情報と設定
+##### グループ ポリシー (ADMX) 情報
+- GP 固有の名前: Update
+- GP の名前: 更新ポリシーのオーバーライド
+- GP パス: 管理用テンプレート/Microsoft Edge Update/Microsoft Edge WebView
+- GP ADMX ファイル名:  msedgeupdate.admx
+##### Windows レジストリの設定
+- パス: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- キーの値:  
+  - Update{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}
+- 値の種類: REG_DWORD
+##### サンプル値:
+```
+0x00000001
 ```
 [ページのトップへ](#microsoft-edge---update-policies)
 
