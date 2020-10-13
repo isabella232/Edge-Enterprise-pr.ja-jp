@@ -1,30 +1,45 @@
 ---
-ms.openlocfilehash: bd70db3a942a526267de982018c25710e436af58
-ms.sourcegitcommit: bd68077356a944b99a424d03b444b04aa60272dd
+ms.openlocfilehash: 7ca2675c7d1809801ea6479138efe3dde3d3ccfc
+ms.sourcegitcommit: 65164f81d74e268f56a2893fadf32e97d5194d95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "11099812"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "11115647"
 ---
+<!-- This file is generated automatically each week. Changes made to this file will be overwritten.-->
+
+## 2020年 10 月 05日の週
+
+| 公開日 |トピックのタイトル | 変更点 |
+|------|------------|--------|
+| 10/5/2020 | [Microsoft Edge キオスク モードを構成する](/DeployEdge/microsoft-edge-configure-kiosk-mode)<br>キオスクモードの構成ガイドを変更。| 変更されました |
+| 10/5/2020 | [Active Directory (AD) ユーザー用のオンプレミス同期](/DeployEdge/microsoft-edge-on-premises-sync)<br>Path ステートメントを修正します。 *%APPDATA%/Microsoft/Edge*  | 変更されました |
+| 10/6/2020 | [Stable チャネルに関する Microsoft Edge リリース ノート](/DeployEdge/microsoft-edge-relnote-stable-channel) <br>マイナー バージョン 85.0.564.70 の更新プログラム| 変更されました |
+| 10/7/2020 | [Beta チャネルに関する Microsoft Edge のリリース ノート](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>マイナー バージョン86.0.622.36 の更新プログラム | 変更されました |
+| 10/8/2020 | [Microsoft Edge ブラウザー ポリシーに関するドキュメント](/DeployEdge/microsoft-edge-policies)<br>ブラウザーの参照ポリシーを更新する。 | 変更されました |
+| 10/8/2020 | [Microsoft Edge Update のポリシーに関するドキュメント](/DeployEdge/microsoft-edge-update-policies)<br>参照ポリシーに更新を追加します。 | 変更されました |
+| 10/8/2020 | [Microsoft Edge WebView2 ポリシードキュメント](https://docs.microsoft.com/deployedge/microsoft-edge-webview-policies)<br>WebView2 参照ポリシーを追加します。 | 新規 |
+| 10/9/2020 | [Stable チャネルに関する Microsoft Edge リリース ノート](/DeployEdge/microsoft-edge-relnote-stable-channel) <br>Stableメジャー バージョン86.0.622.38 に更新します。 10月9日のセキュリティ更新プログラムが含まれます。| 変更されました |
+| 10/9/2020 | [Microsoft Edge セキュリティ更新プログラムのリリースノート](/DeployEdge/microsoft-edge-relnotes-security)<br>安定バージョン86.0.622.38 を更新します。 | 変更されました |
+| 10/9/2020 | [Microsoft Edge リリース スケジュール](/DeployEdge/microsoft-edge-release-schedule)<br>更新プログラムを適用して、Stable バージョン86.0.622.38 のリリースを反映します。 | 変更されました |
+
 
 ## 2020 年 9 月 28 日の週
 
 
 | 公開日 |トピックのタイトル | 変更点 |
 |------|------------|--------|
-| 2020 年 9 月 29 日 | [Beta チャネルに関する Microsoft Edge のリリース ノート](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>ベータ版マイナー バージョン 86.0.622.28 の修正。 | 変更されました |
-| 2020 年 9 月 30 日 | [Microsoft Edge ビジネス向けのセキュリティ](/DeployEdge/ms-edge-security-for-business)<br>マイナーな文言の修正と修正リンク。 | 変更されました |
-| 2020 年 9 月 30 日 | [Microsoft Edge エンタープライズの同期](/DeployEdge/microsoft-edge-enterprise-sync)<br>同期されたデータの正しい範囲と FAQ - 「同期されたデータは暗号化されていますか?」  | 変更されました |
-| 2020 年 10 月 1 日 | [Stable チャネルに関する Microsoft Edge リリース ノート](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>安定版マイナー バージョン 85.0.564.68 の修正。 | 変更されました |
-| 2020 年 10 月 2 日 | [Beta チャネルに関する Microsoft Edge のリリース ノート](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>ベータ版マイナー バージョン 86.0.622.31 の修正。 | 変更されました |
-| 2020 年 10 月 2 日 | [Microsoft Edge エンタープライズのドキュメント](/DeployEdge/index)<br>セキュリティ ドキュメント「ビジネス向け Microsoft Edge セキュリティ」へのリンクを追加します。 | 変更されました |
-| 2020 年 10 月 2 日 | [Microsoft Edge および Microsoft Defender Application Guard](/DeployEdge/microsoft-edge-security-windows-defender-application-guard)<br>**関連項目** の壊れたリンクを修正する | 変更されました |
-| 2020 年 10 月 2 日 | [Microsoft Edge ビジネス向けのセキュリティ](/DeployEdge/ms-edge-security-for-business)<br>入力ミスを修正します。 | 変更されました |
-| 2020 年 10 月 2 日 | [Microsoft Edge ブラウザー ポリシーに関するドキュメント](/DeployEdge/microsoft-edge-policies)<br>Microsoft Edge グループ ポリシーを更新します。 | 変更されました |
-
+| 2020 年 9 月 29 日 | [Beta チャネルに関する Microsoft Edge のリリース ノート](/DeployEdge/microsoft-edge-relnote-beta-channel) | 変更されました |
+| 2020 年 9 月 30 日 | [Microsoft Edge ビジネス向けのセキュリティ](/DeployEdge/ms-edge-security-for-business) | 変更されました |
+| 2020 年 9 月 30 日 | [Microsoft Edge エンタープライズの同期](/DeployEdge/microsoft-edge-enterprise-sync) | 変更されました |
+| 2020 年 10 月 1 日 | [Stable チャネルに関する Microsoft Edge リリース ノート](/DeployEdge/microsoft-edge-relnote-stable-channel) | 変更されました |
+| 2020 年 10 月 2 日 | [Beta チャネルに関する Microsoft Edge のリリース ノート](/DeployEdge/microsoft-edge-relnote-beta-channel) | 変更されました |
+| 2020 年 10 月 2 日 | [Microsoft Edge エンタープライズのドキュメント](/DeployEdge/index) | 変更されました |
+| 2020 年 10 月 2 日 | [Microsoft Edge および Microsoft Defender Application Guard](/DeployEdge/microsoft-edge-security-windows-defender-application-guard) | 変更されました |
+| 2020 年 10 月 2 日 | [Microsoft Edge ビジネス向けのセキュリティ](/DeployEdge/ms-edge-security-for-business) | 変更されました |
+| 2020 年 10 月 2 日 | [Microsoft Edge ブラウザー ポリシーに関するドキュメント](/DeployEdge/microsoft-edge-policies) | 変更されました |
 
 ## 2020 年 9 月 21 日の週
-
 
 | 公開日 |トピックのタイトル | 変更点 |
 |------|------------|--------|
@@ -57,4 +72,3 @@ ms.locfileid: "11099812"
 |------|------------|--------|
 | 2020/9/2 | [Microsoft Edge ブラウザー ポリシーに関するドキュメント](/DeployEdge/microsoft-edge-policies) | 変更されました |
 | 2020/9/2 | [企業向け Microsoft Edge ロールバック](/DeployEdge/edge-learnmore-rollback) | 変更されました |
-
