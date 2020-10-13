@@ -3,7 +3,7 @@ title: Microsoft Edge ブラウザー ポリシーに関するドキュメント
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/28/2020
+ms.date: 10/02/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
-ms.openlocfilehash: fab5c5cf9a3a387d1089a009bdd68fb84100aa5d
-ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
+ms.openlocfilehash: 58bf7636839e6c4bdaf151aad3cfd5bb89f3cba3
+ms.sourcegitcommit: 4e6188ade942ca6fd599a4ce1c8e0d90d3d03399
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "11094641"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "11105671"
 ---
 # Microsoft Edge - Stratégies
 La dernière version de Microsoft Edge inclut les stratégies suivantes. Vous pouvez utiliser ces stratégies pour configurer l’exécution de Microsoft Edge au sein de votre organisation.
@@ -44,7 +44,7 @@ Ces tableaux répertorient toutes les stratégies de groupe liées au navigateur
 ### [*Authentification HTTP*](#authentification-http-policies)
 |Nom de la stratégie|Sous-titre|
 |-|-|
-|[AllowCrossOriginAuthPrompt](#allowcrossoriginauthprompt)|Allow cross-origin HTTP Authentication prompts|
+|[AllowCrossOriginAuthPrompt](#allowcrossoriginauthprompt)|cross-origin HTTP 認証プロンプトを許可する|
 |[AuthNegotiateDelegateAllowlist](#authnegotiatedelegateallowlist)|Spécifie la liste des serveurs auxquels Microsoft Edge peut déléguer des identifiants utilisateur|
 |[AuthSchemes](#authschemes)|Schémas d’authentification pris en charge|
 |[AuthServerAllowlist](#authserverallowlist)|Configurer la liste des serveurs d’authentification autorisés|
@@ -254,7 +254,7 @@ et des conseils pour les services Microsoft|
 |[DownloadRestrictions](#downloadrestrictions)|Autoriser les restrictions de téléchargement|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|Activer la fonctionnalité Collections|
 |[EditFavoritesEnabled](#editfavoritesenabled)|Autorise les utilisateurs à modifier les favoris|
-|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Réactiver les fonctionnalités de plateforme web déconseillées pendant une durée limitée|
+|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Réactiver les fonctionnalités de plateforme web déconseillées pendant une durée limitée (obsolète)|
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|Activer le téléchargement des actions de domaine à partir de Microsoft (obsolète)|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|Activer les contrôles de protocole OCSP/liste de révocation de certificats en ligne|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Autoriser les certificats signés avec SHA-1 lorsqu’ils sont émis par des ancres d’approbation locales (déconseillé)|
@@ -344,6 +344,7 @@ et des conseils pour les services Microsoft|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Afficher les raccourcis Microsoft Office dans la barre des favoris (déconseillé)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Activer la prise en charge de SXG (échange HTTP signé)|
 |[SitePerProcess](#siteperprocess)|Activer l’isolation de site pour chaque site|
+|[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
 |[SpellcheckEnabled](#spellcheckenabled)|Activer la vérification orthographique|
 |[SpellcheckLanguage](#spellchecklanguage)|Activer des langues de vérification orthographique spécifiques|
 |[SpellcheckLanguageBlocklist](#spellchecklanguageblocklist)|Forcer la désactivation des langues de la vérification orthographique|
@@ -390,7 +391,7 @@ et des conseils pour les services Microsoft|
   - Sur Windows et macOS dans la mesure où 77 ou version ultérieure
 
   #### 説明
-  Controls whether third-party images on a page can show an authentication prompt.
+  ページ上のサードパーティの画像に認証プロンプトを表示できるかどうかを制御します。
 
 通常、これはフィッシング詐欺への防御として無効になっています。 If you don't configure this policy, it's disabled and third-party images can't show an authentication prompt.
 
@@ -3683,21 +3684,21 @@ Cette stratégie est disponible uniquement sur les instances de Windows qui sont
   - Sur Windows et macOS dans la mesure où 77 ou version ultérieure
 
   #### 説明
-  Setting the policy lets you make a list of URL patterns that specify sites for which Microsoft Edge can automatically select a client certificate. The value is an array of stringified JSON dictionaries, each with the form { "pattern": "$URL_PATTERN", "filter" : $FILTER }, where $URL_PATTERN is a content setting pattern. $FILTER restricts the client certificates the browser automatically selects from. Independent of the filter, only certificates that match the server's certificate request are selected.
+  La définition de la stratégie vous permet de créer une liste de modèles d’URL qui spécifient les sites pour lesquels Microsoft Edge peut sélectionner automatiquement un certificat client. La valeur est une matrice de dictionnaires JSON stringifiée, chacune sous la forme { "pattern": "$URL_PATTERN", "filter" : $FILTER }, où $URL_PATTERN est un modèle de paramètre de contenu. $FILTER limite les certificats clients parmi lesquels le navigateur sélectionne automatiquement. Indépendamment du filtre, seuls les certificats qui correspondent à la demande de certificat du serveur sont sélectionnés.
 
-Examples for the usage of the $FILTER section:
+Exemples d’utilisation de la section $FILTER:
 
-* When $FILTER is set to { "ISSUER": { "CN": "$ISSUER_CN" } }, only client certificates issued by a certificate with the CommonName $ISSUER_CN are selected.
+* Lorsque $FILTER est défini sur { "ISSUER": { "CN": "$ISSUER_CN" } }, seuls les certificats clients émis par un certificat avec le CommonName $ISSUER_CN sont sélectionnés.
 
-* When $FILTER contains both the "ISSUER" and the "SUBJECT" sections, only client certificates that satisfy both conditions are selected.
+* Si $FILTER contient les sections "ISSUER" et "SUBJECT", seuls les certificats clients répondant aux deux conditions sont sélectionnés.
 
-* When $FILTER contains a "SUBJECT" section with the "O" value, a certificate needs at least one organization matching the specified value to be selected.
+* Si $FILTER contient une section "SUBJECT" avec la valeur "O", un certificat nécessite au moins une organisation répondant à la valeur spécifiée à sélectionner.
 
-* When $FILTER contains a "SUBJECT" section with a "OU" value, a certificate needs at least one organizational unit matching the specified value to be selected.
+* Si $FILTER contient une section "SUBJECT" avec une valeur de "OU", un certificat nécessite au moins une unité d’organisation correspondant à la valeur spécifiée à sélectionner.
 
-* When $FILTER is set to {}, the selection of client certificates is not additionally restricted. Note that filters provided by the web server still apply.
+* Lorsque $FILTER est défini sur {}, la sélection de certificats client n’est pas limitée. Notez que les filtres fournis par le serveur web sont encore appliqués.
 
-If you leave the policy unset, there's no autoselection for any site.
+Si vous laissez la stratégie désélectionnée, il n’y a aucune sélection automatique pour les sites.
 
   #### Fonctionnalités prises en charge:
   - Peut être obligatoire: Oui
@@ -5171,9 +5172,9 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
   - Sur Windows et macOS dans la mesure où 80 ou version ultérieure
 
   #### 説明
-  すべての Cookie をレガシ SameSite の動作に戻します。 Reverting to legacy behavior causes cookies that don't specify a SameSite attribute to be treated as if they were "SameSite=None", removes the requirement for "SameSite=None" cookies to carry the "Secure" attribute, and skips the scheme comparison when evaluating if two sites are same-site.
+  すべての Cookie をレガシ SameSite の動作に戻します。 従来の動作に戻すと、SameSite 属性を指定しない Cookie は、"SameSite=None" であるかのように扱われ、"SameSite=None" Cookie が "Secure" 属性を保持する必要がなくなり、2 つのサイトが同じサイトであるかどうかを評価するときにスキームの比較がスキップされます。
 
-If you don't set this policy, the default SameSite behavior for cookies will depend on other configuration sources for the SameSite-by-default feature, the Cookies-without-SameSite-must-be-secure feature, and the Schemeful Same-Site feature. These features can also be configured by a field trial or the same-site-by-default-cookies flag, the cookies-without-same-site-must-be-secure flag, or the schemeful-same-site flag in edge://flags.
+このポリシーを設定しない場合、Cookie に対する既定の SameSite の動作は、SameSite-by-default 機能、Cookies-without-SameSite-must-be-secure 機能、および Schemeful Same-Site 機能の他の構成ソースに依存します。 These features can also be configured by a field trial or the same-site-by-default-cookies flag, the cookies-without-same-site-must-be-secure flag, or the schemeful-same-site flag in edge://flags.
 
 Mappage des options de stratégie:
 
@@ -5229,7 +5230,7 @@ Utilisez les informations ci-dessus lors de la configuration de cette stratégie
   #### 説明
   指定されたパターンに一致するドメインに設定された Cookie は、レガシ SameSite の動作に戻ります。
 
-Reverting to legacy behavior causes cookies that don't specify a SameSite attribute to be treated as if they were "SameSite=None", removes the requirement for "SameSite=None" cookies to carry the "Secure" attribute, and skips the scheme comparison when evaluating if two sites are same-site.
+従来の動作に戻すと、SameSite 属性を指定しない Cookie は、"SameSite=None" であるかのように扱われ、"SameSite=None" Cookie が "Secure" 属性を保持する必要がなくなり、2 つのサイトが同じサイトであるかどうかを評価するときにスキームの比較がスキップされます。
 
 このポリシーを設定していない場合、グローバルな既定値が使用されます。 グローバルな既定値では、指定したパターンの対象外ドメインの Cookie にも使用されます。
 
@@ -10113,22 +10114,24 @@ Désactivez cette stratégie pour empêcher les utilisateurs d’ajouter, de sup
   [Revenir au début](#microsoft-edge---stratégies)
 
   ### EnableDeprecatedWebPlatformFeatures
-  #### Réactiver les fonctionnalités de plateforme web déconseillées pendant une durée limitée
+  #### Réactiver les fonctionnalités de plateforme web déconseillées pendant une durée limitée (obsolète)
   
-  
+  >OBSOLÈTE: cette stratégie est obsolète et ne fonctionne pas après MicrosoftEdge86.
   #### Versions prises en charge:
-  - Sur Windows et macOS dans la mesure où 77 ou version ultérieure
+  - Sur Windows et macOS depuis le 77, jusqu’au 86
 
   #### 説明
-  Spécifiez la liste des fonctionnalités de plateforme web déconseillées à réactiver temporairement.
+  This policy is obsolete because dedicated web platform policies are now used to manage individual web platform feature deprecations.
 
-Cette stratégie vous permet de réactiver des fonctionnalités de plateforme web déconseillées pendant une durée limitée. Les fonctionnalités sont identifiées par une balise de chaîne.
+一時的にもう一度有効にする非推奨の Web プラットフォーム機能の一覧を指定します。
 
-Si vous ne configurez pas cette stratégie, si la liste est vide ou si une fonctionnalité ne correspond pas à l'une des balises de chaîne prises en charge, toutes les fonctionnalités de plateforme web déconseillées restent désactivées.
+このポリシーでは、一定期間の間、非推奨の Web プラットフォーム機能を再び有効にすることができます。 機能は、文字列タグで識別されます。
 
-Alors que la stratégie proprement dite est prise en charge sur les plateformes ci-dessus, la fonctionnalité qu'elle active n’est peut-être pas disponible sur toutes ces plateformes. Toutes les fonctionnalités de plateforme web déconseillées ne peuvent pas être réactivées. Seules celles qui sont explicitement répertoriées ci-dessous peuvent être réactivées et uniquement pendant une durée limitée, qui diffère selon la fonctionnalité. Vous pouvez consulter l’intention des modifications des fonctionnalités de plateforme web à l'adresse https://bit.ly/blinkintents.
+このポリシーを構成していない、一覧が空である、サポートされている文字列タグのいずれかに機能が一致しない場合、非推奨の Web プラットフォーム機能はすべて無効のままになります。
 
-Le format général de la balise de chaîne est [DeprecatedFeatureName]_EffectiveUntil[yyyymmdd].
+ポリシー自体は上記のプラットフォームでサポートされていますが、このポリシーが有効化する機能については、これらのプラットフォームすべてで利用できるわけではない可能性があります。 すべての非推奨の Web プラットフォーム機能を再び有効にすることができるわけではありません。 以下に明示的に記載されているもののみを再び有効にすることができ、機能ごとに異なる限られた期間のみ有効にすることができます。 Web プラットフォーム機能の変更の背景については、「https://bit.ly/blinkintents」で確認することができます。
+
+文字列タグの一般的な形式は、[DeprecatedFeatureName]_EffectiveUntil[yyyymmdd] です。
 
 Mappage des options de stratégie:
 
@@ -10147,7 +10150,7 @@ Utilisez les informations ci-dessus lors de la configuration de cette stratégie
   #### Informations et paramètres Windows
   ##### Informations sur la stratégie de groupe (ADMX)
   - Nom unique de stratégie de groupe: EnableDeprecatedWebPlatformFeatures
-  - Nom de la stratégie de groupe: Réactiver les fonctionnalités de plateforme web déconseillées pendant une durée limitée
+  - Nom de la stratégie de groupe: Réactiver les fonctionnalités de plateforme web déconseillées pendant une durée limitée (obsolète)
   - Chemin d'accès à la stratégie de groupe (Obligatoire): Modèles d’administration/Microsoft Edge/
   - Chemin d'accès à la stratégie de groupe (Recommandé): N/A
   - Nom du fichier ADMX de stratégie de groupe: MSEdge.admx
@@ -14213,9 +14216,9 @@ Si vous désactivez cette stratégie ou si vous ne la configurez pas, le contenu
   - Sur Windows et macOS dans la mesure où 77 ou version ultérieure
 
   #### 説明
-  Sets the minimum supported version of TLS. このポリシーを構成していない場合、Microsoft Edge は既定の最小バージョンである TLS 1.0 を使用します。
+  サポートされている TLS の最小バージョンを設定します。 このポリシーを構成していない場合、Microsoft Edge は既定の最小バージョンである TLS 1.0 を使用します。
 
-If you enable this policy, Microsoft Edge won't use any version of SSL/TLS lower than the specified version. 認識されない値は、無視されます。
+このポリシーを有効にすると、Microsoft Edge は指定されたバージョンより前のバージョンの SSL/TLS を使用しなくなります。 認識されない値は、無視されます。
 
 Mappage des options de stratégie:
 
@@ -15049,6 +15052,58 @@ Si vous désactivez ou ne configurez pas cette stratégie, les utilisateurs peuv
 
   #### Paramètres et informations Mac
   - Nom de la clé de préférence: SitePerProcess
+  - Exemple de valeur:
+``` xml
+<true/>
+```
+  
+
+  [Revenir au début](#microsoft-edge---stratégies)
+
+  ### SpeechRecognitionEnabled
+  #### Configure Speech Recognition
+  
+  
+  #### Versions prises en charge:
+  - Sur Windows et macOS dans la mesure où 87 ou version ultérieure
+
+  #### 説明
+  Set whether websites can use the W3C Web Speech API to recognize speech from the user. The Microsoft Edge implementation of the Web Speech API uses Azure Cognitive Services, so voice data will leave the machine.
+
+If you enable or don't configure this policy, web-based applications that use the Web Speech API can use Speech Recognition.
+
+If you disable this policy, Speech Recognition is not available through the Web Speech API.
+
+Read more about this feature here: SpeechRecognition API: [https://go.microsoft.com/fwlink/?linkid=2143388](https://go.microsoft.com/fwlink/?linkid=2143388) Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2143680](https://go.microsoft.com/fwlink/?linkid=2143680)
+
+  #### Fonctionnalités prises en charge:
+  - Peut être obligatoire: Oui
+  - Peut être recommandé(e): Non
+  - Actualisation de la stratégie dynamique: Oui
+
+  #### Type de données:
+  - Booléen
+
+  #### Informations et paramètres Windows
+  ##### Informations sur la stratégie de groupe (ADMX)
+  - Nom unique de stratégie de groupe: SpeechRecognitionEnabled
+  - Nom de la stratégie de groupe: Configure Speech Recognition
+  - Chemin d'accès à la stratégie de groupe (Obligatoire): Modèles d’administration/Microsoft Edge/
+  - Chemin d'accès à la stratégie de groupe (Recommandé): N/A
+  - Nom du fichier ADMX de stratégie de groupe: MSEdge.admx
+  ##### Paramètres du Registre Windows
+  - Chemin (Obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin (Recommandé): N/A
+  - Nom de la valeur: SpeechRecognitionEnabled
+  - Type de la valeur: REG_DWORD
+  ##### Exemple de valeur:
+```
+0x00000001
+```
+
+
+  #### Paramètres et informations Mac
+  - Nom de la clé de préférence: SpeechRecognitionEnabled
   - Exemple de valeur:
 ``` xml
 <true/>

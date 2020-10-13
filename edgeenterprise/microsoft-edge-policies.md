@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
-ms.openlocfilehash: 906a8cdd73e07efc5662e9b3ea51d8b7a2f03079
-ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
+ms.openlocfilehash: 9a0a9157f1176f935ba2462ee34abb3ebb708b66
+ms.sourcegitcommit: 4e6188ade942ca6fd599a4ce1c8e0d90d3d03399
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "11094751"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "11105731"
 ---
 # Microsoft Edge - ポリシー
 最新バージョンの Microsoft Edge には、次のポリシーが含まれています。 これらのポリシーを使用して、組織内での Microsoft Edge の動作方法を構成することができます。
@@ -255,7 +255,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[DownloadRestrictions](#downloadrestrictions)|ダウンロードの制限を許可する|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|コレクション機能を有効にする|
 |[EditFavoritesEnabled](#editfavoritesenabled)|ユーザーがお気に入りを編集できるようにする|
-|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|一定期間の間、非推奨の Web プラットフォーム機能を再び有効にする|
+|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Re-enable deprecated web platform features for a limited time (obsolete)|
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|Microsoft からのドメイン アクションのダウンロードを有効にする (不使用)|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|オンラインでの OCSP/CRL のチェックを有効にする|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|ローカルトラストアンカーによって発行されたときに SHA-1 を使用して署名された証明書を許可します (非推奨)|
@@ -345,6 +345,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|お気に入り バーにMicrosoft Office のショートカットを表示する (非推奨)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Signed HTTP Exchange (SXG) のサポートを有効にする|
 |[SitePerProcess](#siteperprocess)|すべてのサイトでのサイトの分離を有効にする|
+|[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
 |[SpellcheckEnabled](#spellcheckenabled)|スペルチェックを有効にする|
 |[SpellcheckLanguage](#spellchecklanguage)|特定のスペルチェック言語を有効にする|
 |[SpellcheckLanguageBlocklist](#spellchecklanguageblocklist)|スペルチェック言語の無効化を強制する|
@@ -10120,14 +10121,16 @@ Microsoft Defender SmartScreen の詳細については、「[https://go.microso
   [ページのトップへ](#microsoft-edge---policies)
 
   ### EnableDeprecatedWebPlatformFeatures
-  #### 一定期間の間、非推奨の Web プラットフォーム機能を再び有効にする
+  #### Re-enable deprecated web platform features for a limited time (obsolete)
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 86.
   #### サポートされているバージョン:
-  - Windows と macOS での 77 以降
+  - On Windows and macOS since 77, until 86
 
   #### 説明
-  一時的にもう一度有効にする非推奨の Web プラットフォーム機能の一覧を指定します。
+  This policy is obsolete because dedicated web platform policies are now used to manage individual web platform feature deprecations.
+
+一時的にもう一度有効にする非推奨の Web プラットフォーム機能の一覧を指定します。
 
 このポリシーでは、一定期間の間、非推奨の Web プラットフォーム機能を再び有効にすることができます。 機能は、文字列タグで識別されます。
 
@@ -10154,7 +10157,7 @@ Microsoft Defender SmartScreen の詳細については、「[https://go.microso
   #### Windows の情報と設定
   ##### グループ ポリシー (ADMX) 情報
   - GP 固有の名前: EnableDeprecatedWebPlatformFeatures
-  - GP 名: 一定期間の間、非推奨の Web プラットフォーム機能を再び有効にする
+  - GP name: Re-enable deprecated web platform features for a limited time (obsolete)
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/
   - GP パス (推奨): なし
   - GP ADMX ファイル名: MSEdge.admx
@@ -15055,6 +15058,58 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   #### Mac の情報と設定
   - 基本設定キーの名前: SitePerProcess
+  - サンプル値:
+``` xml
+<true/>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### SpeechRecognitionEnabled
+  #### Configure Speech Recognition
+  
+  
+  #### サポートされているバージョン:
+  - On Windows and macOS since 87 or later
+
+  #### 説明
+  Set whether websites can use the W3C Web Speech API to recognize speech from the user. The Microsoft Edge implementation of the Web Speech API uses Azure Cognitive Services, so voice data will leave the machine.
+
+If you enable or don't configure this policy, web-based applications that use the Web Speech API can use Speech Recognition.
+
+If you disable this policy, Speech Recognition is not available through the Web Speech API.
+
+Read more about this feature here: SpeechRecognition API: [https://go.microsoft.com/fwlink/?linkid=2143388](https://go.microsoft.com/fwlink/?linkid=2143388) Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2143680](https://go.microsoft.com/fwlink/?linkid=2143680)
+
+  #### サポートされている機能:
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+  - ブール値
+
+  #### Windows の情報と設定
+  ##### グループ ポリシー (ADMX) 情報
+  - GP unique name: SpeechRecognitionEnabled
+  - GP name: Configure Speech Recognition
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+  ##### Windows レジストリの設定
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - Value Name: SpeechRecognitionEnabled
+  - 値の種類: REG_DWORD
+  ##### サンプル値:
+```
+0x00000001
+```
+
+
+  #### Mac の情報と設定
+  - Preference Key Name: SpeechRecognitionEnabled
   - サンプル値:
 ``` xml
 <true/>
