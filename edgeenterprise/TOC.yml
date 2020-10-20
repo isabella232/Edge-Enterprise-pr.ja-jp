@@ -1,4 +1,4 @@
-# last revised 10/08/2020
+# last revised 10/15/2020
 - name: Microsoft Edge エンタープライズのドキュメント
   href: index.yml
 - name: Microsoft Edge ドキュメント
@@ -159,6 +159,8 @@
           href: microsoft-edge-update-progressive-rollout.md
         - name: Microsoft Edge のお気に入りをプロビジョニングする
           href: edge-learnmore-provision-favorites.md
+        - name: Internet Explorer から Microsoft Edge へのリダイレクト
+          href: edge-learnmore-neededge.md
         - name: Regular Expression 2 (re2.h) の構文
           href: edge-learnmore-regex.md
         - name: ユーザー データ ディレクトリ変数
