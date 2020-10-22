@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: レガシ バージョンの Microsoft Edge にアクセスする方法について説明します。
-ms.openlocfilehash: e5a97a487dc6b3a45504a721e460a69103b0174e
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: e4733d020f3a681ded50e5a087fe086d39362201
+ms.sourcegitcommit: f7f7eb69d2298b0f9779a9fd28e3c4e297ef2e05
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980483"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125519"
 ---
 # Microsoft Edge の新しいバージョンをインストールした後 Microsoft Edge レガシにアクセスする
 
@@ -35,6 +35,8 @@ Microsoft Edge の新しいバージョンをインストールした後 Microso
 > Microsoft Edge 従来版のデスクトップ アプリのサポートは 2021 年 3 月 9 日に終了し、新しい Microsoft Edge に完全に移行します。 つまり、この日以降、Microsoft Edge 従来版にはセキュリティ更新プログラムが送信されなくなります。 この変更は、Microsoft Edge 従来版のデスクトップ アプリで実行されるすべてのエクスペリエンスに適用されます。 [詳しくはこちらをご覧ください](https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666)。
 
 ## 始める前に
+> [!NOTE]
+> Windows 10 バージョン 20H2 から、Microsoft Edge 従来版は含まれなくなりました。 Windows 10 のこのバージョンから、並べて表示エクスペリエンスはサポートされていません。
 
 この記事の手順は、最新のセキュリティ更新プログラムで更新されたシステムに適用されます。 Microsoft Edge の新しいバージョンがインストールされると、古いバージョン (Microsoft Edge レガシ) が非表示になります。 既定では、ユーザーが古いバージョンを起動しようとすると常に、新しくインストールされたバージョンの Microsoft Edge にリダイレクトされます。 この記事では、Microsoft Edge をインストールした後も Microsoft Edge レガシを引き続き使用できるようにする方法を説明します。
 
