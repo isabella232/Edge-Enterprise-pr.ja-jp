@@ -3,19 +3,19 @@ title: Microsoft Edge エンタープライズの同期
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 09/30/2020
+ms.date: 10/21/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge エンタープライズの同期
-ms.openlocfilehash: d5868fb496c036d750925bb5ae6dfa3de0293fd2
-ms.sourcegitcommit: 8a4479a1b034c3c13ea03ee3a2374a1af332cb38
+ms.openlocfilehash: e51346d9bab83228c42a84a7a14ee45dc9b463a7
+ms.sourcegitcommit: b32d8d64ae65dc5a46e47b7c34b0211097a0cc65
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "11091949"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "11133132"
 ---
 # Microsoft Edge エンタープライズの同期
 
@@ -45,7 +45,7 @@ Azure Active Directory (Azure AD) アカウントでの Microsoft Edge の同期
 
 - Azure AD Premium (P1 および P2)
 - Microsoft 365 Business Premium
-- Office 365 E3 以上
+- Office 365 E1 以上
 - Azure Information Protection (AIP) (P1& P2)
 - すべての EDU サブスクリプション (学生または教職員向けの Microsoft Apps、学生または教職員向けの Exchange Online、O365 A1 以上、M365 A1 以上、学生または教職員向けの Azure Information Protection P1 または P2)
 

@@ -3,19 +3,19 @@ title: Beta チャネルに関する Microsoft Edge のリリース ノート
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 10/16/2020
+ms.date: 10/21/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Beta チャネルに関する Microsoft Edge のリリース ノート
-ms.openlocfilehash: e35d98c762edb11049cc0b4956ba0a8d991ad86c
-ms.sourcegitcommit: 5dea32e4330b9157a7c415cb473dd97522e17ae4
+ms.openlocfilehash: 57cd68d9366dd80812617f98934d44918b76926c
+ms.sourcegitcommit: a54037baf06d6f2e30b9485cfd397468b3174a86
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "11120235"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "11133204"
 ---
 # Microsoft Edge Beta チャネルのリリースノート
 
@@ -23,6 +23,59 @@ ms.locfileid: "11120235"
 
 > [!IMPORTANT]
 > こちらの [Microsoft Edge チャネル リリースの更新プログラム](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/)を参照してください。
+
+<!-- begin major 87 -->
+## バージョン 87.0.664.12: 10 月 20 日
+
+### 機能更新プログラム
+
+- **Internet Explorer から Microsoft Edgeに互換性のないサイトを自動的にリダイレクトします**。 Microsoft Edge 87 の安定した更新プログラムを適用すると、Internet Explorer で非互換性のメッセージを表示しているパブリック web サイトが、既定で Microsoft Edge に自動的にリダイレクトされます。 [Internet Explorer から Microsoft Edge に最新のウェブサイトとの互換性の理由でリダイレクトする](https://docs.microsoft.com/deployedge/edge-learnmore-neededge)に説明されているポリシーを構成することで、この機能を無効にできます。
+- **クラウドの Microsoft Edge 同期データを手動でリセットします**。 Microsoft Edge の製品内で、同期データをリセットする方法を近々発表します。 これにより、ユーザーデータは、Microsoft サービスからクリアされます。また、以前ならサポートチケットを必要としていたような特定の製品の問題を解決することもできます。
+- **キオスクモードプライバシー機能を有効にします**。 Microsoft Edge バージョン87から、ユーザーデータのプライバシーに関して企業のサポートができるキオスクモードの機能を有効にすることができます。 これらの機能により、終了時にユーザーデータをクリアしたり、ダウンロードしたファイルを削除したり、一定のアイドル時間が経過した後に、構成されていたスタート操作をリセットしたりできます。 [Microsoft Edge キオスクモードを 構成する方法](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode)の詳細については、こちらを参照してください
+- **シングルサインオン (SSO) が、ダウンレベルの Windows の Azure Active Directory (Azure AD) アカウントで利用できるようになりました。** ダウンレベルのMicrosoft Windows (バージョン7、8.1) でサインインしているユーザーが、職場または学校のアカウントでのシングルサインオンを許可するように構成されている web サイト(sharepoint.com、office.com、bing.com) に、自動的にサインインします。
+- **Webシングルサインオン (SSO) を使用して、Microsoft アカウントに自動署名 **。 ダウンレベルWindowsにサインインしている Microsoft Edge ユーザーは、Microsoft アカウントで SSO を許可するように構成されている web サイト (たとえば、bing.com、office.com、msn.com、outlook.com) に自動的にサインインされます。
+- **ClickOnce の展開が既定で有効**。 Microsoft Edge 87 では、ClickOnce が既定で有効になっています。これにより、企業がソフトウェアを展開する際の障壁を減らし、Microsoft Edge のレガシブラウザーの動作に合わせることができます。 Microsoft Edge 87 以降、ClickOnceEnabled policyが"未構成"の 状態の場合は、新しい既定の「有効化が ClickOnceの状態」（以前の規定が無効だった状態と異なり）に反映されます。
+- **エンタープライズ新しいタブページ (NTP)は、カスタマイズ可能な仕事関連のフィードコンテンツと生産性を結びつけます**。 エンタープライズ NTP は、職場または学校アカウントでサインインしているユーザーに対して提供される Office 365 生産性向上ページだけでなく、カスタマイズされた、仕事関連の企業や業界のコンテンツを1ページにまとめて提供いたします。 ユーザーは、使い慣れた Office 365 のコンテンツと、Bing で提供されている一般法人向けの Microsoft Search を目にすることでしょう。 さらに、ユーザー、会社、またはその業界に関連するコンテンツやモジュールだけでなく、組織が利用可能にしている他のフィードを選択して、カスタマイズ可能な "マイフィード" を簡単に閲覧できます。 [詳しくはこちらをご覧ください](https://docs.microsoft.com/microsoft-365/admin/manage/manage-industry-news?view=o365-worldwide&preserve-view=true)。
+
+- **プライバシーとセキュリティ**
+
+  - ポリシー構成のサイトの TLS トークンバインドをサポートしています。 TLS トークンのバインドは、トークンの盗用攻撃を防ぐために、最初に設定されたデバイス以外のデバイスから cookie が再利用されないようにします。 TLS トークンバインドを使用するには、 [AllowTokenBindingForUrls](https://docs.microsoft.com/deployedge/microsoft-edge-policies#allowtokenbindingforurls) ポリシーを設定する必要があります。また、リストに記載されているサイトがこの機能をサポートしている必要があります。
+
+- **PDF ファイルで強調表示のキーボードサポート**。 ユーザーは、キーボードのキーを使用して、PDF のテキストを強調表示できます。
+
+- **印刷**
+
+  - 両面印刷時にどのように紙を綴じるか選択します。 ユーザーが両面印刷するときに、用紙の長辺綴じか短辺綴じにするかを選択できます。
+  - エンタープライズの印刷ラスター化モードを選択します。 Windows のポストスクリプトプリンター以外に Microsoft Edge をプリントする方法を制御します。 PostScript に対応していないプリンターの印刷ジョブが正しく印刷されるようにラスター化する必要がある場合があります。 印刷オプションには "Full (フル)" と "Fast (高速)"が表示されます。
+
+### ポリシーの更新
+
+#### 新しいポリシー
+
+10個の新しいポリシーが追加されました。 更新された管理用テンプレートを、[Microsoft Edge Enterprise のランディング ページ](https://www.microsoft.com/edge/business/download)からダウンロードしてください。 次の新しいポリシーが追加されました。
+
+- [ConfigureFriendlyURLFormat](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#configurefriendlyurlformat) -Microsoft Edge からコピーした URLの既定の貼り付け書式を構成し、他の形式をユーザーが利用できるようにするかどうかを決定します。
+- [EdgeShoppingAssistantEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#edgeshoppingassistantenabled)-Microsoft Edge のショッピングが有効になりました。 
+- [HideInternetExplorerRedirectUXForIncompatibleSitesEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#hideinternetexplorerredirectuxforincompatiblesitesenabled) -Microsoft Edge のワンタイムリダイレクトダイアログとバナーを非表示にします。
+- [KioskAddressBarEditingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskaddressbareditingenabled) -キオスクモードのパブリックブラウザーのエクスペリエンスを編集するアドレスバーを構成します。
+- [KioskDeleteDownloadsOnExit](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskdeletedownloadsonexit) -Microsoft Edge が閉じたときに、キオスク セッションの一部としてダウンロードされたファイルを削除する
+- [PasswordRevealEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#passwordrevealenabled) -[パスワードの表示] ボタンを有効にします。
+- [RedirectSitesFromInternetExplorerPreventBHOInstall](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#redirectsitesfrominternetexplorerpreventbhoinstall) -Internet Explorer から Microsoft Edge に互換性のないサイトをリダイレクトするために BHO をインストールできないようにします。
+- [RedirectSitesFromInternetExplorerRedirectMode](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#redirectsitesfrominternetexplorerredirectmode) -Internet Explorer から Microsoft Edge に互換性のないサイトをリダイレクトします。
+- [SpeechRecognitionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#speechrecognitionenabled) -音声認識を構成します。
+- [WebCaptureEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webcaptureenabled) -Microsoft Edge で web キャプチャ機能を有効にします。
+
+#### 廃止されたポリシー
+
+[NewTabPageSetFeedType](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagesetfeedtype) - Microsoft Edge の新規タブ ページのエクスペリエンスを設定する
+
+#### 非推奨ポリシー
+
+[EnableDeprecatedWebPlatformFeatures](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enabledeprecatedwebplatformfeatures) -廃止されたWebプラットフォームの機能を一定期間、再度有効にします。
+
+
+
+<!-- end major 87 -->
 
 ## バージョン 86.0.622.43 : 10 月 16 日
 
