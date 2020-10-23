@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Beta チャネルに関する Microsoft Edge のリリース ノート
-ms.openlocfilehash: 57cd68d9366dd80812617f98934d44918b76926c
-ms.sourcegitcommit: a54037baf06d6f2e30b9485cfd397468b3174a86
+ms.openlocfilehash: 4269214a4c6a1c0d8fd62a8fd84cd9bf4f3e2b09
+ms.sourcegitcommit: d1f56745f91f36f8cfb437cfae3aaa7f816ff61a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "11133204"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "11133295"
 ---
 # Microsoft Edge Beta チャネルのリリースノート
 
@@ -29,11 +29,7 @@ ms.locfileid: "11133204"
 
 ### 機能更新プログラム
 
-- **Internet Explorer から Microsoft Edgeに互換性のないサイトを自動的にリダイレクトします**。 Microsoft Edge 87 の安定した更新プログラムを適用すると、Internet Explorer で非互換性のメッセージを表示しているパブリック web サイトが、既定で Microsoft Edge に自動的にリダイレクトされます。 [Internet Explorer から Microsoft Edge に最新のウェブサイトとの互換性の理由でリダイレクトする](https://docs.microsoft.com/deployedge/edge-learnmore-neededge)に説明されているポリシーを構成することで、この機能を無効にできます。
-- **クラウドの Microsoft Edge 同期データを手動でリセットします**。 Microsoft Edge の製品内で、同期データをリセットする方法を近々発表します。 これにより、ユーザーデータは、Microsoft サービスからクリアされます。また、以前ならサポートチケットを必要としていたような特定の製品の問題を解決することもできます。
 - **キオスクモードプライバシー機能を有効にします**。 Microsoft Edge バージョン87から、ユーザーデータのプライバシーに関して企業のサポートができるキオスクモードの機能を有効にすることができます。 これらの機能により、終了時にユーザーデータをクリアしたり、ダウンロードしたファイルを削除したり、一定のアイドル時間が経過した後に、構成されていたスタート操作をリセットしたりできます。 [Microsoft Edge キオスクモードを 構成する方法](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode)の詳細については、こちらを参照してください
-- **シングルサインオン (SSO) が、ダウンレベルの Windows の Azure Active Directory (Azure AD) アカウントで利用できるようになりました。** ダウンレベルのMicrosoft Windows (バージョン7、8.1) でサインインしているユーザーが、職場または学校のアカウントでのシングルサインオンを許可するように構成されている web サイト(sharepoint.com、office.com、bing.com) に、自動的にサインインします。
-- **Webシングルサインオン (SSO) を使用して、Microsoft アカウントに自動署名 **。 ダウンレベルWindowsにサインインしている Microsoft Edge ユーザーは、Microsoft アカウントで SSO を許可するように構成されている web サイト (たとえば、bing.com、office.com、msn.com、outlook.com) に自動的にサインインされます。
 - **ClickOnce の展開が既定で有効**。 Microsoft Edge 87 では、ClickOnce が既定で有効になっています。これにより、企業がソフトウェアを展開する際の障壁を減らし、Microsoft Edge のレガシブラウザーの動作に合わせることができます。 Microsoft Edge 87 以降、ClickOnceEnabled policyが"未構成"の 状態の場合は、新しい既定の「有効化が ClickOnceの状態」（以前の規定が無効だった状態と異なり）に反映されます。
 - **エンタープライズ新しいタブページ (NTP)は、カスタマイズ可能な仕事関連のフィードコンテンツと生産性を結びつけます**。 エンタープライズ NTP は、職場または学校アカウントでサインインしているユーザーに対して提供される Office 365 生産性向上ページだけでなく、カスタマイズされた、仕事関連の企業や業界のコンテンツを1ページにまとめて提供いたします。 ユーザーは、使い慣れた Office 365 のコンテンツと、Bing で提供されている一般法人向けの Microsoft Search を目にすることでしょう。 さらに、ユーザー、会社、またはその業界に関連するコンテンツやモジュールだけでなく、組織が利用可能にしている他のフィードを選択して、カスタマイズ可能な "マイフィード" を簡単に閲覧できます。 [詳しくはこちらをご覧ください](https://docs.microsoft.com/microsoft-365/admin/manage/manage-industry-news?view=o365-worldwide&preserve-view=true)。
 
@@ -128,7 +124,7 @@ ms.locfileid: "11133204"
 * **セキュリティ:**
 
   * セキュリティで保護された DNS (DNS over HTTPS) のサポート。  Microsoft Edge バージョン 86 以降、セキュリティ保護された DNS を制御する設定が、管理されていないデバイスで利用可能になりました。 ユーザーは管理されたデバイスでこれらの設定にアクセスできませんが、IT 管理者は [dnsoverhttpsmode](https://docs.microsoft.com/deployedge/microsoft-edge-policies#dnsoverhttpsmode) グラウンド ポリシーを使用して、セキュリティ保護された DNS を有効または無効にすることができます。
-  * Microsoft Edge は、オンライン リークでパスワードが発見された場合に警告を通知します。 Microsoft Edge は、パスワードを既知の侵害された資格情報のリポジトリと比較して確認し、一致が見つかったら警告を通知します。
+
 
 * **グループ ポリシーを使用して、新しいタブ ページ (NTP) にカスタム イメージを追加できます。** Microsoft Edge バージョン 86 以降、NTP で既定のイメージをユーザーが指定したイメージで置き換えるためのオプションを使用できます。 このイメージのプロパティを管理する機能も、グループ ポリシーによってサポートされています。
 
