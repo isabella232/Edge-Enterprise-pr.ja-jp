@@ -3,7 +3,7 @@ title: Microsoft Edge WebView2 ポリシードキュメント
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 10/16/2020
+ms.date: 10/27/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
-ms.openlocfilehash: 4298b25f7f158bc54f798442b4426494f046fa68
-ms.sourcegitcommit: 7d160257010f75b86b89c8802d0dd27f1f8761ef
+ms.openlocfilehash: 3ca9adb18ef41581bb016451015cf0aca0aa63c9
+ms.sourcegitcommit: 91abbcdd4918065d4ec1151587fc1fa92486dbf3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "11134446"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "11136216"
 ---
 # Microsoft Edge WebView2 - ポリシー
 
@@ -80,7 +80,7 @@ Microsoft Edge WebView2の更新方法とタイミングを制御するために
 
   ##### グループ ポリシー (ADMX) 情報
 
-  - GP 固有の名前: browserExecutableFolder
+  - GP 固有の名前: BrowserExecutableFolder
   - GP 名: ブラウザーの実行可能ファイルフォルダーの場所を構成する
   - GP path (必須): 管理用テンプレート/Microsoft Edge WebView2/ローダーの上書き設定
   - GP パス (推奨): なし
@@ -88,7 +88,7 @@ Microsoft Edge WebView2の更新方法とタイミングを制御するために
 
   ##### Windows レジストリの設定
 
-  - Path (必須): SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder
+  - Path (必須): SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder
   - パス (推奨): なし
   - 値の名前: REG_SZ の一覧
   - 値の種類: REG_SZ の一覧
@@ -96,7 +96,7 @@ Microsoft Edge WebView2の更新方法とタイミングを制御するために
   ##### サンプル値:
 
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
+SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
 
 ```
 
@@ -136,7 +136,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder = "Name: *, Va
 
   ##### グループ ポリシー (ADMX) 情報
 
-  - GP 固有の名前: releaseChannelPreference
+  - GP 固有の名前: ReleaseChannelPreference
   - GP 名: リリースチャネルの優先検索順序を設定する
   - GP path (必須): 管理用テンプレート/Microsoft Edge WebView2/ローダーの上書き設定
   - GP パス (推奨): なし
@@ -144,7 +144,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder = "Name: *, Va
 
   ##### Windows レジストリの設定
 
-  - Path (必須): SOFTWARE\Policies\Microsoft\Edge\WebView2\releaseChannelPreference
+  - Path (必須): SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference
   - パス (推奨): なし
   - 値の名前: REG_SZ の一覧
   - 値の種類: REG_SZ の一覧
@@ -152,7 +152,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder = "Name: *, Va
   ##### サンプル値:
 
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebView2\releaseChannelPreference = "Name: *, Value: 1"
+SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
 
 ```
 

@@ -3,19 +3,19 @@ title: Beta チャネルに関する Microsoft Edge のリリース ノート
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 10/21/2020
+ms.date: 10/26/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Beta チャネルに関する Microsoft Edge のリリース ノート
-ms.openlocfilehash: 4269214a4c6a1c0d8fd62a8fd84cd9bf4f3e2b09
-ms.sourcegitcommit: d1f56745f91f36f8cfb437cfae3aaa7f816ff61a
+ms.openlocfilehash: 8cedd34ba3a2053ae7c8d098c9d5106139a8b961
+ms.sourcegitcommit: 737da8f49297a0189f533480f7bfe5989a59a8f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "11133295"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "11136120"
 ---
 # Microsoft Edge Beta チャネルのリリースノート
 
@@ -23,6 +23,10 @@ ms.locfileid: "11133295"
 
 > [!IMPORTANT]
 > こちらの [Microsoft Edge チャネル リリースの更新プログラム](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/)を参照してください。
+
+## バージョン 87.0.664.18: 10 月 26 日
+
+さまざまなバグとパフォーマンスの問題を修正しました。
 
 <!-- begin major 87 -->
 ## バージョン 87.0.664.12: 10 月 20 日
@@ -69,19 +73,17 @@ ms.locfileid: "11133295"
 
 [EnableDeprecatedWebPlatformFeatures](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enabledeprecatedwebplatformfeatures) -廃止されたWebプラットフォームの機能を一定期間、再度有効にします。
 
-
-
 <!-- end major 87 -->
 
-## バージョン 86.0.622.43 : 10 月 16 日
+## バージョン 86.0.622.43: 10 月 16 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 86.0.622.36 : 10 月 7 日
+## バージョン 86.0.622.36: 10 月 7 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 86.0.622.31 : 10 月 1 日
+## バージョン 86.0.622.31: 10 月 1 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
