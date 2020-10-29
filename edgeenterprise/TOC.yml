@@ -143,6 +143,8 @@
       href: microsoft-edge-webview-policies.md
     - name: 詳細情報
       items:
+        - name: '新しい [エンタープライズ] タブページの下位互換性'
+          href: edge-learnmore-ntp-backward-compatibility.md
         - name: ClickOnce および DirectInvoke
           href: edge-learn-more-co-di.md
         - name: プロキシ設定を構成するためのコマンド ライン オプション
