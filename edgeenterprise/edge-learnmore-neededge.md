@@ -3,19 +3,19 @@ title: 最新の Web サイトに対応するための Internet Explorer から 
 ms.author: laannade
 author: dan-wesley
 manager: ratetali
-ms.date: 10/19/2020
+ms.date: 11/03/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 最新の Web サイトに対応するための Internet Explorer から Microsoft Edge へのリダイレクト
-ms.openlocfilehash: ce9e8dabdff25cc3ba375746ec82ddd78b6d7694
-ms.sourcegitcommit: cf991cc4bd2e70169902cbda9ddc870d70e31ca2
+ms.openlocfilehash: d822bf4cef76fe4c0298133b47ed80f5d1242b3d
+ms.sourcegitcommit: 73fec3998f26d110252ace621be01f1c1142cf57
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "11120522"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "11151097"
 ---
 # 最新の Web サイトに対応するための Internet Explorer から Microsoft Edge へのリダイレクト
 
@@ -74,14 +74,14 @@ Internet Explorer から Microsoft Edge へのリダイレクトには、"IEtoEd
 - このポリシーを有効にすると、リダイレクトに必要な BHO はインストールされず、Internet Explorer 上の特定の Web サイトではユーザーに対して非互換性メッセージが表示され続けます。 すでに BHO がインストールされている場合は、次回の Microsoft Edge 安定チャネルの更新時にアンインストールされます。
 - このポリシーを無効にしているか、構成していない場合、BHO はインストールされます。 これは既定の動作です。
 
-BHO の必要性に加えて、"Sitelist" または "未構成" に設定する必要がある **RedirectSitesFromInternetExplorerRedirectMode** への依存関係があります。
+BHO の必要性に加えて、**RedirectSitesFromInternetExplorerRedirectMode** への依存関係があり、「互換性のないサイトのサイトリストに基づいてサイトをリダイレクトする」または「未構成」に設定する必要があります。
 
 ### ポリシー: RedirectSitesFromInternetExplorerRedirectMode
 
  このポリシーは、Microsoft Edge の**既定のブラウザー**設定 "Internet Explorer に Microsoft Edge でサイトを開かせる" に対応しています。 この設定にアクセスするには、*edge://settings/defaultbrowser* の URL にアクセスします。  
 
 - このポリシーを設定していないか、"Sitelist" に設定している場合、Internet Explorer は互換性のないサイトを Microsoft Edge にリダイレクトします。 これは既定の動作です。
-- このポリシーを無効にしている場合、互換性のないサイトは Microsoft Edge にリダイレクトされません。
+- このポリシーを無効にするには、**[有効]** を選択し、[オプション: 互換性のないサイトを Internet Explorer から Microsoft Edgeに自動的にリダイレクトする] の下のドロップダウンで、**[無効]** を選択します。 この状態では、互換性のないサイトは Microsoft Edge にリダイレクトされません。
 
 > [!NOTE]
 > 組織で管理されていない個人のデバイスを使用している場合は、**Internet Explorer の互換性**の下に "サイトの読み込みを Internet Explorer モードで許可する" という別の設定が表示されます。
@@ -104,11 +104,11 @@ BHO の必要性に加えて、"Sitelist" または "未構成" に設定する�
 
 Microsoft Edge 安定バージョン 87 にアップデートする前にリダイレクトを無効にする場合は、次の手順を実行します。
 
-1. **RedirectSitesFromInternetExplorerRedirectMode** ポリシーを**有効**に設定します。 この設定は、ポリシーが有効になるとすぐにリダイレクトを停止します。
+1. **RedirectSitesFromInternetExplorerPreventBHOInstall** ポリシーを**有効**に設定します。
 
 Microsoft Edge 安定バージョン 87 にアップデートした後にリダイレクトを無効にする場合は、次の手順を実行します。
 
-1. **RedirectSitesFromInternetExplorerRedirectMode** ポリシーを**無効**に設定します。 この設定は、ポリシーが有効になるとすぐにリダイレクトを停止します。
+1. **RedirectSitesFromInternetExplorerRedirectMode** ポリシーを **[有効]** に設定し、[オプション: 互換性のないサイトを Internet Explorer から Microsoft Edgeに自動的にリダイレクトする] のドロップダウンで、**[無効]** を選択します。 この設定は、ポリシーが有効になるとすぐにリダイレクトを停止します。
 2. **RedirectSitesFromInternetExplorerPreventBHOInstall** ポリシーを**有効**に設定します。 これで次回の Microsoft Edge の更新後に BHO がアンインストールされるようになります。
 
 ## 関連項目
