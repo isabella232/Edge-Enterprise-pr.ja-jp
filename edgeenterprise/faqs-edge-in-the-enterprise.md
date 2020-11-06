@@ -3,19 +3,19 @@ title: エンタープライズ環境の Edge に関してよく寄せられる�
 ms.author: jwhit
 author: jwhit-MSFT
 manager: laurawi
-ms.date: 08/03/2020
+ms.date: 11/04/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: エンタープライズ環境での Microsoft Edge の展開についてよく寄せられる質問
-ms.openlocfilehash: 0f6891f4f7187b23f6e3d4e7880fdafa49def351
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: e689967cbad950e2969535bad0dd63d5d7081798
+ms.sourcegitcommit: 12827458f6217f443128e826c1d18d36d401d03b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980435"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "11154322"
 ---
 # エンタープライズ環境の Microsoft Edge についてよく寄せられる質問
 
@@ -56,7 +56,9 @@ Microsoft Edge では、[Microsoft Edge Insider Addons](https://go.microsoft.com
 
 ## WSUS は、新しい Microsoft Edge の初期展開をサポートしていますか?
 
-いいえ、そうではありません。 WSUS は、既存の Microsoft Edge の MSI インストールを更新することができますが、初期展開には使用できません。 WSUS を介して更新プログラムを完全に管理する必要がある場合は、[ConfigMgr](https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json) などの管理ツールを使用して初期展開を実行できます。
+はい、できます。 WSUS を経由して新しい Microsoft Edge を初めて展開するときに使用できる [Microsoft Update カタログ](https://www.catalog.update.microsoft.com/Search.aspx?q=the%20new%20microsoft%20edge%20for%20windows) には、パッケージがあります。 初期展開の後、既定では自動更新が構成されます。 詳細については、「[Windows 10 用の新しい Microsoft Edge (バージョン 1809、1903、1909、および 2004:2020年10月29日) 用 WSUS の更新プログラム](https://support.microsoft.com/help/4584642/update-in-wsus-for-the-new-microsoft-edge)」を参照してください。
+
+手動で更新するには、[ConfigMgr](https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json)などの構成管理ツールを使用します。
 
 ## 関連項目
 
