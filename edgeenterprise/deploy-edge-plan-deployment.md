@@ -3,19 +3,19 @@ title: Microsoft Edge の展開を計画する
 ms.author: cjacks
 author: appcompatguy
 manager: saudm
-ms.date: 04/23/2020
+ms.date: 11/04/2020
 audience: ITPro
 ms.topic: procedural
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge の展開を計画する
-ms.openlocfilehash: 3ac3d050578ca4f230ed7e775aefb73f11abb3c0
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: a6c24dcc8c2f53bd6813a0dea9584cd6b5df8285
+ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980422"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "11155254"
 ---
 # Microsoft Edge の展開を計画する
 
@@ -23,6 +23,19 @@ ms.locfileid: "10980422"
 
 >[!NOTE]
 >この記事は Microsoft Edge version 77 以降に適用されます。
+
+以降のセクションでは、Microsoft Edge の展開を計画するための具体的なガイダンスを提供します。
+
+- [ブラウザーの環境と要件を評価する](#evaluate-your-existing-browser-environment-and-browser-needs)
+- [Windows 10 デバイスの準備ができていることを確認します](#make-sure-your-windows-10-devices-are-ready)
+- [展開方法の選択](#determine-your-deployment-methodology)
+- [サイト検出を実行する](#do-site-discovery)
+- [チャネル戦略の選択](#determine-your-channel-strategy)
+- [ポリシーを識別し構成する](#define-and-configure-policies)
+- [アプリの互換性をテストする](#do-app-compatibility-testing)
+- [Microsoft Edge パイロット](#deploy-microsoft-edge-to-a-pilot-group)
+- [パイロットの評価](#validate-your-deployment)
+- [Microsoft Edge をエンタープライズ全体に展開する](#broad-deployment-of-microsoft-edge)
 
 ## 既存のブラウザー環境とブラウザーのニーズを評価する
 
@@ -157,9 +170,11 @@ Microsoft Edge のアプリケーションの互換性は非常に高いため�
 2. Internet Explorer で機能している場合、Internet Explorer モードの Microsoft Edge でも動作します。
 3. Google Chrome で機能している場合、Microsoft Edge でも動作します。
 
-この約束が果たされていないアプリケーションがある場合、Microsoft は [Microsoft App Assure](https://www.microsoft.com/fasttrack/microsoft-365/desktop-app-assure) によってアプリの修正を支援します。
+この互換性の約束が果たされていないアプリケーションがある場合、Microsoft は [Microsoft App Assure](https://www.microsoft.com/fasttrack/microsoft-365/desktop-app-assure) によってお約束通り、アプリの修正を行います。
 
-このように約束していますが、多くの組織では自社のコンプライアンスまたはリスク管理の理由から一部のアプリケーションを検証する必要があるということも理解しています。 これは非常に簡単であると予測されますが、アプリのテストは整理して厳格に実行することが重要です。
+### 内部機関業務アプリのテスト
+
+このように互換性の約束をしていますが、多くの組織では自社のコンプライアンスまたはリスク管理の理由から一部のアプリケーションを検証する必要があるということも理解しています。 これは非常に簡単であると予測されますが、アプリのテストは整理して厳格に実行することが重要です。
 
 アプリの互換性テストを行うには、2 つの方法があります。
 
@@ -167,6 +182,10 @@ Microsoft Edge のアプリケーションの互換性は非常に高いため�
 2. パイロット テスト。 アプリケーションは、日常的な作業環境で、限られた数のユーザーが自分のデバイスを使用することによって検証されます。
 
 互換性テストに過剰投資を行わずにリスクを管理するために、各アプリに最適な方法を選択します。
+
+### サード パーティ製のアプリのサポート
+
+独自の基幹業務アプリに加えて、多くの組織は、外部ソースによって提供されるアプリを使用します。 [[Microsoft Edge 用 に準備されている](deploy-edge-ready-for-edge.md)] の記事には、組織内で使用されている可能性のある Web アプリケーションの一覧が含まれています。 このリストでは、Microsoft Edge と共に使用した際の製品のプロバイダー サポート ステートメントへのリンクを提供します。
 
 ## パイロット グループに Microsoft Edge を展開する
 
