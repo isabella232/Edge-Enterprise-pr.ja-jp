@@ -3,7 +3,7 @@ title: Microsoft Edge ブラウザー ポリシーに関するドキュメント
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 10/22/2020
+ms.date: 11/04/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
-ms.openlocfilehash: 982a171e1c4f55ab99db53a399c669fdf4798f53
-ms.sourcegitcommit: 7d160257010f75b86b89c8802d0dd27f1f8761ef
+ms.openlocfilehash: 0e708707ae8465aa49ee49dcec542881a5080a57
+ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "11134466"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "11155314"
 ---
 # Microsoft Edge - ポリシー
 
@@ -29,6 +29,18 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 > [!NOTE]
 > この記事は Microsoft Edge version 77 以降に適用されます。
 
+## 新しいポリシーと廃止されたポリシー
+
+次の表では、今回の更新プログラムの新しいポリシーと廃止されたポリシーを一覧表示しています。
+
+| 名前 | ステータス |
+|-|-|
+| [WebWidgetAllowed](#webwidgetallowed) | 新規 |
+| [ProxyBypassList](#proxybypasslist) | 非推奨 |
+| [ProxyMode](#proxymode) | 非推奨 |
+| [ProxyPacUrl](#proxypacurl) | 非推奨 |
+| [ProxyServer](#proxyserver) | 非推奨 |
+
 ## 使用可能なポリシー
 
 次の表は、このリリースの Microsoft Edge で使用可能な、ブラウザー関連のすべてのグループ ポリシーの一覧を示しています。 個々のポリシーに関する詳しい情報を取得するには、表内のリンクをお使いください。
@@ -39,10 +51,10 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[コンテンツの設定](#content-settings)|[既定の検索プロバイダー](#default-search-provider)|
 |[拡張機能](#extensions)|[HTTP 認証](#http-authentication)|
 |[キオスク モードの設定](#kiosk-mode-settings)|[ネイティブ メッセージング](#native-messaging)|
-|[パスワード マネージャーと保護](#password-manager-and-protection)|[印刷](#printing)|
-|[プロキシ サーバー](#proxy-server)|[SmartScreen の設定](#smartscreen-settings)|
-|[スタートアップ、ホーム ページ、新規タブ ページ](#startup-home-page-and-new-tab-page)|[補足](#additional)|
-
+|[パスワード マネージャーと保護](#password-manager-and-protection)|[パフォーマンス](#performance)|
+|[印刷](#printing)|[プロキシ サーバー](#proxy-server)|
+|[SmartScreen の設定](#smartscreen-settings)|[スタートアップ、ホーム ページ、新規タブ ページ](#startup-home-page-and-new-tab-page)|
+|[補足](#additional)|
 
 ### [*Application Guard の設定*](#application-guard-settings-policies)
 
@@ -126,7 +138,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 
 |ポリシー名|キャプション|
 |-|-|
-|[AllowCrossOriginAuthPrompt](#allowcrossoriginauthprompt)|Allow cross-origin HTTP Authentication prompts|
+|[AllowCrossOriginAuthPrompt](#allowcrossoriginauthprompt)|cross-origin HTTP 認証プロンプトを許可する|
 |[AuthNegotiateDelegateAllowlist](#authnegotiatedelegateallowlist)|Microsoft Edge がユーザーの資格情報を委任できるサーバーの一覧を指定する|
 |[AuthSchemes](#authschemes)|サポートされる認証スキーム|
 |[AuthServerAllowlist](#authserverallowlist)|許可されている認証サーバーの一覧を構成する|
@@ -156,6 +168,11 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[PasswordProtectionLoginURLs](#passwordprotectionloginurls)|パスワード保護サービスがパスワードのソルト化ハッシュをキャプチャする必要があるエンタープライズ ログイン URL のリストを構成する|
 |[PasswordProtectionWarningTrigger](#passwordprotectionwarningtrigger)|パスワード保護の警告トリガーを構成する|
 |[PasswordRevealEnabled](#passwordrevealenabled)|[パスワードの表示] ボタンを有効にする|
+### [*パフォーマンス*](#performance-policies)
+
+|ポリシー名|キャプション|
+|-|-|
+|[StartupBoostEnabled](#startupboostenabled)|スタートアップ ブーストを有効にする|
 ### [*印刷*](#printing-policies)
 
 |ポリシー名|キャプション|
@@ -170,10 +187,10 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 
 |ポリシー名|キャプション|
 |-|-|
-|[ProxyBypassList](#proxybypasslist)|プロキシのバイパス ルールを構成する|
-|[ProxyMode](#proxymode)|プロキシ サーバー設定を構成する|
-|[ProxyPacUrl](#proxypacurl)|プロキシ .pac ファイルの URL を設定する|
-|[ProxyServer](#proxyserver)|プロキシ サーバーのアドレスまたは URL を構成する|
+|[ProxyBypassList](#proxybypasslist)|プロキシのバイパス ルールを構成する (非推奨)|
+|[ProxyMode](#proxymode)|プロキシ サーバーの設定を構成する (非推奨)|
+|[ProxyPacUrl](#proxypacurl)|プロキシ .pac ファイルの URL を設定する (非推奨)|
+|[ProxyServer](#proxyserver)|プロキシ サーバーのアドレスまたは URL を構成する (非推奨)|
 |[ProxySettings](#proxysettings)|プロキシの設定|
 ### [*SmartScreen の設定*](#smartscreen-settings-policies)
 
@@ -399,6 +416,8 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|WebRTC によるローカル IP アドレスの公開を管理する|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|WebRTC によるローカル IP アドレスの公開を制限する|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|WebRTC が使用するローカル UDP ポートの範囲を制限する|
+|[WebWidgetAllowed](#webwidgetallowed)|Web ウィジェットを有効にする|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Windows の起動時に Web ウィジェットを許可する|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Windows プロキシ リゾルバーを使用する (非推奨)|
 
 
@@ -546,7 +565,6 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: EnableMediaRouter
@@ -608,7 +626,6 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
 ```
 0x00000000
 ```
-
 
   #### Mac の情報と設定
   
@@ -687,7 +704,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":
 
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: AutoSelectCertificateForUrls
@@ -764,7 +780,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: CookiesAllowedForUrls
@@ -839,7 +854,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\1 = "https://www.contoso.
 SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Mac の情報と設定
   
@@ -920,7 +934,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: CookiesSessionOnlyForUrls
@@ -996,7 +1009,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: DefaultCookiesSetting
@@ -1065,7 +1077,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 0x00000002
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: DefaultFileSystemReadGuardSetting
@@ -1133,7 +1144,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 ```
 0x00000002
 ```
-
 
   #### Mac の情報と設定
   
@@ -1205,7 +1215,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: DefaultGeolocationSetting
@@ -1273,7 +1282,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -1345,7 +1353,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 0x00000002
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: DefaultInsecureContentSetting
@@ -1413,7 +1420,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -1485,7 +1491,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 0x00000002
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: DefaultNotificationsSetting
@@ -1556,7 +1561,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 0x00000002
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: DefaultPluginsSetting
@@ -1625,7 +1629,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: DefaultPopupsSetting
@@ -1693,7 +1696,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 ```
 0x00000002
 ```
-
 
   #### Mac の情報と設定
   
@@ -1765,7 +1767,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 0x00000002
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: DefaultWebUsbGuardSetting
@@ -1831,7 +1832,6 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\1 = "https://www.examp
 SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
 
 ```
-
 
   #### Mac の情報と設定
   
@@ -1902,7 +1902,6 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.e
 
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: FileSystemReadBlockedForUrls
@@ -1971,7 +1970,6 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\1 = "https://www.exam
 SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
 
 ```
-
 
   #### Mac の情報と設定
   
@@ -2042,7 +2040,6 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
 
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: FileSystemWriteBlockedForUrls
@@ -2107,7 +2104,6 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\1 = "https://www.contoso.c
 SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Mac の情報と設定
   
@@ -2174,7 +2170,6 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: ImagesBlockedForUrls
@@ -2239,7 +2234,6 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\1 = "https://www.
 SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.edu"
 
 ```
-
 
   #### Mac の情報と設定
   
@@ -2306,7 +2300,6 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.
 
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: InsecureContentBlockedForUrls
@@ -2372,7 +2365,6 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: JavaScriptAllowedForUrls
@@ -2437,7 +2429,6 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\1 = "https://www.conto
 SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Mac の情報と設定
   
@@ -2510,7 +2501,6 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: LegacySameSiteCookieBehaviorEnabled
@@ -2579,7 +2569,6 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
 
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: LegacySameSiteCookieBehaviorEnabledForDomainList
@@ -2645,7 +2634,6 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.ed
 
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: NotificationsAllowedForUrls
@@ -2710,7 +2698,6 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\1 = "https://www.co
 SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Mac の情報と設定
   
@@ -2779,7 +2766,6 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8
 
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: PluginsAllowedForUrls
@@ -2847,7 +2833,6 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8
 
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: PluginsBlockedForUrls
@@ -2913,7 +2898,6 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: PopupsAllowedForUrls
@@ -2978,7 +2962,6 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\1 = "https://www.contoso.c
 SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Mac の情報と設定
   
@@ -3133,7 +3116,6 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
 ```
 0x00000001
 ```
-
 
   
 
@@ -3294,7 +3276,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: WebUsbAskForUrls
@@ -3361,7 +3342,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\1 = "https://www.contoso.c
 SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Mac の情報と設定
   
@@ -3442,7 +3422,6 @@ Microsoft Edge 84 以降、このポリシーは推奨されるポリシーと�
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: DefaultSearchProviderEnabled
@@ -3510,7 +3489,6 @@ SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\3 = "GB2312"
 SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
 
 ```
-
 
   #### Mac の情報と設定
   
@@ -3587,7 +3565,6 @@ Microsoft Edge 84 以降、このポリシーは推奨されるポリシーと�
 "https://search.contoso.com/searchbyimage/upload"
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: DefaultSearchProviderImageURL
@@ -3654,7 +3631,6 @@ Microsoft Edge 84 以降、このポリシーは推奨されるポリシーと�
 "content={imageThumbnail},url={imageURL},sbisrc={SearchSource}"
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: DefaultSearchProviderImageURLPostParams
@@ -3718,7 +3694,6 @@ Microsoft Edge 84 以降、このポリシーは推奨されるポリシーと�
 ```
 "mis"
 ```
-
 
   #### Mac の情報と設定
   
@@ -3785,7 +3760,6 @@ Microsoft Edge 84 以降、このポリシーは推奨されるポリシーと�
 ```
 "My Intranet Search"
 ```
-
 
   #### Mac の情報と設定
   
@@ -3854,7 +3828,6 @@ Microsoft Edge 84 以降、このポリシーは推奨されるポリシーと�
 ```
 "https://search.contoso.com/search?q={searchTerms}"
 ```
-
 
   #### Mac の情報と設定
   
@@ -3925,7 +3898,6 @@ Microsoft Edge 84 以降、このポリシーは推奨されるポリシーと�
 ```
 "https://search.contoso.com/suggest?q={searchTerms}"
 ```
-
 
   #### Mac の情報と設定
   
@@ -4004,7 +3976,6 @@ Microsoft Edge 84 以降、このポリシーは推奨されるポリシーと�
 "bing"
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: NewTabPageSearchBox
@@ -4076,7 +4047,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: ExtensionAllowedTypes
@@ -4102,7 +4072,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
   #### 説明
 
-  既定では、すべての拡張機能が許可されています。 ただし、"ExtensionInstallBlockList" ポリシーを "*" に設定してすべての拡張機能をブロックしている場合、ユーザーはこのポリシーで定義されている拡張機能しかインストールすることができません。
+  既定では、すべての拡張機能が許可されています。 ただし、"ExtensionInstallBlockList" ポリシーを "*" に設定してすべての拡張機能をブロックしている場合、ユーザーはこのポリシーで定義されている拡張機能しかインストールできません。
 
   #### サポートされている機能:
 
@@ -4138,7 +4108,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\1 = "extension_id1"
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
 ```
-
 
   #### Mac の情報と設定
   
@@ -4206,7 +4175,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\1 = "extension_id1"
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
 ```
-
 
   #### Mac の情報と設定
   
@@ -4291,7 +4259,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: ExtensionInstallForcelist
@@ -4320,9 +4287,9 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 
   拡張機能やテーマをインストールできる URL を定義します。
 
-既定では、ユーザーはインストールする拡張機能やスクリプトごとに *.crx ファイルをダウンロードし、Microsoft Edge の設定ページへとドラッグする必要があります。 このポリシーでは、ユーザーのための拡張機能やスクリプトのインストールを、特定の URL に許可します。
+パッケージを edge://extensions ページにドラッグ アンド ドロップすることなく、拡張機能やテーマを直接インストールできる URL を定義します。
 
-このリストの各項目は、拡張子スタイルの一致パターンです ([https://go.microsoft.com/fwlink/?linkid=2095039](https://go.microsoft.com/fwlink/?linkid=2095039) を参照してください)。 ユーザーは、このリストの項目に一致する URL から簡単にアイテムをインストールすることができます。 *.crx ファイルの場所と、ダウンロードを開始するページ (つまり参照元) の両方が、これらのパターンで許可されている必要があります。
+このリストの各項目は、拡張子スタイルの一致パターンです ([https://go.microsoft.com/fwlink/?linkid=2095039](https://go.microsoft.com/fwlink/?linkid=2095039) を参照してください)。 ユーザーは、このリストの項目に一致する URL から簡単にアイテムをインストールすることができます。 *.crx ファイルの場所と、ダウンロードを開始するページ (つまり参照元) の両方が、これらのパターンで許可されている必要があります。 認証が必要な場所では、ファイルをホストしないでください。
 
 [ExtensionInstallBlocklist](#extensioninstallblocklist) ポリシーは、このポリシーよりも優先されます。 ブロック リストに登録されている拡張機能は、このリストに登録されているサイトからのものであっても、インストールされません。
 
@@ -4359,7 +4326,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.contoso.com/*"
 
 ```
-
 
   #### Mac の情報と設定
   
@@ -4652,7 +4618,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 0x00000000
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: AllowCrossOriginAuthPrompt
@@ -4714,7 +4679,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 ```
 "contoso.com"
 ```
-
 
   #### Mac の情報と設定
   
@@ -4778,7 +4742,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 "basic,digest,ntlm,negotiate"
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: AuthSchemes
@@ -4840,7 +4803,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 ```
 "*contoso.com,contoso.com"
 ```
-
 
   #### Mac の情報と設定
   
@@ -4904,7 +4866,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 0x00000000
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: DisableAuthNegotiateCnameLookup
@@ -4966,7 +4927,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 ```
 0x00000000
 ```
-
 
   #### Mac の情報と設定
   
@@ -5099,7 +5059,6 @@ Samba と Windows Server の最新バージョンは、すべて NTLMv2 をサ�
   - Windows での 87 以降
 
   #### 説明
-                                                                                              
 
   このポリシーは、Microsoft Edge キオスクモードにのみ適用されます。
 
@@ -5141,7 +5100,6 @@ Samba と Windows Server の最新バージョンは、すべて NTLMv2 をサ�
 ```
 0x00000001
 ```
-
 
   
 
@@ -5201,7 +5159,6 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\1 = "com.native.messag
 SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messaging.host.name2"
 
 ```
-
 
   #### Mac の情報と設定
   
@@ -5270,7 +5227,6 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: NativeMessagingBlocklist
@@ -5335,7 +5291,6 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 ```
 0x00000000
 ```
-
 
   #### Mac の情報と設定
   
@@ -5404,7 +5359,6 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -5484,7 +5438,6 @@ Microsoft Edge が安全でないパスワードを検出する方法の詳細�
 0x00000001
 ```
 
-
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -5543,7 +5496,6 @@ Microsoft Edge が安全でないパスワードを検出する方法の詳細�
 ```
 "https://contoso.com/change_password.html"
 ```
-
 
   #### Mac の情報と設定
   
@@ -5610,7 +5562,6 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\1 = "https://contos
 SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.contoso.com"
 
 ```
-
 
   #### Mac の情報と設定
   
@@ -5691,7 +5642,6 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: PasswordProtectionWarningTrigger
@@ -5769,6 +5719,71 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 
   [ページのトップへ](#microsoft-edge---policies)
 
+  ## パフォーマンス ポリシー
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### StartupBoostEnabled
+
+  #### スタートアップ ブーストを有効にする
+
+  
+  
+  #### サポートされているバージョン:
+
+  - Windows での 88 以降
+
+  #### 説明
+
+  Microsoft Edge のプロセスが OS へのサインイン時に起動し、最後のブラウザー ウィンドウを閉じた後もバックグラウンドで再起動することができるようになります。
+
+Microsoft Edge がバックグラウンド モードで実行されている場合、最後のウィンドウが閉じたときにブラウザーが閉じない可能性があり、ウィンドウが閉じてもブラウザーはバックグラウンドで再起動しません。 Microsoft Edge のバックグラウンド モードの動作を構成した後の動作に関する情報については、[BackgroundModeEnabled](#backgroundmodeenabled) ポリシーを参照してください。
+
+このポリシーを有効にしている場合、スタートアップ ブーストがオンになります。
+
+このポリシーを無効にしている場合、スタートアップ ブーストがオフになります。
+
+このポリシーを構成していない場合、スタートアップ ブーストは初期状態でオフまたはオンのいずれかになっている場合があります。 ユーザーはその動作を edge://settings/system で構成することができます。
+
+スタートアップ ブーストについての詳細情報: [https://go.microsoft.com/fwlink/?linkid=2147018](https://go.microsoft.com/fwlink/?linkid=2147018)
+
+  #### サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: はい
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+
+  - ブール値
+
+  #### Windows の情報と設定
+
+  ##### グループ ポリシー (ADMX) 情報
+
+  - GP 固有の名前: StartupBoostEnabled
+  - GP 名: スタートアップ ブーストを有効にする
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/パフォーマンス
+  - GP パス (推奨): 管理用テンプレート/Microsoft Edge - 既定の設定 (ユーザーが上書き可能)/パフォーマンス
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - 値の名前: StartupBoostEnabled
+  - 値の種類: REG_DWORD
+
+  ##### サンプル値:
+
+```
+0x00000001
+```
+
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
   ## 印刷に関するポリシー
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -5827,7 +5842,6 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 ```
 "{ \"idPattern\": \".*public\", \"namePattern\": \".*Color\" }"
 ```
-
 
   #### Mac の情報と設定
   
@@ -5893,7 +5907,6 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 0x00000000
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: PrintHeaderFooter
@@ -5956,7 +5969,6 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 0x00000000
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: PrintPreviewUseSystemDefaultPrinter
@@ -6018,7 +6030,6 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -6168,7 +6179,6 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 0x00000000
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: UseSystemPrintDialog
@@ -6186,9 +6196,9 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   ### ProxyBypassList
 
-  #### プロキシのバイパス ルールを構成する
+  #### プロキシのバイパス ルールを構成する (非推奨)
 
-  
+  >非推奨: このポリシーは推奨されなくなっています。 現在はサポートされていますが、将来のリリースで廃止されます。
   
   #### サポートされているバージョン:
 
@@ -6196,9 +6206,11 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   #### 説明
 
-  Microsoft Edge がプロキシをバイパスするホストの一覧を定義します。
+  このポリシーは推奨されなくなっています。代わりに [ProxySettings](#proxysettings) を使用してください。 Microsoft Edge バージョン 91 では機能しません。
 
-このポリシーは、[ProxyMode](#proxymode) ポリシーで "固定プロキシ サーバーを使用する" を選択した場合にのみ適用されます。 プロキシ ポリシーを構成するために別のモードを選択した場合は、このポリシーを有効にしたり、構成したりしないでください。
+Microsoft Edge がプロキシをバイパスするホストの一覧を定義します。
+
+このポリシーは [ProxySettings](#proxysettings) ポリシーが指定されておらず、[ProxyMode](#proxymode) ポリシーで fixed_servers を選択している場合にのみ適用されます。 プロキシ ポリシーを構成するために別のモードを選択した場合は、このポリシーを有効にしたり、構成したりしないでください。
 
 このポリシーを有効にしている場合、Microsoft Edge がプロキシを使用しないホストの一覧を作成することができます。
 
@@ -6221,7 +6233,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
   ##### グループ ポリシー (ADMX) 情報
 
   - GP 固有の名前: ProxyBypassList
-  - GP 名: プロキシのバイパス ルールを構成する
+  - GP 名: プロキシのバイパス ルールを構成する (非推奨)
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/プロキシ サーバー
   - GP パス (推奨): なし
   - GP ADMX ファイル名: MSEdge.admx
@@ -6239,7 +6251,6 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 "https://www.contoso.com, https://www.fabrikam.com"
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: ProxyBypassList
@@ -6253,9 +6264,9 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   ### ProxyMode
 
-  #### プロキシ サーバー設定を構成する
+  #### プロキシ サーバーの設定を構成する (非推奨)
 
-  
+  >非推奨: このポリシーは推奨されなくなっています。 現在はサポートされていますが、将来のリリースで廃止されます。
   
   #### サポートされているバージョン:
 
@@ -6263,21 +6274,20 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   #### 説明
 
-  Microsoft Edge で使用されるプロキシ サーバーの設定を指定します。 このポリシーを有効にしている場合、ユーザーはプロキシ設定を変更することができなくなります。
+  このポリシーは推奨されなくなっています。代わりに [ProxySettings](#proxysettings) を使用してください。 Microsoft Edge バージョン 91 では機能しません。
 
-プロキシ サーバーを使用せず、常に直接接続することを選択した場合、他のオプションはすべて無視されます。
+このポリシーを有効にすると、Microsoft Edge が使用するプロキシ サーバーを指定して、ユーザーがプロキシの設定を変更できないようにすることができます。 Microsoft Edge は、コマンド ラインから指定されたプロキシ関連のオプションをすべて無視します。 このポリシーは、[ProxySettings](#proxysettings) ポリシーが指定されていない場合にのみ適用されます。
 
-システム プロキシ設定の使用を選択した場合、他のオプションはすべて無視されます。
+以下のオプションのいずれかを選択した場合、その他のオプションは無視されます。
+  * direct = プロキシ サーバーを使用せず、常に直接接続する
+  * system = システムのプロキシ設定を使用する
+  * auto_detect = プロキシ サーバーを自動検出する
 
-プロキシ サーバーの自動検出を選択した場合、他のオプションはすべて無視されます。
-
-固定サーバー プロキシ モードを選択した場合、[ProxyServer](#proxyserver) と "プロキシのバイパス ルールのコンマ区切りリスト" で追加のオプションを指定することができます。
-
-.pac プロキシ スクリプトの使用を選択した場合、"プロキシ .pac ファイルへの URL" でスクリプトの URL を指定する必要があります。
+以下を選択して使用する場合:
+  * fixed_servers = 固定プロキシ サーバー。 [ProxyServer](#proxyserver) と [ProxyBypassList](#proxybypasslist) を使用してさらにオプションを指定することができます。
+  * pac_script = .pac プロキシ スクリプト。 [ProxyPacUrl](#proxypacurl) を使用して、プロキシ .pac ファイルの URL を設定します。
 
 詳細な例については、「[https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936)」を参照してください。
-
-このポリシーを有効にしている場合、Microsoft Edge は、コマンド ラインから指定されたプロキシ関連のオプションをすべて無視します。
 
 このポリシーを構成していない場合、ユーザーは自分のプロキシ設定を選択することができます。
 
@@ -6310,7 +6320,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
   ##### グループ ポリシー (ADMX) 情報
 
   - GP 固有の名前: ProxyMode
-  - GP 名: プロキシ サーバー設定を構成する
+  - GP 名: プロキシ サーバーの設定を構成する (非推奨)
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/プロキシ サーバー
   - GP パス (推奨): なし
   - GP ADMX ファイル名: MSEdge.admx
@@ -6328,7 +6338,6 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 "direct"
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: ProxyMode
@@ -6342,9 +6351,9 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   ### ProxyPacUrl
 
-  #### プロキシ .pac ファイルの URL を設定する
+  #### プロキシ .pac ファイルの URL を設定する (非推奨)
 
-  
+  >非推奨: このポリシーは推奨されなくなっています。 現在はサポートされていますが、将来のリリースで廃止されます。
   
   #### サポートされているバージョン:
 
@@ -6352,9 +6361,11 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   #### 説明
 
-  プロキシの自動構成 (PAC) ファイルの URL を指定します。
+  このポリシーは推奨されなくなっています。代わりに [ProxySettings](#proxysettings) を使用してください。 Microsoft Edge バージョン 91 では機能しません。
 
-このポリシーは、[ProxyMode](#proxymode) ポリシーで ".pac プロキシ スクリプトを使用する" を選択した場合にのみ適用されます。 プロキシ ポリシーを構成するために別のモードを選択した場合は、このポリシーを有効にしたり、構成したりしないでください。
+プロキシの自動構成 (PAC) ファイルの URL を指定します。
+
+このポリシーは [ProxySettings](#proxysettings) ポリシーが指定されておらず、[ProxyMode](#proxymode) ポリシーで pac_script を選択している場合にのみ適用されます。 プロキシ ポリシーを構成するために別のモードを選択した場合は、このポリシーを有効にしたり、構成したりしないでください。
 
 このポリシーを有効にしている場合、ブラウザーが特定の Web サイトを取得するための適切なプロキシ サーバーを自動選択する方法を定義する PAC ファイルの URL を指定することができます。
 
@@ -6377,7 +6388,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
   ##### グループ ポリシー (ADMX) 情報
 
   - GP 固有の名前: ProxyPacUrl
-  - GP 名: プロキシ .pac ファイルの URL を設定する
+  - GP 名: プロキシ .pac ファイルの URL を設定する (非推奨)
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/プロキシ サーバー
   - GP パス (推奨): なし
   - GP ADMX ファイル名: MSEdge.admx
@@ -6395,7 +6406,6 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 "https://internal.contoso.com/example.pac"
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: ProxyPacUrl
@@ -6409,9 +6419,9 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   ### ProxyServer
 
-  #### プロキシ サーバーのアドレスまたは URL を構成する
+  #### プロキシ サーバーのアドレスまたは URL を構成する (非推奨)
 
-  
+  >非推奨: このポリシーは推奨されなくなっています。 現在はサポートされていますが、将来のリリースで廃止されます。
   
   #### サポートされているバージョン:
 
@@ -6419,9 +6429,11 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   #### 説明
 
-  プロキシ サーバーの URL を指定します。
+  このポリシーは推奨されなくなっています。代わりに [ProxySettings](#proxysettings) を使用してください。 Microsoft Edge バージョン 91 では機能しません。
 
-このポリシーは、[ProxyMode](#proxymode) ポリシーで "固定プロキシ サーバーを使用する" を選択した場合にのみ適用されます。 プロキシ ポリシーを構成するために別のモードを選択した場合は、このポリシーを有効にしたり、構成したりしないでください。
+プロキシ サーバーの URL を指定します。
+
+このポリシーは [ProxySettings](#proxysettings) ポリシーが指定されておらず、[ProxyMode](#proxymode) ポリシーで fixed_servers を選択している場合にのみ適用されます。 プロキシ ポリシーを構成するために別のモードを選択した場合は、このポリシーを有効にしたり、構成したりしないでください。
 
 このポリシーを有効にしている場合、このポリシーで構成されたプロキシ サーバーがすべての URL に使用されます。
 
@@ -6444,7 +6456,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
   ##### グループ ポリシー (ADMX) 情報
 
   - GP 固有の名前: ProxyServer
-  - GP 名: プロキシ サーバーのアドレスまたは URL を構成する
+  - GP 名: プロキシ サーバーのアドレスまたは URL を構成する (非推奨)
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/プロキシ サーバー
   - GP パス (推奨): なし
   - GP ADMX ファイル名: MSEdge.admx
@@ -6461,7 +6473,6 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 ```
 "123.123.123.123:8080"
 ```
-
 
   #### Mac の情報と設定
   
@@ -6499,23 +6510,20 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 [ProxyServer](#proxyserver)
 [ProxyBypassList](#proxybypasslist)
 
-ProxyMode フィールドでは、Microsoft Edge で使用するプロキシ サーバーを指定し、ユーザーがプロキシの設定を変更できないようにすることができます。
+[ProxySettings](#proxysettings) ポリシーの設定は、以下のフィールドを受け入れます。
+  * Microsoft Edge で使用するプロキシ サーバーを指定し、ユーザーがプロキシの設定を変更できないようにする ProxyMode
+  * ProxyPacUrl、プロキシ .pac ファイルへの URL
+  * ProxyServer、プロキシ サーバーの URL
+  * ProxyBypassList、Microsoft Edge がバイパスするプロキシ ホストの一覧
 
-ProxyPacUrl フィールドはプロキシ .pac ファイルへの URL です。
+ProxyMode の場合に、以下の値を選択すると:
+  * direct の場合、プロキシは使用されず、その他すべてのフィールドは無視されます。
+  * system の場合、システムのプロキシが使用され、その他すべてのフィールドは無視されます。
+  * auto_detect の場合、その他すべてのフィールドは無視されます。
+  * fixed_server の場合、ProxyServer と ProxyBypassList フィールドが使用されます。
+  * pac_script の場合、ProxyPacUrl と ProxyBypassList フィールドが使用されます。
 
-ProxyServer フィールドはプロキシ サーバーの URL です。
-
-ProxyBypassList フィールドは、Microsoft Edge がバイパスするプロキシ ホストの一覧です。
-
-"ProxyMode" として "direct" の値を選択した場合、プロキシは使用されず、その他のフィールドはすべて無視されます。
-
-"ProxyMode" として "system" の値を選択した場合、システムのプロキシが使用され、その他のフィールドはすべて無視されます。
-
-"ProxyMode" として "auto_detect" の値を選択した場合、その他のフィールドはすべて無視されます。
-
-"ProxyMode" として "fixed_server" の値を選択した場合、"ProxyServer" と "ProxyBypassList" フィールドが使用されます。
-
-"ProxyMode" として "pac_script" の値を選択した場合、"ProxyPacUrl" と "ProxyBypassList" フィールドが使用されます。
+より詳細な例については、「[https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936)」を参照してください。
 
   #### サポートされている機能:
 
@@ -6640,7 +6648,6 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: PreventSmartScreenPromptOverride
@@ -6705,7 +6712,6 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -6773,7 +6779,6 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\1 = "mydomain.com"
 SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.edu"
 
 ```
-
 
   #### Mac の情報と設定
   
@@ -6844,7 +6849,6 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: SmartScreenEnabled
@@ -6909,7 +6913,6 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 0x00000000
 ```
 
-
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -6968,7 +6971,6 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -7040,7 +7042,6 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: HomepageIsNewTabPage
@@ -7108,7 +7109,6 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 ```
 "https://www.contoso.com"
 ```
-
 
   #### Mac の情報と設定
   
@@ -7179,7 +7179,6 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 ```
 0x00000002
 ```
-
 
   #### Mac の情報と設定
   
@@ -7347,7 +7346,6 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: NewTabPageHideDefaultTopSites
@@ -7417,7 +7415,6 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
 ```
 "https://www.fabrikam.com"
 ```
-
 
   #### Mac の情報と設定
   
@@ -7578,7 +7575,6 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: NewTabPagePrerenderEnabled
@@ -7661,7 +7657,6 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 0x00000000
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: NewTabPageSetFeedType
@@ -7740,7 +7735,6 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 0x00000004
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: RestoreOnStartup
@@ -7804,7 +7798,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\1 = "https://contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.com"
 
 ```
-
 
   #### Mac の情報と設定
   
@@ -7871,7 +7864,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: ShowHomeButton
@@ -7935,7 +7927,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -8003,7 +7994,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: AdsSettingForIntrusiveAdsSites
@@ -8033,7 +8023,7 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 
 このポリシーを有効にしているか、構成していない場合、ユーザーは閲覧の履歴やダウンロードの履歴を削除することができます。
 
-このポリシーを無効している場合、ユーザーは閲覧やダウンロードの履歴を削除することができません。
+このポリシーを無効している場合、ユーザーは閲覧やダウンロードの履歴を削除することができず、履歴の同期は無効になります。
 
 このポリシーを有効にしている場合、[ClearBrowsingDataOnExit](#clearbrowsingdataonexit) ポリシーは有効にしないでください。なぜなら、どちらもデータの削除に対応しているからです。 両方のポリシーを有効にしている場合、[ClearBrowsingDataOnExit](#clearbrowsingdataonexit) ポリシーが優先され、このポリシーがどのように構成されているかにかかわらず、Microsoft Edge の終了時にすべてのデータが削除されます。
 
@@ -8069,7 +8059,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -8132,7 +8121,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -8198,7 +8186,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 0x00000000
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: AllowPopupsDuringPageUnload
@@ -8258,7 +8245,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 ```
 0x00000000
 ```
-
 
   #### Mac の情報と設定
   
@@ -8323,7 +8309,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 ```
 0x00000000
 ```
-
 
   #### Mac の情報と設定
   
@@ -8394,7 +8379,6 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\3 = "[*.].mydomain2.co
 
 ```
 
-
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -8451,7 +8435,6 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\1 = "https://www.contoso.c
 SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Mac の情報と設定
   
@@ -8521,7 +8504,6 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: AlternateErrorPagesEnabled
@@ -8583,7 +8565,6 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -8669,7 +8650,6 @@ Microsoft Edge のバージョン 81 以降では、ポリシーを設定しな�
 0x00000000
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: AmbientAuthenticationInPrivateModesEnabled
@@ -8729,7 +8709,6 @@ Microsoft Edge のバージョン 81 以降では、ポリシーを設定しな�
 ```
 0x00000000
 ```
-
 
   #### Mac の情報と設定
   
@@ -8793,7 +8772,6 @@ Microsoft Edge のバージョン 81 以降では、ポリシーを設定しな�
 "en"
 ```
 
-
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -8850,7 +8828,6 @@ Microsoft Edge のバージョン 81 以降では、ポリシーを設定しな�
 ```
 0x00000000
 ```
-
 
   #### Mac の情報と設定
   
@@ -8911,7 +8888,6 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\1 = "https://www.contos
 SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contoso.edu/"
 
 ```
-
 
   #### Mac の情報と設定
   
@@ -8982,7 +8958,6 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contos
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -9096,7 +9071,6 @@ Microsoft Edge のバージョン 83 以降で、このポリシーを [FromMozi
 ```
 0x00000002
 ```
-
 
   #### Mac の情報と設定
   
@@ -9295,7 +9269,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = ".exact.hostname.com
 
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: AutoOpenAllowedForURLs
@@ -9372,7 +9345,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: AutoOpenFileTypes
@@ -9440,7 +9412,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 0x00000000
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: AutofillAddressEnabled
@@ -9502,7 +9473,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 ```
 0x00000000
 ```
-
 
   #### Mac の情報と設定
   
@@ -9571,7 +9541,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: AutoplayAllowed
@@ -9636,7 +9605,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 0x00000001
 ```
 
-
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -9691,7 +9659,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -9765,7 +9732,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: BingAdsSuppression
@@ -9830,7 +9796,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 0x00000000
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: BlockThirdPartyCookies
@@ -9891,7 +9856,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -9955,7 +9919,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: BrowserGuestModeEnabled
@@ -10017,7 +9980,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -10095,7 +10057,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 0x00000002
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: BrowserSignin
@@ -10161,7 +10122,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -10274,7 +10234,6 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCa
 
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: CertificateTransparencyEnforcementDisabledForCas
@@ -10346,7 +10305,6 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
 
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: CertificateTransparencyEnforcementDisabledForLegacyCas
@@ -10415,7 +10373,6 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\2 = ".contoso.com"
 
 ```
-
 
   #### Mac の情報と設定
   
@@ -10486,7 +10443,6 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: ClearBrowsingDataOnExit
@@ -10552,7 +10508,6 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -10622,7 +10577,6 @@ ClickOnce の詳細については、「[https://go.microsoft.com/fwlink/?linkid
 0x00000000
 ```
 
-
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -10648,6 +10602,8 @@ ClickOnce の詳細については、「[https://go.microsoft.com/fwlink/?linkid
 ポリシー オプション マッピング:
 
 * pinterest_suggestions (pinterest_suggestions) = Pinterest の提案
+
+* collections_share (collections_share) = コレクションの共有
 
 このポリシーを構成する場合は、上記の情報を使用します。
 
@@ -10682,9 +10638,9 @@ ClickOnce の詳細については、「[https://go.microsoft.com/fwlink/?linkid
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pinterest_suggestions"
+SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "collections_share"
 
 ```
-
 
   #### Mac の情報と設定
   
@@ -10693,6 +10649,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 ``` xml
 <array>
   <string>pinterest_suggestions</string>
+  <string>collections_share</string>
 </array>
 ```
   
@@ -10751,7 +10708,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -10814,7 +10770,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -10880,7 +10835,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 0x00000000
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: ConfigureDoNotTrack
@@ -10901,6 +10855,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
   #### サポートされているバージョン:
 
   - Windows での 87 以降
+  - macOS での 88 以降
 
   #### 説明
 
@@ -10963,6 +10918,13 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 0x00000003
 ```
 
+  #### Mac の情報と設定
+  
+  - 基本設定キーの名前: ConfigureFriendlyURLFormat
+  - サンプル値:
+``` xml
+<integer>3</integer>
+```
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -11028,7 +10990,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 0x00000000
 ```
 
-
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -11085,7 +11046,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -11155,7 +11115,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 0x00000001
 ```
 
-
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -11212,7 +11171,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 ```
 "https://go.microsoft.com/fwlink/?linkid=2080734"
 ```
-
 
   #### Mac の情報と設定
   
@@ -11278,7 +11236,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: DNSInterceptionChecksEnabled
@@ -11343,7 +11300,6 @@ Windows 管理者への注意: このポリシーは、Windows 7 を実行して
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: DefaultBrowserSettingEnabled
@@ -11407,7 +11363,6 @@ Windows 管理者への注意: このポリシーは、Windows 7 を実行して
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -11481,7 +11436,6 @@ Windows 管理者への注意: このポリシーは、Windows 7 を実行して
 0x00000002
 ```
 
-
   #### Mac の情報と設定
   
   - 優先キー名: DefaultSensorsSetting
@@ -11553,7 +11507,6 @@ Windows 管理者への注意: このポリシーは、Windows 7 を実行して
 ```
 0x00000002
 ```
-
 
   #### Mac の情報と設定
   
@@ -11629,7 +11582,6 @@ Windows 管理者への注意: このポリシーは、Windows 7 を実行して
 0x00000001
 ```
 
-
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -11684,7 +11636,6 @@ Windows 管理者への注意: このポリシーは、Windows 7 を実行して
 ```
 0x00000000
 ```
-
 
   
 
@@ -11752,7 +11703,6 @@ Windows 管理者への注意: このポリシーは、Windows 7 を実行して
 ```
 0x00000002
 ```
-
 
   #### Mac の情報と設定
   
@@ -11840,7 +11790,6 @@ Windows 7 または macOS のこのポリシーでは、必須およびオプシ
 0x00000002
 ```
 
-
   #### Mac の情報と設定
   
   - 優先順位キー名: DiagnosticData
@@ -11907,7 +11856,6 @@ DirectInvoke の詳細については、「[https://go.microsoft.com/fwlink/?lin
 0x00000000
 ```
 
-
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -11962,7 +11910,6 @@ DirectInvoke の詳細については、「[https://go.microsoft.com/fwlink/?lin
 ```
 0x00000000
 ```
-
 
   #### Mac の情報と設定
   
@@ -12028,7 +11975,6 @@ DirectInvoke の詳細については、「[https://go.microsoft.com/fwlink/?lin
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: DisableScreenshots
@@ -12093,7 +12039,6 @@ DirectInvoke の詳細については、「[https://go.microsoft.com/fwlink/?lin
 "${user_home}/Edge_cache"
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: DiskCacheDir
@@ -12157,7 +12102,6 @@ DirectInvoke の詳細については、「[https://go.microsoft.com/fwlink/?lin
 ```
 0x06400000
 ```
-
 
   #### Mac の情報と設定
   
@@ -12235,7 +12179,6 @@ DirectInvoke の詳細については、「[https://go.microsoft.com/fwlink/?lin
 "off"
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: DnsOverHttpsMode
@@ -12302,7 +12245,6 @@ URI テンプレートが dns 変数を含んでいる場合、リゾルバー�
 "https://dns.example.net/dns-query{?dns}"
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: DnsOverHttpsTemplates
@@ -12368,7 +12310,6 @@ URI テンプレートが dns 変数を含んでいる場合、リゾルバー�
 ```
 "\n      Linux-based OSes (including Mac): /home/${user_name}/Downloads\n      Windows: C:\\Users\\${user_name}\\Downloads"
 ```
-
 
   #### Mac の情報と設定
   
@@ -12454,7 +12395,6 @@ Microsoft Defender SmartScreen の詳細については、「[https://go.microso
 0x00000002
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: DownloadRestrictions
@@ -12516,7 +12456,6 @@ Microsoft Defender SmartScreen の詳細については、「[https://go.microso
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -12640,7 +12579,6 @@ Microsoft Defender SmartScreen の詳細については、「[https://go.microso
 0x00000000
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: EditFavoritesEnabled
@@ -12659,7 +12597,6 @@ Microsoft Defender SmartScreen の詳細については、「[https://go.microso
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 86.
   #### サポートされているバージョン:
-            
 
   - On Windows and macOS since 77, until 86
 
@@ -12716,7 +12653,6 @@ Microsoft Defender SmartScreen の詳細については、「[https://go.microso
 SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "ExampleDeprecatedFeature_EffectiveUntil20080902"
 
 ```
-
 
   #### Mac の情報と設定
   
@@ -12790,7 +12726,6 @@ Microsoft は、互換性の理由から特定のドメインで選択するア�
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: EnableDomainActionsDownload
@@ -12852,7 +12787,6 @@ Microsoft は、互換性の理由から特定のドメインで選択するア�
 ```
 0x00000000
 ```
-
 
   #### Mac の情報と設定
   
@@ -12918,7 +12852,6 @@ Microsoft は、互換性の理由から特定のドメインで選択するア�
 0x00000000
 ```
 
-
   #### Mac の情報と設定
   
   - プリファレンス キーの名前: EnableSha1ForLocalAnchors
@@ -12978,7 +12911,6 @@ Microsoft は、互換性の理由から特定のドメインで選択するア�
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -13041,7 +12973,6 @@ Microsoft は、互換性の理由から特定のドメインで選択するア�
 ```
 0x00000000
 ```
-
 
   
 
@@ -13112,7 +13043,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"domains": ["*"], "file_extension": "swf"}
 
 ```
-
 
   #### Mac の情報と設定
   
@@ -13201,7 +13131,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 0x00000002
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: ExperimentationAndConfigurationServiceControl
@@ -13270,7 +13199,6 @@ Microsoft Edge 84 以降、このポリシーを構成しない場合、外部�
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: ExternalProtocolDialogShowAlwaysOpenCheckbox
@@ -13332,7 +13260,6 @@ Microsoft Edge 84 以降、このポリシーを構成しない場合、外部�
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -13397,7 +13324,6 @@ Microsoft Edge 84 以降、このポリシーを構成しない場合、外部�
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -13475,7 +13401,6 @@ Microsoft Edge 84 以降、このポリシーを構成しない場合、外部�
 0x00000000
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: ForceBingSafeSearch
@@ -13537,7 +13462,6 @@ Microsoft Edge 84 以降、このポリシーを構成しない場合、外部�
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -13603,7 +13527,6 @@ Microsoft Edge 84 以降、このポリシーを構成しない場合、外部�
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: ForceEphemeralProfiles
@@ -13665,7 +13588,6 @@ Microsoft Edge 84 以降、このポリシーを構成しない場合、外部�
 ```
 0x00000000
 ```
-
 
   #### Mac の情報と設定
   
@@ -13731,7 +13653,6 @@ Microsoft Edge の既定の参照元ポリシーは、段階的なロールア�
 0x00000000
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: ForceLegacyDefaultReferrerPolicy
@@ -13794,7 +13715,6 @@ Microsoft Edge の既定の参照元ポリシーは、段階的なロールア�
 0x00000000
 ```
 
-
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -13853,7 +13773,6 @@ Microsoft Edge の既定の参照元ポリシーは、段階的なロールア�
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -13929,7 +13848,6 @@ Microsoft Edge の既定の参照元ポリシーは、段階的なロールア�
 0x00000000
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: ForceYouTubeRestrict
@@ -13994,7 +13912,6 @@ Microsoft Edge の既定の参照元ポリシーは、段階的なロールア�
 0x00000001
 ```
 
-
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -14053,7 +13970,6 @@ Microsoft Edge の既定の参照元ポリシーは、段階的なロールア�
 ```
 0x00000000
 ```
-
 
   #### Mac の情報と設定
   
@@ -14123,7 +14039,6 @@ Microsoft Edge の既定の参照元ポリシーは、段階的なロールア�
 0x00000000
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: GoToIntranetSiteForSingleWordEntryInAddressBar
@@ -14182,7 +14097,6 @@ Microsoft Edge の既定の参照元ポリシーは、段階的なロールア�
 SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 ```
-
 
   #### Mac の情報と設定
   
@@ -14245,7 +14159,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -14330,7 +14243,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -14457,7 +14369,6 @@ Internet Explorer で互換性のない Web サイトに遭遇した場合、ユ
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: ImportAutofillFormData
@@ -14526,7 +14437,6 @@ Internet Explorer で互換性のない Web サイトに遭遇した場合、ユ
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: ImportBrowserSettings
@@ -14592,7 +14502,6 @@ Internet Explorer で互換性のない Web サイトに遭遇した場合、ユ
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -14662,7 +14571,6 @@ Internet Explorer で互換性のない Web サイトに遭遇した場合、ユ
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: ImportExtensions
@@ -14730,7 +14638,6 @@ Internet Explorer で互換性のない Web サイトに遭遇した場合、ユ
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -14800,7 +14707,6 @@ Internet Explorer で互換性のない Web サイトに遭遇した場合、ユ
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: ImportHistory
@@ -14868,7 +14774,6 @@ Internet Explorer で互換性のない Web サイトに遭遇した場合、ユ
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -14938,7 +14843,6 @@ Internet Explorer で互換性のない Web サイトに遭遇した場合、ユ
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: ImportOpenTabs
@@ -15006,7 +14910,6 @@ Internet Explorer で互換性のない Web サイトに遭遇した場合、ユ
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -15076,7 +14979,6 @@ Internet Explorer で互換性のない Web サイトに遭遇した場合、ユ
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: ImportSavedPasswords
@@ -15145,7 +15047,6 @@ Internet Explorer で互換性のない Web サイトに遭遇した場合、ユ
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: ImportSearchEngine
@@ -15211,7 +15112,6 @@ Internet Explorer で互換性のない Web サイトに遭遇した場合、ユ
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -15287,7 +15187,6 @@ Internet Explorer で互換性のない Web サイトに遭遇した場合、ユ
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: InPrivateModeAvailability
@@ -15347,7 +15246,6 @@ Internet Explorer で互換性のない Web サイトに遭遇した場合、ユ
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -15415,7 +15313,6 @@ Internet Explorer で互換性のない Web サイトに遭遇した場合、ユ
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -15493,7 +15390,6 @@ Internet Explorer モードの詳細については、「[https://go.microsoft.c
 0x00000001
 ```
 
-
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -15555,7 +15451,6 @@ Internet Explorer モードの詳細については、「[https://go.microsoft.c
 0x00000001
 ```
 
-
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -15606,7 +15501,6 @@ Internet Explorer モードの詳細については、「[https://go.microsoft.c
 ```
 "https://internal.contoso.com/sitelist.xml"
 ```
-
 
   
 
@@ -15683,7 +15577,6 @@ Internet Explorer モードの詳細については、「[https://go.microsoft.c
 0x00000000
 ```
 
-
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -15700,15 +15593,17 @@ Internet Explorer モードの詳細については、「[https://go.microsoft.c
 
   #### 説明
 
-  このポリシーは ie-mode-testフラグポリシーの代替です。 UI メニューオプションから IE モードタブを開くことができます。
+  このポリシーでは、ユーザーが Microsoft Edge で Internet Explorer モードのタブを開き、Internet Explorer モードでアプリケーションをテストできるようにします。
+
+ユーザーは、[Open sites in Internet Explorer mode] (Internet Explorer モードでサイトを開く) を選択することで、[その他のツール] メニューからこの操作を行うことができます。
+
+さらに、[Open sites in Edge mode] (Microsoft Edge モードでサイトを開く) オプションを使用すると、サイトの一覧からアプリケーションを削除することなく最新のブラウザーでアプリケーションをテストすることができます。
 
 この設定は、"IEMode" に設定されている [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) と、一覧に少なくとも 1 つのエントリがある [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) ポリシーと連動します。
 
-このポリシーを有効にすると、ユーザーが UI オプションから IE モードタブを開き、現在のサイトを IE モードサイトに移動することができます。
+このポリシーを有効にすると、[その他のツール] の下に [Open sites in Internet Explorer mode] (Internet Explorer モードでサイトを開く) というオプションが表示されます。 ユーザーは、このタブ上で Internet Explorer モードを使用してサイトを表示することができます。サイト一覧からサイトを削除することなく最新のブラウザーでサイトをテストする場合に役立つように、[Open sites in Edge mode] (Microsoft Edge モードでサイトを開く) という別のオプションも [その他のツール] の下に表示されます。
 
-このポリシーを無効にすると、ユーザーのメニューに UI オプションが直接表示されません。
-
-このポリシーを構成していない場合は、手動でie-mode-testフラグを設定できます。
+このポリシーを無効にしているか、または構成していない場合、[その他のツール] メニューの [Open sites in Internet Explorer mode] (Internet Explorer モードでサイトを開く) と [Open sites in Edge mode] (Microsoft Edge モードでサイトを開く) のオプションは表示されなくなります。 ただし、ユーザーはこれらのオプションを --ie-mode-test フラグを使用して構成することができます。
 
   #### サポートされている機能:
 
@@ -15742,7 +15637,6 @@ Internet Explorer モードの詳細については、「[https://go.microsoft.c
 ```
 0x00000000
 ```
-
 
   
 
@@ -15802,7 +15696,6 @@ Internet Explorer モードの詳細については、「[https://go.microsoft.c
 ```
 "https://contoso.com/,https://fabrikam.com/"
 ```
-
 
   #### Mac の情報と設定
   
@@ -15871,7 +15764,6 @@ Internet Explorer モードの詳細については、「[https://go.microsoft.c
 ```
 0x00000000
 ```
-
 
   #### Mac の情報と設定
   
@@ -16232,7 +16124,6 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 0x00000020
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: MaxConnectionsPerProxy
@@ -16296,7 +16187,6 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 ```
 0x00000000
 ```
-
 
   #### Mac の情報と設定
   
@@ -16368,7 +16258,6 @@ Windows 7、Windows 8、macOS では、このポリシーによって、使用�
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: MetricsReportingEnabled
@@ -16433,7 +16322,6 @@ Windows 7、Windows 8、macOS では、このポリシーによって、使用�
 0x00000001
 ```
 
-
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -16492,7 +16380,6 @@ Windows 7、Windows 8、macOS では、このポリシーによって、使用�
 ```
 0x0000000a
 ```
-
 
   
 
@@ -16558,7 +16445,6 @@ Windows 7、Windows 8、macOS では、このポリシーによって、使用�
 ```
 0x00000002
 ```
-
 
   #### Mac の情報と設定
   
@@ -16626,7 +16512,6 @@ Windows 7、Windows 8、macOS では、このポリシーによって、使用�
 0x00000001
 ```
 
-
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -16685,7 +16570,6 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\1 
 SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 = "*.contoso.com"
 
 ```
-
 
   #### Mac の情報と設定
   
@@ -16752,7 +16636,6 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: PaymentMethodQueryEnabled
@@ -16814,7 +16697,6 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -16880,7 +16762,6 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 0x00000000
 ```
 
-
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -16937,7 +16818,6 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -17001,7 +16881,6 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 0x00000000
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: PromotionalTabsEnabled
@@ -17063,7 +16942,6 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 ```
 0x00000000
 ```
-
 
   #### Mac の情報と設定
   
@@ -17128,7 +17006,6 @@ QUIC は、現在 TCP を使用している Web アプリケーションのパ�
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -17215,8 +17092,6 @@ QUIC は、現在 TCP を使用している Web アプリケーションのパ�
   この設定では、Internet Explorer が最新のブラウザーを必要とするサイトにナビゲーションをリダイレクトするかどうかを Microsoft Edge に指定できます。
 
 このポリシーを構成しないか、「サイトリスト」に設定しない場合、M87 以降の Internet Explorer は最新のブラウザーを必要とするサイトを Microsoft Edge にリダイレクトします。
-
-Microsoft は、https://mail.yahoo.com などのそのようなリダイレクトを必要とする公開サイトのリストを提供しています。
 
 サイトが Internet Explorer から Microsoft Edge にリダイレクトされると、以前のコンテンツがない場合、そのサイトの読み込みを開始した [Internet Explorer] タブが閉じられます。 それ以外の場合、サイトが Microsoft Edge にリダイレクトされた理由を説明する Microsoft のヘルプページに移動します。
 
@@ -17334,7 +17209,6 @@ IE からサイトをロードするために Microsoft Edge を起動すると�
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: RelaunchNotification
@@ -17397,7 +17271,6 @@ IE からサイトをロードするために Microsoft Edge を起動すると�
 0x240c8400
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: RelaunchNotificationPeriod
@@ -17458,7 +17331,6 @@ IE からサイトをロードするために Microsoft Edge を起動すると�
 0x00000000
 ```
 
-
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -17513,7 +17385,6 @@ IE からサイトをロードするために Microsoft Edge を起動すると�
 ```
 0x00000000
 ```
-
 
   
 
@@ -17574,7 +17445,6 @@ IE からサイトをロードするために Microsoft Edge を起動すると�
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -17637,7 +17507,6 @@ IE からサイトをロードするために Microsoft Edge を起動すると�
 ```
 ".*@contoso.com"
 ```
-
 
   #### Mac の情報と設定
   
@@ -17703,7 +17572,6 @@ IE からサイトをロードするために Microsoft Edge を起動すると�
 "${roaming_app_data}\\edge-profile"
 ```
 
-
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -17761,7 +17629,6 @@ IE からサイトをロードするために Microsoft Edge を起動すると�
 0x00000001
 ```
 
-
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -17816,7 +17683,6 @@ Adobe Flash の実行を許可する Web サイトを制御するには、[Defau
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -17880,7 +17746,6 @@ Adobe Flash の実行を許可する Web サイトを制御するには、[Defau
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: SSLErrorOverrideAllowed
@@ -17904,7 +17769,7 @@ Adobe Flash の実行を許可する Web サイトを制御するには、[Defau
 
   #### 説明
 
-  Sets the minimum supported version of TLS. このポリシーを構成していない場合、Microsoft Edge は既定の最小バージョンである TLS 1.0 を使用します。
+  Sets the minimum supported version of TLS. このポリシーを構成しない場合、Microsoft Edge では TLS 1.0 と TLS 1.1 にエラーが表示されますが、ユーザーはこれを回避することができます。
 
 このポリシーを有効にすると、Microsoft Edge は指定されたバージョンより前のバージョンの SSL/TLS を使用しなくなります。 認識されない値は、無視されます。
 
@@ -17950,7 +17815,6 @@ Adobe Flash の実行を許可する Web サイトを制御するには、[Defau
 ```
 "tls1"
 ```
-
 
   #### Mac の情報と設定
   
@@ -18023,7 +17887,6 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac の情報と設定
   
   - 優先順位キー名: SaveCookiesOnExit
@@ -18089,7 +17952,6 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: SavingBrowserHistoryDisabled
@@ -18148,7 +18010,6 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 ```
 0x00000000
 ```
-
 
   #### Mac の情報と設定
   
@@ -18211,7 +18072,6 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 ```
 0x00000000
 ```
-
 
   #### Mac の情報と設定
   
@@ -18277,7 +18137,6 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: SearchSuggestEnabled
@@ -18339,7 +18198,6 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: SecurityKeyPermitAttestation
@@ -18399,7 +18257,6 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 ```
 0x00000001
 ```
-
 
   
 
@@ -18461,7 +18318,6 @@ Windows 7、windows 8、macOS では、このポリシーはアクセスした W
 ```
 0x00000000
 ```
-
 
   #### Mac の情報と設定
   
@@ -18530,7 +18386,6 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\1 = "https://www.contoso.
 SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Mac の情報と設定
   
@@ -18603,7 +18458,6 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: SensorsBlockedForUrls
@@ -18674,7 +18528,6 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Mac の情報と設定
   
@@ -18747,7 +18600,6 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: SerialBlockedForUrls
@@ -18812,7 +18664,6 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 0x00000000
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: ShowOfficeShortcutInFavoritesBar
@@ -18874,7 +18725,6 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -18938,7 +18788,6 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -19064,7 +18913,6 @@ Read more about this feature here: SpeechRecognition API: [https://go.microsoft.
 0x00000000
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: SpellcheckEnabled
@@ -19135,7 +18983,6 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = "es"
 
 ```
 
-
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -19199,7 +19046,6 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
 ```
 
-
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -19258,7 +19104,6 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -19320,7 +19165,6 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: SuppressUnsupportedOSWarning
@@ -19380,7 +19224,6 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -19444,7 +19287,6 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 
 ```
-
 
   #### Mac の情報と設定
   
@@ -19513,7 +19355,6 @@ SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -19586,7 +19427,6 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: TLSCipherSuiteDenyList
@@ -19655,7 +19495,6 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 0x00000000
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: TabFreezingEnabled
@@ -19713,7 +19552,6 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -19776,7 +19614,6 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 ```
 0x00000800
 ```
-
 
   #### Mac の情報と設定
   
@@ -19850,7 +19687,6 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 0x00000002
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: TrackingPrevention
@@ -19915,7 +19751,6 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: TranslateEnabled
@@ -19938,7 +19773,6 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
   - Windows と macOS での 77 以降
 
   #### 説明
-                    
 
   ポリシーを設定すると、[URLBlocklist](#urlblocklist) の例外として、リストされた URL へのアクセスが提供されます。
 
@@ -19991,7 +19825,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\4 = "https://server:8080/path"
 SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 
 ```
-
 
   #### Mac の情報と設定
   
@@ -20075,7 +19908,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: URLBlocklist
@@ -20149,7 +19981,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - プリファレンス キーの名前: UserAgentClientHintsEnabled
@@ -20216,7 +20047,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 "${users}/${user_name}/Edge"
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: UserDataDir
@@ -20279,7 +20109,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 0x00000003
 ```
 
-
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -20334,7 +20163,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -20400,7 +20228,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 0x00000000
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: VideoCaptureAllowed
@@ -20460,7 +20287,6 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\1 = "https://www.contos
 SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contoso.edu/"
 
 ```
-
 
   #### Mac の情報と設定
   
@@ -20528,7 +20354,6 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -20745,7 +20570,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 0x00000001
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: WebComponentsV0Enabled
@@ -20763,7 +20587,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
   >非推奨: このポリシーは推奨されなくなっています。 現在はサポートされていますが、将来のリリースで廃止されます。
   
-                     
   #### サポートされているバージョン:
 
   - Windows と macOS での 77 以降、84 まで
@@ -20811,7 +20634,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 ```
 0x00000001
 ```
-
 
   #### Mac の情報と設定
   
@@ -20880,7 +20702,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\1 = "https://www.cont
 SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
 ```
-
 
   #### Mac の情報と設定
   
@@ -20961,7 +20782,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 "default"
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: WebRtcLocalhostIpHandling
@@ -21024,7 +20844,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 "10000-11999"
 ```
 
-
   #### Mac の情報と設定
   
   - 基本設定キーの名前: WebRtcUdpPortRange
@@ -21032,6 +20851,130 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 ``` xml
 <string>10000-11999</string>
 ```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### WebWidgetAllowed
+
+  #### Web ウィジェットを有効にする
+
+  
+  
+  #### サポートされているバージョン:
+
+  - Windows での 88 以降
+
+  #### 説明
+
+  Web ウィジェットを有効にします。 有効にすると、ユーザーはウィジェットを使用してデスクトップやアプリケーションから Web を検索することができます。 このウィジェットは、Web 提案を表示し、すべての Web 検索を Microsoft Edge で開く検索ボックスを提供します。 検索ボックスは、検索 (Powered by Bing) と URL の提案を提供します。 ウィジェットにはフィード タイルも含まれており、ユーザーがクリックすると新しい Microsoft Edge ブラウザーのタブやウィンドウで msn.com の詳細情報を閲覧することができます。 フィード タイルには広告が含まれている場合があります。 ウィジェットは、Microsoft Edge の設定か Microsoft Edge の [その他のツール] メニューから起動することができます。
+
+このポリシーを有効にしているか、または構成していない場合、Web ウィジェットはすべてのプロファイルで自動的に有効になります。
+Microsoft Edge の設定では、ウィジェットを起動するためのオプションが表示されます。
+Microsoft Edge の設定では、ユーザーに対して Windows の起動時にウィジェットを実行するためのメニュー項目が表示されます (自動起動)。
+起動時にウィジェットを有効にするオプションは、[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) ポリシーが有効な場合に切り替えられます。
+[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) が無効になっているか、または構成されていない場合、起動時にウィジェットを有効にするオプションはオフに切り替えられます。
+ユーザーに対しては、Microsoft Edge の [その他のツール] メニューからウィジェットを起動するためのメニュー項目が表示されます。 ユーザーは [その他のツール] からウィジェットを起動することができます。
+ウィジェットは、システム トレイの "終了" オプションでオフにするか、タスク バーからウィジェットを閉じることでオフにすることができます。 自動起動が有効になっている場合、システムの再起動時にウィジェットも再起動されます。
+
+このポリシーを無効にすると、Web ウィジェットはすべてのプロファイルで無効になります。
+Microsoft Edge の設定からウィジェットを起動するオプションは無効になります。
+Windows の起動時にウィジェットを起動するオプション (自動起動) は無効になります。
+Microsoft Edge の [その他のツール] メニューからウィジェットを起動するオプションは無効になります。
+
+  #### サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: いいえ - ブラウザの再起動が必要
+
+  #### ［データの種類］:
+
+  - ブール値
+
+  #### Windows の情報と設定
+
+  ##### グループ ポリシー (ADMX) 情報
+
+  - GP 固有の名前: WebWidgetAllowed
+  - GP 名: Web ウィジェットを有効にする
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - 値の名前: WebWidgetAllowed
+  - 値の種類: REG_DWORD
+
+  ##### サンプル値:
+
+```
+0x00000001
+```
+
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### WebWidgetIsEnabledOnStartup
+
+  #### Windows の起動時に Web ウィジェットを許可する
+
+  
+  
+  #### サポートされているバージョン:
+
+  - Windows での 88 以降
+
+  #### 説明
+
+  Windows の起動時に Web ウィジェットが起動するようにします。
+
+有効にしている場合: 既定で Windows の起動時に Web ウィジェットが起動します。
+[WebWidgetAllowed](#webwidgetallowed) ポリシーを介してウィジェットが無効化されている場合、このポリシーは Windows の起動時にウィジェットを起動しません。
+
+このポリシーを無効している場合: Web ウィジェットはすべてのプロファイルで Windows の起動時に起動しません。
+Windows の起動時にウィジェットを起動するオプションは、Microsoft Edge の設定で無効化され、オフに切り替えられます。
+
+このポリシーを構成していない場合: Web ウィジェットはすべてのプロファイルで Windows の起動時に起動しません。
+Windows の起動時にウィジェットを起動するオプションは、Microsoft Edge の設定でオフに切り替えられます。
+
+  #### サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: いいえ - ブラウザの再起動が必要
+
+  #### ［データの種類］:
+
+  - ブール値
+
+  #### Windows の情報と設定
+
+  ##### グループ ポリシー (ADMX) 情報
+
+  - GP 固有の名前: WebWidgetIsEnabledOnStartup
+  - GP 名: Windows の起動時に Web ウィジェットを許可する
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - 値の名前: WebWidgetIsEnabledOnStartup
+  - 値の種類: REG_DWORD
+
+  ##### サンプル値:
+
+```
+0x00000001
+```
+
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -21090,7 +21033,6 @@ Windows を使用して、Microsoft Edge に組み込まれているプロキシ
 ```
 0x00000001
 ```
-
 
   
 
