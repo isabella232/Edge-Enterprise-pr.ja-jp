@@ -3,19 +3,19 @@ title: Stable チャネルに関する Microsoft Edge リリース ノート
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 11/02/2020
+ms.date: 11/04/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Stable チャネルに関する Microsoft Edge リリース ノート
-ms.openlocfilehash: 0315e0d99c2cd019550050b6040cdf5af7207541
-ms.sourcegitcommit: bc4d4b1fd80fc8bccbe3822d4c342cd7777bb7f1
+ms.openlocfilehash: 873f6aa652cb09810f620cfefbeb4a9670398d63
+ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "11150896"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "11155304"
 ---
 # Microsoft Edge Stable チャネルのリリース ノート
 
@@ -23,6 +23,10 @@ ms.locfileid: "11150896"
 
 > [!NOTE]
 > 安定チャネルの場合、更新は 1 日以上かけて段階的に公開されます。 詳細については、「[Microsoft Edge 更新プログラムの段階的なロールアウト](microsoft-edge-update-progressive-rollout.md)」を参照してください。
+
+## バージョン 86.0.622.63: 11 月 4 日
+
+セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-4-2020)に記載されています。 この更新プログラムには、[CVE-2020-16009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16009) が含まれています。これは、Chromium チームによって、アクティブに悪用されていると報告されています。
 
 ## バージョン 86.0.622.61: 11 月 2 日
 
