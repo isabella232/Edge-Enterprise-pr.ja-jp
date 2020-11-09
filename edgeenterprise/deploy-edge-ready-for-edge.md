@@ -3,19 +3,19 @@ title: Microsoft Edge の準備完了
 ms.author: bshiers
 author: dan-wesley
 manager: chstaab
-ms.date: 11/04/2020
+ms.date: 11/06/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge の準備完了
-ms.openlocfilehash: 06fd37dfa910c05db091cf764552ec93471dcbef
-ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
+ms.openlocfilehash: eb4f03fd831eda4b4773b87469ceeb896e3fe08a
+ms.sourcegitcommit: 2e8906d1090263efe83d628be06dbe910cb82bf7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "11155366"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "11157690"
 ---
 # Microsoft Edge の準備完了
 
@@ -24,6 +24,17 @@ ms.locfileid: "11155366"
 ## Web アプリケーション互換性とサポート
 
 Microsoft Edge の展開を計画するのを支援するために、組織内で使用されている可能性のある Web アプリケーションのリストを作成しました。 このリストでは、Web アプリケーション プロバイダーの公開サポート ステートメントに記載されているように、Webアプリケーションが Microsoft Edge 用に準備されているかどうかを確認できます。
+
+### アプリケーションの一覧に追加する
+
+この一覧は、顧客エンゲージメントのフィードバックからサポートに関する説明が特定されると、定期的に更新されます。
+
+Web アプリケーション プロバイダーのお客様で、顧客の参照用にサポートに関する説明をご希望の場合は、以下の情報を [isvoutreach@microsoft.com](mailto:isvoutreach@microsoft.com) までメールで送信してください。
+
+- 製品名
+- サポートされているバージョン (該当する場合)
+- プロバイダー名
+- パブリック サポートに関する説明の URL
 
 ### アプリケーションの一覧
 
