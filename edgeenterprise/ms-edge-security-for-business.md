@@ -3,19 +3,19 @@ title: Microsoft Edge ビジネス向けのセキュリティ
 ms.author: seanlynd
 author: seanongit
 manager: chuckf
-ms.date: 10/02/2020
+ms.date: 11/09/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge ビジネス向けのセキュリティ
-ms.openlocfilehash: 018353c4f85bc380d85554d058d029dfde959257
-ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
+ms.openlocfilehash: 465dbc2a7e90d205630f559d8a7b7d582f0467ae
+ms.sourcegitcommit: 10e18ce8a9585bb54c2716939fce93e1c6e708fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "11094741"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "11160956"
 ---
 # Microsoft Edge ビジネス向けのセキュリティ
 
@@ -56,7 +56,7 @@ IT 管理者は、外部の脅威以外にも、内部リスクに対して保�
 > [!NOTE]
 > Windows 情報保護 (WIP) の構成には、Microsoft Intune または Microsoft Endpoint Configuration Manager のライセンスが必要です。もしくは、サード パーティのモバイル デバイス管理 (MDM) ソリューションを使用できますが、これには追加のライセンス要件がある場合があります。
 
-**Microsoft エンドポイント データ損失防止 (DLP) は 10 月の一般提供の際、Microsoft Edge でのみネイティブでサポートされるようになります**。 Microsoft エンドポイントのデータ損失防止 (DLP) は Microsoft セキュリティ センターと統合し、情報保護を Microsoft Edge に拡張することで、非対応のアクティビティについてユーザーに警告し、ユーザーがオンラインで作業している間にデータの損失を防ぐのに役立ちます。 クレジット カード番号や行政上の ID (社会保障番号など)、財務情報を含むファイルなど、管理者が定義した基準と一致する企業内の機密データを検出し、ラベルを付けます。Microsoft の情報保護ポリシーは、機密情報の識別子や IT 管理者が既にカスタマイズしたポリシーも含め、Microsoft エンドポイント データ損失防止に追加の再構成なしで展開できます。 これは IT 管理者にとって、情報保護のシームレスな展開です。
+**Microsoft ENDPOINT DLP は、Microsoft Edge でネイティブでのみサポートされます。(Microsoft Endpoint DLP は現在、パブリック プレビューに含まれています。これは、2020で通常利用が可能になると想定されています)。**。 Microsoft エンドポイントのデータ損失防止 (DLP) は Microsoft セキュリティ センターと統合し、情報保護を Microsoft Edge に拡張することで、非対応のアクティビティについてユーザーに警告し、ユーザーがオンラインで作業している間にデータの損失を防ぐのに役立ちます。 クレジット カード番号や行政上の ID (社会保障番号など)、財務情報を含むファイルなど、管理者が定義した基準と一致する企業内の機密データを検出し、ラベルを付けます。Microsoft の情報保護ポリシーは、機密情報の識別子や IT 管理者が既にカスタマイズしたポリシーも含め、Microsoft エンドポイント データ損失防止に追加の再構成なしで展開できます。 これは IT 管理者にとって、情報保護のシームレスな展開です。
 
 > [!NOTE]
 > Microsoft エンドポイントのデータ損失防止には、Microsoft 365 E5 または Microsoft 365 E5 Compliance のサブスクリプションが必要です。
