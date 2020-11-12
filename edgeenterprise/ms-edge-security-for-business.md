@@ -3,19 +3,19 @@ title: Microsoft Edge ビジネス向けのセキュリティ
 ms.author: seanlynd
 author: seanongit
 manager: chuckf
-ms.date: 11/09/2020
+ms.date: 11/11/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge ビジネス向けのセキュリティ
-ms.openlocfilehash: 465dbc2a7e90d205630f559d8a7b7d582f0467ae
-ms.sourcegitcommit: 10e18ce8a9585bb54c2716939fce93e1c6e708fd
+ms.openlocfilehash: e2f45d49d8f4960f3f2263098ff2eb7d0103b6ea
+ms.sourcegitcommit: 5efa7f6196804da205c3deff4ba7917a94ffcf4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "11160956"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "11165943"
 ---
 # Microsoft Edge ビジネス向けのセキュリティ
 
@@ -27,7 +27,7 @@ Microsoft Edge は、Google Chrome の中核と同じプロジェクトである
 
 ### フィッシングと悪意のあるソフトウェアに対する最も評価が高い保護
 
-[NSS Labs の独自の調査](https://www.nsslabs.com/tested-technologies/web-browser-security-wbs/)によると、Microsoft Edge に組み込まれている SmartScreen は、フィッシングと悪意のあるソフトウェアによる試行を Google Chrome のセーフ ブラウジングよりも多くブロックします。 SmartScreen はユーザーがオンラインで作業している間、サイトやダウンロードのリアルタイムの評判チェックを提供します。また、SmartScreen は [Microsoft インテリジェント セキュリティ グラフ](https://www.microsoft.com/microsoft-365/windows/intelligent-security)の一部です。これは、Microsoft のグローバルなアセット、研究者、パートナーによって生成された信号や分析情報を引き出します。 危険なサイトやダウンロードのクラウド ベースの動的リストに対してチェックを実行することで、Microsoft Edge はすぐに消える一時的な脅威さえも検出してブロックするのに役立ちます。  
+Microsoft Edge に組み込まれた SmartScreen は、NSS Lab の独立した調査によると、Google Chrome の Safe Browsing よりも多くの [フィッシング](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Phishing_Report_Q2_2020.pdf) と [マルウェア](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Malware_Report_Q2_2020.pdf) の試みをブロックします。 SmartScreen はユーザーがオンラインで作業している間、サイトやダウンロードのリアルタイムの評判チェックを提供します。また、SmartScreen は [Microsoft インテリジェント セキュリティ グラフ](https://www.microsoft.com/microsoft-365/windows/intelligent-security)の一部です。これは、Microsoft のグローバルなアセット、研究者、パートナーによって生成された信号や分析情報を引き出します。 危険なサイトやダウンロードのクラウド ベースの動的リストに対してチェックを実行することで、Microsoft Edge はすぐに消える一時的な脅威さえも検出してブロックするのに役立ちます。  
 
 [SmartScreen が組み込まれている Microsoft Edge](https://docs.microsoft.com//DeployEdge/microsoft-edge-security-smartscreen) は [NSS Labs によるテスト](https://www.nsslabs.com/tested-technologies/web-browser-security-wbs/)の間、フィッシング試行を 95.5%、悪意のあるソフトウェアによる試行を 98.5% ブロックしました。一方、Chrome のセーフ ブラウジングの比率はそれぞれ 86.9% と 86.0% でした。
 
@@ -56,7 +56,7 @@ IT 管理者は、外部の脅威以外にも、内部リスクに対して保�
 > [!NOTE]
 > Windows 情報保護 (WIP) の構成には、Microsoft Intune または Microsoft Endpoint Configuration Manager のライセンスが必要です。もしくは、サード パーティのモバイル デバイス管理 (MDM) ソリューションを使用できますが、これには追加のライセンス要件がある場合があります。
 
-**Microsoft ENDPOINT DLP は、Microsoft Edge でネイティブでのみサポートされます。(Microsoft Endpoint DLP は現在、パブリック プレビューに含まれています。これは、2020で通常利用が可能になると想定されています)。**。 Microsoft エンドポイントのデータ損失防止 (DLP) は Microsoft セキュリティ センターと統合し、情報保護を Microsoft Edge に拡張することで、非対応のアクティビティについてユーザーに警告し、ユーザーがオンラインで作業している間にデータの損失を防ぐのに役立ちます。 クレジット カード番号や行政上の ID (社会保障番号など)、財務情報を含むファイルなど、管理者が定義した基準と一致する企業内の機密データを検出し、ラベルを付けます。Microsoft の情報保護ポリシーは、機密情報の識別子や IT 管理者が既にカスタマイズしたポリシーも含め、Microsoft エンドポイント データ損失防止に追加の再構成なしで展開できます。 これは IT 管理者にとって、情報保護のシームレスな展開です。
+**Microsoft ENDPOINT DLP は、Microsoft Edge でネイティブでのみサポートされます**。 Microsoft エンドポイントのデータ損失防止 (DLP) は Microsoft セキュリティ センターと統合し、情報保護を Microsoft Edge に拡張することで、非対応のアクティビティについてユーザーに警告し、ユーザーがオンラインで作業している間にデータの損失を防ぐのに役立ちます。 クレジット カード番号や行政上の ID (社会保障番号など)、財務情報を含むファイルなど、管理者が定義した基準と一致する企業内の機密データを検出し、ラベルを付けます。Microsoft の情報保護ポリシーは、機密情報の識別子や IT 管理者が既にカスタマイズしたポリシーも含め、Microsoft エンドポイント データ損失防止に追加の再構成なしで展開できます。 これは IT 管理者にとって、情報保護のシームレスな展開です。
 
 > [!NOTE]
 > Microsoft エンドポイントのデータ損失防止には、Microsoft 365 E5 または Microsoft 365 E5 Compliance のサブスクリプションが必要です。
