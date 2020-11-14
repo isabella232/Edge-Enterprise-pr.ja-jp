@@ -1,4 +1,4 @@
-# last revised 11/03/2020
+# last revised 11/06/2020
 - name: Microsoft Edge エンタープライズのドキュメント
   href: index.yml
 - name: Microsoft Edge ドキュメント
@@ -113,7 +113,9 @@
           href: edge-ie-mode-faq.md
         - name: 追加のガイダンス
           items:
-            - name: Microsoft Edge から Internet Explorer への Cookie 共有
+            - name: '[ファイルを開く] コンテキストメニューに IE モードを追加する'
+              href: edge-ie-mode-add-guidance-filetype-associations.md
+            - name: Microsoft Edge から Internet Explorer への Cookie の共有
               href: edge-ie-mode-add-guidance-cookieshare.md
 - name: Microsoft Edge のセキュリティ
   items:
