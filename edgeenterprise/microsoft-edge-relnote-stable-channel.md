@@ -3,19 +3,19 @@ title: Stable チャネルに関する Microsoft Edge リリース ノート
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 11/11/2020
+ms.date: 11/13/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Stable チャネルに関する Microsoft Edge リリース ノート
-ms.openlocfilehash: 50c9c45f59f5c1d05f4934d2226145b07903630c
-ms.sourcegitcommit: ac0d3fe9a2d0b3023abd2cc22868579aa9942a9b
+ms.openlocfilehash: 0fa69d14e9a90bfc8da9fcec9592b57b82c836f3
+ms.sourcegitcommit: 2b6808a4d1878fd2da886f9c6c56f592c6b200e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "11166034"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "11168782"
 ---
 # Microsoft Edge Stable チャネルのリリース ノート
 
@@ -24,13 +24,17 @@ ms.locfileid: "11166034"
 > [!NOTE]
 > 安定チャネルの場合、更新は 1 日以上かけて段階的に公開されます。 詳細については、「[Microsoft Edge 更新プログラムの段階的なロールアウト](microsoft-edge-update-progressive-rollout.md)」を参照してください。
 
-## バージョン 86.0.622.68:11 月11日
+## バージョン 86.0.622.69: 11 月 13 日
+
+セキュリティ更新プログラムは、[こちら](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-13-2020)に記載されています。 この更新プログラムには、[CVE-2020-16013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16013) と [CVE-2020-16017](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16017) が含まれています。これらについては、Chromium チームにより実際に感染報告がある悪用が報告されています。
+
+## バージョン 86.0.622.68: 11 月 11 日
 
 セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-11-2020)に記載されています
 
 ## バージョン 86.0.622.63: 11 月 4 日
 
-セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-4-2020)に記載されています。 この更新プログラムには、[CVE-2020-16009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16009) が含まれています。これは、Chromium チームによって、アクティブに悪用されていると報告されています。
+セキュリティ更新プログラムは、[こちら](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-4-2020)に記載されています。 この更新プログラムには、[CVE-2020-16009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16009) が含まれています。これについては、Chromium チームにより実際に感染報告がある悪用が報告されています。
 
 ## バージョン 86.0.622.61: 11 月 2 日
 

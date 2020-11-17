@@ -3,19 +3,19 @@ title: Microsoft Edge リリース スケジュール
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 10/21/2020
+ms.date: 11/13/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge リリース スケジュール
-ms.openlocfilehash: 75f1a7b2620e1eee0d2a86a82cd6a1ac80df1528
-ms.sourcegitcommit: b54272516876facf1997e15525ca086086b3f4cc
+ms.openlocfilehash: 2890109b617ca7f61fee568440c6febf2c45cb70
+ms.sourcegitcommit: 9b03a7affdfe2746b3219b0785c66e68c2abda9e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "11133448"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "11168866"
 ---
 # Microsoft Edge リリース スケジュール
 
@@ -36,15 +36,15 @@ Microsoft では、Microsoft Edge を新しい機能で更新する頻度を管�
 
 | バージョン | リリース状態 | Beta チャネル<br>リリースされる週 | Stable チャネル<br>リリースされる週 |
 |---------|-----|------|--------|
-| 81 | リリース日<br>バージョン | 02-20-2020<br>[81.0.416.12](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-beta-channel#version-81041612-february-20) | 04-13-2020<br>[81.0.416.53](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-stable-channel#version-81041653-april-13) |
-| 82 | リリース日 | [キャンセル](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/) | [キャンセル](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/) |
 | 83 | リリース日<br>バージョン | 04-22-2020<br>[83.0.478.13](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-beta-channel#version-83047813-april-22) | 05-21-2020<br> [83.0.478.37](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-stable-channel#version-83047837-may-21) |
 | 84 | リリース日<br>バージョン | 06-02-2020<br>[84.0.522.11](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-beta-channel#version-84052211-june-2) | 07-16-2020<br> [84.0.522.40](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-stable-channel#version-84052240-july-16) |
 | 85 | リリース日<br>バージョン | 07-28-2020<br>[85.0.564.18](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-beta-channel#version-85056418-july-28)  | 08-27-2020<br>[85.0.564.41](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-stable-channel#version-85056441-august-27) |
 | **86** | リリース日<br>バージョン | 09-09-2020<br>[86.0.622.11](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-beta-channel#version-86062211-september-9) | **10-09-2020**<br>**[86.0.622.38](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-86062238-october-9)** |
 | **87** | リリース日<br>バージョン | **10-20-2020**<br>**[87.0.664.12](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-87066412--october-20)** | 11-19-2020 の週 |
-| 88 | ターゲットのリリース | 12-07-2020 の週 | 01-21-2021 の週 |
-| 89 | ターゲットのリリース | 02-01-2021 の週 | 03-04-2021 の週 |
+| 88 | ターゲットのリリース | 12-08-2020 の週 | 01-21-2021 の週 |
+| 89 | ターゲットのリリース | 02-02-2021 の週 | 03-04-2021 の週 |
+| 90 | ターゲットのリリース | 03-16-2021 の週 | 4-15-2021 の週 |
+| 91 | ターゲットのリリース | 04-27-2021 の週 | 05-27-2021 の週 |
 
 ## リリース プロセス
 

@@ -3,35 +3,39 @@ title: Microsoft Edge セキュリティ更新プログラムのリリースノ�
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 11/11/2020
+ms.date: 11/13/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge セキュリティ更新プログラムのリリースノート
-ms.openlocfilehash: ce88dc7eb33355b76a073c4de54fd5f043c9d947
-ms.sourcegitcommit: ac0d3fe9a2d0b3023abd2cc22868579aa9942a9b
+ms.openlocfilehash: c6367b803994a975f07bd38f375835c17625d905
+ms.sourcegitcommit: 2b6808a4d1878fd2da886f9c6c56f592c6b200e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "11166027"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "11168762"
 ---
 # Microsoft Edge セキュリティ更新プログラムのリリースノート
 
 これらのリリースノートでは、Microsoft Edge Stable チャネルの更新に含まれているセキュリティ修正プログラムに関する情報を提供します。
 
-## 2020年11月11日
+## 2020 年 11 月 13 日
+
+Microsoft は、Chromium プロジェクトの最新のセキュリティ更新プログラムが組み込まれている最新の **Microsoft Edge Stable チャネル (バージョン 86.0.622.69)** をリリースしました。 この更新プログラムには、[CVE-2020-16013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16013) と [CVE-2020-16017](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16017) が含まれています。これらについては、Chromium チームにより実際に感染報告がある悪用が報告されています。 詳細については、「[セキュリティ更新プログラム ガイド](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002)」を参照してください。
+
+## 2020 年 11 月 11 日
 
 Microsoft は、Chromium プロジェクトの最新のセキュリティ更新プログラムを組み込んでいる最新の**Microsoft Edge Stable Channel (バージョン 86.0.622.68)** をリリースしました。 詳細については、「[セキュリティ更新プログラム ガイド](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002)」を参照してください。
 
 ## 2020 年 11 月 4 日
 
-Microsoft は、Chromium プロジェクトの最新のセキュリティ更新プログラムが組み込まれた最新の **Microsoft Edge Stable チャネル (バージョン 86.0.622.63)** をリリースしました。 この更新プログラムには、[CVE-2020-16009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16009) が含まれています。これは、Chromium チームによって、アクティブに悪用されていると報告されています。 詳細については、「[セキュリティ更新プログラム ガイド](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002)」を参照してください。
+Microsoft は、Chromium プロジェクトの最新のセキュリティ更新プログラムが組み込まれている最新の **Microsoft Edge Stable チャネル (バージョン 86.0.622.63)** をリリースしました。 この更新プログラムには、[CVE-2020-16009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16009) が含まれています。これについては、Chromium チームにより実際に感染報告がある悪用が報告されています。 詳細については、「[セキュリティ更新プログラム ガイド](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002)」を参照してください。
 
 ## 2020年 10 月 22 日
 
-Microsoft は、Chromium プロジェクトの最新のセキュリティ更新プログラムが組み込まれた最新の **Microsoft Edge Stable チャネル (バージョン86.0.622.51)** をリリースしました。 この更新プログラムには、[CVE-2020-15999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15999) が含まれています。これは、Chromium チームによって、アクティブに悪用されていると報告されています。 詳細については、「[セキュリティ更新プログラム ガイド](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002)」を参照してください。
+Microsoft は、Chromium プロジェクトの最新のセキュリティ更新プログラムが組み込まれている最新の **Microsoft Edge Stable チャネル (バージョン86.0.622.51)** をリリースしました。 この更新プログラムには、[CVE-2020-15999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15999) が含まれています。これについては、Chromium チームにより実際に感染報告がある悪用が報告されています。 詳細については、「[セキュリティ更新プログラム ガイド](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002)」を参照してください。
 
 ## 2020年 9 月
 
