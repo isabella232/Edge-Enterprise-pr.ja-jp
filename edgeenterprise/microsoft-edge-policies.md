@@ -3,7 +3,7 @@ title: Microsoft Edge ブラウザー ポリシーに関するドキュメント
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/04/2020
+ms.date: 11/13/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
-ms.openlocfilehash: 0e708707ae8465aa49ee49dcec542881a5080a57
-ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
+ms.openlocfilehash: e191d9487a0e6c0d72f2f4b47d6b6c413449cb71
+ms.sourcegitcommit: 2b6808a4d1878fd2da886f9c6c56f592c6b200e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "11155314"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "11168802"
 ---
 # Microsoft Edge - ポリシー
 
@@ -28,18 +28,6 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 
 > [!NOTE]
 > この記事は Microsoft Edge version 77 以降に適用されます。
-
-## 新しいポリシーと廃止されたポリシー
-
-次の表では、今回の更新プログラムの新しいポリシーと廃止されたポリシーを一覧表示しています。
-
-| 名前 | ステータス |
-|-|-|
-| [WebWidgetAllowed](#webwidgetallowed) | 新規 |
-| [ProxyBypassList](#proxybypasslist) | 非推奨 |
-| [ProxyMode](#proxymode) | 非推奨 |
-| [ProxyPacUrl](#proxypacurl) | 非推奨 |
-| [ProxyServer](#proxyserver) | 非推奨 |
 
 ## 使用可能なポリシー
 
@@ -4003,15 +3991,23 @@ Microsoft Edge 84 以降、このポリシーは推奨されるポリシーと�
 
   #### 説明
 
-  インストール可能な拡張機能の種類を制御し、ランタイム アクセスを制限します。
+  ポリシーを設定することにより、Microsoft Edge にインストール可能なアプリや拡張機能、操作可能なホスト、ランタイム アクセスの制限を制御します。
 
-この設定では、許可されている拡張機能の種類と、それらが操作できるホストを定義します。 値は文字列のリストで、それぞれが "extension"、"theme"、"user_script"、"hosted_app" のいずれかである必要があります。 これらの種類の詳細については、Microsoft Edge 拡張機能ドキュメントを参照してください。
+このポリシーを設定しない場合、使用可能な拡張機能やアプリの種類に制限はありません。
 
-このポリシーは、[ExtensionInstallForcelist](#extensioninstallforcelist) ポリシーを使用して強制的にインストールされる拡張機能にも影響します。
+リストにない種類の拡張機能やアプリはインストールされません。 それぞれの値は、次の文字列のいずれかである必要があります。
 
-このポリシーを有効にしている場合、リスト内の種類に一致する拡張機能のみがインストールされます。
+* "extension"
 
-このポリシーを構成していない場合、使用可能な拡張機能の種類に対する制限は強制されません。
+* "theme"
+
+* "user_script"
+
+* "hosted_app"
+
+これらの種類の詳細については、「Microsoft Edge extensions documentation (Microsoft Edge 拡張機能ドキュメント)」を参照してください。
+
+注: このポリシーは、[ExtensionInstallForcelist](#extensioninstallforcelist) を使用して強制インストールされる拡張機能やアプリにも影響します。
 
   #### サポートされている機能:
 
@@ -4202,27 +4198,21 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
   #### 説明
 
-  ユーザーによる操作なしで警告なくインストールされ、ユーザーがアンインストールしたり無効化したりすることができない拡張機能を指定します ("強制インストール")。 拡張機能が要求するすべてのアクセス許可は、将来のバージョンの拡張機能が要求する追加のアクセス許可を含め、ユーザーによる操作なしで暗黙的に付与されます。 さらに、enterprise.deviceAttributes と enterprise.platformKeys 拡張 API に対してもアクセス許可が付与されます。 (これら 2 つの API は、強制的にインストールされた拡張機能にのみ利用可能です)。
+  このポリシーを設定すると、ユーザーの操作なしに自動的にインストールされるアプリや拡張機能の一覧が指定されます。 ユーザーがこの設定をアンインストールしたり、オフにしたりすることはできません。 アクセス許可は暗黙的に付与されます。これには enterprise.deviceAttributes や enterprise.platformKeys 拡張機能 API が含まれます。 注: これら 2 つの API は、強制インストールされていないアプリや拡張機能では使用できません。
 
-このポリシーは、競合の可能性がある [ExtensionInstallBlocklist](#extensioninstallblocklist) ポリシーよりも優先されます。 強制インストール リストから拡張機能を外すと、その拡張機能は Microsoft Edge により自動的にアンインストールされます。
+このポリシーを設定していない場合、アプリや拡張機能は自動インストールされず、ユーザーは Microsoft Edge で任意のアプリをアンインストールすることができます。
 
-強制的なインストールは、Microsoft Edge アドオンの web サイトに記載されているアプリと拡張機能に限られます。この web サイトのインスタンスには以下のものは含まれません：Microsoft Active Directory ドメインに参加している Windows インスタンス、またはデバイス管理用に登録されている Windows 10 Pro またはエンタープライズインスタンス、および MDM 経由で管理されている macOS インスタンス、または MCX 経由でドメインに参加しているインスタンス
+このポリシーは、[ExtensionInstallBlocklist](#extensioninstallblocklist) ポリシーよりも優先されます。 以前に強制インストールされたアプリや拡張機能がこの一覧から削除された場合、Microsoft Edge はそのアプリや拡張機能を自動的にアンインストールします。
 
-ユーザーは開発者ツールを使用して拡張機能のソース コードを変更することができ、その結果として拡張機能が機能不全に陥る可能性があります。 これが問題になる場合は、[DeveloperToolsAvailability](#developertoolsavailability) ポリシーを設定します。
+Microsoft Windows インスタンスでは、Microsoft Edge アドオン Web サイト以外からのアプリや拡張機能については、インスタンスが Microsoft Active Directory ドメインに参加しており、Windows 10 Pro を実行している場合にのみ、強制的にインストールすることができます。
 
-リストに拡張機能を追加するには、次の形式を使用します。
+macOS インスタンスでは、Microsoft Edge アドオン Web サイト以外からのアプリや拡張機能については、インスタンスが MDM 経由で管理されているか、MCX 経由でドメインに参加している場合にのみ、強制的にインストールすることができます。
 
-[extensionID];[updateURL]
+ユーザーは開発者ツールを使用して任意の拡張機能のソース コードを変更することができ、その結果として拡張機能が正常に機能しなくなる可能性があります。 これが問題となる場合には、DeveloperToolsDisabled ポリシーを構成します。
 
-- extensionID - 開発者モードの edge://extensions で見つかる 32 文字の文字列。
+ポリシーの各リスト アイテムは、拡張機能 ID と、セミコロン (;) で区切られたオプションの "更新" URL を含む文字列です。 拡張機能 ID は 32 文字の文字列で、たとえば開発者モードの場合には、edge://extensions で見つけることができます。 指定する場合には、"更新" URL は更新プログラム マニフェスト XML ドキュメント ([https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043)) を指している必要があります。 既定では、Microsoft Edge アドオン Web サイトの更新 URL が使用されます。 このポリシーで設定されている "更新" URL は、初回のインストールにのみ使用され、以降の拡張機能の更新では、拡張機能のマニフェスト内の更新 URL が使用されます。
 
-- updateURL (オプション) は、[https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) で説明されているように、アプリまたは拡張機能の更新マニフェストの XML ドキュメントのアドレスです。 Chrome ウェブ ストアから拡張機能をインストールする場合は、Chrome ウェブ ストアの更新 URL、https://clients2.google.com/service/update2/crx を入力します。 このポリシーで設定された更新 URL は初めてのインストールにのみ使用され、その後の拡張機能の更新では、拡張機能のマニフェストで示される更新 URL が使用されます。 更新 URL を設定しない場合、拡張機能は Microsoft ストアでホストされていると見なされ、次の更新 URL https://edge.microsoft.com/extensionwebstorebase/v1/crx) が使用されます。
-
-たとえば、gggmmkjegpiggikcnhidnjjhmicpibll;https://edge.microsoft.com/extensionwebstorebase/v1/crx で、Microsoft Store の "update" URL から Microsoft Online アプリをインストールします。 拡張機能のホスティングの詳細については、「[https://go.microsoft.com/fwlink/?linkid=2095044](https://go.microsoft.com/fwlink/?linkid=2095044)」を参照してください。
-
-このポリシーを構成していない場合、拡張機能は自動的にインストールされず、ユーザーは Microsoft Edge の任意の拡張機能をアンインストールすることができます。
-
-このポリシーは InPrivate モードには適用されません。
+注: このポリシーは InPrivate モードには適用されません。 拡張機能のホスティングについて読む (https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating)。
 
   #### サポートされている機能:
 
