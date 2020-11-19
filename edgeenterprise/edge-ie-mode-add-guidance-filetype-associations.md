@@ -1,23 +1,23 @@
 ---
-title: '[プログラムから開く] コンテキスト メニューに Internet Explorer モードを追加する'
+title: ファイル拡張子と Internet Explorer モードの関連付け
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 11/13/2020
+ms.date: 11/16/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: '[プログラムから開く] コンテキスト メニューに Internet Explorer モードを追加する'
-ms.openlocfilehash: 6453cd2587e3bec10404d2491914debb999fcf3f
-ms.sourcegitcommit: e3c80274a9b8ef15761c968214b3cba593476132
+description: ファイル拡張子と Internet Explorer モードの関連付け
+ms.openlocfilehash: c80732239b911f7cd3d615e9ce1e480db2749f17
+ms.sourcegitcommit: fc0ac6bb6655d1f6e2de7c838f275779cd7a5de6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "11168489"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "11175180"
 ---
-# [プログラムから開く] コンテキスト メニューに Internet Explorer モードを追加する
+# ファイル拡張子と Internet Explorer モードの関連付け
 
 この記事では、Internet Explorer モードの Microsoft Edge とデスクトップ アプリケーションのファイル拡張子を関連付ける方法について説明します。
 

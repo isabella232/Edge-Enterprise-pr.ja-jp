@@ -1,29 +1,45 @@
 ---
-ms.openlocfilehash: c2f9865ca3e2eb8ee2d59b5019c2dbd80fb94ec4
-ms.sourcegitcommit: 52b82096b45de33794d85703bf7c84725e18d1db
+ms.openlocfilehash: e707310902d2c114ced45b218af1da8d625e8011
+ms.sourcegitcommit: fc0ac6bb6655d1f6e2de7c838f275779cd7a5de6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "11162217"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "11175214"
 ---
 <!-- This file is generated automatically each week. Changes made to this file will be overwritten.-->
+
+## 2020 年 11 月 9 日の週
+
+| 公開日 |トピックのタイトル | 変更点 |
+|------|------------|--------|
+| 2020/11/9 | [Beta チャネルに関する Microsoft Edge のリリース ノート](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>マイナーバージョン 87.0.664.30 の修正プログラム。 | 変更されました |
+| 2020/11/11 | [ビジネス向けの Microsoft Edge セキュリティ](/DeployEdge/ms-edge-security-for-business)<br>Microsoft Endpoint DLP に関する情報の更新。 | 変更されました |
+| 2020/11/11 | [Stable チャネルに関する Microsoft Edge リリース ノート](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>マイナーバージョン 86.0.622.68 のセキュリティ更新プログラム。 | 変更されました |
+| 2020/11/11 | [Microsoft Edge セキュリティ更新プログラムのリリース ノート](/DeployEdge/microsoft-edge-relnotes-security)<br>安定したマイナー バージョン 86.0.622.68 のセキュリティ更新プログラム。 | 変更されました |
+| 2020/11/12 | [Microsoft Edge Update のポリシーに関するドキュメント](/DeployEdge/microsoft-edge-update-policies)<br>メタデータの更新。 | 変更されました |
+| 2020/11/13 | [Stable チャネルに関する Microsoft Edge リリース ノート](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>マイナー バージョン 86.0.622.69 のセキュリティ更新プログラム。 CVE-2020-16013 と CVE-2020-16017 の呼び出し、実際に感染報告がある悪用。 | 変更されました |
+| 2020/11/13 | [Microsoft Edge セキュリティ更新プログラムのリリース ノート](/DeployEdge/microsoft-edge-relnotes-security)<br>安定したマイナーバージョン 86.0.622.69 のセキュリティ更新プログラム。 CVE-2020-16013 と CVE-2020-16017 の呼び出し、実際に感染報告がある悪用。  | 変更されました |
+| 2020/11/13 | [Microsoft Edge ブラウザー ポリシーに関するドキュメント](/DeployEdge/microsoft-edge-policies)<br>ポリシーの更新。 | 変更されました |
+| 2020/11/13 | [Microsoft Edge WebView2 ポリシーに関するドキュメント](/DeployEdge/microsoft-edge-webview-policies)<br>形式とメタデータの更新。 | 変更されました |
+| 2020/11/13 | [Microsoft Edge リリース スケジュール](/DeployEdge/microsoft-edge-release-schedule)<br>ベータ版の 89 と 89 の日付の変更。 ベータ版と安定版用のビルド 90 と 91 の追加。  | 変更されました |
+
 
 ## 2020 年 11 月 2 日の週
 
 
 | 公開日 |トピックのタイトル | 変更点 |
 |------|------------|--------|
-| 11/2/2020 | [Stable チャネルに関する Microsoft Edge リリース ノート](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>マイナー バージョン 86.0.622.61 のバグ修正。 | 変更されました |
-| 11/2/2020 | [最新の Web サイトに対応するための Internet Explorer から Microsoft Edge へのリダイレクト](/DeployEdge/edge-learnmore-neededge)<br>リダイレクトの設定を更新します。 | 変更されました |
-| 11/2/2020 | [Beta チャネルに関する Microsoft Edge のリリース ノート](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>マイナー バージョン 87.0.664.24 のバグ修正。 | 変更されました |
-| 11/3/2020 | [最新の Web サイトに対応するための Internet Explorer から Microsoft Edge へのリダイレクト](/DeployEdge/edge-learnmore-neededge)<br>ポリシー情報を更新します。 | 変更されました |
-| 11/4/2020 | [エンタープライズ環境の Edge に関してよく寄せられる質問](/DeployEdge/faqs-edge-in-the-enterprise)<br>WSUS を使用して Microsoft Edge を展開するためのサポートを更新します。 | 変更されました |
-| 11/4/2020 | [Microsoft Edge セキュリティ更新プログラムのリリース ノート](/DeployEdge/microsoft-edge-relnotes-security)<br>永続的マイナー バージョンの 86.0.622.63 のセキュリティ リリース。 CVE-2020-16009 にコール アウトします。 | 変更されました |
-| 11/4/2020 | [Stable チャネルに関する Microsoft Edge リリース ノート](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>永続的マイナー バージョン 86.0.622.63。 セキュリティ更新プログラムと CVE-2020-16009 にコール アウトします。 | 変更されました |
-| 11/4/2020 | [Microsoft Edge の展開を計画する](/DeployEdge/deploy-edge-plan-deployment)<br>アプリのテストとサポートのセクションを更新します。 | 変更されました |
-| 11/4/2020 | [Microsoft Edge ブラウザー ポリシーに関するドキュメント](/DeployEdge/microsoft-edge-policies)<br>新しい 1 つのポリシーと廃止された 4 つのポリシーで更新します。 | 変更されました |
-| 11/4/2020 | [Microsoft Edge WebView2 ポリシー ドキュメント](/DeployEdge/microsoft-edge-webview-policies)<br>ポリシー記事の形式を更新します。 | 変更されました |
-| 11/6/2020 | [Microsoft Edge の準備完了](/DeployEdge/deploy-edge-ready-for-edge)<br>サード パーティのアプリケーションの互換性とサポートに関する情報。 | 新規 |
+| 11/2/2020 | [Stable チャネルに関する Microsoft Edge リリース ノート](/DeployEdge/microsoft-edge-relnote-stable-channel) | 変更されました |
+| 11/2/2020 | [最新の Web サイトに対応するための Internet Explorer から Microsoft Edge へのリダイレクト](/DeployEdge/edge-learnmore-neededge) | 変更されました |
+| 11/2/2020 | [Beta チャネルに関する Microsoft Edge のリリース ノート](/DeployEdge/microsoft-edge-relnote-beta-channel) | 変更されました |
+| 11/3/2020 | [最新の Web サイトに対応するための Internet Explorer から Microsoft Edge へのリダイレクト](/DeployEdge/edge-learnmore-neededge) | 変更されました |
+| 11/4/2020 | [エンタープライズ環境の Edge に関してよく寄せられる質問](/DeployEdge/faqs-edge-in-the-enterprise) | 変更されました |
+| 11/4/2020 | [Microsoft Edge セキュリティ更新プログラムのリリース ノート](/DeployEdge/microsoft-edge-relnotes-security) | 変更されました |
+| 11/4/2020 | [Stable チャネルに関する Microsoft Edge リリース ノート](/DeployEdge/microsoft-edge-relnote-stable-channel) | 変更されました |
+| 11/4/2020 | [Microsoft Edge の展開を計画する](/DeployEdge/deploy-edge-plan-deployment) | 変更されました |
+| 11/4/2020 | [Microsoft Edge ブラウザー ポリシーに関するドキュメント](/DeployEdge/microsoft-edge-policies) | 変更されました |
+| 11/4/2020 | [Microsoft Edge WebView2 ポリシーに関するドキュメント](/DeployEdge/microsoft-edge-webview-policies) | 変更されました |
+| 11/6/2020 | [Microsoft Edge の準備完了](/DeployEdge/deploy-edge-ready-for-edge) | 変更されました |
 
 
 ## 2020 年 10 月 26 日の週
@@ -70,19 +86,3 @@ ms.locfileid: "11162217"
 | 2020 年 10 月 15 日 | [Microsoft Edge エンタープライズのドキュメント](/DeployEdge/index) | 変更されました |
 | 2020 年 10 月 16 日 | [Stable チャネルに関する Microsoft Edge リリース ノート](/DeployEdge/microsoft-edge-relnote-stable-channel) | 変更されました |
 | 2020 年 10 月 16 日 | [Beta チャネルに関する Microsoft Edge のリリース ノート](/DeployEdge/microsoft-edge-relnote-beta-channel) | 変更されました |
-
-
-## 2020年 10 月 05日の週
-
-
-| 公開日 |トピックのタイトル | 変更点 |
-|------|------------|--------|
-| 10/5/2020 | [Microsoft Edge キオスク モードを構成する](/DeployEdge/microsoft-edge-configure-kiosk-mode) | 変更されました |
-| 10/5/2020 | [Active Directory (AD) ユーザー用のオンプレミス同期](/DeployEdge/microsoft-edge-on-premises-sync) | 変更されました |
-| 10/6/2020 | [Stable チャネルに関する Microsoft Edge リリース ノート](/DeployEdge/microsoft-edge-relnote-stable-channel) | 変更されました |
-| 10/7/2020 | [Beta チャネルに関する Microsoft Edge のリリース ノート](/DeployEdge/microsoft-edge-relnote-beta-channel) | 変更されました |
-| 10/8/2020 | [Microsoft Edge ブラウザー ポリシーに関するドキュメント](/DeployEdge/microsoft-edge-policies) | 変更されました |
-| 10/8/2020 | [Microsoft Edge Update のポリシーに関するドキュメント](/DeployEdge/microsoft-edge-update-policies) | 変更されました |
-| 10/9/2020 | [Stable チャネルに関する Microsoft Edge リリース ノート](/DeployEdge/microsoft-edge-relnote-stable-channel) | 変更されました |
-| 10/9/2020 | [Microsoft Edge セキュリティ更新プログラムのリリースノート](/DeployEdge/microsoft-edge-relnotes-security) | 変更されました |
-| 10/9/2020 | [Microsoft Edge リリース スケジュール](/DeployEdge/microsoft-edge-release-schedule) | 変更されました |

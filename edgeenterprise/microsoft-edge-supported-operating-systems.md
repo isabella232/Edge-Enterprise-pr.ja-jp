@@ -3,19 +3,19 @@ title: Microsoft Edge でサポートされているオペレーティング シ
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 10/30/2020
+ms.date: 11/16/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge でサポートされているオペレーティング システム
-ms.openlocfilehash: cb7998fd8ee47b376df94f52bfc5f636687d848f
-ms.sourcegitcommit: 0c713487a811a2837abe4a3b08236f6815e65773
+ms.openlocfilehash: 62b8df0ed23ed72d5e29008ddea8aa7116317616
+ms.sourcegitcommit: fc0ac6bb6655d1f6e2de7c838f275779cd7a5de6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "11145889"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "11175170"
 ---
 # Microsoft Edge でサポートされているオペレーティング システム
 
@@ -29,21 +29,25 @@ ms.locfileid: "11145889"
 > [!NOTE]
 > 製品の機能とその可用性は、以前のオペレーティング システムでは異なる場合があります。 Microsoft Edge が正常にインストールされるようにするには、次に示すオペレーティング システムの最新バージョンを使用します。 このガイダンスには、該当する最新の累積更新プログラムが含まれています。
 
-次のバージョンの Microsoft Edge は、以下のオペレーティング システムでサポートされています。
+Microsoft Edge は最新のライフサイクル ポリシーに準拠しており、以下のオペレーティング システムでサポートされています。
 
 ### Windows クライアント
 
-- Windows 7**
+- Windows 7 **
 - Windows 8.1
 - Windows 10 SAC RS3 以降 **_
 - Windows 10 Enterprise 2015 LTSC
 - Windows 10 Enterprise 2016 LTSC
 - Windows 10 Enterprise 2019 LTSC
 - Windows 10 Enterprise マルチ セッション
+- Windows 10 IoT Enterprise SAC _***
+- Windows 10 IoT Enterprise 2019 LTSC ****
+
+
 
 ### Windows Server
 
-- Windows Server 2008 R2_*
+- Windows Server 2008 R2 **
 - Windows Server 2012
 - Windows Server 2012 R2
 - Windows Server 2016 (LTSC)
@@ -51,9 +55,11 @@ ms.locfileid: "11145889"
 - Windows Server (SAC)
 
 > [!IMPORTANT]
-> ** Windows 7 および Windows Server 2008 R2 では、2021 年 7 月 15 日まで Microsoft Edge のサポートを継続します。 これらのオペレーティング システムはサポートしていません。Microsoft は、Windows 10 などのサポートされているオペレーティング システムに移行することを推奨しています。 Microsoft Edge は Web のセキュリティを強化するのに役立ちますが、PC は依然としてセキュリティ リスクに対して脆弱です。 これらのオペレーティング システムで IE モードをサポートするには、デバイスに [Windows 7 の拡張セキュリティ更新プログラム](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7)が必要になります。 Windows 7 の拡張セキュリティ更新プログラムがないと、Internet Explorer の機能はセキュリティ リスクに対して脆弱です。 さらに、IE モード機能は、拡張セキュリティ更新プログラムによってサービスが継続されないと機能しなくなる場合があります。  
+> ** Windows 7 および Windows Server 2008 R2 では、2021 年 7 月 15 日まで Microsoft Edge のサポートを継続します。 これらのオペレーティング システムはサポートしていません。Microsoft は、Windows 10 などのサポートされているオペレーティング システムに移行することを推奨しています。 Microsoft Edge は Web のセキュリティを強化するのに役立ちますが、PC は依然としてセキュリティ リスクに対して脆弱です。 これらのオペレーティング システムで IE モードをサポートするには、デバイスに [Windows 7 の拡張セキュリティ更新プログラム](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7)が必要になります。 Windows 7 の拡張セキュリティ更新プログラムがないと、Internet Explorer の機能はセキュリティ リスクに対して脆弱です。 また、拡張セキュリティ更新プログラムによる継続的なサービス提供がないと、IE モード機能が動作しなくなる場合があります。  
 >
-> *** 上記と同じ方法で、サポート対象外で Microsoft Edge がサポートされている Windows 10 SAC のリリースについても、保護された状態を維持するには、サポートされている Win10 SAC リリースにできるだけ早くアップグレードすることをお勧めします。 この状態での Microsoft Edge のサポートは、OS がサポートされた状態に移行するための暫定措置と見なす必要があります。
+> **_ 上記と同様に、サポート期間が終了している Windows 10 SAC リリースで Microsoft Edge がサポートされている場合には、できるだけ早くサポートされている Windows 10 SAC リリースにアップグレードし、セキュリティで保護された状態を確保することをお勧めします。 この状態でサポートされている Microsoft Edge は、OS がサポートされている状態に移行するための暫定措置として見なす必要があります。
+>
+> _*** Microsoft Edge OPK は、IoT の OEM が Windows 10 IoT Enterprise ベースのソリューションの一部としてプリインストールして配布するために、MOO で利用可能です。
 
 ### macOS
 

@@ -3,19 +3,19 @@ title: 最新の Web サイトに対応するための Internet Explorer から 
 ms.author: laannade
 author: dan-wesley
 manager: ratetali
-ms.date: 11/03/2020
+ms.date: 11/16/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 最新の Web サイトに対応するための Internet Explorer から Microsoft Edge へのリダイレクト
-ms.openlocfilehash: d822bf4cef76fe4c0298133b47ed80f5d1242b3d
-ms.sourcegitcommit: 73fec3998f26d110252ace621be01f1c1142cf57
+ms.openlocfilehash: c9c64a55df3aeecaebaab3675296c5594612b94f
+ms.sourcegitcommit: fc0ac6bb6655d1f6e2de7c838f275779cd7a5de6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "11151097"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "11175200"
 ---
 # 最新の Web サイトに対応するための Internet Explorer から Microsoft Edge へのリダイレクト
 
@@ -31,7 +31,7 @@ Microsoft Edge 安定バージョン 87 から、手動で別のブラウザー�
 ユーザーが Internet Explorer と互換性のないサイトにアクセスすると、自動的に Microsoft Edge にリダイレクトされます。 この記事では、リダイレクトのユーザー エクスペリエンスや、自動リダイレクトの構成や無効化に使用するグループ ポリシーについて説明します。
 
 > [!NOTE]
-> Microsoft は、Internet Explorer との互換性がないことが知られているすべてのサイトの一覧を保持しています。
+> Microsoft は、Internet Explorer との互換性がないことが知られているすべてのサイトの一覧を保持しています。 詳細については、「[互換性のないサイトの一覧の更新を要求する](https://docs.microsoft.com/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)」を参照してください。
 
 ## リダイレクト エクスペリエンス
 
@@ -113,5 +113,6 @@ Microsoft Edge 安定バージョン 87 にアップデートした後にリダ�
 
 ## 関連項目
 
+- [互換性のないサイトの一覧の更新を要求する](https://docs.microsoft.com/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
 - [Microsoft Edge ポリシー](https://docs.microsoft.com/deployedge/microsoft-edge-policies)
