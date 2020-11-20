@@ -3,19 +3,19 @@ title: Microsoft Edge でのデータ損失防止
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 10/08/2020
+ms.date: 11/18/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge (DLP) でのデータ損失防止
-ms.openlocfilehash: 59c1b68c0526a49a2ee30283893707852514828d
-ms.sourcegitcommit: 2af303fc97e8493024e2359fa2e8be162ab95a59
+ms.openlocfilehash: 72f670caf34a09cdfc7f47575f688c2a39d3c221
+ms.sourcegitcommit: 5a5be508c3c9c57187aca821b4a16f639abdd7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "11104620"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "11176944"
 ---
 # Microsoft Edge (DLP) でのデータ損失防止
 
@@ -27,12 +27,17 @@ ms.locfileid: "11104620"
 
 Microsoft Edge は、Microsoft エンドポイント DLP と Windows 情報保護 (WIP) という 2 つの異なる DLP ソリューションをネイティブにサポートしています。
 
-## Microsoft エンドポイント DLP
+## Microsoft エンドポイント データ損失防止 (エンドポイント DLP)
 
-Microsoft エンドポイント DLP は、データ中心の保護などの最新のコンセプトを用いた次世代の DLP です。 これは Windows 10 と Microsoft Edge に組み込まれているので、デバイスに追加のエージェントやプラグインは必要ありません。 エンドポイント DLP の詳細については、「[Learn about Microsoft 365 Endpoint data loss prevention (Microsoft 365 エンドポイント データ損失防止について)](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide)」を参照してください。
+Microsoft エンドポイント DLP は、データ中心の保護などの先進の概念を使用して、次世代のデータ損失防止機能を備えています。 これは Windows 10 と Microsoft Edge に組み込まれているため、デバイスに追加のエージェントやプラグインは必要ありません。
 
 > [!NOTE]
 > これは、Microsoft Edge バージョン 85 以降に適用されます。
+
+エンドポイント DLP の詳細については、次のページをご覧ください。
+
+- [Microsoft 365 エンドポイントのデータ損失防止について](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide)
+- [エンドポイントのデータ損失防止の使用を開始する](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-getting-started?view=o365-worldwide)
 
 Microsoft Edge は、管理者が構成した機密ファイル用のポリシーを強制し、非準拠アクティビティの監査イベントを記録します。
 

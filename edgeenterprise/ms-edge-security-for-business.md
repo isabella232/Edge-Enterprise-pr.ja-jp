@@ -3,19 +3,19 @@ title: Microsoft Edge ビジネス向けのセキュリティ
 ms.author: seanlynd
 author: seanongit
 manager: chuckf
-ms.date: 11/11/2020
+ms.date: 11/18/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge ビジネス向けのセキュリティ
-ms.openlocfilehash: e2f45d49d8f4960f3f2263098ff2eb7d0103b6ea
-ms.sourcegitcommit: 5efa7f6196804da205c3deff4ba7917a94ffcf4f
+ms.openlocfilehash: 52e55c64aad193072c44f6bc76e5c66808a5439d
+ms.sourcegitcommit: 5a5be508c3c9c57187aca821b4a16f639abdd7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "11165943"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "11176954"
 ---
 # Microsoft Edge ビジネス向けのセキュリティ
 
@@ -56,10 +56,12 @@ IT 管理者は、外部の脅威以外にも、内部リスクに対して保�
 > [!NOTE]
 > Windows 情報保護 (WIP) の構成には、Microsoft Intune または Microsoft Endpoint Configuration Manager のライセンスが必要です。もしくは、サード パーティのモバイル デバイス管理 (MDM) ソリューションを使用できますが、これには追加のライセンス要件がある場合があります。
 
-**Microsoft ENDPOINT DLP は、Microsoft Edge でネイティブでのみサポートされます**。 Microsoft エンドポイントのデータ損失防止 (DLP) は Microsoft セキュリティ センターと統合し、情報保護を Microsoft Edge に拡張することで、非対応のアクティビティについてユーザーに警告し、ユーザーがオンラインで作業している間にデータの損失を防ぐのに役立ちます。 クレジット カード番号や行政上の ID (社会保障番号など)、財務情報を含むファイルなど、管理者が定義した基準と一致する企業内の機密データを検出し、ラベルを付けます。Microsoft の情報保護ポリシーは、機密情報の識別子や IT 管理者が既にカスタマイズしたポリシーも含め、Microsoft エンドポイント データ損失防止に追加の再構成なしで展開できます。 これは IT 管理者にとって、情報保護のシームレスな展開です。
+**Microsoft エンドポイントのデータ損失防止 (エンドポイント DLP) は、Microsoft Edge でネイティブでのみサポートされます**。 エンドポイント DLP は Microsoft Security Center と統合され、Microsoft Edge の情報保護を強化して、ユーザーに対して非準拠アクティビティを通知し、ユーザーがオンラインで作業しているときにデータの損失を防ぐことができます。 クレジット カード番号や行政上の ID (社会保障番号など)、財務情報を含むファイルなど、管理者が定義した基準と一致する企業内の機密データを検出し、ラベルを付けます。Microsoft の情報保護ポリシーは、機密情報の識別子や IT 管理者が既にカスタマイズしたポリシーも含め、Microsoft エンドポイント データ損失防止に追加の再構成なしで展開できます。 これは IT 管理者にとって、情報保護のシームレスな展開です。
+
+エンドポイント DLP の前提条件とその設定方法の詳細については、「[エンドポイントのデータ損失防止の使用を開始する](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-getting-started?view=o365-worldwide)」を参照してください。
 
 > [!NOTE]
-> Microsoft エンドポイントのデータ損失防止には、Microsoft 365 E5 または Microsoft 365 E5 Compliance のサブスクリプションが必要です。
+> Microsoft 365 E5 または Microsoft 365 E5 Compliance サブスクリプションは、Microsoft エンドポイントのデータ損失防止のために必要です。
 
 ## 関連項目
 
