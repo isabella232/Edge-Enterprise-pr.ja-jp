@@ -3,7 +3,7 @@ title: Microsoft Edge ブラウザー ポリシーに関するドキュメント
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/13/2020
+ms.date: 11/19/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
-ms.openlocfilehash: e191d9487a0e6c0d72f2f4b47d6b6c413449cb71
-ms.sourcegitcommit: 2b6808a4d1878fd2da886f9c6c56f592c6b200e1
+ms.openlocfilehash: 77d79f36ba91c5966ffb8dde66ba7ec14934f39e
+ms.sourcegitcommit: fc6f86f92f2fecac89028d77524d123bfaf2111d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "11168802"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "11181988"
 ---
 # Microsoft Edge - ポリシー
 
@@ -28,6 +28,17 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 
 > [!NOTE]
 > この記事は Microsoft Edge version 77 以降に適用されます。
+
+## 新規ポリシーと非推奨になったポリシー
+
+次の表は、この更新の新規ポリシーと非推奨になったポリシーの一覧です。
+
+| 名前 | ステータス |
+|-|-|
+|[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)| 新規 |
+|[BlockExternalExtensions](#blockexternalextensions) | 新規 |
+|[ShowMicrosoftRewards](#showmicrosoftrewards) | 新規 |
+|[ProactiveAuthEnabled](#proactiveauthenabled) | 非推奨 |
 
 ## 使用可能なポリシー
 
@@ -41,8 +52,9 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[キオスク モードの設定](#kiosk-mode-settings)|[ネイティブ メッセージング](#native-messaging)|
 |[パスワード マネージャーと保護](#password-manager-and-protection)|[パフォーマンス](#performance)|
 |[印刷](#printing)|[プロキシ サーバー](#proxy-server)|
-|[SmartScreen の設定](#smartscreen-settings)|[スタートアップ、ホーム ページ、新規タブ ページ](#startup-home-page-and-new-tab-page)|
-|[補足](#additional)|
+|[スリーピング タブの設定](#sleeping-tabs-settings)|[SmartScreen の設定](#smartscreen-settings)|
+|[スタートアップ、ホーム ページ、新規タブ ページ](#startup-home-page-and-new-tab-page)|[補足](#additional)|
+
 
 ### [*Application Guard の設定*](#application-guard-settings-policies)
 
@@ -116,6 +128,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 
 |ポリシー名|キャプション|
 |-|-|
+|[BlockExternalExtensions](#blockexternalextensions)|外部拡張機能がインストールされないようにブロックする|
 |[ExtensionAllowedTypes](#extensionallowedtypes)|許可されている拡張機能の種類を構成する|
 |[ExtensionInstallAllowlist](#extensioninstallallowlist)|特定の拡張機能のインストールを許可する|
 |[ExtensionInstallBlocklist](#extensioninstallblocklist)|インストールできない拡張機能を制御する|
@@ -180,6 +193,13 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[ProxyPacUrl](#proxypacurl)|プロキシ .pac ファイルの URL を設定する (非推奨)|
 |[ProxyServer](#proxyserver)|プロキシ サーバーのアドレスまたは URL を構成する (非推奨)|
 |[ProxySettings](#proxysettings)|プロキシの設定|
+### [*スリーピング タブの設定*](#sleeping-tabs-settings-policies)
+
+|ポリシー名|キャプション|
+|-|-|
+|[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)|特定のサイトでスリーピング タブをブロックする|
+|[SleepingTabsEnabled](#sleepingtabsenabled)|スリーピング タブを構成する|
+|[SleepingTabsTimeout](#sleepingtabstimeout)|スリーピング タブ用にバックグラウンド タブの非アクティブ タイムアウトを設定する|
 ### [*SmartScreen の設定*](#smartscreen-settings-policies)
 
 |ポリシー名|キャプション|
@@ -341,7 +361,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[PaymentMethodQueryEnabled](#paymentmethodqueryenabled)|利用可能な支払い方法について Web サイトがクエリを実行することを許可する|
 |[PersonalizationReportingEnabled](#personalizationreportingenabled)|Microsoft に閲覧履歴を送信して、広告、検索、ニュースのカスタマイズを許可する|
 |[PinningWizardAllowed](#pinningwizardallowed)|タスク バーへのピン留めウィザードを許可する|
-|[ProactiveAuthEnabled](#proactiveauthenabled)|プロアクティブ認証を有効にする|
+|[ProactiveAuthEnabled](#proactiveauthenabled)|プロアクティブ認証を有効にする (非推奨)|
 |[PromotionalTabsEnabled](#promotionaltabsenabled)|フルタブのプロモーション コンテンツを有効にする|
 |[PromptForDownloadLocation](#promptfordownloadlocation)|ダウンロードしたファイルの保存場所を確認する|
 |[QuicAllowed](#quicallowed)|QUIC プロトコルを許可する|
@@ -370,6 +390,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|特定のサイトでのセンサーへのアクセスをブロックする|
 |[SerialAskForUrls](#serialaskforurls)|特定のサイトでのシリアル API を許可する|
 |[SerialBlockedForUrls](#serialblockedforurls)|特定のサイトでのシリアル API をブロックする|
+|[ShowMicrosoftRewards](#showmicrosoftrewards)|Microsoft Rewards のエクスペリエンスを表示する|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|お気に入り バーにMicrosoft Office のショートカットを表示する (非推奨)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Signed HTTP Exchange (SXG) のサポートを有効にする|
 |[SitePerProcess](#siteperprocess)|すべてのサイトでのサイトの分離を有効にする|
@@ -3979,6 +4000,71 @@ Microsoft Edge 84 以降、このポリシーは推奨されるポリシーと�
 
   [ページのトップへ](#microsoft-edge---policies)
 
+  ### BlockExternalExtensions
+
+  #### 外部拡張機能がインストールされないようにブロックする
+
+  
+  
+  #### サポートされているバージョン:
+
+  - Windows と macOS での 88 以降
+
+  #### 説明
+
+  外部拡張機能のインストールを制御します。
+
+この設定を有効にすると、外部拡張機能はインストールされないようにブロックされます。
+
+この設定を無効にした場合、または未設定のままにした場合、外部拡張機能のインストールは許可されます。
+
+外部拡張機能とそのインストールについては、https://docs.microsoft.com/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options で文書化されています。
+
+
+  #### サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: いいえ - ブラウザの再起動が必要
+
+  #### ［データの種類］:
+
+  - ブール値
+
+  #### Windows の情報と設定
+
+  ##### グループ ポリシー (ADMX) 情報
+
+  - GP 固有の名前: BlockExternalExtensions
+  - GP 名: 外部拡張機能がインストールされないようにブロックする
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/拡張機能
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - 値の名前: BlockExternalExtensions
+  - 値の種類: REG_DWORD
+
+  ##### サンプル値:
+
+```
+0x00000001
+```
+
+  #### Mac の情報と設定
+  
+  - 基本設定キー名: BlockExternalExtensions
+  - サンプル値:
+``` xml
+<true/>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
   ### ExtensionAllowedTypes
 
   #### 許可されている拡張機能の種類を構成する
@@ -6581,6 +6667,225 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 
   [ページのトップへ](#microsoft-edge---policies)
 
+  ## スリーピング タブの設定に関するポリシー
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### SleepingTabsBlockedForUrls
+
+  #### 特定のサイトでスリーピング タブをブロックする
+
+  
+  
+  #### サポートされているバージョン:
+
+  - Windows と macOS での 88 以降
+
+  #### 説明
+
+  スリーピング タブによってスリープ状態にされないサイトのリストを URL パターンに基づいて定義します。
+
+ポリシー [SleepingTabsEnabled](#sleepingtabsenabled) が無効になっている場合、このリストは使用されず、サイトが自動的にスリープ状態になることはありません。
+
+このポリシーを構成しない場合、ユーザーの個人用構成でブロックされていない限り、すべてのサイトはスリープ状態にすることができます。
+
+  #### サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: はい
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+
+  - 文字列のリスト
+
+  #### Windows の情報と設定
+
+  ##### グループ ポリシー (ADMX) 情報
+
+  - GP 固有の名前: SleepingTabsBlockedForUrls
+  - GP 名: 特定のサイトでスリーピング タブをブロックする
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/スリーピング タブの設定
+  - GP パス (推奨): 管理用テンプレート/Microsoft Edge - 既定の設定 (ユーザーが上書き可能)/スリーピング タブの設定
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls
+  - パス (推奨): SOFTWARE\Policies\Microsoft\Edge\Recommended\SleepingTabsBlockedForUrls
+  - 値の名前: 1、2、3、...
+  - 値の種類: REG_SZ の一覧
+
+  ##### サンプル値:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu"
+
+```
+
+  #### Mac の情報と設定
+  
+  - 基本設定キーの名前: SleepingTabsBlockedForUrls
+  - サンプル値:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### SleepingTabsEnabled
+
+  #### スリーピング タブを構成する
+
+  
+  
+  #### サポートされているバージョン:
+
+  - Windows と macOS での 88 以降
+
+  #### 説明
+
+  このポリシー設定を使用すると、スリーピング タブを有効にするかどうかを構成できます。 スリーピング タブは、アイドル状態のバックグラウンド タブをスリープ状態にすることで、CPU、バッテリー、メモリの使用量を削減します。 Microsoft Edge ではヒューリスティックを使用して、通知の表示、サウンドの再生、動画のストリーミングなど、バックグラウンドで役に立つ作業を行うタブをスリープ状態にしないようにします。 既定では、スリーピング タブはオンになっています。
+
+ポリシー [SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls) を構成することで、個々のサイトがスリープ状態にされるのをブロックすることができます。
+
+この設定を有効にすると、スリーピング タブはオンになります。
+
+この設定を無効にすると、スリーピング タブはオフになります。
+
+この設定を構成しない場合、ユーザーはスリーピング タブを使うかどうかを選ぶことができます。
+
+  #### サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: はい
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+
+  - ブール値
+
+  #### Windows の情報と設定
+
+  ##### グループ ポリシー (ADMX) 情報
+
+  - GP 固有の名前: SleepingTabsEnabled
+  - GP 名: スリーピング タブを構成する
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/スリーピング タブの設定
+  - GP パス (推奨): 管理用テンプレート/Microsoft Edge - 既定の設定 (ユーザーが上書き可能)/スリーピング タブの設定
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - 値の名前: SleepingTabsEnabled
+  - 値の種類: REG_DWORD
+
+  ##### サンプル値:
+
+```
+0x00000001
+```
+
+  #### Mac の情報と設定
+  
+  - 基本設定キーの名前: SleepingTabsEnabled
+  - サンプル値:
+``` xml
+<true/>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### SleepingTabsTimeout
+
+  #### スリーピング タブ用にバックグラウンド タブの非アクティブ タイムアウトを設定する
+
+  
+  
+  #### サポートされているバージョン:
+
+  - Windows と macOS での 88 以降
+
+  #### 説明
+
+  このポリシー設定を使用すると、スリーピング タブが有効になっている場合に、非アクティブなバックグラウンド タブが自動的にスリープ状態になるまでのタイムアウト (秒単位) を構成できます。 既定では、このタイムアウトは 7, 200 秒 (2 時間) です。
+
+ポリシー [SleepingTabsEnabled](#sleepingtabsenabled) が有効になっているか、構成されておらず、ユーザーがスリーピング タブの設定を有効にしている場合にのみ、タブは自動的にスリープ状態になります。
+
+このポリシーを構成しない場合、ユーザーはタイムアウト値を選ぶことができます。
+
+ポリシー オプション マッピング:
+
+* 5Minutes (300) = 5 分間の非アクティブ状態
+
+* 15Minutes (900) = 15 分間の非アクティブ状態
+
+* 30Minutes (1800) = 30 分間の非アクティブ状態
+
+* 1Hour (3600) = 1 時間 の非アクティブ状態
+
+* 2Hours (7200) = 2 時間の非アクティブ状態
+
+* 3Hours (10800) = 3 時間の非アクティブ状態
+
+* 6Hours (21600) = 6 時間の非アクティブ状態
+
+* 12Hours (43200) = 12時間の非アクティブ状態
+
+このポリシーを構成する場合は、上記の情報を使用します。
+
+  #### サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: はい
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+
+  - Integer
+
+  #### Windows の情報と設定
+
+  ##### グループ ポリシー (ADMX) 情報
+
+  - GP 固有の名前: SleepingTabsTimeout
+  - GP 名: スリーピング タブ用にバックグラウンド タブの非アクティブ タイムアウトを設定する
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/スリーピング タブの設定
+  - GP パス (推奨): 管理用テンプレート/Microsoft Edge - 既定の設定 (ユーザーが上書き可能)/スリーピング タブの設定
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - 値の名前: SleepingTabsTimeout
+  - 値の種類: REG_DWORD
+
+  ##### サンプル値:
+
+```
+0x00000384
+```
+
+  #### Mac の情報と設定
+  
+  - 基本設定キーの名前: SleepingTabsTimeout
+  - サンプル値:
+``` xml
+<integer>900</integer>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
   ## SmartScreen の設定に関するポリシー
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -7361,7 +7666,9 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
 
   新規タブ ページの既定の URL を構成します。
 
-このポリシーは、新規タブが作成されたとき (新規ウィンドウが開いたときを含む) に開くページを決定します。 また、新規タブ ページを開くように設定されている場合には、スタートアップ ページにも影響します。
+このポリシーの推奨バージョンは現在機能せず、必須バージョンとまったく同じように機能します。
+
+このポリシーは、新規タブを作成したとき (新規ウィンドウを開いたときを含む) に開くページを決定します。 また、新規タブ ページを開くように設定されている場合には、スタートアップ ページにも影響します。
 
 このポリシーは、起動時に開くページについては決定しません。これは [RestoreOnStartup](#restoreonstartup) ポリシーによって制御されます。 また、新規タブ ページを開くように設定されている場合には、ホーム ページには影響しません。
 
@@ -7889,7 +8196,7 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 
   - 必須にすることができるか: はい
   - 推奨にすることができるか: いいえ
-  - 動的なポリシーの更新: はい
+  - 動的なポリシーの更新: いいえ - ブラウザの再起動が必要
 
   #### ［データの種類］:
 
@@ -16758,9 +17065,9 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 
   ### ProactiveAuthEnabled
 
-  #### プロアクティブ認証を有効にする
+  #### プロアクティブ認証を有効にする (非推奨)
 
-  
+  >非推奨: このポリシーは推奨されなくなっています。 現在はサポートされていますが、将来のリリースで廃止されます。
   
   #### サポートされているバージョン:
 
@@ -16768,11 +17075,13 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 
   #### 説明
 
-  プロアクティブ認証を有効にするかどうかを設定します。
+  このポリシーは、ブラウザーのサインインとは独立して機能しないため、非推奨となりました。 Microsoft Edge バージョン 91 では機能しません。 ブラウザーのサインインを構成する場合は、[BrowserSignin](#browsersignin) ポリシーを使用します。
 
-このポリシーを有効にしている場合、Microsoft Edge は、サインインしたユーザーを Microsoft サービスを使用して積極的に認証しようとします。 Microsoft Edge は、オンライン サービスを使用して、この方法を規定する構成を含むマニフェストが更新されているかどうかを定期的に確認します。
+Microsoft Edge でプロアクティブ認証を有効にするかどうかを構成できます。
 
-このポリシーを無効にしている場合、Microsoft Edge は、サインインしたユーザーを Microsoft サービスを使用して積極的に認証しようとしません。 Microsoft Edge は、オンライン サービスを使用してこの実行の構成を含むマニフェストが更新されているかどうかを確認しません。
+このポリシーを有効にすると、Microsoft Edge は、ブラウザーにサインインしているアカウントを使用して、Web サイトやサービスに対するシームレスな認証を試みます。
+
+このポリシーを無効にすると、Microsoft Edge は、シングルサインオン (SSO) を使って、Web サイトまたはサービスに対する認証を試みることはありません。 エンタープライズの新しいタブ ページなどの認証されたエクスペリエンスは機能しません (たとえば、最近使用した Office ドキュメントとおすすめの Office ドキュメントは使用できません)。
 
 このポリシーを構成していない場合、プロアクティブ認証がオンになります。
 
@@ -16791,7 +17100,7 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
   ##### グループ ポリシー (ADMX) 情報
 
   - GP 固有の名前: ProactiveAuthEnabled
-  - GP 名: プロアクティブ認証を有効にする
+  - GP 名: プロアクティブ認証を有効にする (非推奨)
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/
   - GP パス (推奨): なし
   - GP ADMX ファイル名: MSEdge.admx
@@ -18599,6 +18908,77 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   <string>https://www.contoso.com</string>
   <string>[*.]contoso.edu</string>
 </array>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### ShowMicrosoftRewards
+
+  #### Microsoft Rewards のエクスペリエンスを表示する
+
+  
+  
+  #### サポートされているバージョン:
+
+  - Windows と macOS での 88 以降
+
+  #### 説明
+
+  Microsoft Rewards のエクスペリエンスと通知を表示します。
+このポリシーを有効にした場合:
+   - 検索とポイント獲得を利用している Microsoft アカウント ユーザー (Azure AD アカウントを除く) は、Microsoft Edge のユーザー プロファイルに Microsoft Rewards のエクスペリエンスが表示されます。
+   - Microsoft Edge の設定での Microsoft Rewards の設定は有効になり、オンになります。
+   - Give (寄付) モードの設定が有効になり、ユーザーの設定が尊重されます。
+
+このポリシーを無効にした場合:
+   - 検索とポイント獲得を利用している Microsoft アカウント ユーザー (Azure AD アカウントを除く) は、Microsoft Edge のユーザー プロファイルに Microsoft Rewards のエクスペリエンスが表示されません。
+   - Microsoft Edge の設定での Microsoft Rewards の設定は無効になり、オフになります。
+
+このポリシーを構成しない場合:
+   - 検索とポイント獲得を利用している Microsoft アカウント ユーザー (Azure AD アカウントを除く) は、Microsoft Edge のユーザー プロファイルに Microsoft Rewards のエクスペリエンスが表示されます。
+   - Microsoft Edge の設定での Microsoft Rewards の設定は有効になり、オンになります。
+   - Give (寄付) モードの設定が有効になり、ユーザーの設定が尊重されます。
+
+  #### サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: はい
+  - 動的なポリシーの更新: いいえ - ブラウザの再起動が必要
+
+  #### ［データの種類］:
+
+  - ブール値
+
+  #### Windows の情報と設定
+
+  ##### グループ ポリシー (ADMX) 情報
+
+  - GP 固有の名前: ShowMicrosoftRewards
+  - GP 名: Microsoft Rewards エクスペリエンスを表示する
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): 管理用テンプレート/Microsoft Edge - 既定の設定 (ユーザーが上書き可能)/
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - 値の名前: ShowMicrosoftRewards
+  - 値の種類: REG_DWORD
+
+  ##### サンプル値:
+
+```
+0x00000000
+```
+
+  #### Mac の情報と設定
+  
+  - 基本設定キーの名前: ShowMicrosoftRewards
+  - サンプル値:
+``` xml
+<false/>
 ```
   
 
