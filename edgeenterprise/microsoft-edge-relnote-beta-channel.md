@@ -3,19 +3,19 @@ title: Beta チャネルに関する Microsoft Edge のリリース ノート
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 11/17/2020
+ms.date: 11/18/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Beta チャネルに関する Microsoft Edge のリリース ノート
-ms.openlocfilehash: 8e454772e2c2873068f7598a30ae74ee1384d467
-ms.sourcegitcommit: e442280f8ef6a20c565e8d0dc8296874a2f8fb22
+ms.openlocfilehash: 61123466da51b8cffbd233d4616c16c447bef5e8
+ms.sourcegitcommit: 9c2a08e8d7f30053c32cc65ac9d921e1b569b10d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "11175237"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "11179784"
 ---
 # Microsoft Edge Beta チャネルのリリースノート
 
@@ -23,6 +23,10 @@ ms.locfileid: "11175237"
 
 > [!IMPORTANT]
 > こちらの [Microsoft Edge チャネル リリースの更新プログラム](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/)を参照してください。
+
+## バージョン 87.0.664.40: 11 月 18 日
+
+さまざまなバグとパフォーマンスの問題を修正しました。
 
 ## バージョン 87.0.664.36: 11 月 16 日
 
