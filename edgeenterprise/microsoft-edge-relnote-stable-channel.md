@@ -3,19 +3,19 @@ title: Stable チャネルに関する Microsoft Edge リリース ノート
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 11/20/2020
+ms.date: 11/24/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Stable チャネルに関する Microsoft Edge リリース ノート
-ms.openlocfilehash: fdf0a80af68259d8c36b93b072605dfa0e4893e0
-ms.sourcegitcommit: 9a7ece9f4b5892ea6dc8a9b5fa5ebf71c0407f59
+ms.openlocfilehash: a9750fc62613bb1836fdbb04d2c0e6ec3e7e90b6
+ms.sourcegitcommit: 169d452a159c748bc8349d9b385f92d1ee684be6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "11182470"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "11189843"
 ---
 # Microsoft Edge Stable チャネルのリリース ノート
 
@@ -23,6 +23,10 @@ ms.locfileid: "11182470"
 
 > [!NOTE]
 > 安定チャネルの場合、更新は 1 日以上かけて段階的に公開されます。 詳細については、「[Microsoft Edge 更新プログラムの段階的なロールアウト](microsoft-edge-update-progressive-rollout.md)」を参照してください。
+
+## バージョン 87.0.664.47: 11月23日
+
+さまざまなバグとパフォーマンスの問題を修正しました。
 
 <!-- begin major 87 --->
 ## バージョン 87.0.664.41: 11 月 19 日
