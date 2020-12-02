@@ -3,19 +3,19 @@ title: 企業向け Microsoft Edge ロールバック
 ms.author: v-danwes
 author: dan-wesley
 manager: srugh
-ms.date: 09/02/2020
+ms.date: 11/30/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge を以前のバージョンにロールバックする方法
-ms.openlocfilehash: 9f659b0bcdd82f54a814c8ad4157521061cdfa7c
-ms.sourcegitcommit: 827a47d641c7ddc1d89be5d5fc0615373dec18b0
+ms.openlocfilehash: 69fdfd29572dd6eda9f7eb7cbd4c2500851dcafc
+ms.sourcegitcommit: 63a094a5268bb3b4819269438357095acd79abac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993707"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "11192427"
 ---
 # Microsoft Edge を以前のバージョンにロールバックする方法
 
@@ -81,7 +81,7 @@ Microsoft Edge 更新プログラムとグループポリシーでロールバ�
    - 自動サイレント更新に限る
 
      > [!NOTE]
-     > グループポリシーの更新を実施するには、Windows 管理者のコマンドプロンプトで `dsregcmd /status`を 入力します (管理者として実行します)。
+     > グループポリシーの更新を実施するには、Windows 管理者のコマンドプロンプトで `gpupdate /force`を 入力します (管理者として実行します)。
 
 5. **[OK]** をクリックして、ポリシー設定を保存します。 ロールバックは、次回 Microsoft Edge Update が更新プログラムをチェックするときに実行されます。 更新が早く実施されるようにしたい場合は、Microsoft Edge Update のポーリング間隔を変更するか、MSI を使用してロールバックを有効にする必要があります。
 
@@ -113,7 +113,7 @@ Microsoft Edge 更新プログラムとグループポリシーでロールバ�
 
 スナップショットは、ユーザーデータフォルダーのバージョン付きのコピーです。 バージョンアップグレード中、以前のバージョンのスナップショットが作成され、スナップショットフォルダーに格納されます。 ロールバックが完了すると、バージョン一致のスナップショットが新しいユーザーデータフォルダーにコピーされて、スナップショットフォルダーから削除されます。 ダウングレード時にバージョン一致スナップショットが使用できない場合、ロールバックは同期を使用して、新しい Microsoft Edge バージョンにユーザーデータを入力します。
 
-[UserDataSnapshotRetentionLimit] グループポリシーを使用すると、一定時間に保持できるスナップショットの数に制限を設定できます。 既定では、3つのスナップショットが保持されます。 ユーザーは、保持するスナップショットの数を0から5の間で構成できます。
+[UserDataSnapshotRetentionLimit](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userdatasnapshotretentionlimit) グループ ポリシーを使用すると、一定時間に保持できるスナップショットの数に制限を設定できます。 既定では、3つのスナップショットが保持されます。 ユーザーは、保持するスナップショットの数を0から5の間で構成できます。
 
 ## よく寄せられる質問
 
@@ -159,7 +159,6 @@ Microsoft Edge Update では、更新プログラムの確認がまだ行われ�
 ### IT 管理者の場合、正常にロールバックするためのすべての手順に従います。 ユーザーグループの一部しかロールバックされませんでした。 他のユーザーが、まだロールバックされていないのはなぜですか?
 
 グループポリシー設定が、まだすべてのクライアントに同期されていません。 管理者がグループポリシーを設定した場合、クライアントがこれらの設定を即座に受け取ることはありません。 [リモートグループポリシーの更新](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134201(v=ws.11))を実行できます。
-
 
 ## 関連項目
 
