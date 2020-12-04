@@ -3,19 +3,19 @@ title: .plist を使用して macOS 用に Microsoft Edge を構成する
 ms.author: brianalt
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 02/14/2020
+ms.date: 11/30/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: .plist を使用して macOS で Microsoft Edge ポリシー設定を構成する
-ms.openlocfilehash: 84469a4f84deeee0e47b6d8899426fa36cf345aa
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: abe110ab3589cc9276f28590273ece2d372be3b8
+ms.sourcegitcommit: ed6a5afabf909df87bec48671c4c47bcdfaeb7bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980352"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "11194690"
 ---
 # .plist を使用して macOS 用に Microsoft Edge ポリシー設定を構成する
 
@@ -35,7 +35,7 @@ ms.locfileid: "10980352"
 
 サポートされているポリシーと、対応する基本設定キー名については、[Microsoft Edge ブラウザー ポリシー リファレンス](microsoft-edge-policies.md)をご覧ください。 [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)からダウンロードできるポリシー テンプレート ファイルの **examples** フォルダーには、plist の例 (*itadminexample.plist*) が含まれています。 このサンプル ファイルには、サポートされているすべてのデータ型が含まれており、これらはカスタマイズしてポリシー設定の定義に使用できます。 
 
-plist のコンテンツを作成できたら、次の手順は、Microsoft Edge の基本設定ドメイン *com.microsoft.Edge* を使用して名前を付けることです。 この名前では、大文字と小文字が区別されます。また、すべての Microsoft Edge チャネルに適用されるため、ターゲットにするチャネルを含めないでください。 plist ファイル名は、「**_com.microsoft.Edge.plist_**」とする必要があります。 
+plist のコンテンツを作成できたら、次の手順は、Microsoft Edge の基本設定ドメイン *com.microsoft.Edge* を使用して名前を付けることです。 この名前では、大文字と小文字が区別されます。また、すべての Microsoft Edge チャネルに適用されるため、ターゲットにするチャネルを含めないでください。 plist ファイル名は、「**_com.microsoft.Edge.plist_**」とする必要があります。
 
 > [!IMPORTANT]
 > ビルド 78.0.249.2 以降、macOS 上のすべての Microsoft Edge チャネルは **com.microsoft.Edge** 基本設定ドメインから読み込まれます。 それより前のリリースはすべて、チャネル固有のドメインから読み込まれます (例: Dev チャネルの場合は **com.microsoft.Edge.Dev**)。
@@ -55,6 +55,7 @@ plist のコンテンツを作成できたら、次の手順は、Microsoft Edge
    ```cmd
    /usr/bin/plutil -convert xml1 ~/Desktop/com.microsoft.Edge.plist
    ```
+
 ファイルを変換した後、ポリシー データが正しく、構成プロファイルに必要な設定が含まれていることを確認します。
 
 > [!NOTE]
@@ -65,21 +66,6 @@ plist のコンテンツを作成できたら、次の手順は、Microsoft Edge
 Microsoft Intune の場合は、macOS プラットフォームをターゲットとした新しいデバイス構成プロファイルを作成し、プロファイルの種類として *[Preference file]* (基本設定ファイル) を選択します。 基本設定ドメイン名として **com.microsoft.Edge** を指定し、plist をアップロードします。 詳しくは、「[Microsoft Intune を使用して macOS デバイスにプロパティ リスト ファイルを追加する](https://docs.microsoft.com/intune/configuration/preference-file-settings-macos)」をご覧ください。
 
 Jamf の場合は、[*カスタム設定*] ペイロードとして .plist ファイルをアップロードします。
-
-## よく寄せられる質問
-
-### Microsoft Edge は、マスター基本設定が使用されるように構成できますか?
-
-Microsoft Edge は、マスター基本設定ファイルが使用されるように構成できます。
-
-マスター基本設定ファイルを使用すると、Microsoft Edge を展開する際に、ブラウザー ユーザー プロファイルの既定の設定を構成できます。 マスター基本設定ファイルを使用すると、デバイス管理システムで管理されていないコンピューターに設定を適用することもできます。 これらの設定は、ユーザーがブラウザーを初めて実行するときに、ユーザーのプロファイルに適用されます。 ユーザーがブラウザーを実行した後で発生した、マスター基本設定ファイルへの変更は適用されません。 ユーザーは、ブラウザーでマスター基本設定の設定を変更できます。 ブラウザーを初めて実行した後に設定を必須にしたり、設定を変更したりする場合は、ポリシーを使用する必要があります。
-
-マスター基本設定ファイルを使用すると、ブラウザーのさまざまな設定や基本設定をカスタマイズできます。これには、他の Chromium ベースのブラウザーと共有されるものや、Microsoft Edge に固有のものも含まれます。  ポリシー関連の基本設定は、マスター基本設定ファイルを使用して構成できます。 ポリシーが設定され、対応するマスター基本設定が設定されている場合は、ポリシー設定が優先されます。
-
-> [!IMPORTANT]
-> 利用可能なすべての基本設定が Microsoft Edge の用語や命名規則と一致していないこともあります。  これらの基本設定が今後のリリースでも引き続き期待どおりに動作することは保証されません。 今後のバージョンでは、基本設定が変更または無視される可能性もあります。
-
-マスター基本設定ファイルは、JSON マークアップを使用して書式設定されたテキスト ファイルです。 このファイルは、msedge.exe 実行可能ファイルと同じディレクトリに追加する必要があります。 macOS でのシステム全体のエンタープライズ展開では通常、"*~/Library/Application Support/Microsoft/Microsoft Edge Master Preferences*" または "*/Library/Application Support/Microsoft/Microsoft Edge Master Preferences*" になります。
 
 ## 関連項目
 

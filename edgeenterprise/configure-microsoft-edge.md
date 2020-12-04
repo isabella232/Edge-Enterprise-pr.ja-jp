@@ -3,19 +3,19 @@ title: Windows 用に Microsoft Edge を構成する
 ms.author: brianalt
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 10/09/2019
+ms.date: 11/30/2019
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Windows デバイスで Microsoft Edge ポリシー設定を構成する
-ms.openlocfilehash: 99aaf002f868ce29e81aa40024fa1de2e83d76e1
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 14ba2845e95394fe1f992c8b6446c975a8b4fb00
+ms.sourcegitcommit: ed6a5afabf909df87bec48671c4c47bcdfaeb7bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980353"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "11194705"
 ---
 # Windows で Microsoft Edge ポリシー設定を構成する
 
@@ -53,12 +53,12 @@ Active Directory で Microsoft Edge ポリシー設定を構成する場合は�
 #### 管理用テンプレートを Active Directory に追加する
 
 1. RSAT がインストールされているドメイン コントローラーまたはワークステーションで、ドメインの任意のドメイン コントローラー上 **PolicyDefinition** フォルダー (_中央ストア_とも呼ばれます) を参照します。 以前のバージョンの Windows Server では、PolicyDefinition フォルダーの作成が必要になる場合があります。 詳しくは、「[Windows でグループ ポリシー管理用テンプレート用のセントラル ストアを作成および管理する方法](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra)」をご覧ください。
-1. *MicrosoftEdgePolicyTemplates* を開き、**windows** > **admx** に移動します。
-1. *msedge.admx* ファイルを PolicyDefinition フォルダーにコピーします。 (例: %systemroot%\sysvol\domain\policies\PolicyDefinitions)
-1. *admx* フォルダーで、適切な言語フォルダーを開きます。 たとえば米国内にいる場合は、**en-US** フォルダーを開きます。
-1. PolicyDefinition フォルダー内にある、一致する言語のフォルダーに、*msedge.adml* ファイルをコピーします。 フォルダーが存在しない場合は作成します。 (例: %systemroot%\sysvol\domain\policies\PolicyDefinitions\EN-US)
-1. ドメインに複数のドメイン コントローラーがある場合、新しい ADMX ファイルは、次回のドメイン レプリケーション時にレプリケートされます。
-1. ファイルが正しく読み込まれたことを確認するには、Windows 管理ツールで**グループ ポリシー管理エディター**を開き、**[コンピューターの構成]** > **[ポリシー]** > **[管理用テンプレート]** > **[Microsoft Edge]** の順に展開します。 次の図のように、1 つ以上の Microsoft Edge ノードが表示されます。
+2. *MicrosoftEdgePolicyTemplates* を開き、**windows** > **admx** に移動します。
+3. *msedge.admx* ファイルを PolicyDefinition フォルダーにコピーします。 (例: %systemroot%\sysvol\domain\policies\PolicyDefinitions)
+4. *admx* フォルダーで、適切な言語フォルダーを開きます。 たとえば米国内にいる場合は、**en-US** フォルダーを開きます。
+5. PolicyDefinition フォルダー内にある、一致する言語のフォルダーに、*msedge.adml* ファイルをコピーします。 フォルダーが存在しない場合は作成します。 (例: %systemroot%\sysvol\domain\policies\PolicyDefinitions\EN-US)
+6. ドメインに複数のドメイン コントローラーがある場合、新しい ADMX ファイルは、次回のドメイン レプリケーション時にレプリケートされます。
+7. ファイルが正しく読み込まれたことを確認するには、Windows 管理ツールで**グループ ポリシー管理エディター**を開き、**[コンピューターの構成]** > **[ポリシー]** > **[管理用テンプレート]** > **[Microsoft Edge]** の順に展開します。 次の図のように、1 つ以上の Microsoft Edge ノードが表示されます。
 
     ![Microsoft Edge ポリシー](./media/configure-microsoft-edge/edge-gpo-policies.png)
 
@@ -69,19 +69,6 @@ Active Directory で Microsoft Edge ポリシー設定を構成する場合は�
 3. *admx* フォルダーで、適切な言語フォルダーを開きます。 たとえば米国内にいる場合は、**en-US** フォルダーを開きます。
 4. ポリシー定義フォルダー内にある、一致する言語のフォルダーに、*msedge.adml* ファイルをコピーします。 (例: C:\Windows\PolicyDefinitions\en-US)
 5. ファイルが正しく読み込まれたことを確認するには、直接ローカル グループ ポリシー エディターを開くか (Windows キー + R を押して「gpedit.msc」と入力します)、MMC を開いてローカル グループ ポリシー エディター スナップインを読み込みます。 エラーが発生した場合は通常、ファイルの場所が正しくないことが原因です。
-
-<!--
-To add the administrative template to manage Microsoft Edge updates:
-
-1. Open the *MicrosoftEdgePolicyTemplates* file and go to **windows** > **admx**.
-2. Copy the *msedgeupdate.admx* file to your Policy Definition template folder. (Example: C:\Windows\PolicyDefinitions)
-3. In the *updatepolicies* folder, open the appropriate language folder. For example, if you’re in Germany, open the **de-DE** folder.
-4. Copy the *msedgeupdate.adml* file to the matching language folder in your Policy Definition folder. (Example: C:\Windows\PolicyDefinitions\de-DE)
-5. Open MMC and load the Local Group Policy Editor snap-in to confirm the files loaded correctly. If an error occurs, it’s usually because the files are in an incorrect location.
-
-> [!NOTE]
-> Currently the Microsoft Edge update policies are only localized in en-US. Additional language support will be added in a future release.
--->
 
 ### 2. 必須または推奨のポリシーを設定する
 
@@ -107,21 +94,6 @@ gpupdate /force
 新しいポリシーを表示するには、Microsoft Edge を閉じてから再度開く必要があります。
 
 ターゲット コンピューターで REGEDIT.exe を使用して、グループ ポリシー設定を保存するレジストリ設定を表示することもできます。 これらの設定は、レジストリ パス **HKLM\SOFTWARE\Policies\Microsoft\Edge** にあります。
-
-## よく寄せられる質問
-
-### Microsoft Edge は、マスター基本設定が使用されるように構成できますか?
-
-Microsoft Edge は、マスター基本設定ファイルが使用されるように構成できます。
-
- マスター基本設定ファイルを使用すると、Microsoft Edge を展開する際に、既定の設定を構成できます。 マスター基本設定ファイルを使用すると、デバイス管理システムで管理されていないコンピューターに設定を適用することもできます。 これらの設定は、ユーザーがブラウザーを初めて実行するときに、ユーザーのプロファイルに適用されます。 ユーザーがブラウザーを実行した後で発生した、マスター基本設定ファイルへの変更は適用されません。 ユーザーは、ブラウザーでマスター基本設定の設定を変更できます。 ブラウザーを初めて実行した後に設定を必須にしたり、設定を変更したりする場合は、ポリシーを使用する必要があります。
-
-マスター基本設定ファイルを使用すると、ブラウザーのさまざまな設定や基本設定をカスタマイズできます。これには、他の Chromium ベースのブラウザーと共有されるものや、Microsoft Edge に固有のものも含まれます。  ポリシー関連の基本設定は、マスター基本設定ファイルを使用して構成できます。 ポリシーが設定され、対応するマスター基本設定が設定されている場合は、ポリシー設定が優先されます。
-
-> [!IMPORTANT]
-> 利用可能なすべての基本設定が Microsoft Edge の用語や命名規則と一致していないこともあります。  これらの基本設定が今後のリリースでも引き続き期待どおりに動作することは保証されません。 今後のバージョンでは、基本設定が変更または無視される可能性もあります。
-
-マスター基本設定ファイルは、JSON マークアップを使用して書式設定されたテキスト ファイルです。 このファイルは、msedge.exe 実行可能ファイルと同じディレクトリに追加する必要があります。 Windows でのシステム全体のエンタープライズ展開では通常、*Windows: C:\Program Files\Microsoft\Edge\Application\master_preferences* となります。
 
 ## 関連項目
 

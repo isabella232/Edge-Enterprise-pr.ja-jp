@@ -3,19 +3,19 @@ title: Jamf を使用して macOS の Microsoft Edge を構成する
 ms.author: brianalt
 author: dan-wesley
 manager: laurawi
-ms.date: 02/20/2020
+ms.date: 11/30/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Jamf を使用して Mac デバイスの Microsoft Edge ポリシー設定を構成する
-ms.openlocfilehash: 336bdfed2c53811615b0183dc5ca7db916cd7428
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 1859d9fb1fd3ea8ff6908c41f75df21a8b338769
+ms.sourcegitcommit: ed6a5afabf909df87bec48671c4c47bcdfaeb7bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980358"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "11194715"
 ---
 # Jamf を使用して macOS の Microsoft Edge ポリシー設定を構成する
 
@@ -45,8 +45,8 @@ Jamf Pro 10.19 では、ユーザーが「カスタム スキーマ」として 
 ポリシー マニフェストを取得するには:
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)に移動します。
-- [チャネル/バージョン] ドロップダウンリストで、**バージョン 81 以降の任意のチャネル***を選択します。
-- [ビルド] ドロップダウンリストで、任意の **81 ビルド以降***を選択します。
+- [チャネル/バージョン] ドロップダウン リストで、 **バージョン 81 以降のチャネルを選択します。**_。
+- [ビルド] ドロップダウン リストで、 _ *81 ビルド以降を選択します。**_。
 - [ポリシー ファイルの取得] をクリックして、ポリシー テンプレートのバンドルをダウンロードします。
 
   > [!NOTE]
@@ -61,7 +61,7 @@ CAB ファイルを展開してから、ZIP ファイルを展開して、最上
 次の手順を使用して、Jamf Pro にポリシー マニフェストをアップロードし、macOS 用のポリシー プロファイルを作成します。
 
 1. Jamf にサインインします。
-2. **[Computer]** (コンピューター) タブを選択します。
+2. [_*Computer**] タブを選択します。
 3. **[Content Management]** (コンテンツ管理) にある **[Configuration Profiles]** (構成プロファイル) をクリックします。
 4. **[Configuration Profiles]** ページで、**[+ New]** (+ 新規) をクリックします。
 
@@ -114,21 +114,6 @@ CAB ファイルを展開してから、ZIP ファイルを展開して、最上
    - **[保存]** をクリックします。
 2. **[Limitations]** (制限) は、既定の設定 [None] のままにします。 [**キャンセル**] をクリックします。
 3. **[Exclusions]** (除外) は、既定の設定 [None] のままにします。 [**キャンセル**] をクリックします。
-
-## よく寄せられる質問
-
-### Microsoft Edge は、マスター基本設定が使用されるように構成できますか?
-
-Microsoft Edge は、マスター基本設定ファイルが使用されるように構成できます。
-
-マスター基本設定ファイルを使用すると、Microsoft Edge を展開する際に、ブラウザー ユーザー プロファイルの既定の設定を構成できます。 マスター基本設定ファイルを使用すると、デバイス管理システムで管理されていないコンピューターに設定を適用することもできます。 これらの設定は、ユーザーがブラウザーを初めて実行するときに、ユーザーのプロファイルに適用されます。 ユーザーがブラウザーを実行した後で発生した、マスター基本設定ファイルへの変更は適用されません。 ユーザーは、ブラウザーでマスター基本設定の設定を変更できます。 ブラウザーを初めて実行した後に設定を必須にしたり、設定を変更したりする場合は、ポリシーを使用する必要があります。
-
-マスター基本設定ファイルを使用すると、ブラウザーのさまざまな設定や基本設定をカスタマイズできます。これには、他の Chromium ベースのブラウザーと共有されるものや、Microsoft Edge に固有のものも含まれます。  ポリシー関連の基本設定は、マスター基本設定ファイルを使用して構成できます。 ポリシーが設定され、対応するマスター基本設定が設定されている場合は、ポリシー設定が優先されます。
-
-> [!IMPORTANT]
-> 利用可能なすべての基本設定が Microsoft Edge の用語や命名規則と一致していないこともあります。  これらの基本設定が今後のリリースでも引き続き期待どおりに動作することは保証されません。 今後のバージョンでは、基本設定が変更または無視される可能性もあります。
-
-マスター基本設定ファイルは、JSON マークアップを使用して書式設定されたテキスト ファイルです。 このファイルは、msedge.exe 実行可能ファイルと同じディレクトリに追加する必要があります。 macOS でのシステム全体のエンタープライズ展開では通常、"*~/Library/Application Support/Microsoft/Microsoft Edge Master Preferences*" または "*/Library/Microsoft/Microsoft Edge Master Preferences*" になります。
 
 ## 関連項目
 
