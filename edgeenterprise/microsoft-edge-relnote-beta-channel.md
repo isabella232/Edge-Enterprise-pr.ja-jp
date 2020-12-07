@@ -3,19 +3,19 @@ title: Beta チャネルに関する Microsoft Edge のリリース ノート
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 11/30/2020
+ms.date: 12/03/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Beta チャネルに関する Microsoft Edge のリリース ノート
-ms.openlocfilehash: f674c39506736dfc5b5706e902970e0e4ce84fd8
-ms.sourcegitcommit: 2a53bdd2510770c0b7580f912864337c6ef617fd
+ms.openlocfilehash: cb4a7de72582ff16a528cbaca04bb39364f6d93f
+ms.sourcegitcommit: 91821fa6a962ea9e88ffeff94dff94fcd1245df5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "11192538"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "11195263"
 ---
 # Microsoft Edge Beta チャネルのリリースノート
 
@@ -23,6 +23,12 @@ ms.locfileid: "11192538"
 
 > [!IMPORTANT]
 > こちらの [Microsoft Edge チャネル リリースの更新プログラム](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/)を参照してください。
+
+## バージョン 87.0.664.55: 12 月 3 日
+
+さまざまなバグとパフォーマンスの問題を修正しました。 このリリースでは、次の新機能がサポートされています。
+
+- **ユーザーのパスワードがオンラインで漏洩されたことが見つかると、警告が生成されます**。 ユーザーのパスワードは、侵害された資格情報のリポジトリと照合され、一致するものが見つかったらユーザーに警告を通知します。 (この機能は、Microsoft Edge Stable 88 で利用できます。)
 
 ## バージョン 87.0.664.52: 11 月 30 日
 
