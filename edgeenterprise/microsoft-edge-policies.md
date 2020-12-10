@@ -3,7 +3,7 @@ title: Microsoft Edge ブラウザー ポリシーに関するドキュメント
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/19/2020
+ms.date: 12/02/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
-ms.openlocfilehash: 77d79f36ba91c5966ffb8dde66ba7ec14934f39e
-ms.sourcegitcommit: fc6f86f92f2fecac89028d77524d123bfaf2111d
+ms.openlocfilehash: 94e16c202ce45332975c89ef354402a5b3edcc6e
+ms.sourcegitcommit: 0ab6e25fd045dec2ec23f9dd7b2d2adb6fde3ef2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "11181988"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "11195138"
 ---
 # Microsoft Edge - ポリシー
 
@@ -33,12 +33,18 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 
 次の表は、この更新の新規ポリシーと非推奨になったポリシーの一覧です。
 
-| 名前 | ステータス |
+| 名前 | キャプション |
 |-|-|
-|[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)| 新規 |
-|[BlockExternalExtensions](#blockexternalextensions) | 新規 |
-|[ShowMicrosoftRewards](#showmicrosoftrewards) | 新規 |
-|[ProactiveAuthEnabled](#proactiveauthenabled) | 非推奨 |
+|[PrinterTypeDenyList](#printertypedenylist)|拒否リストでプリンターの種類を無効にする|
+|[InternetExplorerIntegrationLocalFileAllowed](#internetexplorerintegrationlocalfileallowed)|Internet Explorer モードでローカル ファイルを起動できるようにする|
+|[InternetExplorerIntegrationLocalFileExtensionAllowList](#internetexplorerintegrationlocalfileextensionallowlist)|Internet Explorer モードのローカル ファイルのファイル拡張子許可リストを開く|
+|[InternetExplorerIntegrationLocalFileShowContextMenu](#internetexplorerintegrationlocalfileshowcontextmenu)|Internet Explorer モードでリンクを開くためのコンテキスト メニューを表示する|
+|[IntranetRedirectBehavior](#intranetredirectbehavior)|イントラネット リダイレクトの動作|
+|[UpdatePolicyOverride](#updatepolicyoverride)|Microsoft Edge で利用できる更新プログラムを Microsoft Edge Update でどのように処理するかを指定します|
+|[VerticalTabsAllowed](#verticaltabsallowed)|ブラウザーの側面にあるタブの垂直レイアウトの可用性を構成する|
+| 廃止 [WebRtcAllowLegacyTLSProtocols](#webrtcallowlegacytlsprotocols)|WebRTC で従来の TLS/DTLS ダウングレードを許可する|
+
+
 
 ## 使用可能なポリシー
 
@@ -83,7 +89,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[DefaultInsecureContentSetting](#defaultinsecurecontentsetting)|安全でないコンテンツの例外の使用を制御する|
 |[DefaultJavaScriptSetting](#defaultjavascriptsetting)|既定の JavaScript の設定|
 |[DefaultNotificationsSetting](#defaultnotificationssetting)|既定の通知の設定|
-|[DefaultPluginsSetting](#defaultpluginssetting)|既定の Adobe Flash の設定|
+|[DefaultPluginsSetting](#defaultpluginssetting)|既定の Adobe Flash 設定 (不使用)|
 |[DefaultPopupsSetting](#defaultpopupssetting)|既定のポップアップ ウィンドウの設定|
 |[DefaultWebBluetoothGuardSetting](#defaultwebbluetoothguardsetting)|Web Bluetooth API の使用を制御する|
 |[DefaultWebUsbGuardSetting](#defaultwebusbguardsetting)|WebUSB API の使用を制御する|
@@ -101,8 +107,8 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[LegacySameSiteCookieBehaviorEnabledForDomainList](#legacysamesitecookiebehaviorenabledfordomainlist)|特定のサイトで Cookie のレガシ SameSite の動作に戻す|
 |[NotificationsAllowedForUrls](#notificationsallowedforurls)|特定のサイトで通知を許可する|
 |[NotificationsBlockedForUrls](#notificationsblockedforurls)|特定のサイトでの通知のブロック|
-|[PluginsAllowedForUrls](#pluginsallowedforurls)|特定のサイトでの Adobe Flash プラグインの使用を許可する|
-|[PluginsBlockedForUrls](#pluginsblockedforurls)|特定のサイトでの Adobe Flash プラグインのブロック|
+|[PluginsAllowedForUrls](#pluginsallowedforurls)|特定のサイトでの Adobe Flash プラグインの使用を許可する (不使用)|
+|[PluginsBlockedForUrls](#pluginsblockedforurls)|特定のサイトでの Adobe Flash プラグインの使用をブロックする (不使用)|
 |[PopupsAllowedForUrls](#popupsallowedforurls)|特定のサイトでのポップアップ ウィンドウの表示を許可する|
 |[PopupsBlockedForUrls](#popupsblockedforurls)|特定のサイトでのポップアップ ウィンドウのブロック|
 |[RegisteredProtocolHandlers](#registeredprotocolhandlers)|プロトコル ハンドラーを登録する|
@@ -181,6 +187,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[DefaultPrinterSelection](#defaultprinterselection)|通常使うプリンターの選択ルール|
 |[PrintHeaderFooter](#printheaderfooter)|ヘッダーとフッターを印刷する|
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|システムの既定のプリンターを通常使うプリンターに設定する|
+|[PrinterTypeDenyList](#printertypedenylist)|拒否リストでプリンターの種類を無効にする|
 |[PrintingEnabled](#printingenabled)|印刷を有効にする|
 |[PrintingPaperSizeDefault](#printingpapersizedefault)|印刷の既定のページ サイズ|
 |[UseSystemPrintDialog](#usesystemprintdialog)|システムの印刷ダイアログを使用して印刷する|
@@ -300,7 +307,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|コレクション機能を有効にする|
 |[EdgeShoppingAssistantEnabled](#edgeshoppingassistantenabled)|Microsoft Edge でのショッピングを有効にする|
 |[EditFavoritesEnabled](#editfavoritesenabled)|ユーザーがお気に入りを編集できるようにする|
-|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Re-enable deprecated web platform features for a limited time (obsolete)|
+|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|(使われていない) 限られた期間のみ使用できます。|
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|Microsoft からのドメイン アクションのダウンロードを有効にする (不使用)|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|オンラインでの OCSP/CRL のチェックを有効にする|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|ローカルトラストアンカーによって発行されたときに SHA-1 を使用して署名された証明書を許可します (非推奨)|
@@ -343,9 +350,13 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|IntensiveWakeUpThrottling 機能を制御する|
 |[InternetExplorerIntegrationEnhancedHangDetection](#internetexplorerintegrationenhancedhangdetection)|Internet Explorer モードの拡張ハング検出を構成する|
 |[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)|Internet Explorer 統合を構成する|
+|[InternetExplorerIntegrationLocalFileAllowed](#internetexplorerintegrationlocalfileallowed)|Internet Explorer モードでローカル ファイルを起動できるようにする|
+|[InternetExplorerIntegrationLocalFileExtensionAllowList](#internetexplorerintegrationlocalfileextensionallowlist)|Internet Explorer モードのローカル ファイルのファイル拡張子許可リストを開く|
+|[InternetExplorerIntegrationLocalFileShowContextMenu](#internetexplorerintegrationlocalfileshowcontextmenu)|Internet Explorer モードでリンクを開くためのコンテキスト メニューを表示する|
 |[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|エンタープライズ モード サイト一覧を構成する|
 |[InternetExplorerIntegrationSiteRedirect](#internetexplorerintegrationsiteredirect)|Internet Explorer モード ページから起動したときに未構成サイトへの「ページ内」ナビゲーションの動作を指定する|
-|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Internet Explorer モードテストを許可する|
+|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Internet Explorer モード テストを許可する|
+|[IntranetRedirectBehavior](#intranetredirectbehavior)|イントラネット リダイレクトの動作|
 |[IsolateOrigins](#isolateorigins)|特定のオリジンでのサイトの分離を有効にする|
 |[LocalProvidersEnabled](#localprovidersenabled)|ローカル プロバイダーからのおすすめを許可する|
 |[ManagedFavorites](#managedfavorites)|お気に入りを構成する|
@@ -375,7 +386,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[RestrictSigninToPattern](#restrictsignintopattern)|Microsoft Edge のプライマリ アカウントとして使用できるアカウントを制限する|
 |[RoamingProfileLocation](#roamingprofilelocation)|ローミング プロファイル ディレクトリを設定する|
 |[RoamingProfileSupportEnabled](#roamingprofilesupportenabled)|Microsoft Edge プロファイル データのローミング コピーの使用を有効にする|
-|[RunAllFlashInAllowMode](#runallflashinallowmode)|Adobe Flash のコンテンツ設定をすべてのコンテンツに拡張する|
+|[RunAllFlashInAllowMode](#runallflashinallowmode)|Adobe Flash のコンテンツ設定をすべてのコンテンツに拡張する (不使用)|
 |[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|HTTPS の警告ページから続行できるようにする|
 |[SSLVersionMin](#sslversionmin)|最小限の TLS バージョンを有効にする|
 |[SaveCookiesOnExit](#savecookiesonexit)|Microsoft Edge の終了時に cookie を保存する|
@@ -411,10 +422,12 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[TranslateEnabled](#translateenabled)|翻訳を有効にする|
 |[URLAllowlist](#urlallowlist)|許可されている URL の一覧を定義する|
 |[URLBlocklist](#urlblocklist)|URL の一覧へのアクセスをブロックする|
+|[UpdatePolicyOverride](#updatepolicyoverride)|Microsoft Edge で利用できる更新プログラムを Microsoft Edge Update でどのように処理するかを指定します|
 |[UserAgentClientHintsEnabled](#useragentclienthintsenabled)|ユーザー エージェント クライアント ヒント機能を有効にする (非推奨)|
 |[UserDataDir](#userdatadir)|ユーザー データ ディレクトリを設定する|
 |[UserDataSnapshotRetentionLimit](#userdatasnapshotretentionlimit)|緊急ロールバック時の使用のために保持するユーザーデータのスナップショット数を制限します。|
 |[UserFeedbackAllowed](#userfeedbackallowed)|ユーザー フィードバックを許可する|
+|[VerticalTabsAllowed](#verticaltabsallowed)|ブラウザーの側面にあるタブの垂直レイアウトの可用性を構成する|
 |[VideoCaptureAllowed](#videocaptureallowed)|ビデオ キャプチャの許可またはブロック|
 |[VideoCaptureAllowedUrls](#videocaptureallowedurls)|アクセス許可を要求することなくビデオ キャプチャ デバイスにアクセスできるサイト|
 |[WPADQuickCheckEnabled](#wpadquickcheckenabled)|WPAD の最適化を設定する|
@@ -422,6 +435,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[WebCaptureEnabled](#webcaptureenabled)|Microsoft Edge で Web キャプチャ機能を有効にする|
 |[WebComponentsV0Enabled](#webcomponentsv0enabled)|M84 まで Web コンポーネント v0 API をもう一度有効にする (不使用)|
 |[WebDriverOverridesIncompatiblePolicies](#webdriveroverridesincompatiblepolicies)|WebDriver が互換性のないポリシーを上書きすることを許可する (非推奨)|
+|[WebRtcAllowLegacyTLSProtocols](#webrtcallowlegacytlsprotocols)|WebRTC で従来の TLS/DTLS ダウングレードを許可する (非推奨)|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|WebRTC によるローカル IP アドレスの公開を管理する|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|WebRTC によるローカル IP アドレスの公開を制限する|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|WebRTC が使用するローカル UDP ポートの範囲を制限する|
@@ -1513,17 +1527,19 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
   ### DefaultPluginsSetting
 
-  #### 既定の Adobe Flash の設定
+  #### 既定の Adobe Flash 設定 (不使用)
 
   
-  
+  >不使用: このポリシーは廃止されており、Microsoft Edge 87 以降は機能しません。
   #### サポートされているバージョン:
 
-  - Windows と macOS での 77 以降
+  - Windows と macOS での 77 以降、87 まで
 
   #### 説明
 
-  [PluginsAllowedForUrls](#pluginsallowedforurls) と [PluginsBlockedForUrls](#pluginsblockedforurls) が最初にチェックされ、その後、このポリシーがあります。 [ClickToPlay] と [BlockPlugins] のどちらかを選択できます。 このポリシーを ' BlockPlugins ' に設定すると、すべての web サイトでこのプラグインが拒否されます。 [ClickToPlay] は、フラッシュプラグインを実行しますが、ユーザーはプレースホルダーをクリックして起動します。
+  Flash は Microsoft Edge でサポートされなくなったため、このポリシーは機能しません。
+
+[PluginsAllowedForUrls](#pluginsallowedforurls) と [PluginsBlockedForUrls](#pluginsblockedforurls) が最初にチェックされ、その後、このポリシーがあります。 [ClickToPlay] と [BlockPlugins] のどちらかを選択できます。 このポリシーを ' BlockPlugins ' に設定すると、すべての web サイトでこのプラグインが拒否されます。 [ClickToPlay] は、フラッシュプラグインを実行しますが、ユーザーはプレースホルダーをクリックして起動します。
 
 このポリシーを構成していない場合、ユーザーはこの設定を手動で変更することができます。
 
@@ -1552,7 +1568,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   ##### グループ ポリシー (ADMX) 情報
 
   - GP 固有の名前: DefaultPluginsSetting
-  - GP 名: 既定の Adobe Flash の設定
+  - GP 名: 既定の Adobe Flash 設定 (不使用)
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/コンテンツの設定
   - GP パス (推奨): なし
   - GP ADMX ファイル名: MSEdge.admx
@@ -2724,21 +2740,23 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.ed
 
   ### PluginsAllowedForUrls
 
-  #### 特定のサイトでの Adobe Flash プラグインの使用を許可する
+  #### 特定のサイトでの Adobe Flash プラグインの使用を許可する (不使用)
 
   
-  
+  >不使用: このポリシーは廃止されており、Microsoft Edge 87 以降は機能しません。
   #### サポートされているバージョン:
 
-  - Windows と macOS での 77 以降
+  - Windows と macOS での 77 以降、87 まで
 
   #### 説明
 
-  Adobe Flash プラグインを実行することができるサイトの一覧を URL パターンに基づいて定義します。
+  Flash は Microsoft Edge でサポートされなくなったため、このポリシーは機能しません。
+
+Adobe Flash プラグインを実行することができるサイトの一覧を URL パターンに基づいて定義します。
 
 このポリシーを構成していない場合、ユーザーの個人用の構成、または [DefaultPluginsSetting](#defaultpluginssetting) ポリシー (設定されている場合) からのグローバルな既定値がすべてのサイトで使用されます。
 
-有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。 ただし、M85以降では、ホストで '*' および '[*.]' のワイルドカードを使用したパターンは、このポリシーではサポートされなくなりました。
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。 ただし、M85以降では、ホストで「\*」および「[\*.]」のワイルドカードを使用したパターンは、このポリシーではサポートされなくなりました。
 
   #### サポートされている機能:
 
@@ -2755,7 +2773,7 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.ed
   ##### グループ ポリシー (ADMX) 情報
 
   - GP 固有の名前: PluginsAllowedForUrls
-  - GP 名: 特定のサイトでの Adobe Flash プラグインの使用を許可する
+  - GP 名: 特定のサイトでの Adobe Flash プラグインの使用を許可する (不使用)
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/コンテンツの設定
   - GP パス (推奨): なし
   - GP ADMX ファイル名: MSEdge.admx
@@ -2791,21 +2809,23 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8
 
   ### PluginsBlockedForUrls
 
-  #### 特定のサイトでの Adobe Flash プラグインのブロック
+  #### 特定のサイトでの Adobe Flash プラグインの使用をブロックする (不使用)
 
   
-  
+  >不使用: このポリシーは廃止されており、Microsoft Edge 87 以降は機能しません。
   #### サポートされているバージョン:
 
-  - Windows と macOS での 77 以降
+  - Windows と macOS での 77 以降、87 まで
 
   #### 説明
 
-  Adobe Flash プラグインの実行がブロックされているサイトの一覧を URL パターンに基づいて定義します。
+  Flash は Microsoft Edge でサポートされなくなったため、このポリシーは機能しません。
+
+Adobe Flash プラグインの実行がブロックされているサイトの一覧を URL パターンに基づいて定義します。
 
 このポリシーを構成していない場合、ユーザーの個人用の構成、または [DefaultPluginsSetting](#defaultpluginssetting) ポリシー (設定されている場合) からのグローバルな既定値がすべてのサイトで使用されます。
 
-有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。 ただし、M85以降では、ホストで '*' および '[*.]' のワイルドカードを使用したパターンは、このポリシーではサポートされなくなりました。
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。 ただし、M85以降では、ホストで「\*」および「[\*.]」のワイルドカードを使用したパターンは、このポリシーではサポートされなくなりました。
 
   #### サポートされている機能:
 
@@ -2822,7 +2842,7 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8
   ##### グループ ポリシー (ADMX) 情報
 
   - GP 固有の名前: PluginsBlockedForUrls
-  - GP 名: 特定のサイトでの Adobe Flash プラグインのブロック
+  - GP 名: 特定のサイトでの Adobe Flash プラグインの使用をブロックする (不使用)
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/コンテンツの設定
   - GP パス (推奨): なし
   - GP ADMX ファイル名: MSEdge.admx
@@ -4657,7 +4677,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
   #### 説明
 
-  Controls whether third-party images on a page can show an authentication prompt.
+  ページ上のサードパーティの画像に認証プロンプトを表示するかどうかを制御します。
 
 通常、これはフィッシング詐欺への防御として無効になっています。 このポリシーを設定しない場合、ポリシーは無効になり、サードパーティの画像は認証プロンプトを表示できません。
 
@@ -5068,7 +5088,7 @@ Samba と Windows Server の最新バージョンは、すべて NTLMv2 をサ�
   
   #### サポートされているバージョン:
 
-  - On Windows and macOS since 87 or later
+  - Windows と macOS での 87 以降
 
   #### 説明
 
@@ -5737,7 +5757,7 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
   
   #### サポートされているバージョン:
 
-  - On Windows and macOS since 87 or later
+  - Windows と macOS での 87 以降
 
   #### 説明
 
@@ -6051,6 +6071,88 @@ Microsoft Edge がバックグラウンド モードで実行されている場�
   - サンプル値:
 ``` xml
 <false/>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### PrinterTypeDenyList
+
+  #### 拒否リストでプリンターの種類を無効にする
+
+  
+  
+  #### サポートされているバージョン:
+
+  - Windows と macOS での 88 以降
+
+  #### 説明
+
+  拒否リストにあるプリンターの種類は検出されないか、機能が取得されません。
+
+すべての種類のプリンターを拒否リストに配置すると、ドキュメントの印刷先がないため、印刷が事実上無効になります。
+
+このポリシーを構成しない場合、またはプリンター リストが空の場合、すべての種類のプリンターを検出できます。
+
+プリンター出力先には、内線プリンターとローカル プリンターが含まれます。 拡張プリンターは、印刷プロバイダーの出力先とも呼ばれ、Microsoft Edge 拡張機能に属するすべての出力先が含まれます。
+ローカル プリンターは、ネイティブの出力先とも呼ばれ、ローカル コンピューターと共有ネットワーク プリンターで利用可能な出力先が含まれます。
+
+ポリシー オプション マッピング:
+
+* privet (privet) = Zeroconf ベース (mDNS + DNS-SD) プロトコルの出力先
+
+* extension (extension) = Extension ベースの出力先
+
+* pdf (pdf) = 「PDF として保存」の出力先
+
+* local (local) = ローカル プリンター出力先
+
+このポリシーを構成する場合は、上記の情報を使用します。
+
+  #### サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+
+  - 文字列のリスト
+
+  #### Windows の情報と設定
+
+  ##### グループ ポリシー (ADMX) 情報
+
+  - GP 固有の名前: PrinterTypeDenyList
+  - GP 名: 拒否リストでプリンターの種類を無効にする
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/印刷
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList
+  - パス (推奨): なし
+  - 値の名前: 1、2、3、...
+  - 値の種類: REG_SZ の一覧
+
+  ##### サンプル値:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\1 = "local"
+SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
+
+```
+
+  #### Mac の情報と設定
+  
+  - 基本設定キーの名前: PrinterTypeDenyList
+  - サンプル値:
+``` xml
+<array>
+  <string>local</string>
+  <string>privet</string>
+</array>
 ```
   
 
@@ -12773,7 +12875,7 @@ Microsoft Defender SmartScreen の詳細については、「[https://go.microso
   
   #### サポートされているバージョン:
 
-  - On Windows and macOS since 87 or later
+  - Windows と macOS での 87 以降
 
   #### 説明
 
@@ -12889,17 +12991,17 @@ Microsoft Defender SmartScreen の詳細については、「[https://go.microso
 
   ### EnableDeprecatedWebPlatformFeatures
 
-  #### Re-enable deprecated web platform features for a limited time (obsolete)
+  #### (使われていない) 限られた期間のみ使用できます。
 
   
-  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 86.
+  >不使用: このポリシーは廃止されており、Microsoft Edge 86 以降は機能しません。
   #### サポートされているバージョン:
 
-  - On Windows and macOS since 77, until 86
+  - Windows と macOS での 77 以降、86 まで
 
   #### 説明
 
-  This policy is obsolete because dedicated web platform policies are now used to manage individual web platform feature deprecations.
+  このポリシーは、個々の web プラットフォームの deprecations の管理に専用の web プラットフォームポリシーが使用されるようになりました。これは時代遅れです。
 
 一時的にもう一度有効にする非推奨の Web プラットフォーム機能の一覧を指定します。
 
@@ -12932,7 +13034,7 @@ Microsoft Defender SmartScreen の詳細については、「[https://go.microso
   ##### グループ ポリシー (ADMX) 情報
 
   - GP 固有の名前: EnableDeprecatedWebPlatformFeatures
-  - GP name: Re-enable deprecated web platform features for a limited time (obsolete)
+  - GP 名: 一定期間の間、非推奨の Web プラットフォーム機能を再び有効にする (不使用)
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/
   - GP パス (推奨): なし
   - GP ADMX ファイル名: MSEdge.admx
@@ -15752,6 +15854,186 @@ Internet Explorer モードの詳細については、「[https://go.microsoft.c
 
   [ページのトップへ](#microsoft-edge---policies)
 
+  ### InternetExplorerIntegrationLocalFileAllowed
+
+  #### Internet Explorer モードでローカル ファイルを起動できるようにする
+
+  
+  
+  #### サポートされているバージョン:
+
+  - Windows での 88 以降
+
+  #### 説明
+
+  このポリシーは、コマンド ラインで指定されたローカル ファイルを使用して Microsoft Edge を Internet Explorer モードで起動するために使用される --ie-mode-file-url コマンド ライン引数の可用性を制御します。
+
+この設定は、次と連携して機能します。[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) は「IEMode」に設定されます。
+
+このポリシーを true に設定するか、構成しない場合、ユーザーは --ie-mode-file-url コマンド ライン引数を使用して、Internet Explorer モードでローカル ファイルを起動できます。
+
+このポリシーを false に設定する場合、ユーザーは --ie-mode-file-url コマンド ライン引数を使用して、Internet Explorer モードでローカル ファイルを起動できません。
+
+Internet Explorer モードの詳細については、「[https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)」を参照してください
+
+  #### サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+
+  - ブール値
+
+  #### Windows の情報と設定
+
+  ##### グループ ポリシー (ADMX) 情報
+
+  - GP 固有の名前: InternetExplorerIntegrationLocalFileAllowed
+  - GP 名: Internet Explorer モードでローカル ファイルを起動できるようにする
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - 値の名前: InternetExplorerIntegrationLocalFileAllowed
+  - 値の種類: REG_DWORD
+
+  ##### サンプル値:
+
+```
+0x00000001
+```
+
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### InternetExplorerIntegrationLocalFileExtensionAllowList
+
+  #### Internet Explorer モードのローカル ファイルのファイル拡張子許可リストを開く
+
+  
+  
+  #### サポートされているバージョン:
+
+  - Windows での 88 以降
+
+  #### 説明
+
+  このポリシーは、ファイル拡張子に基づいて、どの file:// URL を Internet Explorer モードで起動できるかを制限します。
+
+この設定は、次と連携して機能します。[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) は「IEMode」に設定されます。
+
+file:// URL が Internet Explorer モードでの起動を要求された場合、URL を Internet Explorer モードで起動できるようにするには、URL のファイル拡張子がこのリストに存在する必要があります。 Internet Explorer モードで開くことがブロックされている URL は、代わりに Edge モードで開きます。
+
+このポリシーを特別な値「*」に設定するか、構成しない場合、すべてのファイル拡張子が許可されます。
+
+Internet Explorer モードの詳細については、「[https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)」を参照してください
+
+  #### サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+
+  - 文字列のリスト
+
+  #### Windows の情報と設定
+
+  ##### グループ ポリシー (ADMX) 情報
+
+  - GP 固有の名前: InternetExplorerIntegrationLocalFileExtensionAllowList
+  - GP 名: Internet Explorer モードのローカル ファイルのファイル拡張子許可リストを開く
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAllowList
+  - パス (推奨): なし
+  - 値の名前: 1、2、3、...
+  - 値の種類: REG_SZ の一覧
+
+  ##### サンプル値:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAllowList\1 = ".mht"
+SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAllowList\2 = ".pdf"
+SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAllowList\3 = ".vsdx"
+
+```
+
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### InternetExplorerIntegrationLocalFileShowContextMenu
+
+  #### Internet Explorer モードでリンクを開くためのコンテキスト メニューを表示する
+
+  
+  
+  #### サポートされているバージョン:
+
+  - Windows での 88 以降
+
+  #### 説明
+
+  このポリシーは、file:// links のコンテキスト メニューの [新しい Internet Explorer モード タブでリンクを開く] オプションの表示を制御します。
+
+この設定は、次と連携して機能します。[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) は「IEMode」に設定されます。
+
+このポリシーを true に設定すると、「新しい Internet Explorer モード タブでリンクを開く」コンテキスト メニュー項目が file:// リンクで使用できるようになります。
+
+このポリシーを false に設定するか、構成しない場合、コンテキスト メニュー項目は追加されません。
+
+Internet Explorer モードの詳細については、「[https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)」を参照してください
+
+  #### サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+
+  - ブール値
+
+  #### Windows の情報と設定
+
+  ##### グループ ポリシー (ADMX) 情報
+
+  - GP 固有の名前: InternetExplorerIntegrationLocalFileShowContextMenu
+  - GP 名: Internet Explorer モードでリンクを開くためのコンテキスト メニューを表示する
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - 値の名前: InternetExplorerIntegrationLocalFileShowContextMenu
+  - 値の種類: REG_DWORD
+
+  ##### サンプル値:
+
+```
+0x00000001
+```
+
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
   ### InternetExplorerIntegrationSiteList
 
   #### エンタープライズ モード サイト一覧を構成する
@@ -15935,6 +16217,82 @@ Internet Explorer モードの詳細については、「[https://go.microsoft.c
 0x00000000
 ```
 
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### IntranetRedirectBehavior
+
+  #### イントラネット リダイレクトの動作
+
+  
+  
+  #### サポートされているバージョン:
+
+  - Windows と macOS での 88 以降
+
+  #### 説明
+
+  このポリシーは、DNS の傍受チェックを介したイントラネット リダイレクトの動作を構成します。 これらのチェックは、ブラウザーが不明なホスト名をリダイレクトするプロキシを介しているかどうかを検出します。
+
+このポリシーが構成されていない場合、ブラウザーは DNS の傍受チェックとイントラネット リダイレクトの提案の既定の動作を使用します。 M88 では、これらは既定で有効になっていますが、将来のリリースでは既定で無効になる予定です。
+
+[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled) は、DNS の傍受チェックも無効にする可能性のある関連ポリシーです。 ただし、このポリシーはより柔軟なバージョンであり、イントラネット リダイレクト情報バーを個別に制御する可能性があり、将来拡張される可能性があります。
+[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled) またはこのポリシーのいずれかが傍受チェックを無効にするように要求すると、チェックは無効になります。
+このポリシーによって DNS の傍受チェックが無効になっているが、[GoToIntranetSiteForSingleWordEntryInAddressBar](#gotointranetsiteforsinglewordentryinaddressbar) が有効になっている場合でも、シングル ワード クエリはイントラネット ナビゲーションになります。
+
+ポリシー オプション マッピング:
+
+* Default (0) = 既定のブラウザー動作を使用します。
+
+* DisableInterceptionChecksDisableInfobar (1) = DNS の傍受チェックと「http://intranetsite/」情報バーを無効にします。
+
+* DisableInterceptionChecksEnableInfobar (2) = DNS の傍受チェックと「http://intranetsite/」情報バーを無効にします。
+
+* EnableInterceptionChecksEnableInfobar (3) = DNS の傍受チェックと「http://intranetsite/」情報バーを有効にします。
+
+このポリシーを構成する場合は、上記の情報を使用します。
+
+  #### サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+
+  - Integer
+
+  #### Windows の情報と設定
+
+  ##### グループ ポリシー (ADMX) 情報
+
+  - GP 固有の名前: IntranetRedirectBehavior
+  - GP 名: イントラネット リダイレクトの動作
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - 値の名前: IntranetRedirectBehavior
+  - 値の種類: REG_DWORD
+
+  ##### サンプル値:
+
+```
+0x00000001
+```
+
+  #### Mac の情報と設定
+  
+  - 基本設定キーの名前: IntranetRedirectBehavior
+  - サンプル値:
+``` xml
+<integer>1</integer>
+```
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -17934,17 +18292,19 @@ IE からサイトをロードするために Microsoft Edge を起動すると�
 
   ### RunAllFlashInAllowMode
 
-  #### Adobe Flash のコンテンツ設定をすべてのコンテンツに拡張する
+  #### Adobe Flash のコンテンツ設定をすべてのコンテンツに拡張する (不使用)
 
   
-  
+  >不使用: このポリシーは廃止されており、Microsoft Edge 87 以降は機能しません。
   #### サポートされているバージョン:
 
-  - Windows と macOS での 77 以降
+  - Windows と macOS での 77 以降、87 まで
 
   #### 説明
 
-  このポリシーを有効にしている場合、ユーザーまたはエンタープライズ ポリシーによってコンテンツ設定で Adobe Flash を許可するように設定されている Web サイトに埋め込まれているすべての Adobe Flash コンテンツが実行されます。 これには、その他のオリジンおよび/または小さなコンテンツからのコンテンツが含まれています。
+  Flash は Microsoft Edge でサポートされなくなったため、このポリシーは機能しません。
+
+このポリシーを有効にしている場合、ユーザーまたはエンタープライズ ポリシーによってコンテンツ設定で Adobe Flash を許可するように設定されている Web サイトに埋め込まれているすべての Adobe Flash コンテンツが実行されます。 これには、その他のオリジンおよび/または小さなコンテンツからのコンテンツが含まれています。
 
 Adobe Flash の実行を許可する Web サイトを制御するには、[DefaultPluginsSetting](#defaultpluginssetting)、[PluginsAllowedForUrls](#pluginsallowedforurls)、[PluginsBlockedForUrls](#pluginsblockedforurls) ポリシーの仕様を参照してください。
 
@@ -17965,7 +18325,7 @@ Adobe Flash の実行を許可する Web サイトを制御するには、[Defau
   ##### グループ ポリシー (ADMX) 情報
 
   - GP 固有の名前: RunAllFlashInAllowMode
-  - GP 名: Adobe Flash のコンテンツ設定をすべてのコンテンツに拡張する
+  - GP 名: Adobe Flash のコンテンツ設定をすべてのコンテンツに拡張する (不使用)
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/
   - GP パス (推奨): なし
   - GP ADMX ファイル名: MSEdge.admx
@@ -18068,7 +18428,7 @@ Adobe Flash の実行を許可する Web サイトを制御するには、[Defau
 
   #### 説明
 
-  Sets the minimum supported version of TLS. このポリシーを構成しない場合、Microsoft Edge では TLS 1.0 と TLS 1.1 にエラーが表示されますが、ユーザーはこれを回避することができます。
+  TLS の最小限のサポート バージョンを設定します。 このポリシーを構成しない場合、Microsoft Edge では TLS 1.0 と TLS 1.1 にエラーが表示されますが、ユーザーはこれを回避することができます。
 
 このポリシーを有効にすると、Microsoft Edge は指定されたバージョンより前のバージョンの SSL/TLS を使用しなくなります。 認識されない値は、無視されます。
 
@@ -18996,9 +19356,9 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   #### 説明
 
-  このポリシーは、運用要件の変更のため、期待どおりに動作しませんでした。 Therefore it's deprecated and should not be used.
+  このポリシーは、運用要件の変更のため、期待どおりに動作しませんでした。 そのため、使用されません。
 
-お気に入り バーに Office.com へのショートカットを表示するどうかを指定します。 For users signed into Microsoft Edge the shortcut takes users to their Microsoft Office apps and docs. If you enable or don't configure this policy, users can choose whether to see the shortcut by changing the toggle in the favorites bar context menu.
+お気に入り バーに Office.com へのショートカットを表示するどうかを指定します。 Microsoft Edge にサインインしているユーザーの場合、ショートカットはユーザーを Microsoft Office のアプリやドキュメントへと移動させます。このポリシーを有効にしているか、構成していない場合、ユーザーはお気に入り バーのコンテキスト メニューのトグルを変更することで、ショートカットを表示するかどうかを選択することができます。
 このポリシーを無効にすると、ショートカットが表示されなくなります。
 
   #### サポートされている機能:
@@ -19178,17 +19538,17 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   
   #### サポートされているバージョン:
 
-  - On Windows and macOS since 87 or later
+  - Windows と macOS での 87 以降
 
   #### 説明
 
-  Set whether websites can use the W3C Web Speech API to recognize speech from the user. The Microsoft Edge implementation of the Web Speech API uses Azure Cognitive Services, so voice data will leave the machine.
+  Set whether websites can use the W3C Web Speech API to recognize speech from the user. Microsoft Edge 実装では、Azure の認識サービスを使用しているため、音声データはコンピューターから離脱します。
 
 If you enable or don't configure this policy, web-based applications that use the Web Speech API can use Speech Recognition.
 
 If you disable this policy, Speech Recognition is not available through the Web Speech API.
 
-Read more about this feature here: SpeechRecognition API: [https://go.microsoft.com/fwlink/?linkid=2143388](https://go.microsoft.com/fwlink/?linkid=2143388) Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2143680](https://go.microsoft.com/fwlink/?linkid=2143680)
+この機能の詳細については、以下を参照してください。SpeechRecognition API: [https://go.microsoft.com/fwlink/?linkid=2143388](https://go.microsoft.com/fwlink/?linkid=2143388) Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2143680](https://go.microsoft.com/fwlink/?linkid=2143680)
 
   #### サポートされている機能:
 
@@ -20298,6 +20658,60 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
   [ページのトップへ](#microsoft-edge---policies)
 
+  ### UpdatePolicyOverride
+
+  #### Microsoft Edge で利用できる更新プログラムを Microsoft Edge Update でどのように処理するかを指定します
+
+  
+  
+  #### サポートされているバージョン:
+
+  - macOS での 89 以降
+
+  #### 説明
+
+  このポリシーを有効にした場合、Microsoft Edge Update では、以下のオプションの構成方法に従って Microsoft Edge の更新プログラムを処理します。
+
+- [自動サイレント更新のみ]: 更新プログラムは、定期的な更新チェックで検出された場合にのみ適用されます。
+
+- [手動更新のみ]: 更新プログラムは、ユーザーが実行した手動更新チェックで検出された場合にのみ適用されます。 (アプリによっては、このオプション用のインターフェイスがない場合もあります。)
+
+手動で更新する場合は、Microsoft Autoupdate を使用して、更新プログラムを定期的に確認してください。
+
+このポリシーを有効にして構成しない場合、Microsoft Edge Update は自動的に更新プログラムを確認します。
+
+
+ポリシー オプション マッピング:
+
+* automatic-silent-only (automatic-silent-only) = 更新プログラムは、定期的な更新チェックで検出された場合にのみ適用されます。
+
+* manual-only (manual-only) = 更新が適用されるのは、ユーザーが手動更新チェックを実行した場合のみです。 (アプリによっては、このオプション用のインターフェイスがない場合もあります。)
+
+このポリシーを構成する場合は、上記の情報を使用します。
+
+  #### サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: はい
+  - 動的なポリシーの更新: いいえ - ブラウザの再起動が必要
+
+  #### ［データの種類］:
+
+  - 文字列
+
+  
+
+  #### Mac の情報と設定
+  
+  - 基本設定キーの名前: UpdatePolicyOverride
+  - サンプル値:
+``` xml
+<string>automatic-silent-only</string>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
   ### UserAgentClientHintsEnabled
 
   #### ユーザー エージェント クライアント ヒント機能を有効にする (非推奨)
@@ -20537,6 +20951,70 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
   #### Mac の情報と設定
   
   - 基本設定キーの名前: UserFeedbackAllowed
+  - サンプル値:
+``` xml
+<true/>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### VerticalTabsAllowed
+
+  #### ブラウザーの側面にあるタブの垂直レイアウトの可用性を構成する
+
+  
+  
+  #### サポートされているバージョン:
+
+  - Windows と macOS での 88 以降
+
+  #### 説明
+
+  タブがブラウザーの上部ではなく側面に垂直に配置されている別のレイアウトにユーザーがアクセスできるかどうかを構成します。
+複数のタブが開いている場合、このレイアウトによってタブの表示と管理が容易になります。 サイト タイトルの視認性が向上し、整列されたアイコンをスキャンしやすくなり、タブを管理および閉じるためのスペースが増えました。
+
+このポリシーを無効にすると、ユーザーは垂直タブ レイアウトをオプションとして使用できなくなります。
+
+このポリシーを有効または無効にしても、タブ レイアウトは最上部に表示されますが、ユーザーは側面の垂直タブをオンにすることができます。
+
+
+  #### サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: いいえ - ブラウザの再起動が必要
+
+  #### ［データの種類］:
+
+  - ブール値
+
+  #### Windows の情報と設定
+
+  ##### グループ ポリシー (ADMX) 情報
+
+  - GP 固有の名前: VerticalTabsAllowed
+  - GP 名: ブラウザーの側面にあるタブの垂直レイアウトの可用性を構成する
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - GP 固有の名前: VerticalTabsAllowed
+  - 値の種類: REG_DWORD
+
+  ##### サンプル値:
+
+```
+0x00000001
+```
+
+  #### Mac の情報と設定
+  
+  - 基本設定キーの名前: VerticalTabsAllowed
   - サンプル値:
 ``` xml
 <true/>
@@ -20837,7 +21315,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   
   #### サポートされているバージョン:
 
-  - On Windows and macOS since 87 or later
+  - Windows と macOS での 87 以降
 
   #### 説明
 
@@ -21011,6 +21489,67 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   - サンプル値:
 ``` xml
 <true/>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### WebRtcAllowLegacyTLSProtocols
+
+  #### WebRTC で従来の TLS/DTLS ダウングレードを許可する (非推奨)
+
+  >非推奨: このポリシーは推奨されなくなっています。 現在はサポートされていますが、将来のリリースで廃止されます。
+  
+  #### サポートされているバージョン:
+
+  - Windows と macOS での 88 以降
+
+  #### 説明
+
+  このポリシーを有効にすると、WebRTC ピア接続は、TLS/DTLS (DTLS 1.0、TLS 1.0、および TLS 1.1) プロトコルの不使用バージョンにダウングレードできます。
+このポリシーを無効にするか、設定しない場合、これらの TLS/DTLS バージョンは無効になります。
+
+このポリシーは一時的なものであり、Microsoft Edge の将来のバージョンで削除される予定です。
+
+  #### サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: いいえ - ブラウザの再起動が必要
+
+  #### ［データの種類］:
+
+  - ブール値
+
+  #### Windows の情報と設定
+
+  ##### グループ ポリシー (ADMX) 情報
+
+  - GP 固有の名前: WebRtcAllowLegacyTLSProtocols
+  - GP 名: WebRTC で従来の TLS/DTLS ダウングレードを許可する (非推奨)
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - 値の名前: WebRtcAllowLegacyTLSProtocols
+  - 値の種類: REG_DWORD
+
+  ##### サンプル値:
+
+```
+0x00000000
+```
+
+  #### Mac の情報と設定
+  
+  - 基本設定キーの名前: WebRtcAllowLegacyTLSProtocols
+  - サンプル値:
+``` xml
+<false/>
 ```
   
 
