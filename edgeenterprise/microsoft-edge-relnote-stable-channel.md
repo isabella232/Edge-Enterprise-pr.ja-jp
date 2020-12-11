@@ -3,19 +3,19 @@ title: Stable チャネルに関する Microsoft Edge リリース ノート
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 11/30/2020
+ms.date: 12/08/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Stable チャネルに関する Microsoft Edge リリース ノート
-ms.openlocfilehash: 7975cf408a2b9d1c759ebf31e115b830649f1ee4
-ms.sourcegitcommit: 2a53bdd2510770c0b7580f912864337c6ef617fd
+ms.openlocfilehash: e998437308a9fc95ba6cb683561c109797a3e9c9
+ms.sourcegitcommit: 1be5f3584b2a9400ca18c3d5483c3c8929ac9dce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "11192528"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "11203599"
 ---
 # Microsoft Edge Stable チャネルのリリース ノート
 
@@ -23,6 +23,16 @@ ms.locfileid: "11192528"
 
 > [!NOTE]
 > 安定チャネルの場合、更新は 1 日以上かけて段階的に公開されます。 詳細については、「[Microsoft Edge 更新プログラムの段階的なロールアウト](microsoft-edge-update-progressive-rollout.md)」を参照してください。
+
+## バージョン 87.0.664.57: 12 月 7 日
+
+さまざまなバグとパフォーマンスの問題を修正しました。 セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#december-7-2020)に記載されています。
+
+## バージョン 87.0.664.55: 12 月 3 日
+
+さまざまなバグとパフォーマンスの問題を修正しました。 このリリースでは、次の機能が更新されました。
+
+- **ショッピングは既定で有効になっています**。 Microsoft Edge バージョン 87 以降では、エンタープライズ ユーザーは Microsoft Edge でショッピングを活用できます。 ショッピング機能を使用すると、Microsoft Edge では、オンライン ショッピング中に、ユーザーはクーポンを見つけてより良い価格を見つけることができます。 (クーポンの機能は、安定したバージョン 87.0.664.41 とともにリリースされました。) この更新プログラムで、価格比較エクスペリエンスを利用できるようになりました。 この機能は、[EdgeShoppingAssistantEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgeshoppingassistantenabled) ポリシーを使って構成できます。 Microsoft ショッピングについては、[ブログ](https://blogs.windows.com/windowsexperience/2020/11/19/finish-up-that-holiday-shopping-with-new-features-from-microsoft-edge-and-bing/)および[詳細情報](https://docs.microsoft.com/microsoft-edge/privacy-whitepaper#shopping)をご覧ください。
 
 ## バージョン 87.0.664.52: 11 月 30 日
 
