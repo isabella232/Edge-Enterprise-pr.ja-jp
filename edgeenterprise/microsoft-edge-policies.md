@@ -3,7 +3,7 @@ title: Microsoft Edge ブラウザー ポリシーに関するドキュメント
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 12/02/2020
+ms.date: 12/10/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
-ms.openlocfilehash: 94e16c202ce45332975c89ef354402a5b3edcc6e
-ms.sourcegitcommit: 0ab6e25fd045dec2ec23f9dd7b2d2adb6fde3ef2
+ms.openlocfilehash: b6d3ca2b485f6ce508f1a280fef48c4ed392d5fc
+ms.sourcegitcommit: 2887b30d46a9fe59d2ab9f95e638197ae058eaf7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "11195138"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "11205735"
 ---
 # Microsoft Edge - ポリシー
 
@@ -29,22 +29,14 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 > [!NOTE]
 > この記事は Microsoft Edge version 77 以降に適用されます。
 
-## 新規ポリシーと非推奨になったポリシー
+## 新しいポリシー
 
-次の表は、この更新の新規ポリシーと非推奨になったポリシーの一覧です。
+次の表に、この更新プログラムの新しいポリシーを示します。
 
 | 名前 | キャプション |
-|-|-|
-|[PrinterTypeDenyList](#printertypedenylist)|拒否リストでプリンターの種類を無効にする|
-|[InternetExplorerIntegrationLocalFileAllowed](#internetexplorerintegrationlocalfileallowed)|Internet Explorer モードでローカル ファイルを起動できるようにする|
-|[InternetExplorerIntegrationLocalFileExtensionAllowList](#internetexplorerintegrationlocalfileextensionallowlist)|Internet Explorer モードのローカル ファイルのファイル拡張子許可リストを開く|
-|[InternetExplorerIntegrationLocalFileShowContextMenu](#internetexplorerintegrationlocalfileshowcontextmenu)|Internet Explorer モードでリンクを開くためのコンテキスト メニューを表示する|
-|[IntranetRedirectBehavior](#intranetredirectbehavior)|イントラネット リダイレクトの動作|
-|[UpdatePolicyOverride](#updatepolicyoverride)|Microsoft Edge で利用できる更新プログラムを Microsoft Edge Update でどのように処理するかを指定します|
-|[VerticalTabsAllowed](#verticaltabsallowed)|ブラウザーの側面にあるタブの垂直レイアウトの可用性を構成する|
-| 廃止 [WebRtcAllowLegacyTLSProtocols](#webrtcallowlegacytlsprotocols)|WebRTC で従来の TLS/DTLS ダウングレードを許可する|
-
-
+|--|--|
+|[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)| バックグラウンド グラフィックス印刷モードを制限する|
+|[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)| 既定の背景グラフィックス印刷モード|
 
 ## 使用可能なポリシー
 
@@ -187,7 +179,9 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[DefaultPrinterSelection](#defaultprinterselection)|通常使うプリンターの選択ルール|
 |[PrintHeaderFooter](#printheaderfooter)|ヘッダーとフッターを印刷する|
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|システムの既定のプリンターを通常使うプリンターに設定する|
-|[PrinterTypeDenyList](#printertypedenylist)|拒否リストでプリンターの種類を無効にする|
+|[PrinterTypeDenyList](#printertypedenylist)|拒否リストのプリンターの種類を無効にする|
+|[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)|バックグラウンド グラフィックス印刷モードを制限する|
+|[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)|既定の背景グラフィックス印刷モード|
 |[PrintingEnabled](#printingenabled)|印刷を有効にする|
 |[PrintingPaperSizeDefault](#printingpapersizedefault)|印刷の既定のページ サイズ|
 |[UseSystemPrintDialog](#usesystemprintdialog)|システムの印刷ダイアログを使用して印刷する|
@@ -2756,7 +2750,7 @@ Adobe Flash プラグインを実行することができるサイトの一覧�
 
 このポリシーを構成していない場合、ユーザーの個人用の構成、または [DefaultPluginsSetting](#defaultpluginssetting) ポリシー (設定されている場合) からのグローバルな既定値がすべてのサイトで使用されます。
 
-有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。 ただし、M85以降では、ホストで「\*」および「[\*.]」のワイルドカードを使用したパターンは、このポリシーではサポートされなくなりました。
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。 ただし、M85以降では、ホストで '*' および '[*.]' のワイルドカードを使用したパターンは、このポリシーではサポートされなくなりました。
 
   #### サポートされている機能:
 
@@ -2825,7 +2819,7 @@ Adobe Flash プラグインの実行がブロックされているサイトの�
 
 このポリシーを構成していない場合、ユーザーの個人用の構成、または [DefaultPluginsSetting](#defaultpluginssetting) ポリシー (設定されている場合) からのグローバルな既定値がすべてのサイトで使用されます。
 
-有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。 ただし、M85以降では、ホストで「\*」および「[\*.]」のワイルドカードを使用したパターンは、このポリシーではサポートされなくなりました。
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。 ただし、M85以降では、ホストで '*' および '[*.]' のワイルドカードを使用したパターンは、このポリシーではサポートされなくなりました。
 
   #### サポートされている機能:
 
@@ -4174,7 +4168,11 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
   #### 説明
 
-  既定では、すべての拡張機能が許可されています。 ただし、"ExtensionInstallBlockList" ポリシーを "*" に設定してすべての拡張機能をブロックしている場合、ユーザーはこのポリシーで定義されている拡張機能しかインストールできません。
+  このポリシーを設定すると、ブロックリストの対象ではない拡張機能が指定されます。
+
+ブロックリスト値 * は、すべての拡張機能がブロックされ、ユーザーがインストールできるのは許可リストに記載されている拡張機能のみです。
+
+既定では、すべての拡張機能が許可されています。 ただし、ポリシーによって拡張機能を禁止した場合は、許可されている拡張機能の一覧を使用してそのポリシーを変更できます。
 
   #### サポートされている機能:
 
@@ -4237,11 +4235,11 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
   #### 説明
 
-  ユーザーが Microsoft Edge でインストールできない特定の拡張機能をリスト化します。 このポリシーを展開すると、このリストにある以前インストールされた拡張機能はすべて無効になり、ユーザーがそれらを有効にすることはできなくなります。 ブロックされた拡張機能のリストから項目を削除すると、その拡張機能は自動的に以前インストールされていた場所で再有効化されます。
+  ユーザーがインストールできない拡張機能を指定できます。 既にインストールされている拡張機能は、ユーザーが有効にする方法はなく、ブロックされた場合に無効になります。 無効化された拡張機能がブロックリストから削除されると、自動的に再有効化されます。
 
-許可リストに明示的にリスト化されていないすべての拡張機能をブロックするには、"*" を使用します。
+ブロックリスト値 '*' は、明示的に許可リストに記載されていない限り、すべての拡張機能がブロックされます。
 
-このポリシーを構成していない場合、ユーザーは Microsoft Edge に任意の拡張機能をインストールすることができます。
+このポリシーが設定されていない場合、ユーザーは Microsoft Edge に任意の拡張機能をインストールできます。
 
   #### サポートされている機能:
 
@@ -4448,11 +4446,12 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 
   #### 説明
 
-  Microsoft Edge の拡張機能管理設定を構成します。
+  このポリシーを設定すると、既存の拡張機能関連ポリシーによって制御される設定を含め、Microsoft Edge の拡張機能管理設定が制御されます。 このポリシーは、設定されている可能性がある従来のポリシーより優先されます。
 
-このポリシーは、拡張機能に関する既存のポリシーにより制御される設定を含む複数の設定を制御します。 このポリシーとレガシ ポリシーの両方が設定されている場合、このポリシーはレガシ ポリシーよりも優先されます。
+このポリシーは、拡張機能 ID または更新 URL を特定の設定にのみマップします。 特別な ID "*" に対して既定の構成を設定できます。この構成は、このポリシーのカスタム構成なしですべての拡張機能に適用されます。 更新 URL を使用すると、拡張機能マニフェスト ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) )に記載されている正確な更新 URL を持つ拡張機能に構成が適用されます。
 
-このポリシーは、拡張機能 ID または更新 URL をその構成にマッピングします。 拡張機能 ID を使用すると、指定した拡張機能にのみ構成が適用されます。 このポリシーで明示的にリスト化されていないすべての拡張機能に適用する特別な ID "*" の既定の構成を設定します。 更新 URL を使用すると、[https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) で説明されているように、この拡張機能のマニフェストに記載されている通りの更新 URL を持つすべての拡張機能に構成が適用されます。
+注: Microsoft Active Directory ドメインに参加していない Windows インスタンスの場合、強制インストールは Microsoft Edge アドオン Web サイトに記載されているアプリと拡張機能に限定されます。
+
 
   #### サポートされている機能:
 
@@ -5217,9 +5216,9 @@ Samba と Windows Server の最新バージョンは、すべて NTLMv2 をサ�
 
   #### 説明
 
-  Microsoft Edge でユーザーが使用できる特定のネイティブ メッセージング ホストをリスト化します。
+  ポリシーを設定すると、拒否リストの対象とされないネイティブ メッセージング ホストが指定されます。 拒否リストの値 * は、明示的に許可されていない限り、すべてのネイティブ メッセージング ホストが拒否されるという意味です。
 
-既定では、すべてのネイティブ メッセージング ホストが許可されます。 [NativeMessagingBlocklist](#nativemessagingblocklist) ポリシーを * に設定すると、すべてのネイティブ メッセージング ホストがブロックされ、ここでリスト化されているネイティブ メッセージング ホストのみが読み込まれます。
+既定では、すべてのネイティブ メッセージング ホストが許可されます。 ただし、ネイティブ メッセージング ホストがポリシーによって拒否された場合、管理者は許可リストを使用してそのポリシーを変更できます。
 
   #### サポートされている機能:
 
@@ -5282,11 +5281,9 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messag
 
   #### 説明
 
-  使用できないネイティブ メッセージング ホストを指定します。
+  このポリシーを設定すると、読み込まれてはならないネイティブ メッセージング ホストが指定されます。 拒否リストの値 * は、明示的に許可されていない限り、すべてのネイティブ メッセージング ホストが拒否されるという意味です。
 
-"*" を使用すると、許可リストに明示的にリスト化していない限り、すべてのネイティブ メッセージング ホストがブロックされます。
-
-このポリシーを構成していない場合、Microsoft Edge はインストールされているすべてのネイティブ メッセージング ホストを読み込みます。
+このポリシーを未設定のままにすると、Microsoft Edge はインストール済みのすべてのネイティブ メッセージング ホストを読み込みます。
 
   #### サポートされている機能:
 
@@ -5349,11 +5346,9 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 
   #### 説明
 
-  ネイティブ メッセージング ホストのユーザー レベルのインストールを有効にします。
+  このポリシーを [有効] に設定した場合、または未設定のままにした場合、Microsoft Edge では、ユーザー レベルでインストールされているネイティブ メッセージング ホストを使用できます。
 
-このポリシーを無効にしている場合、Microsoft Edge はシステム レベルにインストールされているネイティブ メッセージング ホストのみを使用します。
-
-このポリシーを構成していない場合、Microsoft Edge はユーザー レベルのネイティブ メッセージング ホストの使用を既定で許可します。
+このポリシーを無効に設定した場合、Microsoft Edge は、システム レベルでインストールされている場合にのみ、これらのホストを使用できます。
 
   #### サポートされている機能:
 
@@ -6153,6 +6148,140 @@ SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
   <string>local</string>
   <string>privet</string>
 </array>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### PrintingAllowedBackgroundGraphicsModes
+
+  #### バックグラウンド グラフィックス印刷モードを制限する
+
+  
+  
+  #### サポートされているバージョン:
+
+  - 89 以降の Windows および MacOS の場合
+
+  #### 説明
+
+  バックグラウンド グラフィックス印刷モードを制限します。 このポリシーが設定されていない場合、背景グラフィックスの印刷に制限はありません。
+
+ポリシー オプション マッピング:
+
+* any (任意) = バックグラウンド グラフィックスを使用した印刷と印刷なしを許可する
+
+* 有効 (有効) = バックグラウンド グラフィックスでのみ印刷を許可する
+
+* 無効 (無効) = バックグラウンド グラフィックスがない場合にのみ印刷を許可する
+
+このポリシーを構成する場合は、上記の情報を使用します。
+
+  #### サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+
+  - String
+
+  #### Windows の情報と設定
+
+  ##### グループ ポリシー (ADMX) 情報
+
+  - GP 一意の名前: PrintingAllowedBackgroundGraphicsModes
+  - GP 名: バックグラウンド グラフィックス印刷モードを制限する
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/印刷
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - 値の名前: PrintingAllowedBackgroundGraphicsModes
+  - 値の種類: REG_SZ
+
+  ##### サンプル値:
+
+```
+"enabled"
+```
+
+  #### Mac の情報と設定
+  
+  - Preference Key Name: PrintingAllowedBackgroundGraphicsModes
+  - サンプル値:
+``` xml
+<string>enabled</string>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### PrintingBackgroundGraphicsDefault
+
+  #### 既定の背景グラフィックス印刷モード
+
+  
+  
+  #### サポートされているバージョン:
+
+  - 89 以降の Windows および MacOS の場合
+
+  #### 説明
+
+  既定の背景グラフィックス印刷モードを上書きします。
+
+ポリシー オプション マッピング:
+
+* 有効 (有効) = 既定でバックグラウンド グラフィックス印刷モードを有効にする
+
+* 無効 (無効) = 既定でバックグラウンド グラフィックス印刷モードを無効にする
+
+このポリシーを構成する場合は、上記の情報を使用します。
+
+  #### サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+
+  - String
+
+  #### Windows の情報と設定
+
+  ##### グループ ポリシー (ADMX) 情報
+
+  - GP 一意の名前: PrintingBackgroundGraphicsDefault
+  - GP 名: 既定のバックグラウンド グラフィックス印刷モード
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/印刷
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - 値の名前: PrintingBackgroundGraphicsDefault
+  - 値の種類: REG_SZ
+
+  ##### サンプル値:
+
+```
+"enabled"
+```
+
+  #### Mac の情報と設定
+  
+  - Preference Key Name: PrintingBackgroundGraphicsDefault
+  - サンプル値:
+``` xml
+<string>enabled</string>
 ```
   
 
@@ -8292,7 +8421,7 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 
   ユーザーがアドレス バーに検索文字列を入力したときに、アドレス バーの提案一覧に関連する Bing での Microsoft Search の提案を表示するようにします。 このポリシーを有効にしているか、構成していない場合、ユーザーは Microsoft Edge のアドレス バーの提案一覧に、Bing での Microsoft Search を利用した内部結果を表示することができます。 Bing での Microsoft Search の結果を表示するには、ユーザーはその組織の Azure AD アカウントを使用して Microsoft Edge にサインインしている必要があります。
 このポリシーを無効にしている場合、ユーザーは Microsoft Edge のアドレス バーの提案一覧に、内部結果を表示することができなくなります。
-既定の検索プロバイダーを強制的に使用する一連のポリシー ([DefaultSearchProviderEnabled](#defaultsearchproviderenabled)、[DefaultSearchProviderName](#defaultsearchprovidername)、[DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl)) を有効にしていて、指定した検索プロバイダーが Bing でない場合、このポリシーは適用されず、アドレス バーの提案一覧に Bing での Microsoft Search の提案は表示されません。
+Microsoft Edge バージョン 89 から、Bing がユーザーの既定の検索プロバイダーではない場合でも、Bing の Microsoft Search の候補を利用できます。
 
   #### サポートされている機能:
 
@@ -17951,9 +18080,8 @@ IE からサイトをロードするために Microsoft Edge を起動すると�
 
   #### 説明
 
-  このポリシーを有効にしているか、設定していない場合、レンダラー コードの整合性が有効になります。 このポリシーは、Microsoft Edge のレンダラー プロセス内で実行する必要のあるサードパーティ製のソフトウェアとの互換性に問題が発生した場合にのみ、無効にする必要があります。
-
-このポリシーを無効にしている場合、未知のコードや悪意のあるコードが Microsoft Edge のレンダラー プロセス内で読み込まれる可能性があるため、Microsoft Edge のセキュリティと安定性に悪影響を与えます。
+  ポリシーを [有効] に設定するか、設定を解除すると、レンダラーのコード整合性が有効になります。
+ポリシーを無効に設定すると、Microsoft Edge のセキュリティと安定性に有害な影響が及び、不明で、潜在的に危険なコードが Microsoft Edge のレンダラー プロセス内に読み込まれる可能性があります。 Microsoft Edge のレンダラー プロセス内で実行する必要があるサード パーティ製ソフトウェアとの互換性の問題がある場合にのみ、ポリシーをオフにします。
 
   #### サポートされている機能:
 
