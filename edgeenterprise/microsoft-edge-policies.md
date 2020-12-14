@@ -3,7 +3,7 @@ title: Microsoft Edge ブラウザー ポリシーに関するドキュメント
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 12/10/2020
+ms.date: 12/11/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
-ms.openlocfilehash: b6d3ca2b485f6ce508f1a280fef48c4ed392d5fc
-ms.sourcegitcommit: 2887b30d46a9fe59d2ab9f95e638197ae058eaf7
+ms.openlocfilehash: d2261f327022ea2d4d57e91748de46173d72dfa4
+ms.sourcegitcommit: 12c803b07a1dbced5f2360f5745186e33adcc41a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "11205735"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "11218736"
 ---
 # Microsoft Edge - ポリシー
 
@@ -433,8 +433,6 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|WebRTC によるローカル IP アドレスの公開を管理する|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|WebRTC によるローカル IP アドレスの公開を制限する|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|WebRTC が使用するローカル UDP ポートの範囲を制限する|
-|[WebWidgetAllowed](#webwidgetallowed)|Web ウィジェットを有効にする|
-|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Windows の起動時に Web ウィジェットを許可する|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Windows プロキシ リゾルバーを使用する (非推奨)|
 
 
@@ -20825,7 +20823,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
   #### ［データの種類］:
 
-  - 文字列
+  - String
 
   
 
@@ -21888,131 +21886,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 ``` xml
 <string>10000-11999</string>
 ```
-  
-
-  [ページのトップへ](#microsoft-edge---policies)
-
-  ### WebWidgetAllowed
-
-  #### Web ウィジェットを有効にする
-
-  
-  
-  #### サポートされているバージョン:
-
-  - Windows での 88 以降
-
-  #### 説明
-
-  Web ウィジェットを有効にします。 有効にすると、ユーザーはウィジェットを使用してデスクトップやアプリケーションから Web を検索することができます。 このウィジェットは、Web 提案を表示し、すべての Web 検索を Microsoft Edge で開く検索ボックスを提供します。 検索ボックスは、検索 (Powered by Bing) と URL の提案を提供します。 ウィジェットにはフィード タイルも含まれており、ユーザーがクリックすると新しい Microsoft Edge ブラウザーのタブやウィンドウで msn.com の詳細情報を閲覧することができます。 フィード タイルには広告が含まれている場合があります。 ウィジェットは、Microsoft Edge の設定か Microsoft Edge の [その他のツール] メニューから起動することができます。
-
-このポリシーを有効にしているか、または構成していない場合、Web ウィジェットはすべてのプロファイルで自動的に有効になります。
-Microsoft Edge の設定では、ウィジェットを起動するためのオプションが表示されます。
-Microsoft Edge の設定では、ユーザーに対して Windows の起動時にウィジェットを実行するためのメニュー項目が表示されます (自動起動)。
-起動時にウィジェットを有効にするオプションは、[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) ポリシーが有効な場合に切り替えられます。
-[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) が無効になっているか、または構成されていない場合、起動時にウィジェットを有効にするオプションはオフに切り替えられます。
-ユーザーに対しては、Microsoft Edge の [その他のツール] メニューからウィジェットを起動するためのメニュー項目が表示されます。 ユーザーは [その他のツール] からウィジェットを起動することができます。
-ウィジェットは、システム トレイの "終了" オプションでオフにするか、タスク バーからウィジェットを閉じることでオフにすることができます。 自動起動が有効になっている場合、システムの再起動時にウィジェットも再起動されます。
-
-このポリシーを無効にすると、Web ウィジェットはすべてのプロファイルで無効になります。
-Microsoft Edge の設定からウィジェットを起動するオプションは無効になります。
-Windows の起動時にウィジェットを起動するオプション (自動起動) は無効になります。
-Microsoft Edge の [その他のツール] メニューからウィジェットを起動するオプションは無効になります。
-
-  #### サポートされている機能:
-
-  - 必須にすることができるか: はい
-  - 推奨にすることができるか: いいえ
-  - 動的なポリシーの更新: いいえ - ブラウザの再起動が必要
-
-  #### ［データの種類］:
-
-  - ブール値
-
-  #### Windows の情報と設定
-
-  ##### グループ ポリシー (ADMX) 情報
-
-  - GP 固有の名前: WebWidgetAllowed
-  - GP 名: Web ウィジェットを有効にする
-  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
-  - GP パス (推奨): なし
-  - GP ADMX ファイル名: MSEdge.admx
-
-  ##### Windows レジストリの設定
-
-  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
-  - パス (推奨): なし
-  - 値の名前: WebWidgetAllowed
-  - 値の種類: REG_DWORD
-
-  ##### サンプル値:
-
-```
-0x00000001
-```
-
-  
-
-  [ページのトップへ](#microsoft-edge---policies)
-
-  ### WebWidgetIsEnabledOnStartup
-
-  #### Windows の起動時に Web ウィジェットを許可する
-
-  
-  
-  #### サポートされているバージョン:
-
-  - Windows での 88 以降
-
-  #### 説明
-
-  Windows の起動時に Web ウィジェットが起動するようにします。
-
-有効にしている場合: 既定で Windows の起動時に Web ウィジェットが起動します。
-[WebWidgetAllowed](#webwidgetallowed) ポリシーを介してウィジェットが無効化されている場合、このポリシーは Windows の起動時にウィジェットを起動しません。
-
-このポリシーを無効している場合: Web ウィジェットはすべてのプロファイルで Windows の起動時に起動しません。
-Windows の起動時にウィジェットを起動するオプションは、Microsoft Edge の設定で無効化され、オフに切り替えられます。
-
-このポリシーを構成していない場合: Web ウィジェットはすべてのプロファイルで Windows の起動時に起動しません。
-Windows の起動時にウィジェットを起動するオプションは、Microsoft Edge の設定でオフに切り替えられます。
-
-  #### サポートされている機能:
-
-  - 必須にすることができるか: はい
-  - 推奨にすることができるか: いいえ
-  - 動的なポリシーの更新: いいえ - ブラウザの再起動が必要
-
-  #### ［データの種類］:
-
-  - ブール値
-
-  #### Windows の情報と設定
-
-  ##### グループ ポリシー (ADMX) 情報
-
-  - GP 固有の名前: WebWidgetIsEnabledOnStartup
-  - GP 名: Windows の起動時に Web ウィジェットを許可する
-  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
-  - GP パス (推奨): なし
-  - GP ADMX ファイル名: MSEdge.admx
-
-  ##### Windows レジストリの設定
-
-  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
-  - パス (推奨): なし
-  - 値の名前: WebWidgetIsEnabledOnStartup
-  - 値の種類: REG_DWORD
-
-  ##### サンプル値:
-
-```
-0x00000001
-```
-
-  
+ 
 
   [ページのトップへ](#microsoft-edge---policies)
 
