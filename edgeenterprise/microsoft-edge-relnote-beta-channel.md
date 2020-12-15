@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Beta チャネルに関する Microsoft Edge のリリース ノート
-ms.openlocfilehash: 258a8f06bf726d1260536de5216911918bdfd2c4
-ms.sourcegitcommit: 12c803b07a1dbced5f2360f5745186e33adcc41a
+ms.openlocfilehash: 45389aec9eb8f174abe32d0e4ac86509a109e2fa
+ms.sourcegitcommit: c7c326c97926764d2d614520c1c8dc2546254c98
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "11218696"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "11218943"
 ---
 # Microsoft Edge Beta チャネルのリリースノート
 
@@ -88,8 +88,6 @@ ms.locfileid: "11218696"
 - [UpdatePolicyOverride](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#updatepolicyoverride) - Microsoft Edge で利用できる更新プログラムを Microsoft Edge Update でどのように処理するかを指定します
 - [VerticalTabsAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#verticaltabsallowed) - ブラウザーの横にあるタブの垂直方向のレイアウトの可用性を構成します。
 - [WebRtcAllowLegacyTLSProtocols](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webrtcallowlegacytlsprotocols) - WebRTC で従来の TLS/DTLS ダウングレードを許可します。
-- [WebWidgetAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webwidgetallowed) - Web ウィジェットを有効にします。
-- [WebWidgetIsEnabledOnStartup](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webwidgetisenabledonstartup) - Windows 起動時に Web ウィジェットを許可します。
 
 #### 廃止されたポリシー
 
