@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: ファイル拡張子と Internet Explorer モードの関連付け
-ms.openlocfilehash: c80732239b911f7cd3d615e9ce1e480db2749f17
-ms.sourcegitcommit: fc0ac6bb6655d1f6e2de7c838f275779cd7a5de6
+ms.openlocfilehash: 63ab0bb8eafda093dedbed0c38a6763e0c054cdf
+ms.sourcegitcommit: c7c326c97926764d2d614520c1c8dc2546254c98
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "11175180"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "11218923"
 ---
 # ファイル拡張子と Internet Explorer モードの関連付け
 
@@ -91,6 +91,11 @@ Windows Registry Editor Version 5.00
 @="\"C:\\<edge_installation_dir>\\msedge.exe\" -ie-mode-file-url -- \"%1\""
 
 ```
+## Internet Explorer モードで開くようにファイルの種類を構成する
+
+Edge 88 以降、[[コンテキスト メニューを表示]](https://docs.microsoft.com/deployedge/microsoft-edge-policies#show-context-menu-to-open-a-link-in-internet-explorer-mode) ポリシーを使用して Internet Explorer モードで開くように特定のファイル タイプのリンクを構成し、Internet Explorer モードでリンクを開くことができます。 
+
+このポリシー「[Internet Explorer モードのローカル ファイルのファイル拡張子許可リストを開く](https://docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalfileextensionallowlist)」でファイル拡張子を指定することにより、このオプションを適用するファイル タイプを定義できます。 
 
 ## 関連項目
 
