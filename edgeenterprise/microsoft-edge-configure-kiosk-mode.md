@@ -107,39 +107,39 @@ ms.locfileid: "11094864"
 
 4. <span data-ttu-id="66060-163">**[Set up a kiosk]**  (キオスク モードを設定する) ページで、 **[開始する]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="66060-163">On the **Set up a kiosk** page, click **Get started**.</span></span>
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-2-get-started.png" alt-text="割り当てられたアクセスによるキオスクの設定":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-2-get-started.png" alt-text="キオスク ページ - 開始する":::
 
 5. <span data-ttu-id="66060-165">名前を入力して新しいキオスク アカウントを作成するか、または入力されているドロップダウン リストから既存のアカウントを選択して、 **[次へ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="66060-165">Type a name to create a new kiosk account or choose an existing account from the populated dropdown list and then click **Next**.</span></span>
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-3-create-account.png" alt-text="割り当てられたアクセスによるキオスクの設定":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-3-create-account.png" alt-text="キオスク モード - アカウントの作成":::
 
 6. <span data-ttu-id="66060-167">**[キオスク アプリを選ぶ]**  ページで、**[Microsoft Edge]** を選択し、 **[次へ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="66060-167">On the **Choose a kiosk app** page, select **Microsoft Edge** and then click **Next**.</span></span>
 
    > [!NOTE]
    > <span data-ttu-id="66060-168">これは、Microsoft Edge Dev、Beta、Stable チャネルにのみ適用されます。</span><span class="sxs-lookup"><span data-stu-id="66060-168">This only applies to Microsoft Edge Dev, Beta, and Stable channels.</span></span>
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="割り当てられたアクセスによるキオスクの設定":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="キオスク モード - アプリを選ぶ":::
 
 7. <span data-ttu-id="66060-170">Microsoft Edge がキオスク モードで実行しているときの表示方法について、次のいずれかのオプションを選びます。</span><span class="sxs-lookup"><span data-stu-id="66060-170">Pick one of the following options for how Microsoft Edge displays when running in kiosk mode:</span></span>
 
    - <span data-ttu-id="66060-171">デジタル/対話型サイネージ - 全画面表示モードで特定のサイトを表示し、Microsoft Edge を実行します。</span><span class="sxs-lookup"><span data-stu-id="66060-171">Digital/Interactive signage - Displays a specific site in full-screen mode, running Microsoft Edge.</span></span>
    - <span data-ttu-id="66060-172">パブリック ブラウザー - Microsoft Edge の限定的な複数タブのバージョンを実行します。</span><span class="sxs-lookup"><span data-stu-id="66060-172">Public browser - Runs a limited multi-tab version of Microsoft Edge.</span></span>
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="割り当てられたアクセスによるキオスクの設定":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="キオスク モードの表示 - 全画面表示デジタル署名":::
 
 8. <span data-ttu-id="66060-174"> *\*[次へ]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="66060-174">Select **Next**.</span></span>
 9. <span data-ttu-id="66060-175">キオスクが起動したときに読み込む URL を入力します。</span><span class="sxs-lookup"><span data-stu-id="66060-175">Type the URL to load when the kiosk launches.</span></span>
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-6-enter-url.png" alt-text="割り当てられたアクセスによるキオスクの設定":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-6-enter-url.png" alt-text="キオスク モード - URL の入力":::
 
 10. <span data-ttu-id="66060-177">アイドル時間に、既定値の 5 分をそのまま使用するか、独自の値を入力します。</span><span class="sxs-lookup"><span data-stu-id="66060-177">Accept the default value of 5 minutes for the idle time or provide a value of your own.</span></span>
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-7-enter-idle-time.png" alt-text="割り当てられたアクセスによるキオスクの設定":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-7-enter-idle-time.png" alt-text="キオスク モード - アイドル時間の入力":::
 
 11. <span data-ttu-id="66060-179"> *\*[次へ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="66060-179">Click **Next**.</span></span>
 12. <span data-ttu-id="66060-180"> *\*[設定]**  ウィンドウを閉じて、選択内容を保存して適用します。</span><span class="sxs-lookup"><span data-stu-id="66060-180">Close the **Settings** window to save and apply your choices.</span></span>
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="割り当てられたアクセスによるキオスクの設定":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="キオスク モード - 設定の終了":::
 
 13. <span data-ttu-id="66060-182">キオスク デバイスからサインオフし、ローカル キオスク アカウントでサインインして、構成を確認します。</span><span class="sxs-lookup"><span data-stu-id="66060-182">Sign off from the kiosk device and sign in with the local kiosk account to validate the configuration.</span></span>
 
