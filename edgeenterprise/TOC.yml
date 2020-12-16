@@ -1,4 +1,4 @@
-# last revised 11/16/2020
+# last revised 12/14/2020
 - name: Microsoft Edge エンタープライズのドキュメント
   href: index.yml
 - name: Microsoft Edge ドキュメント
@@ -74,7 +74,7 @@
     - name: Windows 用に構成する
       href: configure-microsoft-edge.md
     - name: Intune で Windows 用に構成する
-      href: configure-edge-with-intune.md
+      href: 'https://docs.microsoft.com/mem/intune/configuration/administrative-templates-configure-edge/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
     - name: モバイル デバイス管理で Windows 用に構成する
       href: configure-edge-with-mdm.md
     - name: .plist を使用して macOS 用に構成する
@@ -119,7 +119,7 @@
               href: edge-ie-mode-add-guidance-cookieshare.md
 - name: Microsoft Edge のセキュリティ
   items:
-    - name: ビジネス向けのセキュリティ
+    - name: ビジネスのセキュリティ
       href: ms-edge-security-for-business.md
     - name: Microsoft Edge エンドポイントの許可リスト
       href: microsoft-edge-security-endpoints.md
@@ -127,7 +127,7 @@
       href: microsoft-edge-security-dlp.md
     - name: 望ましくない可能性のあるアプリケーションから保護する
       href: microsoft-edge-potentially-unwanted-apps.md
-    - name: Azure AD の条件付きアクセスのサポート
+    - name: Azure AD条件付きアクセスのサポート
       href: ms-edge-security-conditional-access.md
     - name: Application Guard のサポート
       href: microsoft-edge-security-windows-defender-application-guard.md
@@ -147,11 +147,11 @@
       href: microsoft-edge-policies.md
     - name: 更新ポリシー リファレンス
       href: microsoft-edge-update-policies.md
-    - name: WebView2 ポリシーリファレンス
+    - name: WebView2 ポリシー リファレンス
       href: microsoft-edge-webview-policies.md
     - name: 詳細情報
       items:
-        - name: '新しい [エンタープライズ] タブページの下位互換性'
+        - name: '[エンタープライズ新規] タブ ページの下位互換性'
           href: edge-learnmore-ntp-backward-compatibility.md
         - name: ClickOnce および DirectInvoke
           href: edge-learn-more-co-di.md
@@ -169,7 +169,7 @@
           href: microsoft-edge-update-progressive-rollout.md
         - name: Microsoft Edge のお気に入りをプロビジョニングする
           href: edge-learnmore-provision-favorites.md
-        - name: Internet Explorer から Microsoft Edge へのリダイレクト
+        - name: Internet Explorerから Microsoft Edge へのリダイレクト
           href: edge-learnmore-neededge.md
         - name: Regular Expression 2 (re2.h) の構文
           href: edge-learnmore-regex.md
@@ -179,13 +179,13 @@
           href: edge-learnmore-rollback.md
 - name: Microsoft Edge のビデオ
   items:
-    - name: Microsoft Edge ビデオのコレクション
+    - name: Microsoft Edge ビデオ コレクション
       href: microsoft-edge-videos.md
-    - name: 'ビデオ: Application Guard を使用したブラウザ分離'
+    - name: ビデオ - Application Guard を使用したブラウザーの分離
       href: microsoft-edge-video-security-application-guard.md
     - name: ビデオ - Microsoft Edge の展開
       href: microsoft-edge-video-deploy.md
-    - name: 'ビデオ: データ損失防止 (DLP)'
+    - name: ビデオ - データ損失防止 (DLP)
       href: microsoft-edge-video-security-dlp.md
     - name: Microsoft Edge および Microsoft Search のビデオ
       href: microsoft-edge-video-search.md
