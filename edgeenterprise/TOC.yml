@@ -192,4 +192,4 @@
     - name: ビデオ - セキュリティ、互換性、管理性
       href: microsoft-edge-video-security-compatibility-manageability.md
 - name: よく寄せられる質問
-  href: faqs-edge-in-the-enterprise.md
+  href: faqs-edge-in-the-enterprise.yml
