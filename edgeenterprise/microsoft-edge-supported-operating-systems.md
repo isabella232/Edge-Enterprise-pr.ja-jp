@@ -3,19 +3,19 @@ title: Microsoft Edge でサポートされているオペレーティング シ
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 12/10/2020
+ms.date: 12/17/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge でサポートされているオペレーティング システム
-ms.openlocfilehash: 3d3b9c341230aff4ab8fb7dbc1beb40bd2025beb
-ms.sourcegitcommit: 12c803b07a1dbced5f2360f5745186e33adcc41a
+ms.openlocfilehash: 866708bc1d24523f47237a5242575a16544b8009
+ms.sourcegitcommit: 7db4c9854175898844ce3daf75d8007cfc6632a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "11218726"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "11237249"
 ---
 # Microsoft Edge でサポートされているオペレーティング システム
 
@@ -43,8 +43,6 @@ Microsoft Edge は最新のライフサイクル ポリシーに準拠してお�
 - Windows 10 IoT Enterprise SAC _***
 - Windows 10 IoT Enterprise 2019 LTSC ****
 
-
-
 ### Windows Server
 
 - Windows Server 2008 R2 **
@@ -55,7 +53,7 @@ Microsoft Edge は最新のライフサイクル ポリシーに準拠してお�
 - Windows Server (SAC)
 
 > [!IMPORTANT]
-> ** Windows 7 および Windows Server 2008 R2 では、2021 年 7 月 15 日まで Microsoft Edge のサポートを継続します。 これらのオペレーティング システムはサポートしていません。Microsoft は、Windows 10 などのサポートされているオペレーティング システムに移行することを推奨しています。 Microsoft Edge は Web のセキュリティを強化するのに役立ちますが、PC は依然としてセキュリティ リスクに対して脆弱です。 これらのオペレーティング システムで IE モードをサポートするには、デバイスに [Windows 7 の拡張セキュリティ更新プログラム](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7)が必要になります。 Windows 7 の拡張セキュリティ更新プログラムがないと、Internet Explorer の機能はセキュリティ リスクに対して脆弱です。 また、拡張セキュリティ更新プログラムによる継続的なサービス提供がないと、IE モード機能が動作しなくなる場合があります。  
+> ** Windows 7 および Windows Server 2008 R2 では、2022 年 1 月 15 日まで Microsoft Edge のサポートを継続します。 これらのオペレーティング システムはサポートしていません。Microsoft は、Windows 10 などのサポートされているオペレーティング システムに移行することを推奨しています。 Microsoft Edge は Web のセキュリティを強化するのに役立ちますが、PC は依然としてセキュリティ リスクに対して脆弱です。 これらのオペレーティング システムで IE モードをサポートするには、デバイスに [Windows 7 の拡張セキュリティ更新プログラム](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7)が必要になります。 Windows 7 の拡張セキュリティ更新プログラムがないと、Internet Explorer の機能はセキュリティ リスクに対して脆弱です。 また、拡張セキュリティ更新プログラムによる継続的なサービス提供がないと、IE モード機能が動作しなくなる場合があります。  
 >
 > **_ 上記と同様に、サポート期間が終了している Windows 10 SAC リリースで Microsoft Edge がサポートされている場合には、できるだけ早くサポートされている Windows 10 SAC リリースにアップグレードし、セキュリティで保護された状態を確保することをお勧めします。 この状態でサポートされている Microsoft Edge は、OS がサポートされている状態に移行するための暫定措置として見なす必要があります。
 >
@@ -76,6 +74,10 @@ Android 用 Microsoft Edge は、次の条件を満たすタブレットまた�
 ### Chromebook
 
 Microsoft Edge は Chromebook をサポートしていません。
+
+## 最近の変更点
+
+- **2020 年 12 月 17 日** - Windows 7 および Windows Server 2008 R2 での Microsoft Edge のサポートは、2022 年 1 月 15 日まで延長されました。
 
 ## 関連項目
 

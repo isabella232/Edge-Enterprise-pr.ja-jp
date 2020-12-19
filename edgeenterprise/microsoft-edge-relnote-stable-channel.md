@@ -3,19 +3,19 @@ title: Stable チャネルに関する Microsoft Edge リリース ノート
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 12/10/2020
+ms.date: 12/17/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Stable チャネルに関する Microsoft Edge リリース ノート
-ms.openlocfilehash: dd3ff3a37b2df1cf4ad8a9d9e83e0a21edeeba9d
-ms.sourcegitcommit: 827eca46dd767f3c4509259974e1383fdf506d7e
+ms.openlocfilehash: 971cf2a71bac329cba6bb3fdd637ecbfd5944437
+ms.sourcegitcommit: d1ecab8d3d9f7a369c2690c0e6eaa9b12520ae46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "11205832"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "11236834"
 ---
 # Microsoft Edge Stable チャネルのリリース ノート
 
@@ -24,13 +24,17 @@ ms.locfileid: "11205832"
 > [!NOTE]
 > 安定チャネルの場合、更新は 1 日以上かけて段階的に公開されます。 詳細については、「[Microsoft Edge 更新プログラムの段階的なロールアウト](microsoft-edge-update-progressive-rollout.md)」を参照してください。
 
+## バージョン 87.0.664.66: 12 月 17 日
+
+さまざまなバグとパフォーマンスの問題を修正しました。
+
 ## バージョン 87.0.664.60: 12 月 10 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
 ## バージョン 87.0.664.57: 12 月 7 日
 
-さまざまなバグとパフォーマンスの問題を修正しました。 セキュリティの更新プログラムは、[こちら](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#december-7-2020)に記載されています。
+さまざまなバグとパフォーマンスの問題を修正しました。 セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#december-7-2020)に記載されています。
 
 ## バージョン 87.0.664.55: 12 月 3 日
 
