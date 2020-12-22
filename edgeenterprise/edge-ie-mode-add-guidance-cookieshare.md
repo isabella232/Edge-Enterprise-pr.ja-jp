@@ -3,19 +3,19 @@ title: Microsoft Edge から Internet Explorer への Cookie の共有
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 11/05/2020
+ms.date: 12/21/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 'Microsoft Edge から Internet Explorer へと Cookie を共有する方法 '
-ms.openlocfilehash: 5740a4ce31a240573b9106e7a20a5c44688aca0a
-ms.sourcegitcommit: 2024629929044e2dcf146674058c1d6312c32e9a
+ms.openlocfilehash: ddd9d34b5e2b0ee49093734da82e4a4fa7aa6a69
+ms.sourcegitcommit: 306582403d4272831bcac390154c7cc7041a9b7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "11157545"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "11238184"
 ---
 # Microsoft Edge から Internet Explorer への Cookie の共有
 
@@ -28,10 +28,10 @@ ms.locfileid: "11157545"
 
 - Windows 更新プログラム
 
-  - Windows 10 バージョン 2004、Windows server バージョン 2004 - KB4571744 以降
-  - Windows 10 バージョン 1909、Windows server バージョン 1909 – KB4566116 以降
-  - Windows 10 バージョン 1903、Windows server バージョン 1903 – KB4566116 以降
-  - Windows 10 バージョン 1809、Windows Server バージョン 1809、Windows Server 2019 - KB4571748 以降
+  - Windows 10 バージョン 2004、Windows Server バージョン 2004 - KB4571744 以上
+  - Windows 10 バージョン 1909、Windows Server バージョン 1909 – KB4566116 以上
+  - Windows 10 バージョン 1903、Windows Server バージョン 1903 – KB4566116 以上
+  - Windows 10 バージョン 1809、Windows Server バージョン 1809、および Windows Server 2019 - KB4571748 以降
   - Windows 10 バージョン 1803 – KB4577032 以降
 
 - Microsoft Edge バージョン 87 以降
