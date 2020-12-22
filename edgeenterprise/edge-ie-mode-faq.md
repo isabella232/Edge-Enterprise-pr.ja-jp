@@ -1,21 +1,21 @@
 ---
 title: IE モードに関する FAQ
-ms.author: cjacks
-author: cjacks
-manager: saudm
-ms.date: 05/27/2020
+ms.author: shisub
+author: dan-wesley
+manager: srugh
+ms.date: 12/21/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: IE モードの Microsoft Edge に関する FAQ とトラブルシューティング
-ms.openlocfilehash: fcceb9eab19d667f772c593fe4f362606c1623ff
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 62bf8afc5ac908e18d2f503fa9248a19f78fd6f6
+ms.sourcegitcommit: 306582403d4272831bcac390154c7cc7041a9b7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980407"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "11238174"
 ---
 # IE モードに関する FAQ
 
@@ -81,6 +81,20 @@ Microsoft Edge には、*nomerge* オプションをミラーリングする明�
 2. `--user-data-dir=<path>` のコマンド ラインを使用しますが、各セッションには異なるパスを使用します。 必要な場合は、Microsoft Edge の起動とセッション用パスの変更を両方実行するユーティリティを作成することが可能です。
 
 上記のいずれのオプションもお客様のシナリオでうまくいかない場合は、Microsoft サポート、[TechCommunity フォーラム](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise)、[Microsoft Edge UserVoice](https://microsoftedge.uservoice.com/forums/928825-enterprise)のフィードバック チャネルのいずれかをご確認ください。
+
+### Internet Explorer モードでリンクを Web ページとして保存できますか?
+ 
+はい。Microsoft Edge のInternet Explorer モードで、コンテキスト メニューの [名前を付けて保存] オプションを有効にできます。 これを行うには、*[コンピューターの構成] > [管理用テンプレート] > [Windows コンポーネント] > [Internet Explorer]* にあるグループポリシー *"Internet Explorer モードで「名前をつけて保存」を許可する"* を構成します。
+保存メカニズムは Internet Explorer の場合と同じように動作し、ターゲットが html ファイルとして保存されている場合は、ファイルを再び開くと Microsoft Edge でページをレンダリングします。
+ 
+この機能には、次の最小限のオペレーティング システム更新プログラムが必要です。
+- Windows 10、バージョン 2004、Windows Server バージョン 2004、Windows 10、バージョン 20H2 : [KB4580364](https://support.microsoft.com/help/4580364/windows-10-update-kb4580364)
+- Windows 10、バージョン 1903、Windows 10、 バージョン 1909、Windows Server バージョン 1903: [KB4580386](https://support.microsoft.com/help/4580386/windows-10-update-kb4580386)
+- Windows 10、バージョン 1809、Windows Server バージョン 1809、Windows Server 2019: [KB4580390](https://support.microsoft.com/help/4580390/windows-10-update-kb4580390)
+- Windows 10、バージョン 1803: [KB4586785](https://support.microsoft.com/help/4586785/windows-10-update-kb4586785)
+- Windows 10、バージョン 1607: [KB4586830](https://support.microsoft.com/help/4586830/windows-10-update-kb4586830)
+- Windows 10、バージョン 1507: [KB4586787](https://support.microsoft.com/help/4586787/windows-10-update-kb4586787)
+
 
 ## 関連項目
 
