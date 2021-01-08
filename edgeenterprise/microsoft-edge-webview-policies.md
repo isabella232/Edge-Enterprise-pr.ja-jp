@@ -3,7 +3,7 @@ title: Microsoft Edge WebView2 ポリシードキュメント
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 12/10/2020
+ms.date: 01/07/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,19 +11,18 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
-ms.openlocfilehash: 698b291d8831efe1efd7fcbb436fe3921e09f255
-ms.sourcegitcommit: 2887b30d46a9fe59d2ab9f95e638197ae058eaf7
+ms.openlocfilehash: 0be51f193d12c14d1bb40439d7ec6ca9e59effae
+ms.sourcegitcommit: 4dc45cde7cfd29cd24a03f6e830502e95c43d82e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "11205726"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "11254955"
 ---
 # Microsoft Edge WebView2 - ポリシー
 
 最新バージョンの Microsoft Edge WebView2には、次のポリシーが含まれています。 これらのポリシーを使用して、組織内での Microsoft Edge WebView2の動作方法を構成することができます。
 
 Microsoft Edge WebView2の更新方法とタイミングを制御するために使用される追加のポリシー セットについては、「[Microsoft Edge更新ポリシーの参照](microsoft-edge-update-policies.md)」をご覧ください。
-
 
 > [!NOTE]
 > この記事は Microsoft Edge version 87 以降に適用されます。
