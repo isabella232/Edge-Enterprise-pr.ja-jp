@@ -3,23 +3,27 @@ title: Microsoft Edge セキュリティ更新プログラムのリリースノ�
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 12/08/2020
+ms.date: 01/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge セキュリティ更新プログラムのリリースノート
-ms.openlocfilehash: 4bcd47521f0f57e9d7733e717688685a6abf5a24
-ms.sourcegitcommit: 1be5f3584b2a9400ca18c3d5483c3c8929ac9dce
+ms.openlocfilehash: 9644f981f8a94d0c6bd7a4c9070fb53668e7d4ab
+ms.sourcegitcommit: f3b422cba2810c973682437ff46a652fc5429f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "11203609"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "11255243"
 ---
 # Microsoft Edge セキュリティ更新プログラムのリリースノート
 
 これらのリリースノートでは、Microsoft Edge Stable チャネルの更新に含まれているセキュリティ修正プログラムに関する情報を提供します。
+
+## 2021 年 1 月 7 日
+
+Microsoft は、Chromium プロジェクトの最新のセキュリティ更新プログラムを組み込んでいる最新の **Microsoft Edge Stable チャネル (バージョン87.0.664.75)** をリリースしました。 詳細については、「[セキュリティ更新プログラム ガイド](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002)」を参照してください。
 
 ## 2020 年 12 月 7 日
 
