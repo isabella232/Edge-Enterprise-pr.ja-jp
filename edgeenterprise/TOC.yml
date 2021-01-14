@@ -1,4 +1,4 @@
-# last revised 12/21/2020
+# last revised 01/13/2021
 - name: Microsoft Edge エンタープライズのドキュメント
   href: index.yml
 - name: Microsoft Edge ドキュメント
@@ -27,16 +27,18 @@
       href: deploy-edge-plan-deployment.md
     - name: Microsoft Edge の準備完了
       href: deploy-edge-ready-for-edge.md
-    - name: リリース情報
-      items:
-        - name: リリーススケジュール
-          href: microsoft-edge-release-schedule.md
-        - name: Beta チャネルのリリース ノート
-          href: microsoft-edge-relnote-beta-channel.md
-        - name: Stable チャネルのリリース ノート
-          href: microsoft-edge-relnote-stable-channel.md
-        - name: セキュリティ更新プログラム
-          href: microsoft-edge-relnotes-security.md
+    - name: Stable チャネルのリリース ノート
+      href: microsoft-edge-relnote-stable-channel.md
+    - name: Stable チャネルでアーカイブされたリリース ノート
+      href: microsoft-edge-relnote-archive-stable-channel.md
+    - name: Beta チャネルのリリース ノート
+      href: microsoft-edge-relnote-beta-channel.md
+    - name: ベータ チャネルでアーカイブされたリリース ノート
+      href: microsoft-edge-relnote-archive-beta-channel.md
+    - name: リリース スケジュール
+      href: microsoft-edge-release-schedule.md
+    - name: セキュリティ更新プログラム
+      href: microsoft-edge-relnotes-security.md
     - name: Microsoft Edge ポリシー マッピング
       items:
         - name: ポリシー マッピングの概要
