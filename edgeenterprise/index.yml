@@ -11,28 +11,30 @@ metadata:
   ms.collection: collection
   author: dan-wesley
   ms.author: kvice
-  ms.date: 10/15/2020
-  ms.openlocfilehash: 09eb7c214e048ddd281817f8050ef4f1ff4cb985
-  ms.sourcegitcommit: 49a37e9c584eeb44683c83f098a15464054a26f9
+  ms.date: 12/01/2020
+  ms.openlocfilehash: 2a0466121bb773be20a01ec0b9f72e16bb8ac644
+  ms.sourcegitcommit: 42af8123dc86c2a1d07de0080a6c878c151f354f
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 10/15/2020
-  ms.locfileid: "11119412"
+  ms.lasthandoff: 01/14/2021
+  ms.locfileid: "11269278"
 landingContent:
 - title: エンタープライズ環境での Microsoft Edge について
   linkLists:
   - linkListType: overview
     links:
-    - text: Microsoft Edge のビデオ
-      url: microsoft-edge-videos.md
     - text: Microsoft Edge チャネル概要
       url: microsoft-edge-channels.md
     - text: Microsoft Edge チャネルをダウンロードする
       url: https://aka.ms/EdgeEnterprise
     - text: エンタープライズ機能を使用する
       url: edge-ie-mode.md
-    - text: Microsoft Edge および Microsoft Search のビデオ
-      url: microsoft-edge-video-search.md
+  - linkListType: video
+    links:
+    - text: Microsoft Edge のビデオ
+      url: microsoft-edge-videos.md
+    - text: Microsoft Edge YouTube チャネル
+      url: https://www.youtube.com/channel/UCIGx7oT8p6-jUpOfg98yelA
 - title: Microsoft Edge を展開および更新する
   linkLists:
   - linkListType: deploy
@@ -51,7 +53,7 @@ landingContent:
     links:
     - text: Windows で Microsoft Edge を構成する
       url: configure-microsoft-edge.md
-    - text: MacOS で Microsoft Edge を構成する
+    - text: macOS で Microsoft Edge を構成する
       url: configure-microsoft-edge-on-mac.md
     - text: Microsoft Edge を既定のブラウザーとして設定する
       url: edge-default-browser.md
@@ -73,7 +75,7 @@ landingContent:
       url: microsoft-edge-policies.md
     - text: 更新ポリシー リファレンス
       url: microsoft-edge-update-policies.md
-    - text: WebView2 ポリシーリファレンス
+    - text: WebView2 ポリシー リファレンス
       url: microsoft-edge-webview-policies.md
     - text: ポリシー マッピングの概要
       url: microsoft-edge-policy-map-overview.md
