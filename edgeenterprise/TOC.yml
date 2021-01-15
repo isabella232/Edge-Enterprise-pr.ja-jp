@@ -1,4 +1,4 @@
-# last revised 01/13/2021
+# last revised 01/14/2021
 - name: Microsoft Edge エンタープライズのドキュメント
   href: index.yml
 - name: Microsoft Edge ドキュメント
@@ -185,14 +185,22 @@
   items:
     - name: Microsoft Edge ビデオ コレクション
       href: microsoft-edge-videos.md
+    - name: ビデオ - Microsoft Edge - ブラウザー 2020 の状態
+      href: microsoft-edge-video-state-of-browser.md
     - name: ビデオ - Application Guard を使用したブラウザーの分離
       href: microsoft-edge-video-security-application-guard.md
     - name: ビデオ - Microsoft Edge の展開
       href: microsoft-edge-video-deploy.md
     - name: ビデオ - データ損失防止 (DLP)
       href: microsoft-edge-video-security-dlp.md
-    - name: Microsoft Edge および Microsoft Search のビデオ
-      href: microsoft-edge-video-search.md
+    - name: ビデオ - Microsoft Edge の ID
+      href: microsoft-edge-video-identity.md
+    - name: ビデオ - Microsoft Edge のバージョンのロールバック
+      href: microsoft-edge-video-version-rollback.md
+    - name: ビデオ - Microsoft Edge の PDF リーダー
+      href: microsoft-edge-video-pdf-reader.md
+    - name: ビデオ - Microsoft Edge での安全な閲覧
+      href: microsoft-edge-video-security-smartscreen.md
     - name: ビデオ - セキュリティ、互換性、管理性
       href: microsoft-edge-video-security-compatibility-manageability.md
 - name: よく寄せられる質問
