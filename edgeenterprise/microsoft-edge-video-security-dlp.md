@@ -3,31 +3,29 @@ title: Microsoft Edge とデータ損失防止
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 10/08/2020
+ms.date: 01/13/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge とデータ損失防止 (DLP)
-ms.openlocfilehash: 9d9080817b1aa984e5ff34d8defac4447e8f0f80
-ms.sourcegitcommit: 2af303fc97e8493024e2359fa2e8be162ab95a59
+ms.openlocfilehash: d910a11f50c103d8ba6e924807c6fbffa269cfa0
+ms.sourcegitcommit: 42af8123dc86c2a1d07de0080a6c878c151f354f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "11104619"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "11269374"
 ---
 # ビデオ: Microsoft Edge とデータ損失防止 (DLP)
 
-このビデオでは、Microsoft Edge がどのようにデータ損失防止をサポートしているかについて説明します。
+このビデオでは、Microsoft Edge がどのようにデータ損失防止をサポートしているかについて説明します。 次のスクリーンショットをクリックして、Microsoft Edge のセキュリティのシニア プログラム マネージャーである Arunesh Chandra によるビデオをご覧ください。
+
+[![ Microsoft Edge とデータ損失防止](media/microsoft-edge-security-dlp/0.png)](http://www.youtube.com/watch?v=dLD04U9eTqg " Microsoft Edge and data loss prevention")
 
 ## ビデオについて
 
 データ損失防止 (DLP) は、リモート ワークの普及とともにかつてないほど重要になってきています。 Microsoft Edge のネイティブ DLP 機能について、また DLP がどのようにして企業のデータ管理や、コンプライアンスの維持に役立つかについて説明します。
-
-次のスクリーンショットをクリックして、Microsoft Edge のセキュリティのシニア プログラム マネージャーである Arunesh Chandra によるビデオをご覧ください。 
-
-[![Microsoft Edge - データ損失防止](https://res.cloudinary.com/marcomontalbano/image/upload/v1602111637/video_to_markdown/images/youtube--dLD04U9eTqg-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=dLD04U9eTqg "Microsoft Edge - Data loss prevention")
 
 ## 関連項目
 
