@@ -3,7 +3,7 @@ title: Microsoft Edge ブラウザー ポリシーに関するドキュメント
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/07/2021
+ms.date: 01/15/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
-ms.openlocfilehash: b422361809b0a2acaa392729025a95aef7ac8f83
-ms.sourcegitcommit: 4dc45cde7cfd29cd24a03f6e830502e95c43d82e
+ms.openlocfilehash: 92b89087cd7082844e36660ffdc7ff217cd92ff2
+ms.sourcegitcommit: 63c53d1eaa3ad70acd405379bd3af57275a0b24f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "11254975"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "11270843"
 ---
 # Microsoft Edge - ポリシー
 
@@ -29,17 +29,14 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 > [!NOTE]
 > この記事は Microsoft Edge version 77 以降に適用されます。
 
-
 ## 新しいポリシー
 
 次の表に、この更新プログラムの新しいポリシーを示します。
 
 | 名前 | キャプション |
-|-|-|
-|[BasicAuthOverHttpEnabled](#basicauthoverhttpenabled)|HTTP の基本認証を許可する|
-|[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|\_blank をターゲットとするリンクに window.opener を設定しない|
-|[WebWidgetAllowed](#webwidgetallowed)|Web ウィジェットを許可する|
-|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Windows 起動時に Web ウィジェットを有効にする|
+|--|--|
+|[BrowsingDataLifetime](#browsingdatalifetime)|データの有効期間設定の参照|
+|[DefinePreferredLanguages](#definepreferredlanguages)|サイトがその言語をサポートしている場合に Web サイトが表示する優先言語の順序指定された一覧を定義します|
 
 
 ## 使用可能なポリシー
@@ -268,6 +265,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[BrowserGuestModeEnabled](#browserguestmodeenabled)|ゲスト モードを有効にする|
 |[BrowserNetworkTimeQueriesEnabled](#browsernetworktimequeriesenabled)|ブラウザー ネットワーク時間サービスへのクエリを許可する|
 |[BrowserSignin](#browsersignin)|ブラウザーへのサインイン設定|
+|[BrowsingDataLifetime](#browsingdatalifetime)|データの有効期間設定の参照|
 |[BuiltInDnsClientEnabled](#builtindnsclientenabled)|組み込みの DNS クライアントを使用する|
 |[BuiltinCertificateVerifierEnabled](#builtincertificateverifierenabled)|組み込みの証明書検証機能を使用してサーバー証明書を検証するかどうかを決定する (非推奨)|
 |[CertificateTransparencyEnforcementDisabledForCas](#certificatetransparencyenforcementdisabledforcas)|subjectPublicKeyInfo ハッシュの一覧に対する証明書の透明性の強制を無効にする|
@@ -290,6 +288,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[DefaultSearchProviderContextMenuAccessAllowed](#defaultsearchprovidercontextmenuaccessallowed)|既定の検索プロバイダーのコンテキスト メニューへのアクセスを許可する|
 |[DefaultSensorsSetting](#defaultsensorssetting)|既定のセンサーの設定|
 |[DefaultSerialGuardSetting](#defaultserialguardsetting)|シリアル API の使用を制御する|
+|[DefinePreferredLanguages](#definepreferredlanguages)|サイトがその言語をサポートしている場合に Web サイトが表示する優先言語の順序指定された一覧を定義します|
 |[DelayNavigationsForInitialSiteListDownload](#delaynavigationsforinitialsitelistdownload)|タブ ナビゲーションの前にエンタープライズ モード サイト一覧が使用できるようにする|
 |[DeleteDataOnMigration](#deletedataonmigration)|移行時に古いブラウザー データを削除する|
 |[DeveloperToolsAvailability](#developertoolsavailability)|開発者ツールの使用を制御する|
@@ -439,8 +438,8 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|WebRTC によるローカル IP アドレスの公開を管理する|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|WebRTC によるローカル IP アドレスの公開を制限する|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|WebRTC が使用するローカル UDP ポートの範囲を制限する|
-|[WebWidgetAllowed](#webwidgetallowed)|Web ウィジェットを許可する|
-|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Windows 起動時に Web ウィジェットを有効にする|
+|[WebWidgetAllowed](#webwidgetallowed)|Web ウィジェットを有効にする|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Windows の起動時に Web ウィジェットを許可する|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Windows プロキシ リゾルバーを使用する (非推奨)|
 
 
@@ -6311,7 +6310,9 @@ SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
 
   #### 説明
 
-  既定の背景グラフィックス印刷モードを上書きします。
+  バックグラウンド グラフィックス印刷に最後に使用した設定を上書きします。
+この設定を有効にすると、バックグラウンド グラフィックス印刷が有効になります。
+この設定を無効にすると、バックグラウンド グラフィックス印刷が無効になります。
 
 ポリシー オプション マッピング:
 
@@ -10674,6 +10675,108 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   [ページのトップへ](#microsoft-edge---policies)
 
+  ### BrowsingDataLifetime
+
+  #### データの有効期間設定の参照
+
+  
+  
+  #### サポートされているバージョン:
+
+  - 89 以降の Windows および MacOS の場合
+
+  #### 説明
+
+  Microsoft Edge の閲覧データの有効期間設定を構成します。
+このポリシーは、選択した閲覧データの有効期間を制御します。 同期が有効になっている場合、このポリシーは効果がありません。
+使用可能なデータ型は、「browsing_history」、「download_history」、「cookies_and_other_site_data」、「cached_images_and_files」、「password_signin」、「autofill」、「site_settings」、および「hosted_app_data」です。
+Microsoft Edge は、「time_to_live_in_hours」より古い選択された型のデータを定期的に削除します。 データの削除は特定の間隔でのみ行われるため、一部のデータはわずかに長く保持される場合がありますが、予想される「time_to_live_in_hours」の 2 倍を超えることはありません。
+
+
+  #### サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+
+  - Dictionary
+
+  #### Windows の情報と設定
+
+  ##### グループ ポリシー (ADMX) 情報
+
+  - GP 固有の名前: BrowsingDataLifetime
+  - GP 名: データの有効期間設定の参照
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - 値の名前: BrowsingDataLifetime
+  - 値の種類: REG_SZ
+
+  ##### サンプル値:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [
+  {
+    "data_types": [
+      "browsing_history"
+    ], 
+    "time_to_live_in_hours": 24
+  }, 
+  {
+    "data_types": [
+      "password_signin", 
+      "autofill"
+    ], 
+    "time_to_live_in_hours": 12
+  }
+]
+```
+
+  ##### コンパクト サンプル値:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [{"data_types": ["browsing_history"], "time_to_live_in_hours": 24}, {"data_types": ["password_signin", "autofill"], "time_to_live_in_hours": 12}]
+  ```
+  
+
+  #### Mac の情報と設定
+  
+  - 基本設定キーの名前: BrowsingDataLifetime
+  - サンプル値:
+``` xml
+<key>BrowsingDataLifetime</key>
+<array>
+  <dict>
+    <key>data_types</key>
+    <array>
+      <string>browsing_history</string>
+    </array>
+    <key>time_to_live_in_hours</key>
+    <integer>24</integer>
+  </dict>
+  <dict>
+    <key>data_types</key>
+    <array>
+      <string>password_signin</string>
+      <string>autofill</string>
+    </array>
+    <key>time_to_live_in_hours</key>
+    <integer>12</integer>
+  </dict>
+</array>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
   ### BuiltInDnsClientEnabled
 
   #### 組み込みの DNS クライアントを使用する
@@ -10688,13 +10791,13 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   組み込みの DNS クライアントを使用するかどうかを制御します。
 
-これは使用されるDNS サーバーに影響を与えるものではありません。サーバーとの通信に使用されるソフトウェア スタックにのみ影響を与えます。 たとえば、オペレーティング システムがエンタープライズ DNS サーバーを使用するように構成されている場合、そのサーバーは組み込みの DNS クライアントによって使用される可能性があります。 ただし、組み込みの DNS クライアントが DNS over TLS のような先進的な DNS 関連プロトコルを使用することで、異なる方法でサーバーにアドレスを指定することが可能です。
+このポリシーは、DNS サーバーとの通信に使用されるソフトウェア スタック (オペレーティング システム DNS クライアントまたは Microsoft Edge の組み込み DNS クライアント) を制御します。 このポリシーは、使用される DNS サーバーには影響しません。たとえば、オペレーティング システムがエンタープライズ DNS サーバーを使用するように構成されている場合、そのサーバーは組み込みの DNS クライアントによって使用される可能性があります。 また、DNS-over-HTTPS が使用されるかどうかも制御しません。Microsoft Edge は、DNS-over-HTTPS 要求に常に組み込みのリゾルバーを使用します。 DNS-over-HTTPS の制御については、[DnsOverHttpsMode](#dnsoverhttpsmode) ポリシーを参照してください。
 
 このポリシーを有効にしている場合、組み込みの DNS クライアントが利用可能であればそれが使用されます。
 
-このポリシーを無効にしている場合、クライアントは使用されません。
+このポリシーを無効にすると、組み込みの DNS クライアントは、DNS-over-HTTPS が使用されている場合にのみ使用されます。
 
-このポリシーを構成していない場合、MacOS では組み込み DNS クライアントが既定で有効になっており、ユーザーは edge://flags を編集するか、コマンドライン フラグを指定することで、組み込み DNS クライアントを使用するかどうかを変更することができます。
+このポリシーを構成しない場合、組み込みの DNS クライアントは既定で有効になっています。
 
   #### サポートされている機能:
 
@@ -12129,6 +12232,70 @@ Windows 管理者への注意: このポリシーは、Windows 7 を実行して
 
   [ページのトップへ](#microsoft-edge---policies)
 
+  ### DefinePreferredLanguages
+
+  #### サイトがその言語をサポートしている場合に Web サイトが表示する優先言語の順序指定された一覧を定義します
+
+  
+  
+  #### サポートされているバージョン:
+
+  - 89 以降の Windows および MacOS の場合
+
+  #### 説明
+
+  Microsoft Edge が Accept-Language 要求 HTTP ヘッダーの一部として Web サイトに送信する言語バリアントを構成し、ユーザーが Microsoft Edge 設定で優先言語の順序を追加、削除、または変更できないようにします。 Microsoft Edge が表示する言語、またはページの翻訳を提案する言語を変更したいユーザーは、このポリシーで構成されている言語に制限されます。
+
+このポリシーを有効にすると、他のサイト固有のロジックを使用して表示言語を決定しない限り、Web サイトはサポートされているリストの最初の言語で表示されます。 このポリシーで定義されている言語バリアントは、[SpellcheckLanguage](#spellchecklanguage) ポリシーの一部として構成されている言語を上書きします。
+
+このポリシーを構成または無効にしない場合、Microsoft Edge は、Accept-Language 要求 HTTP ヘッダーの一部として、ユーザー指定の優先言語を Web サイトに送信します。
+
+有効な言語バリアントの詳細については、以下を参照してください [https://go.microsoft.com/fwlink/?linkid=2148854](https://go.microsoft.com/fwlink/?linkid=2148854) 。
+
+  #### サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+
+  - String
+
+  #### Windows の情報と設定
+
+  ##### グループ ポリシー (ADMX) 情報
+
+  - GP 固有の名前: DefinePreferredLanguages
+  - GP 名: サイトがその言語をサポートしている場合に Web サイトが表示する優先言語の順序指定された一覧を定義します
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - 値の名前: DefinePreferredLanguages
+  - 値の種類: REG_SZ
+
+  ##### サンプル値:
+
+```
+"en-US,fr,es"
+```
+
+  #### Mac の情報と設定
+  
+  - 基本設定キーの名前: DefinePreferredLanguages
+  - サンプル値:
+``` xml
+<string>en-US,fr,es</string>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
   ### DelayNavigationsForInitialSiteListDownload
 
   #### タブ ナビゲーションの前にエンタープライズ モード サイト一覧が使用できるようにする
@@ -13090,11 +13257,11 @@ Microsoft Defender SmartScreen の詳細については、「[https://go.microso
 
   #### 説明
 
-  このポリシーにより、ユーザーは閲覧中の商品の価格を比較したり、アクセスしている Web サイトからクーポンを取得したり、チェックアウト時にクーポンを自動適用したりできます。
+  このポリシーにより、ユーザーは閲覧中の商品の価格を比較したり、アクセスしている Web サイトからクーポンまたはリベートを取得したり、チェックアウト時にクーポンを自動適用したりできます。
 
-このポリシーを有効にするか、構成しない場合、価格比較やクーポンなどのショッピング機能がリテール ドメインに自動的に適用されます。 現在の小売業者のクーポンと他の小売業者からの価格はサーバーから取得されます。
+このポリシーを有効にするか、構成しない場合、価格比較、クーポン、およびリベートなどのショッピング機能がリテール ドメインに自動的に適用されます。 現在の小売業者のクーポンと他の小売業者からの価格はサーバーから取得されます。
 
-このポリシーを無効にすると、リテール ドメインで価格比較やクーポンなどのショッピング機能が自動的に検出されなくなります。
+このポリシーを無効にすると、リテール ドメインで価格比較、クーポン、およびリベートなどのショッピング機能が自動的に検出されなくなります。
 
   #### サポートされている機能:
 
@@ -18461,9 +18628,9 @@ IE からサイトをロードするために Microsoft Edge を起動すると�
 
 このポリシーを無効にした場合、または構成しない場合は、通常のローカル プロファイルだけが使用されます。
 
-[SyncDisabled](#syncdisabled) ポリシーは、すべてのデータ同期を無効にし、ポリシーを上書きします。
+[SyncDisabled](#syncdisabled) はクラウド同期を無効にするだけで、このポリシーには影響しません。
 
-ローミング ユーザー プロファイルの使用の詳細については、https://docs.microsoft.com/windows-server/storage/folder-redirection/deploy-roaming-user-profiles を参照してください。
+ローミング ユーザー プロファイルの使用の詳細については、[https://go.microsoft.com/fwlink/?linkid=2150058](https://go.microsoft.com/fwlink/?linkid=2150058) を参照してください。
 
   #### サポートされている機能:
 
@@ -20129,6 +20296,8 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
   #### 説明
 
   Microsoft Edge でのデータ同期を無効にします。 また、このポリシーにより、同期に対する同意を確認するメッセージも表示されなくなります。
+
+このポリシーはクラウド同期のみを無効にし、[RoamingProfileSupportEnabled](#roamingprofilesupportenabled) ポリシーには影響しません。
 
 このポリシーを設定していないか、推奨通りに適用していない場合、ユーザーは同期のオン/オフを切り替えることができるようになります。 このポリシーを必須として適用している場合、ユーザーは同期をオンにすることができなくなります。
 
@@ -22058,7 +22227,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
   ### WebWidgetAllowed
 
-  #### Web ウィジェットを許可する
+  #### Web ウィジェットを有効にする
 
   
   
@@ -22122,7 +22291,7 @@ Microsoft Edge の [その他のツール] メニューからウィジェット�
 
   ### WebWidgetIsEnabledOnStartup
 
-  #### Windows 起動時に Web ウィジェットを有効にする
+  #### Windows の起動時に Web ウィジェットを許可する
 
   
   
