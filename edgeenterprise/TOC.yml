@@ -1,4 +1,4 @@
-# last revised 01/14/2021
+# last revised 01/20/2021
 - name: Microsoft Edge エンタープライズのドキュメント
   href: index.yml
 - name: Microsoft Edge ドキュメント
@@ -119,6 +119,8 @@
               href: edge-ie-mode-add-guidance-filetype-associations.md
             - name: Microsoft Edge から Internet Explorer への Cookie の共有
               href: edge-ie-mode-add-guidance-cookieshare.md
+            - name: Microsoft Edge の Enterprise Site List Manager
+              href: edge-ie-mode-site-list-manager.md
 - name: Microsoft Edge のセキュリティ
   items:
     - name: ビジネスのセキュリティ
