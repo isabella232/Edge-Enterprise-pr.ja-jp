@@ -3,7 +3,7 @@ title: Microsoft Edge ブラウザー ポリシーに関するドキュメント
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/15/2021
+ms.date: 01/20/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
-ms.openlocfilehash: 92b89087cd7082844e36660ffdc7ff217cd92ff2
-ms.sourcegitcommit: 63c53d1eaa3ad70acd405379bd3af57275a0b24f
+ms.openlocfilehash: 6df9ad9a1b3912387180aa249e220fbfe70e99b7
+ms.sourcegitcommit: a6c58b19976c194299be217c58b9a99b48756fd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "11270843"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "11281026"
 ---
 # Microsoft Edge - ポリシー
 
@@ -35,8 +35,10 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 
 | 名前 | キャプション |
 |--|--|
-|[BrowsingDataLifetime](#browsingdatalifetime)|データの有効期間設定の参照|
-|[DefinePreferredLanguages](#definepreferredlanguages)|サイトがその言語をサポートしている場合に Web サイトが表示する優先言語の順序指定された一覧を定義します|
+|[MAMEnabled](#mamenabled)|モバイル アプリ管理の有効化|
+|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Microsoft Edge からの推奨事項とプロモーション通知を許可する|
+
+
 
 
 ## 使用可能なポリシー
@@ -48,12 +50,12 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[Application Guard の設定](#application-guard-settings)|[キャスト](#cast)|
 |[コンテンツの設定](#content-settings)|[既定の検索プロバイダー](#default-search-provider)|
 |[拡張機能](#extensions)|[HTTP 認証](#http-authentication)|
-|[キオスク モードの設定](#kiosk-mode-settings)|[ネイティブ メッセージング](#native-messaging)|
-|[パスワード マネージャーと保護](#password-manager-and-protection)|[パフォーマンス](#performance)|
-|[印刷](#printing)|[プロキシ サーバー](#proxy-server)|
-|[タブのスリープ設定](#sleeping-tabs-settings)|[SmartScreen の設定](#smartscreen-settings)|
-|[スタートアップ、ホーム ページ、新規タブ ページ](#startup-home-page-and-new-tab-page)|[補足](#additional)|
-
+|[キオスク モードの設定](#kiosk-mode-settings)|[管理状態](#manageability)|
+|[ネイティブ メッセージング](#native-messaging)|[パスワード マネージャーと保護](#password-manager-and-protection)|
+|[パフォーマンス](#performance)|[印刷](#printing)|
+|[プロキシ サーバー](#proxy-server)|[タブのスリープ設定](#sleeping-tabs-settings)|
+|[SmartScreen の設定](#smartscreen-settings)|[スタートアップ、ホーム ページ、新規タブ ページ](#startup-home-page-and-new-tab-page)|
+|[補足](#additional)|
 
 ### [*Application Guard の設定*](#application-guard-settings-policies)
 
@@ -152,6 +154,11 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |-|-|
 |[KioskAddressBarEditingEnabled](#kioskaddressbareditingenabled)|キオスクモードのパブリックブラウザーのエクスペリエンスを編集するアドレスバーを構成する|
 |[KioskDeleteDownloadsOnExit](#kioskdeletedownloadsonexit)|Microsoft Edge が閉じたときに、キオスク セッションの一部としてダウンロードされたファイルを削除する|
+### [*管理状態*](#manageability-policies)
+
+|ポリシー名|キャプション|
+|-|-|
+|[MAMEnabled](#mamenabled)|モバイル アプリ管理の有効化|
 ### [*ネイティブ メッセージング*](#native-messaging-policies)
 
 |ポリシー名|キャプション|
@@ -401,6 +408,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[SerialBlockedForUrls](#serialblockedforurls)|特定のサイトでのシリアル API をブロックする|
 |[ShowMicrosoftRewards](#showmicrosoftrewards)|Microsoft Rewards のエクスペリエンスを表示する|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|お気に入り バーにMicrosoft Office のショートカットを表示する (非推奨)|
+|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Edge からの推奨事項とプロモーション通知を許可する|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Signed HTTP Exchange (SXG) のサポートを有効にする|
 |[SitePerProcess](#siteperprocess)|すべてのサイトでのサイトの分離を有効にする|
 |[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
@@ -5277,6 +5285,72 @@ Samba と Windows Server の最新バージョンは、すべて NTLMv2 をサ�
 
   [ページのトップへ](#microsoft-edge---policies)
 
+  ## 管理状態ポリシー
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### MAMEnabled
+
+  #### モバイル アプリ管理の有効化
+
+  
+  
+  #### サポートされているバージョン:
+
+  - 89 以降の Windows および MacOS の場合
+
+  #### 説明
+
+  Microsoft Edge ブラウザーで、Intune アプリケーション管理サービスからポリシーを取得し、ユーザーのプロファイルに適用できるようにします。
+
+このポリシーを有効にするか、構成しない場合は、モバイル アプリ管理 (MAM) ポリシーを適用できます。
+
+このポリシーを無効にすると、Microsoft Edge は Intune と通信して MAM ポリシーを要求しません。
+
+  #### サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: いいえ - ブラウザの再起動が必要
+
+  #### ［データの種類］:
+
+  - ブール値
+
+  #### Windows の情報と設定
+
+  ##### グループ ポリシー (ADMX) 情報
+
+  - GP 固有の名前: MAMEnabled
+  - GP 名: モバイル アプリ管理の有効化
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/管理状態
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - 値の名前: MAMEnabled
+  - 値の種類: REG_DWORD
+
+  ##### サンプル値:
+
+```
+0x00000000
+```
+
+  #### Mac の情報と設定
+  
+  - 基本設定キーの名前: MAMEnabled
+  - サンプル値:
+``` xml
+<false/>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
   ## ネイティブ メッセージングに関するポリシー
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -9137,6 +9211,8 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
   Microsoft Edge の内部 PDF ビューアーを無効にします。
 
 このポリシーを有効にしている場合、Microsoft Edge では PDF ファイルはダウンロードとして扱われ、ユーザーは既定のアプリケーションを使用して PDF ファイルを開くことができます。
+
+Microsoft Edge が既定の PDF リーダーの場合、PDF ファイルはダウンロードされず、Microsoft Edge で引き続き開きます。
 
 このポリシーを構成してしないか、無効にしている場合、Microsoft Edge は (ユーザーが無効にしない限り) PDF ファイルを開きます。
 
@@ -19777,6 +19853,68 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   - サンプル値:
 ``` xml
 <false/>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### ShowRecommendationsEnabled
+
+  #### Edge からの推奨事項とプロモーション通知を許可する
+
+  
+  
+  #### サポートされているバージョン:
+
+  - 89 以降の Windows および MacOS の場合
+
+  #### 説明
+
+  このポリシー設定を使用すると、従業員が Microsoft Edge から推奨事項と製品内アシスタンス通知を受け取るかどうかを決定できます。
+
+この設定を有効にするか、構成しない場合、従業員は Microsoft Edge から推奨事項/通知を受け取ります。
+
+この設定を無効にする場合、従業員は Microsoft Edge から推奨事項や通知を受け取りません。
+
+  #### サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+
+  - ブール値
+
+  #### Windows の情報と設定
+
+  ##### グループ ポリシー (ADMX) 情報
+
+  - GP 固有の名前: ShowRecommendationsEnabled
+  - GP 名: Edge からの推奨事項とプロモーション通知を許可する
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - 値の名前: ShowRecommendationsEnabled
+  - 値の種類: REG_DWORD
+
+  ##### サンプル値:
+
+```
+0x00000001
+```
+
+  #### Mac の情報と設定
+  
+  - 基本設定キーの名前: ShowRecommendationsEnabled
+  - サンプル値:
+``` xml
+<true/>
 ```
   
 
