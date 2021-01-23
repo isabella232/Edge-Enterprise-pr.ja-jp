@@ -1,4 +1,4 @@
-# last revised 01/20/2021
+# last revised 01/21/2021
 - name: Microsoft Edge エンタープライズのドキュメント
   href: index.yml
 - name: Microsoft Edge ドキュメント
@@ -129,6 +129,8 @@
       href: microsoft-edge-security-endpoints.md
     - name: データ損失防止 (DLP)
       href: microsoft-edge-security-dlp.md
+    - name: ユーザーのパスワード モニターが自動的に有効になっている
+      href: microsoft-edge-security-password-monitor.md
     - name: 望ましくない可能性のあるアプリケーションから保護する
       href: microsoft-edge-potentially-unwanted-apps.md
     - name: Azure AD条件付きアクセスのサポート
