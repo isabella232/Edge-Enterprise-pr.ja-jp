@@ -3,19 +3,19 @@ title: Microsoft Edge 同期を構成およびトラブルシューティング�
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 01/14/2021
+ms.date: 01/22/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 同期を構成およびトラブルシューティングする
-ms.openlocfilehash: fa9b9ead6319bceeb95066003a77be7ecf84db46
-ms.sourcegitcommit: 68b50c45b2b78acec5a0776ce4ddd11410a4e382
+ms.openlocfilehash: 36912d2fd1c33a227ce1d4b7c912f6ef1dfdcc00
+ms.sourcegitcommit: 8a88fd38bdb5e132e89bf17dd2b5fb72f5d1b4b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "11270775"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "11297459"
 ---
 # Microsoft Edge 同期を構成およびトラブルシューティングする
 
@@ -86,9 +86,9 @@ Microsoft Edge の同期の構成オプションは、Azure Information Protecti
 
 問題を同期の問題として扱う前に、ユーザーが有効なアカウントでブラウザーにサインインしているかどうか確認します。
 
-次のスクリーンショットは、**Credentials**の下の*edge://sync-internals*で見つかった ID エラーを示しています。
+次のスクリーンショットは、ID エラーの例を示しています。 エラーは**資格情報**の下にある*edge://sync-internals*にある "**ラスト トークン エラー、 EDGE_AUTH_ERROR: 3, 54, 3ea**"です。
 
-:::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-identity-issue.png" alt-text="ID エラー":::
+:::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-identity-issue.png" alt-text="ラスト トークン エラー EDGE_AUTH_ERROR: 3,54、3ea":::
 
 ### 同期に関する一般的な問題
 
@@ -160,9 +160,8 @@ Azure Active Directory アカウントでこのエラーが発生した場合、
 
 ### 問題: Cryptographer エラーが発生する
 
-このエラーは、*edge://sync-internals* の**情報入力** に表示され、ユーザーのサービス側のデータをリセットする必要があることを意味している可能性があります。 次のスクリーンショットは、暗号化エラーの詳細の例を示しています。
-
-:::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-crypto-error-new.png" alt-text="Cryptographer エラー。":::
+このエラーは、*edge://sync-internals* の**種類情報** に表示され、ユーザーのサービス側のデータをリセットする必要があることを意味している可能性があります。 次の例は、暗号化のエラー メッセージを示しています。
+<br>"Error:GenerateCryptoErrorsForTypes@../../components/sync/driver/data_type_manager_impl.cc:42, cryptographer error was encountered"。
 
 1. Microsoft Edge を再起動し、*「edge://sync-internals」* に移動し、**「AAD アカウントキーの状態」** セクションを確認します。
    - "最終 MIP 結果" での "成功": Cryptographer エラーは、サーバー データが失われたキーで暗号化されている可能性を意味します。 同期を再開するには、データのリセットが必要です。
@@ -208,9 +207,9 @@ Microsoft Edge 同期のサービス条件は、Microsoft ソフトウェア ラ
 
 ### 同期の適用
 
-#### Microsoft Edge 同期がすべての M365 サブスクリプションでサポートされていないのはなぜですか?
+#### Microsoft Edge の同期がすべての M365 サブスクリプションでサポートされていないのはなぜですか?
 
-エンタープライズ同期は、すべての M365 サブスクリプションでは利用できない[Azure Information Protection](https://azure.microsoft.com/services/information-protection/) に依存しています。
+エンタープライズ同期は、すべての M365 サブスクリプションで利用できない [Azure Information Protection](https://azure.microsoft.com/services/information-protection/) に依存しています。
 
 #### Microsoft Edge の同期は Enterprise State Roaming に依存していますか?
 
