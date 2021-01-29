@@ -3,7 +3,7 @@ title: Microsoft Edge ブラウザー ポリシーに関するドキュメント
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/20/2021
+ms.date: 01/27/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
-ms.openlocfilehash: 6df9ad9a1b3912387180aa249e220fbfe70e99b7
-ms.sourcegitcommit: a6c58b19976c194299be217c58b9a99b48756fd0
+ms.openlocfilehash: 59c3c3426e3e7db2c5a115b15ae5e9b9e7628f9e
+ms.sourcegitcommit: e9433045503c2614386ee4948cda0a9c9701bac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "11281026"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "11304730"
 ---
 # Microsoft Edge - ポリシー
 
@@ -35,11 +35,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 
 | 名前 | キャプション |
 |--|--|
-|[MAMEnabled](#mamenabled)|モバイル アプリ管理の有効化|
-|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Microsoft Edge からの推奨事項とプロモーション通知を許可する|
-
-
-
+|[SmartActionsBlockList](#smartactionsblocklist)|サービスの一覧に対するスマート アクションをブロックする|
 
 ## 使用可能なポリシー
 
@@ -411,6 +407,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[ShowRecommendationsEnabled](#showrecommendationsenabled)|Edge からの推奨事項とプロモーション通知を許可する|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Signed HTTP Exchange (SXG) のサポートを有効にする|
 |[SitePerProcess](#siteperprocess)|すべてのサイトでのサイトの分離を有効にする|
+|[SmartActionsBlockList](#smartactionsblocklist)|サービスの一覧に対するスマート アクションをブロックする|
 |[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
 |[SpellcheckEnabled](#spellcheckenabled)|スペルチェックを有効にする|
 |[SpellcheckLanguage](#spellchecklanguage)|特定のスペルチェック言語を有効にする|
@@ -2901,7 +2898,7 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8
 
   #### 説明
 
-  ポップアップ ウィンドウを開くことができるサイトの一覧を URL パターンに基づいて定義します。
+  ポップアップ ウィンドウを開くことができるサイトの一覧を URL パターンに基づいて定義します。 * は、このポリシーで承認された値ではありません。
 
 このポリシーを構成していない場合、ユーザーの個人用の構成、または [DefaultPopupsSetting](#defaultpopupssetting) ポリシー (設定されている場合) からのグローバルな既定値がすべてのサイトで使用されます。
 
@@ -2966,7 +2963,7 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
 
   #### 説明
 
-  ポップアップ ウィンドウのオープンがブロックされているサイトの一覧を URL パターンに基づいて定義します。
+  ポップアップ ウィンドウのオープンがブロックされているサイトの一覧を URL パターンに基づいて定義します。 * は、このポリシーで承認された値ではありません。
 
 このポリシーを構成していない場合、ユーザーの個人用の構成、または [DefaultPopupsSetting](#defaultpopupssetting) ポリシー (設定されている場合) からのグローバルな既定値がすべてのサイトで使用されます。
 
@@ -7017,7 +7014,7 @@ ProxyMode の場合に、以下の値を選択すると:
 ```
 SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   "ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", 
-  "ProxyMode": "direct", 
+  "ProxyMode": "pac_script", 
   "ProxyPacUrl": "https://internal.site/example.pac", 
   "ProxyServer": "123.123.123.123:8080"
 }
@@ -7026,7 +7023,7 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   ##### コンパクト サンプル値:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {"ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", "ProxyMode": "direct", "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
+  SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {"ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", "ProxyMode": "pac_script", "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
   ```
   
 
@@ -7040,7 +7037,7 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   <key>ProxyBypassList</key>
   <string>https://www.example1.com,https://www.example2.com,https://internalsite/</string>
   <key>ProxyMode</key>
-  <string>direct</string>
+  <string>pac_script</string>
   <key>ProxyPacUrl</key>
   <string>https://internal.site/example.pac</string>
   <key>ProxyServer</key>
@@ -20045,6 +20042,83 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   [ページのトップへ](#microsoft-edge---policies)
 
+  ### SmartActionsBlockList
+
+  #### サービスの一覧に対するスマート アクションをブロックする
+
+  
+  
+  #### サポートされているバージョン:
+
+  - 89 以降の Windows および MacOS の場合
+
+  #### 説明
+
+  スマート アクションを表示しない PDF などの特定のサービスを一覧表示します。 (スマート アクションは、Microsoft Edge の完全なコンテキスト メニューとミニ コンテキスト メニューで使用できる「定義」のようなアクションです。)
+
+ポリシーを有効にした場合:
+   - ミニ コンテキスト メニューおよび完全なコンテキスト メニューのスマート アクションは、指定された一覧に一致するサービスのすべてのプロファイルに対して無効になります。
+   - ユーザーには、指定された一覧に一致するサービスのテキスト選択に関するミニ コンテキスト メニューおよび完全なコンテキスト メニューにスマート アクションが表示されません。
+   - Microsoft Edge の設定では、指定された一覧に一致するサービスに対して、ミニ コンテキスト メニューおよび完全なコンテキスト メニューのスマート アクションが無効になります。
+
+このポリシーを無効にしているか、構成していない場合、次のようになります。
+   - ミニ コンテキスト メニューおよび完全なコンテキスト メニューのスマート アクションは、すべてのプロファイルに対して有効になります。
+   - ユーザーには、テキスト選択に関するミニ コンテキスト メニューおよび完全なコンテキスト メニューにスマート アクションが表示されます。
+   - Microsoft Edge の設定では、ミニ コンテキスト メニューおよび完全なコンテキスト メニューのスマート アクションが有効になります。
+
+ポリシー オプション マッピング:
+
+* smart_actions_pdf (smart_actions_pdf) = PDF のスマート アクション
+
+このポリシーを構成する場合は、上記の情報を使用します。
+
+  #### サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: はい
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+
+  - 文字列のリスト
+
+  #### Windows の情報と設定
+
+  ##### グループ ポリシー (ADMX) 情報
+
+  - GP 固有の名前: SmartActionsBlockList
+  - GP 名: サービスの一覧に対するスマート アクションをブロックする
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): 管理用テンプレート/Microsoft Edge - 既定の設定 (ユーザーが上書き可能)/
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge\SmartActionsBlockList
+  - パス (推奨): SOFTWARE\Policies\Microsoft\Edge\Recommended\SmartActionsBlockList
+  - 値の名前: 1、2、3、...
+  - 値の種類: REG_SZ の一覧
+
+  ##### サンプル値:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\SmartActionsBlockList\1 = "smart_actions_pdf"
+
+```
+
+  #### Mac の情報と設定
+  
+  - 基本設定キーの名前: SmartActionsBlockList
+  - サンプル値:
+``` xml
+<array>
+  <string>smart_actions_pdf</string>
+</array>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
   ### SpeechRecognitionEnabled
 
   #### Configure Speech Recognition
@@ -21807,14 +21881,7 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 
   このポリシーを構成して、ユーザーの操作なしでサイレント インストールし、ユーザーがアンインストールまたはオフにできない Web アプリの一覧を指定します。
 
-ポリシーの各リスト アイテムは、必須のメンバー URL (インストールする Web アプリの URL) を持つオブジェクトです。
-
-3 つのオプション メンバー:
-- default_launch_container (新しいタブで Web アプリが開くウィンドウ モードが既定に指定されます。)
-
-- create_desktop_shortcut (Linux および Windows デスクトップ ショートカットを作成する場合は True。)
-
-- override_app_name (Microsoft Edge 89 以降、プログレッシブ Web アプリではない場合はアプリ名を上書きできます。または、プログレッシブ Web アプリの場合は一時的にインストールされますが、インストールを完了する前に認証が必要なアプリ名です。)
+ポリシーの各リスト アイテムは、必須メンバー: URL （インストールする Web アプリの URL） と 2 つのオプション メンバー: default_launch_container （Web アプリが開くウィンドウ モードを指定する - 新しいタブが既定） および create_desktop_shortcut （Linux および Windows デスクトップ ショートカットを作成する場合は True） を持つオブジェクトです。
 
   #### サポートされている機能:
 
@@ -21855,11 +21922,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   {
     "default_launch_container": "tab", 
     "url": "https://app.contoso.edu"
-  }, 
-  {
-    "default_launch_container": "window", 
-    "override_app_name": "Editor", 
-    "url": "https://app.contoso.com/editor"
   }
 ]
 ```
@@ -21867,7 +21929,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ##### コンパクト サンプル値:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "override_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
+  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}]
   ```
   
 
@@ -21891,14 +21953,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
     <string>tab</string>
     <key>url</key>
     <string>https://app.contoso.edu</string>
-  </dict>
-  <dict>
-    <key>default_launch_container</key>
-    <string>window</string>
-    <key>override_app_name</key>
-    <string>Editor</string>
-    <key>url</key>
-    <string>https://app.contoso.com/editor</string>
   </dict>
 </array>
 ```

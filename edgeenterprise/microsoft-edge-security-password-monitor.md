@@ -3,19 +3,19 @@ title: パスワード モニターがユーザーに対して自動的に有効
 ms.author: supalsul
 author: dan-wesley
 manager: tulasim
-ms.date: 01/21/2021
+ms.date: 01/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: パスワード モニターがユーザーに対して自動的に有効にされます
-ms.openlocfilehash: 8ea96522fe99082579e88b2eab330fb265d02b12
-ms.sourcegitcommit: 8a88fd38bdb5e132e89bf17dd2b5fb72f5d1b4b9
+ms.openlocfilehash: 2f796f0cd1bbb437f83d04a8bd59586ef7b6a982
+ms.sourcegitcommit: 187203e9eaa9c48c59095b7e7d625d3081a6ba19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "11297514"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "11304537"
 ---
 # パスワード モニターがユーザーに対して自動的に有効にされます
 
@@ -26,7 +26,7 @@ ms.locfileid: "11297514"
 
 ## 概要、利点、可用性
 
-パスワード モニターは、オンライン リークでパスワードが見つかった場合にユーザーに知らせることで、Microsoft Edge ユーザーがオンライン アカウントを保護するのに役立ちます。 オンライン リークやデータ侵害は、攻撃者がサード パーティ製のアプリや Web サイトからデータを盗むと発生します。
+パスワード モニターは、オンライン リークでパスワードが見つかった場合にユーザーに知らせることで、Microsoft Edge ユーザーがオンライン アカウントを保護するのに役立ちます。 オンライン リークやデータ侵害は、攻撃者がサード パーティ製のアプリや Web サイトからデータを盗むと発生します。 詳細については、Microsoft Research ブログの「[パスワード モニター: Microsoft Edge でのパスワードの保護](https://www.microsoft.com/research/blog/password-monitor-safeguarding-passwords-in-microsoft-edge/)」ペーパーを参照してください。
 
 ### 利点
 
@@ -34,7 +34,7 @@ ms.locfileid: "11297514"
 
 ### 可用性
 
-パスワード モニターは早期プレビュー チャネル (Canary/Dev) で既に利用でき、1/21 から Stable チャネル バージョン 88 に昇格されます。 ロールアウトは段階的に行われるため、**[設定]** > **[プロファイル]** > **[パスワード]** ページに次のメッセージと制御が表示されるまでに数週間かかる場合があります。
+パスワード モニターは、1/21 以降の安定チャネル バージョン 88 で使用できます。 ロールアウトは段階的に行われるため、**[設定]** > **[プロファイル]** > **[パスワード]** ページに次のメッセージと制御が表示されるまでに数週間かかる場合があります。
 
 :::image type="content" source="media/microsoft-edge-security-password-monitor/monitor-enable-option.png" alt-text="パスワード モニターを有効にするオプション":::
 
