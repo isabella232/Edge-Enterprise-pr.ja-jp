@@ -3,19 +3,19 @@ title: Stable チャネルに関する Microsoft Edge リリース ノート
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 01/26/2021
+ms.date: 01/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Stable チャネルに関する Microsoft Edge リリース ノート
-ms.openlocfilehash: fd5336a57ad3f6706a2a61a2781c772f12e8b795
-ms.sourcegitcommit: 187203e9eaa9c48c59095b7e7d625d3081a6ba19
+ms.openlocfilehash: 6adba3b373f5989362594d0ff84a2932a661550a
+ms.sourcegitcommit: 6109055bfd0e2deba7f0cc75b27f6a805b16a0b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "11304547"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "11306067"
 ---
 # Microsoft Edge Stable チャネルのリリース ノート
 
@@ -28,6 +28,10 @@ ms.locfileid: "11304547"
 
 > [!NOTE]
 > 安定チャネルの場合、更新は 1 日以上かけて段階的に公開されます。 詳細については、「[Microsoft Edge 更新プログラムの段階的なロールアウト](microsoft-edge-update-progressive-rollout.md)」を参照してください。
+
+## バージョン 88.0.705.56: 1 月 28 日
+
+さまざまなバグとパフォーマンスの問題を修正しました。
 
 ## バージョン 88.0.705.53: 1 月 26 日
 
@@ -48,6 +52,11 @@ ms.locfileid: "11304547"
 - **認証:**
 
   - シングル サインオン (SSO) は、ダウンレベル Windows の Azure Active Directory (Azure AD) アカウントと Microsoft アカウント (MSA) で利用できます。 ダウンレベルの Microsoft Windows (7、8.1) で Microsoft Edge にサインインしたユーザーは、Work アカウントと Microsoft アカウント (bing.com、office.com、msn.com、outlook.com など) でシングル サインオンを許可するように構成された Web サイトに自動的にサインインします。<br>注: この機能を利用するには、ユーザーが Microsoft Edge 88 より前のバージョンで Microsoft Edge にサインインした場合、サインアウトしてからサインインしなおす必要がある場合があります。
+  
+  - シングル サインオン (SSO) は、Azure AD 以外の Microsoft Edge プロファイルのシステム上で任意の Windows Azure Active Directory (Azure AD) アカウントを使用することによってサイトで使用できます。 この機能は、職場または学校アカウントでサインインしていない、ゲストやプライベートではないプロファイルに対して有効にできます。また、そのプロファイルのオペレーティング システムでサインインしている任意の職場または学校アカウントを使用できます。 この機能は、**[設定]** > **[プロファイル]** > **[プロファイルの基本設定]** > **[このプロファイルを使用して、職場または学校のサイトにシングル サインオンを許可する]** で構成できます。
+  
+    > [!NOTE]
+    > 「Microsoft Edge プロファイルを使用しているすべての Windows アカウントのシングル サインオン (SSO)」は、1 月 21 日のリリース ノートの更新です。
 
 - **セッションを終了するキオスク モード オプション**。 [セッションの終了] ボタンは、キオスク モードのパブリック ブラウズ エクスペリエンスで利用できます。 この機能により、Microsoft Edge を閉じたときにブラウザーのデータと設定が削除されます。 キオスク モード機能とロードマップの詳細については 、「[Microsoft Edge キオスク モードを構成する](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode)」を参照してください。
 
