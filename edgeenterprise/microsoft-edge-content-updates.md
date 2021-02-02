@@ -3,19 +3,19 @@ title: Microsoft Edge コンテンツに関する最新情報
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 01/25/2021
+ms.date: 02/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge コンテンツに関する最新情報
-ms.openlocfilehash: a2a05abec17b2d56ca5ec06cac4e04e3ca8e0d0e
-ms.sourcegitcommit: 23277e25061c75da033ed042e25c33acff3ac0bd
+ms.openlocfilehash: 368bd86da6bfeb8fbdedd77e13decebf9e61d513
+ms.sourcegitcommit: 21509bb4ca9b2f62c657fbdb43267dec0de1c458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "11297855"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "11306590"
 ---
 # Microsoft Edge コンテンツに関する最新情報
 
