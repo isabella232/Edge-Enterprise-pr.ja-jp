@@ -3,19 +3,19 @@ title: Microsoft Edge リリース スケジュール
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 01/22/2021
+ms.date: 02/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge リリース スケジュール
-ms.openlocfilehash: 3b9c257123f2d1eeda1484e761963b6d0106c7c0
-ms.sourcegitcommit: d8d0b0fcb787fe90fa20426ef5e6dc194e935808
+ms.openlocfilehash: ad02c2775b836fe1a829945c205f2f52208065f1
+ms.sourcegitcommit: 90f33698262b255a63d6ba6ec854a12c1091a630
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "11297702"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "11311524"
 ---
 # Microsoft Edge リリース スケジュール
 
@@ -33,6 +33,8 @@ Microsoft では、Microsoft Edge を新しい機能で更新する頻度を管�
 > リリース日は概算で、ビルドの状態によって異なります。
 
 ### Microsoft Edge リリース
+
+次の表は、両方のチャネルのメジャー リリースのみを追跡し、情報を提供します。
 
 | バージョン | リリース状態 | Beta チャネル<br>リリースされる週 | Stable チャネル<br>リリースされる週 |
 |---------|-----|------|--------|
