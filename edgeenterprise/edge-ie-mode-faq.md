@@ -3,23 +3,23 @@ title: IE モードに関する FAQ
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 12/21/2020
+ms.date: 02/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: IE モードの Microsoft Edge に関する FAQ とトラブルシューティング
-ms.openlocfilehash: 62bf8afc5ac908e18d2f503fa9248a19f78fd6f6
-ms.sourcegitcommit: 306582403d4272831bcac390154c7cc7041a9b7e
+ms.openlocfilehash: aeae79dfd1745c754fb5ab690338f87fd25c080b
+ms.sourcegitcommit: ff67ccc93d07588a9128e9b1fe007d5393a9d6af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2020
-ms.locfileid: "11238174"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "11312593"
 ---
 # IE モードに関する FAQ
 
-この記事では、Microsoft Edge (バージョン 77 以降) に関するトラブルシューティングのヒントと FAQ を示します。
+この記事では、Microsoft Edge バージョン 77 以降に関するトラブルシューティングのヒントと FAQ を示します。
 
 > [!NOTE]
 > この記事は、Microsoft Edge version 77 (**Stable**、**Beta**、および **Dev** チャネル) 以降に適用されます。
@@ -62,6 +62,10 @@ Internet Explorer で予期しないエラーが発生した場合、このエ�
 ### エラー メッセージ: 「リモート デバッグを無効にして、IE モードでこのサイトを開きます。このようにしないと、サイトが正しく動作しない可能性があります。」
 
 リモート デバッグ中に、IE モードで実行するように構成された Web ページに移動する場合、このエラーが表示されることがあります。 続行できますが、ページは Microsoft Edge を使用して表示されます。
+
+### エラー メッセージ: 「エラー: EMIE サイト リストを取得できませんでした。」
+
+このエラーは、サイト リストをダウンロードできなかったことを示す *edge://compat/enterprise* ページに表示される場合があります。 Microsoft Edge バージョン 87 以降では、[BlockThirdPartyCookies](https://docs.microsoft.com/deployedge/microsoft-edge-policies#blockthirdpartycookies) ポリシーを使用してサードパーティの要求に対して Cookie がブロックされると、HTTP 認証も許可されなくなります。 [CookiesAllowedForURLs](https://docs.microsoft.com/deployedge/microsoft-edge-policies#cookiesallowedforurls) ポリシーを使用して、エンタープライズ モード サイト リストをホストしている特定のドメインに Cookie を許可して、サイト リストのダウンロードが成功するようにすることができます。
 
 ## よく寄せられる質問
 

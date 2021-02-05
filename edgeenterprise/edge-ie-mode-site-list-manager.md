@@ -3,26 +3,26 @@ title: 'Microsoft Edge の Enterprise Site List Manager '
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 01/20/2021
+ms.date: 02/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 'Microsoft Edge で Enterprise Site List Manager を有効にして使用する '
-ms.openlocfilehash: 2d10886624918c97933a841c428ea66ccf5b34c9
-ms.sourcegitcommit: a6c58b19976c194299be217c58b9a99b48756fd0
+ms.openlocfilehash: 9700c2b78bba514525c4d80d211ef744dd175d2f
+ms.sourcegitcommit: ff67ccc93d07588a9128e9b1fe007d5393a9d6af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "11281052"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "11312583"
 ---
 # Microsoft Edge の Enterprise Site List Manager
 
 この記事では、Microsoft Edge で Enterprise Site List Manager にアクセスして、Internet Explorer モード用の Enterprise Mode Site List を作成、編集、およびエクスポートする方法について説明します。
 
 > [!NOTE]
-> この記事は、Microsoft Edge バージョン 89 以降に適用されます。
+> この記事は、Microsoft Edge バージョン 89 以降に適用されます。 
 
 ## 概要
 
@@ -34,11 +34,11 @@ Enterprise Site List Manager は、[スタンドアロンの Enterprise Mode Sit
 
 [EnterpriseModeSiteListManagerAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enterprisemodesitelistmanagerallowed) グループ ポリシーを使用して、ツールへのアクセスを構成できます。
 
-有効にすると、左側のナビゲーション ウィンドウに Enterprise Site List Manager という名前のオプションが *edge://compat* に表示されます。 [無効] の場合、左側のナビゲーション ウィンドウに Enterprise Site List Manager へのエントリ ポイントは表示されません。 これは既定の動作です。
+有効にすると、左側のナビゲーション ウィンドウに Enterprise Site List Manager という名前のオプションが *edge://compat* に表示されます。 [無効] の場合、左側のナビゲーション ウィンドウにエンタープライズ サイト リスト マネージャーへのエントリ ポイントは表示されません。 これは既定の動作です。
 
 ## Enterprise Site List Manager の使用
 
-Enterprise Site List Manager ツールは、スキーマの v.2 バージョンを使用します。 Enterprise Site List Manager (スキーマ v.2) に v.1 バージョン スキーマをインポートすると、XML が v.2 バージョンのスキーマに保存されます。
+Enterprise Site List Manager ツールは、スキーマの v.2 バージョンを使用します。 Enterprise Site List Manager (スキーマ v.2) に v.1 バージョン スキーマをインポートすると、XML が v.2 バージョンのスキーマに保存されます。 「[エンタープライズ モード スキーマ v.2 ガイダンス](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance)」を参照してください。
 
 ### サイト リストへの単一サイトの追加  
 
@@ -127,5 +127,5 @@ Enterprise Site List Manager でサイト一覧を作成すると、その内容
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
 - [IE モードの概要](https://docs.microsoft.com/deployedge/edge-ie-mode)
+- [エンタープライズ モード スキーマ v.2 ガイダンス](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance)
 - [その他のエンタープライズ モード情報](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
-- [その他の Enterprise Site Discovery の情報](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery)
