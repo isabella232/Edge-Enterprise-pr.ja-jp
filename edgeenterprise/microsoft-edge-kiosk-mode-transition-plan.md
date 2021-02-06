@@ -1,0 +1,127 @@
+---
+title: キオスク モードの移行を計画する
+ms.author: aguta
+author: aguta
+manager: srugh
+ms.date: 02/05/2021
+audience: ITPro
+ms.topic: conceptual
+ms.prod: microsoft-edge
+ms.localizationpriority: high
+ms.collection: M365-modern-desktop
+description: キオスク モードの移行を計画する
+ms.openlocfilehash: 3a438c6dd71d9e1f0e644d24e3b1d1d60b099e8e
+ms.sourcegitcommit: b1d49b229c47dc1d99e1b677d75aad38b3334ed6
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "11314237"
+---
+# キオスク モードの移行を計画する
+
+この記事では、キオスクを Microsoft Edge 従来版から Microsoft Edge に移行する方法に関するガイダンスを示します。  
+
+> [!NOTE]
+> この記事は、Microsoft Edge バージョン 87 (Stable、Beta、および Dev チャネル) 以降に適用されます。
+
+> [!IMPORTANT]
+> 2021 年 3 月 9 日にサポートが終了すると、Microsoft Edge 従来版は削除され、4 月の Windows Update の一部として Chromium の Microsoft Edge に置き換わります。 詳細については、[このブログ投稿](https://aka.ms/EdgeLegacyEOS)を参照してください。 ブラウザー ベースのキオスク シナリオを引き続き使用するには、デバイスに Chromium の Microsoft Edge をインストールし、4 月の Windows Update のリリースの前にキオスク モードをセットアップする必要があります。
+
+## キオスクのセットアップ手順
+
+Microsoft Edge でキオスクをセットアップするためのガイドとして、次の手順を使用します。
+
+**手順 1: リリースされている (および今後リリース予定の) キオスク モード機能に対するニーズを評価します。** 次の表に、Chromium の Microsoft Edge と Microsoft Edge 従来版でキオスク モードによってサポートされている機能を示します。 次の表を Microsoft Edge への移行のためのガイドとして使用し、Microsoft Edge の両方のリリースでこれらの機能がどのようにサポートされているかを比較してください。
+
+|機能|デジタル/対話型サイネージ|パブリック ブラウジング|Microsoft Edge のバージョン (以上) で利用可能|Microsoft Edge 従来版で使用可能|
+|-|-|-|-|-|
+|InPrivate ナビゲーション|Y|Y|89|Y|
+|非アクティブ時のリセット|Y|Y|89|Y|
+|[読み取り専用アドレス バー](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskaddressbareditingenabled) (ポリシー) |N|Y |89|N|
+|[終了時にダウンロードを削除する](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskdeletedownloadsonexit) (ポリシー)  | Y|Y |89|N|
+|F11 のブロック (全画面表示の開始/終了) | Y | Y | 89 |Y|
+|F12 のブロック (開発者ツールの起動) | Y | Y | 89 |Y|
+| 複数タブのサポート | N| Y| 89|Y|
+|[URL の許可のサポート](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlallowlist) (ポリシー)|Y|Y|89|N|
+|[URL のブロックのサポート](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlblocklist) (ポリシー)|Y|Y|89|N|
+|[[ホーム] ボタンの表示](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#showhomebutton) (ポリシー)|N|Y|89|Y|
+|[お気に入りの管理](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#managedfavorites) (ポリシー)|N|Y|89|Y|
+|[プリンターの有効化](https://docs.microsoft.com/deployedge/microsoft-edge-policies#printingenabled) (ポリシー)|Y|Y|89|Y|
+|[新規タブ ページの URL の構成](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagelocation) (ポリシー)|N|Y||Y|
+|[セッションの終了] ボタン | N| Y| 89|Y|
+|すべての内部 Microsoft Edge URL のブロック (*edge://downloads* および *edge://print* を除く) |N|Y|89|Y|
+| Ctrl + N のブロック (新規ウィンドウを開く) | Y | Y | 89 |Y|
+| Ctrl + T のブロック (新規タブを開く) |Y | Y | 89 |Y|
+|設定と詳細 (...) で必要なオプションだけを表示  |Y |Y |89 |Y|
+|ブラウザーからの他のアプリケーションの起動を制限する|Y|Y|90/91|Y|
+|UI 印刷設定のロックダウン|Y|Y|90/91|Y|
+|[新規タブ ページをホーム ページとして設定する](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepageisnewtabpage) (ポリシー)|-|-|TBD|Y|
+
+> [!NOTE]
+> Microsoft Edge のリリース スケジュールについては、「[Microsoft Edge リリース スケジュール](microsoft-edge-release-schedule.md)」を参照してください。
+
+**手順 2: Microsoft Edge で新しいキオスクをテストします。** Microsoft Edge で、キオスク モードの設定をテストすることをお勧めします。 キオスク モードをすばやく簡単にテストする方法は、次に説明するように、Windows の設定を使ってシングル アプリとして割り当てられたアクセスを構成することです。
+
+1. 最新の Windows 10 Insider Preview (バージョン 20215 以降) をインストールします。 「[Windows 10 Insider Preview ビルドの概要](https://docs.microsoft.com/windows-insider/get-started)」の指示に従います。
+2. 最新の [Microsoft Edge Stable チャネル](https://www.microsoft.com/edge) (バージョン 87 以降) をインストールします。  最新の機能をテストするには、最新の [Microsoft Edge Beta チャネル](https://www.microsoftedgeinsider.com/download) (バージョン 89 以降) をダウンロードできます。
+
+   > [!IMPORTANT]
+   > デバイス レベルのインストールが必要であるため、Canary チャネルはサポートされていません。
+
+3. キオスク コンピューターで [Windows の設定] を開き、検索フィールドに「キオスク」と入力します。 次のスクリーンショットに表示されている  **[Set up a kiosk (assigned access)]** (キオスク モードを設定する (割り当てられたアクセス)) を選択し、キオスクを作成するダイアログを開きます。
+
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-1-assigned-access.png" alt-text="割り当てられたアクセスによるキオスクの設定":::
+
+4. **[Set up a kiosk]**  (キオスク モードを設定する) ページで、 **[開始する]** をクリックします。
+
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-2-get-started.png" alt-text="キオスク ページ - 開始する":::
+
+5. 名前を入力して新しいキオスク アカウントを作成するか、または入力されているドロップダウン リストから既存のアカウントを選択して、 **[次へ]** をクリックします。
+
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-3-create-account.png" alt-text="キオスク モード - アカウントの作成":::
+
+6. **[キオスク アプリを選ぶ]**  ページで、**[Microsoft Edge]** を選択し、 **[次へ]** をクリックします。
+
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="キオスク モード - アプリを選ぶ":::
+
+7. Microsoft Edge がキオスク モードで実行しているときの表示方法について、次のいずれかのオプションを選択します。
+
+   - デジタル/対話型サイネージ - 全画面表示モードで特定のサイトを表示し、Microsoft Edge を実行します。
+   - パブリック ブラウザー - Microsoft Edge の限定的な複数タブのバージョンを実行します。
+
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="キオスク モードの表示 - 全画面表示デジタル署名":::
+
+8.  **[次へ]** を選択します。
+9. キオスクが起動したときに読み込む URL を入力します。
+
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-6-enter-url.png" alt-text="キオスク モード - URL の入力":::
+
+10. アイドル時間に、既定値の 5 分をそのまま使用するか、独自の値を入力します。
+
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-7-enter-idle-time.png" alt-text="キオスク モード - アイドル時間の入力":::
+
+11.  **[次へ]** をクリックします。
+12.  **[設定]**  ウィンドウを閉じて、選択内容を保存して適用します。
+
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="キオスク モード - 設定の終了":::
+
+13. キオスク デバイスからサインアウトし、ローカル キオスク アカウントでサインインして、構成を確認します。
+
+**手順 3: 移行計画を作成します。** 2021 年 3 月 9 日に Microsoft Edge 従来版のサポートが終了する前に、テストと組織のニーズに基づいて移行計画を作成して、Chromium の Microsoft Edge に移行することをお勧めします。
+
+## 既存のキオスク モードを再作成する必要があるその他のシナリオ
+
+Windows 10 バージョン 20H2 に更新すると、Chromium の Microsoft Edge がインストールされ、Microsoft Edge 従来版が非表示になります。 この場合、Chromium の Microsoft Edge でキオスク モードを再度設定する必要があります。
+
+## ヘルプを入手する方法
+
+キオスク モードがお客様の日々の業務において重要な要素である可能性を考え、Microsoft はこの移行を可能な限りスムーズにし、中断を回避したいと考えています。 お客様のビジネスで Chromium の Microsoft Edge に移行する際にサポートが必要な場合:
+
+- [サポート](https://support.serviceshub.microsoft.com/supportforbusiness/create?sapId=a77ee9b7-b6b6-aa08-d7b9-887ebe228207)が Microsoft から提供されています。 
+- [FastTrack のサポート](https://www.microsoft.com/fasttrack/microsoft-365/microsoft-edge?rtc=1)は、Windows 10 Enterprise の有料シートを 150 シート以上お持ちのお客様に無料で提供されています。
+- [App Assure](https://www.microsoft.com/en-us/fasttrack/microsoft-365/app-assure) は、サイトまたはアプリの互換性の問題が発生した場合に利用できます。
+
+## 関連項目
+
+- [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
+- [4 月の Windows 10 Update Tuesday リリースで Microsoft Edge 従来版が新しい Microsoft Edge に置き換わります](https://techcommunity.microsoft.com/t5/microsoft-365-blog/new-microsoft-edge-to-replace-microsoft-edge-legacy-with-april-s/ba-p/2114224)
