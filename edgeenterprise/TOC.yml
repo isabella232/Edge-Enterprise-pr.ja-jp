@@ -1,4 +1,4 @@
-# last revised 01/21/2021
+# last revised 02/05/2021
 - name: Microsoft Edge エンタープライズのドキュメント
   href: index.yml
 - name: Microsoft Edge ドキュメント
@@ -25,6 +25,8 @@
       href: microsoft-edge-roadmap.md
     - name: Microsoft Edge の展開を計画する
       href: deploy-edge-plan-deployment.md
+    - name: 環境内の Microsoft Edge
+      href: deploy-edge-prepare-to-deploy.md
     - name: Microsoft Edge の準備完了
       href: deploy-edge-ready-for-edge.md
     - name: Stable チャネルのリリース ノート
@@ -55,14 +57,14 @@
       href: microsoft-edge-supported-languages.md
     - name: Microsoft Edge 用システム更新
       items:
-        - name: Microsoft Edge 更新プログラム用の Blocker Toolkit
-          href: microsoft-edge-blocker-toolkit.md
         - name: 旧バージョンの Microsoft Edge にアクセスする方法
           href: microsoft-edge-sysupdate-access-old-edge.md
         - name: Microsoft Edge をサポートする Windows 更新プログラム
           href: microsoft-edge-sysupdate-windows-updates.md
 - name: Microsoft Edge の展開
   items:
+    - name: Windows 10 更新プログラムを適用した Microsoft Edge の展開
+      href: deploy-edge-with-windows-10-updates.md
     - name: Configuration Manager による Windows への展開
       href: 'https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
     - name: Intune による Windows への展開
@@ -91,6 +93,8 @@
       href: microsoft-edge-security-identity.md
     - name: Microsoft Edge と Enterprise State Roaming
       href: microsoft-edge-enterprise-state-roaming.md
+    - name: キオスク モードの移行を計画する
+      href: microsoft-edge-kiosk-mode-transition-plan.md
     - name: Microsoft Edge キオスク モードを構成する
       href: microsoft-edge-configure-kiosk-mode.md
     - name: Microsoft Edge の同期
@@ -129,7 +133,7 @@
       href: microsoft-edge-security-endpoints.md
     - name: データ損失防止 (DLP)
       href: microsoft-edge-security-dlp.md
-    - name: ユーザーのパスワード モニターが自動的に有効になっている
+    - name: パスワード モニターがユーザーに対して自動的に有効にされます
       href: microsoft-edge-security-password-monitor.md
     - name: 望ましくない可能性のあるアプリケーションから保護する
       href: microsoft-edge-potentially-unwanted-apps.md
