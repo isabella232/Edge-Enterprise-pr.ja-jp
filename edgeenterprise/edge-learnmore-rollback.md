@@ -3,26 +3,26 @@ title: 企業向け Microsoft Edge ロールバック
 ms.author: v-danwes
 author: dan-wesley
 manager: srugh
-ms.date: 11/30/2020
+ms.date: 02/04/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge を以前のバージョンにロールバックする方法
-ms.openlocfilehash: 69fdfd29572dd6eda9f7eb7cbd4c2500851dcafc
-ms.sourcegitcommit: 63a094a5268bb3b4819269438357095acd79abac
+ms.openlocfilehash: 2059ea04bf8ec3a03266fe95599ea3b515b78c12
+ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "11192427"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "11314570"
 ---
 # Microsoft Edge を以前のバージョンにロールバックする方法
 
-この記事では、ロールバック機能を使用して、Microsoft Edge の以前のバージョンにロールバックする方法について説明します。
+この記事では、ロールバック機能を使用して、Microsoft Edge の以前のバージョンにロールバックする方法について説明します。 この機能の詳細については、「[ビデオ: Microsoft Edge バージョンのロールバック](microsoft-edge-video-version-rollback.md)」をご覧ください。
 
 >[!NOTE]
->この記事は Microsoft Edge version 86 以降に適用されます。
+>この記事は、Microsoft Edge バージョン 86 以降に適用されます。
 
 ## ロールバックの概要
 
@@ -163,3 +163,4 @@ Microsoft Edge Update では、更新プログラムの確認がまだ行われ�
 ## 関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
+- [ビデオ: Microsoft Edge バージョンのロールバック](microsoft-edge-video-version-rollback.md)

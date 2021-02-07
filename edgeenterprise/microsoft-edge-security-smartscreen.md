@@ -3,19 +3,19 @@ title: Microsoft Defender SmartScreen の Microsoft Edge サポート
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 04/23/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Defender SmartScreen の Microsoft Edge サポート
-ms.openlocfilehash: d27366409d7792784c360cfee10f96ab174aa375
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 2de93b4ebe26b4a90592f7ee9143f6f775b682ce
+ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980544"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "11314690"
 ---
 # Microsoft Defender SmartScreen の Microsoft Edge サポート
 
@@ -24,7 +24,7 @@ ms.locfileid: "10980544"
 > [!NOTE]
 > この記事は Microsoft Edge version 77 以降に適用されます。
 
-Microsoft Defender SmartScreen は、Microsoft Edge が Web の閲覧中に安全を確保するために使用するサービスです。 Microsoft Defender SmartScreen は、フィッシング攻撃に関係している可能性のある Web サイトや、集中的な攻撃によってマルウェアを配布しようとしている Web サイトに対抗する、早期警告システムの提供に役立ちます。
+Microsoft Defender SmartScreen は、Microsoft Edge が Web の閲覧中に安全を確保するために使用するサービスです。 Microsoft Defender SmartScreen は、フィッシング攻撃に関係している可能性のある Web サイトや、集中的な攻撃によってマルウェアを配布しようとしている Web サイトに対抗する、早期警告システムの提供に役立ちます。 詳細については、「[ビデオ: Microsoft Edge での安全な閲覧](microsoft-edge-video-security-smartscreen.md)」をご覧ください。
 
 > [!NOTE]
 > Windows 10 Version 1703 より前のバージョンでは、この機能がブラウザー内で使われるときは SmartScreen フィルターと呼ばれ、ブラウザーの外部で使われるときは Microsoft SmartScreen と呼ばれていました。
@@ -64,11 +64,11 @@ Microsoft Defender SmartScreen は、ダウンロード トラフィック、ダ
 - 安全であることがわかっているファイルは、通知なしでダウンロードされます。  
 - 悪意のあることがわかっているファイルには、ファイルが安全ではなく、悪意があると報告されていることをユーザーに知らせる警告が表示されます。 次のスクリーンショットは、悪意のあるファイルに対する警告の例です。
 
-  ![悪意のあることがわかった Microsoft Defender SmartScreen ブロック ページ ファイル](media/microsoft-edge-security-smartscreen/ms-edge-smartscreen-known-malicious.png)
+  ![悪意のあることがわかったファイルの Microsoft Defender SmartScreen ブロック通知](media/microsoft-edge-security-smartscreen/ms-edge-smartscreen-known-malicious.png)
 
 - 不明なファイルは、ダウンロードに既知のフットプリントがないことをユーザーに通知し、注意を促す警告を表示します。 次のスクリーンショットは、不明なファイルに対する警告の例です。
 
-  ![悪意のあることがわかった Microsoft Defender SmartScreen ブロック ページ ファイル](media/microsoft-edge-security-smartscreen/ms-edge-smartscreen-unknown-malicious.png)
+  ![評判が不明なファイルの Microsoft Defender SmartScreen ブロック通知](media/microsoft-edge-security-smartscreen/ms-edge-smartscreen-unknown-malicious.png)
 
 すべての不明なプログラムが悪意があるとは限りません。不明な警告は、特に警告が予期しないものである場合に、それを必要とするユーザーにコンテキストとガイダンスを提供することを目的としています。
 
@@ -120,6 +120,7 @@ Web を閲覧すると、Microsoft Defender SmartScreen は Web サイトとダ�
 ## 関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
+- [ビデオ: Microsoft Edge での安全な閲覧](microsoft-edge-video-security-smartscreen.md)
 - [Microsoft Defender SmartScreen の概要](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview)
 - [脅威の防止](https://docs.microsoft.com/windows/security/threat-protection/index)
 - [望ましくない可能性のあるアプリケーションから保護する](https://docs.microsoft.com/DeployEdge/microsoft-edge-potentially-unwanted-apps)

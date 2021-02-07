@@ -1,21 +1,21 @@
 ---
 title: Microsoft Edge の展開を計画する
-ms.author: cjacks
+ms.author: collw
 author: appcompatguy
-manager: saudm
-ms.date: 11/04/2020
+manager: srugh
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: procedural
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge の展開を計画する
-ms.openlocfilehash: a6c24dcc8c2f53bd6813a0dea9584cd6b5df8285
-ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
+ms.openlocfilehash: 1b56d9874550c2002cec0577a53a3bf5766e2805
+ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "11155254"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "11313877"
 ---
 # Microsoft Edge の展開を計画する
 
@@ -55,7 +55,6 @@ ms.locfileid: "11155254"
 現在の状態を把握したら、次のことを考慮して、適切なブラウザー展開の目標を決定できます。
 
 - [Microsoft Edge を既定のブラウザーとして設定する](https://docs.microsoft.com/DeployEdge/edge-default-browser)必要がありますか。
-- Microsoft Edge のレガシ バージョンを非表示にしますか、それとも[ユーザーが使用できるようにしておく](https://docs.microsoft.com/DeployEdge/microsoft-edge-sysupdate-access-old-edge)必要がありますか。
 - どのように [Microsoft Edge を構成](https://docs.microsoft.com/DeployEdge/configure-microsoft-edge)しますか。
 - 初期展開では、どのような機能を構成する必要がありますか。
 - 特定された互換性または構成の問題に対処するためのプロセスはどのようなものですか。
@@ -211,4 +210,3 @@ Microsoft Edge のアプリケーションの互換性は非常に高いため�
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
 - [ビデオ - Microsoft Edge の展開](microsoft-edge-video-deploy.md)
-

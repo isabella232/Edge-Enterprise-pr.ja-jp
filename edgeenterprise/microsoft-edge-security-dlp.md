@@ -3,19 +3,19 @@ title: Microsoft Edge でのデータ損失防止
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 11/18/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge (DLP) でのデータ損失防止
-ms.openlocfilehash: 72f670caf34a09cdfc7f47575f688c2a39d3c221
-ms.sourcegitcommit: 5a5be508c3c9c57187aca821b4a16f639abdd7e2
+ms.openlocfilehash: 8c7906f69f8d1161b47aa381bc04bcdaa70fe6cd
+ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "11176944"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "11314560"
 ---
 # Microsoft Edge (DLP) でのデータ損失防止
 
@@ -34,21 +34,22 @@ Microsoft エンドポイント DLP は、データ中心の保護などの先�
 > [!NOTE]
 > これは、Microsoft Edge バージョン 85 以降に適用されます。
 
-エンドポイント DLP の詳細については、次のページをご覧ください。
+エンドポイントの DLP の詳細については、次のリソースを使用してください。
 
-- [Microsoft 365 エンドポイントのデータ損失防止について](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide)
-- [エンドポイントのデータ損失防止の使用を開始する](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-getting-started?view=o365-worldwide)
+- [ビデオ: Microsoft Edge とデータ損失防止 (DLP)](microsoft-edge-video-security-dlp.md)
+- [Microsoft 365 エンドポイントのデータ損失防止について](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide&preserve-view=true)
+- [エンドポイントのデータ損失防止の使用を開始する](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-getting-started?view=o365-worldwide&preserve-view=true)
 
 Microsoft Edge は、管理者が構成した機密ファイル用のポリシーを強制し、非準拠アクティビティの監査イベントを記録します。
 
 Windows 10 を実行しているデバイスで監査および管理できるユーザー アクティビティには、次のものが含まれます。
 
-- ファイルのアップロード: 許可されていないクラウド上の場所にアップロードされた機密ファイルを保護します。 次の 3 つのスクリーンショットは、ユーザーがローカル ストレージに機密データ ファイルをドロップする順序を示しています。
+- ファイルのアップロード: 許可されていないクラウド上の場所にアップロードされた機密ファイルを保護します。 <!-- The next 3 screenshots show a sequence where a user tries to drop a sensitive data file on to their local storage.-->
 - クリップボードの保護: 機密データがファイルからコピーされないように保護します。
 - 印刷の保護: 機密ファイルが印刷されないように保護します。
 - USB/ネットワークへの保存: 機密ファイルがリムーバブル USB ストレージや許可されていないネットワークの場所に保存されないように保護します。
 
-監査や管理が可能なユーザー アクティビティの詳細については、「[Endpoint activities you can monitor and take action on (監視したり、アクションを実行したりできるエンドポイント アクティビティ)](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide#endpoint-activities-you-can-monitor-and-take-action-on)」を参照してください。
+監査や管理が可能なユーザー アクティビティの詳細については、「[Endpoint activities you can monitor and take action on (監視したり、アクションを実行したりできるエンドポイント アクティビティ)](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide#endpoint-activities-you-can-monitor-and-take-action-on&preserve-view=true)」を参照してください。
 
 ## Windows 情報保護
 
@@ -62,5 +63,5 @@ Microsoft Edge が Windows 情報保護 (WIP) をどのようにサポートし�
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
 - [ビデオ: Microsoft Edge でのデータ損失防止](https://www.youtube.com/watch?v=dLD04U9eTqg)
-- [データ損失防止の概要](https://docs.microsoft.com/microsoft-365/compliance/data-loss-prevention-policies?view=o365-worldwide)
+- [データ損失防止の概要](https://docs.microsoft.com/microsoft-365/compliance/data-loss-prevention-policies?view=o365-worldwide&preserve-view=true)
 - [Windows 情報保護を使用して企業データを保護する](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)

@@ -3,19 +3,19 @@ title: Microsoft Edge および Microsoft Defender Application Guard
 ms.author: srugh
 author: dan-wesley
 manager: seanlyn
-ms.date: 10/12/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge での Microsoft Defender Application Guard のサポート
-ms.openlocfilehash: fcf9bb6e36ddd5e014bd8176643554bfe3ff8fd4
-ms.sourcegitcommit: b813f91803b8f0f27489634f49e7e0585b746d48
+ms.openlocfilehash: 751201192c3b4e69cc866f35e51a6db23b9972f9
+ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "11114365"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "11314590"
 ---
 # Microsoft Edge での Microsoft Defender Application Guard のサポート
 
@@ -38,7 +38,10 @@ Application Guard は Windows 10 と Microsoft Edge 向けに設計されてお�
 
 エンタープライズ管理者は、信頼済みサイト、クラウド リソース、内部ネットワークを定義します。 信頼済みサイトのリストに入っていないものはすべて、信頼されていないと見なされます。 これらのサイトは、ユーザーのデバイス上で企業ネットワークとデータから分離されます。
 
-詳細については、「[Application Guard の概要とその仕組み](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview#what-is-application-guard-and-how-does-it-work)」を参照してください。
+詳しくは、次のトピックをご覧ください。
+
+- Application Guard を使用した [Microsoft Edge ブラウザー分離に関するビデオをご覧ください](microsoft-edge-video-security-application-guard.md)
+- 「[Application Guard の概要とその仕組み](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview#what-is-application-guard-and-how-does-it-work)」を参照してください
 
 次のスクリーンショットは、ユーザーが安全なサイトを閲覧していることを示す Application Guard のメッセージの例です。
 

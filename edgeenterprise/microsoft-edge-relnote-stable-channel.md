@@ -3,19 +3,19 @@ title: Stable チャネルに関する Microsoft Edge リリース ノート
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 01/28/2021
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Stable チャネルに関する Microsoft Edge リリース ノート
-ms.openlocfilehash: 6adba3b373f5989362594d0ff84a2932a661550a
-ms.sourcegitcommit: 6109055bfd0e2deba7f0cc75b27f6a805b16a0b9
+ms.openlocfilehash: 6175f1a4156af697e121ebe7230b5b86d347e825
+ms.sourcegitcommit: b1d49b229c47dc1d99e1b677d75aad38b3334ed6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "11306067"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "11314227"
 ---
 # Microsoft Edge Stable チャネルのリリース ノート
 
@@ -28,6 +28,16 @@ ms.locfileid: "11306067"
 
 > [!NOTE]
 > 安定チャネルの場合、更新は 1 日以上かけて段階的に公開されます。 詳細については、「[Microsoft Edge 更新プログラムの段階的なロールアウト](microsoft-edge-update-progressive-rollout.md)」を参照してください。
+
+## バージョン 88.0.705.63: 2 月 5 日
+
+セキュリティの更新プログラムは、[こちら](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-5-2021)に記載されています。
+
+## バージョン 88.0.705.62: 2 月 4 日
+
+セキュリティの更新プログラムは、[こちら](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-4-2021)に記載されています。
+
+さまざまなバグとパフォーマンスの問題を修正しました。
 
 ## バージョン 88.0.705.56: 1 月 28 日
 
@@ -73,10 +83,7 @@ ms.locfileid: "11306067"
   - パスワード モニター。 ブラウザーに保存されたパスワードのいずれかが、漏洩された一覧のリストに表示されているパスワードと一致すると、Microsoft Edge から通知され、パスワードを更新するように求められます。 パスワード モニターは、ユーザーに代わって一致をスキャンし、既定でオンになっています。
   - パスワードの編集。 Microsoft Edge の設定で、保存したパスワードを直接編集できます。 Microsoft Edge の外部でパスワードが更新された場合はいつでも、[設定] で保存されたエントリを編集することで、保存された古いパスワードを新しいパスワードに簡単に置き換えることができます。 
 
-- **パフォーマンス:**
-
-  - タブをスリープ状態にし、ブラウザーのパフォーマンスを向上させます。 タブをスリープすると、アクティブでないタブをスリープ状態にすることでブラウザーのパフォーマンスが向上し、メモリや CPU などのシステム リソースが解放され、アクティブなタブや他のアプリケーションで使用できます。 ユーザーは、サイトがスリープ状態になるのを防ぎ、非アクティブなタブがスリープ状態になる前の時間の長さを構成できます。 ユーザーのフローを維持するために、イントラネット サイトなど、特定のサイトがスリープ状態になるのを防ぐためのヒューリスティックも用意されています。 この機能は、実験を有効にしたユーザーのランダムに選択されたグループに限定されます。 Microsoft Edge バージョン 89 では、スリープ タブ機能を既定で有効にする予定です。 この機能は、グループ ポリシーを使用して管理できます。
-  - 起動ブーストを使用して Microsoft Edge の起動速度を向上します。 Microsoft Edge の起動速度を向上させるために、スタートアップ ブーストという名前の機能を開発しました。 起動ブーストにより、Microsoft Edge をバックグラウンドで実行することで、Microsoft Edge の起動速度が向上します。 注: この機能は、実験を有効にしたユーザーのランダムに選択されたグループに限定されます。 これらのユーザーは、機能チームにフィードバックを提供しています。
+- 起動ブーストを使用して Microsoft Edge の起動速度を向上します。 Microsoft Edge の起動速度を向上させるために、スタートアップ ブーストという名前の機能を開発しました。 起動ブーストにより、Microsoft Edge をバックグラウンドで実行することで、Microsoft Edge の起動速度が向上します。 注: この機能は、実験を有効にしたユーザーのランダムに選択されたグループに限定されます。 これらのユーザーは、機能チームにフィードバックを提供しています。
 
 - **生産性:**
 

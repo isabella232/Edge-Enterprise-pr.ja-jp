@@ -3,23 +3,23 @@ title: Microsoft Edge の ID サポートと構成
 ms.author: avvaid
 author: dan-wesley
 manager: srugh
-ms.date: 12/08/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge の ID サポートと構成
-ms.openlocfilehash: e553174fa40cb60046e5a46af4d81a0787957a93
-ms.sourcegitcommit: b3f8ef9e4944efa3be15c7bfc0cd13360a350c1c
+ms.openlocfilehash: 05dc0fabe212f31fe9207c72d097913d5765915f
+ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "11201294"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "11314610"
 ---
 # Microsoft Edge の ID サポートと構成
 
-この記事では、Microsoft Edge で ID を使用して、同期やシングル サインオン (SSO) などの機能がどのようにサポートされているかについて説明します。 Microsoft Edge では、Active Directory Domain Services (AD DS)、Azure Active Directory (Azure AD)、および Microsoft アカウント (MSA) を使用したサインインがサポートされています。 現在、Microsoft Edge は、グローバル クラウドまたは GCC ソブリン クラウドに属している Azure Active Directory (Azure AD) アカウントのみをサポートしています。 他のソブリン クラウドのサポートを追加しています。 
+この記事では、Microsoft Edge で ID を使用して、同期やシングル サインオン (SSO) などの機能がどのようにサポートされているかについて説明します。 Microsoft Edge では、Active Directory Domain Services (AD DS)、Azure Active Directory (Azure AD)、および Microsoft アカウント (MSA) を使用したサインインがサポートされています。 現在、Microsoft Edge は、グローバル クラウドまたは GCC ソブリン クラウドに属している Azure Active Directory (Azure AD) アカウントのみをサポートしています。 他のソブリン クラウドのサポートを追加しています。
 
 > [!NOTE]
 > これは、Microsoft Edge version 77 以降に適用されます。
@@ -28,12 +28,12 @@ ms.locfileid: "11201294"
 
 Microsoft Edge は、Azure AD、MSA、またはドメイン アカウントを使用したブラウザー プロファイルへのサインインをサポートしています。 サインインに使用するアカウントの種類によって、Microsoft Edge でユーザーが使用できる認証済みの機能が決定されます。 次の表は、各アカウントの種類ごとに、機能のサポートをまとめたものです。
 
-|    | Azure AD Premium | Azure AD Free | 組織内の AD DS | MSA     |
+| 機能   | Azure AD Premium | Azure AD Free | 組織内の AD DS | MSA     |
 |----|------------------|---------------|----------------|---------|
-| 同期 | あり | × | いいえ | あり |
-| プライマリ更新トークンによる SSO | あり | あり | いいえ | あり |
-| シームレス SSO | あり | あり | ○ | 該当せず |
-| 統合 Windows 認証 | あり | あり | ○ | 該当せず |
+| 同期 | あり | いいえ | なし | あり |
+| プライマリ更新トークンによる SSO | あり | あり | なし | あり |
+| シームレス SSO | あり | ○ | あり | 該当せず |
+| 統合 Windows 認証 | あり | ○ | あり | 該当せず |
 | Enterprise [新しいタブ] ページ | O365 が必要 |   O365 が必要 | なし | 該当せず |
 | Microsoft Search | O365 が必要 | O365 が必要 | なし | 該当せず |
 
@@ -51,7 +51,7 @@ Microsoft Edge では、OS の既定のアカウントを使用してブラウ�
 
 ### 手動サインイン
 
-ユーザーが Microsoft Edge に自動的にサインインしない場合、最初の実行エクスペリエンス、ブラウザー設定、または ID フライアウトを開くことにより、ユーザーは Microsoft Edge に手動でサインインできます。 
+ユーザーが Microsoft Edge に自動的にサインインしない場合、最初の実行エクスペリエンス、ブラウザー設定、または ID フライアウトを開くことにより、ユーザーは Microsoft Edge に手動でサインインできます。
 
 ### ブラウザーのサインインを管理する
 
@@ -104,7 +104,7 @@ Web サイトが NTLM またはネゴシエート メカニズムを使用して
 ## 関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
-- [Microsoft Edge ドキュメント ランディング ページ](https://docs.microsoft.com/DeployEdge/)
+- [ビデオ: Microsoft Edge と ID](microsoft-edge-video-identity.md)
 - [ID とアクセス管理](https://www.microsoft.com/security/technology/identity-access-management)
 - [ID プラットフォーム](https://developer.microsoft.com/identity)
 - [Azure Active Directory を使って強固な ID 基盤を構築するための 4 つのステップ](https://docs.microsoft.com/azure/active-directory/hybrid/four-steps)

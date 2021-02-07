@@ -3,23 +3,31 @@ title: Microsoft Edge セキュリティ更新プログラムのリリースノ�
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 01/21/2021
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge セキュリティ更新プログラムのリリースノート
-ms.openlocfilehash: 2ea1a9e79fba3cba83fead9fe05d691ad54ddc1e
-ms.sourcegitcommit: e5980a7a36c252e8a04315b3d4c64a161027324e
+ms.openlocfilehash: fffcad26dba8d3a5e0899fa741648341b17411c5
+ms.sourcegitcommit: b1d49b229c47dc1d99e1b677d75aad38b3334ed6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "11297030"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "11314177"
 ---
 # Microsoft Edge セキュリティ更新プログラムのリリースノート
 
 これらのリリースノートでは、Microsoft Edge Stable チャネルの更新に含まれているセキュリティ修正プログラムに関する情報を提供します。
+
+## 2021 年 2 月 5 日
+
+Microsoft は、Chromium プロジェクトの最新のセキュリティ更新プログラムを組み込んでいる最新の **Microsoft Edge Stable チャネル (バージョン 88.0.705.63)** をリリースしました。 この更新プログラムには、[CVE-2021-21148](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21148) が含まれています。これについては、Chromium チームにより実際に感染報告がある悪用が報告されています。 詳細については、「[セキュリティ更新プログラム ガイド](https://msrc.microsoft.com/update-guide)」を参照してください。
+
+## 2021 年 2 月 4 日
+
+Microsoft は、Chromium プロジェクトの最新のセキュリティ更新プログラムを組み込んでいる最新の **Microsoft Edge Stable チャネル (バージョン 88.0.705.62)** をリリースしました。 詳細については、「[セキュリティ更新プログラム ガイド](https://msrc.microsoft.com/update-guide)」を参照してください。
 
 ## 2021 年 1 月 21 日
 
