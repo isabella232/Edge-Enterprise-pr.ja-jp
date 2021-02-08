@@ -3,23 +3,23 @@ title: 旧バージョンの Microsoft Edge にアクセスする
 ms.author: jtkim
 author: dan-wesley
 manager: srugh
-ms.date: 08/17/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: レガシ バージョンの Microsoft Edge にアクセスする方法について説明します。
-ms.openlocfilehash: e4733d020f3a681ded50e5a087fe086d39362201
-ms.sourcegitcommit: f7f7eb69d2298b0f9779a9fd28e3c4e297ef2e05
+ms.openlocfilehash: 00f4a29c9a2bed137b339c8b5ef43eb213d33ee4
+ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "11125519"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "11313897"
 ---
 # Microsoft Edge の新しいバージョンをインストールした後 Microsoft Edge レガシにアクセスする
 
-Microsoft Edge の新しいバージョンをインストールした後 Microsoft Edge レガシにアクセスする方法について説明します。
+Microsoft Edge レガシは、2021 年 3 月 9 日にセキュリティ更新プログラムの受信を停止します。 Microsoft Edge レガシには、4 月 13 日までアクセスできます。 詳細については、Microsoft Edge 製品チームの[ブログ投稿](https://aka.ms/EdgeLegacyEOS)を 参照してください。
 
 > [!NOTE]
 > この記事は、Microsoft Edge [Stable チャネル](microsoft-edge-channels.md)に適用されます。
@@ -45,10 +45,6 @@ Microsoft Edge の新しいバージョンをインストールした後 Microso
 この記事の詳細な手順を実行する前に、ユーザーが Microsoft Edge 従来版と Microsoft Edge [Beta チャネル](microsoft-edge-channels.md)を同時に実行できるようにするために、次の 2 つの手順を実行することを検討してください。
 
 1. Microsoft Edge の Stable チャネルが [Windows Update](https://support.microsoft.com/help/12373/windows-update-faq) で自動的にインストールされないように対策を講じます。
-
-   > [!TIP]
-   > [Blocker Toolkit](microsoft-edge-blocker-toolkit.md) を使用すると、Microsoft Edge の自動配布を無効にできます。
-
 2. 新しいバージョンの Microsoft Edge の[Beta チャネル](https://www.microsoft.com/edge/business/download)をインストールします。
 
    > [!NOTE]
