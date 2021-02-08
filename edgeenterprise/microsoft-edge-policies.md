@@ -3,7 +3,7 @@ title: Microsoft Edge ブラウザー ポリシーに関するドキュメント
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/27/2021
+ms.date: 02/03/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
-ms.openlocfilehash: 59c3c3426e3e7db2c5a115b15ae5e9b9e7628f9e
-ms.sourcegitcommit: e9433045503c2614386ee4948cda0a9c9701bac5
+ms.openlocfilehash: e57c840931e2c0e73eb720179fc780182d433831
+ms.sourcegitcommit: 5cdcf44324e35c3ac71d7ca78e512f64d4dcbfea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "11304730"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "11313425"
 ---
 # Microsoft Edge - ポリシー
 
@@ -33,9 +33,11 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 
 次の表に、この更新プログラムの新しいポリシーを示します。
 
-| 名前 | キャプション |
+| 名前| キャプション |
 |--|--|
-|[SmartActionsBlockList](#smartactionsblocklist)|サービスの一覧に対するスマート アクションをブロックする|
+|[WindowsHelloForHTTPAuthEnabled](#windowshelloforhttpauthenabled)|HTTP 認証用 Windows Hello を有効にする|
+|[ManagedConfigurationPerOrigin](#managedconfigurationperorigin)|Web サイトの管理された構成値を特定のオリジンに設定する|
+
 
 ## 使用可能なポリシー
 
@@ -144,6 +146,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[DisableAuthNegotiateCnameLookup](#disableauthnegotiatecnamelookup)|Kerberos 認証をネゴシエートするときの CNAME ルックアップを無効にする|
 |[EnableAuthNegotiatePort](#enableauthnegotiateport)|Kerberos SPN に標準以外のポートを含める|
 |[NtlmV2Enabled](#ntlmv2enabled)|NTLMv2 認証を有効にするかどうかを制御する|
+|[WindowsHelloForHTTPAuthEnabled](#windowshelloforhttpauthenabled)|HTTP 認証用 Windows Hello を有効にする|
 ### [*キオスク モードの設定*](#kiosk-mode-settings-policies)
 
 |ポリシー名|キャプション|
@@ -360,6 +363,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|イントラネット リダイレクトの動作|
 |[IsolateOrigins](#isolateorigins)|特定のオリジンでのサイトの分離を有効にする|
 |[LocalProvidersEnabled](#localprovidersenabled)|ローカル プロバイダーからのおすすめを許可する|
+|[ManagedConfigurationPerOrigin](#managedconfigurationperorigin)|Web サイトの管理された構成値を特定のオリジンに設定する|
 |[ManagedFavorites](#managedfavorites)|お気に入りを構成する|
 |[ManagedSearchEngines](#managedsearchengines)|検索エンジンを管理する|
 |[MaxConnectionsPerProxy](#maxconnectionsperproxy)|プロキシ サーバーへの同時接続の最大数|
@@ -412,7 +416,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[SpellcheckEnabled](#spellcheckenabled)|スペルチェックを有効にする|
 |[SpellcheckLanguage](#spellchecklanguage)|特定のスペルチェック言語を有効にする|
 |[SpellcheckLanguageBlocklist](#spellchecklanguageblocklist)|スペルチェック言語の無効化を強制する|
-|[StricterMixedContentTreatmentEnabled](#strictermixedcontenttreatmentenabled)|混在したコンテンツに対するより厳密な扱いを有効にする (非推奨)|
+|[StricterMixedContentTreatmentEnabled](#strictermixedcontenttreatmentenabled)|混在したコンテンツに対するより厳密な処理を有効にする (不使用)|
 |[SuppressUnsupportedOSWarning](#suppressunsupportedoswarning)|サポートされていない OS の警告を非表示にする|
 |[SyncDisabled](#syncdisabled)|Microsoft 同期サービスを使用してデータの同期を無効にする|
 |[SyncTypesListDisabled](#synctypeslistdisabled)|同期から除外される種類の一覧を構成する|
@@ -5153,6 +5157,59 @@ Samba と Windows Server の最新バージョンは、すべて NTLMv2 をサ�
 ``` xml
 <true/>
 ```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### WindowsHelloForHTTPAuthEnabled
+
+  #### HTTP 認証用 Windows Hello を有効にする
+
+  
+  
+  #### サポートされているバージョン:
+
+  - Windows での 90 以降
+
+  #### 説明
+
+  NTLM およびネゴシエート認証の問題に対応するため、Windows 資格情報 UI を使用する必要があるかどうか示します。
+
+このポリシーを無効にすると、NTLM およびネゴシエートの問題に対応するため、基本のユーザー名とパスワードを求めるメッセージが表示されます。 このポリシーを有効にするか構成しない場合は、Windows 資格情報 UI が使用されます。
+
+  #### サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: はい
+  - 動的なポリシーの更新: いいえ - ブラウザの再起動が必要
+
+  #### ［データの種類］:
+
+  - ブール値
+
+  #### Windows の情報と設定
+
+  ##### グループ ポリシー (ADMX) 情報
+
+  - GP 固有の名前: WindowsHelloForHTTPAuthEnabled
+  - GP 名: HTTP 認証用 Windows Hello を有効にする
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/HTTP 認証
+  - GP パス (推奨): 管理用テンプレート/Microsoft Edge - 既定の設定 (ユーザーが上書き可能)/HTTP 認証
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - 値の名前: WindowsHelloForHTTPAuthEnabled
+  - 値の種類: REG_DWORD
+
+  ##### サンプル値:
+
+```
+0x00000001
+```
+
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -16882,6 +16939,103 @@ Internet Explorer モードの詳細については、「[https://go.microsoft.c
 
   [ページのトップへ](#microsoft-edge---policies)
 
+  ### ManagedConfigurationPerOrigin
+
+  #### Web サイトの管理された構成値を特定のオリジンに設定する
+
+  
+  
+  #### サポートされているバージョン:
+
+  - Windows と macOS での 90 以降
+
+  #### 説明
+
+  このポリシーを設定すると、特定のオリジンの Managed Configuration API の戻り値が定義されます。
+
+ Managed Configuration API は、navigator.device.getManagedConfiguration() javascript 呼び出しを介してアクセスできるキーと値の構成です。 この API は、[WebAppInstallForceList](#webappinstallforcelist) を介して強制インストールされた Web アプリケーションに対応するオリジンでのみ使用できます。
+
+
+  #### サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+
+  - Dictionary
+
+  #### Windows の情報と設定
+
+  ##### グループ ポリシー (ADMX) 情報
+
+  - GP 固有の名前: ManagedConfigurationPerOrigin
+  - GP 名: Web サイトの管理された構成値を特定のオリジンに設定する
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - 値の名前: ManagedConfigurationPerOrigin
+  - 値の種類: REG_SZ
+
+  ##### サンプル値:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\ManagedConfigurationPerOrigin = [
+  {
+    "managed_configuration_hash": "asd891jedasd12ue9h", 
+    "managed_configuration_url": "https://static.contoso.com/configuration.json", 
+    "origin": "https://www.contoso.com"
+  }, 
+  {
+    "managed_configuration_hash": "djio12easd89u12aws", 
+    "managed_configuration_url": "https://static.contoso.com/configuration2.json", 
+    "origin": "https://www.example.com"
+  }
+]
+```
+
+  ##### コンパクト サンプル値:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\ManagedConfigurationPerOrigin = [{"managed_configuration_hash": "asd891jedasd12ue9h", "managed_configuration_url": "https://static.contoso.com/configuration.json", "origin": "https://www.contoso.com"}, {"managed_configuration_hash": "djio12easd89u12aws", "managed_configuration_url": "https://static.contoso.com/configuration2.json", "origin": "https://www.example.com"}]
+  ```
+  
+
+  #### Mac の情報と設定
+  
+  - 基本設定キー名: ManagedConfigurationPerOrigin
+  - サンプル値:
+``` xml
+<key>ManagedConfigurationPerOrigin</key>
+<array>
+  <dict>
+    <key>managed_configuration_hash</key>
+    <string>asd891jedasd12ue9h</string>
+    <key>managed_configuration_url</key>
+    <string>https://static.contoso.com/configuration.json</string>
+    <key>origin</key>
+    <string>https://www.contoso.com</string>
+  </dict>
+  <dict>
+    <key>managed_configuration_hash</key>
+    <string>djio12easd89u12aws</string>
+    <key>managed_configuration_url</key>
+    <string>https://static.contoso.com/configuration2.json</string>
+    <key>origin</key>
+    <string>https://www.example.com</string>
+  </dict>
+</array>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
   ### ManagedFavorites
 
   #### お気に入りを構成する
@@ -20371,17 +20525,17 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
   ### StricterMixedContentTreatmentEnabled
 
-  #### 混在したコンテンツに対するより厳密な扱いを有効にする (非推奨)
+  #### 混在したコンテンツに対するより厳密な処理を有効にする (不使用)
 
-  >非推奨: このポリシーは推奨されなくなっています。 現在はサポートされていますが、将来のリリースで廃止されます。
   
+  >不使用: このポリシーは使われなくなったため、Microsoft Edge 84 以降では機能しません。
   #### サポートされているバージョン:
 
-  - Windows と macOS での 81 以降
+  - Windows と macOS での 81 以降、84 まで 
 
   #### 説明
 
-  このポリシーは、企業の Web コンテンツが、混在したコンテンツのより厳密な扱いと互換していないことが判明した場合に、Web コンテンツの更新に時間を割くための短期のメカニズムとしてのみ機能することを目的としているため、推奨されていません。 Microsoft Edge バージョン 85 では機能しません。
+  このポリシーは、企業の Web コンテンツが、混在したコンテンツのより厳密な処理と互換していないことが判明した場合に、Web コンテンツの更新に時間を割くための短期のメカニズムとしてのみ機能することを目的としているため、機能しません。
 
 このポリシーでは、混在したコンテンツ (HTTPS サイト内の HTTP コンテンツ) のブラウザーでの処理を制御します。
 
@@ -20406,7 +20560,7 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
   ##### グループ ポリシー (ADMX) 情報
 
   - GP 固有の名前: StricterMixedContentTreatmentEnabled
-  - GP 名: 混在したコンテンツに対するより厳密な扱いを有効にする (非推奨)
+  - GP 名: 混在したコンテンツに対するより厳密な処理を有効にする (不使用)
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/
   - GP パス (推奨): なし
   - GP ADMX ファイル名: MSEdge.admx
@@ -21881,7 +22035,14 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 
   このポリシーを構成して、ユーザーの操作なしでサイレント インストールし、ユーザーがアンインストールまたはオフにできない Web アプリの一覧を指定します。
 
-ポリシーの各リスト アイテムは、必須メンバー: URL （インストールする Web アプリの URL） と 2 つのオプション メンバー: default_launch_container （Web アプリが開くウィンドウ モードを指定する - 新しいタブが既定） および create_desktop_shortcut （Linux および Windows デスクトップ ショートカットを作成する場合は True） を持つオブジェクトです。
+ポリシーの各リスト アイテムは、必須のメンバー URL (インストールする Web アプリの URL) を持つオブジェクトです。
+
+3 つのオプション メンバー:
+- default_launch_container (新しいタブで Web アプリが開くウィンドウ モードが既定に指定されます。)
+
+- create_desktop_shortcut (Linux および Windows デスクトップ ショートカットを作成する場合は True。)
+
+- override_app_name (Microsoft Edge 89 以降、プログレッシブ Web アプリではない場合はアプリ名を上書きできます。または、プログレッシブ Web アプリの場合は一時的にインストールされますが、インストールを完了する前に認証が必要なアプリ名です。)
 
   #### サポートされている機能:
 
@@ -21922,6 +22083,11 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   {
     "default_launch_container": "tab", 
     "url": "https://app.contoso.edu"
+  }, 
+  {
+    "default_launch_container": "window", 
+    "override_app_name": "Editor", 
+    "url": "https://app.contoso.com/editor"
   }
 ]
 ```
@@ -21929,7 +22095,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ##### コンパクト サンプル値:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}]
+  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "override_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
   ```
   
 
@@ -21953,6 +22119,14 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
     <string>tab</string>
     <key>url</key>
     <string>https://app.contoso.edu</string>
+  </dict>
+  <dict>
+    <key>default_launch_container</key>
+    <string>window</string>
+    <key>override_app_name</key>
+    <string>Editor</string>
+    <key>url</key>
+    <string>https://app.contoso.com/editor</string>
   </dict>
 </array>
 ```
