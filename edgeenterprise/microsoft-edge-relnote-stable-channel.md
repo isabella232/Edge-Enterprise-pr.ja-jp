@@ -3,19 +3,19 @@ title: Stable チャネルに関する Microsoft Edge リリース ノート
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 02/08/2021
+ms.date: 02/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Stable チャネルに関する Microsoft Edge リリース ノート
-ms.openlocfilehash: df5298934496db5f5899bebad3ecf44bbda91913
-ms.sourcegitcommit: b4a2bebc45da3c8fff8dd8eae194c2c8ed589bce
+ms.openlocfilehash: eaf7c7718a5ed56644c67769bf71847fb14e8728
+ms.sourcegitcommit: f141a3b315244e93291ca30ed23741a1d84f0a73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/09/2021
-ms.locfileid: "11319261"
+ms.locfileid: "11324859"
 ---
 # Microsoft Edge Stable チャネルのリリース ノート
 
@@ -83,7 +83,7 @@ ms.locfileid: "11319261"
   - パスワード モニター。 ブラウザーに保存されたパスワードのいずれかが、漏洩された一覧のリストに表示されているパスワードと一致すると、Microsoft Edge から通知され、パスワードを更新するように求められます。 パスワード モニターは、ユーザーに代わって一致をスキャンし、既定でオンになっています。
   - パスワードの編集。 Microsoft Edge の設定で、保存したパスワードを直接編集できます。 Microsoft Edge の外部でパスワードが更新された場合はいつでも、[設定] で保存されたエントリを編集することで、保存された古いパスワードを新しいパスワードに簡単に置き換えることができます。 
 
-- 起動ブーストを使用して Microsoft Edge の起動速度を向上します。 Microsoft Edge の起動速度を向上させるために、スタートアップ ブーストという名前の機能を開発しました。 起動ブーストにより、Microsoft Edge をバックグラウンドで実行することで、Microsoft Edge の起動速度が向上します。 注: この機能は、実験を有効にしたユーザーのランダムに選択されたグループに限定されます。 これらのユーザーは、機能チームにフィードバックを提供しています。
+- **起動ブーストを使用して Microsoft Edge の起動速度を向上します**。 Microsoft Edge の起動速度を向上させるために、スタートアップ ブーストという名前の機能を開発しました。 起動ブーストにより、Microsoft Edge をバックグラウンドで実行することで、Microsoft Edge の起動速度が向上します。 注: この機能は、実験を有効にしたユーザーのランダムに選択されたグループに限定されます。 これらのユーザーは、機能チームにフィードバックを提供しています。
 
 - **生産性:**
 
@@ -286,7 +286,7 @@ ms.locfileid: "11319261"
 
 * **プライバシーとセキュリティ**
 
-  * **ダウンレベルの Windows と macOS で [MetricsReportingEnabled]( https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) と [SendSiteInformationToImproveServices]( https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) ポリシーを置き換えます。** これらのポリシーは Microsoft Edge バージョン 86 では非推奨で、Microsoft Edge バージョン 89 で廃止されます。<br>
+  * ダウンレベルの Windows と macOS で [MetricsReportingEnabled]( https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) と [SendSiteInformationToImproveServices]( https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) ポリシーを置き換えます。 これらのポリシーは Microsoft Edge バージョン 86 では非推奨で、Microsoft Edge バージョン 89 で廃止されます。<br>
 これらのポリシーは、Windows 10 では[利用統計情報の許可](https://go.microsoft.com/fwlink/?linkid=2099569)に、その他すべてのプラットフォームでは新しい [DiagnosticData](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#diagnosticdata) ポリシーに置き換えられます。 これにより、ユーザーは Windows 7、8、8.1、macOS で、Microsoft に送信される診断データを管理できるようになります。
   * セキュリティで保護された DNS (DNS-over-HTTPS) のサポート。  Microsoft Edge バージョン 86 以降、セキュリティ保護された DNS を制御する設定が、管理されていないデバイスで利用可能になりました。 ユーザーは管理されたデバイスでこれらの設定にアクセスできませんが、IT 管理者は [dnsoverhttpsmode](https://docs.microsoft.com/deployedge/microsoft-edge-policies#dnsoverhttpsmode) グラウンド ポリシーを使用して、セキュリティ保護された DNS を有効または無効にすることができます。
 

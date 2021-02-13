@@ -3,7 +3,7 @@ title: Microsoft Edge ブラウザー ポリシーに関するドキュメント
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 02/03/2021
+ms.date: 02/09/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
-ms.openlocfilehash: e57c840931e2c0e73eb720179fc780182d433831
-ms.sourcegitcommit: 5cdcf44324e35c3ac71d7ca78e512f64d4dcbfea
+ms.openlocfilehash: fb1ae6bb0933767a2c5cbcc59212602aed068b9e
+ms.sourcegitcommit: b9061bdf8c2fa04ea2958fba614476542ad4b932
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "11313425"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "11325897"
 ---
 # Microsoft Edge - ポリシー
 
@@ -33,10 +33,11 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 
 次の表に、この更新プログラムの新しいポリシーを示します。
 
-| 名前| キャプション |
+| 名前 | キャプション |
 |--|--|
-|[WindowsHelloForHTTPAuthEnabled](#windowshelloforhttpauthenabled)|HTTP 認証用 Windows Hello を有効にする|
-|[ManagedConfigurationPerOrigin](#managedconfigurationperorigin)|Web サイトの管理された構成値を特定のオリジンに設定する|
+|[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|Application Guard のお気に入りの同期の有効化|
+|[QuickViewOfficeFilesEnabled](#quickviewofficefilesenabled)|Microsoft Edge で QuickView Officeファイル機能を管理する|
+
 
 
 ## 使用可能なポリシー
@@ -60,6 +61,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |ポリシー名|キャプション|
 |-|-|
 |[ApplicationGuardContainerProxy](#applicationguardcontainerproxy)|Application Guard コンテナー プロキシ|
+|[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|Application Guard のお気に入りの同期の有効化|
 ### [*キャスト*](#cast-policies)
 
 |ポリシー名|キャプション|
@@ -381,6 +383,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[PromotionalTabsEnabled](#promotionaltabsenabled)|フルタブのプロモーション コンテンツを有効にする|
 |[PromptForDownloadLocation](#promptfordownloadlocation)|ダウンロードしたファイルの保存場所を確認する|
 |[QuicAllowed](#quicallowed)|QUIC プロトコルを許可する|
+|[QuickViewOfficeFilesEnabled](#quickviewofficefilesenabled)|Microsoft Edge で QuickView Officeファイル機能を管理する|
 |[RedirectSitesFromInternetExplorerPreventBHOInstall](#redirectsitesfrominternetexplorerpreventbhoinstall)|Internet Explorer から Microsoft Edgeに互換性のないサイトを自動的にリダイレクトする|
 |[RedirectSitesFromInternetExplorerRedirectMode](#redirectsitesfrominternetexplorerredirectmode)|互換性のないサイトを Internet Explorer から Microsoft Edgeに自動的にリダイレクトする|
 |[RelaunchNotification](#relaunchnotification)|保留中の更新についてブラウザーの再起動が推奨されている、または必要であることをユーザーに通知する|
@@ -408,7 +411,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[SerialBlockedForUrls](#serialblockedforurls)|特定のサイトでのシリアル API をブロックする|
 |[ShowMicrosoftRewards](#showmicrosoftrewards)|Microsoft Rewards のエクスペリエンスを表示する|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|お気に入り バーにMicrosoft Office のショートカットを表示する (非推奨)|
-|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Edge からの推奨事項とプロモーション通知を許可する|
+|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Microsoft Edge からの推奨事項とプロモーション通知を許可する|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Signed HTTP Exchange (SXG) のサポートを有効にする|
 |[SitePerProcess](#siteperprocess)|すべてのサイトでのサイトの分離を有効にする|
 |[SmartActionsBlockList](#smartactionsblocklist)|サービスの一覧に対するスマート アクションをブロックする|
@@ -536,6 +539,63 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
   SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {"ProxyMode": "direct", "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
   ```
   
+
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### ApplicationGuardFavoritesSyncEnabled
+
+  #### Application Guard のお気に入りの同期の有効化
+
+  
+  
+  #### サポートされているバージョン:
+
+  - Windows での 90 以降
+
+  #### 説明
+
+  このポリシーにより、アプリケーションガードが有効になっている Microsoft Edge コンピューター/デバイスは、お気に入りが一致するように、ホストからコンテナーにお気に入りを同期できます。
+
+[Managed Favorites](#managedfavorites) が構成されている場合、それらのお気に入りもコンテナーに同期されます。
+
+このポリシーを有効にした場合、コンテナー内のお気に入りの編集は無効になります。 そのため、コンテナー ブラウザーの UI で[お気に入りの追加]、および [お気に入りフォルダーの追加] ボタンがぼやけて表示されます。
+
+このポリシーを無効にした場合、または構成していない場合、ホストのお気に入りはコンテナーに共有されます。
+
+  #### サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: いいえ - ブラウザの再起動が必要
+
+  #### ［データの種類］:
+
+  - ブール値
+
+  #### Windows の情報と設定
+
+  ##### グループ ポリシー (ADMX) 情報
+
+  - GP 一意の名前: ApplicationGuardFavoritesSyncEnabled
+  - GP 名: Application Guard Favorites Sync Enabled
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/Application Guard の設定
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - 値の名前: ApplicationGuardFavoritesSyncEnabled
+  - 値の種類: REG_DWORD
+
+  ##### サンプル値:
+
+```
+0x00000001
+```
 
   
 
@@ -5232,9 +5292,9 @@ Samba と Windows Server の最新バージョンは、すべて NTLMv2 をサ�
 
   このポリシーは、パブリック ブラウジングエ クスペリエンスを使用しているときの Microsoft Edge キオスクモードにのみ適用されます。
 
-このポリシーを有効にすると、ユーザーがアドレスバーのURLを変更できなくなります。
+このポリシーを有効にした場合または構成しない場合、ユーザーはアドレス バーの URL を変更できます。
 
-このポリシーを無効にするか、構成しなかった場合、ユーザーはアドレスバーのURLを変更できます。
+このポリシーを無効にすると、ユーザーがアドレス バーの URL を変更できなくなります。
 
 キオスク モードの構成の詳細については、「[https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578)」を参照してください。
 
@@ -8114,7 +8174,7 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
 
 このポリシー * と *[NewTabPageSetFeedType](#newtabpagesetfeedtype) ポリシーを構成している場合、このポリシーが優先されます。
 
-無効な URL が提供されている場合、新規タブは about://blank で開きます。
+空白のタブが優勢される場合は、"about://blank" ではなく、"about:blank" が正しい URL です。
 
 このポリシーは、Microsoft Active Directory ドメインに参加している Windows インスタンス、デバイス管理用に登録されている Windows 10 Pro または Enterprise インスタンス、もしくは MDM を使用するか MDM を使用してドメインに参加する macOS インスタンスでのみ利用可能です。
 
@@ -10432,7 +10492,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 * EDU のテナントがあるのに、ポリシーが機能しない場合。
 
-* 広告のない検索エクスペリエンスを実行したことで、IP アドレスがホワイトリストに登録された場合。
+* 広告なしの検索エクスペリエンスを提供するために、IP を許可リストに登録しました。
 
 * Microsoft Edge 従来版で広告のない検索エクスペリエンスを実行していて、新しいバージョンの Microsoft Edge へとアップグレードしたい場合。
 
@@ -18282,6 +18342,68 @@ QUIC は、現在 TCP を使用している Web アプリケーションのパ�
 
   [ページのトップへ](#microsoft-edge---policies)
 
+  ### QuickViewOfficeFilesEnabled
+
+  #### Microsoft Edge で QuickView Officeファイル機能を管理する
+
+  
+  
+  #### サポートされているバージョン:
+
+  - Windows と macOS での 90 以降
+
+  #### 説明
+
+  ユーザーが OneDrive または SharePoint にない Web 上の Office ファイルを表示できるかどうかを設定できます。 (例: Word 文書、PowerPoint プレゼンテーション、Excel スプレッドシート)
+
+このポリシーを有効にした場合または構成しない場合、これらのファイルは、ファイルをダウンロードする代わりに Office Viewer を使用して Microsoft Edge で表示できます。
+
+このポリシーを無効にすると、これらのファイルがダウンロードされて表示されます。
+
+  #### サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+
+  - ブール値
+
+  #### Windows の情報と設定
+
+  ##### グループ ポリシー (ADMX) 情報
+
+  - GP 一意の名前: QuickViewOfficeFilesEnabled
+  - GP 名: Microsoft Edge で QuickView Office ファイル機能を管理する
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - 値の名前: QuickViewOfficeFilesEnabled
+  - 値の種類: REG_DWORD
+
+  ##### サンプル値:
+
+```
+0x00000001
+```
+
+  #### Mac の情報と設定
+  
+  - 設定のキー名: QuickViewOfficeFilesEnabled
+  - サンプル値:
+``` xml
+<true/>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
   ### RedirectSitesFromInternetExplorerPreventBHOInstall
 
   #### Internet Explorer から Microsoft Edgeに互換性のないサイトを自動的にリダイレクトする
@@ -20011,7 +20133,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   ### ShowRecommendationsEnabled
 
-  #### Edge からの推奨事項とプロモーション通知を許可する
+  #### Microsoft Edge からの推奨事項とプロモーション通知を許可する
 
   
   
@@ -20042,7 +20164,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   ##### グループ ポリシー (ADMX) 情報
 
   - GP 固有の名前: ShowRecommendationsEnabled
-  - GP 名: Edge からの推奨事項とプロモーション通知を許可する
+  - GP 名: Microsoft Edge からの推奨事項とプロモーション通知を許可する
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/
   - GP パス (推奨): なし
   - GP ADMX ファイル名: MSEdge.admx
