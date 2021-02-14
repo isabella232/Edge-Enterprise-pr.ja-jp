@@ -3,19 +3,19 @@ title: Microsoft Edge ビジネス向けのセキュリティ
 ms.author: seanlynd
 author: seanongit
 manager: chuckf
-ms.date: 02/05/2021
+ms.date: 02/10/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge ビジネス向けのセキュリティ
-ms.openlocfilehash: eb981f3ed47b40219e50818531132ed5d385b642
-ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
+ms.openlocfilehash: 497ca83c64bdc3d1f1b1be8989cf798d65a7eda3
+ms.sourcegitcommit: 543259647f221de88e67d47984617091f9c75cfc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "11314680"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "11327020"
 ---
 # Microsoft Edge ビジネス向けのセキュリティ
 
@@ -29,7 +29,7 @@ Microsoft Edge は、Google Chrome の中核と同じプロジェクトである
 
 Microsoft Edge に組み込まれた SmartScreen は、NSS Lab の独立した調査によると、Google Chrome の Safe Browsing よりも多くの [フィッシング](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Phishing_Report_Q2_2020.pdf) と [マルウェア](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Malware_Report_Q2_2020.pdf) の試みをブロックします。 SmartScreen はユーザーがオンラインで作業している間、サイトやダウンロードのリアルタイムの評判チェックを提供します。また、SmartScreen は [Microsoft インテリジェント セキュリティ グラフ](https://www.microsoft.com/microsoft-365/windows/intelligent-security)の一部です。これは、Microsoft のグローバルなアセット、研究者、パートナーによって生成された信号や分析情報を引き出します。 危険なサイトやダウンロードのクラウド ベースの動的リストに対してチェックを実行することで、Microsoft Edge はすぐに消える一時的な脅威さえも検出してブロックするのに役立ちます。  
 
-[SmartScreen が組み込まれている Microsoft Edge](https://docs.microsoft.com//DeployEdge/microsoft-edge-security-smartscreen) は [NSS Labs によるテスト](https://www.nsslabs.com/tested-technologies/web-browser-security-wbs/)の間、フィッシング試行を 95.5%、悪意のあるソフトウェアによる試行を 98.5% ブロックしました。一方、Chrome のセーフ ブラウジングの比率はそれぞれ 86.9% と 86.0% でした。
+[SmartScreen が組み込まれている Microsoft Edge](https://docs.microsoft.com//DeployEdge/microsoft-edge-security-smartscreen) は [NSS Labs のフィッシングに対する保護](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Phishing_Report_Q2_2020.pdf)テスト中にフィッシング試行を 95.5%、[NSSLabs のマルウェア対策](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Malware_Report_Q2_2020.pdf)テスト中に悪意のあるソフトウェアによる試行を 98.5% ブロックしました。一方、Chrome のセーフ ブラウジングの比率はそれぞれ 86.9% と 86.0% でした。
 
 ### Windows 10 でハードウェア分離をネイティブでサポートする唯一のブラウザー
 
