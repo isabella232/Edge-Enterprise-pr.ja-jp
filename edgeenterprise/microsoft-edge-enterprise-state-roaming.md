@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge と Enterprise State Roaming
-ms.openlocfilehash: a759b1d9d4be8dced7bfcc2ef8d0f23b514f4be0
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 6090ecfda2f792d49e452771943bc6348066a3d8
+ms.sourcegitcommit: 90b8eab62edbed0e0a84780abd7d3854bf95c130
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980518"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "11328059"
 ---
 # Microsoft Edge と Enterprise State Roaming
 
@@ -63,7 +63,7 @@ Azure AD ポータルとの統合によって、だれが、どのデバイス�
 
 ### 管理
 
-管理者は、組織内のどのメンバーが同期を有効にできるかを制御できます。[Microsoft Edge の同期の構成オプション](microsoft-edge-enterprise-sync.md#configuration-options-for-microsoft-edge-sync)と[同期グループ ポリシー](microsoft-edge-enterprise-sync.md#sync-group-policies)に関する説明を参照してください。 さらに、ユーザーは、デバイスごとに同期をオン/オフにしたり、各データ属性の同期を個別に切り替えたりすることができます。
+管理者は、組織内のどのメンバーが同期を有効にできるかを制御できます。「[Microsoft Edge の同期を構成する](microsoft-edge-enterprise-sync.md#configure-microsoft-edge-sync)」と「[同期グループ ポリシー](microsoft-edge-enterprise-sync.md#sync-group-policies)」を参照してください。 さらに、ユーザーは、デバイスごとに同期をオン/オフにしたり、各データ属性の同期を個別に切り替えたりすることができます。
 
 ### キーの管理
 
