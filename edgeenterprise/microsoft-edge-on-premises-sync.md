@@ -3,19 +3,19 @@ title: Active Directory (AD) ユーザー用のオンプレミス同期
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 10/05/2020
+ms.date: 02/12/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Active Directory (AD) ユーザー用のオンプレミス同期
-ms.openlocfilehash: ce7fd912bc8cbd71e12444d58073e43df6b138db
-ms.sourcegitcommit: bd68077356a944b99a424d03b444b04aa60272dd
+ms.openlocfilehash: adf0adc8370aa1e18d07d0d2e91727d1ac607bf1
+ms.sourcegitcommit: 90b8eab62edbed0e0a84780abd7d3854bf95c130
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "11099746"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "11328049"
 ---
 # Active Directory (AD) ユーザー用のオンプレミス同期
 
@@ -30,7 +30,7 @@ Microsoft Edge でユーザー データを同期するには、通常 Microsoft
 
 ## 動作のしくみ
 
-Microsoft Edge では、クラウド同期には使用できない Active Directory (AD) アカウントとプロファイルを関連付けることができます。オンプレミス同期を有効にすると、AD プロファイルのデータは profile.pb という名前のファイルに保存されます。 既定では、このファイルは *%APPDATA%/Microsoft/Edge* に保存されます。 このファイルが作成された後は、異なるコンピューター間で移動することができるようになり、ユーザー データはそれぞれのコンピューターで読み書きされます。
+Microsoft Edge では、クラウド同期には使用できない Active Directory (AD) アカウントとプロファイルを関連付けることができます。オンプレミス同期を有効にすると、AD プロファイルのデータは profile.pb という名前のファイルに保存されます。 既定では、このファイルは *%APPDATA%/Microsoft/Edge* に保存されます。 このファイルが作成された後は、異なるコンピューター間で移動することができるようになり、ユーザー データはそれぞれのコンピューターで読み書きされます。 Microsoft Edge は、このファイルからの読み取りと書き込みのみを行います。必要に応じてファイルを移動させるのは管理者の責任となります。
 
 ## オンプレミス同期を使用する
 
@@ -42,7 +42,7 @@ Microsoft Edge でオンプレミス同期を有効にするには、[RoamingPro
 
 ### プロファイルが Active Directory アカウントに関連付けられていることを確認する
 
-オンプレミス同期は、Active Directory (AD) アカウントに関連付けられているプロファイルでのみ機能します。 そういったプロファイルが存在しない場合には、オンプレミス同期は機能しません。 ユーザーが AD アカウントを使用してサインインできるようにするには、[ConfigureOnPremisesAccountAutoSignIn](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#configureonpremisesaccountautosignin) ポリシーを構成します。
+オンプレミス同期は、Active Directory (AD) アカウントに関連付けられているプロファイルでのみ機能します。 そういったプロファイルが存在しない場合には、オンプレミス同期は機能しません。 ユーザーが AD アカウントを使用してサインインできるようにするには、[ConfigureOnPremisesAccountAutoSignIn](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#configureonpremisesaccountautosignin) ポリシーを構成します。 オンプレミスの同期の場合、Microsoft Edge はユーザー データの ID を確立するために AD にのみ依存します。Microsoft Edge がオンプレミスのデータの読み取りと書き込みを行う方法と、管理者が AD ユーザーのローミングを構成した方法との間に直接的な関係はありません。
 
 ### ユーザー データの場所を変更する (オプション)
 
@@ -67,7 +67,7 @@ Microsoft Edge でオンプレミス同期を有効にするには、[RoamingPro
 
 ### オンプレミスの同期を使用したその他の同期ポリシーの使用
 
-[SyncTypesListDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#synctypeslistdisabled) ポリシーを使用して、お気に入りや設定の同期を必要に応じて選択的に無効にすることができます。 [SyncDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#syncdisabled) ポリシーがアクティブになっている場合、オンプレミス同期も無効になります。  
+[SyncTypesListDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#synctypeslistdisabled) ポリシーを使用して、お気に入りや設定の同期を必要に応じて選択的に無効にすることができます。 [SyncDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#syncdisabled) ポリシーはオンプレミスの同期には影響を与えません。
 
 ## 関連項目
 
