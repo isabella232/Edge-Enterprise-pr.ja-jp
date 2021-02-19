@@ -3,7 +3,7 @@ title: Microsoft Edge ブラウザー ポリシーに関するドキュメント
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 02/09/2021
+ms.date: 02/17/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
-ms.openlocfilehash: fb1ae6bb0933767a2c5cbcc59212602aed068b9e
-ms.sourcegitcommit: b9061bdf8c2fa04ea2958fba614476542ad4b932
+ms.openlocfilehash: e293fc948625f2a36a94184f1e0502bb5e73f65a
+ms.sourcegitcommit: b85a216c616e055448028754971cd6dc4c308e81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "11325897"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "11340607"
 ---
 # Microsoft Edge - ポリシー
 
@@ -29,16 +29,15 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 > [!NOTE]
 > この記事は Microsoft Edge version 77 以降に適用されます。
 
-## 新しいポリシー
+## 新規ポリシーと非推奨になったポリシー
 
-次の表に、この更新プログラムの新しいポリシーを示します。
+次の表は、この更新の新規ポリシーと非推奨になったポリシーの一覧です。
 
 | 名前 | キャプション |
 |--|--|
-|[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|Application Guard のお気に入りの同期の有効化|
-|[QuickViewOfficeFilesEnabled](#quickviewofficefilesenabled)|Microsoft Edge で QuickView Officeファイル機能を管理する|
-
-
+|[SSLErrorOverrideAllowedForOrigins](#sslerroroverrideallowedfororigins)|ユーザーが特定の発信元の HTTPS 警告ページから続行できるようにする|
+|[WindowOcclusionEnabled](#windowocclusionenabled)|Window Occlusion を有効にする|
+|[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|ネイティブ ウィンドウ オクルージョンを有効にする (非推奨)|
 
 ## 使用可能なポリシー
 
@@ -371,7 +370,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[MaxConnectionsPerProxy](#maxconnectionsperproxy)|プロキシ サーバーへの同時接続の最大数|
 |[MediaRouterCastAllowAllIPs](#mediaroutercastallowallips)|Google Cast がすべての IP アドレスのキャスト デバイスに接続できるようにする|
 |[MetricsReportingEnabled](#metricsreportingenabled)|使用状況とクラッシュ関連のデータレポートを有効にする (廃止)|
-|[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|ネイティブ ウィンドウ オクルージョンを有効にする|
+|[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|ネイティブ ウィンドウ オクルージョンを有効にする (非推奨)|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|エンタープライズ モード サイト一覧のタブ ナビゲーションの遅延時間を設定する|
 |[NetworkPredictionOptions](#networkpredictionoptions)|ネットワーク予測を有効にする|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|ユーザーが自分の職場または学校アカウントで自動的にログインする既定のプロファイルを常に持つかどうかを設定する|
@@ -396,6 +395,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[RoamingProfileSupportEnabled](#roamingprofilesupportenabled)|Microsoft Edge プロファイル データのローミング コピーの使用を有効にする|
 |[RunAllFlashInAllowMode](#runallflashinallowmode)|Adobe Flash のコンテンツ設定をすべてのコンテンツに拡張する (不使用)|
 |[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|HTTPS の警告ページから続行できるようにする|
+|[SSLErrorOverrideAllowedForOrigins](#sslerroroverrideallowedfororigins)|ユーザーが特定の発信元の HTTPS 警告ページから続行できるようにする|
 |[SSLVersionMin](#sslversionmin)|最小限の TLS バージョンを有効にする|
 |[SaveCookiesOnExit](#savecookiesonexit)|Microsoft Edge の終了時に cookie を保存する|
 |[SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)|ブラウザー履歴の保存を無効にする|
@@ -453,6 +453,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[WebWidgetAllowed](#webwidgetallowed)|Web ウィジェットを有効にする|
 |[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Windows の起動時に Web ウィジェットを許可する|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Windows プロキシ リゾルバーを使用する (非推奨)|
+|[WindowOcclusionEnabled](#windowocclusionenabled)|Window Occlusion を有効にする|
 
 
 
@@ -15090,7 +15091,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   #### 説明
 
-  使用可能であれば、ハードウェア アクセラレータを使用するように指定します。 このポリシーを有効にしているか、構成していない場合、GPU 機能が明示的にブロックされていない限り、ハードウェア アクセラレータは有効になります。
+  利用可能な場合にハードウェア アクセラレータを使用するかどうかを指定します。 このポリシーを有効にしているか、構成していない場合、GPU 機能が明示的にブロックされていない限り、ハードウェア アクセラレータは有効になります。
 
 このポリシーを無効にしている場合、ハードウェア アクセラレータは無効になります。
 
@@ -17591,9 +17592,9 @@ Windows 7、Windows 8、macOS では、このポリシーによって、使用�
 
   ### NativeWindowOcclusionEnabled
 
-  #### ネイティブ ウィンドウ オクルージョンを有効にする
+  #### ネイティブ ウィンドウ オクルージョンを有効にする (非推奨)
 
-  
+  >非推奨: このポリシーは推奨されなくなっています。 現在はサポートされていますが、将来のリリースで廃止されます。
   
   #### サポートされているバージョン:
 
@@ -17601,13 +17602,15 @@ Windows 7、Windows 8、macOS では、このポリシーによって、使用�
 
   #### 説明
 
-  Microsoft Edge のネイティブ ウィンドウ オクルージョンを有効にします。
+  このポリシーは廃止されました。代わりに '[WindowOcclusionEnabled](#windowocclusionenabled)' ポリシーを使用してください。 Microsoft Edge バージョン 92 では動作しません。
+
+Microsoft Edge のネイティブ ウィンドウ オクルージョンを有効にします。
 
 この設定を有効にしている場合、CPU と電力の消費を削減するために、Microsoft Edge はウィンドウが他のウィンドウに覆われていることを検出したときにピクセルの描画作業を中断します。
 
 この設定を無効にしている場合、ウィンドウが他のウィンドウに覆われていることを Microsoft Edge は検出しません。
 
-このポリシーが設定されていない場合、ウィンドウが覆われていることについての検出は有効になります。
+このポリシーを設定しない場合は、オクルージョン検出が有効になります。
 
   #### サポートされている機能:
 
@@ -17624,7 +17627,7 @@ Windows 7、Windows 8、macOS では、このポリシーによって、使用�
   ##### グループ ポリシー (ADMX) 情報
 
   - GP 固有の名前: NativeWindowOcclusionEnabled
-  - GP 名: ネイティブ ウィンドウ オクルージョンを有効にする
+  - GP 名: ネイティブ ウィンドウ オクルージョンを有効にする (非推奨)
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/
   - GP パス (推奨): なし
   - GP ADMX ファイル名: MSEdge.admx
@@ -19139,6 +19142,77 @@ Adobe Flash の実行を許可する Web サイトを制御するには、[Defau
   - サンプル値:
 ``` xml
 <true/>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### SSLErrorOverrideAllowedForOrigins
+
+  #### ユーザーが特定の発信元の HTTPS 警告ページから続行できるようにする
+
+  
+  
+  #### サポートされているバージョン:
+
+  - Windows と macOS での 90 以降
+
+  #### 説明
+
+  Microsoft Edge では、SSL エラーが発生しているサイトにユーザーがアクセスすると、警告ページが表示されます。
+
+[SSLErrorOverrideAllowed](#sslerroroverrideallowed) ポリシーを有効にした場合、または構成していない場合、このポリシーは何も行いません。
+
+[SSLErrorOverrideAllowed](#sslerroroverrideallowed) ポリシーを無効にした場合、このポリシーを構成すると、ユーザーが引き続き SSL エラー ページをクリックできるサイトの生成元パターンの一覧を構成できます。 ユーザーは、この一覧に記載されていない生成元の SSL エラー ページをクリックできません。
+
+このポリシーを構成しない場合、[SSLErrorOverrideAllowed](#sslerroroverrideallowed) ポリシーはすべてのサイトに適用されます。
+
+有効なオリジン パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)を参照してください。 * は、このポリシーで承認された値ではありません。 このポリシーはオリジンに基づいてのみ一致するため、URL パターン内のパスまたはクエリは無視されます。
+
+  #### サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+
+  - 文字列のリスト
+
+  #### Windows の情報と設定
+
+  ##### グループ ポリシー (ADMX) 情報
+
+  - GP 一意の名前: SSLErrorOverrideAllowedForOrigins
+  - GP 名: 特定の生成元の HTTPS 警告ページからユーザーが進むのを許可する
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins
+  - パス (推奨): なし
+  - 値の名前: 1、2、3、...
+  - 値の種類: REG_SZ の一覧
+
+  ##### サンプル値:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]example.edu"
+
+```
+
+  #### Mac の情報と設定
+  
+  - 基本設定キー名: SSLErrorOverrideAllowedForOrigins
+  - サンプル値:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
 ```
   
 
@@ -22162,9 +22236,9 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 3 つのオプション メンバー:
 - default_launch_container (新しいタブで Web アプリが開くウィンドウ モードが既定に指定されます。)
 
-- create_desktop_shortcut (Linux および Windows デスクトップ ショートカットを作成する場合は True。)
+- create_desktop_shortcut (Linux および Microsoft Windows デスクトップ ショートカットを作成する場合は True)。
 
-- override_app_name (Microsoft Edge 89 以降、プログレッシブ Web アプリではない場合はアプリ名を上書きできます。または、プログレッシブ Web アプリの場合は一時的にインストールされますが、インストールを完了する前に認証が必要なアプリ名です。)
+- fallback_app_name (Microsoft Edge 90 から開始すると、アプリ名が段階的な Web アプリ (PWA) ではない場合は上書きできます。また、PWA の場合は一時的にインストールされるが、インストールを完了する前に認証が必要なアプリ名を上書きできます)。
 
   #### サポートされている機能:
 
@@ -22208,7 +22282,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   }, 
   {
     "default_launch_container": "window", 
-    "override_app_name": "Editor", 
+    "fallback_app_name": "Editor", 
     "url": "https://app.contoso.com/editor"
   }
 ]
@@ -22217,7 +22291,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ##### コンパクト サンプル値:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "override_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
+  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "fallback_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
   ```
   
 
@@ -22245,7 +22319,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   <dict>
     <key>default_launch_container</key>
     <string>window</string>
-    <key>override_app_name</key>
+    <key>fallback_app_name</key>
     <string>Editor</string>
     <key>url</key>
     <string>https://app.contoso.com/editor</string>
@@ -22884,6 +22958,63 @@ Windows を使用して、Microsoft Edge に組み込まれているプロキシ
   - パス (必須): SOFTWARE\Policies\Microsoft\Edge
   - パス (推奨): なし
   - 値の名前: WinHttpProxyResolverEnabled
+  - 値の種類: REG_DWORD
+
+  ##### サンプル値:
+
+```
+0x00000001
+```
+
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### WindowOcclusionEnabled
+
+  #### Window Occlusion を有効にする
+
+  
+  
+  #### サポートされているバージョン:
+
+  - 89 以降の Windows の場合
+
+  #### 説明
+
+  Microsoft Edge でウィンドウのオクルージョンを有効にします。
+
+この設定を有効にしている場合、CPU と電力の消費を削減するために、Microsoft Edge はウィンドウが他のウィンドウに覆われていることを検出したときにピクセルの描画作業を中断します。
+
+この設定を無効にしている場合、ウィンドウが他のウィンドウに覆われていることを Microsoft Edge は検出しません。
+
+このポリシーが設定されていない場合、ウィンドウが覆われていることについての検出は有効になります。
+
+  #### サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### ［データの種類］:
+
+  - ブール値
+
+  #### Windows の情報と設定
+
+  ##### グループ ポリシー (ADMX) 情報
+
+  - GP 一意の名前: WindowOcclusionEnabled
+  - GP 名: Window Occlusion を有効にする
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - 値の名前: WindowOcclusionEnabled
   - 値の種類: REG_DWORD
 
   ##### サンプル値:
