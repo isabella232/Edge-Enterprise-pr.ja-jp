@@ -1,4 +1,4 @@
-# last revised 02/05/2021
+# last revised 03/02/2021
 - name: Microsoft Edge エンタープライズのドキュメント
   href: index.yml
 - name: Microsoft Edge ドキュメント
@@ -25,17 +25,17 @@
       href: microsoft-edge-roadmap.md
     - name: Microsoft Edge の展開を計画する
       href: deploy-edge-plan-deployment.md
-    - name: 環境内の Microsoft Edge
+    - name: ユーザー環境内の Microsoft Edge
       href: deploy-edge-prepare-to-deploy.md
     - name: Microsoft Edge の準備完了
       href: deploy-edge-ready-for-edge.md
     - name: Stable チャネルのリリース ノート
       href: microsoft-edge-relnote-stable-channel.md
-    - name: Stable チャネルでアーカイブされたリリース ノート
+    - name: Stable Channel アーカイブリリース ノート
       href: microsoft-edge-relnote-archive-stable-channel.md
     - name: Beta チャネルのリリース ノート
       href: microsoft-edge-relnote-beta-channel.md
-    - name: ベータ チャネルでアーカイブされたリリース ノート
+    - name: ベータ チャネルのアーカイブリリース ノート
       href: microsoft-edge-relnote-archive-beta-channel.md
     - name: リリース スケジュール
       href: microsoft-edge-release-schedule.md
@@ -93,7 +93,7 @@
       href: microsoft-edge-security-identity.md
     - name: Microsoft Edge と Enterprise State Roaming
       href: microsoft-edge-enterprise-state-roaming.md
-    - name: キオスク モードの移行を計画する
+    - name: キオスク モードの移行の計画
       href: microsoft-edge-kiosk-mode-transition-plan.md
     - name: Microsoft Edge キオスク モードを構成する
       href: microsoft-edge-configure-kiosk-mode.md
@@ -113,6 +113,8 @@
           href: edge-ie-mode-sitelist.md
         - name: IE モード ポリシーの構成
           href: edge-ie-mode-policies.md
+        - name: 11 Internet Explorerを無効にする
+          href: edge-ie-disable-ie11.md
         - name: Enterprise Site Discovery ステップ バイ ステップ ガイド
           href: edge-ie-mode-site-discovery.md
         - name: IE モードに関する FAQ
@@ -137,7 +139,7 @@
       href: microsoft-edge-security-password-monitor.md
     - name: 望ましくない可能性のあるアプリケーションから保護する
       href: microsoft-edge-potentially-unwanted-apps.md
-    - name: Azure AD条件付きアクセスのサポート
+    - name: Azure の条件付きアクセスADサポート
       href: ms-edge-security-conditional-access.md
     - name: Application Guard のサポート
       href: microsoft-edge-security-windows-defender-application-guard.md
@@ -157,7 +159,7 @@
       href: microsoft-edge-policies.md
     - name: 更新ポリシー リファレンス
       href: microsoft-edge-update-policies.md
-    - name: WebView2 ポリシー リファレンス
+    - name: WebView2 ポリシーリファレンス
       href: microsoft-edge-webview-policies.md
     - name: 詳細情報
       items:
@@ -179,7 +181,7 @@
           href: microsoft-edge-update-progressive-rollout.md
         - name: Microsoft Edge のお気に入りをプロビジョニングする
           href: edge-learnmore-provision-favorites.md
-        - name: Internet Explorerから Microsoft Edge へのリダイレクト
+        - name: Microsoft Edge へのInternet Explorerリダイレクト
           href: edge-learnmore-neededge.md
         - name: Regular Expression 2 (re2.h) の構文
           href: edge-learnmore-regex.md
@@ -187,9 +189,9 @@
           href: edge-learnmore-reset-data-in-cloud.md
         - name: ユーザー データ ディレクトリ変数
           href: edge-learnmore-create-user-directory-vars.md
-        - name: 企業向け Microsoft Edge ロールバックの使用
+        - name: エンタープライズ向け Microsoft Edge ロールバックの使用
           href: edge-learnmore-rollback.md
-- name: Microsoft Edge のビデオ
+- name: Microsoft Edge ビデオ
   items:
     - name: Microsoft Edge ビデオ コレクション
       href: microsoft-edge-videos.md
@@ -203,11 +205,11 @@
       href: microsoft-edge-video-security-dlp.md
     - name: ビデオ - Microsoft Edge の ID
       href: microsoft-edge-video-identity.md
-    - name: ビデオ - Microsoft Edge のバージョンのロールバック
+    - name: ビデオ - Microsoft Edge バージョンのロールバック
       href: microsoft-edge-video-version-rollback.md
     - name: ビデオ - Microsoft Edge の PDF リーダー
       href: microsoft-edge-video-pdf-reader.md
-    - name: ビデオ - Microsoft Edge での安全な閲覧
+    - name: ビデオ - Microsoft Edge での安全な参照
       href: microsoft-edge-video-security-smartscreen.md
     - name: ビデオ - セキュリティ、互換性、管理性
       href: microsoft-edge-video-security-compatibility-manageability.md

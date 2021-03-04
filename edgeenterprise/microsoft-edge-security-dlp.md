@@ -3,21 +3,21 @@ title: Microsoft Edge でのデータ損失防止
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 02/05/2021
+ms.date: 03/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge (DLP) でのデータ損失防止
-ms.openlocfilehash: 8c7906f69f8d1161b47aa381bc04bcdaa70fe6cd
-ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
+ms.openlocfilehash: f25e1fa7a610645f6ca0ca10cbcfc69ae8689b7a
+ms.sourcegitcommit: f14286edec59ee9183bdf38c15fc890881efd64f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "11314560"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "11384985"
 ---
-# Microsoft Edge (DLP) でのデータ損失防止
+# <a name="data-loss-prevention-dlp-in-microsoft-edge"></a>Microsoft Edge (DLP) でのデータ損失防止
 
 データ損失防止 (DLP) は、企業の機密データを特定し、許可されていない公開から保護する技術のシステムです。 業務標準や業界の規制を遵守するために、組織は機密情報を保護し、その許可されていない公開を防止する必要があります。 機密情報には、財務データやクレジット カード番号、社会保障番号、医療記録などの個人を特定できる情報 (PII) が含まれます。
 
@@ -27,7 +27,7 @@ ms.locfileid: "11314560"
 
 Microsoft Edge は、Microsoft エンドポイント DLP と Windows 情報保護 (WIP) という 2 つの異なる DLP ソリューションをネイティブにサポートしています。
 
-## Microsoft エンドポイント データ損失防止 (エンドポイント DLP)
+## <a name="microsoft-endpoint-data-loss-prevention-endpoint-dlp"></a>Microsoft エンドポイント データ損失防止 (エンドポイント DLP)
 
 Microsoft エンドポイント DLP は、データ中心の保護などの先進の概念を使用して、次世代のデータ損失防止機能を備えています。 これは Windows 10 と Microsoft Edge に組み込まれているため、デバイスに追加のエージェントやプラグインは必要ありません。
 
@@ -51,15 +51,15 @@ Windows 10 を実行しているデバイスで監査および管理できるユ
 
 監査や管理が可能なユーザー アクティビティの詳細については、「[Endpoint activities you can monitor and take action on (監視したり、アクションを実行したりできるエンドポイント アクティビティ)](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide#endpoint-activities-you-can-monitor-and-take-action-on&preserve-view=true)」を参照してください。
 
-## Windows 情報保護
+## <a name="windows-information-protection"></a>Windows 情報保護
 
 Microsoft Edge が Windows 情報保護 (WIP) をどのようにサポートしているかについては、「[Windows Information Protection のサポート](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection)」をご覧ください。 システム要件、メリット、サポートされている機能については、次のセクションを参照してください。
 
-- [システム要件](https://docs.microsoft.com/deployedge/:microsoft-edge-security-windows-information-protection#system-requirements)
+- [システム要件](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection#system-requirements)
 - [Windows 情報保護のメリット](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection#windows-information-protection-benefits)
 - [Microsoft Edge でサポートされている WIP の機能](https://docs.microsoft.com/DeployEdge/microsoft-edge-security-windows-information-protection#wip-features-supported-in-microsoft-edge)
 
-## 関連項目
+## <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
 - [ビデオ: Microsoft Edge でのデータ損失防止](https://www.youtube.com/watch?v=dLD04U9eTqg)
