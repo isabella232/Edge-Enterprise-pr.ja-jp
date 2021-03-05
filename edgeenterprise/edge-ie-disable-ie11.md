@@ -3,19 +3,19 @@ title: Internet Explorer 11 を無効にする
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 03/02/2021
+ms.date: 03/04/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge で Internet Explorer 11 を無効にし、Internet Explorer モードを使用する方法をご紹介します。
-ms.openlocfilehash: 08d1fe48bfc4614710f4a341a285048194a64794
-ms.sourcegitcommit: 928714329d0b11575494f557498f69a8417a3289
+ms.openlocfilehash: be52f33b091977aff0ca29a4e10d4fc6ea4be957
+ms.sourcegitcommit: f63a30c3e64e9e57fd76b6675ddff1fc2bbbeac8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "11385339"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "11393611"
 ---
 # <a name="disable-internet-explorer-11"></a>Internet Explorer 11 を無効にする
 
@@ -67,7 +67,7 @@ IE モードを構成した後、グループ ポリシーを使用して組織�
 
 グループ ポリシーを使用して Internet Explorer 11 を無効にするには、次の手順に従います。
 
-1. 最新の  [Microsoft Edge ポリシー テンプレート](https://www.microsoft.com/en-us/business/download)をダウンロードしてインストールします。
+1. 最新の  [Microsoft Edge ポリシー テンプレート](https://www.microsoft.com/edge/business/download)をダウンロードしてインストールします。
 2. グループ ポリシー エディターを開きます。
 3. ***[コンピューターの構成]、[管理用テンプレート]、[Windows コンポーネント/Internet Explorer] ***の順に移動します。 
 4.  **[スタンドアロン ブラウザーとして Internet Explorer 11 を無効にする] **をダブルクリックします。
