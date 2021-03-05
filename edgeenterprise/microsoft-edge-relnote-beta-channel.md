@@ -3,35 +3,47 @@ title: Beta チャネルに関する Microsoft Edge のリリース ノート
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 02/12/2021
+ms.date: 03/03/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Beta チャネルに関する Microsoft Edge のリリース ノート
-ms.openlocfilehash: 0baad5271af16e84b224a92f14ec02c83194c102
-ms.sourcegitcommit: 90b8eab62edbed0e0a84780abd7d3854bf95c130
+ms.openlocfilehash: e2a2933e7edf3456bcb33e70d6db7a36ab72aa07
+ms.sourcegitcommit: 6603dc23d8e7ff46df76bc6aa48b93a0b435fe7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "11328069"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "11385624"
 ---
-# Microsoft Edge Beta チャネルのリリースノート
+# <a name="release-notes-for-microsoft-edge-beta-channel"></a>Microsoft Edge Beta チャネルのリリースノート
 
 これらのリリース ノートでは、Microsoft Edge Beta チャネルに含まれている新機能とセキュリティ以外の更新プログラムに関する情報を提供します。 これらのリリース ノートのアーカイブ バージョンは、[こちら](microsoft-edge-relnote-archive-beta-channel.md)から入手できます。
 
-## バージョン 89.0.774.27: 2 月 12 日
+## <a name="version-89077445-march-3"></a>バージョン 89.0.774.45: 3 月 3 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 89.0.774.23: 2 月 8 日
+## <a name="version-89077439-february-26"></a>バージョン 89.0.774.39: 2 月 26 日
+
+さまざまなバグとパフォーマンスの問題を修正しました。
+
+## <a name="version-89077434-february-22"></a>バージョン 89.0.774.34: 2 月 22 日
+
+さまざまなバグとパフォーマンスの問題を修正しました。
+
+## <a name="version-89077427-february-12"></a>バージョン 89.0.774.27: 2 月 12 日
+
+さまざまなバグとパフォーマンスの問題を修正しました。
+
+## <a name="version-89077423-february-8"></a>バージョン 89.0.774.23: 2 月 8 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 <!-- begin major 89 -->
-## バージョン 89.0.774.18: 2 月 3 日
+## <a name="version-89077418-february-3"></a>バージョン 89.0.774.18: 2 月 3 日
 
-### 機能更新プログラム
+### <a name="feature-updates"></a>機能更新プログラム
 
 - **キオスク モードでは、追加のロックダウン機能が有効になります**。 Microsoft Edge バージョン 89 から、キオスク モード内にロックダウン機能が追加され、お客様は生産性が高く、より安全なエクスペリエンスでジョブを実行できます。 [詳細はこちらをご覧ください](microsoft-edge-configure-kiosk-mode.md#kiosk-mode-supported-features)。
 
@@ -59,9 +71,9 @@ ms.locfileid: "11328069"
 
 - **自動再生ビデオのブロックをサポートします**。 Microsoft Edge バージョン 89 以降で、ユーザーはメディアの自動再生をブロックするオプションを利用できます。
 
-### ポリシーの更新
+### <a name="policy-updates"></a>ポリシーの更新
 
-#### 新しいポリシー
+#### <a name="new-policies"></a>新しいポリシー
 
 - [BrowsingDataLifetime](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#browsingdatalifetime) - データの有効期間設定の参照
 - [MAMEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#mamenabled) - モバイル アプリ管理の有効化
@@ -71,37 +83,37 @@ ms.locfileid: "11328069"
 - [PrintingBackgroundGraphicsDefault](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#printingbackgroundgraphicsdefault)- 既定のバックグラウンド グラフィックス印刷モード
 - [SmartActionsBlockList](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#smartactionsblocklist)- サービスの一覧に対するスマート アクションをブロックする
 
-#### 非推奨ポリシー
+#### <a name="obsoleted-policies"></a>非推奨ポリシー
 
 - [ForceLegacyDefaultReferrerPolicy](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#forcelegacydefaultreferrerpolicy) - no-referrer-when-downgrade の既定の参照元ポリシーを使用します
 - [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) - 使用状況とクラッシュ関連のデータ レポートを有効にします
 - [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices)|Microsoft サービスの品質向上のためにサイト情報を送信します
 <!-- end major 89 -->
 
-## バージョン 88.0.705.56: 1 月 29 日
+## <a name="version-88070556-january-29"></a>バージョン 88.0.705.56: 1 月 29 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 88.0.705.49: 1 月 20 日
+## <a name="version-88070549-january-20"></a>バージョン 88.0.705.49: 1 月 20 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 88.0.705.45: 1 月 15 日
+## <a name="version-88070545-january-15"></a>バージョン 88.0.705.45: 1 月 15 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 88.0.705.41: 1 月 11 日
+## <a name="version-88070541-january-11"></a>バージョン 88.0.705.41: 1 月 11 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 88.0.705.29: 12 月 21 日
+## <a name="version-88070529-december-21"></a>バージョン 88.0.705.29: 12 月 21 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
 <!-- begin major 88 -->
-## バージョン 88.0.705.18: 12 月 9 日
+## <a name="version-88070518-december-9"></a>バージョン 88.0.705.18: 12 月 9 日
 
-### 機能の更新プログラム
+### <a name="feature-updates"></a>機能の更新プログラム
 
 - **非推奨:**
 
@@ -146,9 +158,9 @@ ms.locfileid: "11328069"
   - ブラウザー アイコンは Fluent デザイン システムに更新されます。 ブラウザーで Fluent Design を引き続き使用する作業の一環として、アイコンを新しい Microsoft アイコン システムに合わせて調整する変更を行いました。 これらの変更は、タブ、アドレス バー、さまざまなメニューにあるナビゲーション アイコンや移動方法のアイコンなど、タッチの多いユーザー インターフェイスの多くに影響します。
   - フォントのレンダリングが改善されました。 テキストのレンダリングが改善され、わかりやすくなり、ぼやけも少なくなりました。
 
-### ポリシーの更新
+### <a name="policy-updates"></a>ポリシーの更新
 
-#### 新しいポリシー
+#### <a name="new-policies"></a>新しいポリシー
 
 16 個の新しいポリシーが追加されました。 更新された管理用テンプレートを、[Microsoft Edge Enterprise のランディング ページ](https://www.microsoft.com/edge/business/download)からダウンロードしてください。 次の新しいポリシーが追加されました。
 
@@ -167,7 +179,7 @@ ms.locfileid: "11328069"
 - [VerticalTabsAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#verticaltabsallowed) - ブラウザーの横にあるタブの垂直方向のレイアウトの可用性を構成します。
 - [WebRtcAllowLegacyTLSProtocols](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webrtcallowlegacytlsprotocols) - WebRTC で従来の TLS/DTLS ダウングレードを許可します。
 
-#### 廃止されたポリシー
+#### <a name="deprecated-policies"></a>廃止されたポリシー
 
 次のポリシーは廃止されました。
 
@@ -178,7 +190,7 @@ ms.locfileid: "11328069"
 - [ProxyServer](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxyserver) - プロキシ サーバーのアドレスまたは URL を構成します。
 - [WebDriverOverridesIncompatiblePolicies](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webdriveroverridesincompatiblepolicies) - WebDriver が互換性のないポリシーを上書きすることを許可します。
 
-#### 不使用のポリシー
+#### <a name="obsoleted-policies"></a>不使用のポリシー
 
 次のポリシーは廃止されました。
 
@@ -189,40 +201,40 @@ ms.locfileid: "11328069"
 
 <!-- end major 88 -->
 
-## バージョン 87.0.664.55: 12 月 3 日
+## <a name="version-87066455-december-3"></a>バージョン 87.0.664.55: 12 月 3 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。 このリリースでは、次の新機能がサポートされています。
 
 - **ユーザーのパスワードのオンラインでの漏洩が見つかると、警告が生成されます**。 ユーザーのパスワードは、侵害された資格情報のリポジトリと照合され、一致するものが見つかるとユーザーに警告を通知します。 セキュリティとプライバシーを確保するために、ユーザーのパスワードは漏洩した資格情報のデータベースと照合するときにハッシュ化され、暗号化されます。
 
-## バージョン 87.0.664.52: 11 月 30 日
+## <a name="version-87066452-november-30"></a>バージョン 87.0.664.52: 11 月 30 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 87.0.664.40: 11 月 18 日
+## <a name="version-87066440-november-18"></a>バージョン 87.0.664.40: 11 月 18 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 87.0.664.36: 11 月 16 日
+## <a name="version-87066436-november-16"></a>バージョン 87.0.664.36: 11 月 16 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 87.0.664.30: 11 月 9 日
+## <a name="version-87066430-november-9"></a>バージョン 87.0.664.30: 11 月 9 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 87.0.664.24: 11 月 2 日
+## <a name="version-87066424-november-2"></a>バージョン 87.0.664.24: 11 月 2 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 87.0.664.18: 10 月 26 日
+## <a name="version-87066418-october-26"></a>バージョン 87.0.664.18: 10 月 26 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
 <!-- begin major 87 -->
-## バージョン 87.0.664.12: 10 月 20 日
+## <a name="version-87066412-october-20"></a>バージョン 87.0.664.12: 10 月 20 日
 
-### 機能更新プログラム
+### <a name="feature-updates"></a>機能更新プログラム
 
 - **キオスクモードプライバシー機能を有効にします**。 Microsoft Edge バージョン87から、ユーザーデータのプライバシーに関して企業のサポートができるキオスクモードの機能を有効にすることができます。 これらの機能により、終了時にユーザーデータをクリアしたり、ダウンロードしたファイルを削除したり、一定のアイドル時間が経過した後に、構成されていたスタート操作をリセットしたりできます。 [Microsoft Edge キオスクモードを 構成する方法](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode)の詳細については、こちらを参照してください
 - **ClickOnce の展開が既定で有効**。 Microsoft Edge 87 では、ClickOnce が既定で有効になっています。これにより、企業がソフトウェアを展開する際の障壁を減らし、Microsoft Edge のレガシブラウザーの動作に合わせることができます。 Microsoft Edge 87 以降、ClickOnceEnabled policyが"未構成"の 状態の場合は、新しい既定の「有効化が ClickOnceの状態」（以前の規定が無効だった状態と異なり）に反映されます。
@@ -239,9 +251,9 @@ ms.locfileid: "11328069"
   - 両面印刷時にどのように紙を綴じるか選択します。 ユーザーが両面印刷するときに、用紙の長辺綴じか短辺綴じにするかを選択できます。
   - エンタープライズの印刷ラスター化モードを選択します。 Windows のポストスクリプトプリンター以外に Microsoft Edge をプリントする方法を制御します。 PostScript に対応していないプリンターの印刷ジョブが正しく印刷されるようにラスター化する必要がある場合があります。 印刷オプションには "Full (フル)" と "Fast (高速)"が表示されます。
 
-### ポリシーの更新
+### <a name="policy-updates"></a>ポリシーの更新
 
-#### 新しいポリシー
+#### <a name="new-policies"></a>新しいポリシー
 
 10個の新しいポリシーが追加されました。 更新された管理用テンプレートを、[Microsoft Edge Enterprise のランディング ページ](https://www.microsoft.com/edge/business/download)からダウンロードしてください。 次の新しいポリシーが追加されました。
 
@@ -256,39 +268,39 @@ ms.locfileid: "11328069"
 - [SpeechRecognitionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#speechrecognitionenabled) -音声認識を構成します。
 - [WebCaptureEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webcaptureenabled) -Microsoft Edge で web キャプチャ機能を有効にします。
 
-#### 廃止されたポリシー
+#### <a name="deprecated-policy"></a>廃止されたポリシー
 
 [NewTabPageSetFeedType](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagesetfeedtype) - Microsoft Edge の新規タブ ページのエクスペリエンスを設定する
 
-#### 非推奨ポリシー
+#### <a name="obsoleted-policy"></a>非推奨ポリシー
 
 [EnableDeprecatedWebPlatformFeatures](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enabledeprecatedwebplatformfeatures) -廃止されたWebプラットフォームの機能を一定期間、再度有効にします。
 
 <!-- end major 87 -->
 
-## バージョン 86.0.622.43: 10 月 16 日
+## <a name="version-86062243-october-16"></a>バージョン 86.0.622.43: 10 月 16 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 86.0.622.36: 10 月 7 日
+## <a name="version-86062236-october-7"></a>バージョン 86.0.622.36: 10 月 7 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 86.0.622.31: 10 月 1 日
+## <a name="version-86062231-october-1"></a>バージョン 86.0.622.31: 10 月 1 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 86.0.622.28: 9 月 28 日
+## <a name="version-86062228-september-28"></a>バージョン 86.0.622.28: 9 月 28 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン86.0.622.15: 9 月14 日
+## <a name="version-86062215-september-14"></a>バージョン86.0.622.15: 9 月14 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
 <!--- Archived to version 86.0.622.11: September 9 ---->
 <!--- Archived to version 85.0.564.18: July 28 ---->
 
-## 関連項目
+## <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)

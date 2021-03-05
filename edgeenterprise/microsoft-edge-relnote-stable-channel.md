@@ -3,21 +3,21 @@ title: Stable チャネルに関する Microsoft Edge リリース ノート
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 02/17/2021
+ms.date: 03/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Stable チャネルに関する Microsoft Edge リリース ノート
-ms.openlocfilehash: ff4364d48518b73c04d010a8a2c7e18abd10ba2e
-ms.sourcegitcommit: 8589a07ebd936070edb2eafa43b83cc6ef283a6e
+ms.openlocfilehash: 3eab05fcb88bcde38de8eb02b50796fcdda12866
+ms.sourcegitcommit: f14286edec59ee9183bdf38c15fc890881efd64f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "11343840"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "11385005"
 ---
-# Microsoft Edge Stable チャネルのリリース ノート
+# <a name="release-notes-for-microsoft-edge-stable-channel"></a>Microsoft Edge Stable チャネルのリリース ノート
 
 これらのリリース ノートでは、Microsoft Edge Stable チャネルに含まれている新機能とセキュリティ以外の更新プログラムに関する情報を提供します。
 
@@ -29,38 +29,43 @@ ms.locfileid: "11343840"
 > [!NOTE]
 > 安定チャネルの場合、更新は 1 日以上かけて段階的に公開されます。 詳細については、「[Microsoft Edge 更新プログラムの段階的なロールアウト](microsoft-edge-update-progressive-rollout.md)」を参照してください。
 
-## バージョン 88.0.705.74: 2 月 17 日
 
-セキュリティの更新プログラムは、[こちら](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-17-2021)に記載されています。
-
-## バージョン 88.0.705.68: 2 月 11 日
+## <a name="version-88070581-february-25"></a>バージョン 88.0.705.81: 2 月 25 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 88.0.705.63: 2 月 5 日
+## <a name="version-88070574-february-17"></a>バージョン 88.0.705.74: 2 月 17 日
+
+セキュリティの更新プログラムは、[こちら](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-17-2021)に記載されています。
+
+## <a name="version-88070568-february-11"></a>バージョン 88.0.705.68: 2 月 11 日
+
+さまざまなバグとパフォーマンスの問題を修正しました。
+
+## <a name="version-88070563-february-5"></a>バージョン 88.0.705.63: 2 月 5 日
 
 セキュリティの更新プログラムは、[こちら](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-5-2021)に記載されています。 この更新プログラムには、[CVE-2021-21148](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21148) が含まれています。これについては、Chromium チームにより実際に感染報告がある悪用が報告されています。
 
-## バージョン 88.0.705.62: 2 月 4 日
+## <a name="version-88070562-february-4"></a>バージョン 88.0.705.62: 2 月 4 日
 
 セキュリティの更新プログラムは、[こちら](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-4-2021)に記載されています。
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 88.0.705.56: 1 月 28 日
+## <a name="version-88070556-january-28"></a>バージョン 88.0.705.56: 1 月 28 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 88.0.705.53: 1 月 26 日
+## <a name="version-88070553-january-26"></a>バージョン 88.0.705.53: 1 月 26 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 88.0.705.50: 1 月 21 日
+## <a name="version-88070550-january-21"></a>バージョン 88.0.705.50: 1 月 21 日
 
 セキュリティの更新プログラムは、[こちら](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#january-21-2021)に記載されています。
 
 <!--- begin major 88  --->
-### 機能の更新プログラム
+### <a name="feature-updates"></a>機能の更新プログラム
 
 - **非推奨:**
 
@@ -112,9 +117,9 @@ ms.locfileid: "11343840"
   - ブラウザー アイコンは Fluent デザイン システムに更新されます。 ブラウザーで Fluent Design を引き続き使用する作業の一環として、アイコンを新しい Microsoft アイコン システムに合わせて調整する変更を行いました。 これらの変更は、タブ、アドレス バー、さまざまなメニューにあるナビゲーション アイコンや移動方法のアイコンなど、タッチの多いユーザー インターフェイスの多くに影響します。
   - フォントのレンダリングが改善されました。 テキストのレンダリングが改善され、わかりやすくなり、ぼやけも少なくなりました。
 
-### ポリシーの更新
+### <a name="policy-updates"></a>ポリシーの更新
 
-#### 新しいポリシー
+#### <a name="new-policies"></a>新しいポリシー
 
 18 個の新しいポリシーが追加されました。 更新された管理用テンプレートを、[Microsoft Edge Enterprise のランディング ページ](https://www.microsoft.com/edge/business/download)からダウンロードしてください。 次の新しいポリシーが追加されました。
 
@@ -137,7 +142,7 @@ ms.locfileid: "11343840"
 - [WebWidgetAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webwidgetallowed) - Web ウィジェットを有効にします。
 - [WebWidgetIsEnabledOnStartup](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webwidgetisenabledonstartup) - Windows 起動時に Web ウィジェットを許可します。
 
-#### 廃止されたポリシー
+#### <a name="deprecated-policies"></a>廃止されたポリシー
 
 - [ProactiveAuthEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proactiveauthenabled) - プロアクティブ認証を有効にします。
 - [ProxyBypassList](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxybypasslist) - プロキシ バイパス ルールを構成します。
@@ -146,7 +151,7 @@ ms.locfileid: "11343840"
 - [ProxyServer](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxyserver) - プロキシ サーバーのアドレスまたは URL を構成します。
 - [WebDriverOverridesIncompatiblePolicies](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webdriveroverridesincompatiblepolicies) - WebDriver が互換性のないポリシーを上書きすることを許可します。
 
-### 非推奨ポリシー
+### <a name="obsoleted-policies"></a>非推奨ポリシー
 
 - [AllowPopupsDuringPageUnload](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#allowpopupsduringpageunload) - ページのアンロード中にポップアップを表示できます。
 - [DefaultPluginsSetting](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#defaultpluginssetting) - 既定の Adobe Flash 設定です。
@@ -154,42 +159,42 @@ ms.locfileid: "11343840"
 - [PluginsBlockedForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#pluginsblockedforurls) - 特定のサイトで Adobe Flash プラグインをブロックします。
 - [RunAllFlashInAllowMode](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#runallflashinallowmode) - Adobe Flash コンテンツ設定をすべてのコンテンツに拡張します。
 <!--- end major 88  --->
-## バージョン 87.0.664.75: 1 月 7 日
+## <a name="version-87066475-january-7"></a>バージョン 87.0.664.75: 1 月 7 日
 
 セキュリティの更新プログラムは、[こちら](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#january-7-2021)に記載されています。
 
-## バージョン 87.0.664.66: 12 月 17 日
+## <a name="version-87066466-december-17"></a>バージョン 87.0.664.66: 12 月 17 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 87.0.664.60: 12 月 10 日
+## <a name="version-87066460-december-10"></a>バージョン 87.0.664.60: 12 月 10 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 87.0.664.57: 12 月 7 日
+## <a name="version-87066457-december-7"></a>バージョン 87.0.664.57: 12 月 7 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。 セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#december-7-2020)に記載されています。
 
-## バージョン 87.0.664.55: 12 月 3 日
+## <a name="version-87066455-december-3"></a>バージョン 87.0.664.55: 12 月 3 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。 このリリースでは、次の機能が更新されました。
 
 - **ショッピングは既定で有効になっています**。 Microsoft Edge バージョン 87 から、エンタープライズ ユーザーは Microsoft Edge でのショッピングを利用できます。 ショッピング機能を備えた Microsoft Edge は、オンラインでショッピングしながらクーポンやお得な価格を見つけるのに役立ちます。 (クーポンの機能は、Stable バージョン 87.0.664.41 とともにリリースされました。) この更新プログラムで、価格比較エクスペリエンスを利用できるようになりました。 この機能は、[EdgeShoppingAssistantEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgeshoppingassistantenabled) ポリシーを使って構成できます。 Microsoft ショッピングについては、[ブログ](https://blogs.windows.com/windowsexperience/2020/11/19/finish-up-that-holiday-shopping-with-new-features-from-microsoft-edge-and-bing/)および[詳細情報](https://docs.microsoft.com/microsoft-edge/privacy-whitepaper#shopping)をご覧ください。
 
-## バージョン 87.0.664.52: 11 月 30 日
+## <a name="version-87066452-november-30"></a>バージョン 87.0.664.52: 11 月 30 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 87.0.664.47: 11 月 23 日
+## <a name="version-87066447-november-23"></a>バージョン 87.0.664.47: 11 月 23 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
 <!-- begin major 87 --->
-## バージョン 87.0.664.41: 11 月 19 日
+## <a name="version-87066441-november-19"></a>バージョン 87.0.664.41: 11 月 19 日
 
 セキュリティ更新プログラムは、[こちら](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-19-2020)に記載されています。
 
-### 機能の更新プログラム
+### <a name="feature-updates"></a>機能の更新プログラム
 
 - **互換性のないサイトを Internet Explorer から Microsoft Edgeにリダイレクトします**。 Microsoft Edge 87 Stable の更新以降、Internet Explorer で互換性のないメッセージを表示する公開 Web サイトは自動的に Microsoft Edge にリダイレクトされます。 詳細とこのエクスペリエンスの構成については、「[互換性のないサイトのリダイレクト](https://docs.microsoft.com/deployedge/edge-learnmore-neededge)」を参照してください。
 
@@ -212,9 +217,9 @@ ms.locfileid: "11343840"
   - 両面印刷時にどのように紙を綴じるか選択します。 ユーザーが両面印刷するときに、用紙の長辺綴じか短辺綴じにするかを選択できます。
   - エンタープライズの印刷ラスター化モードを選択します。 Windows のポストスクリプトプリンター以外に Microsoft Edge をプリントする方法を制御します。 PostScript に対応していないプリンターの印刷ジョブが正しく印刷されるようにラスター化する必要がある場合があります。 印刷オプションには "Full (フル)" と "Fast (高速)"が表示されます。
 
-### ポリシーの更新
+### <a name="policy-updates"></a>ポリシーの更新
 
-#### 新しいポリシー
+#### <a name="new-policies"></a>新しいポリシー
 
 10個の新しいポリシーが追加されました。 更新された管理用テンプレートを、[Microsoft Edge Enterprise のランディング ページ](https://www.microsoft.com/edge/business/download)からダウンロードしてください。 次の新しいポリシーが追加されました。
 
@@ -229,58 +234,58 @@ ms.locfileid: "11343840"
 - [SpeechRecognitionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#speechrecognitionenabled) -音声認識を構成します。
 - [WebCaptureEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webcaptureenabled) -Microsoft Edge で Web キャプチャ機能を有効にします。
 
-#### 廃止されたポリシー
+#### <a name="deprecated-policy"></a>廃止されたポリシー
 
 [NewTabPageSetFeedType](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagesetfeedtype) - Microsoft Edge の新規タブ ページのエクスペリエンスを設定する
 
-#### 非推奨ポリシー
+#### <a name="obsoleted-policy"></a>非推奨ポリシー
 
 [EnableDeprecatedWebPlatformFeatures](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enabledeprecatedwebplatformfeatures) -廃止された Web プラットフォームの機能を一定期間、再度有効にします。
 
 <!-- end major 87 -->
 
-## バージョン 86.0.622.69: 11 月 13 日
+## <a name="version-86062269-november-13"></a>バージョン 86.0.622.69: 11 月 13 日
 
 セキュリティ更新プログラムは、[こちら](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-13-2020)に記載されています。 この更新プログラムには、[CVE-2020-16013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16013) と [CVE-2020-16017](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16017) が含まれています。これらについては、Chromium チームにより実際に感染報告がある悪用が報告されています。
 
-## バージョン 86.0.622.68: 11 月 11 日
+## <a name="version-86062268-november-11"></a>バージョン 86.0.622.68: 11 月 11 日
 
 セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-11-2020)に記載されています
 
-## バージョン 86.0.622.63: 11 月 4 日
+## <a name="version-86062263-november-4"></a>バージョン 86.0.622.63: 11 月 4 日
 
 セキュリティ更新プログラムは、[こちら](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-4-2020)に記載されています。 この更新プログラムには、[CVE-2020-16009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16009) が含まれています。これについては、Chromium チームにより実際に感染報告がある悪用が報告されています。
 
-## バージョン 86.0.622.61: 11 月 2 日
+## <a name="version-86062261-november-2"></a>バージョン 86.0.622.61: 11 月 2 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 86.0.622.58: 10 月 29 日
+## <a name="version-86062258-october-29"></a>バージョン 86.0.622.58: 10 月 29 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 86.0.622.56: 10 月 27 日
+## <a name="version-86062256-october-27"></a>バージョン 86.0.622.56: 10 月 27 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 86.0.622.51: 10 月 22 日
+## <a name="version-86062251-october-22"></a>バージョン 86.0.622.51: 10 月 22 日
 
 セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#october-22-2020)に記載されています
 
-## バージョン 86.0.622.48: 10 月 20 日
+## <a name="version-86062248-october-20"></a>バージョン 86.0.622.48: 10 月 20 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 86.0.622.43 : 10 月 15 日
+## <a name="version-86062243-october-15"></a>バージョン 86.0.622.43 : 10 月 15 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
 <!-- begin major 86 -->
-## バージョン 86.0.622.38 : 10 月 9 日
+## <a name="version-86062238-october-9"></a>バージョン 86.0.622.38 : 10 月 9 日
 
 セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#october-9-2020)に記載されています
 
-### 機能更新プログラム
+### <a name="feature-updates"></a>機能更新プログラム
 
 * **Microsoft Edge の以前のバージョンにロールバック。** ロールバック機能では、Microsoft Edge の最新バージョンに問題がある場合、管理者は Microsoft Edge を既知の正常なバージョンに戻すことができます。 **注:** Stable バージョン 86.0.622.38 は、ロールバック先となることができる最初のバージョンです。これは、安定バージョン87が、ロールバック元となる準備ができた最初のバージョンという意味でもあります。 [詳しくはこちらをご覧ください](edge-learnmore-rollback.md)。
 
@@ -315,9 +320,9 @@ ms.locfileid: "11343840"
 
 * **ダウンロード マネージャーを使用して、ダウンロードをディスクから削除できます。** ユーザーは、ブラウザーを離れることなくダウンロードしたファイルをディスクから削除できるようになりました。 ダウンロード削除のこの新しい機能は、ダウンロード シェルフのコンテキスト メニューまたはダウンロード ページに存在します。
 
-### ポリシーの更新
+### <a name="policy-updates"></a>ポリシーの更新
 
-#### 新しいポリシー
+#### <a name="new-policies"></a>新しいポリシー
 
 23個の新しいポリシーが追加されました。 更新された管理用テンプレートを、[Microsoft Edge Enterprise のランディング ページ](https://aka.ms/EdgeEnterprise)からダウンロードしてください。 次の新しいポリシーが追加されました。
 
@@ -345,38 +350,38 @@ ms.locfileid: "11343840"
 - [UserAgentClientHintsEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#useragentclienthintsenabled) - ユーザー エージェント クライアント ヒント機能を有効にします。
 - [UserDataSnapshotRetentionLimit](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#userdatasnapshotretentionlimit) - 緊急ロールバックの場合に使用されるユーザー データのスナップショット数を制限します。
 
-#### 廃止されたポリシー
+#### <a name="deprecated-policies"></a>廃止されたポリシー
 
 - [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) - 使用状況とクラッシュ関連のデータレポートを有効にします。
 - [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) - Microsoft サービスを改善するためにサイト情報を送信します。
 
-#### 非推奨ポリシー
+#### <a name="obsoleted-policy"></a>非推奨ポリシー
 
 [TLS13HardeningForLocalAnchorsEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#tls13hardeningforlocalanchorsenabled) - ローカル トラスト アンカーの TLS 1.3 セキュリティ機能を有効にします。
 
-## バージョン 85.0.564.70 : 10 月 6 日
+## <a name="version-85056470-october-6"></a>バージョン 85.0.564.70 : 10 月 6 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 85.0.564.68: 10 月 1 日
+## <a name="version-85056468-october-1"></a>バージョン 85.0.564.68: 10 月 1 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 85.0.564.63: 9 月 23 日
+## <a name="version-85056463-september-23"></a>バージョン 85.0.564.63: 9 月 23 日
 
 セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#september-23-2020)に記載されています
 
-## バージョン 85.0.564.51: 9 月 9 日
+## <a name="version-85056451-september-9"></a>バージョン 85.0.564.51: 9 月 9 日
 
 セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#september-9-2020)に記載されています
 
-## バージョン 85.0.564.44: 8 月 31 日
+## <a name="version-85056444-august-31"></a>バージョン 85.0.564.44: 8 月 31 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
 <!-- 85.0.564.41: August 27 -->
 <!-- Archived to version 84.0.522.40: July 16 -->
 
-## 関連項目
+## <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)

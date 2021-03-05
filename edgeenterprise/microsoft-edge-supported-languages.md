@@ -3,28 +3,28 @@ title: Microsoft Edge の言語サポート
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 10/22/2019
+ms.date: 03/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge の言語サポート
-ms.openlocfilehash: 60fff62335f5683f338c4a4b1b17ea54d40e19c6
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: ec2c61bc5a94f47769685a2764fa9cc2e58a9898
+ms.sourcegitcommit: f14286edec59ee9183bdf38c15fc890881efd64f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980486"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "11384994"
 ---
-# Microsoft Edge の言語サポート
+# <a name="microsoft-edge-language-support"></a>Microsoft Edge の言語サポート
 
 この記事では、Microsoft Edge 設定を使用して、サポートされている言語をブラウザーに追加する方法について説明します。 Microsoft Edge では、Windows で 96 言語、macOS で 91 言語がサポートされています。
 
 > [!NOTE]
 > この記事は、Microsoft Edge version 78 以降に適用されます。
 
-## サポートされている言語を Microsoft Edge に追加する
+## <a name="add-a-supported-language-to-microsoft-edge"></a>サポートされている言語を Microsoft Edge に追加する
 
 サポートされている言語の一覧を表示し、言語を Microsoft Edge に追加するには、次の手順を使用します。
 
@@ -34,7 +34,7 @@ ms.locfileid: "10980486"
 4. **[言語の追加]** の一覧では、言語を検索することも (**[言語の検索]**)スクロール バーを使用して追加する言語を見つけることもできます。
 5. 言語が見つかったら、その言語のチェック ボックスをオンにして、**[追加]** をクリックします。 追加した言語は、Microsoft Edge に設定済みの **[優先する言語]** の一覧の下部に表示されます。 アクセスした Web サイトは、一覧にあるサポートされている言語のうち先頭の言語で表示されます。
 
-### 優先する言語を変更する
+### <a name="change-preferred-languages"></a>優先する言語を変更する
 
 優先する言語の順序変更、Microsoft Edge での翻訳の提供、特定の言語での Microsoft Edge の表示を設定できます。
 言語設定を変更するには、言語の横にある省略記号 (**...**) をクリックして、[他の操作] を開きます。
@@ -51,14 +51,14 @@ ms.locfileid: "10980486"
 > [!NOTE]
 > また、優先する言語の設定に基づいて、スペルチェックのオプション (**[スペル チェック]**) を設定することもできます。
 
-## 外国語翻訳の拡張機能
+## <a name="foreign-language-translator-extension"></a>外国語翻訳の拡張機能
 
 ブラウザーでの外国語の使用に加え、[Translator for Microsoft Edge](https://www.microsoft.com/p/translator-for-microsoft-edge/9nblggh4n4n3) 拡張機能を使用して、外国語の Web ページとテキスト選択を 60 以上の言語に翻訳できます。
 
 > [!NOTE]
 > インストール後に翻訳の拡張機能が動作しない場合は、Microsoft Edge を再起動してください。 それでも拡張機能が動作しない場合は、フィードバック Hub を通じてフィードバックをお寄せください。
 
-## サポートされている言語
+## <a name="supported-languages"></a>サポートされている言語
 
 次の表に、Microsoft Edge でサポートされる言語の一覧を示します。
 
@@ -71,23 +71,18 @@ ms.locfileid: "10980486"
 |                 アルバニア語                           |                 アルバニア                 |     sq         |
 |            アムハラ語                                 |                エチオピア                 |     am         |
 |               アラビア語                               |              サウジアラビア               |     ar         |
-|               アルメニア語                             |              アルメニア                    |      hy        |
 |               アッサム語                             |                  インド                  |     as         |
 |          アゼルバイジャン語                               |               アゼルバイジャン (ラテン)         |    az          |
-|                   ベンガル語                           |              バングラデシュ*                |     bn         |
-|                                                    |                  インド*                 |     bn-IN      |
+|                   ベンガル語                           |              インド*                     |     bn-IN      |
 |                  バスク語                            |                  バスク                 |     eu         |
-|                   ベラルーシ語                       |                  ベラルーシ                |     be         |
 |              ボスニア語                               |       ボスニア・ヘルツェゴビナ (ラテン)     |       bs       |
 |                ブルガリア語                           |                ブルガリア                 |     bg         |
 |                 カタロニア語                            |                カタロニア                  |     ca         |
-|                チェロキー語                            |                   チェロキー              |      chr       |
 |            中国語                                 |              中国 (簡体字)          |     zh-CN      |
 |                                                    |             台湾 (繁体字)         |     zh-TW      |
 |                 クロアチア語                           |                 クロアチア                 |     hr         |
 |                 チェコ語                              |             チェコ共和国              |     cs         |
 |                  デンマーク語                            |                 デンマーク                 |     da         |
-|                   ダリー語                             |                  アフガニスタン*           |     prs        |
 |                オランダ語                               |               オランダ               |     nl         |
 |              英語                               |             イギリス              |     en-GB      |
 |                                                    |              米国              |     en         |
@@ -112,10 +107,8 @@ ms.locfileid: "10980486"
 |                      カンナダ語                       |                  インド                  |     kn         |
 |                カザフ語                              |               カザフスタン                |     kk         |
 |                  クメール語                             |                カンボジア                 |     km         |
-|                   スワヒリ語                        |                    ケニア                |     sw         |
 |                      コンカニ語                       |                  インド                  |     kok        |
 |                   韓国語                           |                  韓国                  |     ko         |
-|                    キルギス語                          |              キルギス                 |     ky         |
 |                     ラオ語                            |               ラオス人民民主共和国               |     lo         |
 |                  ラトビア語                           |                 ラトビア                  |     lv         |
 |               リトアニア語                           |                リトアニア                |     lt         |
@@ -126,7 +119,6 @@ ms.locfileid: "10980486"
 |               マルタ語                              |                  マルタ                  |     mt         |
 |          マオリ語                                     |               ニュージーランド               |     mi         |
 |               マラーティー語                              |                  インド                  |     mr         |
-|                モンゴル語                           |           モンゴル (キリル)            |     mn         |
 |                ネパール語                              |               ネパール                     |     ne         |
 |             ノルウェー語                              |                 ノルウェー (ブークモール)          |     nb         |
 |                                                    |                 ノルウェー (ニーノシュク)         |     nn         |
@@ -135,7 +127,7 @@ ms.locfileid: "10980486"
 |                  ポーランド語                            |                 ポーランド                  |     pl         |
 |                ポルトガル語                          |                 ブラジル                  |     pt-BR      |
 |                                                    |                ポルトガル                 |     pt-PT      |
-|               パンジャブ語                              |                  インド                  |     pa         |
+|               パンジャーブ語                              |                  インド                  |     pa         |
 |                ケチュア語                             |                  ペルー                   |     quz        |
 |                 ルーマニア語                           |                 ルーマニア                 |     ro         |
 |                  ロシア語                           |                 ロシア                  |     ru         |
@@ -143,8 +135,6 @@ ms.locfileid: "10980486"
 |            セルビア語                                 |    ボスニア・ヘルツェゴビナ (キリル*)    |   sr-Cyrl-BA   |
 |                                                    |                 セルビア (キリル)        |   sr-Cyrl-RS   |
 |                                                    |                 セルビア (ラテン)           |   sr-Latn-RS   |
-|                   シンド語                           |               パキスタン                  |      sd        |
-|                 シンハラ語                            |           スリランカ                     |      si        |
 |                 スロバキア語                             |                スロバキア                 |        sk      |
 |                スロベニア語                           |                スロベニア                 |        sl      |
 |              スペイン語                               |                 メキシコ                  |     es-MX      |
@@ -155,18 +145,16 @@ ms.locfileid: "10980486"
 |                テルグ語                              |                  インド                  |     te         |
 |                  タイ語                              |                タイ                 |     th         |
 |                  トルコ語                           |                 トルコ                  |     tr         |
-|                  トルクメン語                           |         トルクメニスタン                    |      tk        |
 |                ウクライナ語                           |                 ウクライナ                 |     uk         |
 |             ウルドゥー語                                   |       パキスタン・イスラム共和国      |     ur         |
 |              ウイグル語                                |                   PRC                   |     ug         |
-|              ウズベク語                                 |         ウズベキスタン (ラテン)               |   uz-Latn      |
 |               バレンシア語                            |                  スペイン*                 | ca-Es-VALENCIA |
 |            ベトナム語                              |                 ベトナム                 |     vi         |
 |            ウェールズ語                                   |             イギリス              |     cy         |
 
 ---
 
-## 関連項目
+## <a name="see-also"></a>関連項目
 
 - [Microsoft Edge ドキュメント](https://docs.microsoft.com/DeployEdge/)
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
