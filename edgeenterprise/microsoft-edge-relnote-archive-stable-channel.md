@@ -3,29 +3,129 @@ title: Microsoft Edge Stable チャネルのアーカイブされたリリース
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 01/21/2021
+ms.date: 03/03/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge Stable チャネルのアーカイブされたリリース ノート
-ms.openlocfilehash: b75cbb1de6da97bf15174c36ab0e6a872c4948f2
-ms.sourcegitcommit: 929c95f4254710d9582afbfb7a582dfc0280db3a
+ms.openlocfilehash: 231ef456728931ab05db88e5a250eb8c41ebc1b2
+ms.sourcegitcommit: f63a30c3e64e9e57fd76b6675ddff1fc2bbbeac8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "11297152"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "11393681"
 ---
-# Microsoft Edge Stable チャネルのアーカイブされたリリース ノート
+# <a name="archived-release-notes-for-microsoft-edge-stable-channel"></a>Microsoft Edge Stable チャネルのアーカイブされたリリース ノート
 
 これらのリリース ノートでは、Microsoft Edge Stable チャネルに含まれている新機能とセキュリティ以外の更新プログラムに関する情報を提供します。 すべてのセキュリティの更新プログラムは、[ここ](microsoft-edge-relnotes-security.md)に記載されています。
 
-## バージョン 85.0.564.41: 8 月 27 日
+## <a name="version-86062238-october-9"></a>バージョン 86.0.622.38 : 10 月 9 日
+
+セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#october-9-2020)に記載されています
+
+### <a name="feature-updates"></a>機能更新プログラム
+
+* **Microsoft Edge の以前のバージョンにロールバック。** ロールバック機能では、Microsoft Edge の最新バージョンに問題がある場合、管理者は Microsoft Edge を既知の正常なバージョンに戻すことができます。 **注:** Stable バージョン 86.0.622.38 は、ロールバック先となることができる最初のバージョンです。これは、安定バージョン87が、ロールバック元となる準備ができた最初のバージョンという意味でもあります。 [詳しくはこちらをご覧ください](edge-learnmore-rollback.md)。
+
+* **エンタープライズ全体で、同期の有効化を既定で強制できます。**  管理者は既定で、[ForceSync](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#forcesync) ポリシーを使用して、Azure Active Directory (Azure AD) アカウントに対して同期を有効にできます。
+
+* **Windows 7および8.1 でのプロファイル の自動切り替え。** 現在 Windows 10 の Microsoft Edge で利用可能なプロフィールの自動切り替えは、ダウンレベルの Windows (Windows 7、8.1) に拡張されました。 詳細については、ブログ記事「[プロファイルの自動切り替え](https://blogs.windows.com/msedgedev/2020/04/30/automatic-profile-switching/)」を参照してください。
+
+* **SameSite=既定で緩い Cookie**。 Web セキュリティとプライバシーを向上させるために、Cookie は、既定では、[SameSite=Lax](https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie/SameSite) 処理に設定されます。 つまり、Cookie はファーストパーティのコンテキストでのみ送信され、サードパーティに送信される要求では省略されます。 この変更により、サードパーティのリソースが正しく機能するために Cookie を必要とする Web サイトに互換性の影響が生じる可能性があります。 このような Cookie を許可するために、Web 開発者は、Cookie の設定時に明示的な `SameSite=none` および `Secure` 属性を追加することにより、サードパーティのコンテキストから設定および送信する必要がある Cookie にマークを付けることができます。 特定のサイトをこの変更から除外することを希望する企業は、[LegacySameSiteCookieBehaviorEnabledForDomainList](https://docs.microsoft.com/deployedge/microsoft-edge-policies#legacysamesitecookiebehaviorenabledfordomainlist) ポリシーを使用してこれを行うか、[LegacySameSiteCookieBehaviorEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) ポリシーを使用してすべてのサイトにわたる変更をオプトアウトできます。
+
+* **HTML5 アプリケーション キャッシュ API の削除。**  Microsoft Edge バージョン 86 以降、Web ページのオフライン使用を可能にするレガシ アプリケーション キャッシュ API は Microsoft Edge から削除されます。 Web 開発者は、[WebDev ドキュメント](https://web.dev/appcache-removal/)で、アプリケーション キャッシュ API のサービス ワーカーへの置き換えに関する情報を確認する必要があります。  重要: Microsoft Edge バージョン 90 まで、サイトが非推奨のアプリケーション キャッシュ API を引き続き使用できるようにする [AppCache OriginTrial Token](https://developers.chrome.com/origintrials/#/view_trial/1776670052997660673) を要求できます。
+
+* **プライバシーとセキュリティ**
+
+  * ダウンレベルの Windows と macOS で [MetricsReportingEnabled]( https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) と [SendSiteInformationToImproveServices]( https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) ポリシーを置き換えます。 これらのポリシーは Microsoft Edge バージョン 86 では非推奨で、Microsoft Edge バージョン 89 で廃止されます。<br>
+これらのポリシーは、Windows 10 では[利用統計情報の許可](https://go.microsoft.com/fwlink/?linkid=2099569)に、その他すべてのプラットフォームでは新しい [DiagnosticData](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#diagnosticdata) ポリシーに置き換えられます。 これにより、ユーザーは Windows 7、8、8.1、macOS で、Microsoft に送信される診断データを管理できるようになります。
+  * セキュリティで保護された DNS (DNS-over-HTTPS) のサポート。  Microsoft Edge バージョン 86 以降、セキュリティ保護された DNS を制御する設定が、管理されていないデバイスで利用可能になりました。 ユーザーは管理されたデバイスでこれらの設定にアクセスできませんが、IT 管理者は [dnsoverhttpsmode](https://docs.microsoft.com/deployedge/microsoft-edge-policies#dnsoverhttpsmode) グラウンド ポリシーを使用して、セキュリティ保護された DNS を有効または無効にすることができます。
+
+* **Internet Explorerモード:** ユーザーが Microsoft Edge ユーザー インターフェイス (UI) を使用して、Internet Explorer モードでサイトをテストできるようにします。 Microsoft Edge バージョン 86 以降、管理者はユーザーがテスト目的で、またはサイトがサイト一覧の XML に追加されるまでの臨時措置として Internet Explorer モードでタブを読み込むことができるよう、UI オプションを有効にできます。
+
+* **PDF の更新情報:**
+
+  * PDF ドキュメントの目次。 バージョン 86 以降、Microsoft Edge に PDF ドキュメント内をユーザーが簡単に移動できる目次のサポートが追加されました。
+  * スモール フォーム ファクターの画面で、すべての PDF 機能にアクセス。 画面サイズが小さなデバイスでも、Microsoft Edge PDF リーダーのすべての機能にアクセスできます。
+  * PDF ファイルで蛍光ペンのペン サポート。 この更新で、ユーザーはデジタル ペンを使用して、実際の蛍光ペンと紙と同様の方法で PDF ファイルでテキストを直接強調表示できます。
+  * PDF のスクロールの改善。 長い PDF ドキュメント内を移動するときに、スムーズなスクロールを体験できるようになりました。
+
+* **ユーザーが Microsoft Edge アドオン Web サイトで検索クエリを入力し始めると、自動完了の候補が表示されます。** 自動完了によって、ユーザーは文字列全体を入力せずに検索クエリを素早く完成できます。 ユーザーは正確なスペルを記憶する必要がなく、表示されるオプションから選ぶことができるので、これは便利な機能です。
+
+* **グループ ポリシーを使用して、新しいタブ ページ (NTP) にカスタム イメージを追加できます。** Microsoft Edge バージョン 86 以降、NTP で既定のイメージをユーザーが指定したイメージで置き換えるためのオプションを使用できます。 このイメージのプロパティを管理する機能も、グループ ポリシーによってサポートされています。
+
+* **カスタマイズしたキーボード ショートカットを VS コードと一致させます。** Microsoft Edge の DevTools では、使用しているエディターや IDE に合わせて DevTools のキーボード ショートカットをカスタマイズできるようになりました。 (Microsoft Edge 84 で、VS コードに対して DevTools のキーボードショートカットを一致させる機能を追加しました)。
+
+* **ダウンロード マネージャーを使用して、ダウンロードをディスクから削除できます。** ユーザーは、ブラウザーを離れることなくダウンロードしたファイルをディスクから削除できるようになりました。 ダウンロード削除のこの新しい機能は、ダウンロード シェルフのコンテキスト メニューまたはダウンロード ページに存在します。
+
+### <a name="policy-updates"></a>ポリシーの更新
+
+#### <a name="new-policies"></a>新しいポリシー
+
+23個の新しいポリシーが追加されました。 更新された管理用テンプレートを、[Microsoft Edge Enterprise のランディング ページ](https://aka.ms/EdgeEnterprise)からダウンロードしてください。 次の新しいポリシーが追加されました。
+
+- [CollectionsServicesAndExportsBlockList](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#collectionsservicesandexportsblocklist) - 指定したサービスの一覧へのアクセスをブロックし、コレクション内のターゲットをエクスポートします。
+- [DefaultFileSystemReadGuardSetting](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#defaultfilesystemreadguardsetting) -読み取り用のファイルシステム API の使用を制御します。
+- [DefaultFileSystemWriteGuardSetting](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#defaultfilesystemwriteguardsetting)-書き込みにファイルシステム API の使用を制御します。
+- [DefaultSensorsSetting](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#defaultsensorssetting) - 既定のセンサーの設定。
+- [DefaultSerialGuardSetting](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#defaultserialguardsetting) - シリアル API の使用を制御します。
+- [DiagnosticData](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#diagnosticdata) - ブラウザーの使用状況に関する必須およびオプションの診断データを送信します。
+- [EnterpriseModeSiteListManagerAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enterprisemodesitelistmanagerallowed) - Enterprise Mode Site List Manager ツールへのアクセスを許可します。
+- [FileSystemReadAskForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#filesystemreadaskforurls) - これらのサイトのファイル システム API を通して読み取りアクセスを許可します。
+- [FileSystemReadBlockedForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#filesystemreadblockedforurls) -これらのサイトのファイルシステム API を使用した読み取りアクセスをブロックします。
+- [FileSystemWriteAskForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#filesystemwriteaskforurls) - これらのサイトのファイルとディレクトリへの書き込みアクセスを許可します。
+- [FileSystemWriteBlockedForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#filesystemwriteblockedforurls) -これらのサイトのファイルとディレクトリの書き込みアクセスをブロックします。
+- [ForceSync](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#forcesync) - ブラウザーのデータを強制的に同期し、同期の同意プロンプトを表示しません。
+- [InsecureFormsWarningsEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#insecureformswarningsenabled) - セキュリティで保護されていないフォームに対する警告を有効にします。
+- [InternetExplorerIntegrationTestingAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#internetexplorerintegrationtestingallowed) - Internet Explorer モードテストを許可します。
+- [SpotlightExperiencesAndRecommendationsEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#spotlightexperiencesandrecommendationsenabled) - カスタマイズされた背景画像およびテキスト、提案、通知、Microsoft サービスのヒントをユーザーが受信できるかどうかを選択します。
+- [NewTabPageAllowedBackgroundTypes](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpageallowedbackgroundtypes) - 新しいタブ ページ レイアウトに使用できる背景の種類を構成します。
+- [SaveCookiesOnExit](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#savecookiesonexit) - Microsoft Edge の終了時に Cookie を保存します。
+- [SensorsAllowedForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sensorsallowedforurls) - 特定のサイトのセンサーへのアクセスを許可します。
+- [SensorsBlockedForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sensorsblockedforurls) - 特定のサイトのセンサーへのアクセスをブロックします。
+- [SerialAskForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#serialaskforurls) - 特定のサイトのシリアル API を許可します。
+- [SerialBlockedForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#serialblockedforurls) - 特定のサイトのシリアル API をブロックします。
+- [UserAgentClientHintsEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#useragentclienthintsenabled) - ユーザー エージェント クライアント ヒント機能を有効にします。
+- [UserDataSnapshotRetentionLimit](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#userdatasnapshotretentionlimit) - 緊急ロールバックの場合に使用されるユーザー データのスナップショット数を制限します。
+
+#### <a name="deprecated-policies"></a>廃止されたポリシー
+
+- [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) - 使用状況とクラッシュ関連のデータレポートを有効にします。
+- [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) - Microsoft サービスを改善するためにサイト情報を送信します。
+
+#### <a name="obsoleted-policy"></a>非推奨ポリシー
+
+[TLS13HardeningForLocalAnchorsEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#tls13hardeningforlocalanchorsenabled) - ローカル トラスト アンカーの TLS 1.3 セキュリティ機能を有効にします。
+
+## <a name="version-85056470-october-6"></a>バージョン 85.0.564.70 : 10 月 6 日
+
+さまざまなバグとパフォーマンスの問題を修正しました。
+
+## <a name="version-85056468-october-1"></a>バージョン 85.0.564.68: 10 月 1 日
+
+さまざまなバグとパフォーマンスの問題を修正しました。
+
+## <a name="version-85056463-september-23"></a>バージョン 85.0.564.63: 9 月 23 日
+
+セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#september-23-2020)に記載されています
+
+## <a name="version-85056451-september-9"></a>バージョン 85.0.564.51: 9 月 9 日
+
+セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#september-9-2020)に記載されています
+
+## <a name="version-85056444-august-31"></a>バージョン 85.0.564.44: 8 月 31 日
+
+さまざまなバグとパフォーマンスの問題を修正しました。
+
+<!-- 85.0.564.41: August 27 -->
+
+## <a name="version-85056441-august-27"></a>バージョン 85.0.564.41: 8 月 27 日
 
 セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#august-27-2020)に記載されています
 
-### 機能更新プログラム
+### <a name="feature-updates"></a>機能更新プログラム
 
 - **[お気に入り]と[設定]のオンプレミス同期**。 クラウド同期を必要とせずに、自分の環境内の Active Directory プロファイル間でブラウザーのお気に入りと設定を同期できます。
 
@@ -42,9 +142,9 @@ ms.locfileid: "11297152"
    - Microsoft Edge の DevTools は Surface Duo エミュレーションをサポートしています。 Microsoft Edge の DevTools を使用して Surface Duo をエミュレートすることができます。これにより、ユーザーのweb コンテンツの表示をデュアルスクリーンデバイスでテストできます。 このテストを DevTools で有効にするには、Windows の場合はCtrl+Shift+Mを押しながら、Device Modeに入るか、macOSの場合は、 Command + Shift + M キーを押して、デバイスのドロップダウンリストから Surface Duo を選択します。
    - Microsoft Edge DevTools を使用すると、キーボードショートカットを VS コードと一致させることができます。 Microsoft Edge の DevTools では、使用しているエディターや IDE に合わせて DevTools のキーボードショートカットをカスタマイズできます。 Microsoft Edge 85 で、VS コードに対して DevTools のキーボードショートカットを一致させる機能を追加します。 この変更は、VS コードと DevTools の生産性向上に役立ちます。
 
-### ポリシーの更新
+### <a name="policy-updates"></a>ポリシーの更新
 
-#### 新しいポリシー
+#### <a name="new-policies"></a>新しいポリシー
 
 13 個の新しいポリシーが追加されました。 更新された管理用テンプレートを、[Microsoft Edge Enterprise のランディング ページ](https://aka.ms/EdgeEnterprise)からダウンロードしてください。 次の新しいポリシーが追加されました。
 
@@ -62,53 +162,53 @@ ms.locfileid: "11297152"
 - [RoamingProfileLocation](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#roamingprofilelocation)-移動プロファイルディレクトリを設定します。
 - [TLSCsipherSuiteDenyList](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#tlsciphersuitedenylist) - TLS 暗号スイートを無効に指定します。
 
-#### 不使用のポリシー
+#### <a name="obsoleted-policies"></a>不使用のポリシー
 
 - [EnableDomainActionsDownload](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enabledomainactionsdownload) - Microsoft からのドメイン アクションのダウンロードを有効にします。
 - [WebComponentsV0Enabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webcomponentsv0enabled) - Web コンポーネント v0 API ユニット M84 を再有効化する。
 - [WebDriverOverridesIncompatiblePolicies](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webdriveroverridesincompatiblepolicies) - WebDriverに 互換性のないポリシーのオーバーライドを許可します。
 
-## バージョン 84.0.522.63: 8 月 20 日
+## <a name="version-84052263-august-20"></a>バージョン 84.0.522.63: 8 月 20 日
 
 セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#august-20-2020)に記載されています。
 
-## バージョン 84.0.522.61: 8 月 17 日
+## <a name="version-84052261-august-17"></a>バージョン 84.0.522.61: 8 月 17 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 84.0.522.59: 8 月 11 日
+## <a name="version-84052259-august-11"></a>バージョン 84.0.522.59: 8 月 11 日
 
 セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#august-11-2020)に記載されています
 
-## バージョン 84.0.522.58: 8 月 10 日
+## <a name="version-84052258-august-10"></a>バージョン 84.0.522.58: 8 月 10 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 84.0.522.52: 8 月 1 日
+## <a name="version-84052252-august-1"></a>バージョン 84.0.522.52: 8 月 1 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 84.0.522.50: 7 月 31 日
+## <a name="version-84052250-july-31"></a>バージョン 84.0.522.50: 7 月 31 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 84.0.522.49: 7 月 29 日
+## <a name="version-84052249-july-29"></a>バージョン 84.0.522.49: 7 月 29 日
 
 セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#july-29-2020)に記載されています
 
-## バージョン 84.0.522.48: 7 月 28 日
+## <a name="version-84052248-july-28"></a>バージョン 84.0.522.48: 7 月 28 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 84.0.522.44: 7 月 23 日
+## <a name="version-84052244-july-23"></a>バージョン 84.0.522.44: 7 月 23 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 84.0.522.40: 7 月 16 日
+## <a name="version-84052240-july-16"></a>バージョン 84.0.522.40: 7 月 16 日
 
 セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#july-16-2020)に記載されています
 
-### 機能更新プログラム
+### <a name="feature-updates"></a>機能更新プログラム
 
 - このバージョンの Microsoft Edge では、Internet Explorer モードでのサイト一覧のダウンロード時間が改善されました。 キャッシュされたサイト リストがない場合、Internet Explorer モードのサイト一覧のダウンロードのダウンロード遅延が0秒に削減されました （以前の60秒待ちから短縮）。 また、サイト一覧がダウンロードされるまで、Internet Explorer モードのホームページ ナビゲーションを遅延する必要がある場合のために、グループ ポリシーのサポートも追加しました。 詳細については、「[DelayNavigationsForInitialSiteListDownload](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#delaynavigationsforinitialsitelistdownload)」 を参照してください。
 
@@ -145,9 +245,9 @@ ms.locfileid: "11297152"
 
 - VS コードに一致するようにキーボード ショートカットをカスタマイズしたり、ハイ コントラストで DevTools を表示したりするためのサポートを含む、いくつかの DevTools の更新。  詳細については、「[DevTools の新着情報 (Microsoft Edge 84)](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/whats-new/2020/05/devtools)」を参照してください。
 
-### ポリシーの更新
+### <a name="policy-updates"></a>ポリシーの更新
 
-#### 新しいポリシー
+#### <a name="new-policies"></a>新しいポリシー
 
 7 個の新しいポリシーが追加されました。 更新された管理用テンプレートを、[Microsoft Edge Enterprise のランディング ページ](https://aka.ms/EdgeEnterprise)からダウンロードしてください。 次の新しいポリシーが追加されました。
 
@@ -159,56 +259,56 @@ ms.locfileid: "11297152"
 - [NativeWindowOcclusionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#nativewindowocclusionenabled) - CPU と電力の消費を削減するために、Microsoft Edge はウィンドウが他のウィンドウに覆われていることを検出したときにピクセルの描画作業を中断します。
 - [NavigationDelayForInitialSiteListDownloadTimeout](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#navigationdelayforinitialsitelistdownloadtimeout) - エンタープライズ モード サイト一覧のタブ ナビゲーションの遅延時間を設定します。
 
-#### 廃止されたポリシー
+#### <a name="deprecated-policies"></a>廃止されたポリシー
 
 - [AllowSyncXHRInPageDismissal](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#allowsyncxhrinpagedismissal) - ページが同期 XHR 要求をページの解除中に送信できるようにします。
 - [BuiltinCertificateVerifierEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#builtincertificateverifierenabled) - 組み込みの証明書検証機能を使用してサーバー証明書を検証するかどうかを決定します。
 - [StricterMixedContentTreatmentEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#strictermixedcontenttreatmentenabled) - 混合コンテンツに対してより厳密な処理を有効にします。
 
-#### 非推奨ポリシー
+#### <a name="obsoleted-policy"></a>非推奨ポリシー
 
 [ForceNetworkInProcess](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#forcenetworkinprocess) - ブラウザー プロセスでネットワーク コードを強制的に実行します。
 
 <!-- End 84 -->
-## バージョン 83.0.478.64: 7 月 13 日
+## <a name="version-83047864-july-13"></a>バージョン 83.0.478.64: 7 月 13 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 83.0.478.61: 7 月 7 日
+## <a name="version-83047861-july-7"></a>バージョン 83.0.478.61: 7 月 7 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 83.0.478.58: 6 月 30 日
+## <a name="version-83047858-june-30"></a>バージョン 83.0.478.58: 6 月 30 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 83.0.478.56: 6 月 24 日
+## <a name="version-83047856-june-24"></a>バージョン 83.0.478.56: 6 月 24 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
 セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#june-24-2020)に記載されています
 
-## バージョン 83.0.478.54: 6 月 17 日
+## <a name="version-83047854-june-17"></a>バージョン 83.0.478.54: 6 月 17 日
 
 セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#june-17-2020)に記載されています
 
-## バージョン 83.0.478.50: 6 月 15 日
+## <a name="version-83047850-june-15"></a>バージョン 83.0.478.50: 6 月 15 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 83.0.478.45: 6 月 4 日
+## <a name="version-83047845-june-4"></a>バージョン 83.0.478.45: 6 月 4 日
 
 セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#june-4-2020)に記載されています
 
-## Version 83.0.478.44: 6月1日
+## <a name="version-83047844-june-1"></a>Version 83.0.478.44: 6月1日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 83.0.478.37: 5 月 21 日
+## <a name="version-83047837-may-21"></a>バージョン 83.0.478.37: 5 月 21 日
 
 セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#may-21-2020)に記載されています
 
-### 機能更新プログラム
+### <a name="feature-updates"></a>機能更新プログラム
 
 - Microsoft Edge の更新プログラムは徐々に展開されます。 今後、Microsoft Edge の更新プログラムは数日間にわたってユーザーに公開されます。 これにより、誤ったバグのある更新プログラムからより多くのユーザーを保護できるようになり、更新エクスペリエンスが向上します。 ユーザーは引き続きシームレスな自動更新を取得できます。 組織が自動更新に登録されていない場合、この変更による影響はありません。 詳細については、「[段階的なロールアウトの記事](microsoft-edge-update-progressive-rollout.md)」をご覧ください。
 - Microsoft Defender SmartScreen の改善: 読み込み時にリダイレクトする悪意のあるサイトからの保護が強化され、悪意のあるサイトを Microsoft Defender SmartScreen の安全ページに完全に置き換えるトップレベルのフレーム ブロックなど、Microsoft Defender SmartScreen サービスにいくつかの改良を加えました。 トップレベルのフレーム ブロックにより、悪意のあるサイトからの音声やその他のメディアの再生が防止され、より簡単かつわかりやすくなります。
@@ -244,9 +344,9 @@ ms.locfileid: "11297152"
 
 - ページを離れる際の同期 XmlHttpRequest を禁止します。 Web ページをアンロード中の同期 XmlHttpRequests の送信は、削除されます。 この変更により、ブラウザーのパフォーマンスと信頼性が向上しますが、sendBeacon や fetch など、最新の Web Api を使用するように更新されていない Web アプリケーションに影響する可能性があります。 この変更を無効にして、ページを離れる際の同期 XHR を許可するグループ ポリシーは、Microsoft Edge 88 までに公開される予定です。 詳細については、「[Microsoft Edge 向けのサイトの互換性に影響する変更点](https://docs.microsoft.com/microsoft-edge/web-platform/site-impacting-changes)」 を参照してください。
 
-### ポリシーの更新
+### <a name="policy-updates"></a>ポリシーの更新
 
-#### 新しいポリシー
+#### <a name="new-policies"></a>新しいポリシー
 
 15 個の新しいポリシーが追加されました。 更新された管理用テンプレートを、[Microsoft Edge Enterprise のランディング ページ](https://aka.ms/EdgeEnterprise)からダウンロードしてください。 次の新しいポリシーが追加されました。
 
@@ -266,7 +366,7 @@ ms.locfileid: "11297152"
 - [SyncTypesListDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#synctypeslistdisabled) - 同期から除外される種類の一覧を構成します。
 - [NativeWindowOcclusionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#nativewindowocclusionenabled) - ネイティブ ウィンドウを非表示にします。
 
-#### 廃止されたポリシー
+#### <a name="deprecated-policy"></a>廃止されたポリシー
 
 このリリースでは、次のポリシーが引き続き機能します。 これは、将来のリリースで「廃止」される予定です。
 
@@ -274,31 +374,31 @@ ms.locfileid: "11297152"
 
 <!-- end 83 -->
 
-## バージョン 81.0.416.77: 5 月 18 日
+## <a name="version-81041677-may-18"></a>バージョン 81.0.416.77: 5 月 18 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 81.0.416.72: 5 月 7 日
+## <a name="version-81041672-may-7"></a>バージョン 81.0.416.72: 5 月 7 日
 
 セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#may-7-2020)に記載されています
 
-## バージョン 81.0.416.68: 4 月 29 日
+## <a name="version-81041668-april-29"></a>バージョン 81.0.416.68: 4 月 29 日
 
 セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#april-29-2020)に記載されています
 
-## バージョン 81.0.416.64: 4 月 23 日
+## <a name="version-81041664-april-23"></a>バージョン 81.0.416.64: 4 月 23 日
 
 セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#april-23-2020)に記載されています
 
-## バージョン 81.0.416.58: 4 月 17 日
+## <a name="version-81041658-april-17"></a>バージョン 81.0.416.58: 4 月 17 日
 
 セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#april-17-2020)に記載されています
 
-## バージョン 81.0.416.53: 4 月 13 日
+## <a name="version-81041653-april-13"></a>バージョン 81.0.416.53: 4 月 13 日
 
 セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#april-13-2020)に記載されています
 
-### 機能更新プログラム
+### <a name="feature-updates"></a>機能更新プログラム
 
 - Windows 情報保護 (WIP) のサポートが追加されました。これにより、企業の機密データが無断で開示されるのを防ぐことができます。 [詳細情報](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection)。
 
@@ -344,9 +444,9 @@ ms.locfileid: "11297152"
 `MicrosoftEdgeEnterpriseX64.msi DONOTCREATEDESKTOPSHORTCUT=true`<br>
 今後のリリースでは、この機能をサポートするためのグループ ポリシーが用意されます。
 
-### ポリシーの更新
+### <a name="policy-updates"></a>ポリシーの更新
 
-#### 新しいポリシー
+#### <a name="new-policies"></a>新しいポリシー
 
 11 個の新しいポリシーが追加されました。 更新された管理用テンプレートを、[Microsoft Edge Enterprise のランディング ページ](https://aka.ms/EdgeEnterprise)からダウンロードしてください。 次の新しいポリシーが追加されました。
 
@@ -362,65 +462,65 @@ ms.locfileid: "11297152"
 - [TLS13HardeningForLocalAnchorsEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#tls13hardeningforlocalanchorsenabled) - ローカル トラスト アンカーの TLS 1.3 セキュリティ機能を有効にします。
 - [ConfigureOnPremisesAccountAutoSignIn](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#configureonpremisesaccountautosignin) - Azure AD ドメイン アカウントがない場合、Active Directory ドメイン アカウントで自動サインインを構成します。
 
-#### ポリシー名とキャプションの変更
+#### <a name="policy-name-and-caption-changes"></a>ポリシー名とキャプションの変更
 
 ポリシー `OmniboxMSBProviderEnabled` は [AddressBarMicrosoftSearchInBingProviderEnabled](https://docs.microsoft.com//DeployEdge/microsoft-edge-policies#addressbarmicrosoftsearchinbingproviderenabled) に変更されます。ポリシーのキャプションは、"アドレス バーにある Bing の候補で Microsoft Search を有効にする" です。
 
-#### 廃止されたポリシー
+#### <a name="deprecated-policies"></a>廃止されたポリシー
 
 このリリースでは、次のポリシーが引き続き機能します。 これらは、将来のリリースで「廃止」される予定です。
 
 - [WebComponentsV0Enabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webcomponentsv0enabled) - M84 まで Web コンポーネント v0 API を再度有効にします。
 - [WebDriverOverridesIncompatiblePolicies](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webdriveroverridesincompatiblepolicies) - WebDriverに 互換性のないオーバーライドを許可します。
 
-#### 解決した問題
+#### <a name="resolved-issues"></a>解決した問題
 
 - ファイルをダウンロードした後も Microsoft Edge の IE モードで [ダウンロード中] ダイアログが表示される問題が修正されました。
 - 既に IE モードで呼び出されたページが新しい IE モード タブを開くときに、Microsoft Edge がセッション Cookie を削除する問題が修正されました。
 
-## バージョン 80.0.361.111: 4 月 7 日
+## <a name="version-800361111-april-7"></a>バージョン 80.0.361.111: 4 月 7 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 80.0.361.109: 4 月 1 日
+## <a name="version-800361109-april-1"></a>バージョン 80.0.361.109: 4 月 1 日
 
 セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#april-1-2020)に記載されています
 
-## バージョン 80.0.361.69: 3 月 19 日
+## <a name="version-80036169-march-19"></a>バージョン 80.0.361.69: 3 月 19 日
 
 セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#march-19-2020)に記載されています
 
-## バージョン 80.0.361.66: 3 月 4 日
+## <a name="version-80036166-march-4"></a>バージョン 80.0.361.66: 3 月 4 日
 
 セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#march-4-2020)に記載されています
 
-## バージョン 80.0.361.62: 2 月 25 日
+## <a name="version-80036162-february-25"></a>バージョン 80.0.361.62: 2 月 25 日
 
 セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/deployedge/microsoft-edge-relnotes-security#february-25-2020)に記載されています
 
-## バージョン 80.0.361.57: 2 月 20 日
+## <a name="version-80036157-february-20"></a>バージョン 80.0.361.57: 2 月 20 日
 
 セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#february-20-2020)に記載されています
 
-## バージョン 80.0.361.56: 2 月 19 日
+## <a name="version-80036156-february-19"></a>バージョン 80.0.361.56: 2 月 19 日
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 80.0.361.54: 2 月 14 日
+## <a name="version-80036154-february-14"></a>バージョン 80.0.361.54: 2 月 14 日
 
-### 解決した問題
+### <a name="resolved-issues"></a>解決した問題
 
 - Microsoft Edge でパスワード、支払い、および Cookie のインポートが失敗した場合の問題を修正しました。
 
-## バージョン 80.0.361.50: 2 月 11
+## <a name="version-80036150-february-11"></a>バージョン 80.0.361.50: 2 月 11
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 
-## バージョン 80.0.361.48: 2 月 7 日
+## <a name="version-80036148-february-7"></a>バージョン 80.0.361.48: 2 月 7 日
 
 セキュリティの更新プログラムは、[ここ](https://docs.microsoft.com/deployedge/microsoft-edge-relnotes-security#february-7-2020)に記載されています
 
-### 機能更新プログラム
+### <a name="feature-updates"></a>機能更新プログラム
 
 - 望ましくない可能性のあるアプリのダウンロードに対する SmartScreen 保護が追加されました。 [詳細情報](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus)
 - ドルビー ビジョン再生のサポートが追加されました。
@@ -434,9 +534,9 @@ ms.locfileid: "11297152"
 - ブラウザーがグループ ポリシーによって管理されている場合に、PDF UI に濃色テーマのサポートが追加されました。
 - Adobe Flash がバージョン32.0.0.321 に更新されました。 [詳細情報](https://helpx.adobe.com/flash-player/release-note/fp_32_air_32_release_notes.html)
 
-### ポリシーの更新
+### <a name="policy-updates"></a>ポリシーの更新
 
-#### 新しいポリシー
+#### <a name="new-policies"></a>新しいポリシー
 
 16 個の新しいポリシーが追加されました。 更新された管理用テンプレートを、[Microsoft Edge Enterprise のランディング ページ](https://aka.ms/EdgeEnterprise)からダウンロードしてください。 次の新しいポリシーが追加されました。
 
@@ -457,17 +557,17 @@ ms.locfileid: "11297152"
 - [WebComponentsV0Enabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webcomponentsv0enabled) - Web コンポーネント v0 API ユニット M84 を再有効化する。
 - [WebRtcLocalIpsAllowedUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webrtclocalipsallowedurls) - WebRTC によるローカル IP アドレスの公開を管理する。
 
-#### 廃止されたポリシー
+#### <a name="deprecated-policies"></a>廃止されたポリシー
 
 以下のポリシーは廃止されました。
 
 - [NewTabPageCompanyLogo](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagecompanylogo) - 新しいタブ ページの会社ロゴを設定する。
 
-### 解決した問題
+### <a name="resolved-issues"></a>解決した問題
 
 - Citrix 環境でオーディオが動作しない問題が修正されました。
 - Microsoft Edge と従来の Microsoft Edge の同時実行環境で、従来のリンクが破損してクラッシュする問題が修正されました。
 
-## 関連項目
+## <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)

@@ -3,36 +3,36 @@ title: Microsoft Edge リリース スケジュール
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 02/10/2021
+ms.date: 03/04/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge リリース スケジュール
-ms.openlocfilehash: b68e0386c270f00f862a9891a14d53177bffaf5d
-ms.sourcegitcommit: 543259647f221de88e67d47984617091f9c75cfc
+ms.openlocfilehash: f6567683b78d097547ebdef9320addc05863404e
+ms.sourcegitcommit: f63a30c3e64e9e57fd76b6675ddff1fc2bbbeac8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "11327010"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "11393696"
 ---
-# Microsoft Edge リリース スケジュール
+# <a name="microsoft-edge-release-schedule"></a>Microsoft Edge リリース スケジュール
 
 この記事では、Microsoft Edge のリリース サイクルおよびリリース スケジュールについて説明します。
 
-## リリース サイクル
+## <a name="release-cadence"></a>リリース サイクル
 
 Microsoft では、Microsoft Edge を新しい機能で更新する頻度を管理するために、チャネルと呼ばれる 4 つのオプションを提供しています。 Microsoft Edge チームは、更新プログラムを 6 週間ごとに、ベータ版および安定版のチャネルに公開する予定です。 チャネルとそのリリース サイクル、サポート レベルの詳細については、「[チャネルの概要](https://docs.microsoft.com/DeployEdge/microsoft-edge-channels#channel-overview)」を参照してください。
 
-## リリース スケジュール
+## <a name="release-schedule"></a>リリース スケジュール
 
 次の表に、ベータ版と Stable チャネルのリリース日を示します。
 
 > [!NOTE]
 > リリース日は概算で、ビルドの状態によって異なります。
 
-### Microsoft Edge リリース
+### <a name="microsoft-edge-releases"></a>Microsoft Edge リリース
 
 次の表は、両方のチャネルのメジャー リリースのみを追跡し、情報を提供します。
 
@@ -40,24 +40,24 @@ Microsoft では、Microsoft Edge を新しい機能で更新する頻度を管�
 |---------|-----|------|--------|
 | 86 | リリース日<br>バージョン | 2020 年 9 月 9 日<br>[86.0.622.11](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-archive-beta-channel#version-86062211-september-9) | 2020 年 10 月 9 日<br>[86.0.622.38](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-86062238-october-9) |
 | 87 | リリース日<br>バージョン | 2020 年 10 月 20 日<br>[87.0.664.12](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-87066412-october-20) | 2020 年 11 月 19 日<br>[87.0.664.41](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-87066441-november-19) |
-| **88** | リリース日<br>バージョン | 2020 年 12 月 9 日<br>[88.0.705.18](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-88070518-december-9) | **2021 年 1 月 21 日**<br>**[88.0.705.50](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-88070550-january-21)**|
-| **89** | リリース日<br>バージョン | **2021 年 2 月 3 日**<br>**[89.0.774.18](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-89077418-february-3)** | 2021 年 3 月 4 日の週 |
+| **88** | リリース日<br>バージョン | 2020 年 12 月 9 日<br>[88.0.705.18](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-88070518-december-9) | 2021 年 1 月 21 日<br>[88.0.705.50](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-88070550-january-21)|
+| **89** | リリース日<br>バージョン | **2021 年 2 月 3 日**<br>**[89.0.774.18](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-89077418-february-3)** | **2021 年 3 月 4 日**<br>**[89.0.774.45](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-89077445-march-21)** |
 | 90 | ターゲットのリリース | 2021 年 3 月 16 日の週 | 2021 年 4 月 15 日の週 |
 | 91 | ターゲットのリリース | 2021 年 4 月 27 日の週 | 2021 年 5 月 27 日の週 |
 | 92 | ターゲットのリリース | 2021 年 6 月 8 日の週 | 2021 年 7 月 22 日の週 |
 | 93 | ターゲットのリリース | 2021 年 8 月 3 日の週 | 2021 年 9 月 2 日の週 |
 
-## リリース プロセス
+## <a name="release-process"></a>リリース プロセス
 
 ベータ版と Stable 版のメジャー リリースのトリガーは、同等の Chromium リリースです。
 
-## プログレッシブ ロールアウト
+## <a name="progressive-rollouts"></a>プログレッシブ ロールアウト
 
 Stable チャネルの日付参照（リリース済み/リリースされる週）は、プログレッシブ ロールアウトの開始を参照します。
 
 弊社はプログレッシブ ロールアウト モデルを使用しています。これは、特定のデバイスの新しいリリースの可用性が、今後数日にわたってずれる可能性があることを意味します。 詳細については、「[Microsoft Edge Stable チャネルのプログレッシブ ロールアウト](microsoft-edge-update-progressive-rollout.md)」を参照してください。
 
-## 関連項目
+## <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
 - [Microsoft Edge チャネル](microsoft-edge-channels.md)
