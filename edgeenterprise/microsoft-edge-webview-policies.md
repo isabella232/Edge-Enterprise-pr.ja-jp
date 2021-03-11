@@ -3,7 +3,7 @@ title: Microsoft Edge WebView2 ポリシードキュメント
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/03/2021
+ms.date: 03/10/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
-ms.openlocfilehash: b362ac7b7addde044155428f61b7fb35d68f3e80
-ms.sourcegitcommit: bd83f2fbc4d7943e8f19c24414b65ed9d9009f2d
+ms.openlocfilehash: 47072c6e39944bb51fd4c683a9597125d8776d08
+ms.sourcegitcommit: e3762b1a204c143b4e2264100affae3d9ddaaffc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "11388738"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "11406358"
 ---
 # <a name="microsoft-edge-webview2---policies"></a>Microsoft Edge WebView2 - ポリシー
 
@@ -31,9 +31,8 @@ Microsoft Edge WebView2の更新方法とタイミングを制御するために
 
 次の表は、Microsoft Edge WebView2で使用可能な、このリリースのすべてのグループ ポリシーの一覧を示しています。 個々のポリシーに関する詳しい情報を取得するには、表内のリンクをお使いください。
 
-|||
-|-|-|
-|[ローダーの上書き設定](#loader-override-settings)|
+- [ローダーの上書き設定](#loader-override-settings)
+
 
 ### [*<a name="loader-override-settings"></a>ローダーの上書き設定*](#loader-override-settings-policies)
 
