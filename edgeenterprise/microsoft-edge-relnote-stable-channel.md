@@ -3,19 +3,19 @@ title: Stable チャネルに関する Microsoft Edge リリース ノート
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/04/2021
+ms.date: 03/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Stable チャネルに関する Microsoft Edge リリース ノート
-ms.openlocfilehash: 24fc6e567073f98cdadcfc3fa61c20c1ad5f1ab5
-ms.sourcegitcommit: f63a30c3e64e9e57fd76b6675ddff1fc2bbbeac8
+ms.openlocfilehash: 96525327c75231974e2e2976c1b811dee3a6b03e
+ms.sourcegitcommit: 86e0de9b27ad4297a6d5a57c866d7ef4fc7bb0cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "11393712"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "11400167"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Microsoft Edge Stable チャネルのリリース ノート
 
@@ -28,6 +28,10 @@ ms.locfileid: "11393712"
 
 > [!NOTE]
 > 安定チャネルの場合、更新は 1 日以上かけて段階的に公開されます。 詳細については、「[Microsoft Edge 更新プログラムの段階的なロールアウト](microsoft-edge-update-progressive-rollout.md)」を参照してください。
+
+## <a name="version-89077448-march-8"></a>バージョン 89.0.774.48: 3 月 8 日
+
+さまざまなバグとパフォーマンスの問題を修正しました。
 
 <!-- begin major 89 -->
 ## <a name="version-89077445-march-4"></a>バージョン 89.0.774.45: 3 月 4 日
@@ -53,6 +57,8 @@ ms.locfileid: "11393712"
 - **タブをスリープ状態にし、ブラウザーのパフォーマンスを向上させます**。 タブをスリープすると、アクティブでないタブをスリープ状態にすることでブラウザーのパフォーマンスが向上し、メモリや CPU などのシステム リソースが解放され、アクティブなタブや他のアプリケーションで使用できます。 ユーザーは、サイトがスリープ状態になるのを防ぎ、非アクティブなタブがスリープ状態になる前の時間の長さを構成できます。 ユーザーのフローを維持するために、イントラネット サイトなど、特定のサイトがスリープ状態になるのを防ぐための[ヒューリスティック](https://techcommunity.microsoft.com/t5/articles/sleeping-tabs-faq/m-p/1705434)も用意されています。 この機能は、グループ ポリシーを使用して管理できます。
 
 - **クラウド内の Microsoft Edge 同期データを手動でリセットします**。 Microsoft Edge の同期データを製品内からリセットする方法を導入しています。 これにより、お使いのデータは、Microsoft サービスからクリアされます。また、以前ならサポートチケットを必要としていたような特定の製品の問題を解決することもできます。
+
+- **すべての WindowsAzure Active Directory (Azure AD) アカウントに対するシングル サインオン (SSO) のインテリジェントな有効化は、単一の非 Azure AD Microsoft Edge プロファイルを持つユーザーを対象としています**。  この機能で最も便利になる可能性のあるユーザーに対して、この設定を自動的にオンにします。 ユーザーが Microsoft Edge プロファイルを 1 つしか持っていない場合 (Azure AD またはキッズ モードではない場合)、Microsoft Edge の起動時に設定が自動的にオンになります。 この自動切り替えは、ユーザーが後で Azure AD アカウントを使用して別の Microsoft Edge プロファイルにサインインすることを選択した場合にも自動的にオフになります。 ユーザーは、**[設定]、[プロファイル]、[プロファイルの設定]、[このプロファイルを使用して職場または学校のサイトへのシングル サインオンを許可する]** の順に移動し、この機能の設定を手動で更新できます。
 
 - **PDF ドキュメント内でのテキストの選択エクスペリエンスが向上しました**。 ユーザーは、Microsoft Edge バージョン 89 以降で開いた PDF ドキュメント全体で、よりスムーズでより一貫性の高いテキスト選択エクスペリエンスを実現できるようになります。
 
