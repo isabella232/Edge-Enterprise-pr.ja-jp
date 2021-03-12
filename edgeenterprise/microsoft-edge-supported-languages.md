@@ -3,23 +3,23 @@ title: Microsoft Edge の言語サポート
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 03/01/2021
+ms.date: 03/10/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: Microsoft Edge の言語サポート
-ms.openlocfilehash: ec2c61bc5a94f47769685a2764fa9cc2e58a9898
-ms.sourcegitcommit: f14286edec59ee9183bdf38c15fc890881efd64f
+description: Windows と macOS の Microsoft Edge 表示言語のサポート。
+ms.openlocfilehash: af8d2a57d35411600237d09ad528c7b071228d21
+ms.sourcegitcommit: 2b902ecf31430f3fc75d3731f26255aea0bb937e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "11384994"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "11406162"
 ---
 # <a name="microsoft-edge-language-support"></a>Microsoft Edge の言語サポート
 
-この記事では、Microsoft Edge 設定を使用して、サポートされている言語をブラウザーに追加する方法について説明します。 Microsoft Edge では、Windows で 96 言語、macOS で 91 言語がサポートされています。
+この記事では、Microsoft Edge 設定を使用して、サポートされている言語をブラウザーに追加する方法について説明します。 Microsoft Edge は、Windows では 84 の表示言語、macOS では 81 の表示言語をサポートしています。
 
 > [!NOTE]
 > この記事は、Microsoft Edge version 78 以降に適用されます。
@@ -58,9 +58,9 @@ ms.locfileid: "11384994"
 > [!NOTE]
 > インストール後に翻訳の拡張機能が動作しない場合は、Microsoft Edge を再起動してください。 それでも拡張機能が動作しない場合は、フィードバック Hub を通じてフィードバックをお寄せください。
 
-## <a name="supported-languages"></a>サポートされている言語
+## <a name="supported-display-languages"></a>サポートされている表示言語
 
-次の表に、Microsoft Edge でサポートされる言語の一覧を示します。
+次の表に、Microsoft Edge でサポートされている表示言語を示します。
 
 > [!NOTE]
 > macOS の Microsoft Edge でサポートされていない言語は、国/地域の後のアスタリスク (*) で示されています。  

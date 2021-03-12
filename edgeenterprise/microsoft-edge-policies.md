@@ -3,7 +3,7 @@ title: Microsoft Edge ブラウザー ポリシーに関するドキュメント
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/03/2021
+ms.date: 03/10/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
-ms.openlocfilehash: 130ed008a190edb92649beb658084c157ebade50
-ms.sourcegitcommit: bd83f2fbc4d7943e8f19c24414b65ed9d9009f2d
+ms.openlocfilehash: 94ad135f23dae83391e873ef120e6c88b44d0e27
+ms.sourcegitcommit: e3762b1a204c143b4e2264100affae3d9ddaaffc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "11388730"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "11406378"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - ポリシー
 
@@ -29,29 +29,36 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 > [!NOTE]
 > この記事は Microsoft Edge version 77 以降に適用されます。
 
-## <a name="new-policies"></a>新しいポリシー
+## <a name="new-and-deprecated-policies"></a>新規ポリシーと非推奨になったポリシー
 
-次の表に、この更新プログラムの新しいポリシーを示します。
+次の表は、この更新の新規ポリシーと非推奨になったポリシーの一覧です。
 
-| 名前 | キャプション |
+|名前|キャプション|
 |--|--|
-|[PrintRasterizationMode](#printrasterizationmode)|印刷ラスタライズ モード|
+|[SSLVersionMin](#sslversionmin)|TLS の最小バージョンが有効 (非推奨)|
 
 ## <a name="available-policies"></a>使用可能なポリシー
 
 次の表は、このリリースの Microsoft Edge で使用可能な、ブラウザー関連のすべてのグループ ポリシーの一覧を示しています。 個々のポリシーに関する詳しい情報を取得するには、表内のリンクをお使いください。
 
-|||
-|-|-|
-|[Application Guard の設定](#application-guard-settings)|[キャスト](#cast)|
-|[コンテンツの設定](#content-settings)|[既定の検索プロバイダー](#default-search-provider)|
-|[拡張機能](#extensions)|[HTTP 認証](#http-authentication)|
-|[キオスク モードの設定](#kiosk-mode-settings)|[管理状態](#manageability)|
-|[ネイティブ メッセージング](#native-messaging)|[パスワード マネージャーと保護](#password-manager-and-protection)|
-|[パフォーマンス](#performance)|[印刷](#printing)|
-|[プロキシ サーバー](#proxy-server)|[タブのスリープ設定](#sleeping-tabs-settings)|
-|[SmartScreen の設定](#smartscreen-settings)|[スタートアップ、ホーム ページ、新規タブ ページ](#startup-home-page-and-new-tab-page)|
-|[補足](#additional)|
+- [Application Guard の設定](#application-guard-settings)
+- [キャスト](#cast)
+- [コンテンツの設定](#content-settings)
+- [既定の検索プロバイダー](#default-search-provider)
+- [拡張機能](#extensions)
+- [HTTP 認証](#http-authentication)
+- [キオスク モードの設定](#kiosk-mode-settings)
+- [管理状態](#manageability)
+- [ネイティブ メッセージング](#native-messaging)
+- [パスワード マネージャーと保護](#password-manager-and-protection)
+- [パフォーマンス](#performance)
+- [印刷](#printing)
+- [プロキシ サーバー](#proxy-server)
+- [タブのスリープ設定](#sleeping-tabs-settings)
+- [SmartScreen の設定](#smartscreen-settings)
+- [スタートアップ、ホーム ページ、新規タブ ページ](#startup-home-page-and-new-tab-page)
+- [補足](#additional)
+
 
 ### [*<a name="application-guard-settings"></a>Application Guard の設定*](#application-guard-settings-policies)
 
@@ -395,7 +402,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[RunAllFlashInAllowMode](#runallflashinallowmode)|Adobe Flash のコンテンツ設定をすべてのコンテンツに拡張する (不使用)|
 |[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|HTTPS の警告ページから続行できるようにする|
 |[SSLErrorOverrideAllowedForOrigins](#sslerroroverrideallowedfororigins)|ユーザーが特定の発信元の HTTPS 警告ページから続行できるようにする|
-|[SSLVersionMin](#sslversionmin)|最小限の TLS バージョンを有効にする|
+|[SSLVersionMin](#sslversionmin)|TLS の最小バージョンが有効 (非推奨)|
 |[SaveCookiesOnExit](#savecookiesonexit)|Microsoft Edge の終了時に cookie を保存する|
 |[SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)|ブラウザー履歴の保存を無効にする|
 |[ScreenCaptureAllowed](#screencaptureallowed)|画面キャプチャを許可または拒否する|
@@ -1895,7 +1902,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 URL パターンは、 [FileSystemReadBlockedForUrls](#filesystemreadblockedforurls) と競合することはできません。 URL が両方と一致する場合、どちらのポリシーも優先されません。
 
-有効な URL パターンの詳細については、https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns をご覧ください。
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。 * は、このポリシーで承認された値ではありません。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -1964,7 +1971,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
 
 URL パターンは、 [FileSystemReadAskForUrls](#filesystemreadaskforurls) と競合することはできません。 URL が両方と一致する場合、どちらのポリシーも優先されません。
 
-有効な URL パターンの詳細については、https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns をご覧ください。
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。 * は、このポリシーで承認された値ではありません。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -2033,7 +2040,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.e
 
 URL パターンは、 [FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls) と競合することはできません。 URL が両方と一致する場合、どちらのポリシーも優先されません。
 
-有効な URL パターンの詳細については、https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns をご覧ください。
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。 * は、このポリシーで承認された値ではありません。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -2102,7 +2109,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
 
 URL パターンは、 [FileSystemWriteAskForUrls](#filesystemwriteaskforurls) と競合することはできません。 URL が両方と一致する場合、どちらのポリシーも優先されません。
 
-有効な URL パターンの詳細については、https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns をご覧ください。
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。 * は、このポリシーで承認された値ではありません。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -2169,6 +2176,8 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
 
 このポリシーを構成していない場合、ユーザーの個人用の構成、または [DefaultImagesSetting](#defaultimagessetting) ポリシー (設定されている場合) のいずれかからのグローバルな既定値が、すべてのサイトで使用されます。
 
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。 * は、このポリシーで承認された値ではありません。
+
   #### <a name="supported-features"></a>サポートされている機能:
 
   - 必須にすることができるか: はい
@@ -2233,6 +2242,8 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
   画像の表示が許可されていないサイトの一覧を URL パターンに基づいて定義します。
 
 このポリシーを構成していない場合、ユーザーの個人用の構成、または [DefaultImagesSetting](#defaultimagessetting) ポリシー (設定されている場合) からのグローバルな既定値がすべてのサイトで使用されます。
+
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。 * は、このポリシーで承認された値ではありません。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -2299,6 +2310,8 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
 このポリシーを構成していない場合、ブロック可能な混在するコンテンツがブロックされ、オプションでブロック可能な混在するコンテンツがアップグレードされます。 ただし、ユーザーは特定のサイトで安全でない混在するコンテンツを許可する例外を設定することができます。
 
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。 * は、このポリシーで承認された値ではありません。
+
   #### <a name="supported-features"></a>サポートされている機能:
 
   - 必須にすることができるか: はい
@@ -2363,6 +2376,8 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.
   URL パターンの一覧を作成して、ブロック可能な (つまりアクティブな) 混在するコンテンツ (つまり、HTTPS サイトにある HTTP コンテンツ) の表示を許可しないサイトと、オプションでブロック可能な混在するコンテンツのアップグレードを無効にするサイトを指定します。
 
 このポリシーを構成していない場合、ブロック可能な混在するコンテンツがブロックされ、オプションでブロック可能な混在するコンテンツがアップグレードされます。 ただし、ユーザーは特定のサイトで安全でない混在するコンテンツを許可する例外を設定することができます。
+
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。 * は、このポリシーで承認された値ではありません。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -9129,7 +9144,7 @@ Microsoft Edge バージョン 89 から、Bing がユーザーの既定の検�
 
   #### <a name="description"></a>説明
 
-  このポリシーは、企業の Web コンテンツがページ解除中に XHR 要求の同期を却下する変更と互換していないことが判明した場合に、Web コンテンツの更新に時間を割くための短期のメカニズムとしてのみ機能することを目的としているため、推奨されていません。 Microsoft Edge バージョン 88 では機能しません。
+  このポリシーは、企業の Web コンテンツがページ解除中に XHR 要求の同期を却下する変更と互換していないことが判明した場合に、Web コンテンツの更新に時間を割くための短期のメカニズムとしてのみ機能することを目的としているため、推奨されていません。 Microsoft Edge バージョン 93 では機能しません。
 
 このポリシーでは、ページの解除中にページが同期 XHR 要求を送信できるように指定することができます。
 
@@ -11052,7 +11067,7 @@ SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [
 
 このポリシーを無効にすると、組み込みの DNS クライアントは、DNS-over-HTTPS が使用されている場合にのみ使用されます。
 
-このポリシーを構成しない場合、組み込みの DNS クライアントは既定で有効になっています。
+このポリシーを構成しない場合、組み込みの DNS クライアントは macOS と Android で既定で有効になります (プライベート DNS も VPN も有効になっていない場合)。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -11112,7 +11127,7 @@ SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [
 
   このポリシーは、企業の環境が組み込みの証明書検証ツールとは互換していないことが判明した場合に、環境の更新と問題の報告に時間を割くための短期のメカニズムとしてのみ機能することを目的としているため、推奨されていません。
 
-Mac OS X のレガシ証明書検証機能のサポートの削除が予定されている Microsoft Edge のバージョン 87 では機能しません。
+Mac OS X での従来の証明書検証ツールのサポートが削除される予定の場合、Microsoft Edge バージョン 92 では機能しません。
 
 
   #### <a name="supported-features"></a>サポートされている機能:
@@ -19284,9 +19299,9 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
   ### <a name="sslversionmin"></a>SSLVersionMin
 
-  #### <a name="minimum-tls-version-enabled"></a>最小限の TLS バージョンを有効にする
+  #### <a name="minimum-tls-version-enabled-deprecated"></a>TLS の最小バージョンが有効 (非推奨)
 
-  
+  >非推奨: このポリシーは推奨されなくなっています。 現在はサポートされていますが、将来のリリースで廃止されます。
   
   #### <a name="supported-versions"></a>サポートされているバージョン:
 
@@ -19294,7 +19309,9 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
   #### <a name="description"></a>説明
 
-  TLS の最小限のサポート バージョンを設定します。 このポリシーを構成しない場合、Microsoft Edge では TLS 1.0 と TLS 1.1 にエラーが表示されますが、ユーザーはこれを回避することができます。
+  TLS 1.0/1.1 の警告を抑制するサポートは、バージョン 91 以降 (2021 年 5 月頃) から Microsoft Edge から削除され、このポリシーは動作を停止します。
+
+TLS の最小限のサポート バージョンを設定します。 このポリシーを構成しない場合、Microsoft Edge では TLS 1.0 と TLS 1.1 にエラーが表示されますが、ユーザーはこれを回避することができます。
 
 このポリシーを有効にすると、Microsoft Edge は指定されたバージョンより前のバージョンの SSL/TLS を使用しなくなります。 認識されない値は、無視されます。
 
@@ -19323,7 +19340,7 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
   ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
 
   - GP 固有の名前: SSLVersionMin
-  - GP 名: 最小限の TLS バージョンを有効にする
+  - GP 名: TLS の最小バージョンが有効 (非推奨)
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/
   - GP パス (推奨): なし
   - GP ADMX ファイル名: MSEdge.admx
