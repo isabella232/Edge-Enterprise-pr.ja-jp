@@ -3,7 +3,7 @@ title: Microsoft Edge ブラウザー ポリシーに関するドキュメント
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/10/2021
+ms.date: 03/12/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
-ms.openlocfilehash: 94ad135f23dae83391e873ef120e6c88b44d0e27
-ms.sourcegitcommit: e3762b1a204c143b4e2264100affae3d9ddaaffc
+ms.openlocfilehash: cecadd38a07c6be0153744657c5bef037bd665c7
+ms.sourcegitcommit: 24e26d393e87acb59300bcca6529a9be57c530cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "11406378"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "11408649"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - ポリシー
 
@@ -26,16 +26,9 @@ Microsoft Edge の更新方法とタイミングを制御するために使用�
 
 Microsoft Edge に推奨されるセキュリティ構成のベースライン設定については、[Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319) をダウンロードすることができます。 詳細については、「[Microsoft セキュリティ ベースライン ブログ](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines)」を参照してください。
 
+
 > [!NOTE]
 > この記事は Microsoft Edge version 77 以降に適用されます。
-
-## <a name="new-and-deprecated-policies"></a>新規ポリシーと非推奨になったポリシー
-
-次の表は、この更新の新規ポリシーと非推奨になったポリシーの一覧です。
-
-|名前|キャプション|
-|--|--|
-|[SSLVersionMin](#sslversionmin)|TLS の最小バージョンが有効 (非推奨)|
 
 ## <a name="available-policies"></a>使用可能なポリシー
 

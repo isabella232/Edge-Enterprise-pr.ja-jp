@@ -1,4 +1,4 @@
-# last revised 03/08/2021
+# last revised 03/11/2021
 - name: Microsoft Edge エンタープライズのドキュメント
   href: index.yml
 - name: Microsoft Edge ドキュメント
@@ -99,7 +99,7 @@
       items:
         - name: Microsoft Edge を構成する
           href: microsoft-edge-enterprise-sync.md
-        - name: Microsoft Edge 同期の問題を診断して修正する
+        - name: Microsoft Edge の同期の問題を診断して修正する
           href: microsoft-edge-troubleshoot-enterprise-sync.md
         - name: 同期に関する FAQ
           href: microsoft-edge-enterprise-sync-faq.md
@@ -191,8 +191,6 @@
           href: edge-learnmore-regex.md
         - name: Microsoft Edge データをリセットする
           href: edge-learnmore-reset-data-in-cloud.md
-        - name: ユーザー データ ディレクトリ変数
-          href: edge-learnmore-create-user-directory-vars.md
         - name: エンタープライズ向け Microsoft Edge ロールバックの使用
           href: edge-learnmore-rollback.md
 - name: Microsoft Edge ビデオ
