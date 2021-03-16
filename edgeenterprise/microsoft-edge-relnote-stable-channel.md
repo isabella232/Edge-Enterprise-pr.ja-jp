@@ -3,19 +3,19 @@ title: Stable チャネルに関する Microsoft Edge リリース ノート
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/08/2021
+ms.date: 03/15/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Stable チャネルに関する Microsoft Edge リリース ノート
-ms.openlocfilehash: bdb38513f15e0ed5d11be4e221ea9d2403d1a956
-ms.sourcegitcommit: 6d37cd6dc8618742f4729fc901fc66829dab462e
+ms.openlocfilehash: 7d08aa1d9cf1f3e04861561169d2f6a01772e5f2
+ms.sourcegitcommit: b1060a5c71174ba1d2eea91efb51232beeb97bf8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "11406238"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "11409252"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Microsoft Edge Stable チャネルのリリース ノート
 
@@ -28,6 +28,13 @@ ms.locfileid: "11406238"
 
 > [!NOTE]
 > 安定チャネルの場合、更新は 1 日以上かけて段階的に公開されます。 詳細については、「[Microsoft Edge 更新プログラムの段階的なロールアウト](microsoft-edge-update-progressive-rollout.md)」を参照してください。
+
+## <a name="version-89077454-march-13"></a>バージョン 89.0.774.54: 3 月 13 日
+
+> [!IMPORTANT]
+> この更新プログラムには [CVE-2021-21193](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21193) が含まれているが、これはクロム チームによって悪用されたと報告されています。 詳細については、「[セキュリティ更新プログラム ガイド](https://msrc.microsoft.com/update-guide)」を参照してください。
+
+安定したチャネル セキュリティ更新プログラムの一覧は[こちら](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#march-13-2021)にです。
 
 ## <a name="version-89077450-march-10"></a>バージョン 89.0.774.50: 3 月 10 日
 
