@@ -3,19 +3,19 @@ title: Beta チャネルに関する Microsoft Edge のリリース ノート
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/15/2021
+ms.date: 03/16/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Beta チャネルに関する Microsoft Edge のリリース ノート
-ms.openlocfilehash: 6682bbc1ea92a8b78a82507424814e2f3db4fcfd
-ms.sourcegitcommit: b1060a5c71174ba1d2eea91efb51232beeb97bf8
+ms.openlocfilehash: 3c1b87b2ecaf68acf0bca447553b25d0b202e7ea
+ms.sourcegitcommit: ceecf4d9baf9dc677652ca07a6d2f2e17ef5b3b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "11409242"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "11440308"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Microsoft Edge Beta チャネルのリリースノート
 
@@ -23,6 +23,50 @@ ms.locfileid: "11409242"
 
 > [!NOTE]
 > Microsoft Edge Beta [バージョン 89.0.774.18: 2 月 3 日](#version-89077418-february-3)のリリース ノートを更新して、リリースされた機能を反映させました。
+
+<!-- begin major 90 -->
+## <a name="version-90081808-march-16"></a>バージョン 90.0.818.08: 3 月 16 日
+
+### <a name="feature-updates"></a>機能更新プログラム
+
+- **シングル サインオン (SSO) は、Mac OS の Azure Active Directory (Azure AD) アカウントと Microsoft アカウント (MSA) で利用できます**。 mac OS で Microsoft Edge にサインインしたユーザーは、Work アカウントと Microsoft アカウント (bing.com、office.com、msn.com、および outlook.com など) でシングル サインオンを許可するように構成された Web サイトに自動的にサインインします。
+
+- **印刷**
+
+  - **PostScript プリンターではないプリンター向けの新しい印刷ラスタライズ モード**。 Microsoft Edge バージョン 90 より、管理者は新しいポリシーを使用して、ユーザーの印刷ラスタライズ モードを定義できます。 このポリシーは、Windows の PostScript プリンターではないプリンターから Microsoft Edge で印刷する方法を制御します。  PostScript プリンターではないプリンターの印刷ジョブが正しく印刷されるようにラスター化する必要がある場合があります。 印刷オプションには「フル」と 「高速」が表示されます。
+
+  - **追加された、印刷用のページ拡大/縮小オプション**。 追加オプションを使用すると、ユーザーは Web ページおよび PDF ドキュメントを印刷する際に、スケーリングをカスタマイズできるようになりました。[ページに合わせる] オプションを使用すると、Web ページまたはドキュメントを選択した「用紙サイズ」の範囲内に確実に収めることができます。  「実際のサイズ」オプションを選択すと、選択した「用紙サイズ」に関係なく、印刷されるコンテンツのサイズに変更が加えられないようにします。
+
+- **生産性:**
+
+  - **オートフィル候補が拡張され、クリップボードのアドレス フィールドのコンテンツが含まれるようになりました**。 クリップボードの内容は、オートフィル候補として表示するプロフィール フィールドまたはアドレス フィールド (電話番号、メールアドレス、郵便番号、市区町間、州など) をクリックすると解析されます。
+
+  - **ユーザーは、フォームやフィールドが候補として検出されない場合でも、オートフィル候補を検索できます**。 現在、Microsoft Edge に情報を保存している場合、オートフィル候補が自動的にポップアップ表示され、フォームに入力する時間を節約できます。 オートフィルでフォームが見つからない場合や、通常オートフィルを設定しないフォーム (一時的なフォームなど) のデータを取得する場合は、オートフィルを使用して情報を検索することができます。
+
+- **Access はメニュー バーのフライアウトからダウンロードしています**。 ダウンロードは右上隅に表示され、アクティブなすべてのダウンロードが 1 か所に表示されます。 このメニューは簡単に閉じることができるので、ユーザーは作業を中断することなく、閲覧を続けることができます。また、ダウンロードの全体的な進行状況をツールバーからすぐに監視できます。 [詳しくはこちらをご覧ください](https://techcommunity.microsoft.com/t5/articles/introducing-the-new-downloads-experience/m-p/2111551)。
+
+- **フォント レンダリングパフォーマンスの改善**。 Microsoft Edge バージョン 90 より、テキストのレンダリング機能が改善され、テキストの明瞭度が向上し、ぼやけた感じが軽減されました。 フォント レンダリングの改善の一部はベータ バージョン 90 にて適用されますが、既定では無効になっています。
+
+
+### <a name="policy-updates"></a>ポリシーの更新
+
+#### <a name="new-policies"></a>新しいポリシー
+
+7 個の新しいポリシーが追加されました。 更新された管理用テンプレートを、[Microsoft Edge Enterprise のランディング ページ](https://www.microsoft.com/edge/business/download)からダウンロードしてください。 次の新しいポリシーが追加されました。
+
+- [ApplicationGuardFaitesSyncEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#applicationguardfavoritessyncenabled) - Application Guard のお気に入りの同期の有効化
+- [ManagedConfigurationPerOrigin](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#managedconfigurationperorigin) - Web サイトの管理された構成値を特定のオリジンに設定する
+- [PrintRasterizationMode](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#printrasterizationmode) - 印刷ラスタライズ モード
+- [QuickViewOfficeFilesEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#quickviewofficefilesenabled) - Microsoft Edge で QuickView Office ファイル機能を管理する
+- [SSLErrorOvererrorallowedForOrigins](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sslerroroverrideallowedfororigins) - 特定の生成元の HTTPS 警告ページからユーザーが進むのを許可する
+- [WindowOcclusionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#windowocclusionenabled) - Window Occlusion を有効にする
+- [WindowsHelloForHTTPAuthEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#windowshelloforhttpauthenabled) - HTTP 認証用 Windows Hello を有効にする
+
+#### <a name="deprecated-policies"></a>廃止されたポリシー
+
+- [NativeWindowOcclusionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#nativewindowocclusionenabled) - ネイティブ ウィンドウ オクルージョンを有効にする。
+- [SSLVersionMin](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sslversionmin)- 最小限の TLS バージョンを有効になっています
+<!-- end major 90 -->
 
 ## <a name="version-89077454-march-13"></a>バージョン 89.0.774.54: 3 月 13 日
 
