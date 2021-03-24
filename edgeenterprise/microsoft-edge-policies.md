@@ -3,7 +3,7 @@ title: Microsoft Edge ブラウザー ポリシーに関するドキュメント
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/12/2021
+ms.date: 03/18/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
-ms.openlocfilehash: cecadd38a07c6be0153744657c5bef037bd665c7
-ms.sourcegitcommit: 24e26d393e87acb59300bcca6529a9be57c530cf
+ms.openlocfilehash: 4935b927081ef1823ecf36b922948992926d4005
+ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2021
-ms.locfileid: "11408649"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "11442477"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - ポリシー
 
@@ -29,6 +29,16 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 
 > [!NOTE]
 > この記事は Microsoft Edge version 77 以降に適用されます。
+
+## <a name="new-policies"></a>新しいポリシー
+
+次の表に、この更新プログラムの新しいポリシーを示します。
+
+|名前|キャプション|
+|--|--|
+|[NewTabPageQuickLinksEnabled](#newtabpagequicklinksenabled)|新しいタブ ページでクイック リンクを許可する|
+|[FetchKeepaliveDurationOnShutdown](#fetchkeepalivedurationonshutdown)|シャットダウン時にキープアライブ期間をフェッチする|
+
 
 ## <a name="available-policies"></a>使用可能なポリシー
 
@@ -231,6 +241,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[NewTabPageLocation](#newtabpagelocation)|新規タブ ページの URL を構成する|
 |[NewTabPageManagedQuickLinks](#newtabpagemanagedquicklinks)|新規タブ ページのクイック リンクを設定する|
 |[NewTabPagePrerenderEnabled](#newtabpageprerenderenabled)|新しいタブ ページの事前読み込みを有効にしてレンダリングを高速化する|
+|[NewTabPageQuickLinksEnabled](#newtabpagequicklinksenabled)|新しいタブ ページでクイック リンクを許可する|
 |[NewTabPageSetFeedType](#newtabpagesetfeedtype)|Microsoft Edge の新規タブ ページのエクスペリエンスを設定する (非推奨)|
 |[RestoreOnStartup](#restoreonstartup)|起動時に実行する操作|
 |[RestoreOnStartupURLs](#restoreonstartupurls)|ブラウザーの起動時に開くサイト|
@@ -321,7 +332,8 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol)|Experimentation and Configuration Service との通信を制御する|
 |[ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox)|外部プロトコル ダイアログで [常に開く] チェックボックスを表示する|
 |[FamilySafetySettingsEnabled](#familysafetysettingsenabled)|ユーザーがファミリー セーフティとキッズ モードを構成できるようにする|
-|[FavoritesBarEnabled](#favoritesbarenabled)|お気に入り バーを有効にする|
+|[FavoritesBarEnabled](#favoritesbarenabled)|お気に入りバーを有効にする|
+|[FetchKeepaliveDurationOnShutdown](#fetchkeepalivedurationonshutdown)|シャットダウン時にキープアライブ期間をフェッチする|
 |[ForceBingSafeSearch](#forcebingsafesearch)|Bing セーフサーチを強制する|
 |[ForceCertificatePromptsOnMultipleMatches](#forcecertificatepromptsonmultiplematches)|"AutoSelectCertificateForUrls" が構成されているサイトに対して複数の証明書が一致する場合、Microsoft Edge が自動的に証明書を選択するかどうかを構成する|
 |[ForceEphemeralProfiles](#forceephemeralprofiles)|短期プロファイルの使用を有効にする|
@@ -8454,6 +8466,70 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 
   [ページのトップへ](#microsoft-edge---policies)
 
+  ### <a name="newtabpagequicklinksenabled"></a>NewTabPageQuickLinksEnabled
+
+  #### <a name="allow-quick-links-on-the-new-tab-page"></a>新しいタブ ページでクイック リンクを許可する
+
+  
+  
+  #### <a name="supported-versions"></a>サポートされているバージョン:
+
+  - 91 以降の Windows および macOS の場合
+
+  #### <a name="description"></a>説明
+
+  このポリシーを有効または構成しない場合、Microsoft Edge は新しいタブ ページにクイック リンクを表示し、ユーザーはコントロールを操作してクイック リンクのオンとオフを切り替えます。 このポリシーを有効にすると、クイック リンクが強制的に表示されるのではなく、ユーザーはクイック リンクのオンとオフを切り替え続けられます。
+
+このポリシーを無効にすると、Microsoft Edge は新しいタブ ページのクイック リンクを非表示にし、NTP 設定のフライアウトでクイック リンク コントロールを無効にします。
+
+このポリシーは、Microsoft Edge ローカル ユーザー プロファイル、Microsoft アカウントを使用してサインインしたプロファイル、Active Directory を使用してサインインしたプロファイルにのみ適用されます。 Azure Active Directory を使用してサインインしているプロファイルの Enterprise 新しいタブ ページを構成するには、M365 管理ポータルを使用します。
+
+関連ポリシー: [NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes)
+
+  #### <a name="supported-features"></a>サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### <a name="data-type"></a>［データの種類］:
+
+  - ブール値
+
+  #### <a name="windows-information-and-settings"></a>Windows の情報と設定
+
+  ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
+
+  - GP 一意の名前: NewTabPageQuickLinksEnabled
+  - GP 名: 新しいタブ ページでクイック リンクを許可する
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/スタートアップ、ホーム ページ、新しいタブ ページ
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - 値の名前: NewTabPageQuickLinksEnabled
+  - 値の種類: REG_DWORD
+
+  ##### <a name="example-value"></a>サンプル値:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac の情報と設定
+  
+  - 基本設定キーの名前: NewTabPageQuickLinksEnabled
+  - サンプル値:
+``` xml
+<true/>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
   ### <a name="newtabpagesetfeedtype"></a>NewTabPageSetFeedType
 
   #### <a name="configure-the-microsoft-edge-new-tab-page-experience-deprecated"></a>Microsoft Edge の新規タブ ページのエクスペリエンスを設定する (非推奨)
@@ -14376,6 +14452,68 @@ Microsoft Edge 84 以降、このポリシーを構成しない場合、外部�
 
   [ページのトップへ](#microsoft-edge---policies)
 
+  ### <a name="fetchkeepalivedurationonshutdown"></a>FetchKeepaliveDurationOnShutdown
+
+  #### <a name="fetch-keepalive-duration-on-shutdown"></a>シャットダウン時にキープアライブ期間をフェッチする
+
+  
+  
+  #### <a name="supported-versions"></a>サポートされているバージョン:
+
+  - Windows と macOS での 90 以降
+
+  #### <a name="description"></a>説明
+
+  ブラウザーがシャットダウンを完了できないようにするために、キープアライブ要求が許可される期間 (秒単位) を制御します。
+
+このポリシーを構成すると、ブラウザーは、未処理のキープアライブ要求を処理している間、シャットダウンの完了をブロックします (このポリシーで指定された最大期間まで https://fetch.spec.whatwg.org/#request-keepalive-flag) を参照してください)。
+
+このポリシーを無効にするか構成しない場合は、既定値の 0 秒が使用され、ブラウザーのシャットダウン中に未処理のキープアライブ要求が直ちに取り消されます。
+
+  #### <a name="supported-features"></a>サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### <a name="data-type"></a>［データの種類］:
+
+  - Integer
+
+  #### <a name="windows-information-and-settings"></a>Windows の情報と設定
+
+  ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
+
+  - GP 固有の名前: FetchKeepaliveDurationOnShutdown
+  - GP 名: シャットダウン時にキープアライブ期間をフェッチする
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - 値の名前: FetchKeepaliveDurationOnShutdown
+  - 値の種類: REG_DWORD
+
+  ##### <a name="example-value"></a>サンプル値:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac の情報と設定
+  
+  - 基本設定キーの名前: FetchKeepaliveDurationOnShutdown
+  - サンプル値:
+``` xml
+<integer>1</integer>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
   ### <a name="forcebingsafesearch"></a>ForceBingSafeSearch
 
   #### <a name="enforce-bing-safesearch"></a>Bing セーフサーチを強制する
@@ -15102,7 +15240,11 @@ Microsoft Edge の既定の参照元ポリシーは、no-referrer-when-downgrade
 
   #### <a name="description"></a>説明
 
-  この一覧で指定されたホスト名は、"http://" から "https://" へと要求をアップグレードする可能性のある HSTS ポリシー チェックの対象外となります。 このポリシーでは、単一ラベルのホスト名のみが許可されます。 ホスト名は正規化する必要があります。 すべての IDN は A ラベル形式に変換され、すべての ASCII 文字は小文字である必要があります。 このポリシーは指定された特定のホスト名にのみ適用され、リスト内の名前のサブドメインには適用されません。
+  ポリシーを設定すると、プリロードされた HSTS アップグレードを http から https にバイパスするホスト名の一覧が指定されます。
+
+このポリシーでは単一ラベルのホスト名だけが許可され、このポリシーは静的な HSTS プリロードされたエントリ ("app"、"new"、"search"、"play" など) にのみ適用されます。 このポリシーは、Strict-Transport-Security 応答ヘッダーを使用して HSTS アップグレードを動的に要求したサーバーの HSTS アップグレードを防止しません。
+
+指定されたホスト名は正規化する必要があります: すべての IDN を A ラベル形式に変換し、すべての ASCII 文字を小文字にする必要があります。 このポリシーは、指定された特定の単一ラベル ホスト名にのみ適用されます。これらの名前のサブドメインには適用されません。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -16819,7 +16961,9 @@ Internet Explorer モードの詳細については、「[https://go.microsoft.c
 
 さらに、[Open sites in Edge mode] (Microsoft Edge モードでサイトを開く) オプションを使用すると、サイトの一覧からアプリケーションを削除することなく最新のブラウザーでアプリケーションをテストすることができます。
 
-この設定は、"IEMode" に設定されている [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) と、一覧に少なくとも 1 つのエントリがある [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) ポリシーと連動します。
+この設定は、次と連携して機能します。[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) は「IEMode」に設定されます。
+   
+                                                                                                                         
 
 このポリシーを有効にすると、[その他のツール] の下に [Open sites in Internet Explorer mode] (Internet Explorer モードでサイトを開く) というオプションが表示されます。 ユーザーは、このタブ上で Internet Explorer モードを使用してサイトを表示することができます。サイト一覧からサイトを削除することなく最新のブラウザーでサイトをテストする場合に役立つように、[Open sites in Edge mode] (Microsoft Edge モードでサイトを開く) という別のオプションも [その他のツール] の下に表示されます。
 
