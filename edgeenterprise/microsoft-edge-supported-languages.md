@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Windows と macOS の Microsoft Edge 表示言語のサポート。
-ms.openlocfilehash: af8d2a57d35411600237d09ad528c7b071228d21
-ms.sourcegitcommit: 2b902ecf31430f3fc75d3731f26255aea0bb937e
+ms.openlocfilehash: 37073213fcdacac6b8182dcbef93901c82110756
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "11406162"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447101"
 ---
 # <a name="microsoft-edge-language-support"></a><span data-ttu-id="16002-103">Microsoft Edge の言語サポート</span><span class="sxs-lookup"><span data-stu-id="16002-103">Microsoft Edge language support</span></span>
 
@@ -156,5 +156,5 @@ ms.locfileid: "11406162"
 
 ## <a name="see-also"></a><span data-ttu-id="16002-385">関連項目</span><span class="sxs-lookup"><span data-stu-id="16002-385">See also</span></span>
 
-- [<span data-ttu-id="16002-386">Microsoft Edge ドキュメント</span><span class="sxs-lookup"><span data-stu-id="16002-386">Microsoft Edge documentation</span></span>](https://docs.microsoft.com/DeployEdge/)
+- [<span data-ttu-id="16002-386">Microsoft Edge ドキュメント</span><span class="sxs-lookup"><span data-stu-id="16002-386">Microsoft Edge documentation</span></span>](./index.yml)
 - [<span data-ttu-id="16002-387">Microsoft Edge Enterprise ランディング ページ</span><span class="sxs-lookup"><span data-stu-id="16002-387">Microsoft Edge Enterprise landing page</span></span>](https://aka.ms/EdgeEnterprise)

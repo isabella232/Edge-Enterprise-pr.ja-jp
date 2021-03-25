@@ -12,12 +12,12 @@ metadata:
   author: dan-wesley
   ms.author: kvice
   ms.date: 02/02/2021
-  ms.openlocfilehash: 75aa2514ec19bd54bea0e785efcef8f89561d334
-  ms.sourcegitcommit: 231727b0f42bc0b7af49cb3290692aa7e420502a
+  ms.openlocfilehash: 807aaa38da97222da8d52e36ad55995ef1c44e80
+  ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 02/04/2021
-  ms.locfileid: "11312867"
+  ms.lasthandoff: 03/24/2021
+  ms.locfileid: "11448141"
 landingContent:
 - title: エンタープライズ環境での Microsoft Edge について
   linkLists:
@@ -31,7 +31,7 @@ landingContent:
       url: edge-ie-mode.md
   - linkListType: video
     links:
-    - text: Microsoft Edge のビデオ
+    - text: Microsoft Edge ビデオ
       url: microsoft-edge-videos.md
     - text: Microsoft Edge YouTube チャネル
       url: https://www.youtube.com/channel/UCIGx7oT8p6-jUpOfg98yelA
@@ -44,9 +44,9 @@ landingContent:
     - text: ビデオ - Microsoft Edge の展開
       url: microsoft-edge-video-deploy.md
     - text: Windows に展開する
-      url: https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json
+      url: /configmgr/apps/deploy-use/deploy-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
     - text: macOS に展開する
-      url: https://docs.microsoft.com/intune/apps/apps-edge-macos/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json
+      url: /intune/apps/apps-edge-macos/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
 - title: Microsoft Edge を構成する
   linkLists:
   - linkListType: how-to-guide
@@ -75,13 +75,13 @@ landingContent:
       url: microsoft-edge-policies.md
     - text: 更新ポリシー リファレンス
       url: microsoft-edge-update-policies.md
-    - text: WebView2 ポリシー リファレンス
+    - text: WebView2 ポリシーリファレンス
       url: microsoft-edge-webview-policies.md
     - text: ポリシー マッピングの概要
       url: microsoft-edge-policy-map-overview.md
     - text: Microsoft Office セキュリティ ベースライン ブログ
       url: https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines
-- title: コミュニティと関わるか、ヘルプを受ける
+- title: コミュニティに参加するか、ヘルプを受ける
   linkLists:
   - linkListType: get-started
     links:
@@ -91,5 +91,5 @@ landingContent:
       url: https://microsoftedgesupport.microsoft.com/hc/
   - linkListType: learn
     links:
-    - text: セキュリティリサーチ ャー コミュニティ
+    - text: セキュリティ研究者コミュニティ
       url: https://microsoftedge.github.io/edgevr/

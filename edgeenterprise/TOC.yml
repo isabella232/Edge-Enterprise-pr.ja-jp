@@ -2,7 +2,7 @@
 - name: Microsoft Edge エンタープライズのドキュメント
   href: index.yml
 - name: Microsoft Edge ドキュメント
-  href: 'https://docs.microsoft.com/microsoft-edge/'
+  href: /microsoft-edge/
 - name: Microsoft Edge コンテンツの更新プログラム
   href: microsoft-edge-content-updates.md
 - name: Microsoft Edge の使用を開始する
@@ -14,7 +14,7 @@
     - name: 顧客導入資料
       href: microsoft-edge-customer-adoption-kit.md
     - name: ドキュメントのリソースを探す
-      href: 'https://docs.microsoft.com/microsoft-edge/'
+      href: /microsoft-edge/
     - name: Microsoft Edge の実践的な展開ラボ
       href: deploy-edge-hands-on-lab.md
     - name: Windows Blogs - Microsoft Edge 開発者
@@ -27,6 +27,8 @@
       href: deploy-edge-plan-deployment.md
     - name: ユーザー環境内の Microsoft Edge
       href: deploy-edge-prepare-to-deploy.md
+    - name: Microsoft ブラウザー使用状況レポート
+      href: microsoft-edge-browser-usage-report.md
     - name: Microsoft Edge の準備完了
       href: deploy-edge-ready-for-edge.md
     - name: Stable チャネルのリリース ノート
@@ -66,19 +68,19 @@
     - name: Windows 10 更新プログラムを適用した Microsoft Edge の展開
       href: deploy-edge-with-windows-10-updates.md
     - name: Configuration Manager による Windows への展開
-      href: 'https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
+      href: /configmgr/apps/deploy-use/deploy-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
     - name: Intune による Windows への展開
-      href: 'https://docs.microsoft.com/intune/apps/apps-windows-edge/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
+      href: /intune/apps/apps-windows-edge/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
     - name: Jamf による macOS への展開
       href: deploy-edge-mac-jamf.md
     - name: Intune による macOS への展開
-      href: 'https://docs.microsoft.com/intune/apps/apps-edge-macos/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
+      href: /intune/apps/apps-edge-macos/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
 - name: Microsoft Edge を構成する
   items:
     - name: Windows 用に構成する
       href: configure-microsoft-edge.md
     - name: Intune で Windows 用に構成する
-      href: 'https://docs.microsoft.com/mem/intune/configuration/administrative-templates-configure-edge/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
+      href: /mem/intune/configuration/administrative-templates-configure-edge/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
     - name: モバイル デバイス管理で Windows 用に構成する
       href: configure-edge-with-mdm.md
     - name: .plist を使用して macOS 用に構成する
@@ -158,7 +160,7 @@
     - name: プライバシー設定を構成する
       href: microsoft-edge-enterprise-privacy-settings.md
     - name: Microsoft Edge プライバシー ホワイトペーパー
-      href: 'https://docs.microsoft.com/microsoft-edge/privacy-whitepaper'
+      href: /microsoft-edge/privacy-whitepaper
 - name: Microsoft Edge リファレンス
   items:
     - name: ブラウザー ポリシー リファレンス
