@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: レガシ バージョンの Microsoft Edge にアクセスする方法について説明します。
-ms.openlocfilehash: 00f4a29c9a2bed137b339c8b5ef43eb213d33ee4
-ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
+ms.openlocfilehash: b521ab9ea093b62db7268e6bf2f4d656b3dc8d4b
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "11313897"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447091"
 ---
-# Microsoft Edge の新しいバージョンをインストールした後 Microsoft Edge レガシにアクセスする
+# <a name="access-microsoft-edge-legacy-after-installing-the-new-version-of-microsoft-edge"></a>Microsoft Edge の新しいバージョンをインストールした後 Microsoft Edge レガシにアクセスする
 
 Microsoft Edge レガシは、2021 年 3 月 9 日にセキュリティ更新プログラムの受信を停止します。 Microsoft Edge レガシには、4 月 13 日までアクセスできます。 詳細については、Microsoft Edge 製品チームの[ブログ投稿](https://aka.ms/EdgeLegacyEOS)を 参照してください。
 
@@ -34,13 +34,13 @@ Microsoft Edge レガシは、2021 年 3 月 9 日にセキュリティ更新プ
 >
 > Microsoft Edge 従来版のデスクトップ アプリのサポートは 2021 年 3 月 9 日に終了し、新しい Microsoft Edge に完全に移行します。 つまり、この日以降、Microsoft Edge 従来版にはセキュリティ更新プログラムが送信されなくなります。 この変更は、Microsoft Edge 従来版のデスクトップ アプリで実行されるすべてのエクスペリエンスに適用されます。 [詳しくはこちらをご覧ください](https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666)。
 
-## 始める前に
+## <a name="before-you-begin"></a>始める前に
 > [!NOTE]
 > Windows 10 バージョン 20H2 から、Microsoft Edge 従来版は含まれなくなりました。 Windows 10 のこのバージョンから、並べて表示エクスペリエンスはサポートされていません。
 
 この記事の手順は、最新のセキュリティ更新プログラムで更新されたシステムに適用されます。 Microsoft Edge の新しいバージョンがインストールされると、古いバージョン (Microsoft Edge レガシ) が非表示になります。 既定では、ユーザーが古いバージョンを起動しようとすると常に、新しくインストールされたバージョンの Microsoft Edge にリダイレクトされます。 この記事では、Microsoft Edge をインストールした後も Microsoft Edge レガシを引き続き使用できるようにする方法を説明します。
 
-## クイック スタート: Microsoft Edge Beta チャネルと Microsoft Edge 従来版の同時実行エクスペリエンス
+## <a name="quickstart-side-by-side-experience-with-microsoft-edge-beta-channel-and-microsoft-edge-legacy"></a>クイック スタート: Microsoft Edge Beta チャネルと Microsoft Edge 従来版の同時実行エクスペリエンス
 
 この記事の詳細な手順を実行する前に、ユーザーが Microsoft Edge 従来版と Microsoft Edge [Beta チャネル](microsoft-edge-channels.md)を同時に実行できるようにするために、次の 2 つの手順を実行することを検討してください。
 
@@ -52,13 +52,13 @@ Microsoft Edge レガシは、2021 年 3 月 9 日にセキュリティ更新プ
 
 この同時実行ソリューションは、この記事で説明する詳細な解決方法に比べてシンプルで、管理作業も少なくて済みます。 ただし、このソリューションは、Stable チャネルより Beta チャネルを実行する方が望ましいという意味ではありません。
 
-## Microsoft Edge Stable チャネルと Microsoft Edge 従来版の同時実行エクスペリエンス
+## <a name="side-by-side-experience-with-microsoft-edge-stable-channel-and-microsoft-edge-legacy"></a>Microsoft Edge Stable チャネルと Microsoft Edge 従来版の同時実行エクスペリエンス
 
 次のバージョンの Microsoft Edge の Stable チャネルをシステムレベルでインストールすると、現在のバージョン (Microsoft Edge レガシ) が非表示になります。 Windows で Microsoft Edge の両方のバージョンの同時実行をユーザーに許可する場合は、[**Microsoft Edge でのブラウザーの同時実行エクスペリエンスを許可する**] グループ ポリシーを [**有効**] に設定すると、このエクスペリエンスを有効にできます。
 
-このグループポリシーについては、[こちら](https://docs.microsoft.com/deployedge/microsoft-edge-update-policies#allowsxs)をご覧ください。
+このグループポリシーについては、[こちら](./microsoft-edge-update-policies.md#allowsxs)をご覧ください。
 
-### ブラウザーの同時実行エクスペリエンスをセットアップするには、次の手順を実行します。
+### <a name="to-set-up-the-side-by-side-browser-experience-policy"></a>ブラウザーの同時実行エクスペリエンスをセットアップするには、次の手順を実行します。
 
 1. [Microsoft Edge For Business](https://www.microsoft.com/edge/business/download) からポリシー定義をインストールします。
 
@@ -86,7 +86,7 @@ Microsoft Edge レガシは、2021 年 3 月 9 日にセキュリティ更新プ
 - キーの値:  `Allowsxs`
 - 値の種類:  `'REG_DWORD'`
 
-#### ベスト プラクティス ガイダンス
+#### <a name="best-practice-guidance"></a>ベスト プラクティス ガイダンス
 
 最良のエクスペリエンスを得るには、新しいバージョンの Microsoft Edge をユーザーのデバイスに展開する前に、**[Microsoft Edge でのブラウザーの同時実行エクスペリエンスを許可する]** を有効にする必要があります。
 
@@ -100,7 +100,7 @@ Microsoft Edge が展開された後でグループ ポリシーが有効にな�
 2. 新しいバージョンの Microsoft Edge が展開されたときにピン留めが移行されるため、Microsoft Edge レガシはスタート画面またはタスク バーに再度ピン留めする必要があります。
 3. Microsoft Edge レガシ用にスタート画面またはタスク バーにピン留めされたサイトは、新しいバージョンの Microsoft Edge に移行されます。
 
-## 追加情報
+## <a name="additional-information"></a>追加情報
 
 システムが完全に更新され、次のバージョンの Microsoft Edge の Stable チャネルがインストールされた後、次のレジストリ キーと値が設定されます。
 
@@ -110,7 +110,7 @@ Microsoft Edge が展開された後でグループ ポリシーが有効にな�
   > [!IMPORTANT]
   > このキーは、Microsoft Edge Stable チャネルが更新されるたびに上書きされます。 ベスト プラクティスとしては、ユーザーが両方のバージョンの Microsoft Edge にアクセスできるように、このキーを削除しないことをお勧めします。
 
-## 関連項目
+## <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
 - [Microsoft Edge をサポートする Windows 更新プログラム](microsoft-edge-sysupdate-windows-updates.md)

@@ -10,21 +10,21 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 'コマンド ライン オプションを使用してプロキシ設定を構成する '
-ms.openlocfilehash: b5e2326e075ad89481560a6642944a8e88f4daa3
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: d0924f723aab6832e5b4eb70c60e1d329d3c7a9d
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980500"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447641"
 ---
-# Microsoft Edge コマンド ライン オプションを使用してプロキシ設定を構成する方法
+# <a name="how-to-use-microsoft-edge-command-line-options-to-configure-proxy-settings"></a>Microsoft Edge コマンド ライン オプションを使用してプロキシ設定を構成する方法
 
 この記事では、コマンド ライン オプションを使用して既定のシステム ネットワーク設定を上書きする方法について説明します。
 
 >[!NOTE]
 >この記事は、Microsoft Edge version 77 以降に適用されます。
 
-## システム ネットワーク設定
+## <a name="system-network-settings"></a>システム ネットワーク設定
 
 Microsoft Edge ネットワーク スタックでは、既定でシステムのネットワーク設定が使用されます。 この設定には、*プロキシ設定*と、*証明書ストアと秘密キー ストア*が含まれます。
 
@@ -32,13 +32,13 @@ Microsoft Edge ネットワーク スタックでは、既定でシステムの�
 
 これらのコマンド ライン オプションは、**プロキシ サーバー** グループの以下のポリシーに対応しています。
 
-- [ProxyBypassList](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxybypasslist)
-- [ProxyMode](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxymode)
-- [ProxyPacUrl](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxypacurl)
-- [ProxyServer](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxyserver)
-- [ProxySettings](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxysettings)
+- [ProxyBypassList](./microsoft-edge-policies.md#proxybypasslist)
+- [ProxyMode](./microsoft-edge-policies.md#proxymode)
+- [ProxyPacUrl](./microsoft-edge-policies.md#proxypacurl)
+- [ProxyServer](./microsoft-edge-policies.md#proxyserver)
+- [ProxySettings](./microsoft-edge-policies.md#proxysettings)
 
-## プロキシ設定用のコマンド ライン オプション
+## <a name="command-line-options-for-proxy-settings"></a>プロキシ設定用のコマンド ライン オプション
 
 Microsoft Edge では、プロキシに関連する以下のコマンド ライン オプションがサポートされています。
 
@@ -72,14 +72,14 @@ Microsoft Edge では、プロキシに関連する以下のコマンド ライ�
 
 指定された URL の PAC ファイルを使用するように Microsoft Edge に指示します。 たとえば `--proxy-pac-url="https://wpad/proxy.pac"` は、**proxy.pac** ファイルを使用して URL 要求のプロキシ情報を解決するように Microsoft Edge に指示します。
 
-## コンテンツ ライセンス
+## <a name="content-license"></a>コンテンツ ライセンス
 
 > [!NOTE]
 > このページの一部の情報は、Chromium.org によって作成および共有されている著作物に基づいており、[Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/) に記載されている条項に従って使用されています。 元のページは[こちら](https://www.chromium.org/developers/design-documents/network-settings#TOC-Command-line-options-for-proxy-sett)です。
   
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />この著作物は、<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a> に従って使用許諾されています。
 
-## 関連項目
+## <a name="see-also"></a>関連項目
 
 - 高度な構成設定とその他のオプションについては、Chromium Open Source プロジェクトの[プロキシに関するドキュメント](https://chromium.googlesource.com/chromium/src/+/HEAD/net/docs/proxy.md)をご覧ください。
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)

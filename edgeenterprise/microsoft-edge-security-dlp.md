@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge (DLP) でのデータ損失防止
-ms.openlocfilehash: f25e1fa7a610645f6ca0ca10cbcfc69ae8689b7a
-ms.sourcegitcommit: f14286edec59ee9183bdf38c15fc890881efd64f
+ms.openlocfilehash: ac34386ed1b691d7b45f30c2b2ec295955d11104
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "11384985"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447931"
 ---
 # <a name="data-loss-prevention-dlp-in-microsoft-edge"></a>Microsoft Edge (DLP) でのデータ損失防止
 
@@ -37,8 +37,8 @@ Microsoft エンドポイント DLP は、データ中心の保護などの先�
 エンドポイントの DLP の詳細については、次のリソースを使用してください。
 
 - [ビデオ: Microsoft Edge とデータ損失防止 (DLP)](microsoft-edge-video-security-dlp.md)
-- [Microsoft 365 エンドポイントのデータ損失防止について](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide&preserve-view=true)
-- [エンドポイントのデータ損失防止の使用を開始する](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-getting-started?view=o365-worldwide&preserve-view=true)
+- [Microsoft 365 エンドポイントのデータ損失防止について](/microsoft-365/compliance/endpoint-dlp-learn-about?preserve-view=true&view=o365-worldwide)
+- [エンドポイントのデータ損失防止の使用を開始する](/microsoft-365/compliance/endpoint-dlp-getting-started?preserve-view=true&view=o365-worldwide)
 
 Microsoft Edge は、管理者が構成した機密ファイル用のポリシーを強制し、非準拠アクティビティの監査イベントを記録します。
 
@@ -49,19 +49,19 @@ Windows 10 を実行しているデバイスで監査および管理できるユ
 - 印刷の保護: 機密ファイルが印刷されないように保護します。
 - USB/ネットワークへの保存: 機密ファイルがリムーバブル USB ストレージや許可されていないネットワークの場所に保存されないように保護します。
 
-監査や管理が可能なユーザー アクティビティの詳細については、「[Endpoint activities you can monitor and take action on (監視したり、アクションを実行したりできるエンドポイント アクティビティ)](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide#endpoint-activities-you-can-monitor-and-take-action-on&preserve-view=true)」を参照してください。
+監査や管理が可能なユーザー アクティビティの詳細については、「[Endpoint activities you can monitor and take action on (監視したり、アクションを実行したりできるエンドポイント アクティビティ)](/microsoft-365/compliance/endpoint-dlp-learn-about?preserve-view=true&view=o365-worldwide#endpoint-activities-you-can-monitor-and-take-action-on)」を参照してください。
 
 ## <a name="windows-information-protection"></a>Windows 情報保護
 
-Microsoft Edge が Windows 情報保護 (WIP) をどのようにサポートしているかについては、「[Windows Information Protection のサポート](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection)」をご覧ください。 システム要件、メリット、サポートされている機能については、次のセクションを参照してください。
+Microsoft Edge が Windows 情報保護 (WIP) をどのようにサポートしているかについては、「[Windows Information Protection のサポート](./microsoft-edge-security-windows-information-protection.md)」をご覧ください。 システム要件、メリット、サポートされている機能については、次のセクションを参照してください。
 
-- [システム要件](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection#system-requirements)
-- [Windows 情報保護のメリット](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection#windows-information-protection-benefits)
-- [Microsoft Edge でサポートされている WIP の機能](https://docs.microsoft.com/DeployEdge/microsoft-edge-security-windows-information-protection#wip-features-supported-in-microsoft-edge)
+- [システム要件](./microsoft-edge-security-windows-information-protection.md#system-requirements)
+- [Windows 情報保護のメリット](./microsoft-edge-security-windows-information-protection.md#windows-information-protection-benefits)
+- [Microsoft Edge でサポートされている WIP の機能](./microsoft-edge-security-windows-information-protection.md#wip-features-supported-in-microsoft-edge)
 
 ## <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
 - [ビデオ: Microsoft Edge でのデータ損失防止](https://www.youtube.com/watch?v=dLD04U9eTqg)
-- [データ損失防止の概要](https://docs.microsoft.com/microsoft-365/compliance/data-loss-prevention-policies?view=o365-worldwide&preserve-view=true)
-- [Windows 情報保護を使用して企業データを保護する](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
+- [データ損失防止の概要](/microsoft-365/compliance/data-loss-prevention-policies?preserve-view=true&view=o365-worldwide)
+- [Windows 情報保護を使用して企業データを保護する](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)

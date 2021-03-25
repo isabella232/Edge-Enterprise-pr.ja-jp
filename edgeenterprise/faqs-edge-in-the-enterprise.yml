@@ -11,17 +11,17 @@ metadata:
   ms.localizationpriority: high
   ms.collection: M365-modern-desktop
   description: エンタープライズでの Microsoft Edge の展開に関するよく寄せられる質問 (FAQ)
-  ms.openlocfilehash: d7098666c67d1b88fc6f7e0910c8793315e750cc
-  ms.sourcegitcommit: 0bd67aa982613f663e6840929a769fc88d5a6b4d
+  ms.openlocfilehash: 6a0a3c508f36318c080b6ccc62271b0d79bb9630
+  ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 03/05/2021
-  ms.locfileid: "11393780"
+  ms.lasthandoff: 03/24/2021
+  ms.locfileid: "11448151"
 title: エンタープライズでの Microsoft Edge に関するよく寄せられる質問 (FAQ)
 summary: >
   > [!NOTE]
 
-  > この記事は、Microsoft Edge version 77 以降に適用されます。
+  > この記事は Microsoft Edge version 77 以降に適用されます。
 sections:
 - name: 無視
   questions:
@@ -33,15 +33,15 @@ sections:
       Internet Explorer は、信頼できる安全なブラウザーとしてサポートされています。 Internet Explorer Windows のコンポーネントであり、インストールされているオペレーティング システムのサポート ライフサイクルに従います。 詳しくは、「[ライフサイクルに関する FAQ - Internet Explorer](https://support.microsoft.com/help/17454/)」をご覧ください。 Internet Explorer のサポートと更新は引き続き行われますが、最新の機能更新プログラムとプラットフォーム更新プログラムは Microsoft Edge のみで利用可能になります。
   - question: 新しいバージョンを試しつつ、現在のバージョンの Microsoft Edge (Microsoft Edge レガシ) を並行して実行できますか?
     answer: >
-      できます。 2020 年 1 月 15 日以降、Windows 10 Version 1803 以降を実行している Home および Pro エディションのデバイスには、Microsoft Edge の新しいバージョン (Chromium ベース) が配布されます。 ドメインに参加しているデバイスは、この更新から除外されます。 詳しくは、[Microsoft Edge 更新プログラムの概要](https://docs.microsoft.com/deployedge/microsoft-edge-blocker-toolkit#overview)をご覧ください。 次のバージョンの Microsoft Edge を評価する場合は、Microsoft Edge Legacy をサイド バイ サイドでインストールできます。 詳しくは、「[旧バージョンの Microsoft Edge にアクセスする方法](https://docs.microsoft.com/deployedge/microsoft-edge-sysupdate-access-old-edge)」をご覧ください。 さらに、新しい Microsoft Edge チャネルのそれぞれは、サイド バイ サイドインストールもサポートしています。 詳しくは、「[Microsoft Edge チャネルの概要](https://docs.microsoft.com/deployedge/microsoft-edge-channels)」をご覧ください。
+      できます。 2020 年 1 月 15 日以降、Windows 10 Version 1803 以降を実行している Home および Pro エディションのデバイスには、Microsoft Edge の新しいバージョン (Chromium ベース) が配布されます。 ドメインに参加しているデバイスは、この更新から除外されます。 詳しくは、[Microsoft Edge 更新プログラムの概要](https://docs.microsoft.com/deployedge/microsoft-edge-blocker-toolkit#overview)をご覧ください。 次のバージョンの Microsoft Edge を評価する場合は、Microsoft Edge Legacy をサイド バイ サイドでインストールできます。 詳しくは、「[旧バージョンの Microsoft Edge にアクセスする方法](./microsoft-edge-sysupdate-access-old-edge.md)」をご覧ください。 さらに、新しい Microsoft Edge チャネルのそれぞれは、サイド バイ サイドインストールもサポートしています。 詳しくは、「[Microsoft Edge チャネルの概要](./microsoft-edge-channels.md)」をご覧ください。
   - question: Microsoft Edge (Chromium ベース) では、ActiveX コントロールや、Silverlight や Java などの BHO をサポートしていますか。
     answer: >
-      いいえ、そうではありません。 Microsoft Edge では、Silverlight や ActiveXなど、ブラウザー のコントロールやブラウザー ヘルプ オブジェクト (HOS) はJava。 ただし、ActiveX コントロール、BHO、または従来のドキュメント モードを使用する Web アプリを Internet Explorer 11 上で実行している場合には、新しい Microsoft Edge 上で IE モードを実行するように構成できます。 詳しくは、「[Microsoft Edge で IE モードを設定する](https://docs.microsoft.com/DeployEdge/edge-ie-mode)」をご覧ください。
+      いいえ、そうではありません。 Microsoft Edge では、Silverlight や ActiveXなど、ブラウザー のコントロールやブラウザー ヘルプ オブジェクト (HOS) はJava。 ただし、ActiveX コントロール、BHO、または従来のドキュメント モードを使用する Web アプリを Internet Explorer 11 上で実行している場合には、新しい Microsoft Edge 上で IE モードを実行するように構成できます。 詳しくは、「[Microsoft Edge で IE モードを設定する](./edge-ie-mode.md)」をご覧ください。
   - question: お気に入りは現在のバージョンの Microsoft Edge から移植されますか、それとも再追加する必要がありますか?
     answer: "現時点では、Microsoft Edge では、Microsoft Edge、Chrome、Internet Explorer、Firefox (Win10) の既存のインストールからのインポートがサポートされています。 インポートには、ブックマーク、履歴、パスワード、自動入力 (支払い、住所、汎用フォーム) の設定がサポートされています。 インポートは、最初の実行エクスペリエンスで実行するか、ブラウザーの設定を使用して実行するかを選択できます。  \n"
   - question: チャネル/ビルドは Stable、Beta、Dev、Canary でどのように違いますか?
     answer: >
-      Microsoft Edge の次のバージョンの Stable チャネルは、最も安定したプレビュー チャネルであり、組織全体での[パイロットと評価](https://aka.ms/EdgeEnterprise)用にエンタープライズ対応の機能が用意されています。 Beta チャネルを使用すると、代表的なユーザーのグループにより次の Stable リリースを検証できます。 Stable チャネルと Beta チャネルは約 6 週間ごとに更新されます。 Dev チャネルと Canary チャネルは、それぞれ毎週、毎日更新されます。 オフライン インストーラー (MSIs および PKG ファイル) は、Stable チャネル、Beta チャネル、開発チャネルでのみ使用できます。 詳しくは、「[Microsoft Edge チャネルの概要](https://docs.microsoft.com/deployedge/microsoft-edge-channels)」をご覧ください。
+      Microsoft Edge の次のバージョンの Stable チャネルは、最も安定したプレビュー チャネルであり、組織全体での[パイロットと評価](https://aka.ms/EdgeEnterprise)用にエンタープライズ対応の機能が用意されています。 Beta チャネルを使用すると、代表的なユーザーのグループにより次の Stable リリースを検証できます。 Stable チャネルと Beta チャネルは約 6 週間ごとに更新されます。 Dev チャネルと Canary チャネルは、それぞれ毎週、毎日更新されます。 オフライン インストーラー (MSIs および PKG ファイル) は、Stable チャネル、Beta チャネル、開発チャネルでのみ使用できます。 詳しくは、「[Microsoft Edge チャネルの概要](./microsoft-edge-channels.md)」をご覧ください。
   - question: 新しいバージョンの Microsoft Edge では、どのような拡張機能がサポートされていますか?
     answer: >
       Microsoft Edge では、[Microsoft Edge Insider Addons](https://go.microsoft.com/fwlink/?linkid=2081222) および [Chrome ウェブストア](https://go.microsoft.com/fwlink/?linkid=2072338)にある拡張機能がサポートされています。
@@ -53,12 +53,12 @@ sections:
       はい、できます。 WSUS を経由して新しい Microsoft Edge を初めて展開するときに使用できる [Microsoft Update カタログ](https://www.catalog.update.microsoft.com/Search.aspx?q=the%20new%20microsoft%20edge%20for%20windows) には、パッケージがあります。 初期展開の後、既定では自動更新が構成されます。 詳細については、「[Windows 10 用の新しい Microsoft Edge (バージョン 1809、1903、1909、および 2004:2020年10月29日) 用 WSUS の更新プログラム](https://support.microsoft.com/help/4584642/update-in-wsus-for-the-new-microsoft-edge)」を参照してください。
 
 
-      手動で更新するには、[ConfigMgr](https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json)などの構成管理ツールを使用します。
+      手動で更新するには、[ConfigMgr](/configmgr/apps/deploy-use/deploy-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json)などの構成管理ツールを使用します。
   - question: マスター設定はサポートされていますか?
     answer: "いいえ、マスター設定はサポートされていません。 \n"
 additionalContent: >-
   ## <a name="see-also"></a>関連項目
 
-  - [Microsoft Edge ドキュメント ランディング ページ](https://docs.microsoft.com/DeployEdge/)
+  - [Microsoft Edge ドキュメント ランディング ページ](./index.yml)
 
   - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)

@@ -10,41 +10,41 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: パスワード モニターがユーザーに対して自動的に有効にされます
-ms.openlocfilehash: 2f796f0cd1bbb437f83d04a8bd59586ef7b6a982
-ms.sourcegitcommit: 187203e9eaa9c48c59095b7e7d625d3081a6ba19
+ms.openlocfilehash: d1995735ac7558c1608d427aac70081d4afed3a0
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "11304537"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447281"
 ---
-# パスワード モニターがユーザーに対して自動的に有効にされます
+# <a name="password-monitor-auto-enabled-for-users"></a>パスワード モニターがユーザーに対して自動的に有効にされます
 
 この記事では、選択されたユーザーに対して Microsoft Edge のパスワード モニターがどのように有効になるかについて説明し、管理者が監視を有効にする方法を制御する手順について説明します。
 
 > [!NOTE]
 > この記事は Microsoft Edge バージョン 88 以降に適用されます。
 
-## 概要、利点、可用性
+## <a name="introduction-benefits-and-availability"></a>概要、利点、可用性
 
 パスワード モニターは、オンライン リークでパスワードが見つかった場合にユーザーに知らせることで、Microsoft Edge ユーザーがオンライン アカウントを保護するのに役立ちます。 オンライン リークやデータ侵害は、攻撃者がサード パーティ製のアプリや Web サイトからデータを盗むと発生します。 詳細については、Microsoft Research ブログの「[パスワード モニター: Microsoft Edge でのパスワードの保護](https://www.microsoft.com/research/blog/password-monitor-safeguarding-passwords-in-microsoft-edge/)」ペーパーを参照してください。
 
-### 利点
+### <a name="benefits"></a>利点
 
 これらのオンラインからの攻撃の頻度と範囲を考慮すると、このような保護をすべてのユーザーが入手する必要があります。 Microsoft Edge には、侵害されたことが判明しているパスワードに対して、保存されたユーザーのパスワードを安全に確認し、一致が見つかった場合にはユーザーに警告する組み込みの機能が用意されています。  
 
-### 可用性
+### <a name="availability"></a>可用性
 
 パスワード モニターは、1/21 以降の安定チャネル バージョン 88 で使用できます。 ロールアウトは段階的に行われるため、**[設定]** > **[プロファイル]** > **[パスワード]** ページに次のメッセージと制御が表示されるまでに数週間かかる場合があります。
 
 :::image type="content" source="media/microsoft-edge-security-password-monitor/monitor-enable-option.png" alt-text="パスワード モニターを有効にするオプション":::
 
-## パスワード モニターのグループ ポリシーを構成する
+## <a name="configure-group-policy-for-password-monitor"></a>パスワード モニターのグループ ポリシーを構成する
 
-この機能は [PasswordMonitorAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#passwordmonitorallowed) グループ ポリシーによって制御されます。
+この機能は [PasswordMonitorAllowed](./microsoft-edge-policies.md#passwordmonitorallowed) グループ ポリシーによって制御されます。
 
 ポリシーを有効にした後も、ユーザーは機能を有効にすることについて同意する必要があります。 この機能にはユーザーの機密データと個人データ (パスワード) が含まれているため、同意が必要です。 グループ ポリシーを使用して機能が無効になっている場合、ユーザーはこの設定を上書きできません。  
 
-## ユーザーに対してパスワード モニターを有効にする
+## <a name="enabling-password-monitor-for-users"></a>ユーザーに対してパスワード モニターを有効にする
 
 パスワード モニター ポリシーが有効になると、さまざまな方法でこの機能をユーザーに利用可能にできます。
 
@@ -63,7 +63,7 @@ ms.locfileid: "11304537"
    
 - 直接のライセンス認証。 ユーザーは、いつでも **[設定]** > **[パスワード]** に移動して、機能のオンとオフを切り替えることができます。
 
-## パスワード モニターが自動的に有効になっているユーザー シナリオ
+## <a name="user-scenarios-with-password-monitor-auto-enabled"></a>パスワード モニターが自動的に有効になっているユーザー シナリオ
 
 次の表は、パスワード モニターが自動的に有効になっているシナリオと、ユーザーのデバイスでのパスワード モニターの動作を示しています。
 
@@ -80,9 +80,9 @@ ms.locfileid: "11304537"
 - パスワード同期が無効になっている
 - Microsoft サーバーとのデータ共有が無効になっている
 
-## よく寄せられる質問
+## <a name="frequently-asked-questions"></a>よく寄せられる質問
 
-### 組織でパスワード モニターを無効にするにはどうすればよいですか。
+### <a name="how-can-password-monitor-be-disabled-for-my-organization"></a>組織でパスワード モニターを無効にするにはどうすればよいですか。
 
 組織のパスワード モニターは、次の方法で無効にできます。
 - PasswordMonitorAllowed グループ ポリシーの使用。
@@ -91,10 +91,10 @@ ms.locfileid: "11304537"
   > [!NOTE]
   > パスワードの同期が無効になっている場合でも、ユーザーが機能をオンにすることに明示的に同意した場合や、自分で [設定] から有効にしている場合は、パスワード モニターが機能します。
 
-### 機能が自動的に有効になっているユーザーが [設定] からパスワード モニターをオフにした場合、どうなりますか。
+### <a name="what-happens-if-a-user-for-whom-the-feature-has-been-auto-enabled-turns-password-monitor-off-via-settings"></a>機能が自動的に有効になっているユーザーが [設定] からパスワード モニターをオフにした場合、どうなりますか。
 
 ユーザー設定が優先され、そのユーザーに対しては機能が無効のままになります。 ただし、これまで同意プロンプトに一度も応答したことがない場合は、もう一度同意ダイアログが表示される場合があります。
 
-## 関連項目
+## <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)

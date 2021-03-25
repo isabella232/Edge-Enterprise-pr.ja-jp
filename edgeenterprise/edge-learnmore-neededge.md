@@ -10,19 +10,19 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 最新の Web サイトに対応するための Internet Explorer から Microsoft Edge へのリダイレクト
-ms.openlocfilehash: c9c64a55df3aeecaebaab3675296c5594612b94f
-ms.sourcegitcommit: fc0ac6bb6655d1f6e2de7c838f275779cd7a5de6
+ms.openlocfilehash: ffb295b5c844d15fee2b0fa23e78be9cd34ef03f
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "11175200"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447591"
 ---
-# 最新の Web サイトに対応するための Internet Explorer から Microsoft Edge へのリダイレクト
+# <a name="redirection-from-internet-explorer-to-microsoft-edge-for-compatibility-with-modern-web-sites"></a>最新の Web サイトに対応するための Internet Explorer から Microsoft Edge へのリダイレクト
 
 > [!NOTE]
 > この記事は Microsoft Edge 安定バージョン 87 以降に適用されます。
 
-## 概要
+## <a name="overview"></a>概要
 
 最新の Web サイトの多くが、Internet Explorer と互換性のないデザインを採用しています。 Internet Explorer のユーザーが互換性のないパブリック サイトにアクセスすると、そのサイトがブラウザーと互換性のないものであることを通知するメッセージが表示され、手動で別のブラウザーに切り替える必要があります。
 
@@ -31,9 +31,9 @@ Microsoft Edge 安定バージョン 87 から、手動で別のブラウザー�
 ユーザーが Internet Explorer と互換性のないサイトにアクセスすると、自動的に Microsoft Edge にリダイレクトされます。 この記事では、リダイレクトのユーザー エクスペリエンスや、自動リダイレクトの構成や無効化に使用するグループ ポリシーについて説明します。
 
 > [!NOTE]
-> Microsoft は、Internet Explorer との互換性がないことが知られているすべてのサイトの一覧を保持しています。 詳細については、「[互換性のないサイトの一覧の更新を要求する](https://docs.microsoft.com/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)」を参照してください。
+> Microsoft は、Internet Explorer との互換性がないことが知られているすべてのサイトの一覧を保持しています。 詳細については、「[互換性のないサイトの一覧の更新を要求する](/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)」を参照してください。
 
-## リダイレクト エクスペリエンス
+## <a name="redirection-experience"></a>リダイレクト エクスペリエンス
 
 Microsoft Edge にリダイレクトすると、ユーザーには次のスクリーンショットにあるようなダイアログが 1 回のみ表示されます。 このダイアログでは、リダイレクトされた理由を説明し、Internet Explorer から Microsoft Edge に閲覧データや設定をコピーすることに対する同意を求めています。 次の閲覧データがインポートされます: お気に入り、パスワード、検索エンジン、開いているタブ、履歴、設定、Cookie、ホーム ページ。
 
@@ -56,7 +56,7 @@ Web サイトの非互換性バナー:
 > [!NOTE]
 > リダイレクト後は、ユーザーは Internet Explorer の非互換性リストにないサイトを閲覧するために Internet Explorer の使用に戻ることができます。  
 
-## Microsoft Edge へのリダイレクトを構成するポリシー
+## <a name="policies-to-configure-redirection-to-microsoft-edge"></a>Microsoft Edge へのリダイレクトを構成するポリシー
 
 > [!NOTE]
 > これらのポリシーは 2020 年 10 月 26 日までに ADMX ファイルの更新プログラムとして利用可能になり、2020 年 11 月 9 日までに Intune で利用可能になります。
@@ -67,7 +67,7 @@ Microsoft Edge への自動リダイレクトを有効にするには、3 つの
 - RedirectSitesFromInternetExplorerRedirectMode
 - HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
 
-### ポリシー: RedirectSitesFromInternetExplorerPreventBHOInstall
+### <a name="policy-redirectsitesfrominternetexplorerpreventbhoinstall"></a>ポリシー: RedirectSitesFromInternetExplorerPreventBHOInstall
 
 Internet Explorer から Microsoft Edge へのリダイレクトには、"IEtoEdge BHO" という名前の Internet Explorer ブラウザー ヘルパー オブジェクト (BHO) が必要です。 **RedirectSitesFromInternetExplorerPreventBHOInstall** ポリシーは、この BHO がインストールされるかどうかを制御します。  
 
@@ -76,7 +76,7 @@ Internet Explorer から Microsoft Edge へのリダイレクトには、"IEtoEd
 
 BHO の必要性に加えて、**RedirectSitesFromInternetExplorerRedirectMode** への依存関係があり、「互換性のないサイトのサイトリストに基づいてサイトをリダイレクトする」または「未構成」に設定する必要があります。
 
-### ポリシー: RedirectSitesFromInternetExplorerRedirectMode
+### <a name="policy-redirectsitesfrominternetexplorerredirectmode"></a>ポリシー: RedirectSitesFromInternetExplorerRedirectMode
 
  このポリシーは、Microsoft Edge の**既定のブラウザー**設定 "Internet Explorer に Microsoft Edge でサイトを開かせる" に対応しています。 この設定にアクセスするには、*edge://settings/defaultbrowser* の URL にアクセスします。  
 
@@ -88,9 +88,9 @@ BHO の必要性に加えて、**RedirectSitesFromInternetExplorerRedirectMode**
 >
 >ドメインに参加しているか、モバイル デバイス管理 (MDM) に登録されているデバイスを使用している場合、このオプションは表示されません。
 >
-> 代わりに、ユーザーに Internet Explorer モードでサイトを読み込ませる場合は、[Internet Explorer モード テストを許可する](https://docs.microsoft.com/deployedge/microsoft-edge-policies#allow-internet-explorer-mode-testing)ポリシーを構成します。
+> 代わりに、ユーザーに Internet Explorer モードでサイトを読み込ませる場合は、[Internet Explorer モード テストを許可する](./microsoft-edge-policies.md#allow-internet-explorer-mode-testing)ポリシーを構成します。
 
-### ポリシー: HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
+### <a name="policy-hideinternetexplorerredirectuxforincompatiblesitesenabled"></a>ポリシー: HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
 
 このポリシーでは、互換性のないサイトを Microsoft Edge にリダイレクトするときのユーザー エクスペリエンスを構成します。  
 
@@ -100,7 +100,7 @@ BHO の必要性に加えて、**RedirectSitesFromInternetExplorerRedirectMode**
   > [!NOTE]
   > ユーザーの閲覧データは、ユーザーに対して新しいリダイレクトが発生するたびにインポートされます。 ただし、これは 1 回限りのリダイレクト ダイアログでユーザーがインポートに同意した場合にのみ発生します。
 
-## Microsoft Edge へのリダイレクトを無効にする
+## <a name="disable-redirection-to-microsoft-edge"></a>Microsoft Edge へのリダイレクトを無効にする
 
 Microsoft Edge 安定バージョン 87 にアップデートする前にリダイレクトを無効にする場合は、次の手順を実行します。
 
@@ -111,8 +111,8 @@ Microsoft Edge 安定バージョン 87 にアップデートした後にリダ�
 1. **RedirectSitesFromInternetExplorerRedirectMode** ポリシーを **[有効]** に設定し、[オプション: 互換性のないサイトを Internet Explorer から Microsoft Edgeに自動的にリダイレクトする] のドロップダウンで、**[無効]** を選択します。 この設定は、ポリシーが有効になるとすぐにリダイレクトを停止します。
 2. **RedirectSitesFromInternetExplorerPreventBHOInstall** ポリシーを**有効**に設定します。 これで次回の Microsoft Edge の更新後に BHO がアンインストールされるようになります。
 
-## 関連項目
+## <a name="see-also"></a>関連項目
 
-- [互換性のないサイトの一覧の更新を要求する](https://docs.microsoft.com/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
+- [互換性のないサイトの一覧の更新を要求する](/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
-- [Microsoft Edge ポリシー](https://docs.microsoft.com/deployedge/microsoft-edge-policies)
+- [Microsoft Edge ポリシー](./microsoft-edge-policies.md)

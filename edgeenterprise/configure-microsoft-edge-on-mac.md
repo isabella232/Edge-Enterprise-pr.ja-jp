@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: .plist を使用して macOS で Microsoft Edge ポリシー設定を構成する
-ms.openlocfilehash: abe110ab3589cc9276f28590273ece2d372be3b8
-ms.sourcegitcommit: ed6a5afabf909df87bec48671c4c47bcdfaeb7bc
+ms.openlocfilehash: 3f297c11d8009c85a1bc5e17447681ee2b9ef1e2
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "11194690"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447451"
 ---
-# .plist を使用して macOS 用に Microsoft Edge ポリシー設定を構成する
+# <a name="configure-microsoft-edge-policy-settings-for-macos-using-a-plist"></a>.plist を使用して macOS 用に Microsoft Edge ポリシー設定を構成する
 
 この記事では、macOS でプロパティ リスト (.plist) ファイルを使用して Microsoft Edge を構成する方法について説明します。 このファイルを作成して、Microsoft Intune に展開する方法について説明します。
 
@@ -26,7 +26,7 @@ ms.locfileid: "11194690"
 > [!NOTE]
 > この記事は Microsoft Edge version 77 以降に適用されます。
 
-## macOS で Microsoft Edge ポリシーを構成する
+## <a name="configure-microsoft-edge-policies-on-macos"></a>macOS で Microsoft Edge ポリシーを構成する
 
 まず、plist を作成します。 任意のテキスト エディターを使用して plist ファイルを作成することも、[ターミナルを使用して構成プロファイルを作成する](#create-a-configuration-profile-using-terminal)こともできます。 ただし、XML コードの書式設定が行われるツールを使用する方が、plist ファイルの作成および編集が簡単になります。 *Xcode* は、無料の統合開発環境です。次のいずれかの場所から入手できます。
 
@@ -42,7 +42,7 @@ plist のコンテンツを作成できたら、次の手順は、Microsoft Edge
 
 最後に、Microsoft Intune など、好みの MDM プロバイダーを使用して、ユーザーの Mac デバイスに plist を展開します。 手順については、「[plist を展開する](#deploy-your-plist)」をご覧ください。
 
-### ターミナルを使用して構成プロファイルを作成する
+### <a name="create-a-configuration-profile-using-terminal"></a>ターミナルを使用して構成プロファイルを作成する
 
 1. ターミナルで次のコマンドを使用して、好みの設定でデスクトップ上の Microsoft Edge の plist を作成します。
 
@@ -61,13 +61,13 @@ plist のコンテンツを作成できたら、次の手順は、Microsoft Edge
 > [!NOTE]
 > plist または xml ファイルは、内容としてキーと値のペアのみが含まれている状態にします。 ファイルを Intune にアップロードする前に、すべての \<plist> と \<dict> の値と xml ヘッダーをファイルから削除します。 ファイルは、キーと値のペアのみが含まれている状態にします。
 
-## plist を展開する
+## <a name="deploy-your-plist"></a>plist を展開する
 
-Microsoft Intune の場合は、macOS プラットフォームをターゲットとした新しいデバイス構成プロファイルを作成し、プロファイルの種類として *[Preference file]* (基本設定ファイル) を選択します。 基本設定ドメイン名として **com.microsoft.Edge** を指定し、plist をアップロードします。 詳しくは、「[Microsoft Intune を使用して macOS デバイスにプロパティ リスト ファイルを追加する](https://docs.microsoft.com/intune/configuration/preference-file-settings-macos)」をご覧ください。
+Microsoft Intune の場合は、macOS プラットフォームをターゲットとした新しいデバイス構成プロファイルを作成し、プロファイルの種類として *[Preference file]* (基本設定ファイル) を選択します。 基本設定ドメイン名として **com.microsoft.Edge** を指定し、plist をアップロードします。 詳しくは、「[Microsoft Intune を使用して macOS デバイスにプロパティ リスト ファイルを追加する](/intune/configuration/preference-file-settings-macos)」をご覧ください。
 
 Jamf の場合は、[*カスタム設定*] ペイロードとして .plist ファイルをアップロードします。
 
-## 関連項目
+## <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
 - [Jamf を使用して macOS 用に構成する](configure-microsoft-edge-on-mac-jamf.md)

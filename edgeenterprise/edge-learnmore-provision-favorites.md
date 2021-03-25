@@ -10,28 +10,28 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge のお気に入りをプロビジョニングする
-ms.openlocfilehash: 94bd42573bdbc0fd1b971ded1c82e5fe152acc54
-ms.sourcegitcommit: 854dd73eb168960c0eb4b483f81a8efe88806a64
+ms.openlocfilehash: 67627fa10806435d76cecae00f79867bc5af03df
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "11088709"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447601"
 ---
-# Microsoft Edge のお気に入りをプロビジョニングする
+# <a name="provision-favorites-for-microsoft-edge"></a>Microsoft Edge のお気に入りをプロビジョニングする
 
 お客様からのフィードバックに基づいて、お気に入りの プロビジョニング を改善しました。 Microsoft Edge バージョン 85 以降、管理者はお気に入りをプロビジョニングするために手動でファイルを作成する必要がなくなりました。 管理者は、Microsoft Edge UI を使用してお気に入りとフォルダーを追加し、グループポリシーにエクスポートできるファイルを生成できます。
 
-この記事では、組織のお気に入りとフォルダーのセットをプロビジョニングする方法について説明します。 [[お気に入りの構成](https://docs.microsoft.com//DeployEdge/microsoft-edge-policies#configure-favorites)] ポリシーを使用して、お気に入りとフォルダーをプロビジョニングできます。
+この記事では、組織のお気に入りとフォルダーのセットをプロビジョニングする方法について説明します。 [[お気に入りの構成](//DeployEdge/microsoft-edge-policies#configure-favorites)] ポリシーを使用して、お気に入りとフォルダーをプロビジョニングできます。
 
 > [!NOTE]
 > この記事は Microsoft Edge version 85 以降に適用されます。
 
-## 前提条件と推奨事項
+## <a name="prerequisites-and-recommendations"></a>前提条件と推奨事項
 
 - グループポリシー用に適切な管理用テンプレートがインストールされた Microsoft Edge バージョン 85。
 - これらのお気に入りをプロビジョニングするには、Microsoft Edge の新しいプロファイルを使用することをお勧めします。 プロファイルとともに保存されたすべてのお気に入りがエクスポートに含まれます。  
 
-## お気に入りとフォルダをプロビジョニングする
+## <a name="provision-favorites-and-folders"></a>お気に入りとフォルダをプロビジョニングする
 
 次の手順を使用して、ユーザーのお気に入りとフォルダーをプロビジョニングします。
 
@@ -66,6 +66,6 @@ ms.locfileid: "11088709"
 
 7. [**OK**] または [**適用**] をクリックして、このポリシー設定を保存します。
 
-## 関連項目
+## <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)

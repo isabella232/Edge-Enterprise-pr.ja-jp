@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Defender SmartScreen の Microsoft Edge サポート
-ms.openlocfilehash: 2de93b4ebe26b4a90592f7ee9143f6f775b682ce
-ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
+ms.openlocfilehash: 6e676a25d27019ccddfdfa4ef28871e7e4bc6b4b
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "11314690"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447201"
 ---
-# Microsoft Defender SmartScreen の Microsoft Edge サポート
+# <a name="microsoft-edge-support-for-microsoft-defender-smartscreen"></a>Microsoft Defender SmartScreen の Microsoft Edge サポート
 
 この記事では、Microsoft Defender SmartScreen を使用する利点、その機能、およびこの Microsoft Edge 機能の構成方法について説明します。
 
@@ -29,9 +29,9 @@ Microsoft Defender SmartScreen は、Microsoft Edge が Web の閲覧中に安�
 > [!NOTE]
 > Windows 10 Version 1703 より前のバージョンでは、この機能がブラウザー内で使われるときは SmartScreen フィルターと呼ばれ、ブラウザーの外部で使われるときは Microsoft SmartScreen と呼ばれていました。
 
-## Microsoft Defender SmartScreen の利点
+## <a name="the-benefits-of-microsoft-defender-smartscreen"></a>Microsoft Defender SmartScreen の利点
 
-Microsoft Defender SmartScreen にはいくつかの利点があり、それらを以下のリストに要約します。 これらの利点については、[ Microsoft Defender SmartScreen のドキュメント](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview#benefits-of-windows-defender-smartscreen)で詳しく説明されています。 利点は次のとおりです。
+Microsoft Defender SmartScreen にはいくつかの利点があり、それらを以下のリストに要約します。 これらの利点については、[ Microsoft Defender SmartScreen のドキュメント](/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview#benefits-of-windows-defender-smartscreen)で詳しく説明されています。 利点は次のとおりです。
 
 - フィッシング詐欺対策およびマルウェア対策のサポート
 - 評判ベースの URL とアプリの保護
@@ -40,11 +40,11 @@ Microsoft Defender SmartScreen にはいくつかの利点があり、それら�
 - グループ ポリシーと Microsoft Intune による管理
 - 望ましくない可能性があるアプリケーションと関連付けられている URL のブロック
 
-## Microsoft Defender SmartScreen の仕組みを理解する
+## <a name="understand-how-microsoft-defender-smartscreen-works"></a>Microsoft Defender SmartScreen の仕組みを理解する
 
 Microsoft Defender SmartScreen の警告には、いくつかの入力が含まれています。 データは、ユーザー フィードバック、データ プロバイダー、インテリジェンス モデルなど、多くのソースから受信されます。 このデータは、潜在的に悪意のあるコンテンツを特定するために使用されます。 Microsoft Defender SmartScreen は、ダウンロードされたアプリまたはアプリ インストーラーをチェックして、それらが悪意のあるものかどうかを確認します。 どちらのシナリオでも、Microsoft Defender SmartScreen は不審なコンテンツについてユーザーに適切に警告します。
 
-### サイト分析
+### <a name="site-analysis"></a>サイト分析
 
 Microsoft Defender SmartScreen では、サイトに悪意があると考えられるかどうかを次のように判断します:
 
@@ -55,9 +55,9 @@ Microsoft Defender SmartScreen がページが悪意のあるものであると�
 
 ![外部サイトへのリンクの Microsoft Defender SmartScreen ブロック ページ](media/microsoft-edge-security-smartscreen/microsoft-edge-smartscreen-warning.png)
 
-ユーザーには、警告メッセージ内でサイトを安全または危険であると報告するオプションがあります。 詳細については、「[サイトの報告方法](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-set-individual-device#how-users-can-report-websites-as-safe-or-unsafe)」を参照してください。
+ユーザーには、警告メッセージ内でサイトを安全または危険であると報告するオプションがあります。 詳細については、「[サイトの報告方法](/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-set-individual-device#how-users-can-report-websites-as-safe-or-unsafe)」を参照してください。
 
-### ファイル分析
+### <a name="file-analysis"></a>ファイル分析
 
 Microsoft Defender SmartScreen は、ダウンロード トラフィック、ダウンロード履歴、過去のウイルス対策の結果、URL 評判などの多くの基準に基づいて、ダウンロードされたアプリまたはアプリ インストーラーが悪意のある可能性があるかどうかを判断します。
 
@@ -77,50 +77,50 @@ Microsoft Defender SmartScreen は、ダウンロード トラフィック、ダ
 ただし、ユーザーは **[...]、[保持]、[詳細表示]、[保持]** の順にクリックしてアプリケーションをダウンロードして実行できます。
 
 > [!TIP]
-> **企業の顧客向けの参考情報です。** 既定では、ユーザーが Microsoft Defender SmartScreen の警告をバイパスできるようになっています。 このユーザー操作は危険を伴う可能性があるため、これらの[推奨されるグループ ポリシー設定](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-available-settings#recommended-group-policy-and-mdm-settings-for-your-organization)を確認することをお勧めします。
+> **企業の顧客向けの参考情報です。** 既定では、ユーザーが Microsoft Defender SmartScreen の警告をバイパスできるようになっています。 このユーザー操作は危険を伴う可能性があるため、これらの[推奨されるグループ ポリシー設定](/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-available-settings#recommended-group-policy-and-mdm-settings-for-your-organization)を確認することをお勧めします。
 
 Microsoft Defender SmartScreen が、[デモ サイト](https://demo.smartscreen.msft.net/)を使用してさまざまなシナリオにどのように対応するかがわかります。
 
-## Microsoft Defender SmartScreen とユーザーのプライバシー
+## <a name="microsoft-defender-smartscreen-and-user-privacy"></a>Microsoft Defender SmartScreen とユーザーのプライバシー
 
 Microsoft Defender SmartScreen は、評判チェック システムを使用してインターネットを閲覧しているユーザーを保護します。 Microsoft Edge は、評判チェックを開始するために、URL またはファイルに関する関連情報を Microsoft Defender SmartScreen サービスに渡します。 このチェックでは、Web サイトまたはファイルを、危険であることがわかっているサイトおよびファイルの動的リストと比較します。 Microsoft Defender SmartScreen サービスへのすべての要求は、TLS 暗号化で行われます。 サービスは評判チェックの結果を返します。これにより、Microsoft Edge がサイトまたはファイルの警告を表示する可能性があります。 これらの結果は、デバイスのローカルに保存されます。
 
 Microsoft Defender SmartScreen サービスは、評判チェックに関するデータを保存します。 新しいサイトが識別されると、サービスは既知の悪意のある URL とファイルの動的データベースに追加します。 このデータは安全な Microsoft サーバーに保存され、Microsoft セキュリティ サービスでのみ使用されます。 このデータは、決してユーザーの識別やターゲット設定に使用されることはありません。 ブラウジング キャッシュをクリアすると、ローカルに保存されているすべての Microsoft Defender SmartScreen URL データがクリアされます。 ダウンロード履歴をクリアすると、ファイルのダウンロードに関するローカルに保存されている SmartScreen データが削除されます。
 
-Microsoft Defender SmartScreen と Microsoft Edge でのプラ​​イバシーの詳細については、「[Microsoft Edge プライバシー ホワイトペーパー](https://docs.microsoft.com/microsoft-edge/privacy-whitepaper#smartscreen)」をご覧ください。
+Microsoft Defender SmartScreen と Microsoft Edge でのプラ​​イバシーの詳細については、「[Microsoft Edge プライバシー ホワイトペーパー](/microsoft-edge/privacy-whitepaper#smartscreen)」をご覧ください。
 
-## 管理者向けの Microsoft Defender SmartScreen セットアップ
+## <a name="microsoft-defender-smartscreen-setup-for-admins"></a>管理者向けの Microsoft Defender SmartScreen セットアップ
 
 管理者は、グループ ポリシー、Microsoft Intune、またはモバイル デバイス管理 (MDM) の設定を使用して、Microsoft Defender SmartScreen を構成できます。 Microsoft Defender SmartScreen をどのように設定するかによって、ユーザーに警告ページを表示してからサイトへのアクセスを許可するか、サイトを完全にブロックすることができます。
 
-### グループ ポリシーを使用してセットアップされた Microsoft Defender SmartScreen
+### <a name="microsoft-defender-smartscreen-set-up-using-group-policy"></a>グループ ポリシーを使用してセットアップされた Microsoft Defender SmartScreen
 
-SmartScreen ポリシーの完全なリストについては、「[Microsoft Defender SmartScreen 設定](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#smartscreen-settings)」を参照してください
+SmartScreen ポリシーの完全なリストについては、「[Microsoft Defender SmartScreen 設定](./microsoft-edge-policies.md#smartscreen-settings)」を参照してください
 
-### MDM を使用してセットアップされた Microsoft Defender SmartScreen
+### <a name="microsoft-defender-smartscreen-set-up-using-mdm"></a>MDM を使用してセットアップされた Microsoft Defender SmartScreen
 
 詳細については、以下を参照してください。
 
-- [Microsoft Defender SmartScreen の Windows Intune 設定](https://docs.microsoft.com/mem/intune/protect/endpoint-protection-windows-10#windows-defender-smartscreen-settings)
-- [MDM ポリシー設定](https://docs.microsoft.com/mem/intune/protect/endpoint-protection-windows-10#windows-defender-smartscreen-settings)
+- [Microsoft Defender SmartScreen の Windows Intune 設定](/mem/intune/protect/endpoint-protection-windows-10#windows-defender-smartscreen-settings)
+- [MDM ポリシー設定](/mem/intune/protect/endpoint-protection-windows-10#windows-defender-smartscreen-settings)
 
-## ユーザー向けの Microsoft Defender SmartScreen セットアップ
+## <a name="microsoft-defender-smartscreen-setup-for-users"></a>ユーザー向けの Microsoft Defender SmartScreen セットアップ
 
 Microsoft Defender SmartScreen は、Microsoft Edge では既定でオンになっています。 Microsoft Defender SmartScreen をオフにするには、*edge://settings/privacy > Services > Microsoft Defender SmartScreen* に移動します。 この設定は、デバイスへの Microsoft Edge のインストールに関連付けられているすべてのプロファイルで同じです。 この設定はデバイス間で同期されません。 この設定は、InPrivate ブラウズとゲスト モードに適用されます。 デバイスが組織によって設定されたグループ ポリシーで管理されている場合、この構成は *edge://settings/privacy* に反映されます。
 
 > [!NOTE]
-> ユーザーは、グループ ポリシーまたは MDM がそれを防ぐように構成されていない限り、個々のデバイスに対して Microsoft Defender SmartScreen をセットアップできます。 詳細については、「[個々のデバイスでの Microsoft Defender SmartScreen のセットアップと使用](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-set-individual-device)」を参照してください。
+> ユーザーは、グループ ポリシーまたは MDM がそれを防ぐように構成されていない限り、個々のデバイスに対して Microsoft Defender SmartScreen をセットアップできます。 詳細については、「[個々のデバイスでの Microsoft Defender SmartScreen のセットアップと使用](/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-set-individual-device)」を参照してください。
 
-## よく寄せられる質問
+## <a name="frequently-asked-questions"></a>よく寄せられる質問
 
-### 評判チェック システムはどのように機能しますか?
+### <a name="how-does-the-reputation-check-system-work"></a>評判チェック システムはどのように機能しますか?
 
 Web を閲覧すると、Microsoft Defender SmartScreen は Web サイトとダウンロードを上位トラフィック、危険、または不明として分類します。 上位トラフィックは、Microsoft Defender SmartScreen が信頼できると判断した人気のあるサイトです。 危険とマークされたサイトにアクセスすると、Microsoft Defender SmartScreen はすぐにサイトへのアクセスをブロックします。 不明なサイトにアクセスすると、Microsoft DefenderSmartScreen はその評判をチェックして、サイトにアクセスする必要があるかどうかを判断します。
 
-## 関連項目
+## <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
 - [ビデオ: Microsoft Edge での安全な閲覧](microsoft-edge-video-security-smartscreen.md)
-- [Microsoft Defender SmartScreen の概要](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview)
-- [脅威の防止](https://docs.microsoft.com/windows/security/threat-protection/index)
-- [望ましくない可能性のあるアプリケーションから保護する](https://docs.microsoft.com/DeployEdge/microsoft-edge-potentially-unwanted-apps)
+- [Microsoft Defender SmartScreen の概要](/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview)
+- [脅威の防止](/windows/security/threat-protection/index)
+- [望ましくない可能性のあるアプリケーションから保護する](./microsoft-edge-potentially-unwanted-apps.md)

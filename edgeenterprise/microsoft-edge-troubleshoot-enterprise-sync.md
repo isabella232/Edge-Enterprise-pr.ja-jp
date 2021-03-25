@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 管理者が一般的なエンタープライズ同期の問題のトラブルシューティングと修正に使用できるガイダンスとツール
-ms.openlocfilehash: 767b26c74e91213b407e8264a8ed185f38dfc2e9
-ms.sourcegitcommit: 86e0de9b27ad4297a6d5a57c866d7ef4fc7bb0cd
+ms.openlocfilehash: 49fb0c5fc555e4f7ad4c728477387e931a5fbb5f
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "11400199"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447161"
 ---
 # <a name="diagnose-and-fix-microsoft-edge-sync-issues"></a>Microsoft Edge の同期の問題を診断して修正する
 
@@ -49,10 +49,10 @@ Azure Active Directory アカウントでこのエラーが発生した場合、
 > [!NOTE]
 > このエラーのソースは通常、Azure Active Directory テナントの構成変更を必要とするので、これらのトラブルシューティング手順はテナント管理者だけが実行できます。エンドユーザーは実行できません。
 
-1. エンタープライズ テナントにサポートされている M365 サブスクリプションがあるかどうか確認します。 利用可能なサブスクリプションの種類の最新の一覧は [ここに表示されています](https://docs.microsoft.com/azure/information-protection/activate-office365)。 テナントにサポートされているサブスクリプションが存在しない場合は、Azure Information Protection を個別に購入するか、サポートされているサブスクリプションにアップグレードすることが必要です。
-2. サポートされているサブスクリプションが利用可能な場合は、テナントが Azure Information Protection (AIP) を使用できる構成にしているかどうかを確認します。 AIP の状態を確認し、必要に応じて、AIP をアクティブ化するための手順については、 [ここ](https://docs.microsoft.com/azure/information-protection/activate-office365)をご覧ください。
-3. 手順 2 で AIP がアクティブであるのに同期が機能しない場合は、Enterprise State Roaming (ESR) をオンにします。 ESR を有効にする手順は [ここ](https://docs.microsoft.com/azure/active-directory/devices/enterprise-state-roaming-enable)をご覧ください。 ESR を使用し続ける必要はない点に注意してください。 この手順で問題が解決した場合は、ESR をオフにします。
-4. Azure Information Protection が登録ポリシーによって範囲を設定されていないか確認します。 [Get-AadrmOnboardingControlPolicy](https://docs.microsoft.com/powershell/module/aadrm/get-aadrmonboardingcontrolpolicy?view=azureipps) PowerShell アプレットを使用して、範囲が設定されているかどうかを確認できます。 次の 2 つの例では、範囲が設定されていない構成の例と、特定のセキュリティ グループを対象に範囲が設定されている構成の例を示します。
+1. エンタープライズ テナントにサポートされている M365 サブスクリプションがあるかどうか確認します。 利用可能なサブスクリプションの種類の最新の一覧は [ここに表示されています](/azure/information-protection/activate-office365)。 テナントにサポートされているサブスクリプションが存在しない場合は、Azure Information Protection を個別に購入するか、サポートされているサブスクリプションにアップグレードすることが必要です。
+2. サポートされているサブスクリプションが利用可能な場合は、テナントが Azure Information Protection (AIP) を使用できる構成にしているかどうかを確認します。 AIP の状態を確認し、必要に応じて、AIP をアクティブ化するための手順については、 [ここ](/azure/information-protection/activate-office365)をご覧ください。
+3. 手順 2 で AIP がアクティブであるのに同期が機能しない場合は、Enterprise State Roaming (ESR) をオンにします。 ESR を有効にする手順は [ここ](/azure/active-directory/devices/enterprise-state-roaming-enable)をご覧ください。 ESR を使用し続ける必要はない点に注意してください。 この手順で問題が解決した場合は、ESR をオフにします。
+4. Azure Information Protection が登録ポリシーによって範囲を設定されていないか確認します。 [Get-AadrmOnboardingControlPolicy](/powershell/module/aadrm/get-aadrmonboardingcontrolpolicy?view=azureipps) PowerShell アプレットを使用して、範囲が設定されているかどうかを確認できます。 次の 2 つの例では、範囲が設定されていない構成の例と、特定のセキュリティ グループを対象に範囲が設定されている構成の例を示します。
 
    ```powershell
     PS C:\Work\scripts\PowerShell> Get-AadrmOnboardingControlPolicy
@@ -71,9 +71,9 @@ Azure Active Directory アカウントでこのエラーが発生した場合、
                 False f1488a05-8196-40a6-9483-524948b90282   All
    ```
 
-   範囲指定が有効な場合、影響を受けるユーザーを、範囲のセキュリティ グループに追加するか、または範囲を削除する必要があります。 次の例では、登録で AIP の範囲が指定されたセキュリティ グループに設定されています。[Set-AadrmOnboardingControlPolicy](https://docs.microsoft.com/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy?view=azureipps) PowerShell アプレットを使用して範囲を削除する必要があります。
+   範囲指定が有効な場合、影響を受けるユーザーを、範囲のセキュリティ グループに追加するか、または範囲を削除する必要があります。 次の例では、登録で AIP の範囲が指定されたセキュリティ グループに設定されています。[Set-AadrmOnboardingControlPolicy](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy?view=azureipps) PowerShell アプレットを使用して範囲を削除する必要があります。
 
-5. テナントで IIPCv3Service が有効になっていることを確認します。 [Get-AadrmConfiguration](https://docs.microsoft.com/powershell/module/aadrm/get-aadrmconfiguration?view=azureipps)  PowerShell のアプレットがサービスの状態を表示します。
+5. テナントで IIPCv3Service が有効になっていることを確認します。 [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration?view=azureipps)  PowerShell のアプレットがサービスの状態を表示します。
 
    :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-scoped-cfg-example.png" alt-text="IPCv3Service が有効になっているどうか確認します。":::
 
@@ -99,7 +99,7 @@ Azure Active Directory アカウントでこのエラーが発生した場合、
       - [https://api.aadrm.com](https://api.aadrm.com)(ほとんどのテナントの場合)
       - [https://api.aadrm.de](https://api.aadrm.de)(ドイツのテナントの場合)
       - [https://api.aadrm.cn](https://api.aadrm.cn)(中国のテナントの場合)
-   - [Windows 通知サービス エンドポイント](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config)。
+   - [Windows 通知サービス エンドポイント](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config)。
 
 5. それでも問題が解決しない場合は、[Microsoft Edge のサポート](https://www.microsoftedgeinsider.com/support)にお問い合わせください。
 
@@ -116,7 +116,7 @@ Azure Active Directory アカウントでこのエラーが発生した場合、
 
 ### <a name="issue-sync-has-been-turned-off-by-your-administrator"></a>問題: "同期は管理者によってオフにされています。"
 
-[SyncDisabled ポリシー](https://docs.microsoft.com/deployedge/microsoft-edge-policies#syncdisabled)が設定されていないことを確認します。
+[SyncDisabled ポリシー](./microsoft-edge-policies.md#syncdisabled)が設定されていないことを確認します。
 
 ## <a name="see-also"></a>関連項目
 

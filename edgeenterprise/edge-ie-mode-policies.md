@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: IE モード ポリシーの構成
-ms.openlocfilehash: 2d2ded3a3fb338bdf2d815d681b52249007945ac
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: e33aa57b7877d50fe6a5d9e9a888d05c366b0ef0
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980400"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447361"
 ---
-# IE モード ポリシーの構成
+# <a name="configure-ie-mode-policies"></a>IE モード ポリシーの構成
 
 この記事では、IE モード ポリシーの構成方法について説明します。
 
@@ -31,13 +31,13 @@ IE モードを構成するには、次の3つの手順を実行する必要が�
 3. (省略可能) [サイトを IE から Microsoft Edge にリダイレクトする](#redirect-sites-from-ie-to-microsoft-edge)
 
 > [!NOTE]
-> IE モードを有効にするポリシーは、Intune を使用して構成できます。 詳しくは、「[Microsoft Edge for Windows 10 を Microsoft Intune に追加する](https://docs.microsoft.com/intune/apps/apps-windows-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json)」および「[Microsoft Intune を使って Microsoft Edge ポリシー設定を構成する](https://docs.microsoft.com/DeployEdge/configure-edge-with-intune)」をご覧ください。
+> IE モードを有効にするポリシーは、Intune を使用して構成できます。 詳しくは、「[Microsoft Edge for Windows 10 を Microsoft Intune に追加する](/intune/apps/apps-windows-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json)」および「[Microsoft Intune を使って Microsoft Edge ポリシー設定を構成する](./configure-edge-with-intune.md)」をご覧ください。
 
-## Internet Explorer 統合を構成する
+## <a name="configure-internet-explorer-integration"></a>Internet Explorer 統合を構成する
 
 Microsoft Edge (IE モード) 内で直接開くように、Internet Explorer を構成できます。 スタンドアロンの Internet Explorer 11 ウィンドウで開くように、Internet Explorer を構成することもできます。 ほとんどのユーザーは、Microsoft Edge の IE モードでサイトを直接開くことを希望します。
 
-### グループ ポリシーを使用して Internet Explorer 統合を有効にする
+### <a name="enable-internet-explorer-integration-using-group-policy"></a>グループ ポリシーを使用して Internet Explorer 統合を有効にする
 
 1. 最新の [Microsoft Edge ポリシー テンプレート](https://www.microsoft.com/en-us/edge/business/download)をダウンロードして使用します。
 2. グループ ポリシー エディターを開きます。
@@ -53,14 +53,14 @@ Microsoft Edge (IE モード) 内で直接開くように、Internet Explorer �
    > このポリシーを **[無効]** に設定することは、IE モードがポリシーによって無効になることを意味していますが、IE モードは edge://flags またはコマンド ライン オプションを使用して設定することもできます。
 7. **[OK]** または **[適用]** をクリックして、このポリシー設定を保存します。
 
-## サイトを Microsoft Edge から IE モードにリダイレクトする
+## <a name="redirect-sites-from-microsoft-edge-to-ie-mode"></a>サイトを Microsoft Edge から IE モードにリダイレクトする
 
 IE モードで開くサイトを識別するには、次の2つのオプションがあります。
 
 - (推奨) [エンタープライズ サイト一覧のサイトを構成する](#configure-sites-on-the-enterprise-site-list)
 - [すべてのイントラネット サイトを構成する](#configure-all-intranet-sites)
 
-### エンタープライズ サイト一覧のサイトを構成する
+### <a name="configure-sites-on-the-enterprise-site-list"></a>エンタープライズ サイト一覧のサイトを構成する
 
 特定のサイトを IE モードで開くには、次のグループ ポリシーを使用して構成できます。
 
@@ -71,10 +71,10 @@ IE モードで開くサイトを識別するには、次の2つのオプショ�
 
 エンタープライズ モード サイト一覧について詳しくは、以下をご覧ください。
 
-- [Enterprise Mode Site List Manager の使用](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/use-the-enterprise-mode-site-list-manager)
-- [ファイルと Enterprise Mode Site List Manager (スキーマ v.2) を使ってエンタープライズ モード サイト一覧に複数のサイトを追加する](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/add-multiple-sites-to-enterprise-mode-site-list-using-the-version-2-schema-and-enterprise-mode-tool)
+- [Enterprise Mode Site List Manager の使用](/internet-explorer/ie11-deploy-guide/use-the-enterprise-mode-site-list-manager)
+- [ファイルと Enterprise Mode Site List Manager (スキーマ v.2) を使ってエンタープライズ モード サイト一覧に複数のサイトを追加する](/internet-explorer/ie11-deploy-guide/add-multiple-sites-to-enterprise-mode-site-list-using-the-version-2-schema-and-enterprise-mode-tool)
 
-### [エンタープライズ モードの IE Web サイト一覧を使う] ポリシーの使用を構成する
+### <a name="configure-using-the-use-the-enterprise-mode-ie-website-list-policy"></a>[エンタープライズ モードの IE Web サイト一覧を使う] ポリシーの使用を構成する
 
 IE モードでは、Internet Explorer のエンタープライズ サイト リストを構成する既存のポリシーを使用して、単一のリストを作成し、管理することができます。
 
@@ -90,7 +90,7 @@ IE モードでは、Internet Explorer のエンタープライズ サイト リ
     - ローカル ファイル: **file:///c:/Users/\<user\>/Documents/sites.xml**
 7. **[OK]** または **[適用]** をクリックして、これらの設定を保存します。
 
-### [エンタープライズ モード サイト リストを構成する] ポリシーの使用を構成する
+### <a name="configure-using-the-configure-the-enterprise-mode-site-list-policy"></a>[エンタープライズ モード サイト リストを構成する] ポリシーの使用を構成する
 
 Microsoft Edge に対して別個のポリシーを使用して IE モードを構成することもできます。 この追加のポリシーを使用すると、IE サイト リストをオーバーライドできます。 たとえば、一部の組織は、生産サイト リストの対象をすべてのユーザーにします。 その後、このポリシーを使用して、パイロット サイト リストを少数のユーザー グループに展開することができます。
 
@@ -106,7 +106,7 @@ Microsoft Edge に対して別個のポリシーを使用して IE モードを�
     - ローカル ファイル: **file:///c:/Users/\<user\>/Documents/sites.xml**
 7. **[OK]** または **[適用]** をクリックして、これらの設定を保存します。
 
-### すべてのイントラネット サイトを構成する
+### <a name="configure-all-intranet-sites"></a>すべてのイントラネット サイトを構成する
 
 IE モードは、ローカル イントラネット ゾーンのすべてのサイトに対して構成できます。 エンタープライズ モード サイト リストを使用して、個々のサイトを IE モードから削除できます。
 
@@ -119,7 +119,7 @@ IE モードは、ローカル イントラネット ゾーンのすべてのサ
 3. **[すべてのイントラネット サイトを Internet Explorer に送る]** をダブルクリックします。
 4. **[有効]** を選択し、**[OK]** または **[適用]** をクリックしてポリシー設定を保存します。
 
-## サイトを IE から Microsoft Edge にリダイレクトする
+## <a name="redirect-sites-from-ie-to-microsoft-edge"></a>サイトを IE から Microsoft Edge にリダイレクトする
 
 Internet Explorer を必要としないサイトで、ユーザーが Internet Explorer を使用できないようにすることができます。 サイト リストにないサイトの場合、Internet Explorer ではそのサイトを自動的に Microsoft Edge にリダイレクトできます。
 
@@ -138,8 +138,8 @@ Internet Explorer を必要としないサイトで、ユーザーが Internet E
    - Microsoft Edge バージョン 45 以前
 9. **[OK]** または **[適用]** をクリックして、これらの設定を保存します。
 
-## 関連項目
+## <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
-- [IE モードの概要](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [その他のエンタープライズ モード情報](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [IE モードの概要](./edge-ie-mode.md)
+- [その他のエンタープライズ モード情報](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)

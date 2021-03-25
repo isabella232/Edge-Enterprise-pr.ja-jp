@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge で Internet Explorer 11 を無効にし、Internet Explorer モードを使用する方法をご紹介します。
-ms.openlocfilehash: a0486c2965b1868db67b6de1423f279905074410
-ms.sourcegitcommit: f34ff11499a2b96941e704103bdd959d19e3d7e7
+ms.openlocfilehash: 89fa6f81879be851f0036990a41e36e1eaee7fca
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "11400607"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447391"
 ---
 # <a name="disable-internet-explorer-11"></a>Internet Explorer 11 を無効にする
 
@@ -45,7 +45,7 @@ ms.locfileid: "11400607"
 IE モードを構成した後、グループ ポリシーを使用して組織全体の **IE モード機能に影響を与えることなく**、スタンドアロン ブラウザーとして IE11 を無効にできます。
 
 > [!NOTE]
-> 特定のサイトにスタンドアロンの IE11 アプリが必要で、他のすべてのブラウザー トラフィックを Microsoft Edge にリダイレクトする場合は、[サイト リストに含まれていないすべてのサイトを Microsoft Edge に送信する](https://docs.microsoft.com/deployedge/edge-ie-mode-policies#redirect-sites-from-ie-to-microsoft-edge)ポリシーを構成して、サイトを IE から Microsoft Edge にリダイレクトできます。
+> 特定のサイトにスタンドアロンの IE11 アプリが必要で、他のすべてのブラウザー トラフィックを Microsoft Edge にリダイレクトする場合は、[サイト リストに含まれていないすべてのサイトを Microsoft Edge に送信する](./edge-ie-mode-policies.md#redirect-sites-from-ie-to-microsoft-edge)ポリシーを構成して、サイトを IE から Microsoft Edge にリダイレクトできます。
 
 ## <a name="user-experience-after-redirecting-traffic-to-microsoft-edge"></a>Microsoft Edge にトラフィックをリダイレクトした後のユーザー エクスペリエンス
 
@@ -67,7 +67,7 @@ IE モードを構成した後、グループ ポリシーを使用して組織�
 
 グループ ポリシーを使用して Internet Explorer 11 を無効にするには、次の手順に従います。
 
-1. 前提条件のオペレーティング システムの更新プログラムがあることを確認してください。 この手順では、コンピューター上の ADMX ファイル (具体的には inetres.adml および inetres.admx) を直接更新します。 セントラル ストアを更新する場合は、前提条件の更新プログラムがあるコンピューターから .adml ファイルと .admx ファイルをコピーする必要があることに注意してください。 詳しくは、「[セントラル ストアの作成と管理](https://docs.microsoft.com/troubleshoot/windows-client/group-policy/create-and-manage-central-store)」をご覧ください。
+1. 前提条件のオペレーティング システムの更新プログラムがあることを確認してください。 この手順では、コンピューター上の ADMX ファイル (具体的には inetres.adml および inetres.admx) を直接更新します。 セントラル ストアを更新する場合は、前提条件の更新プログラムがあるコンピューターから .adml ファイルと .admx ファイルをコピーする必要があることに注意してください。 詳しくは、「[セントラル ストアの作成と管理](/troubleshoot/windows-client/group-policy/create-and-manage-central-store)」をご覧ください。
 2. グループ ポリシー エディターを開きます。
 3. ***[コンピューターの構成]、[管理用テンプレート]、[Windows コンポーネント/Internet Explorer] ***の順に移動します。 
 4.  **[スタンドアロン ブラウザーとして Internet Explorer 11 を無効にする] **をダブルクリックします。
@@ -83,5 +83,5 @@ IE モードを構成した後、グループ ポリシーを使用して組織�
 ## <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
-- [IE モードの概要](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [その他のエンタープライズ モード情報](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [IE モードの概要](./edge-ie-mode.md)
+- [その他のエンタープライズ モード情報](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)

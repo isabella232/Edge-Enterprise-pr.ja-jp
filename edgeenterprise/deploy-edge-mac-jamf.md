@@ -10,28 +10,28 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Jamf を使用して macOS 用の Microsoft Edge 展開を自動化する方法。
-ms.openlocfilehash: 8639c0b7bf78bb8e22370dba29b592af73d8cb40
-ms.sourcegitcommit: ed6a5afabf909df87bec48671c4c47bcdfaeb7bc
+ms.openlocfilehash: f02b9efde872082cf2301a4cf66b0a3f3782e39b
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "11194725"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447491"
 ---
-# Jamf による macOS への展開
+# <a name="deploy-to-macos-with-jamf"></a>Jamf による macOS への展開
 
 この記事では、Jamf を使用して macOS 用に Microsoft Edge を展開する方法について説明します。
 
 > [!NOTE]
 > この記事は、Microsoft Edge version 77 以降に適用されます。
 
-## 前提条件
+## <a name="prerequisites"></a>前提条件
 
 Microsoft Edge を展開する前に、次の前提条件を満たしていることを確認してください。
 
 - Microsoft Edge インストール ファイル (**MicrosoftEdgeDev-\<version\>.pkg**) が、ネットワーク上のアクセス可能な場所にあること。 Microsoft Edge Enterprise のインストール ファイルは、[Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)からダウンロードできます。
 - インストール ファイルを作成してコンピューターに展開するために必要なレベルのアクセスと権限のある Jamf Cloud アカウントを持っていること。
 
-## Jamf を使用して Microsoft Edge を展開するには:
+## <a name="to-deploy-microsoft-edge-using-jamf"></a>Jamf を使用して Microsoft Edge を展開するには:
 
 1. Jamf にサインオンし、**[All Settings]** (すべての設定) に移動します。
 
@@ -93,8 +93,8 @@ Microsoft Edge を展開する前に、次の前提条件を満たしている�
 
 お疲れさまでした。 これで、Jamf を使用して macOS 用に Microsoft Edge を展開するための構成が完了しました。 定義したトリガー条件に合致すると、指定したコンピューターにパッケージが展開されます。
 
-## 関連項目
+## <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
 - [Jamf.com](https://www.jamf.com/)
-- [Jamf を Microsoft Intune と統合する](https://docs.microsoft.com/intune/conditional-access-integrate-jamf)
+- [Jamf を Microsoft Intune と統合する](/intune/conditional-access-integrate-jamf)

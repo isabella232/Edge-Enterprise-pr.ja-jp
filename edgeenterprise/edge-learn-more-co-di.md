@@ -10,26 +10,26 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge での ClickOnce と DirectInvoke の使用について説明します。
-ms.openlocfilehash: 1d4e08c0ce3ee2afec7968cd892f77ef7bdc3fff
-ms.sourcegitcommit: 4c0b84b03e686a7a2989ce2187dbadf35418104a
+ms.openlocfilehash: 1103c4f5c071b0d04c347a7c7c9fbc5556c4c0fb
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "11012797"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447671"
 ---
-# Microsoft Edge での ClickOnce と DirectInvoke の機能について
+# <a name="understand-the-clickonce-and-directinvoke-features-in-microsoft-edge"></a>Microsoft Edge での ClickOnce と DirectInvoke の機能について
 
 ClickOnce と DirectInvoke は、IE および Microsoft Edge (version 45 以前) で利用可能な機能で、Web サイトからファイルをダウンロードするためのファイル ハンドラーの使用をサポートします。 この 2 つの機能は異なる目的で使用されますが、どちらの場合も Web サイトでは、ダウンロードが要求されたファイルをユーザー デバイス上のファイル ハンドラーに渡すことを指定できます。 ClickOnce 要求は、Windows のネイティブ ファイル ハンドラーによって処理されます。 DirectInvoke 要求は、ファイルをホストしている Web サイトで指定された登録済みのファイル ハンドラーによって処理されます。
 
 これらの機能について詳しくは、以下をご覧ください。
 
-- [ClickOnce](https://docs.microsoft.com/visualstudio/deployment/clickonce-security-and-deployment?view=vs-2019)
+- [ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment?view=vs-2019)
 - [DirectInvoke]( https://technet.microsoft.com/learning/jj215788(v=vs.94).aspx)
 
 > [!NOTE]
 > 現時点では、ClickOnce または DirectInvoke のネイティブ サポートが Chromium では提供されていません。
 
-## 概要: 前提条件とプロセス
+## <a name="overview-prerequisites-and-process"></a>概要: 前提条件とプロセス
 
 ClickOnce および DirectInvoke が設計どおりに動作し、ファイル ハンドラーへの要求が正しく行われるためには、ClickOnce または DirectInvoke をサポートするように、ファイル ハンドラーをオペレーティング システムに登録しておく必要があります。 この登録は通常、元のオペレーティング システムのインストール時か、インストールされた新しいプログラムが更新のために DirectInvoke を使用できるように要求した場合に行われます。
 
@@ -43,7 +43,7 @@ ClickOnce または DirectInvoke を必要とするダウンロード要求を W
   > [!NOTE]
   > URL は、ファイルのソースと、ファイルへのアクセス時に使用するパラメーターを決定するために使用されます。  パラメーターには、エンドポイント、マニフェスト、メタデータなどがあります。
 
-## 使用例
+## <a name="use-cases"></a>使用例
 
 次に、代表的な使用例を示します。
 
@@ -51,7 +51,7 @@ ClickOnce を使用すると、最小限のユーザー操作で、デバイス�
 
 DirectInvoke の使用方法は、DirectInvoke を要求している Web サイトの目的によって異なります。 例として、Microsoft Word での共同作業によるファイル編集機能があります。 リンクをクリックして同僚と一緒に作業中のドキュメントのコピー全体をダウンロードする代わりに、DirectInvoke を使用すると、ドキュメントのうち、変更された部分だけをダウンロードできます。 これにより、転送されるデータの量が減り、ドキュメントを開くために必要な時間を短縮できます。  
 
-## Microsoft Edge での ClickOnce と DirectInvoke のサポート状況
+## <a name="current-support-for-clickonce-and-directinvoke-in-microsoft-edge"></a>Microsoft Edge での ClickOnce と DirectInvoke のサポート状況
 
 ClickOnce と DirectInvoke のサポート状況は次のとおりです。
 
@@ -62,7 +62,7 @@ ClickOnce と DirectInvoke のサポート状況は次のとおりです。
 
 - ClickOnce と DirectInvoke は、Windows 以外のプラットフォームではサポートされていません。
 
-## ClickOnce と DirectInvoke のファイル処理のセキュリティ
+## <a name="clickonce-and-directinvoke-file-handling-security"></a>ClickOnce と DirectInvoke のファイル処理のセキュリティ
 
 ClickOnce と DirectInvoke は、Microsoft Defender SmartScreen の URL レピュテーション スキャン サービスによって保護されます。
 
@@ -85,15 +85,15 @@ Microsoft Defender SmartScreen URL レピュテーション サービスによ�
 > [!NOTE]
 > ClickOnce または DirectInvoke が無効になっている場合、要求されたファイルは通常のダウンロードとして扱われ、安全でないとフラグ付されている場合は、安全ではないとマークされます。 これは、安全でない他のダウンロードの処理と一致しています。
 
-## ClickOnce と DirectInvoke のポリシー
+## <a name="clickonce-and-directinvoke-policies"></a>ClickOnce と DirectInvoke のポリシー
 
-エンタープライズ ユーザー用に ClickOnce と DirectInvoke を有効または無効にするには、2 つのグループ ポリシーを使用できます。 [ClickOnceEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#clickonceenabled) と [DirectInvokeEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#directinvokeenabled) です。 これら 2 つのポリシーには、グループ ポリシー エディターで、"ユーザーが ClickOnce プロトコルを使用してファイルを開けるようにする" と "ユーザーが DirectInvoke プロトコルを使用してファイルを開けるようにする" というラベルがそれぞれ付けられています。
+エンタープライズ ユーザー用に ClickOnce と DirectInvoke を有効または無効にするには、2 つのグループ ポリシーを使用できます。 [ClickOnceEnabled](./microsoft-edge-policies.md#clickonceenabled) と [DirectInvokeEnabled](./microsoft-edge-policies.md#directinvokeenabled) です。 これら 2 つのポリシーには、グループ ポリシー エディターで、"ユーザーが ClickOnce プロトコルを使用してファイルを開けるようにする" と "ユーザーが DirectInvoke プロトコルを使用してファイルを開けるようにする" というラベルがそれぞれ付けられています。
 
-## ClickOnce と DirectInvoke の動作
+## <a name="clickonce-and-directinvoke-behavior"></a>ClickOnce と DirectInvoke の動作
 
 次の例は、ClickOnce と DirectInvoke が有効または無効になっているときのファイル処理を示しています。
 
-### ClickOnce が有効になっている場合
+### <a name="clickonce-enabled"></a>ClickOnce が有効になっている場合
 
 1. ユーザーが ClickOnce のサポートを要求するページへのリンクを開くと、次のスクリーンショットに示されているメッセージが表示されます。
 
@@ -110,13 +110,13 @@ Microsoft Defender SmartScreen URL レピュテーション サービスによ�
    > [!NOTE]
    > ClickOnce ファイル ハンドラーによって表示されるインターフェイス、メッセージ、オプションは、アクセスするファイルの種類と構成によって異なります。
 
-### ClickOnce が無効になっている場合
+### <a name="clickonce-disabled"></a>ClickOnce が無効になっている場合
 
 1. ユーザーが ClickOnce のサポートを要求するページへのリンクを開くと、次のスクリーンショットに示されているようなメッセージがダウンロード トレイに表示されます。
 
    ![ファイルのダウンロードを確認するメッセージ](./media/edge-learn-more-co-di/edge-clickonce-disabled-1.png)
 
-### DirectInvoke が有効になっている場合
+### <a name="directinvoke-enabled"></a>DirectInvoke が有効になっている場合
 
 1. ユーザーが DirectInvoke のサポートを要求するページへのリンクを開くと、次のスクリーンショットに示されているメッセージが表示されます。
 
@@ -127,14 +127,14 @@ Microsoft Defender SmartScreen URL レピュテーション サービスによ�
    > [!NOTE]
    > DirectInvoke ファイル ハンドラーによって表示されるインターフェイス、メッセージ、オプションは、アクセスするファイルの種類と構成によって異なります。
 
-### DirectInvoke が無効になっている場合
+### <a name="directinvoke-disabled"></a>DirectInvoke が無効になっている場合
 
 1. ユーザーが DirectInvoke のサポートを要求するページへのリンクを開くと、DirectInvoke は、ClickOnce が無効になっている場合と同じように動作します。 次のスクリーンショットのようなメッセージがダウンロード トレイに表示されます。
 
    ![ファイルを開くかどうかを尋ねるメッセージ](./media/edge-learn-more-co-di/edge-directinvoke-open-link-2.png)
 
-## 関連項目
+## <a name="see-also"></a>関連項目
 
-- [ClickOnce のセキュリティと展開](https://go.microsoft.com/fwlink/?linkid=2099880)
-- [Internet Explorer での DirectInvoke の使用](https://go.microsoft.com/fwlink/?linkid=2099871)
+- [ClickOnce のセキュリティと展開](/visualstudio/deployment/clickonce-security-and-deployment)
+- [Internet Explorer での DirectInvoke の使用](/previous-versions/windows/internet-explorer/ie-developer/dev-guides/jj215788(v=vs.85))
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)

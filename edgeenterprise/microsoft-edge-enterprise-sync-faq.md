@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge のエンタープライズ向けの同期に関してよく寄せられる質問。
-ms.openlocfilehash: 51f6dfc4cd8f308815ee111c30d5501ec0e44f59
-ms.sourcegitcommit: 86e0de9b27ad4297a6d5a57c866d7ef4fc7bb0cd
+ms.openlocfilehash: e25ee985f65ee61dda5cacece73d43be7f1e6d7d
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "11400200"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447871"
 ---
 # <a name="microsoft-edge-enterprise-sync-faq"></a>Microsoft Edge のエンタープライズ向けの同期に関するよく寄せられる質問 (FAQ)
 
@@ -25,11 +25,11 @@ ms.locfileid: "11400200"
 
 ### <a name="is-the-synced-data-encrypted"></a>同期したデータは暗号化されていますか?
 
-データは TLS 1.2 以上を使用してトランスポートで暗号化されます。 すべてのデータ型は、AES128 を使用して Microsoft のサービスで保存中にさらに暗号化されます。 オープン タブと履歴の同期に使用されるデータ型を除くすべてのデータ型は、[Azure Information Protection](https://docs.microsoft.com/deployedge/microsoft-edge-policies#restrictsignintopattern)ポリシーで管理されているキーを使ってユーザーのデバイスを離れる前に、さらに暗号化されます。
+データは TLS 1.2 以上を使用してトランスポートで暗号化されます。 すべてのデータ型は、AES128 を使用して Microsoft のサービスで保存中にさらに暗号化されます。 オープン タブと履歴の同期に使用されるデータ型を除くすべてのデータ型は、[Azure Information Protection](./microsoft-edge-policies.md#restrictsignintopattern)ポリシーで管理されているキーを使ってユーザーのデバイスを離れる前に、さらに暗号化されます。
 
 ### <a name="why-dont-open-tab-and-history-data-have-more-client-side-encryption"></a>オープンタブと履歴データにクライアント側の暗号化を追加しない理由はなぜでしょうか?
 
-エンド ユーザー のデバイスでのリソース使用率を削減するために、オープン タブ ローミング データに基づいてサーバー側で履歴データが生成されます。 このプロセスは、このデータのクライアント側の暗号化では実行できない可能性があります。 オープン タブと履歴の同期を無効にするには [SavingBrowserHistoryDisabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#savingbrowserhistorydisabled) または [SyncTypesListDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#synctypeslistdisabled) ポリシーを適用します。
+エンド ユーザー のデバイスでのリソース使用率を削減するために、オープン タブ ローミング データに基づいてサーバー側で履歴データが生成されます。 このプロセスは、このデータのクライアント側の暗号化では実行できない可能性があります。 オープン タブと履歴の同期を無効にするには [SavingBrowserHistoryDisabled](./microsoft-edge-policies.md#savingbrowserhistorydisabled) または [SyncTypesListDisabled](./microsoft-edge-policies.md#synctypeslistdisabled) ポリシーを適用します。
 
 ### <a name="can-tenant-admins-bring-their-own-key"></a>テナント管理者が独自のキーを使用することはできますか?
 
@@ -63,7 +63,7 @@ Microsoft Edge 同期のサービス条件は、Microsoft ソフトウェア ラ
 
 ### <a name="will-microsoft-edge-ever-support-syncing-between-microsoft-edge-and-ie"></a>Microsoft Edge では、将来 Microsoft Edge と IE との同期はサポートされますか?
 
-その同期をサポートする計画はありません。 ご自分の環境で従来のアプリをサポートするために IE を使用する必要がある場合、[新しい IE モード](https://docs.microsoft.com/deployedge/edge-ie-mode)を検討してください。
+その同期をサポートする計画はありません。 ご自分の環境で従来のアプリをサポートするために IE を使用する必要がある場合、[新しい IE モード](./edge-ie-mode.md)を検討してください。
 
 ### <a name="will-microsoft-edge-sync-with-microsoft-edge-legacy"></a>Microsoft Edge は Microsoft Edge レガシと同期しますか?
 
@@ -73,7 +73,7 @@ Microsoft Edge 同期のサービス条件は、Microsoft ソフトウェア ラ
 
 ### <a name="is-it-possible-to-stop-my-users-from-syncing-with-a-personal-tenant"></a>ユーザーに個人用テナントと同期させないようにすることはできますか?
 
-直接はできませんが、[RestrictSigninToPattern](https://docs.microsoft.com/deployedge/microsoft-edge-policies#restrictsignintopattern) ポリシーを使用して、Microsoft Edge にサインオンできるプロファイルを定義することはできます。
+直接はできませんが、[RestrictSigninToPattern](./microsoft-edge-policies.md#restrictsignintopattern) ポリシーを使用して、Microsoft Edge にサインオンできるプロファイルを定義することはできます。
 
 ## <a name="see-also"></a>関連項目
 

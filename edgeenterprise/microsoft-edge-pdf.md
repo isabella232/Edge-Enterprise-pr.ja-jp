@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge の PDF リーダーについて説明します。
-ms.openlocfilehash: d84b838556ed10951d7a7a3c6e5085b7e32c286c
-ms.sourcegitcommit: f14286edec59ee9183bdf38c15fc890881efd64f
+ms.openlocfilehash: 342f6702ff0da3305c037112555549b0d5503d3c
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "11385035"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447841"
 ---
 # <a name="pdf-reader-in-microsoft-edge"></a>Microsoft Edge の PDF リーダー
 
@@ -109,16 +109,16 @@ PDF の音声読み上げは、ユーザーが重要なタスクを実行しな�
 
 ### <a name="protected-pdfs"></a>保護された PDF
 
-[Microsoft Information Protection (MIP)](https://docs.microsoft.com/microsoft-365/compliance/protect-information?view=o365-worldwide&preserve-view=true) により、ユーザーは組織のコンプライアンス ポリシーに準拠しながら、他のユーザーと安全に共同作業することが可能です。 ファイルが保護されると、ユーザーがファイルに実行できるアクションは割り当てられているアクセス許可によって決定されます。
+[Microsoft Information Protection (MIP)](/microsoft-365/compliance/protect-information?preserve-view=true&view=o365-worldwide) により、ユーザーは組織のコンプライアンス ポリシーに準拠しながら、他のユーザーと安全に共同作業することが可能です。 ファイルが保護されると、ユーザーがファイルに実行できるアクションは割り当てられているアクセス許可によって決定されます。
 
 > [!IMPORTANT]
-> MIP にはライセンスが必要です。 詳細については、この「[Microsoft 365 ライセンス ガイダンス](https://docs.microsoft.com/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)」を参照してください。
+> MIP にはライセンスが必要です。 詳細については、この「[Microsoft 365 ライセンス ガイダンス](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)」を参照してください。
 
 これらのファイルは、他のソフトウェアをダウンロードしたり、アドインをインストールしたりすることなく、ブラウザーで直接開くことができます。 この機能により、MIP が提供するセキュリティが直接ブラウザーに統合され、シームレスなワークフローを実現します。
 
 ![保護された PDF ドキュメント。](media/microsoft-edge-pdf/pdf-reader-protected-pdf2.png)
 
-MIP で保護されたファイルに加えて、SharePoint ライブラリに保護された [Information Rights Management (IRM)](https://docs.microsoft.com/microsoft-365/compliance/set-up-irm-in-sp-admin-center?view=o365-worldwide&preserve-view=true) 内の PDFファイルは、ブラウザーでネイティブに開くこともできます。
+MIP で保護されたファイルに加えて、SharePoint ライブラリに保護された [Information Rights Management (IRM)](/microsoft-365/compliance/set-up-irm-in-sp-admin-center?preserve-view=true&view=o365-worldwide) 内の PDFファイルは、ブラウザーでネイティブに開くこともできます。
 
 Microsoft Edge では、ユーザーはローカルまたはクラウドに保存されている MIP 保護ファイルを表示できます。 ローカルに保存した場合、ファイルをブラウザーで直接開くことができます。 クラウドサービスから SharePoint としてファイルを開いた場合、ユーザーは [ブラウザーで開く] オプションを使用することが必要になる場合があります。
 
@@ -155,7 +155,7 @@ PDF リーダーは、オペレーティング システム レベルで定義�
 - プロセスの分離。 異なる Web サイトから開いた PDF は、プロセスが完全に分離されます。 ブラウザーは、いかなる Web サイトとも通信する必要はなく、別のソースから開いている PDF ファイルと通信する必要もありません。 PDF の閲覧は、危険にさらされた PDF を攻撃の拠点として計画されたいかなる攻撃からもセキュリティで保護されます。
 
 - Application Guard。 Application Guard を使用すると、管理者は組織で信頼されるサイトの一覧を設定することが可能です。 ユーザーが他のいかなるサイトを開いた場合でも、Application Guard ウィンドウによって独自のコンテナーを実行し、分離して開かれます。 このコンテナーは、企業ネットワークとユーザーのコンピューター上のあらゆるデータが危険にさらされるのを防止するのに役立ちます。<br><br>
-また、この保護は、表示されるあらゆるオンライン PDF ファイルにも適用されます。 さらに、Application Guard ウィンドウからダウンロードされたいかなる PDF ファイルも保存され、必要があれば、コンテナー内で再び開きます。 これにより、ファイルがダウンロードされた場合だけでなく、ライフサイクル全体を通した環境がセキュリティ保護されます。 詳細については、「[Application Guard](https://docs.microsoft.com/DeployEdge/microsoft-edge-security-windows-defender-application-guard)」 を参照してください。
+また、この保護は、表示されるあらゆるオンライン PDF ファイルにも適用されます。 さらに、Application Guard ウィンドウからダウンロードされたいかなる PDF ファイルも保存され、必要があれば、コンテナー内で再び開きます。 これにより、ファイルがダウンロードされた場合だけでなく、ライフサイクル全体を通した環境がセキュリティ保護されます。 詳細については、「[Application Guard](./microsoft-edge-security-windows-defender-application-guard.md)」 を参照してください。
 
 ### <a name="reliability"></a>信頼性
 
@@ -163,10 +163,10 @@ Microsoft Edge は Chromium ベースであるため、ユーザーは他の Chr
 
 ## <a name="deploy-and-update-pdf-reader"></a>PDF リーダーの展開と更新
 
-PDF リーダーは、Microsoft Edge ブラウザーの残りの部分で展開および更新されます。 Microsoft Edge の展開の詳細については、 [[Microsoft Edge を数百から数千の デバイスに展開する]](microsoft-edge-video-deploy.md)ビデオをご覧ください。 展開の詳細については、[Microsoft Edge のドキュメント](https://docs.microsoft.com/DeployEdge/) ランディングページに掲載されています。
+PDF リーダーは、Microsoft Edge ブラウザーの残りの部分で展開および更新されます。 Microsoft Edge の展開の詳細については、 [[Microsoft Edge を数百から数千の デバイスに展開する]](microsoft-edge-video-deploy.md)ビデオをご覧ください。 展開の詳細については、[Microsoft Edge のドキュメント](./index.yml) ランディングページに掲載されています。
 
 > [!TIP]
-> 組織で Microsoft Edge を既定の PDF リーダーにすることができます。 これを行うためには、[次の手順を実行します](https://docs.microsoft.com/deployedge/edge-default-browser)。
+> 組織で Microsoft Edge を既定の PDF リーダーにすることができます。 これを行うためには、[次の手順を実行します](./edge-default-browser.md)。
 
 ## <a name="roadmap-and-feedback"></a>ロードマップとフィードバック
 

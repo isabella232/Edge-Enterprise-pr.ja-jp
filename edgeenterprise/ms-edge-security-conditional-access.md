@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge と条件付きアクセス
-ms.openlocfilehash: a81d39c15f418dab6565ee7acc45de17f66e3828
-ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
+ms.openlocfilehash: 898a86c8c268a8c46e80dbd5ef3a435c300fb04e
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "11094777"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447141"
 ---
-# Microsoft Edge と条件付きアクセス
+# <a name="microsoft-edge-and-conditional-access"></a>Microsoft Edge と条件付きアクセス
   
 この記事では、Microsoft Edge が条件付きアクセスをサポートする方法と、条件付きアクセスによって保護されているリソースにアクセスする方法について説明します。
 
@@ -26,7 +26,7 @@ ms.locfileid: "11094777"
 
 クラウド リソースを管理する場合、クラウドのセキュリティで重要になる要素は ID とアクセスです。 モバイル ファースト、クラウド ファーストの環境では、ユーザーはどこからでもさまざまなデバイスとアプリを使用して、組織のリソースにアクセスできます。 このため、どのユーザーがリソースにアクセスできるかという点を考えるだけでは不十分です。 リソースへのアクセス方法についても考慮する必要があります。 Azure Active Directory (Azure AD) の条件付きアクセスは、セキュリティと生産性のバランスを制御するために役立ちます。
 
-## Microsoft Edge で条件付きアクセスによって保護されたリソースにアクセスする
+## <a name="accessing-conditional-access-protected-resources-in-microsoft-edge"></a>Microsoft Edge で条件付きアクセスによって保護されたリソースにアクセスする
 
 Microsoft Edge では、Azure AD 条件付きアクセスがネイティブにサポートされています。 別の拡張機能をインストールする必要はありません。 エンタープライズ Azure AD 資格情報を使用して Microsoft Edge プロファイルにサインインすると、条件付きアクセスを使用して保護されたエンタープライズ クラウド リソースへのシームレスなアクセスが、Microsoft Edge によって許可されます。
 
@@ -44,11 +44,11 @@ Microsoft Edge では、Azure AD 条件付きアクセスがネイティブに�
 
 このサポートは、サポートされているすべてのバージョンの Windows および macOS を含めて、すべてのプラットフォームに適用されます。
 
-### Azure Active Directory の条件付きアクセスを展開する方法
+### <a name="how-to-deploy-conditional-access-in-azure-active-directory"></a>Azure Active Directory の条件付きアクセスを展開する方法
 
-[条件付きアクセスの展開に関するページ](https://docs.microsoft.com/azure/active-directory/conditional-access/plan-conditional-access)には、Azure Active Directory での条件付きアクセスの展開に役立つ詳細なガイドが用意されています。
+[条件付きアクセスの展開に関するページ](/azure/active-directory/conditional-access/plan-conditional-access)には、Azure Active Directory での条件付きアクセスの展開に役立つ詳細なガイドが用意されています。
 
-## 関連項目
+## <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
 - [ビデオ - セキュリティ、互換性、管理の容易性](/microsoft-edge-video-security-compatibility-manageability.md)

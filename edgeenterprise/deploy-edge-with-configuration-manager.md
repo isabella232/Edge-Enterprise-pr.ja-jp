@@ -10,33 +10,33 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: System Center Configuration Manager (SCCM) を使用して Microsoft Edge を展開する方法について説明します。
-ms.openlocfilehash: be14f2db3b28b7585bfad1706b9f82209235df0a
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 64b26412c4596a9514227d41d1a4e753a66ed057
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980417"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447831"
 ---
-# System Center Configuration Manager を使用して Microsoft Edge を展開する
+# <a name="deploy-microsoft-edge-using-system-center-configuration-manager"></a>System Center Configuration Manager を使用して Microsoft Edge を展開する
 
 この記事では、System Center Configuration Manager (SCCM) を使用して Microsoft Edge の展開を自動化する方法について説明します。
 
 >[!NOTE]
 >この記事は、Microsoft Edge version 77 以降に適用されます。
 
-## 開始する前に
+## <a name="before-you-begin"></a>開始する前に
 
-「[Configuration Manager でのアプリケーション管理の概要](https://docs.microsoft.com/sccm/apps/understand/introduction-to-application-management)」の情報をご確認ください。 アプリケーション管理に関する記事は、、サイトでアプリケーションのインストールを準備するためのガイドであり、この記事で使用する用語の理解に役立ちます。
+「[Configuration Manager でのアプリケーション管理の概要](/sccm/apps/understand/introduction-to-application-management)」の情報をご確認ください。 アプリケーション管理に関する記事は、、サイトでアプリケーションのインストールを準備するためのガイドであり、この記事で使用する用語の理解に役立ちます。
 
 [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)から、Microsoft Edge Enterprise インストール ファイル (**MicrosoftEdgeDevEnterpriseX64.msi**、**MicrosoftEdgeDevEnterpriseX86.msi**) をダウンロードします。
 
 Microsoft Edge インストール ファイルは、ネットワーク上のアクセス可能な場所に保存してください。
 
-## アプリケーションを作成する
+## <a name="create-the-application"></a>アプリケーションを作成する
 
 Configuration Manager ウィザードを使用してアプリケーションを作成します。
 
-### アプリケーションの作成ウィザードを起動してアプリケーションを作成する  
+### <a name="start-the-create-application-wizard-and-create-the-application"></a>アプリケーションの作成ウィザードを起動してアプリケーションを作成する  
 
 1. Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** > **[アプリケーション管理]** > **[アプリケーション]** の順にクリックします。  
 
@@ -85,7 +85,7 @@ Configuration Manager ウィザードを使用してアプリケーションを�
 
 ![アプリケーション](./media/edge-ent-deployment-sccm/edge-ent-create-app-8.png)
 
-## アプリケーションのプロパティと展開の設定を変更する
+## <a name="change-application-properties-and-deployment-settings"></a>アプリケーションのプロパティと展開の設定を変更する
 
 アプリケーションを作成した後、必要に応じてアプリケーションの設定を調整できます。 アプリケーションのプロパティを確認するには:
 
@@ -94,7 +94,7 @@ Configuration Manager ウィザードを使用してアプリケーションを�
 
    ![アプリケーションのプロパティを構成する](./media/edge-ent-deployment-sccm/edge-ent-create-app-req-1.png)
 
- **[<アプリケーション名\> アプリケーションのプロパティ]** ダイアログ ページには、アプリケーションの動作を変更するために構成できる項目のタブ付きのビューが表示されます。 構成可能な設定について詳しくは、[アプリケーションの作成に関するページ](https://docs.microsoft.com/sccm/apps/deploy-use/create-applications)をご覧ください。
+ **[<アプリケーション名\> アプリケーションのプロパティ]** ダイアログ ページには、アプリケーションの動作を変更するために構成できる項目のタブ付きのビューが表示されます。 構成可能な設定について詳しくは、[アプリケーションの作成に関するページ](/sccm/apps/deploy-use/create-applications)をご覧ください。
 
 この例では、アプリケーションの展開の種類のプロパティをいくつか変更します。 展開のプロパティを変更するには:
 
@@ -104,7 +104,7 @@ Configuration Manager ウィザードを使用してアプリケーションを�
 
    ![展開の種類を編集する](./media/edge-ent-deployment-sccm/edge-ent-create-app-req-2.png)
 
-### 展開の種類に要件を追加する
+### <a name="add-a-requirement-to-the-deployment-type"></a>展開の種類に要件を追加する
 
  要件には、デバイスにアプリケーションをインストールする前に満たす必要がある条件を指定します。 組み込みの要件から選択することも、独自の要件を作成することもできます。 たとえば、インストール ファイルのターゲット プロセッサ アーキテクチャに応じて、Windows 10 **x86** または **x64** を実行している PC にのみアプリケーションがインストールされるという要件を追加できます。 この例では Windows 10 **x86** を指定します。
 
@@ -132,12 +132,12 @@ Configuration Manager ウィザードを使用してアプリケーションを�
 
 4. **[OK]** をクリックして、開いている各プロパティ ページを閉じ、Configuration Manager コンソールの **[アプリケーション]** 一覧に戻ります。  
 
-## アプリケーション コンテンツを配布ポイントに追加する  
+## <a name="add-the-application-content-to-a-distribution-point"></a>アプリケーション コンテンツを配布ポイントに追加する  
 
 更新されたアプリケーションを PC に展開するには、アプリケーションのコンテンツが配布ポイントにコピーされていることを確認してください。 PC は、配布ポイントにアクセスしてアプリケーションをインストールします。  
 
 >[!TIP]
->Configuration Manager の配布ポイントとコンテンツ管理について詳しくは、 「[System Center Configuration Manager でのコンテンツの展開および管理](https://docs.microsoft.com/sccm/core/servers/deploy/configure/deploy-and-manage-content)」をご覧ください。  
+>Configuration Manager の配布ポイントとコンテンツ管理について詳しくは、 「[System Center Configuration Manager でのコンテンツの展開および管理](/sccm/core/servers/deploy/configure/deploy-and-manage-content)」をご覧ください。  
 
 1. Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。  
 
@@ -155,7 +155,7 @@ Configuration Manager ウィザードを使用してアプリケーションを�
 
 アプリケーション コンテンツが配布ポイントに正しくコピーされたかどうかを確認するには、**[監視]** ワークスペースの **[配布ステータス]** > **[コンテンツのステータス]** に移動します。  
 
-## アプリケーションを展開する  
+## <a name="deploy-the-application"></a>アプリケーションを展開する  
 
 次に、階層内のデバイス コレクションにアプリケーションを展開します。 この例では、アプリケーションを **[すべてのシステム]** デバイス コレクションに展開します。  
 
@@ -199,11 +199,11 @@ Configuration Manager ウィザードを使用してアプリケーションを�
 
 アプリケーションの展開の状態を確認するには、次の「**アプリケーションを監視する**」セクションの情報を使用します。  
 
-## アプリケーションを監視する
+## <a name="monitor-the-application"></a>アプリケーションを監視する
 
  このセクションでは、展開したアプリケーションの展開状態を簡単に確認します。  
 
-### 展開状態を確認するには  
+### <a name="to-review-the-deployment-status"></a>展開状態を確認するには  
 
 1. Configuration Manager コンソールで、 **[監視]** > **[展開]** をクリックします。  
 
@@ -226,13 +226,13 @@ Configuration Manager ウィザードを使用してアプリケーションを�
     - **不明**: Configuration Manager は、展開の状態を報告できませんでした。 後でもう一度確認してしてください。  
 
     >[!TIP]
-    >アプリケーションの展開を監視するには、複数の方法があります。 詳しくは、「[System Center Configuration Manager コンソールからアプリケーションを監視する](https://docs.microsoft.com/sccm/apps/deploy-use/monitor-applications-from-the-console)」をご覧ください。  
+    >アプリケーションの展開を監視するには、複数の方法があります。 詳しくは、「[System Center Configuration Manager コンソールからアプリケーションを監視する](/sccm/apps/deploy-use/monitor-applications-from-the-console)」をご覧ください。  
 
-## エンドユーザー エクスペリエンス  
+## <a name="end-user-experience"></a>エンドユーザー エクスペリエンス  
 
 Configuration Manager によって管理され、指定されたプロセッサ アーキテクチャの Windows 10 を実行する PC を使用しているユーザーには、Microsoft Edge Dev アプリケーションをインストールする必要があることを示すメッセージが表示されます。 このインストール オプションを受け入れると、アプリケーションがインストールされます。  
 
-## 関連項目
+## <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
-- [System Center Configuration Manager でアプリケーションを作成および展開する](https://docs.microsoft.com/sccm/apps/get-started/create-and-deploy-an-application)
+- [System Center Configuration Manager でアプリケーションを作成および展開する](/sccm/apps/get-started/create-and-deploy-an-application)

@@ -10,18 +10,18 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge と IE モードで構成可能なサイト
-ms.openlocfilehash: a846d71d63a4f837041acc9b601f704999bb826a
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 1bffdef8c88b7a83d999b29763fcca258102ed51
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980498"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447331"
 ---
-# IE モードで構成可能なサイトについて学ぶ
+# <a name="learn-about-configurable-sites-in-ie-mode"></a>IE モードで構成可能なサイトについて学ぶ
 
 この記事では、Microsoft Edge で IE モードを使用する場合のエンタープライズモードサイトリストの構成可能サイト機能について説明します。
 
-## 前提条件
+## <a name="prerequisites"></a>前提条件
 
 - Windows 更新プログラム
 
@@ -34,17 +34,17 @@ ms.locfileid: "10980498"
   - Windows 8.1 – KB4556798 以降
 
 - Microsoft Edge version 83 以降
-- エンタープライズモードサイトリストで構成された [IEモード](https://aka.ms/iemodeonedge)
+- エンタープライズモードサイトリストで構成された [IEモード](./edge-ie-mode.md)
 
-## 概要
+## <a name="overview"></a>概要
 
 エンタープライズモードサイトリストで IE モードを必要とするサイトを構成すると、レガシーアプリケーションを使用するほとんどの環境で問題なく機能します。 ただし、このアプローチが、IEモードでドメイン全体をレンダリングせずに、IEモードで開くようにサイトのサブセットを構成するのに最適ではない場合があります。 例えば、ご自分の環境に単一のサーバーで実行されている最新のアプリケーションとレガシーアプリケーションの両方が含まれている場合や、IE モードでレガシーアプリケーションのみをレンダリングし、残りのアプリケーションを Microsoft Edge モードでレンダリングする柔軟性がご希望の場合です。
 
 解決策は、[エンタープライズモードサイトリスト] の [構成可能なサイト] 機能を使用することです。 この機能が有効になっている場合、Microsoft Edge は、「構成可能」タグが付いたサイトがIEモードエンジンの決定に参加できるようにします。
 
-## 構成可能なサイトの仕組み
+## <a name="how-configurable-sites-works"></a>構成可能なサイトの仕組み
 
-### Microsoft Edge エンジンから IE モードエンジンへの自動切り替え
+### <a name="automatic-switching-from-the-microsoft-edge-engine-to-the-ie-mode-engine"></a>Microsoft Edge エンジンから IE モードエンジンへの自動切り替え
 
 [構成可能なサイト] 機能を使用するには、エンタープライズオプションサイトリストで 1 つ以上のサイトが `<open-in>Configurable</open-in>` オプションを持っている必要があります。
 
@@ -67,7 +67,7 @@ ms.locfileid: "10980498"
    > [!NOTE]
    > リダイレクト応答は、リダイレクトに対する Microsoft Edge の通常の HTTP キャッシング動作に従ってキャッシングされる可能性があります。
 
-### IE モードエンジンから Microsoft Edge エンジンに戻す
+### <a name="switching-back-from-ie-mode-engine-to-microsoft-edge-engine"></a>IE モードエンジンから Microsoft Edge エンジンに戻す
 
 Microsoft Edge で構成可能なサイトを有効にすると、IE モードのタブで次の動作が自動的に有効になります。
 
@@ -81,8 +81,8 @@ Microsoft Edge で構成可能なサイトを有効にすると、IE モード�
 > [!TIP]
 > どちらのブラウザーエンジンも、構成可能なサイトに同じ "`X-InternetExplorerModeConfigurable: 1`" 要求ヘッダーを送信します。 ユーザーエージェント要求ヘッダーを使用して、Microsoft Edge モードからのリクエストと IE モードからのリクエストを区別し、サイトがすでに正しいエンジンに読み込まれているときにリダイレクトされないようにする必要があります。
 
-## 関連項目
+## <a name="see-also"></a>関連項目
 
-- [IE モードの概要](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [その他のエンタープライズ モード情報](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [IE モードの概要](./edge-ie-mode.md)
+- [その他のエンタープライズ モード情報](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)

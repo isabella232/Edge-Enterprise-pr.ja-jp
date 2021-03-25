@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 用 Windows 更新プログラム。
-ms.openlocfilehash: 953becc459fe729f84d54da419481b3c6e26cc47
-ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
+ms.openlocfilehash: 880e5a591ee23ff852981e73fe4fc4cd815be9ad
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "11313907"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447151"
 ---
-# 次のバージョンの Microsoft Edge をサポートする Windows 更新プログラム
+# <a name="windows-updates-to-support-the-next-version-of-microsoft-edge"></a>次のバージョンの Microsoft Edge をサポートする Windows 更新プログラム
 
 この記事では、次のバージョンの Microsoft Edge をサポートするために Windows がどのように更新されるかについて説明します。
 
@@ -27,11 +27,11 @@ ms.locfileid: "11313907"
 > [!NOTE]
 > この記事は、Microsoft Edge Stable チャネルに適用されます。
 
-## Microsoft Edge と Windows のリリース サイクル
+## <a name="microsoft-edge-and-the-windows-release-cycle"></a>Microsoft Edge と Windows のリリース サイクル
 
 次のバージョンの Microsoft Edge では、より柔軟で頻度の高い更新の機能が提供されます。 ブラウザーのリリースは Windows のメジャー リリースにバインドされていないため、次のバージョンの Microsoft Edge が Windows にシームレスに適合するように、オペレーティング システムに変更が加えられます。 その結果、機能の更新プログラムは約 6 週間のサイクルでリリースされます。 セキュリティと互換性の更新プログラムは、必要に応じて出荷されます。
 
-## 更新プログラムとユーザー エクスペリエンス
+## <a name="updates-and-the-user-experience"></a>更新プログラムとユーザー エクスペリエンス
 
 次のバージョンの Microsoft Edge の Stable チャネルがインストールされるまで、更新プログラムによるユーザー エクスペリエンスの変更はありません。 Microsoft Edge Beta、Dev、または Canary をインストールしても、Windows での変更はトリガーされません。 これらのブラウザー リリースは、既存のブラウザーと並行してインストールされます。
 
@@ -52,11 +52,11 @@ ms.locfileid: "11313907"
 
 - Microsoft Edge は、次のバージョンの Microsoft Edge がサポートしていない書籍および XML プロトコルの登録を解除します。 これらのプロトコルをユーザーが開こうとすると、既定のアプリを選択するように求めるダイアログが表示されます。 書籍のサポートに関する変更については、「[電子書籍の利用を続けるには、ePub アプリをダウンロードしてください](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsupport.microsoft.com%2Fhelp%2F4517840&data=02%7C01%7Cv-danwes%40microsoft.com%7Cc9f8571b880549c30fcf08d72be5eaf9%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637026138803983526&sdata=qtb3DvVZQ6H%2FFXnBievkl%2B%2BngAQXwl340PcH8kRc3y4%3D&reserved=0)」をご覧ください。
 
-## タイムライン
+## <a name="timeline"></a>タイムライン
 
 ここに記載されているエクスペリエンスをサポートするために必要な変更は、Windows のさまざまなバージョンに対して 3 つの更新プログラムで提供されます。
 
-### Windows Version 1903、1909
+### <a name="windows-versions-1903-and-1909"></a>Windows Version 1903、1909
 
 - 2019 年 8 月セキュリティ更新プログラムで提供される、2019 年 7 月の更新 (オプション) に含まれる最初の変更セット。
 - 2019 年 9 月セキュリティ更新プログラムで提供される、2019 年 8 月の更新 (オプション) に含まれる 2 番目の変更セット。
@@ -69,7 +69,7 @@ ms.locfileid: "11313907"
   > [!NOTE]
   > これは Microsoft Edge で電子ブックのサポートが終了する更新プログラムです。
 
-### Windows Version 1709、1803、1809
+### <a name="windows-versions-1709-1803-and-1809"></a>Windows Version 1709、1803、1809
 
 - 2019 年 9 月セキュリティ更新プログラムで提供される、2019 年 8 月の更新 (オプション) に含まれる最初の変更セット。
 - 2019 年 10 月セキュリティ更新プログラムで提供される、2019 年 9 月の更新 (オプション) に含まれる 2 番目の変更セット。
@@ -91,7 +91,7 @@ ms.locfileid: "11313907"
 | Version 1809  | [KB4523205](https://support.microsoft.com/help/4523205/windows-10-update-kb4523205) | [Windows 10 Version 1809 用の累積的な更新プログラム](https://www.catalog.update.microsoft.com/Search.aspx?q=4523205) |
 | Version 1903、1909 |[KB4517389](https://support.microsoft.com/help/4517389/windows-10-update-kb4517389)  | [Windows 10 Version 1903 および 1909 用の累積的な更新プログラム ](https://www.catalog.update.microsoft.com/Search.aspx?q=4517389) |
 
-## 関連項目
+## <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
-- [Microsoft Edge ドキュメント](https://docs.microsoft.com/DeployEdge/)
+- [Microsoft Edge ドキュメント](./index.yml)

@@ -1,14 +1,12 @@
 ---
-ms.openlocfilehash: 07c279d909b7656cb5afbb1adf22cf3ea8d18245
-ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
+ms.openlocfilehash: 5d4a937bbf7ceb0e0dbb3db82ce43319a1088e29
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "11442443"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11448215"
 ---
 <!-- This file is generated automatically each week. Changes made to this file will be overwritten.-->
-
-
 
 
 ## <a name="week-of-march-15-2021"></a>2021 年 3 月 15 日の週
@@ -36,7 +34,7 @@ ms.locfileid: "11442443"
 | 公開日 |トピックのタイトル | 変更点 |
 |------|------------|--------|
 | 2021/2/15 | [Microsoft Edge コンテンツの更新](/DeployEdge/microsoft-edge-content-updates) | 変更されました |
-| 2021/2/17 | [Microsoft Edge ブラウザー ポリシーに関するドキュメント](/DeployEdge/microsoft-edge-policies) | 変更日時 |
-| 2021/2/17 | [Microsoft Edge WebView2 ポリシーに関するドキュメント](/DeployEdge/microsoft-edge-webview-policies) | 変更日時 |
-| 2021/2/17 | [Microsoft Edge セキュリティ更新プログラムのリリース ノート](/DeployEdge/microsoft-edge-relnotes-security) | 変更日時 |
+| 2021/2/17 | [Microsoft Edge ブラウザー ポリシーに関するドキュメント](/DeployEdge/microsoft-edge-policies) | 変更されました |
+| 2021/2/17 | [Microsoft Edge WebView2 ポリシーに関するドキュメント](/DeployEdge/microsoft-edge-webview-policies) | 変更されました |
+| 2021/2/17 | [Microsoft Edge セキュリティ更新プログラムのリリース ノート](/DeployEdge/microsoft-edge-relnotes-security) | 変更されました |
 | 2021/2/17 | [Stable チャネルに関する Microsoft Edge のリリース ノート](/DeployEdge/microsoft-edge-relnote-stable-channel) | 変更されました |

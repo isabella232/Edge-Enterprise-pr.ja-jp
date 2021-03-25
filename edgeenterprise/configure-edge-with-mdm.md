@@ -10,16 +10,16 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: モバイル デバイス管理を使用して Microsoft Edge を構成します。
-ms.openlocfilehash: dda35199f653b3dfb8f20b33b068c59621222b36
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: c9a725b5d0e820fb907150a8f83eeb17291b9f6a
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980377"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447551"
 ---
-# モバイル デバイス管理を使用して Microsoft Edge を構成する
+# <a name="configure-microsoft-edge-using-mobile-device-management"></a>モバイル デバイス管理を使用して Microsoft Edge を構成する
 
-この記事では、[ADMX インジェスト](https://docs.microsoft.com/windows/client-management/mdm/win32-and-centennial-app-policy-configuration)を通じ、[モバイル デバイス管理 (MDM)](https://docs.microsoft.com/windows/client-management/mdm/) を使用して、Windows 10 で Microsoft Edge を構成する方法について説明します。 以下についても説明します。
+この記事では、[ADMX インジェスト](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration)を通じ、[モバイル デバイス管理 (MDM)](/windows/client-management/mdm/) を使用して、Windows 10 で Microsoft Edge を構成する方法について説明します。 以下についても説明します。
 
 - [Microsoft Edge ポリシー用に Open Mobile Alliance Uniform Resource Identifier (OMA-URI) を作成する](#create-an-oma-uri-for-microsoft-edge-policies)方法。
 - [ADMX インジェストとカスタムの OMA-URI を使用して Intune で Microsoft Edge を構成する](#configure-microsoft-edge-in-intune-using-admx-ingestion)方法。
@@ -27,7 +27,7 @@ ms.locfileid: "10980377"
 > [!NOTE]
 > この記事は、Microsoft Edge version 77 以降に適用されます。
 
-## 前提条件
+## <a name="prerequisites"></a>前提条件
 
 以下の最小システム要件を満たす Windows 10:
 
@@ -36,9 +36,9 @@ ms.locfileid: "10980377"
 - [KB4512509](https://support.microsoft.com/help/4512509/) および [KB4519978](https://support.microsoft.com/help/4519978) をインストール済みの Windows 10 Version 1803
 - [KB4516071](https://support.microsoft.com/help/4516071/) および [KB4520006](https://support.microsoft.com/help/4520006) をインストール済みの Windows 10 Version 1709
 
-## 概要
+## <a name="overview"></a>概要
 
-[ADMX インジェスト](https://docs.microsoft.com/windows/client-management/mdm/win32-and-centennial-app-policy-configuration)をサポートする Enterprise Mobility Management (EMM) または MDM プロバイダーで、MDM を使用して Windows 10 の Microsoft Edge を構成できます。
+[ADMX インジェスト](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration)をサポートする Enterprise Mobility Management (EMM) または MDM プロバイダーで、MDM を使用して Windows 10 の Microsoft Edge を構成できます。
 
 MDM を使用した Microsoft Edge の構成は、次の 2 つのプロセスで構成されます。
 
@@ -49,7 +49,7 @@ MDM を使用した Microsoft Edge の構成は、次の 2 つのプロセスで
 
 2. [Microsoft Edge ポリシー用の OMA-URI を作成](#create-an-oma-uri-for-microsoft-edge-policies)する。
 
-## Microsoft Edge ポリシー用の OMA-URI を作成する
+## <a name="create-an-oma-uri-for-microsoft-edge-policies"></a>Microsoft Edge ポリシー用の OMA-URI を作成する
 
 以下のセクションでは、OMA-URI パスを作成し、必須および推奨のブラウザー ポリシー用に XML 形式で値を検索および定義する方法について説明します。
 
@@ -61,7 +61,7 @@ OMA-URI を定義するには、次の 3 つの手順を実行します。
 2. [OMA-URI データ型を指定する](#specify-the-data-type)
 3. [OMA-URI 値を設定する](#set-the-value-for-a-browser-policy)
 
-### OMA-URI パスを作成する
+### <a name="create-the-oma-uri-path"></a>OMA-URI パスを作成する
 
 OMA-URI パスを作成するためのガイドとして、次の式を使用できます。 <br/><br/>
 *`./Device/Vendor/MSFT/Policy/Config/<ADMXIngestName>~Policy~<ADMXNamespace>~<ADMXCategory>/<PolicyName>`* <br/><br/>
@@ -71,9 +71,9 @@ OMA-URI パスを作成するためのガイドとして、次の式を使用で
 | \<ADMXIngestName> | "Edge" を使用するか、管理用テンプレートの取り込み時に定義した名前を使用します。 たとえば、"./Device/Vendor/MSFT/Policy/ConfigOperations/ADMXInstall/MicrosoftEdge/Policy/EdgeAdmx" を使用した場合は、"MicrosoftEdge" を使用します。<br/><br/> `<ADMXIngestionName>` は、ADMX ファイルの取り込み時に使用した名前と一致する必要があります。 |
 | \<ADMXNamespace>  | 必須のポリシーと推奨のポリシーのどちらを設定しているかによって、"microsoft_edge" または "microsoft_edge_recommended" を指定します。 |
 | \<ADMXCategory>   | ポリシーの "parentCategory" は、ADMX ファイルで定義されています。 ポリシーがグループ化されていない ("parentCategory" が定義されていない) 場合は、`<ADMXCategory>` を省略します。 |
-| \<PolicyName>     | ポリシー名については、[「ブラウザー ポリシー リファレンス](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies)」をご覧ください。 |
+| \<PolicyName>     | ポリシー名については、[「ブラウザー ポリシー リファレンス](./microsoft-edge-policies.md)」をご覧ください。 |
 
-#### URI パスの例:
+#### <a name="uri-path-example"></a>URI パスの例:
 
 この例は、`<ADMXIngestName>` ノードの名前が "Edge" で、必須ポリシーを設定する場合を想定しています。 URI パスは次のようになります。<br/><br/>
 *`./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge~<ADMXCategory>/<PolicyName>`*
@@ -89,22 +89,22 @@ OMA-URI パスを作成するためのガイドとして、次の式を使用で
 4. `<ADMXCategory>` を *ref* 属性値に置き換えて、URI パスを作成します。 URI パスは次のようになります。<br/><br/>
 *`/Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge~Extensions/ExtensionInstallForcelist`*
 
-### データ型を指定する
+### <a name="specify-the-data-type"></a>データ型を指定する
 
 OMA URI のデータ型は常に "String" です。
 
-### ブラウザー ポリシーの値を設定する
+### <a name="set-the-value-for-a-browser-policy"></a>ブラウザー ポリシーの値を設定する
 
-このセクションでは、データ型ごとに XML 形式で値を設定する方法について説明します。 ポリシーのデータ型については、「[ブラウザー ポリシー リファレンス](https://docs.microsoft.com/deployedge/microsoft-edge-policies)」をご覧ください。
+このセクションでは、データ型ごとに XML 形式で値を設定する方法について説明します。 ポリシーのデータ型については、「[ブラウザー ポリシー リファレンス](./microsoft-edge-policies.md)」をご覧ください。
 
 > [!NOTE]
 > Boolean でないデータ型の場合、値は常に `<enabled/>` で始まります。
 
-#### Boolean データ型
+#### <a name="boolean-data-type"></a>Boolean データ型
 
 Boolean 型のポリシーの場合は、`<enabled/>` また `<disabled/>` を使用します。
 
-#### Integer データ型
+#### <a name="integer-data-type"></a>Integer データ型
 
 値は常に`<enabled/>` 要素から始まり、その後に `<data id="[valueName]" value="[decimal value]"/>` を指定する必要があります。
 
@@ -119,7 +119,7 @@ Boolean 型のポリシーの場合は、`<enabled/>` また `<disabled/>` を�
 起動時に新しいタブ ページを開くには、以下を使用します。<br>
 `<enabled/> <data id="RestoreOnStartup" value="5"/>`
 
-#### 文字列データ型のリスト
+#### <a name="list-of-strings-data-type"></a>文字列データ型のリスト
 
 値は常に`<enabled/>` 要素から始まり、その後に `<data id="[listID]" value="[string 1];[string 2];[string 3]"/>` を指定する必要があります。
 
@@ -136,7 +136,7 @@ listID を見つけて URL をブロックするための値を定義するに�
 たとえば、`contoso.com` および `https://ssl.server.com` へのアクセスをブロックするには、次のように指定します: <br>
 `<enabled/> <data id=" URLBlocklistDesc" value="contoso.com;https://ssl.server.com"/>`
 
-#### Dictionary または String データ型
+#### <a name="dictionary-or-string-data-type"></a>Dictionary または String データ型
 
 値は常に `<enabled/>` から始まり、その後に `<data id="[textID]" value="[string]"/>` を指定する必要があります。
 
@@ -150,11 +150,11 @@ textID を見つけてロケースを設定するための値を定義するに�
 "ApplicationLocaleValue" ポリシーを使用してロケールを "es-US" に設定するには、次のように指定します: <br>
 `<enabled/> <data id="ApplicationLocaleValue" value="es-US"/>`
 
-### 推奨ポリシー用の OMA URI を作成する
+### <a name="create-the-oma-uri-for-a-recommended-policies"></a>推奨ポリシー用の OMA URI を作成する
 
 推奨ポリシーの URI パスを定義する方法は、構成するポリシーによって異なります。
 
-#### 推奨ポリシーの URI パスを定義するには
+#### <a name="to-define-the-uri-path-for-a-recommended-policy"></a>推奨ポリシーの URI パスを定義するには
 
 URI パスを定義するには、URI パスの式 (*`./Device/Vendor/MSFT/Policy/Config/<ADMXIngestName>~Policy~<ADMXNamespace>~<ADMXCategory>/<PolicyName>`*) と以下の手順を使用します。
 
@@ -179,27 +179,27 @@ URI パスを定義するには、URI パスの式 (*`./Device/Vendor/MSFT/Polic
 
 4. `<PolicyName>`は、"_recommended" が付加されたポリシーの名前です。
 
-#### 推奨ポリシーの OMA URI パスの例
+#### <a name="oma-uri-path-examples-for-recommended-policies"></a>推奨ポリシーの OMA URI パスの例
 
 次の表に、推奨ポリシーの OMA-URI パスの例を示します。
 
 |              ポリシー               |             OMA-URI                      |
 |-----------------------------------|------------------------------------------|
-| [RegisteredProtocolHandlers](https://docs.microsoft.com/deployedge/microsoft-edge-policies#registeredprotocolhandlers)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~ContentSettings_recommended/RegisteredProtocolHandlers_recommended`                        |
-| [PasswordManagerEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#passwordmanagerenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~PasswordManager_recommended/PasswordManagerEnabled_recommended`                        |
-| [PrintHeaderFooter](https://docs.microsoft.com/deployedge/microsoft-edge-policies#printheaderfooter)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~Printing_recommended/PrintHeaderFooter_recommended`                        |
-| [SmartScreenEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#smartscreenenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~SmartScreen_recommended/SmartScreenEnabled_recommended`                        |
-| [HomePageLocation](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepagelocation)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~Startup_recommended/HomepageLocation_recommended`                        |
-| [ShowHomeButton](https://docs.microsoft.com/deployedge/microsoft-edge-policies#showhomebutton)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~Startup_recommended/ShowHomeButton_recommended`                        |
-| [FavoritesBarEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#favoritesbarenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~/FavoritesBarEnabled_recommended`                        |
+| [RegisteredProtocolHandlers](./microsoft-edge-policies.md#registeredprotocolhandlers)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~ContentSettings_recommended/RegisteredProtocolHandlers_recommended`                        |
+| [PasswordManagerEnabled](./microsoft-edge-policies.md#passwordmanagerenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~PasswordManager_recommended/PasswordManagerEnabled_recommended`                        |
+| [PrintHeaderFooter](./microsoft-edge-policies.md#printheaderfooter)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~Printing_recommended/PrintHeaderFooter_recommended`                        |
+| [SmartScreenEnabled](./microsoft-edge-policies.md#smartscreenenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~SmartScreen_recommended/SmartScreenEnabled_recommended`                        |
+| [HomePageLocation](./microsoft-edge-policies.md#homepagelocation)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~Startup_recommended/HomepageLocation_recommended`                        |
+| [ShowHomeButton](./microsoft-edge-policies.md#showhomebutton)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~Startup_recommended/ShowHomeButton_recommended`                        |
+| [FavoritesBarEnabled](./microsoft-edge-policies.md#favoritesbarenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~/FavoritesBarEnabled_recommended`                        |
 
-### OMA-URI の例
+### <a name="oma-uri-examples"></a>OMA-URI の例
 
 OMA-URI の例を URI パス、型、値の例と共に示します。
 
-#### Boolean データ型の例
+#### <a name="boolean-data-type-examples"></a>Boolean データ型の例
 
-*[ShowHomeButton](https://docs.microsoft.com/deployedge/microsoft-edge-policies#ShowHomeButton):*
+*[ShowHomeButton](./microsoft-edge-policies.md#ShowHomeButton):*
 
 | フィールド   | 値                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -208,7 +208,7 @@ OMA-URI の例を URI パス、型、値の例と共に示します。
 | 型    | String                                                                               |
 | 値   | `<enabled/>`                                                                          |
 
-*[DefaultSearchProviderEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#DefaultSearchProviderEnabled):*
+*[DefaultSearchProviderEnabled](./microsoft-edge-policies.md#DefaultSearchProviderEnabled):*
 
 | フィールド   | 値                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -217,9 +217,9 @@ OMA-URI の例を URI パス、型、値の例と共に示します。
 | 型    | String                                                                               |
 | 値   | `<disable/>`                                                                          |
 
-### Integer データ型の例
+### <a name="integer-data-type-examples"></a>Integer データ型の例
 
-*[AutoImportAtFirstRun](https://docs.microsoft.com/deployedge/microsoft-edge-policies#AutoImportAtFirstRun):*
+*[AutoImportAtFirstRun](./microsoft-edge-policies.md#AutoImportAtFirstRun):*
 
 | フィールド   | 値                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -228,7 +228,7 @@ OMA-URI の例を URI パス、型、値の例と共に示します。
 | 型    | String                                                                               |
 | 値   | `<enabled/><data id="AutoImportAtFirstRun" value="1"/>`                             |
 
-*[DefaultImagesSetting](https://docs.microsoft.com/deployedge/microsoft-edge-policies#DefaultImagesSetting):*
+*[DefaultImagesSetting](./microsoft-edge-policies.md#DefaultImagesSetting):*
 
 | フィールド   | 値                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -237,7 +237,7 @@ OMA-URI の例を URI パス、型、値の例と共に示します。
 | 型    | String                                                                               |
 | 値   | `<enabled/><data id="DefaultImagesSetting" value="2"/>`                             |
 
-*[DiskCacheSize](https://docs.microsoft.com/deployedge/microsoft-edge-policies#DiskCacheSize):*
+*[DiskCacheSize](./microsoft-edge-policies.md#DiskCacheSize):*
 
 | フィールド   | 値                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -246,9 +246,9 @@ OMA-URI の例を URI パス、型、値の例と共に示します。
 | 型    | String                                                                               |
 | 値   | `<enabled/><data id="DiskCacheSize" value="1000000"/>`                               |
 
-#### 文字列データ型のリストの例
+#### <a name="list-of-strings-data-type-examples"></a>文字列データ型のリストの例
 <!--
-*[NotificationsAllowedForUrls](https://docs.microsoft.com/deployedge/microsoft-edge-policies#NotificationsAllowedForUrls):*
+*[NotificationsAllowedForUrls](./microsoft-edge-policies.md#NotificationsAllowedForUrls):*
 
 | Field   | Value                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -257,7 +257,7 @@ OMA-URI の例を URI パス、型、値の例と共に示します。
 | Type    | String                                                                               |
 | Value   | `<enabled/><data id="NotificationsAllowedForUrlsDesc" value="https://www.contoso.com"/>`<br>For multiple list items: `<data id="NotificationsAllowedForUrlsDesc" value="https://www.contoso.com;[*.]contoso.edu"/>`                               |
 -->
-*[RestoreOnStartupURLS](https://docs.microsoft.com/deployedge/microsoft-edge-policies#RestoreOnStartupURLS):*
+*[RestoreOnStartupURLS](./microsoft-edge-policies.md#RestoreOnStartupURLS):*
 
 | フィールド   | 値                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -266,7 +266,7 @@ OMA-URI の例を URI パス、型、値の例と共に示します。
 | 型    | String                                                                               |
 | 値   | `<enabled/><data id="RestoreOnStartupURLsDesc" value="1&#xF000;http://www.bing.com"/>`<br>複数のリスト項目のがある場合:  `<enabled/><data id="RestoreOnStartupURLsDesc" value="1&#xF000;http://www.bing.com&#xF000;2&#xF000;http://www.microsoft.com"/>`  |
 
-*[ExtensionInstallForcelist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#ExtensionInstallForcelist):*
+*[ExtensionInstallForcelist](./microsoft-edge-policies.md#ExtensionInstallForcelist):*
 
 | フィールド   | 値                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -275,9 +275,9 @@ OMA-URI の例を URI パス、型、値の例と共に示します。
 | 型    | String                                                                               |
 | 値   | `<enabled/><data id="ExtensionInstallForcelistDesc" value="1&#xF000;gbchcmhmhahfdphkhkmpfmihenigjmpp;https://extensionwebstorebase.edgesv.net/v1/crx"/>`                               |
 
-#### Dictionary および String データ型の例
+#### <a name="dictionary-and-string-data-type-example"></a>Dictionary および String データ型の例
 
-*[ProxyMode](https://docs.microsoft.com/deployedge/microsoft-edge-policies#ProxyMode):*
+*[ProxyMode](./microsoft-edge-policies.md#ProxyMode):*
 
 | フィールド   | 値                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -286,9 +286,9 @@ OMA-URI の例を URI パス、型、値の例と共に示します。
 | 型    | String                                                                               |
 | 値   | `<enabled/><data id="ProxyMode" value="auto_detect"/>`                               |
 
-## ADMX インジェストを使用して Intune で Microsoft Edge を構成する
+## <a name="configure-microsoft-edge-in-intune-using-admx-ingestion"></a>ADMX インジェストを使用して Intune で Microsoft Edge を構成する
 
-Microsoft Intune を使用して Microsoft Edge を構成する場合は、「[Microsoft Intune を使って Microsoft Edge ポリシー設定を構成する](https://docs.microsoft.com/deployedge/configure-edge-with-intune)」の説明に従って管理用テンプレート プロファイルを使用する方法をお勧めします。 Intune の Microsoft Edge 管理用テンプレートで現在使用できないポリシーを評価する場合は、[Intune で Windows 10 デバイス用カスタム設定](https://docs.microsoft.com/intune/configuration/custom-settings-windows-10)を使用して Microsoft Edge を構成できます。
+Microsoft Intune を使用して Microsoft Edge を構成する場合は、「[Microsoft Intune を使って Microsoft Edge ポリシー設定を構成する](./configure-edge-with-intune.md)」の説明に従って管理用テンプレート プロファイルを使用する方法をお勧めします。 Intune の Microsoft Edge 管理用テンプレートで現在使用できないポリシーを評価する場合は、[Intune で Windows 10 デバイス用カスタム設定](/intune/configuration/custom-settings-windows-10)を使用して Microsoft Edge を構成できます。
 
 このセクションでは、以下の方法について説明します。
 
@@ -298,7 +298,7 @@ Microsoft Intune を使用して Microsoft Edge を構成する場合は、「[M
 > [!IMPORTANT]
 > ベスト プラクティスとして、Intune でカスタムの OMA-URI プロファイルと管理テンプレート プロファイルを使用して、同じ Microsoft Edge 設定を構成しないでください。 カスタムの OMA-URI と管理用テンプレート プロファイルの両方を使用して、値が異なる同じポリシーを展開すると、予期しない結果を招く可能性があります。 管理用テンプレート プロファイルを使用する場合は、事前にOMA-URI プロファイルを削除するよう強くお勧めします。
 
-### Microsoft Edge ADMX ファイルを Intune に取り込む
+### <a name="ingest-the-microsoft-edge-admx-file-into-intune"></a>Microsoft Edge ADMX ファイルを Intune に取り込む
 
 このセクションでは、Microsoft Edge 管理用テンプレート (**msedge.admx**ファイル) を Intune に取り込む方法について説明します。
 
@@ -347,7 +347,7 @@ ADMX ファイルを取り込むには、以下の手順を実行します。
 > [!NOTE]
 > You can use the preceding steps to ingest the msedgeupate.admx policy template file.
 -->
-### Intune でカスタムの OMA URI を使用してポリシーを設定する
+### <a name="set-a-policy-using-custom-oma-uri-in-intune"></a>Intune でカスタムの OMA URI を使用してポリシーを設定する
 
 > [!NOTE]
 > このセクションの手順を使用する前に、「[Microsoft Edge ADMX ファイルを Intune に取り込む](#ingest-the-microsoft-edge-admx-file-into-intune)」で説明されている手順を完了する必要があります。
@@ -379,17 +379,17 @@ ADMX ファイルを取り込むには、以下の手順を実行します。
 8. **[カスタム OMA-URI 設定]** で、**[OK]** をクリックします。
 9. **[Microsoft Edge ADMX ingested configuration - プロパティ]** プロファイル (または、独自に使用した名前) で、**[保存]** をクリックします。
 
-プロファイルが作成され、プロパティが設定されたら、[Microsoft Intune でプロファイルを割り当てる](https://docs.microsoft.com/intune/configuration/device-profile-assign)必要があります。
+プロファイルが作成され、プロパティが設定されたら、[Microsoft Intune でプロファイルを割り当てる](/intune/configuration/device-profile-assign)必要があります。
 
-#### ポリシーが設定されたことを確認する
+#### <a name="confirm-that-the-policy-was-set"></a>ポリシーが設定されたことを確認する
 
 作成したプロファイルが Microsoft Edge ポリシーで使用されていることを確認するには、次の手順に従います  ("Microsoft Edge ADMX ingested configuration" プロファイルの例で割り当てたデバイスに、Microsoft Intune からポリシーが伝達されるまで、多少時間がかかる場合があります)。
 
 1. Microsoft Edge を開き、*edge://policy* に移動します。
 2. **[ポリシー]** ページで、プロファイルに設定したポリシーが一覧に含まれているかどうかを確認します。
-3. ポリシーが表示されていない場合の対処方法については、「[Windows 10 での MDM エラーの診断](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)」または「[ポリシー設定のトラブルシューティング](#troubleshoot-a-policy-setting)」をご覧ください。
+3. ポリシーが表示されていない場合の対処方法については、「[Windows 10 での MDM エラーの診断](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)」または「[ポリシー設定のトラブルシューティング](#troubleshoot-a-policy-setting)」をご覧ください。
 
-#### ポリシー設定のトラブルシューティング
+#### <a name="troubleshoot-a-policy-setting"></a>ポリシー設定のトラブルシューティング
 
 Microsoft Edge ポリシーが有効にならない場合は、次の手順をお試しください。
 
@@ -398,13 +398,13 @@ Microsoft Edge ポリシーが有効にならない場合は、次の手順を�
 - ポリシーがレジストリに保存されており、正しく定義されていることを確認する。 ターゲット デバイスでopen the Windows 10 レジストリエディターを開きます (**Windows キー + r** キーを押し、「*regedit*」と入力して **Enter** キーを押します)。ポリシーが、*\Software\Policies\ Microsoft\Edge* パスに正しく定義されていることを確認します。 適切なパスにポリシーがない場合は、ポリシーがデバイスに正しくプッシュされていません。
 - OMA-URI パスが正しく、値が有効な XML 文字列であることを確認する。 いずれかに誤りがあれば、ポリシーがターゲット デバイスにプッシュされません。
 
-トラブルシューティングのヒントについては、「[Microsoft Intune をセットアップする](https://docs.microsoft.com/intune/fundamentals/setup-steps)」と「[デバイスの同期](https://docs.microsoft.com/intune/remote-actions/device-sync)」をご覧ください。
+トラブルシューティングのヒントについては、「[Microsoft Intune をセットアップする](/intune/fundamentals/setup-steps)」と「[デバイスの同期](/intune/remote-actions/device-sync)」をご覧ください。
 
-## 関連項目
+## <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
 - [Microsoft Intune を使って Microsoft Edge ポリシー設定を構成する](configure-edge-with-intune.md)
-- [モバイル デバイス管理](https://docs.microsoft.com/windows/client-management/mdm/)
-- [Intune で Windows 10 デバイスにカスタム設定を使用する](https://docs.microsoft.com/intune/configuration/custom-settings-windows-10)
-- [Win32 およびデスクトップ ブリッジ アプリ ポリシーの構成](https://docs.microsoft.com/windows/client-management/mdm/win32-and-centennial-app-policy-configuration)
-- [ADMX ベースのポリシーについて](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies)
+- [モバイル デバイス管理](/windows/client-management/mdm/)
+- [Intune で Windows 10 デバイスにカスタム設定を使用する](/intune/configuration/custom-settings-windows-10)
+- [Win32 およびデスクトップ ブリッジ アプリ ポリシーの構成](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration)
+- [ADMX ベースのポリシーについて](/windows/client-management/mdm/understanding-admx-backed-policies)
