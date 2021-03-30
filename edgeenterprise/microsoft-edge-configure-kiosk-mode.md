@@ -3,19 +3,19 @@ title: Microsoft Edge キオスク モードを構成する
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 03/03/2021
+ms.date: 03/16/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: キオスク モード機能と Microsoft Edge キオスク モードのオプションを構成する方法について説明します。
-ms.openlocfilehash: 9f2ce26f2c505ba3fc9e2e05b057e5d5df8257fe
-ms.sourcegitcommit: 8da3a4de1a14514014b6d7b103ba79f2ace48044
+ms.openlocfilehash: 9d76bfcaebeaf56e627a401cc4f0375bce9d17a3
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "11388543"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11448131"
 ---
 # <a name="configure-microsoft-edge-kiosk-mode"></a>Microsoft Edge キオスク モードを構成する
 
@@ -23,6 +23,9 @@ ms.locfileid: "11388543"
 
 > [!NOTE]
 > この記事は Microsoft Edge version 87 以降に適用されます。
+
+> [!IMPORTANT]
+> [「キオスク モード機能の使用」](#use-kiosk-mode-features)で提供されているコマンド ライン引数を使用して、Windows 10 で Microsoft Edgeキオスク モード機能 を呼び出します。
 
 ## <a name="overview"></a>概要
 
@@ -45,17 +48,17 @@ Microsoft Edge キオスク モードは、ブラウザーの 2 つのロック�
 |-|-|-|-|-|
 |InPrivate ナビゲーション。|Y|Y|89|Y|
 |非アクティブ時のリセット|Y|Y|89|Y|
-|[読み取り専用アドレス バー](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskaddressbareditingenabled) (ポリシー) |N|Y |89|N|
-|[終了時にダウンロードを削除する](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskdeletedownloadsonexit) (ポリシー)  | Y|Y |89|N|
+|[読み取り専用アドレス バー](./microsoft-edge-policies.md#kioskaddressbareditingenabled) (ポリシー) |N|Y |89|N|
+|[終了時にダウンロードを削除する](./microsoft-edge-policies.md#kioskdeletedownloadsonexit) (ポリシー)  | Y|Y |89|N|
 |F11 がブロックされています (全画面に入る/終了する) | Y | Y | 89 |Y|
 |F12 がブロックされています (開発者ツールの起動) | Y | Y | 89 |Y|
 | 複数タブのサポート | N| Y| 89|Y|
-|[URL のサポートを許可する](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlallowlist) (ポリシー)|Y|Y|89|N|
-|[URL のサポートをブロックする](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlblocklist) (ポリシー)|Y|Y|89|N|
-|[[ホーム] ボタンを表示する](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#showhomebutton) (ポリシー)|N|Y|89|Y|
-|[お気に入りを管理する](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#managedfavorites) (ポリシー)|N|Y|89|Y|
-|[プリンターを有効化](https://docs.microsoft.com/deployedge/microsoft-edge-policies#printingenabled) (ポリシー)|Y|Y|89|Y|
-|[新しいタブ ページの URLを構成する](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagelocation) (ポリシー)|N|Y||Y|
+|[URL のサポートを許可する](./microsoft-edge-policies.md#urlallowlist) (ポリシー)|Y|Y|89|N|
+|[URL のサポートをブロックする](./microsoft-edge-policies.md#urlblocklist) (ポリシー)|Y|Y|89|N|
+|[[ホーム] ボタンを表示する](./microsoft-edge-policies.md#showhomebutton) (ポリシー)|N|Y|89|Y|
+|[お気に入りを管理する](./microsoft-edge-policies.md#managedfavorites) (ポリシー)|N|Y|89|Y|
+|[プリンターを有効化](./microsoft-edge-policies.md#printingenabled) (ポリシー)|Y|Y|89|Y|
+|[新しいタブ ページの URLを構成する](./microsoft-edge-policies.md#newtabpagelocation) (ポリシー)|N|Y||Y|
 |[セッションの終了] ボタン * | N| Y| 89|Y|
 |すべての内部 Microsoft Edge URL はブロックされます (*edge://downloads* および *edge://print* を除く) |N|Y|89|Y|
 | Ctrl + N がブロックされています (新しいウィンドウを開く) * | Y | Y | 89 |Y|
@@ -63,7 +66,7 @@ Microsoft Edge キオスク モードは、ブラウザーの 2 つのロック�
 |設定と詳細 (...) では、必要なオプションだけが表示されます。  |Y |Y |89 |Y|
 |ブラウザーからの他のアプリケーションの起動を制限する|Y|Y|90/91|Y|
 |UI 印刷設定のロックダウン|Y|Y|90/91|Y|
-|[新しいタブ ページをホーム ページとして設定する](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepageisnewtabpage) (ポリシー)|-|-|TBD|Y|
+|[新しいタブ ページをホーム ページとして設定する](./microsoft-edge-policies.md#homepageisnewtabpage) (ポリシー)|-|-|TBD|Y|
 
 > [!NOTE]
 > "*" に続く機能は、割り当てられたアクセス単一アプリのシナリオでのみ有効になります。
@@ -121,25 +124,25 @@ msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
 
 ## <a name="support-policies-for-kiosk-mode"></a>キオスク モードでサポートされているポリシー
 
-以下の表にある Microsoft Edge ポリシーのいずれかを使用して、構成する Microsoft Edge キオスク モードの種類に応じてキオスク エクスペリエンスを強化します。 これらのポリシーの詳細については、「[Microsoft Edge - ブラウザー ポリシー リファレンス](https://docs.microsoft.com/deployedge/microsoft-edge-policies)」を参照してください。
+以下の表にある Microsoft Edge ポリシーのいずれかを使用して、構成する Microsoft Edge キオスク モードの種類に応じてキオスク エクスペリエンスを強化します。 これらのポリシーの詳細については、「[Microsoft Edge - ブラウザー ポリシー リファレンス](./microsoft-edge-policies.md)」を参照してください。
 
 > [!NOTE]
 > ポリシーの構成は、次の表に示すポリシーに限定されませんが、キオスク モード機能に悪影響が及びないことを確認するために、追加のポリシーをテストする必要があります。
 
 |グループ ポリシー|デジタル/対話型サイネージ|パブリック ブラウズの単一アプリ|
 |--|--|--|
-|[印刷](https://docs.microsoft.com/deployedge/microsoft-edge-policies#printing-policies) | Y|Y |
-|[HomePageLocation](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepagelocation) |N | Y|
-|[ShowHomeButton](https://docs.microsoft.com/deployedge/microsoft-edge-policies#showhomebutton) |N | Y|
-|[NewTabPageLocation](https://docs.microsoft.com/deployedge/microsoft-edge-policies#newtabpagelocation) |N |Y |
-|[FavoritesBarEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#favoritesbarenabled) |N |Y |
-|[URLAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlallowlist) |Y |Y |
-|[URLBlocklist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlblocklist) |Y | Y|
-|[ManagedSearchEngines](https://docs.microsoft.com/deployedge/microsoft-edge-policies#managedsearchengines) |N | Y|
-|[UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed) |N | Y|
-|[VerticalTabsAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#verticaltabsallowed) | N|Y |
-|[SmartScreen の設定](https://docs.microsoft.com/deployedge/microsoft-edge-policies#smartscreen-settings-policies) |Y |Y |
-|[EdgeCollectionsEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgecollectionsenabled)|Y|Y|
+|[印刷](./microsoft-edge-policies.md#printing-policies) | Y|Y |
+|[HomePageLocation](./microsoft-edge-policies.md#homepagelocation) |N | Y|
+|[ShowHomeButton](./microsoft-edge-policies.md#showhomebutton) |N | Y|
+|[NewTabPageLocation](./microsoft-edge-policies.md#newtabpagelocation) |N |Y |
+|[FavoritesBarEnabled](./microsoft-edge-policies.md#favoritesbarenabled) |N |Y |
+|[URLAllowlist](./microsoft-edge-policies.md#urlallowlist) |Y |Y |
+|[URLBlocklist](./microsoft-edge-policies.md#urlblocklist) |Y | Y|
+|[ManagedSearchEngines](./microsoft-edge-policies.md#managedsearchengines) |N | Y|
+|[UserFeedbackAllowed](./microsoft-edge-policies.md#userfeedbackallowed) |N | Y|
+|[VerticalTabsAllowed](./microsoft-edge-policies.md#verticaltabsallowed) | N|Y |
+|[SmartScreen の設定](./microsoft-edge-policies.md#smartscreen-settings-policies) |Y |Y |
+|[EdgeCollectionsEnabled](./microsoft-edge-policies.md#edgecollectionsenabled)|Y|Y|
 
 ## <a name="microsoft-edge-with-assigned-access"></a>割り当てられたアクセスによる Microsoft Edge の使用
 
@@ -151,11 +154,11 @@ Microsoft Edge は現在、次のロックダウン エクスペリエンス、�
 
 **Windows Insiders Preview を入手するにはどうすればよいですか?**
 
-PC に Windows 10 Insider Preview ビルドをインストールするには、「 [Windows 10 Insider Preview ビルドの概要](https://docs.microsoft.com/windows-insider/get-started)」の指示に従います。
+PC に Windows 10 Insider Preview ビルドをインストールするには、「 [Windows 10 Insider Preview ビルドの概要](/windows-insider/get-started)」の指示に従います。
 
 ### <a name="multi-app-kiosk"></a>複数アプリ キオスク
 
-Microsoft Edge は、Windows 10 で[複数アプリの割り当てられたアクセス](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) によって実行できます。これは Microsoft Edge レガシでの "通常の閲覧" タイプのキオスク モードに相当します。 複数アプリの割り当てられたアクセスで Microsoft Edge を構成するには、[複数アプリ キオスクの設定](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps)方法の手順に従います。 (Microsoft Edge Stable チャネルの AUMID は **MSEdge** です)。
+Microsoft Edge は、Windows 10 で[複数アプリの割り当てられたアクセス](/windows/configuration/lock-down-windows-10-to-specific-apps) によって実行できます。これは Microsoft Edge レガシでの "通常の閲覧" タイプのキオスク モードに相当します。 複数アプリの割り当てられたアクセスで Microsoft Edge を構成するには、[複数アプリ キオスクの設定](/windows/configuration/lock-down-windows-10-to-specific-apps)方法の手順に従います。 (Microsoft Edge Stable チャネルの AUMID は **MSEdge** です)。
 
 複数アプリが割り当てられたアクセスで Microsoft Edge を使用する場合は、Microsoft Edge キオスクを構成するには、[Microsoft Edge ブラウザー ポリシー](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-policies) を使用して、固有の要件を満たすように閲覧エクスペリエンスを構成します。
 
@@ -163,7 +166,7 @@ Microsoft Edge は、Windows 10 で[複数アプリの割り当てられたア�
 
 Windows の設定は、1 つか 2 つのシングル アプリのキオスク デバイスを設定する最も簡単な方法です。 シングル アプリのキオスク コンピューターをセットアップするには、次の手順に従います。
 
-1. 最新の Windows 10 Insider Preview (バージョン 20215 以降) をインストールします。 「[Windows 10 Insider Preview ビルドの概要](https://docs.microsoft.com/windows-insider/get-started)」の指示に従います。
+1. 最新の Windows 10 Insider Preview (バージョン 20215 以降) をインストールします。 「[Windows 10 Insider Preview ビルドの概要](/windows-insider/get-started)」の指示に従います。
 2. 最新の機能をテストするには、最新の [Microsoft Edge Beta チャネル](https://www.microsoftedgeinsider.com/download)(バージョン 89 以上) をダウンロードできます。
 3. キオスク コンピューターで、[Windows の設定] を開き、検索フィールドに "キオスク" と入力します。 次のスクリーンショットに表示されている  **[Set up a kiosk (assigned access)]** (キオスク モードを設定する (割り当てられたアクセス)) を選択し、キオスクを作成するダイアログを開きます。
 
@@ -211,19 +214,20 @@ Windows の設定は、1 つか 2 つのシングル アプリのキオスク �
 
 このキオスク モードのプレビュー版をリリースすることにより、Microsoft は商品の改善と新機能の追加に継続的に取り組んでいます。
 
-次の機能をオフにすることをお勧めします。
+現在、次の機能はサポートされていません。また、オフにすることをお勧めします。
 
-- [InPrivateModeAvailability](https://docs.microsoft.com/deployedge/microsoft-edge-policies#inprivatemodeavailability)
-- [IsolateOrigins](https://docs.microsoft.com/deployedge/microsoft-edge-policies#isolateorigins)
-- [ManagedFavorites](https://docs.microsoft.com/deployedge/microsoft-edge-policies#managedfavorites)
-- [EdgeShoppingAssistantEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgeshoppingassistantenabled)
-- [EdgeCollectionsEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgecollectionsenabled)
-- [UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed)
-- [DefaultPopupsSetting](https://docs.microsoft.com/deployedge/microsoft-edge-policies#defaultpopupssetting)
-- [StartupBoostEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#startupboostenabled)
-- [InternetExplorerIntegrationLevel](https://docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationlevel)
-- [拡張機能](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensions-policies)
-- [BackgroundModeEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#backgroundmodeenabled)
+- [InPrivateModeAvailability](./microsoft-edge-policies.md#inprivatemodeavailability)
+- [IsolateOrigins](./microsoft-edge-policies.md#isolateorigins)
+- [ManagedFavorites](./microsoft-edge-policies.md#managedfavorites)
+- [EdgeShoppingAssistantEnabled](./microsoft-edge-policies.md#edgeshoppingassistantenabled)
+- [EdgeCollectionsEnabled](./microsoft-edge-policies.md#edgecollectionsenabled)
+- [UserFeedbackAllowed](./microsoft-edge-policies.md#userfeedbackallowed)
+- [DefaultPopupsSetting](./microsoft-edge-policies.md#defaultpopupssetting)
+- [StartupBoostEnabled](./microsoft-edge-policies.md#startupboostenabled)
+- [InternetExplorerIntegrationLevel](./microsoft-edge-policies.md#internetexplorerintegrationlevel)
+- [拡張機能](./microsoft-edge-policies.md#extensions-policies)
+- [BackgroundModeEnabled](./microsoft-edge-policies.md#backgroundmodeenabled)
+- [UserFeedbackAllowed](./microsoft-edge-policies.md#userfeedbackallowed)
 
 ## <a name="roadmap"></a>ロードマップ
 
@@ -241,5 +245,5 @@ Windows の設定は、1 つか 2 つのシングル アプリのキオスク �
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
 - [Microsoft Edge の展開を計画する](deploy-edge-plan-deployment.md)
-- [Windows デスクトップ エディションでのキオスクおよびデジタル サイネージの構成](https://docs.microsoft.com/windows/configuration/kiosk-methods)
+- [Windows デスクトップ エディションでのキオスクおよびデジタル サイネージの構成](/windows/configuration/kiosk-methods)
 - [キオスク モードの移行を計画する](microsoft-edge-kiosk-mode-transition-plan.md)
