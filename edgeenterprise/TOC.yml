@@ -1,4 +1,4 @@
-# last revised 03/22/2021
+# last revised 03/31/2021
 - name: Microsoft Edge エンタープライズのドキュメント
   href: index.yml
 - name: Microsoft Edge ドキュメント
@@ -23,11 +23,13 @@
   items:
     - name: Microsoft Edge エンタープライズロードマップ
       href: microsoft-edge-roadmap.md
+    - name: Microsoft Edge 機能のプラットフォーム サポート
+      href: microsoft-edge-platform-feature-matrix.md
     - name: Microsoft Edge の展開を計画する
       href: deploy-edge-plan-deployment.md
     - name: ユーザー環境内の Microsoft Edge
       href: deploy-edge-prepare-to-deploy.md
-    - name: Microsoft ブラウザー使用状況レポート
+    - name: Microsoft ブラウザーの使用法レポート
       href: microsoft-edge-browser-usage-report.md
     - name: Microsoft Edge の準備完了
       href: deploy-edge-ready-for-edge.md
@@ -113,28 +115,32 @@
       href: microsoft-edge-pdf.md
     - name: Microsoft Edge を既定のブラウザーとして設定する
       href: edge-default-browser.md
-    - name: Microsoft Edge を IE モードで使用する
+    - name: Microsoft Edge を Internet Explorerモードで使用する
       items:
-        - name: IE モードの概要
+        - name: (IE) Internet Explorerとは何ですか?
           href: edge-ie-mode.md
-        - name: エンタープライズ モード サイト リストでのサイトの構成
+        - name: エンタープライズ サイト構成戦略
           href: edge-ie-mode-sitelist.md
         - name: IE モード ポリシーの構成
           href: edge-ie-mode-policies.md
         - name: Internet Explorer 11 を無効にする
           href: edge-ie-disable-ie11.md
-        - name: Enterprise Site Discovery ステップ バイ ステップ ガイド
-          href: edge-ie-mode-site-discovery.md
-        - name: IE モードに関する FAQ
-          href: edge-ie-mode-faq.md
-        - name: 追加のガイダンス
+        - name: サイトの検出とリストの管理
           items:
-            - name: ファイル拡張子と Internet Explorer モードの関連付け
-              href: edge-ie-mode-add-guidance-filetype-associations.md
-            - name: Microsoft Edge から Internet Explorer への Cookie の共有
-              href: edge-ie-mode-add-guidance-cookieshare.md
+            - name: Enterprise Site Discovery ステップ バイ ステップ ガイド
+              href: edge-ie-mode-site-discovery.md
             - name: Microsoft Edge の Enterprise Site List Manager
               href: edge-ie-mode-site-list-manager.md
+        - name: IE モードでページ内ナビゲーションを保持する
+          href: edge-learnmore-inpage-nav.md
+        - name: Microsoft Edge から Internet Explorer への Cookie の共有
+          href: edge-ie-mode-add-guidance-cookieshare.md
+        - name: IE モードで構成可能なサイト
+          href: edge-learnmore-configurable-sites-ie-mode.md
+        - name: ファイル拡張子と Internet Explorer モードの関連付け
+          href: edge-ie-mode-add-guidance-filetype-associations.md
+        - name: IE モードのトラブルシューティングと FAQ
+          href: edge-ie-mode-faq.md
 - name: Microsoft Edge のセキュリティ
   items:
     - name: ビジネスのセキュリティ
@@ -177,12 +183,8 @@
           href: edge-learn-more-co-di.md
         - name: プロキシ設定を構成するためのコマンド ライン オプション
           href: edge-learnmore-cmdline-options-proxy-settings.md
-        - name: IE モードで構成可能なサイト
-          href: edge-learnmore-configurable-sites-ie-mode.md
         - name: URL 一覧ベースのポリシーのフィルター形式
           href: edge-learnmmore-url-list-filter format.md
-        - name: IE モードでページ内ナビゲーションを保持する
-          href: edge-learnmore-inpage-nav.md
         - name: 混在したコンテンツのダウンロード
           href: edge-learnmore-mixed-content-downloads.md
         - name: Stable チャネル更新プログラムの段階的なロールアウト
