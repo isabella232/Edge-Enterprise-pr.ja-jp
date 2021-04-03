@@ -1,40 +1,40 @@
 ---
-title: エンタープライズ モード サイト リストでのサイトの構成
-ms.author: cjacks
-author: cjacks
-manager: saudm
-ms.date: 05/28/2020
+title: エンタープライズ サイト構成戦略
+ms.author: shisub
+author: shisub
+manager: srugh
+ms.date: 03/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: エンタープライズ サイト リストの構成
-ms.openlocfilehash: 9b1943e4d50dcc770b4a634b99ecbd001d1ffbcc
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+description: Internet Explorer モード用にエンタープライズ モードのサイト リストを構成する方法をステップごとに説明しているガイドです。
+ms.openlocfilehash: 1d0b80950439fce77513413c3f5d1143538487d1
+ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447651"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "11470155"
 ---
-# <a name="configure-sites-on-the-enterprise-mode-site-list"></a>エンタープライズ モード サイト リストでのサイトの構成
+# <a name="enterprise-site-configuration-strategy"></a>エンタープライズ サイト構成戦略
 
-この記事では、Microsoft Edge バージョン 77 以降の IE モードの構成をサポートするエンタープライズ モード サイト リストの変更について説明します。
+この記事では、Microsoft Edge バージョン 77 以降の Internet Explorer モードをサポートするエンタープライズ モード サイト リストの変更について説明します。
 
 エンタープライズ モード サイト リスト XML ファイルのスキーマについて詳しくは、[エンタープライズ モード スキーマ v.2 ガイダンス](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance)」をご覧ください。
 
 > [!NOTE]
-> この記事は、Microsoft Edge version 77 (**Stable**、**Beta**、および **Dev** チャネル) 以降に適用されます。
+> この記事は Microsoft Edge version 77 以降に適用されます。
+<!--
+## Updated schema elements
 
-## <a name="updated-schema-elements"></a>更新されたスキーマ要素
+The following table describes the \<open-in app\> element added to the v.2 of the Enterprise Mode schema:
 
-次の表は、エンタープライズ モード スキーマ v.2 に追加された \<open-in app\> 要素を示しています。
-
-| **要素** | **説明** |
+| **Element** | **Description** |
 | --- | --- |
-| \<open-in app="**true**"\> | サイトに使われるブラウザーの種類を制御する子要素。 **IE11 で開く**必要があるサイトには、この要素が必要です。|
+| \<open-in app="**true**"\> | A child element that controls what browser is used for sites. This element is required for sites that need to **open in IE11**.|
 
-**例:**
+**Example:**
 
 ``` xml
 <site url="contoso.com">
@@ -44,22 +44,41 @@ ms.locfileid: "11447651"
 </site>
 ```
 
-次の表は、\<open-in\> 要素の有効値を示しています。
+The following table shows the possible values of the \<open-in\> element:
 
-| **値** | **説明** |
+| **Value** | **Description** |
 | --- | --- |
-| **\<open-in\>IE11\</open-in\>** | IE モードまたはフル IE11 ウィンドウでサイトを開きます。 IE モードを有効にするには、「[IE モード ポリシーの構成](./edge-ie-mode-policies.md)」を参照してください|
-| **\<open-in app="**true**"\>IE11\</open-in\>** | フル IE11 ウィンドウでサイトを開きます |
-| **\<open-in\>MSEdge\</open-in\>** | Microsoft Edge でサイトを開きます |
-| **\<open-in\>none または未指定\</open-in\>** | 既定のブラウザー、またはサイトに移動したブラウザーでサイトを開きます。 |
-|**\<open-in\>構成可能\</open-in\>** | サイトが IE モード エンジンの決定に参加できるようにします。 詳細については、「[IE モードで構成可能なサイトの詳細](edge-learnmore-configurable-sites-ie-mode.md)」を参照してください。  |
+| **\<open-in\>IE11\</open-in\>** | Opens the site in IE mode or a full IE11 window. To enable IE mode, see [Configure IE mode policies](./edge-ie-mode-policies.md)|
+| **\<open-in app="**true**"\>IE11\</open-in\>** | Opens the site in a full IE11 window |
+| **\<open-in\>MSEdge\</open-in\>** | Opens the site in Microsoft Edge |
+| **\<open-in\>None or not specified\</open-in\>** | Opens the site in the default browser or in the browser where the user navigated to the site. |
+|**\<open-in\>Configurable\</open-in\>** | Allows the site to participate in IE mode engine determination. To learn more, see [Learn about Configurable sites in IE mode](edge-learnmore-configurable-sites-ie-mode.md).  |
 
 >[!NOTE]
-> 属性 app=**"true"** が認識されるのは、_'open-in' IE11_ に関連付けられている場合のみです。 他の 'open-in' 要素に追加しても、ブラウザーの動作は変わりません。   
+> The attribute app=**"true"** is only recognized when associated to _'open-in' IE11_. Adding it to the other 'open-in' elements won't change browser behavior.   -->
+
+## <a name="configuration-strategy"></a>構成戦略
+
+次の手順は、IE モードのサイト構成戦略の一部です。
+1. サイトの一覧を準備する
+2. ニュートラル サイトを構成する
+3. (省略可能) 必要に応じて Cookie の共有を使用する
+
+<!--
+Step 1.  – if you don’t have one use Site Discovery Step-by-Step
+Step 2 – Neutral sites + sticky mode
+        Use more examples and explain sticky mode better
+Step 3 – If that doesn’t cover your needs, then use Cookie sharing -->
+
+## <a name="prepare-your-site-list"></a>サイトの一覧を準備する
+
+IE11 または Microsoft Edge 従来版のエンタープライズ モード サイトリストを既にお持ちの場合は、IE モードを構成するためにそれを再利用できます。
+
+ただし、サイトの一覧をお持ちでない場合は、 「[エンタープライズ サイト発見ツール](https://docs.microsoft.com/deployedge/edge-ie-mode-site-discovery)」を使用してリストを作成することができます。
 
 ## <a name="configure-neutral-sites"></a>ニュートラル サイトを構成する
 
-IE モードを正しく動作させるには、認証サーバーまたはシングル サインオン サーバーをニュートラル サイトとして明示的に構成する必要があります。 構成しないと、IE モードのページが Microsoft Edge にリダイレクトされ、認証に失敗します。
+IE モードを正しく動作させるには、認証サーバーまたはシングル サインオン (SSO) サーバーをニュートラル サイトとして明示的に構成する必要があります。 構成しないと、IE モードのページが Microsoft Edge にリダイレクトされ、認証に失敗します。
 
 ニュートラル サイトは、ナビゲーションが開始されたブラウザーを使用します。これは Microsoft Edge または IE モードのいずれかです。 ニュートラル サイトを構成すると、これらの最新および従来の両方の認証サーバーを使用するすべてのアプリケーションが引き続き動作します。
 
@@ -73,10 +92,14 @@ Enterprise Mode Site List Manager ツールで [*開く*] ドロップダウン�
 </site>
 ```
 
-認証サーバーを識別するには、IE11 開発者ツールを使用して、アプリケーションからのネットワーク トラフィックを調べます。 認証サーバーの識別にさらに時間が必要な場合は、ページ内ナビゲーションがすべて IE モードのままになるようにポリシーを構成できます。 IE モードの使用を最小限に抑えるには、認証サーバーを識別してサイト リストに追加したら、この設定を無効にします。 詳細については、[ページ内ナビゲーションがすべて IE モードのままになるように構成する方法](./microsoft-edge-policies.md#internetexplorerintegrationsiteredirect)に関する記事をご覧ください。
+認証サーバーを識別するには、IE11 開発者ツールを使用して、アプリケーションからのネットワーク トラフィックを調べます。 認証サーバーを識別するために時間を割く時間が必要な場合は、ユーザーがワークフローを中断することなく継続できるよう、IE モードですべてのページ内ナビゲーションを維持するポリシーを構成し、ユーザーがワークフローを中断することなく続行できるようにすることができます。 不要な場合に IE モードの使用を最小限に抑えるには、認証サーバーを識別してサイト リストに追加したら、この設定を無効にします。 詳しくは、「[IE モードでページ内ナビゲーションを保持する](https://docs.microsoft.com/deployedge/edge-learnmore-inpage-nav)」をご覧ください。
 
 >[!NOTE]
    >IE モード統合では、エンタープライズ モード スキーマ v.1 がサポートされていません。 現在、Internet Explorer 11 でスキーマ v.1 を使用している場合は、スキーマ v.2 にアップグレードする必要があります。 詳しくは、「[エンタープライズ モード スキーマ v.2 ガイダンス](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance)」をご覧ください。
+
+## <a name="optional-use-cookie-sharing-if-necessary"></a>(省略可能) 必要に応じて Cookie の共有を使用する
+
+既定では、Microsoft Edge や Internet Explorer のプロセスはセッション Cookie を共有しません。この共有の欠如は、IE モードの使用時に、場合によっては不便になってしまう可能性があります。 たとえば、ユーザーが以前に IE モードで再認証する必要がある場合、または Microsoft Edge セッションからサインアウトしても、重要なトランザクションのために Internet Explorer モード セッションからサイン アウトしない場合があります。 これらのシナリオでは、SSO によって設定された特定の Cookie が Microsoft Edge から Internet Explorer へと送信されるように構成することで、再認証の必要性を排除し、認証エクスペリエンスをよりシームレスにすることができます。 詳しくは、「[Microsoft Edge から Internet Explorer に Cookie を共有する](https://docs.microsoft.com/deployedge/edge-ie-mode-add-guidance-cookieshare)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
