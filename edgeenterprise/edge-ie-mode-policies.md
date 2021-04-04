@@ -1,21 +1,21 @@
 ---
 title: IE モード ポリシーの構成
-ms.author: cjacks
-author: cjacks
-manager: saudm
-ms.date: 03/25/2020
+ms.author: collw
+author: dan-wesley
+manager: srugh
+ms.date: 03/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: IE モード ポリシーの構成
-ms.openlocfilehash: e33aa57b7877d50fe6a5d9e9a888d05c366b0ef0
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: a2abf6f6ef71c1f30786031ef19b9633bfafc43f
+ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447361"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "11470165"
 ---
 # <a name="configure-ie-mode-policies"></a>IE モード ポリシーの構成
 
@@ -29,6 +29,9 @@ IE モードを構成するには、次の3つの手順を実行する必要が�
 1. [Internet Explorer 統合を構成する](#configure-internet-explorer-integration)
 2. [サイトを Microsoft Edge から IE モードにリダイレクトする](#redirect-sites-from-microsoft-edge-to-ie-mode)
 3. (省略可能) [サイトを IE から Microsoft Edge にリダイレクトする](#redirect-sites-from-ie-to-microsoft-edge)
+
+    1. IE11 アプリを無効にする準備ができている場合は、「[Internet Explorer 11 を無効にする](https://docs.microsoft.com/deployedge/edge-ie-disable-ie11)」の手順に従います
+    2. それ以外の場合は、「[サイトを IE から Microsoft Edge にリダイレクトする](https://docs.microsoft.com/deployedge/edge-ie-mode-policies#redirect-sites-from-ie-to-microsoft-edge)」の残りの手順に従います
 
 > [!NOTE]
 > IE モードを有効にするポリシーは、Intune を使用して構成できます。 詳しくは、「[Microsoft Edge for Windows 10 を Microsoft Intune に追加する](/intune/apps/apps-windows-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json)」および「[Microsoft Intune を使って Microsoft Edge ポリシー設定を構成する](./configure-edge-with-intune.md)」をご覧ください。

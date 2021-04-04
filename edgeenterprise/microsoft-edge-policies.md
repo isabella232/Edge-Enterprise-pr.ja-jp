@@ -3,7 +3,7 @@ title: Microsoft Edge ブラウザー ポリシーに関するドキュメント
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/24/2021
+ms.date: 04/01/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
-ms.openlocfilehash: 2204f1062699095e66707858646014daefc9322a
-ms.sourcegitcommit: e17de92b1fe9637cc7476e5c953bb8131ca2fbe1
+ms.openlocfilehash: 79996cdbee3099fbb3a3d17b982b84a05f5a5066
+ms.sourcegitcommit: 21390f52f8605fe6cb0b73ca6dffacff562ada82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "11448434"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "11470895"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - ポリシー
 
@@ -35,7 +35,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 
 |名前|キャプション|
 |--|--|
-|[NewTabPageContentEnabled](#newtabpagecontentenabled)|新しいタブ ページで Microsoft ニュース コンテンツを許可する|
+|[ApplicationGuardTrafficIdentificationEnabled](#applicationguardtrafficidentificationenabled)|Application Guard トラフィックの識別|
 
 ## <a name="available-policies"></a>使用可能なポリシー
 
@@ -66,6 +66,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |-|-|
 |[ApplicationGuardContainerProxy](#applicationguardcontainerproxy)|Application Guard コンテナー プロキシ|
 |[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|Application Guard のお気に入りの同期の有効化|
+|[ApplicationGuardTrafficIdentificationEnabled](#applicationguardtrafficidentificationenabled)|Application Guard トラフィックの識別|
 ### [*<a name="cast"></a>キャスト*](#cast-policies)
 
 |ポリシー名|キャプション|
@@ -504,7 +505,7 @@ ProxyServer フィールドはプロキシ サーバーの URL です。
 
 'ProxyMode' として 'pac_script' の値を選択した場合、'ProxyPacUrl' フィールドが使用されます。
 
-デュアル プロキシを介した Application Guard トラフィックの識別の詳細については、[https://go.microsoft.com/fwlink/?linkid=2134653](./microsoft-edge-security-windows-defender-application-guard.md)を参照してください。
+デュアル プロキシを介した Application Guard トラフィックの識別の詳細については、[https://go.microsoft.com/fwlink/?linkid=2134653](https://go.microsoft.com/fwlink/?linkid=2134653)を参照してください。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -599,6 +600,59 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
   - パス (必須): SOFTWARE\Policies\Microsoft\Edge
   - パス (推奨): なし
   - 値の名前: ApplicationGuardFavoritesSyncEnabled
+  - 値の種類: REG_DWORD
+
+  ##### <a name="example-value"></a>サンプル値:
+
+```
+0x00000001
+```
+
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### <a name="applicationguardtrafficidentificationenabled"></a>ApplicationGuardTrafficIdentificationEnabled
+
+  #### <a name="application-guard-traffic-identification"></a>Application Guard トラフィックの識別
+
+  
+  
+  #### <a name="supported-versions"></a>サポートされているバージョン:
+
+  - 91 以降の Windows の場合
+
+  #### <a name="description"></a>説明
+
+  このポリシーを有効または構成しない場合、Application Guard は Application Guard コンテナーから行われたすべての送信 HTTP 要求に追加の HTTP ヘッダー (X-MS-ApplicationGuard-Initiated) を追加します。
+
+このポリシーを無効にした場合、余分なヘッダーはトラフィックに追加されません。
+
+  #### <a name="supported-features"></a>サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: いいえ - ブラウザの再起動が必要
+
+  #### <a name="data-type"></a>［データの種類］:
+
+  - ブール値
+
+  #### <a name="windows-information-and-settings"></a>Windows の情報と設定
+
+  ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
+
+  - GP 固有の名前: ApplicationGuardTrafficIdentificationEnabled
+  - GP 名: Application Guard トラフィック ID
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/Application Guard の設定
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - 値の名前: ApplicationGuardTrafficIdentificationEnabled
   - 値の種類: REG_DWORD
 
   ##### <a name="example-value"></a>サンプル値:
@@ -844,7 +898,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
-有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format) をご覧ください。 * は、このポリシーで承認された値ではありません。
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。 * は、このポリシーで承認された値ではありません。
 
 終了時に cookie を削除されないようにするには、 [SaveCookiesOnExit](#savecookiesonexit) ポリシーを構成します。
 
@@ -923,7 +977,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
-有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format) をご覧ください。 * は、このポリシーで承認された値ではありません。
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。 * は、このポリシーで承認された値ではありません。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -1002,7 +1056,7 @@ Microsoft Edge がバックグラウンド モードで実行されている場�
 
 - CookiesSessionOnlyForUrls
 
-有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format) をご覧ください。 * は、このポリシーで承認された値ではありません。
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。 * は、このポリシーで承認された値ではありません。
 
 [RestoreOnStartup](#restoreonstartup) ポリシーを設定して以前のセッションから URL を復元する場合、このポリシーは無視され、それらのサイトについての Cookie は永続的に保管されます。
 
@@ -1905,7 +1959,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 URL パターンは、 [FileSystemReadBlockedForUrls](#filesystemreadblockedforurls) と競合することはできません。 URL が両方と一致する場合、どちらのポリシーも優先されません。
 
-有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format) をご覧ください。 * は、このポリシーで承認された値ではありません。
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。 * は、このポリシーで承認された値ではありません。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -1974,7 +2028,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
 
 URL パターンは、 [FileSystemReadAskForUrls](#filesystemreadaskforurls) と競合することはできません。 URL が両方と一致する場合、どちらのポリシーも優先されません。
 
-有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format) をご覧ください。 * は、このポリシーで承認された値ではありません。
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。 * は、このポリシーで承認された値ではありません。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -2043,7 +2097,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.e
 
 URL パターンは、 [FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls) と競合することはできません。 URL が両方と一致する場合、どちらのポリシーも優先されません。
 
-有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format) をご覧ください。 * は、このポリシーで承認された値ではありません。
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。 * は、このポリシーで承認された値ではありません。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -2112,7 +2166,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
 
 URL パターンは、 [FileSystemWriteAskForUrls](#filesystemwriteaskforurls) と競合することはできません。 URL が両方と一致する場合、どちらのポリシーも優先されません。
 
-有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format) をご覧ください。 * は、このポリシーで承認された値ではありません。
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。 * は、このポリシーで承認された値ではありません。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -2179,7 +2233,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
 
 このポリシーを構成していない場合、ユーザーの個人用の構成、または [DefaultImagesSetting](#defaultimagessetting) ポリシー (設定されている場合) のいずれかからのグローバルな既定値が、すべてのサイトで使用されます。
 
-有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format) をご覧ください。 * は、このポリシーで承認された値ではありません。
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。 * は、このポリシーで承認された値ではありません。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -2246,7 +2300,7 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 
 このポリシーを構成していない場合、ユーザーの個人用の構成、または [DefaultImagesSetting](#defaultimagessetting) ポリシー (設定されている場合) からのグローバルな既定値がすべてのサイトで使用されます。
 
-有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format) をご覧ください。 * は、このポリシーで承認された値ではありません。
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。 * は、このポリシーで承認された値ではありません。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -2313,7 +2367,7 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
 このポリシーを構成していない場合、ブロック可能な混在するコンテンツがブロックされ、オプションでブロック可能な混在するコンテンツがアップグレードされます。 ただし、ユーザーは特定のサイトで安全でない混在するコンテンツを許可する例外を設定することができます。
 
-有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format) をご覧ください。 * は、このポリシーで承認された値ではありません。
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。 * は、このポリシーで承認された値ではありません。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -2380,7 +2434,7 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.
 
 このポリシーを構成していない場合、ブロック可能な混在するコンテンツがブロックされ、オプションでブロック可能な混在するコンテンツがアップグレードされます。 ただし、ユーザーは特定のサイトで安全でない混在するコンテンツを許可する例外を設定することができます。
 
-有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format) をご覧ください。 * は、このポリシーで承認された値ではありません。
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。 * は、このポリシーで承認された値ではありません。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -2714,7 +2768,7 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
 
   通知の表示を許可するサイトを指定するための URL パターンのリストを作成できます。
 
-このポリシーを設定していない場合、すべてのサイトにグローバルな既定値が使用されます。 この既定値は、[DefaultNotificationsSetting](#defaultnotificationssetting) ポリシーが設定されている場合はそのポリシーの値、またはユーザーの個人用の構成の値になります。 有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format) をご覧ください。
+このポリシーを設定していない場合、すべてのサイトにグローバルな既定値が使用されます。 この既定値は、[DefaultNotificationsSetting](#defaultnotificationssetting) ポリシーが設定されている場合はそのポリシーの値、またはユーザーの個人用の構成の値になります。 有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -2779,7 +2833,7 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.ed
 
   通知の表示が許可されていないサイトを指定する URL パターンのリストを作成できます。
 
-このポリシーを設定していない場合、すべてのサイトにグローバルな既定値が使用されます。 この既定値は、[DefaultNotificationsSetting](#defaultnotificationssetting) ポリシーが設定されている場合はそのポリシーの値、またはユーザーの個人用の構成の値になります。 有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format) をご覧ください。
+このポリシーを設定していない場合、すべてのサイトにグローバルな既定値が使用されます。 この既定値は、[DefaultNotificationsSetting](#defaultnotificationssetting) ポリシーが設定されている場合はそのポリシーの値、またはユーザーの個人用の構成の値になります。 有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -2848,7 +2902,7 @@ Adobe Flash プラグインを実行することができるサイトの一覧�
 
 このポリシーを構成していない場合、ユーザーの個人用の構成、または [DefaultPluginsSetting](#defaultpluginssetting) ポリシー (設定されている場合) からのグローバルな既定値がすべてのサイトで使用されます。
 
-有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format) をご覧ください。 ただし、M85以降では、ホストで「\*」および「[\*.]」のワイルドカードを使用したパターンは、このポリシーではサポートされなくなりました。
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。 ただし、M85以降では、ホストで「\*」および「[\*.]」のワイルドカードを使用したパターンは、このポリシーではサポートされなくなりました。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -2917,7 +2971,7 @@ Adobe Flash プラグインの実行がブロックされているサイトの�
 
 このポリシーを構成していない場合、ユーザーの個人用の構成、または [DefaultPluginsSetting](#defaultpluginssetting) ポリシー (設定されている場合) からのグローバルな既定値がすべてのサイトで使用されます。
 
-有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format) をご覧ください。 ただし、M85以降では、ホストで「\*」および「[\*.]」のワイルドカードを使用したパターンは、このポリシーではサポートされなくなりました。
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。 ただし、M85以降では、ホストで「\*」および「[\*.]」のワイルドカードを使用したパターンは、このポリシーではサポートされなくなりました。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -3360,7 +3414,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
 
 このポリシーを構成していない場合、ユーザーの個人用の構成、または [DefaultWebUsbGuardSetting](#defaultwebusbguardsetting) ポリシー (設定されている場合) からのグローバルな既定値がすべてのサイトで使用されます。
 
-このポリシーで定義された URL パターンは、[WebUsbBlockedForUrls](#webusbblockedforurls) ポリシーで構成されたものと競合することはできません。URL を許可することも、ブロックすることもできません。 有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format) をご覧ください
+このポリシーで定義された URL パターンは、[WebUsbBlockedForUrls](#webusbblockedforurls) ポリシーで構成されたものと競合することはできません。URL を許可することも、ブロックすることもできません。 有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -3427,7 +3481,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
 
 このポリシーを構成していない場合、ユーザーの個人用の構成、または [DefaultWebUsbGuardSetting](#defaultwebusbguardsetting) ポリシー (設定されている場合) からのグローバルな既定値がすべてのサイトで使用されます。
 
-このポリシーの URL パターンは、[WebUsbAskForUrls](#webusbaskforurls) ポリシーで構成されたものと競合することはできません。 URL を許可することも、ブロックすることもできません。  有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format) をご覧ください。
+このポリシーの URL パターンは、[WebUsbAskForUrls](#webusbaskforurls) ポリシーで構成されたものと競合することはできません。 URL を許可することも、ブロックすることもできません。  有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -4412,7 +4466,7 @@ macOS インスタンスでは、Microsoft Edge アドオン Web サイト以外
 
 ユーザーは開発者ツールを使用して任意の拡張機能のソース コードを変更することができ、その結果として拡張機能が正常に機能しなくなる可能性があります。 これが問題となる場合には、DeveloperToolsDisabled ポリシーを構成します。
 
-ポリシーの各リスト アイテムは、拡張機能 ID と、セミコロン (;) で区切られたオプションの "更新" URL を含む文字列です。 拡張機能 ID は 32 文字の文字列で、たとえば開発者モードの場合には、edge://extensions で見つけることができます。 指定する場合には、"更新" URL は更新プログラム マニフェスト XML ドキュメント ([https://go.microsoft.com/fwlink/?linkid=2095043](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating)) を指している必要があります。 既定では、Microsoft Edge アドオン Web サイトの更新 URL が使用されます。 このポリシーで設定されている "更新" URL は、初回のインストールにのみ使用され、以降の拡張機能の更新では、拡張機能のマニフェスト内の更新 URL が使用されます。
+ポリシーの各リスト アイテムは、拡張機能 ID と、セミコロン (;) で区切られたオプションの "更新" URL を含む文字列です。 拡張機能 ID は 32 文字の文字列で、たとえば開発者モードの場合には、edge://extensions で見つけることができます。 指定する場合には、"更新" URL は更新プログラム マニフェスト XML ドキュメント ([https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043)) を指している必要があります。 既定では、Microsoft Edge アドオン Web サイトの更新 URL が使用されます。 このポリシーで設定されている "更新" URL は、初回のインストールにのみ使用され、以降の拡張機能の更新では、拡張機能のマニフェスト内の更新 URL が使用されます。
 
 注: このポリシーは InPrivate モードには適用されません。 拡張機能のホスティングについて読む (https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating)。
 
@@ -4481,7 +4535,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 
 パッケージを edge://extensions ページにドラッグ アンド ドロップすることなく、拡張機能やテーマを直接インストールできる URL を定義します。
 
-このリストの各項目は、拡張子スタイルの一致パターンです ([https://go.microsoft.com/fwlink/?linkid=2095039](/microsoft-edge/extensions-chromium/enterprise/match-patterns) を参照してください)。 ユーザーは、このリストの項目に一致する URL から簡単にアイテムをインストールすることができます。 *.crx ファイルの場所と、ダウンロードを開始するページ (つまり参照元) の両方が、これらのパターンで許可されている必要があります。 認証が必要な場所では、ファイルをホストしないでください。
+このリストの各項目は、拡張子スタイルの一致パターンです ([https://go.microsoft.com/fwlink/?linkid=2095039](https://go.microsoft.com/fwlink/?linkid=2095039) を参照してください)。 ユーザーは、このリストの項目に一致する URL から簡単にアイテムをインストールすることができます。 *.crx ファイルの場所と、ダウンロードを開始するページ (つまり参照元) の両方が、これらのパターンで許可されている必要があります。 認証が必要な場所では、ファイルをホストしないでください。
 
 [ExtensionInstallBlocklist](#extensioninstallblocklist) ポリシーは、このポリシーよりも優先されます。 ブロック リストに登録されている拡張機能は、このリストに登録されているサイトからのものであっても、インストールされません。
 
@@ -4546,7 +4600,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 
   このポリシーを設定すると、既存の拡張機能関連ポリシーによって制御される設定を含め、Microsoft Edge の拡張機能管理設定が制御されます。 このポリシーは、設定されている可能性がある従来のポリシーより優先されます。
 
-このポリシーは、拡張機能 ID または更新 URL を特定の設定にのみマップします。 特別な ID "*" に対して既定の構成を設定できます。この構成は、このポリシーのカスタム構成なしですべての拡張機能に適用されます。 更新 URL を使用すると、拡張機能マニフェスト ( [https://go.microsoft.com/fwlink/?linkid=2095043](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating) )に記載されている正確な更新 URL を持つ拡張機能に構成が適用されます。
+このポリシーは、拡張機能 ID または更新 URL を特定の設定にのみマップします。 特別な ID "*" に対して既定の構成を設定できます。この構成は、このポリシーのカスタム構成なしですべての拡張機能に適用されます。 更新 URL を使用すると、拡張機能マニフェスト ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) )に記載されている正確な更新 URL を持つ拡張機能に構成が適用されます。
 
 特定のサード パーティ ストアの拡張機能をブロックするには、そのストアの update_url をブロックする必要があります。 たとえば、Chrome Web ストアの拡張機能をブロックする場合は、次の JSON を使用できます。
 
@@ -5314,7 +5368,7 @@ Samba と Windows Server の最新バージョンは、すべて NTLMv2 をサ�
 
 このポリシーを無効にすると、ユーザーがアドレス バーの URL を変更できなくなります。
 
-キオスク モードの構成の詳細については、「[https://go.microsoft.com/fwlink/?linkid=2137578](./microsoft-edge-configure-kiosk-mode.md)」を参照してください。
+キオスク モードの構成の詳細については、「[https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578)」を参照してください。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -5378,7 +5432,7 @@ Samba と Windows Server の最新バージョンは、すべて NTLMv2 をサ�
 
 このポリシーを無効にするか、構成しない場合、キオスク セッションの一部としてダウンロードされたファイルは、Microsoft Edge を閉じても削除されません。
 
-キオスク モードの構成の詳細については、「[https://go.microsoft.com/fwlink/?linkid=2137578](./microsoft-edge-configure-kiosk-mode.md)」を参照してください。
+キオスク モードの構成の詳細については、「[https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578)」を参照してください。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -6873,7 +6927,7 @@ Microsoft Edge がプロキシをバイパスするホストの一覧を定義�
 
 このポリシーを構成していない場合、Microsoft Edge がプロキシをバイパスするホストの一覧は作成されません。 プロキシ ポリシーを構成するために別の方法を指定している場合、このポリシーは未構成のままにしておきます。
 
-より詳細な例については、「[https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md)」を参照してください。
+より詳細な例については、「[https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936)」を参照してください。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -6944,7 +6998,7 @@ Microsoft Edge がプロキシをバイパスするホストの一覧を定義�
   * fixed_servers = 固定プロキシ サーバー。 [ProxyServer](#proxyserver) と [ProxyBypassList](#proxybypasslist) を使用してさらにオプションを指定することができます。
   * pac_script = .pac プロキシ スクリプト。 [ProxyPacUrl](#proxypacurl) を使用して、プロキシ .pac ファイルの URL を設定します。
 
-詳細な例については、「[https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md)」を参照してください。
+詳細な例については、「[https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936)」を参照してください。
 
 このポリシーを構成していない場合、ユーザーは自分のプロキシ設定を選択することができます。
 
@@ -7028,7 +7082,7 @@ Microsoft Edge がプロキシをバイパスするホストの一覧を定義�
 
 このポリシーを無効にしているか、構成していない場合、PAC ファイルは指定されません。 プロキシ ポリシーを構成するために別の方法を指定している場合、このポリシーは未構成のままにしておきます。
 
-詳細な例については、「[https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md)」を参照してください。
+詳細な例については、「[https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936)」を参照してください。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -7096,7 +7150,7 @@ Microsoft Edge がプロキシをバイパスするホストの一覧を定義�
 
 このポリシーを無効にしているか、構成していない場合、ユーザーはこのプロキシ モードの間、自分のプロキシ設定を選択することができます。 プロキシ ポリシーを構成するために別の方法を指定している場合、このポリシーは未構成のままにしておきます。
 
-オプションや詳細な例については、「[https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md)」を参照してください。
+オプションや詳細な例については、「[https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936)」を参照してください。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -7180,7 +7234,7 @@ ProxyMode の場合に、以下の値を選択すると:
   * fixed_server の場合、ProxyServer と ProxyBypassList フィールドが使用されます。
   * pac_script の場合、ProxyPacUrl と ProxyBypassList フィールドが使用されます。
 
-より詳細な例については、「[https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md)」を参照してください。
+より詳細な例については、「[https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936)」を参照してください。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -10115,7 +10169,7 @@ Microsoft Edge のバージョン 83 以降で、このポリシーを [FromMozi
 
 このポリシーを構成しないと、プロンプトなしでプロトコルを起動できません。 ユーザーは、[External Protocol DialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox) ポリシーが [無効] に設定されていない限り、プロトコルごとまたはサイトごとにプロンプトからオプションを選択できます。 このポリシーは、ユーザーによって設定されたプロトコルごとまたはサイトごとのプロンプト除外には影響しません。
 
-オリジンの一致パターンは、[https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format) で文書化されている [URLBlocklist](#urlblocklist) ポリシーの場合と同様の形式を使用します。
+オリジンの一致パターンは、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) で文書化されている [URLBlocklist](#urlblocklist) ポリシーの場合と同様の形式を使用します。
 
 ただし、このポリシーのオリジンの一致パターンには、「/path」または「@query」要素を含めることはできません。 「/path」または「@query」要素を含むパターンは無視されます。
 
@@ -10237,7 +10291,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
 
 このポリシーを設定しない場合、ファイルの種類が [AutoOpenFileTypes](#autoopenfiletypes) にあるすべてのダウンロードが自動的に開きます。
 
-URL パターンは [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format) に応じて書式設定する必要があります。
+URL パターンは [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) に応じて書式設定する必要があります。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -10699,7 +10753,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 このポリシーは、Microsoft によって EDU テナントとして識別された K-12 SKU でのみ利用可能です。
 
-このポリシーについての詳細を調べる場合や、以下のシナリオに当てはまる場合には、「[https://go.microsoft.com/fwlink/?linkid=2119711](/microsoft-365/education/deploy/install-microsoft-edge)」を参照してください。
+このポリシーについての詳細を調べる場合や、以下のシナリオに当てはまる場合には、「[https://go.microsoft.com/fwlink/?linkid=2119711](https://go.microsoft.com/fwlink/?linkid=2119711)」を参照してください。
 
 * EDU のテナントがあるのに、ポリシーが機能しない場合。
 
@@ -11445,7 +11499,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
 
 このポリシーでは、指定された URL のホスト名のついての証明書を、証明書の透明性を介して開示しないようにします。 これにより、適適切に開示されていなかったために信頼されていなかった証明書を使用することができるようになりますが、これらのホストに対して発行された証明書の誤発行を検出することが難しくなります。
 
-[https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format) に従って、URL パターンを形成します。 証明書は、スキーム、ポート、パスに関係なく指定されたホスト名に対して有効であるため、URL のホスト名の部分のみが考慮されます。 ワイルドカード ホストはサポートされていません。
+[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) に従って、URL パターンを形成します。 証明書は、スキーム、ポート、パスに関係なく指定されたホスト名に対して有効であるため、URL のホスト名の部分のみが考慮されます。 ワイルドカード ホストはサポートされていません。
 
 このポリシーを構成していない場合、証明書の透明性を介して公開されている必要がある証明書が、公開されていない場合、信頼されていないものとして扱われます。
 
@@ -11652,7 +11706,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 
 ClickOnce を無効にすると、ClickOnce アプリケーション (.application ファイル) が正常に起動しなくなる場合があります。
 
-ClickOnce の詳細については、「[https://go.microsoft.com/fwlink/?linkid=2103872](./edge-learn-more-co-di.md)」と「[https://go.microsoft.com/fwlink/?linkid=2099880](/visualstudio/deployment/clickonce-security-and-deployment)」を参照してください。
+ClickOnce の詳細については、「[https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872)」と「[https://go.microsoft.com/fwlink/?linkid=2099880](https://go.microsoft.com/fwlink/?linkid=2099880)」を参照してください。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -12051,7 +12105,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   #### <a name="description"></a>説明
 
-  ユーザーのコンピューターがドメインに参加していて、環境がハイブリッド参加していない場合、Active Directory アカウントを自動サインインに使用できるようにします。 代わりにユーザーが Azure Active Directory アカウントを使用して自動的にサインインできるようにする場合は、Azure AD 参加 (詳細については [https://go.microsoft.com/fwlink/?linkid=2118197](/azure/active-directory/devices/azureadjoin-plan) を参照してください) またはハイブリッド参加 (詳細については [https://go.microsoft.com/fwlink/?linkid=2118365](/azure/active-directory/devices/hybrid-azuread-join-plan) を参照してください) を使用して環境を参加させます。
+  ユーザーのコンピューターがドメインに参加していて、環境がハイブリッド参加していない場合、Active Directory アカウントを自動サインインに使用できるようにします。 代わりにユーザーが Azure Active Directory アカウントを使用して自動的にサインインできるようにする場合は、Azure AD 参加 (詳細については [https://go.microsoft.com/fwlink/?linkid=2118197](https://go.microsoft.com/fwlink/?linkid=2118197) を参照してください) またはハイブリッド参加 (詳細については [https://go.microsoft.com/fwlink/?linkid=2118365](https://go.microsoft.com/fwlink/?linkid=2118365) を参照してください) を使用して環境を参加させます。
 
 起動させるたびに、実行された最初のプロファイルがサインインしていないか、または以前に自動サインインが行われていない限り、Microsoft Edge はこのポリシーを使用してサインインを試みようとします。
 
@@ -12379,7 +12433,7 @@ Microsoft Edge 89 以降、同期が無効になっている既存のオンプ�
 
 このポリシーを設定しない場合、Microsoft Edge により、ユーザーはそれが既定かどうかを制御でき、既定でない場合はユーザー通知を表示するかどうかを制御できます。
 
-Windows 管理者への注意: このポリシーは、Windows 7 を実行している PC でのみ機能します。 Windows のそれ以降のバージョンでは、Microsoft Edge を HTTPS と HTTP プロトコル (または、オプションで FTP プロトコルや .html、.htm、.pdf、.svg、.webp などのファイル形式) のハンドラーにする "既定のアプリケーションの関連付け" ファイルを展開する必要があります。 詳細については、「[https://go.microsoft.com/fwlink/?linkid=2094932](./edge-default-browser.md)」を参照してください。
+Windows 管理者への注意: このポリシーは、Windows 7 を実行している PC でのみ機能します。 Windows のそれ以降のバージョンでは、Microsoft Edge を HTTPS と HTTP プロトコル (または、オプションで FTP プロトコルや .html、.htm、.pdf、.svg、.webp などのファイル形式) のハンドラーにする "既定のアプリケーションの関連付け" ファイルを展開する必要があります。 詳細については、「[https://go.microsoft.com/fwlink/?linkid=2094932](https://go.microsoft.com/fwlink/?linkid=2094932)」を参照してください。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -12911,7 +12965,7 @@ Windows 管理者への注意: このポリシーは、Windows 7 を実行して
 
 オプションの診断データには、製品およびサービスの改善のためにブラウザーの使用状況に関するデータ、アクセスした Web サイト、Microsoft へのクラッシュ レポートが含まれます。
 
-このポリシーは、Windows 10 デバイスではサポートされていません。 Windows 10 でこのデータの収集を制御するには、IT 管理者が Windows 診断データ グループ ポリシーを使用する必要があります。 このポリシーは、使用している Windows のバージョンに応じて、「利用統計情報を許可する」か、「診断データを許可する」かを決定します。 収集されるすべての Windows 10 診断データについて、以下のとおり説明します。[https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
+このポリシーは、Windows 10 デバイスではサポートされていません。 Windows 10 でこのデータの収集を制御するには、IT 管理者が Windows 診断データ グループ ポリシーを使用する必要があります。 このポリシーは、使用している Windows のバージョンに応じて、「利用統計情報を許可する」か、「診断データを許可する」かを決定します。 収集されるすべての Windows 10 診断データについて、以下のとおり説明します。[https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
 
 このポリシーを構成するには、次のいずれかの設定を使用します。
 
@@ -12999,7 +13053,7 @@ Windows 7 または macOS のこのポリシーでは、必須およびオプシ
 
 注: DirectInvoke を無効にすると、Microsoft SharePoint Online の一部の機能が期待通りに動作しない場合があります。
 
-DirectInvoke の詳細については、「[https://go.microsoft.com/fwlink/?linkid=2103872](./edge-learn-more-co-di.md)」と「[https://go.microsoft.com/fwlink/?linkid=2099871](/previous-versions/windows/internet-explorer/ie-developer/dev-guides/jj215788(v=vs.85))」を参照してください。
+DirectInvoke の詳細については、「[https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872)」と「[https://go.microsoft.com/fwlink/?linkid=2099871](https://go.microsoft.com/fwlink/?linkid=2099871)」を参照してください。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -14176,7 +14230,7 @@ Microsoft は、互換性の理由から特定のドメインで選択するア�
 
 このポリシーを有効にした場合:
 
-* URL パターンは [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format) に応じて書式設定する必要があります。
+* URL パターンは [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) に応じて書式設定する必要があります。
 * 入力するファイルの種類の拡張子は、小文字の ASCII にする必要があります。 ファイルの種類の拡張子を記載するときは、先頭の区切り記号を含めないでください。したがって、「.jnlp」の代わりに「jnlp」を使用する必要があります。
 
 例:
@@ -16591,7 +16645,7 @@ Internet Explorer で互換性のない Web サイトに遭遇した場合、ユ
 
 このポリシーを [無効] に設定すると、拡張ハング検出が無効になり、ユーザーは基本的な Internet Explorer ハング検出動作を取得します。
 
-Internet Explorer モードの詳細については、「[https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)」を参照してください
+Internet Explorer モードの詳細については、「[https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)」を参照してください
 
 ポリシー オプション マッピング:
 
@@ -16650,7 +16704,7 @@ Internet Explorer モードの詳細については、「[https://go.microsoft.c
 
   #### <a name="description"></a>説明
 
-  Internet Explorer モードで最適なエクスペリエンスを構成する方法については、「[https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)」を参照してください
+  Internet Explorer モードで最適なエクスペリエンスを構成する方法については、「[https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)」を参照してください
 
 ポリシー オプション マッピング:
 
@@ -16719,7 +16773,7 @@ Internet Explorer モードの詳細については、「[https://go.microsoft.c
 
 このポリシーを false に設定する場合、ユーザーは --ie-mode-file-url コマンド ライン引数を使用して、Internet Explorer モードでローカル ファイルを起動できません。
 
-Internet Explorer モードの詳細については、「[https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)」を参照してください
+Internet Explorer モードの詳細については、「[https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)」を参照してください
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -16778,7 +16832,7 @@ file:// URL が Internet Explorer モードでの起動を要求された場合�
 
 このポリシーを特別な値「*」に設定するか、構成しない場合、すべてのファイル拡張子が許可されます。
 
-Internet Explorer モードの詳細については、「[https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)」を参照してください
+Internet Explorer モードの詳細については、「[https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)」を参照してください
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -16840,7 +16894,7 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
 
 このポリシーを false に設定するか、構成しない場合、コンテキスト メニュー項目は追加されません。
 
-Internet Explorer モードの詳細については、「[https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)」を参照してください
+Internet Explorer モードの詳細については、「[https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)」を参照してください
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -16891,7 +16945,7 @@ Internet Explorer モードの詳細については、「[https://go.microsoft.c
 
   #### <a name="description"></a>説明
 
-  Internet Explorer モードで最適なエクスペリエンスを構成する方法については、「[https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)」を参照してください
+  Internet Explorer モードで最適なエクスペリエンスを構成する方法については、「[https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)」を参照してください
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -16956,7 +17010,7 @@ Internet Explorer モードの詳細については、「[https://go.microsoft.c
 
 このポリシーを [AllInPageNavigations] に設定している場合、IE モードで読み込まれたページから未構成サイトへのすべてのナビゲーションは、Internet Explorer モードで保持されます (推奨しません)。
 
-Internet Explorer モードの詳細については、「[https://go.microsoft.com/fwlink/?linkid=2105106](./edge-learnmore-inpage-nav.md)」を参照してください
+Internet Explorer モードの詳細については、「[https://go.microsoft.com/fwlink/?linkid=2105106](https://go.microsoft.com/fwlink/?linkid=2105106)」を参照してください
 
 ポリシー オプション マッピング:
 
@@ -17808,13 +17862,13 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 
   #### <a name="description"></a>説明
 
-  このポリシーはサポートされなくなりました。 このポリシーは [DiagnosticData](#diagnosticdata) に置き換えられ (Windows 7、Windows 8、および macOS)、Windows 10 ([https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)) でテレメトリが許可されます。
+  このポリシーはサポートされなくなりました。 このポリシーは [DiagnosticData](#diagnosticdata) に置き換えられ (Windows 7、Windows 8、および macOS)、Windows 10 ([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)) でテレメトリが許可されます。
 
 このポリシーによって、Microsoft Edge の使用状況およびクラッシュに関連するデータの Microsoft への送信が有効になります。
 
 使用状況およびクラッシュに関連するデータのレポートを Microsoft に送信するには、このポリシーを有効にします。 このデータを Microsoft に送信しない場合は、このポリシーを無効にします。 いずれの場合でも、ユーザーがこの設定を変更または上書きすることはできません。
 
-Windows 10 では、このポリシーを構成していない場合、Microsoft Edge は Windows 診断データの設定を既定値として設定します。 このポリシーを有効にしている場合、Windows 診断データの設定が［拡張］または［完全］に設定されている場合にのみ、Microsoft Edge は使用状況データを送信します。 このポリシーを無効にしている場合、Microsoft Edge は使用状況データを送信しません。 クラッシュに関連するデータは、Windows 診断データの設定に基づいて送信されます。 Windows 診断データの設定については、「[https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)」を参照してください
+Windows 10 では、このポリシーを構成していない場合、Microsoft Edge は Windows 診断データの設定を既定値として設定します。 このポリシーを有効にしている場合、Windows 診断データの設定が［拡張］または［完全］に設定されている場合にのみ、Microsoft Edge は使用状況データを送信します。 このポリシーを無効にしている場合、Microsoft Edge は使用状況データを送信しません。 クラッシュに関連するデータは、Windows 診断データの設定に基づいて送信されます。 Windows 診断データの設定については、「[https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)」を参照してください
 
 Windows 7、Windows 8、macOS では、このポリシーによって、使用状況とクラッシュに関連するデータの送信が制御されます。 このポリシーを構成しない場合、Microsoft Edge は既定でユーザーの設定に従います。
 
@@ -18703,7 +18757,7 @@ QUIC は、現在 TCP を使用している Web アプリケーションのパ�
 
 互換性のないサイトリダイレクトを発生させるには BHO が必要ですが、リダイレクトが発生するかどうかは、[RedirectSitesFromInternetExplorerRedirectMode](#redirectsitesfrominternetexplorerredirectmode) によっても制御されます。
 
-このポリシーの詳細については、[https://go.microsoft.com/fwlink/?linkid=2141715](./edge-learnmore-neededge.md) を参照してください。
+このポリシーの詳細については、[https://go.microsoft.com/fwlink/?linkid=2141715](https://go.microsoft.com/fwlink/?linkid=2141715) を参照してください。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -18764,7 +18818,7 @@ IE からサイトをロードするために Microsoft Edge を起動すると�
 
 このポリシーを [無効] に設定すると、Internet Explorer はトラフィックを Microsoft Edge にリダイレクトしません。
 
-このポリシーの詳細については、[https://go.microsoft.com/fwlink/?linkid=2141715](./edge-learnmore-neededge.md) を参照してください。
+このポリシーの詳細については、[https://go.microsoft.com/fwlink/?linkid=2141715](https://go.microsoft.com/fwlink/?linkid=2141715) を参照してください。
 
 ポリシー オプション マッピング:
 
@@ -19258,7 +19312,7 @@ IE からサイトをロードするために Microsoft Edge を起動すると�
 
 [SyncDisabled](#syncdisabled) はクラウド同期を無効にするだけで、このポリシーには影響しません。
 
-ローミング ユーザー プロファイルの使用の詳細については、[https://go.microsoft.com/fwlink/?linkid=2150058](./microsoft-edge-on-premises-sync.md) を参照してください。
+ローミング ユーザー プロファイルの使用の詳細については、[https://go.microsoft.com/fwlink/?linkid=2150058](https://go.microsoft.com/fwlink/?linkid=2150058) を参照してください。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -19443,7 +19497,7 @@ Adobe Flash の実行を許可する Web サイトを制御するには、[Defau
 
 このポリシーを構成しない場合、[SSLErrorOverrideAllowed](#sslerroroverrideallowed) ポリシーはすべてのサイトに適用されます。
 
-有効なオリジン パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)を参照してください。 * は、このポリシーで承認された値ではありません。 このポリシーはオリジンに基づいてのみ一致するため、URL パターン内のパスまたはクエリは無視されます。
+有効なオリジン パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)を参照してください。 * は、このポリシーで承認された値ではありません。 このポリシーはオリジンに基づいてのみ一致するため、URL パターン内のパスまたはクエリは無視されます。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -19962,7 +20016,7 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   #### <a name="description"></a>説明
 
-  Internet Explorer モードで最適なエクスペリエンスを構成する方法については、「[https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)」を参照してください
+  Internet Explorer モードで最適なエクスペリエンスを構成する方法については、「[https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)」を参照してください
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -20013,13 +20067,13 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   #### <a name="description"></a>説明
 
-  このポリシーはサポートされなくなりました。 このポリシーは [DiagnosticData](#diagnosticdata) に置き換えられ (Windows 7、Windows 8、および macOS)、Windows 10 ([https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)) でテレメトリが許可されます。
+  このポリシーはサポートされなくなりました。 このポリシーは [DiagnosticData](#diagnosticdata) に置き換えられ (Windows 7、Windows 8、および macOS)、Windows 10 ([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)) でテレメトリが許可されます。
 
 このポリシーでは、検索などのサービスの品質を向上させるために Microsoft Edge で訪問した Web サイトに関する情報を Microsoft に送信できます。
 
 Microsoft Edge でアクセスした Web サイトに関する情報を Microsoft に送信する場合は、このポリシーを有効にします。 Microsoft Edge でアクセスした Web サイトに関する情報を Microsoft に送信しない場合は、このポリシーを無効にします。 いずれの場合でも、ユーザーがこの設定を変更または上書きすることはできません。
 
-Windows 10 では、このポリシーを構成していない場合、Microsoft Edge は Windows 診断データの設定を既定値として設定します。 このポリシーが有効になっている場合、Microsoft Edge は、Windows 診断データの設定が [完全] に設定されている場合にのみ、Microsoft Edge でアクセスした Web サイトに関する情報を送信します。 このポリシーが無効になっている場合、Microsoft Edge はアクセスした Web サイトに関する情報を送信しません。 Windows 診断データの設定については、「[https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)」を参照してください
+Windows 10 では、このポリシーを構成していない場合、Microsoft Edge は Windows 診断データの設定を既定値として設定します。 このポリシーが有効になっている場合、Microsoft Edge は、Windows 診断データの設定が [完全] に設定されている場合にのみ、Microsoft Edge でアクセスした Web サイトに関する情報を送信します。 このポリシーが無効になっている場合、Microsoft Edge はアクセスした Web サイトに関する情報を送信しません。 Windows 診断データの設定については、「[https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)」を参照してください
 
 Windows 7、windows 8、macOS では、このポリシーはアクセスした Web サイトに関する情報の送信を制御します。 このポリシーを構成しない場合、Microsoft Edge は既定でユーザーの設定に従います。
 
@@ -20089,7 +20143,7 @@ Windows 7、windows 8、macOS では、このポリシーはアクセスした W
 
 このポリシーで定義されている URL パターンは、 [SensorsBlockedForUrls](#sensorsblockedforurls) ポリシーで構成されているものと競合することはできません。 URL を許可することも、ブロックすることもできません。
 
-有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format) をご覧ください。
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -20160,7 +20214,7 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
 
 このポリシーで定義されている URL パターンは、 [SensorsAllowedForUrls](#sensorsallowedforurls) ポリシーで構成されているものと競合することはできません。 URL を許可することも、ブロックすることもできません。
 
-有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format) をご覧ください。
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -20231,7 +20285,7 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
 
 このポリシーで定義されている URL パターンは、 [SerialBlockedForUrls](#serialblockedforurls) ポリシーで構成されているものと競合することはできません。 URL を許可することも、ブロックすることもできません。
 
-有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format) をご覧ください
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -20302,7 +20356,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
 
 このポリシーの URL パターンは、[WebUsbAskForUrls](#serialaskforurls) ポリシーで構成されたものと競合することはできません。 URL を許可することも、ブロックすることもできません。
 
-有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format) をご覧ください。
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -21789,7 +21843,7 @@ Microsoft Edge がバックグラウンドにあるタブを 5 分以上フリ�
 
   ポリシーを設定すると、[URLBlocklist](#urlblocklist) の例外として、リストされた URL へのアクセスが提供されます。
 
-[https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format) に従って、URL パターンを書式設定します。
+[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) に従って、URL パターンを書式設定します。
 
 このポリシーを使用して、制限付きブロック一覧の例外を開くことができます。 たとえば、ブロック一覧に "\*" を含めることですべての要求をブロックし、その上でこのポリシーを使用して限定した URL 一覧へのアクセスを許可することができます。 このポリシーを使用して、特定のスキーム、他のドメインのサブドメイン、ポート、特定のパスに対する例外を開くことができます。
 
@@ -21870,7 +21924,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 
   ブロックされている (ユーザーが読み込むことができない) サイトの一覧を URL パターンに基づいて定義します。
 
-[https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format) に従って、URL パターンを書式設定します。
+[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) に従って、URL パターンを書式設定します。
 
 [URLAllowlist](#urlallowlist) ポリシーで、例外を定義することができます。 これらのポリシーは 1000 エントリに制限されており、それ以降のエントリは無視されます。
 

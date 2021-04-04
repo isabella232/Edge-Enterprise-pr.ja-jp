@@ -1,28 +1,28 @@
 ---
-title: IE モードの概要
+title: Internet Explorer モードとは
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 03/25/2020
+ms.date: 02/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: Microsoft Edge を IE モードで使用する方法について説明します。
-ms.openlocfilehash: ecb4bffc5afdde3a8891d1eaa6e28508205ab097
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+description: Microsoft Edge の Internet Explorer モードが、Internet Explorer 11 を必要とするサイトへのアクセスと最新のサイトへのアクセスをどのように提供するかについて説明します。
+ms.openlocfilehash: 5ca14c4d448b573dc7de6781ce86ee62281a48a4
+ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447341"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "11470225"
 ---
-# <a name="about-ie-mode"></a>IE モードの概要
+# <a name="what-is-internet-explorer-ie-mode"></a>Internet Explorer (IE) モードとは
 
-この記事では、Microsoft Edge を IE モードで使用する場合の概要と前提条件を示します。
+既存の Web サイトとの下位互換性のために Internet Explorer 11 が必要であるが、最新のブラウザーも必要な組織向けに、Microsoft Edge で Internet Explorer (IE) モードを作成しました。 この機能により、組織は 1 つのブラウザーを、従来の Web/アプリまたは最新の Web/アプリに簡単に使用できます。 この記事では、IE モードで Microsoft Edge を使用する方法を紹介します。
 
 > [!NOTE]
-> この記事は、Microsoft Edge version 77 (**Stable**、**Beta**、および **Dev** チャネル) 以降に適用されます。
+> この記事は Microsoft Edge バージョン 77 以降に適用されます。
 
 ## <a name="what-is-ie-mode"></a>IE モードとは
 

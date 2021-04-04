@@ -3,19 +3,19 @@ title: Stable チャネルに関する Microsoft Edge リリース ノート
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/18/2021
+ms.date: 03/25/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Stable チャネルに関する Microsoft Edge リリース ノート
-ms.openlocfilehash: 94d8d621ecac3764ecf13194efb55cfbbf80b70b
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 36f6e5fe462fcb4c43862754603bef7902fcf670
+ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447991"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "11470275"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Microsoft Edge Stable チャネルのリリース ノート
 
@@ -28,6 +28,10 @@ ms.locfileid: "11447991"
 
 > [!NOTE]
 > 安定チャネルの場合、更新は 1 日以上かけて段階的に公開されます。 詳細については、「[Microsoft Edge 更新プログラムの段階的なロールアウト](microsoft-edge-update-progressive-rollout.md)」を参照してください。
+
+## <a name="version-89077463-march-25"></a>バージョン 89.0.774.63: 3 月 25 日
+
+さまざまなバグとパフォーマンスの問題を修正しました。
 
 ## <a name="version-89077457-march-18"></a>バージョン 89.0.774.57: 3 月 18 日
 
@@ -107,7 +111,7 @@ ms.locfileid: "11447991"
 
 ## <a name="version-88070574-february-17"></a>バージョン 88.0.705.74: 2 月 17 日
 
-安定したチャネル セキュリティ更新プログラムの一覧は[こちら](./microsoft-edge-relnotes-security.md#February-17-2021)にです。
+安定したチャネル セキュリティ更新プログラムの一覧は[こちら](./microsoft-edge-relnotes-security.md#february-17-2021)にです。
 
 ## <a name="version-88070568-february-11"></a>バージョン 88.0.705.68: 2 月 11 日
 
@@ -118,11 +122,11 @@ ms.locfileid: "11447991"
 > [!IMPORTANT]
 > この更新プログラムには、[CVE-2021-21148](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21148) が含まれています。これについては、Chromium チームにより実際に感染報告がある悪用が報告されています。
 
-安定したチャネル セキュリティ更新プログラムの一覧は[こちら](./microsoft-edge-relnotes-security.md#February-5-2021)にです。
+安定したチャネル セキュリティ更新プログラムの一覧は[こちら](./microsoft-edge-relnotes-security.md#february-5-2021)にです。
 
 ## <a name="version-88070562-february-4"></a>バージョン 88.0.705.62: 2 月 4 日
 
-安定したチャネル セキュリティ更新プログラムの一覧は[こちら](./microsoft-edge-relnotes-security.md#February-4-2021)にです。
+安定したチャネル セキュリティ更新プログラムの一覧は[こちら](./microsoft-edge-relnotes-security.md#february-4-2021)にです。
 
 さまざまなバグとパフォーマンスの問題を修正しました。
 

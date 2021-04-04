@@ -1,5 +1,5 @@
 ---
-title: IE モードに関する FAQ
+title: IE モードのトラブルシューティングと FAQ
 ms.author: shisub
 author: dan-wesley
 manager: srugh
@@ -9,20 +9,20 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: IE モードの Microsoft Edge に関する FAQ とトラブルシューティング
-ms.openlocfilehash: f5279caddb5d3dfabaf04be6bd927f7095be1fc9
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+description: Microsoft Edge Internet Explorer モードのトラブルシューティングと FAQ
+ms.openlocfilehash: 77b31362bd7d28598ead7f0a3b33a69f2f4cb264
+ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447731"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "11470205"
 ---
-# <a name="ie-mode-faq"></a>IE モードに関する FAQ
+# <a name="ie-mode-troubleshooting-and-faq"></a>IE モードのトラブルシューティングと FAQ
 
 この記事では、Microsoft Edge バージョン 77 以降に関するトラブルシューティングのヒントと FAQ を示します。
 
 > [!NOTE]
-> この記事は、Microsoft Edge version 77 (**Stable**、**Beta**、および **Dev** チャネル) 以降に適用されます。
+> この記事は Microsoft Edge バージョン 77 以降に適用されます。
 
 
 ## <a name="troubleshoot-ie-mode"></a>IE モードのトラブルシューティング
