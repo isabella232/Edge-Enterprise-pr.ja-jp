@@ -3,23 +3,25 @@ title: Stable チャネルに関する Microsoft Edge リリース ノート
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/25/2021
+ms.date: 04/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Stable チャネルに関する Microsoft Edge リリース ノート
-ms.openlocfilehash: 36f6e5fe462fcb4c43862754603bef7902fcf670
-ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
+ms.openlocfilehash: 31aaad801f4632985d7fc9d043155f2eb82ed046
+ms.sourcegitcommit: 21390f52f8605fe6cb0b73ca6dffacff562ada82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2021
-ms.locfileid: "11470275"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "11470905"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Microsoft Edge Stable チャネルのリリース ノート
 
 これらのリリース ノートでは、Microsoft Edge Stable チャネルに含まれている新機能とセキュリティ以外の更新プログラムに関する情報を提供します。
+
+
 
 - すべてのセキュリティの更新プログラムは、[ここ](microsoft-edge-relnotes-security.md)に記載されています。
 - Microsoft Edge 安定チャネルのアーカイブされたリリース ノートは、[こちら](microsoft-edge-relnote-archive-stable-channel.md)にあります。
@@ -28,6 +30,10 @@ ms.locfileid: "11470275"
 
 > [!NOTE]
 > 安定チャネルの場合、更新は 1 日以上かけて段階的に公開されます。 詳細については、「[Microsoft Edge 更新プログラムの段階的なロールアウト](microsoft-edge-update-progressive-rollout.md)」を参照してください。
+
+## <a name="version-89077468-april-1"></a>バージョン 89.0.774.68: 4 月 1 日
+
+安定したチャネルのセキュリティ更新プログラムは[こちら](./microsoft-edge-relnotes-security.md#april-1-2021)に記載されています。
 
 ## <a name="version-89077463-march-25"></a>バージョン 89.0.774.63: 3 月 25 日
 
