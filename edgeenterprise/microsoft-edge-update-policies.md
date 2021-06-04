@@ -33,7 +33,7 @@ Microsoft Edge で使用できるその他のポリシーについて詳しく�
 |[アプリケーション](#applications)|[基本設定](#preferences)|
 |[プロキシ サーバー](#proxy-server)|[Microsoft Edge WebView](#microsoft-edge-webview)|
 
-### [アプリケーション](#applications-policies)
+### <a name="applications"></a>[アプリケーション](#applications-policies)
 |ポリシー名|キャプション|
 |-|-|
 |[InstallDefault](#installdefault)|インストールの既定の動作を許可する|
@@ -46,20 +46,20 @@ Microsoft Edge で使用できるその他のポリシーについて詳しく�
 |[RollbackToTargetVersion](#rollbacktotargetversion)|ターゲットバージョンにロールバック (チャネル単位)|
 |[TargetVersionPrefix](#targetversionprefix)|ターゲットバージョンの上書き (チャネルごと) |
 
-### [基本設定](#preferences-policies)
+### <a name="preferences"></a>[基本設定](#preferences-policies)
 |ポリシー名|キャプション|
 |-|-|
 |[AutoUpdateCheckPeriodMinutes](#autoupdatecheckperiodminutes)|自動更新チェック期間のオーバーライド|
 |[UpdatesSuppressed](#updatessuppressed)|自動更新チェックを停止する 1 日あたりの時間帯|
 
-### [プロキシ サーバー](#proxy-server-policies)
+### <a name="proxy-server"></a>[プロキシ サーバー](#proxy-server-policies)
 |ポリシー名|キャプション|
 |-|-|
 |[ProxyMode](#proxymode)|プロキシ サーバーの設定をどのように指定するかを選択する|
 |[ProxyPacUrl](#proxypacurl)|プロキシ .pac ファイルへの URL|
 |[ProxyServer](#proxyserver)|プロキシ サーバーのアドレスまたは URL|
 
-### [Microsoft Edge WebView](#microsoft-edge-webview-policies)
+### <a name="install-webview"></a>[Microsoft Edge WebView](#microsoft-edge-webview-policies)
 |ポリシー名|キャプション|
 |-|-|
 |[Install](#install-webview)|インストールを許可する|
