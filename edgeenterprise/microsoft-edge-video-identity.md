@@ -23,11 +23,11 @@ ms.locfileid: "11314580"
 
 [![Microsoft Edge の ID](media/microsoft-edge-video-identity/0.png)](http://www.youtube.com/watch?v=8lRUKhR7ipA "Identity in Microsoft Edge")
 
-## ビデオについて
+##  <a name="about-the-video"></a>ビデオについて
 
 このビデオでは、ユーザー向けに認証およびカスタマイズされたエクスペリエンスを構成する方法について説明します。 トピックには、サインイン、シングル サインオン、および複数のプロファイルの構成が含まれます。
 
-## 関連項目
+##  <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
 - [Microsoft Edge の ID サポートと構成](microsoft-edge-security-identity.md)

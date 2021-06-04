@@ -35,7 +35,7 @@ ms.locfileid: "10980438"
 
 PCRE、PERL、VIM で利用できるいくつかの構文も一覧表示します。
 
-## 構文表
+##  <a name="syntax-tables"></a>構文表
 
 | 単一文字式の種類 | 例 |
 | --- | --- |
@@ -500,13 +500,13 @@ PCRE、PERL、VIM で利用できるいくつかの構文も一覧表示しま�
 | (\*BSR\_ANYCRLF) | \R 規則を設定する (サポートされていません) PCRE |
 | (\*BSR\_UNICODE) | (サポートされていません) PCRE |
 
-## コンテンツ ライセンス
+##  <a name="content-license"></a>コンテンツ ライセンス
 
 > [!NOTE]
 > このページの一部の情報は、Chromium.org によって作成および共有されている著作物に基づいており、[Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/) に記載されている条項に従って使用されています。 元のページは[こちら](https://github.com/google/re2/wiki/Syntax)です。
   
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />この著作物は、<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a> に従って使用許諾されています。
 
-## 関連項目
+##  <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)

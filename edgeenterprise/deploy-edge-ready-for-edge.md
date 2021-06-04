@@ -21,11 +21,11 @@ ms.locfileid: "11157690"
 
 この記事では、Microsoft Edge の展開を計画している IT 管理者向けに、アプリケーションの互換性とサポートに関する情報を提供します。
 
-## Web アプリケーション互換性とサポート
+##  <a name="web-application-compatibility-and-support"></a>Web アプリケーション互換性とサポート
 
 Microsoft Edge の展開を計画するのを支援するために、組織内で使用されている可能性のある Web アプリケーションのリストを作成しました。 このリストでは、Web アプリケーション プロバイダーの公開サポート ステートメントに記載されているように、Webアプリケーションが Microsoft Edge 用に準備されているかどうかを確認できます。
 
-### アプリケーションの一覧に追加する
+###  <a name="add-to-the-application-list"></a>アプリケーションの一覧に追加する
 
 この一覧は、顧客エンゲージメントのフィードバックからサポートに関する説明が特定されると、定期的に更新されます。
 
@@ -36,7 +36,7 @@ Web アプリケーション プロバイダーのお客様で、顧客の参照
 - プロバイダー名
 - パブリック サポートに関する説明の URL
 
-### アプリケーションの一覧
+###  <a name="application-list"></a>アプリケーションの一覧
 
 Microsoftは、Microsoft Edge でこれらのアプリケーションのテストや認定を行いません。 このリストは、公開されているリソースに基づいて作成されています。 常に、プロバイダーの現在のサポートの説明を参照してください。 アプリケーションによっては、サポート ステートメントが示しているように IE モードを使用する必要がある場合があります。
 
@@ -143,7 +143,7 @@ Microsoftは、Microsoft Edge でこれらのアプリケーションのテス�
 | Zoom  | Zoom  | https://support.zoom.us/hc/en-us/articles/201362023-System-Requirements-for-PC-Mac-and-Linux#h_92957a85-2506-43a2-bd4a-5bb274778518  |
 | Zscaler  | Zscaler   | https://help.zscaler.com/zia/supported-browsers |
 
-## 関連項目
+##  <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
 - [Microsoft Edge の展開を計画する](deploy-edge-plan-deployment.md)

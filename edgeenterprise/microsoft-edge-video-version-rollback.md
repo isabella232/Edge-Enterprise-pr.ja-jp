@@ -23,11 +23,11 @@ ms.locfileid: "11314710"
 
 [![Microsoft Edge バージョンのロールバック](media/microsoft-edge-video-version-rollback/0.png)](http://www.youtube.com/watch?v=pXhXHvKUa_c "Microsoft Edge version rollback")
 
-## 動画について
+##  <a name="about-the-video"></a>動画について
 
 バージョンのロールバックでは、Microsoft Edge ブラウザーのバージョンを以前のバージョンに置き換えできます。 Microsoft Edge で問題をトラブルシューティングする場合に、Microsoft Edge のロールバックによってエンタープライズにとってのセーフティ ネットを用意し、潜在的な影響を軽減する方法について説明します。
 
-## 関連項目
+##  <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
 - [Microsoft Edge を以前のバージョンにロールバックする方法](edge-learnmore-rollback.md)

@@ -23,7 +23,7 @@ ms.locfileid: "11314730"
 
 [![Microsoft Edge のセキュリティ、互換性、管理の容易さ](media/microsoft-edge-video-security-compatibility-manageability/0.png)](http://www.youtube.com/watch?v=uMmh_gNaM4I "Microsoft Edge security, compatibility, and manageability")
 
-## ビデオについて
+##  <a name="about-the-video"></a>ビデオについて
 
 新しい Microsoft Edge のセキュリティ、互換性、管理の容易さを体験するための実践的なツアーです。 Microsoft Edge は Chromium に基づいており、ビジネスに最適なブラウザーとして設計されています。 ホストの Jeremy Chapman が、他のブラウザとの違いについて説明します。 詳細内容には次のものが含まれます。
 
@@ -31,7 +31,7 @@ ms.locfileid: "11314730"
 - 互換性。 Microsoft Edge は、最新 Web とレガシー Web の両方と互換性があります。
 - 管理の容易さ。 Microsoft Edge の更新管理またはサービスオプションを検討してください。
 
-## 関連項目
+##  <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
 - [ビジネス向けの Microsoft Edge セキュリティ](ms-edge-security-for-business.md)

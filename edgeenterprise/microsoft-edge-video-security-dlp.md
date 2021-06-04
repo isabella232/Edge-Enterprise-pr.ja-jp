@@ -23,11 +23,11 @@ ms.locfileid: "11314720"
 
 [![ Microsoft Edge とデータ損失防止](media/microsoft-edge-security-dlp/0.png)](http://www.youtube.com/watch?v=dLD04U9eTqg " Microsoft Edge and data loss prevention")
 
-## ビデオについて
+##  <a name="about-the-video"></a>ビデオについて
 
 データ損失防止 (DLP) は、リモート ワークの普及とともにかつてないほど重要になってきています。 Microsoft Edge のネイティブ DLP 機能について、また DLP がどのようにして企業のデータ管理や、コンプライアンスの維持に役立つかについて説明します。
 
-## 関連項目
+##  <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
 - [Microsoft Edge (DLP) でのデータ損失防止](microsoft-edge-security-dlp.md)

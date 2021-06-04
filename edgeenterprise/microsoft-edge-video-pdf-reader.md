@@ -23,11 +23,11 @@ ms.locfileid: "11314740"
 
 [![エンタープライズ グレードの PDF リーダー](media/microsoft-edge-video-pdf-reader/0.png)](http://www.youtube.com/watch?v=XWAqNQ0xAcE "Enterprise grade PDF reader")
 
-## ビデオについて
+##  <a name="about-the-video"></a>ビデオについて
 
 このビデオでは、Microsoft Edge の組み込みの PDF リーダーの機能について説明します。 ユーザーが PDF にインクを付けて強調表示したり、保護されたドキュメントを開いたり、証明書ベースのデジタル署名を表示および検証したりする方法をご覧ください。
 
-## 関連項目
+##  <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
 - [Microsoft Edge の PDF リーダー](microsoft-edge-pdf.md)

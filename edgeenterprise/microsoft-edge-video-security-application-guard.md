@@ -23,11 +23,11 @@ ms.locfileid: "11314750"
 
 [![Application Guard を使用したブラウザーの分離]( media/microsoft-edge-video-security-application-guard/0.png)](http://www.youtube.com/watch?v=zQjaRqNXMqw "Browser isolation using Application Guard")
 
-## ビデオについて
+##  <a name="about-the-video"></a>ビデオについて
 
 Microsoft Edge では、企業が web ベースの攻撃にさらされる可能性を低減します。 Microsoft Edge が Microsoft Defender アプリケーションガードをサポートして、外部の脅威に対してブラウザーを分離する方法について説明します。
 
-## 関連項目
+##  <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
 - [Microsoft Edge での Microsoft Defender Application Guard のサポート](microsoft-edge-security-windows-defender-application-guard.md)

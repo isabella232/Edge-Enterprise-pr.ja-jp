@@ -23,11 +23,11 @@ ms.locfileid: "11269354"
 
 [![Microsoft Edge を数百、数千ものデバイスに展開する](media/microsoft-edge-video-deploy/0.png)](http://www.youtube.com/watch?v=o90UsN6g6NE "Deploy Microsoft Edge to hundreds or thousands of devices")
 
-## ビデオについて
+##  <a name="about-the-video"></a>ビデオについて
 
 Microsoft Edge をデバイスに展開する方法についての実践的なツアーをご覧ください。 Microsoft Edge パッケージの自動インストールのオプション、Microsoft Edge を Windows PC に Microsoft Endpoint Configuration Manager を使用して展開する方法について説明します。また、スマートフォンや Mac を含むすべての管理対象デバイスで、確実に Microsoft Edge のプロビジョニングが行われるようにする手順についても説明します。
 
-## 関連項目
+##  <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
 - [Microsoft Edge の YouTube プレイリスト](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy)

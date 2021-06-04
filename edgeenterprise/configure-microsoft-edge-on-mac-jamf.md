@@ -24,7 +24,7 @@ ms.locfileid: "11194715"
 macOS の Microsoft Edge ポリシー設定は、プロパティ リスト (.plist) ファイルを使用して構成することもできます。 詳細については、「[.plist を使用して macOS 用に構成する](configure-microsoft-edge-on-mac.md)」を参照してください
 
 
-## 前提条件
+##  <a name="prerequisites"></a>前提条件
 
 次のソフトウェアが必要です。
 
@@ -32,7 +32,7 @@ macOS の Microsoft Edge ポリシー設定は、プロパティ リスト (.pli
 - ポリシー テンプレート ファイル (バージョン 81.0.416.3)
 - Jamf Pro (バージョン 10.19)
 
-## Jamf Pro の [Application & Custom Settings] メニューについて
+##  <a name="about-the-jamf-pro-application-&-custom-settings-menu"></a>Jamf Pro の [Application & Custom Settings] メニューについて
 
 Jamf Pro 10.18 以前では、Office 365 の管理には手動による .plist の作成が必要でした。 この作業は、強力な技術的バックグラウンドが必要になる、時間のかかるワークフローでした。 Jamf Pro 10.18 では、構成プロセスを合理化することで、このような障壁が排除されました。 ただし、この新しいユーザー インターフェイスは、IT 管理者のみが使用できるものであり、Jamf が指定した特定のアプリケーションと優先ドメインに対応していました。
 
@@ -40,7 +40,7 @@ Jamf Pro 10.19 では、ユーザーが「カスタム スキーマ」として 
 
 詳細については、Jamf Pro 管理者ガイドの「[コンピューター構成プロファイル](https://jamf.it/computer-configuration-profiles)」を参照してください。
 
-## Microsoft Edge の特定のバージョン用のポリシー マニフェストを取得する
+##  <a name="get-the-policy-manifest-for-a-specific-version-of-microsoft-edge"></a>Microsoft Edge の特定のバージョン用のポリシー マニフェストを取得する
 
 ポリシー マニフェストを取得するには:
 
@@ -56,7 +56,7 @@ CAB ファイルを展開してから、ZIP ファイルを展開して、最上
 
 このマニフェスト ファイルは、ビルド 81.0.416.3 以降のポリシー バンドルごとに発行されます。 開発用チャネルのポリシーをテストする場合は、それぞれの開発リリースに関連付けられたマニフェストを取得して、そのマニフェストを Jamf Pro でテストしてください。  
 
-## Jamf Pro でポリシー マニフェストを使用する
+##  <a name="use-the-policy-manifest-in-jamf-pro"></a>Jamf Pro でポリシー マニフェストを使用する
 
 次の手順を使用して、Jamf Pro にポリシー マニフェストをアップロードし、macOS 用のポリシー プロファイルを作成します。
 
@@ -105,7 +105,7 @@ CAB ファイルを展開してから、ZIP ファイルを展開して、最上
 
 新しい構成プロファイルの作成後には、そのプロファイルの **[Scope]** (スコープ) も構成する必要があります。
 
-### スコープを構成するには
+###  <a name="to-configure-the-scope"></a>スコープを構成するには
 
 1. **[Targets]** (ターゲット) で、次の最小限の設定を指定します。
 
@@ -115,7 +115,7 @@ CAB ファイルを展開してから、ZIP ファイルを展開して、最上
 2. **[Limitations]** (制限) は、既定の設定 [None] のままにします。 [**キャンセル**] をクリックします。
 3. **[Exclusions]** (除外) は、既定の設定 [None] のままにします。 [**キャンセル**] をクリックします。
 
-## 関連項目
+##  <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
 - [Intune で macOS 用に構成する](configure-microsoft-edge-on-mac.md)

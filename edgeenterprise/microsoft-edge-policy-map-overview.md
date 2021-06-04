@@ -29,7 +29,7 @@ ms.locfileid: "10980488"
 > - [ブラウザー ポリシー リファレンス](microsoft-edge-policies.md)
 > - [更新ポリシー リファレンス](microsoft-edge-update-policies.md)
 
-## 関連項目
+##  <a name="see-also"></a>関連項目
 - [Windows で Microsoft Edge を構成する](configure-microsoft-edge.md)
 - [macOS で Microsoft Edge を設定する](configure-microsoft-edge-on-mac.md)
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)

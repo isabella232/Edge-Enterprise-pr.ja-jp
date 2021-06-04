@@ -23,14 +23,14 @@ ms.locfileid: "11314700"
 
 [![Microsoft Edge での安全な閲覧](media/microsoft-edge-video-security-smartscreen/0.png)](http://www.youtube.com/watch?v=s9kk88SkjLw "Secure browsing on Microsoft Edge")
 
-## 動画について
+##  <a name="about-the-video"></a>動画について
 
 Microsoft Edge では、Microsoft Defender SmartScreen を使用して、閲覧中に安全な状態を保ちます。 NSS ラボでの最近のフィッシングとマルウェアの保護、および Microsoft Defender SmartScreen で Microsoft Edge のプレミアム エンタープライズ セキュリティ統合を実行する方法について説明します。
 
 > [!TIP]
 > *edge://settings* で、望ましくない可能性のあるアプリから保護する設定をオンにします。
 
-## 関連項目
+##  <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
 - [Microsoft Defender SmartScreen の Microsoft Edge サポート](microsoft-edge-security-smartscreen.md)

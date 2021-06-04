@@ -24,7 +24,7 @@ ms.locfileid: "10980445"
 > [!NOTE]
 > この記事は、Microsoft Edge version 77 以降に適用されます。
 
-## フィルター形式
+##  <a name="the-filter-format"></a>フィルター形式
 
 フィルター形式は次のとおりです。
 
@@ -42,7 +42,7 @@ ms.locfileid: "10980445"
 | **path** (*オプション*) | パスには任意の文字列を使用できます。 |
 | **query** (*オプション*) | **query** には、キーと値またはキーのみのトークンをアンパサンド ("&") で区切って指定します。 キーと値のトークンは、等号 ("=") で区切ります。 プレフィックスの一致を指定するには、**query** の最後にアスタリスク ("\*") を使用できます。 |
 
-## フィルター形式と URL 形式の比較
+##  <a name="comparing-the-filter-format-to-the-url-format"></a>フィルター形式と URL 形式の比較
 
 フィルター形式は URL 形式に似ていますが、次の点が異なります。
 
@@ -51,7 +51,7 @@ ms.locfileid: "10980445"
 - **host** としてワイルドカード ("*") を使用できます。また、プレフィックスとしてドット (".") を付けることができます。
 - **host** のサフィックスとして、スラッシュ ("/") またはドット (".") を使用できます。 この場合、サフィックスは無視されます。
 
-## フィルター選択条件
+##  <a name="filter-selection-criteria"></a>フィルター選択条件
 
 URL 用に選択されるフィルターは、次のフィルター選択規則を処理した後に検出される、最も明確な一致です。
 
@@ -65,7 +65,7 @@ URL 用に選択されるフィルターは、次のフィルター選択規則�
    >[!NOTE]
    >フィルターの一致がない場合、既定の動作では、URL 要求が許可されます。
 
-## フィルター選択条件の例
+##  <a name="example-filter-selection-criteria"></a>フィルター選択条件の例
 
 この例では、"https://sub.contoso.com/docs" との一致を検索するときに、フィルター選択で次の処理が行われます。
 
@@ -75,7 +75,7 @@ URL 用に選択されるフィルターは、次のフィルター選択規則�
 4. 残りのフィルターから、**path** のプレフィックスが "/docs" でないものはすべて削除されます。
 5. 残りのフィルターから、path のプレフィックスが最も長いフィルターが選択され、適用されます。 フィルターが見つからない場合は、選択プロセスが手順 1. から再び開始されます。 プロセスは、次のサブドメインで繰り返されます。
 
-### フィルターに関する追加情報
+###  <a name="additional-filter-information"></a>フィルターに関する追加情報
 
 フィルターに、**host** のプレフィックスとしてドット (".") が含まれている場合は、**host** への正確な一致のみがフィルター選択されます。 次に、例を示します。
 
@@ -99,13 +99,13 @@ URL 用に選択されるフィルターは、次のフィルター選択規則�
 
 - フィルター "http://contoso.com/path?query=A" は、"http://contoso.com/Path?query=A" または "http://contoso.com/path?Query=A" に一致しません。 "http://contoso.COM/path?query=A" には一致します。
 
-## コンテンツ ライセンス
+##  <a name="content-license"></a>コンテンツ ライセンス
 
 > [!NOTE]
 > このページの一部の情報は、Chromium.org によって作成および共有されている著作物に基づいており、[Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/) に記載されている条項に従って使用されています。 元の [Chromium のページはこちら](https://www.chromium.org/administrators/url-blacklist-filter-format)です。
   
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />この著作物は、<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a> に従って使用許諾されています。
 
-## 関連項目
+##  <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)

@@ -21,7 +21,7 @@ ms.locfileid: "11030560"
 
 この記事で説明するビデオでは、企業における Microsoft Edge の展開、使用、および保守のさまざまな側面について説明しています。
 
-## Microsoft Mechanics のビデオ シリーズ
+##  <a name="the-microsoft-mechanics-video-series"></a>Microsoft Mechanics のビデオ シリーズ
 
 「*MSFT Edge の企業展開ガイド-2020*」の次のページに示されている Microsoft Mechanics のビデオ シリーズは、関連するイベントとお知らせ、ソリューション、および会議に関するビデオの Microsoft Edge コレクションの一部です。
 
@@ -29,6 +29,6 @@ ms.locfileid: "11030560"
 
 これらは、[Mechanics の Microsoft Edge プレイ リスト](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy)の一部として、または他のビデオと一緒に [Microsoft Edge YouTube チャンネル](https://www.youtube.com/channel/UCIGx7oT8p6-jUpOfg98yelA)で見ることができます。
 
-## 関連項目
+##  <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
