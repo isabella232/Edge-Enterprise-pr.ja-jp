@@ -18,7 +18,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/12/2020
 ms.locfileid: "11167309"
 ---
-# Microsoft Edge - 更新ポリシー
+# <a name="microsoft-edge---update-policies"></a>Microsoft Edge - 更新ポリシー
 
 最新バージョンの Microsoft Edge には、Microsoft Edge をいつどのように更新するかを制御するために使用できる以下のポリシーが含まれています。
 
