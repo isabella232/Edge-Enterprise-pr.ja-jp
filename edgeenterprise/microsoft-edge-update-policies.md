@@ -1,9 +1,9 @@
 ---
 title: Microsoft Edge Update のポリシーに関するドキュメント
 ms.author: stmoody
-author: brianalt-msft
+author: dan-wesley
 manager: tahills
-ms.date: 10/07/2020
+ms.date: 11/12/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,14 +11,15 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge アップデーターでサポートされているすべてのポリシーに関するドキュメント
-ms.openlocfilehash: feb7859f062ae39e2bbfe08d8e478386defb85cf
-ms.sourcegitcommit: 4e6188ade942ca6fd599a4ce1c8e0d90d3d03399
+ms.openlocfilehash: 0cdcda984efff8d10a84431e44c49ffbf28ddf07
+ms.sourcegitcommit: c2ac4f889b625210b9365a60a447482fb5b4c9d4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "11105571"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "11167309"
 ---
 # Microsoft Edge - 更新ポリシー
+
 最新バージョンの Microsoft Edge には、Microsoft Edge をいつどのように更新するかを制御するために使用できる以下のポリシーが含まれています。
 
 Microsoft Edge で使用できるその他のポリシーについて詳しくは、[Microsoft Edge ブラウザー ポリシー リファレンス](microsoft-edge-policies.md)をご覧ください。
@@ -159,7 +160,7 @@ Microsoft Edge で利用できる更新プログラムを Microsoft Edge Update 
 - GP ADMX ファイル名:  msedgeupdate.admx
 ##### Windows レジストリの設定
 - パス: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
-- 値の名前:  
+- キーの値:  
   - (Stable): Install{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
   - (Beta): Install{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}
   - (Canary): Install{65C35B14-6C1D-4122-AC46-7148CC9D6497}
