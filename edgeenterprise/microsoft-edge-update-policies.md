@@ -1,9 +1,9 @@
 ---
 title: Microsoft Edge Update のポリシーに関するドキュメント
 ms.author: stmoody
-author: dan-wesley
+author: brianalt-msft
 manager: tahills
-ms.date: 11/12/2020
+ms.date: 10/07/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,21 +11,20 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge アップデーターでサポートされているすべてのポリシーに関するドキュメント
-ms.openlocfilehash: 0cdcda984efff8d10a84431e44c49ffbf28ddf07
-ms.sourcegitcommit: c2ac4f889b625210b9365a60a447482fb5b4c9d4
+ms.openlocfilehash: feb7859f062ae39e2bbfe08d8e478386defb85cf
+ms.sourcegitcommit: 4e6188ade942ca6fd599a4ce1c8e0d90d3d03399
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "11167309"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "11105571"
 ---
-# <a name="microsoft-edge---update-policies"></a>Microsoft Edge - 更新ポリシー
-
+# Microsoft Edge - 更新ポリシー
 最新バージョンの Microsoft Edge には、Microsoft Edge をいつどのように更新するかを制御するために使用できる以下のポリシーが含まれています。
 
 Microsoft Edge で使用できるその他のポリシーについて詳しくは、[Microsoft Edge ブラウザー ポリシー リファレンス](microsoft-edge-policies.md)をご覧ください。
 > [!NOTE]
 > この記事は、Microsoft Edge version 77 以降に適用されます。
-##  <a name="available-policies"></a>使用可能なポリシー
+## 使用可能なポリシー
 次の表は、このリリースの Microsoft Edge で使用可能な、更新関連のすべてのグループ ポリシーの一覧を示しています。 個々のポリシーに関する詳しい情報を取得するには、表内のリンクをお使いください。
 
 |||
@@ -33,7 +32,7 @@ Microsoft Edge で使用できるその他のポリシーについて詳しく�
 |[アプリケーション](#applications)|[基本設定](#preferences)|
 |[プロキシ サーバー](#proxy-server)|[Microsoft Edge WebView](#microsoft-edge-webview)|
 
-### <a name="applications"></a>[アプリケーション](#applications-policies)
+### [アプリケーション](#applications-policies)
 |ポリシー名|キャプション|
 |-|-|
 |[InstallDefault](#installdefault)|インストールの既定の動作を許可する|
@@ -46,29 +45,29 @@ Microsoft Edge で使用できるその他のポリシーについて詳しく�
 |[RollbackToTargetVersion](#rollbacktotargetversion)|ターゲットバージョンにロールバック (チャネル単位)|
 |[TargetVersionPrefix](#targetversionprefix)|ターゲットバージョンの上書き (チャネルごと) |
 
-### <a name="preferences"></a>[基本設定](#preferences-policies)
+### [基本設定](#preferences-policies)
 |ポリシー名|キャプション|
 |-|-|
 |[AutoUpdateCheckPeriodMinutes](#autoupdatecheckperiodminutes)|自動更新チェック期間のオーバーライド|
 |[UpdatesSuppressed](#updatessuppressed)|自動更新チェックを停止する 1 日あたりの時間帯|
 
-### <a name="proxy-server"></a>[プロキシ サーバー](#proxy-server-policies)
+### [プロキシ サーバー](#proxy-server-policies)
 |ポリシー名|キャプション|
 |-|-|
 |[ProxyMode](#proxymode)|プロキシ サーバーの設定をどのように指定するかを選択する|
 |[ProxyPacUrl](#proxypacurl)|プロキシ .pac ファイルへの URL|
 |[ProxyServer](#proxyserver)|プロキシ サーバーのアドレスまたは URL|
 
-### <a name="install-webview"></a>[Microsoft Edge WebView](#microsoft-edge-webview-policies)
+### [Microsoft Edge WebView](#microsoft-edge-webview-policies)
 |ポリシー名|キャプション|
 |-|-|
 |[Install](#install-webview)|インストールを許可する|
 |[更新](#update-webview)|更新ポリシーのオーバーライド|
 
-##  <a name="applications-policies"></a>アプリケーションに関するポリシー
+## アプリケーションに関するポリシー
 
 [ページのトップへ](#microsoft-edge---update-policies)
-###  <a name="installdefault"></a>InstallDefault
+### InstallDefault
 #### インストールの既定の動作を許可する
 >Microsoft Edge Update 1.2.145.5 以降
 
@@ -99,18 +98,18 @@ Microsoft Edge で使用できるその他のポリシーについて詳しく�
 [ページのトップへ](#microsoft-edge---update-policies)
 
 
-###  <a name="updatedefault"></a>UpdateDefault
-####  <a name="update"></a>更新ポリシーのオーバーライドの既定値
+### UpdateDefault
+#### 更新ポリシーのオーバーライドの既定値
 >Microsoft Edge Update 1.2.145.5 以降
 
 #### 説明
 Microsoft Edge で利用できる更新プログラムを Microsoft Edge Update で処理する方法について、すべてのチャネルを対象とした既定の動作を指定できます。 特定のチャネルに対して['更新ポリシーの上書き'](#update) ポリシーを指定することにより、個々のチャネルに対して上書きできます。
 
   このポリシーを有効にした場合、Microsoft Edge Update では、以下のオプションの構成方法に従って Microsoft Edge の更新プログラムを処理します。
-   - [常に更新を許可する]: 定期的な更新チェックまたは手動更新チェックで検出された場合に、更新プログラムを必ず適用します。
-   - [自動サイレント更新のみ]: 更新プログラムは、定期的な更新チェックで検出された場合にのみ適用されます。
-   - [手動更新のみ]: 更新プログラムは、ユーザーが実行した手動更新チェックで検出された場合にのみ適用されます。
-   - [更新を無効にする]: 更新プログラムは適用されません。
+   - 常に更新を許可する: 定期的な更新チェックまたは手動更新チェックで検出された場合に、更新プログラムを必ず適用します。
+   - 自動サイレント更新のみ: 更新プログラムは、定期的な更新チェックで検出された場合にのみ適用されます。
+   - 手動更新のみ: 更新プログラムは、ユーザーが実行した手動更新チェックで検出された場合にのみ適用されます。
+   - 更新を無効にする: 更新プログラムは適用されません。
 
   手動更新を選択した場合は、アプリの手動更新メカニズムを使用して、必ず定期的に更新プログラムをチェックしてください (手動更新メカニズムが利用できる場合)。 更新を無効にした場合は、定期的に更新プログラムをチェックして、ユーザーに配布してください。
 
@@ -134,7 +133,7 @@ Microsoft Edge で利用できる更新プログラムを Microsoft Edge Update 
 [ページのトップへ](#microsoft-edge---update-policies)
 
 
-###  <a name="install"></a>Install
+### Install
 #### インストールを許可する
 >Microsoft Edge Update 1.2.145.5 以降
 
@@ -173,18 +172,18 @@ Microsoft Edge で利用できる更新プログラムを Microsoft Edge Update 
 [ページのトップへ](#microsoft-edge---update-policies)
 
 
-###  <a name="update"></a>Update
-####  <a name="update"></a>更新ポリシーのオーバーライド
+### Update
+#### 更新ポリシーのオーバーライド
 >Microsoft Edge Update 1.2.145.5 以降
 
 #### 説明
 Microsoft Edge で利用できる更新プログラムを Microsoft Edge Update でどのように処理するかを指定します。
 
 このポリシーを有効にした場合、Microsoft Edge Update では、以下のオプションの構成方法に従って Microsoft Edge の更新プログラムを処理します。
-  - [常に更新を許可する]: 定期的な更新チェックまたは手動更新チェックで検出された場合に、更新プログラムを必ず適用します。
-  - [自動サイレント更新のみ]: 更新プログラムは、定期的な更新チェックで検出された場合にのみ適用されます。
-  - [手動更新のみ]: 更新プログラムは、ユーザーが実行した手動更新チェックで検出された場合にのみ適用されます。 (アプリによっては、このオプション用のインターフェイスがない場合もあります。)
-  - [更新を無効にする]: 更新プログラムは適用されません。
+  - 常に更新を許可する: 定期的な更新チェックまたは手動更新チェックで検出された場合に、更新プログラムを必ず適用します。
+  - 自動サイレント更新のみ: 更新プログラムは、定期的な更新チェックで検出された場合にのみ適用されます。
+  - 手動更新のみ: 更新プログラムは、ユーザーが実行した手動更新チェックで検出された場合にのみ適用されます。 (アプリによっては、このオプション用のインターフェイスがない場合もあります。)
+  - 更新を無効にする: 更新プログラムは適用されません。
 
 手動更新を選択した場合は、アプリの手動更新メカニズムを使用して、必ず定期的に更新プログラムをチェックしてください (手動更新メカニズムが利用できる場合)。 更新を無効にした場合は、定期的に更新プログラムをチェックして、ユーザーに配布してください。
 
@@ -218,8 +217,8 @@ Microsoft Edge で利用できる更新プログラムを Microsoft Edge Update 
 [ページのトップへ](#microsoft-edge---update-policies)
 
 
-###  <a name="allowsxs"></a>Allowsxs
-####  <a name="accessibility-in-microsoft-edge"></a>Microsoft Edge でのブラウザーの同時実行エクスペリエンスを許可する
+### Allowsxs
+#### Microsoft Edge でのブラウザーの同時実行エクスペリエンスを許可する
 >Microsoft Edge Update 1.2.145.5 以降
 
 #### 説明
@@ -249,7 +248,7 @@ Microsoft Edge で利用できる更新プログラムを Microsoft Edge Update 
 [ページのトップへ](#microsoft-edge---update-policies)
 
 
-###  <a name="createdesktopshortcutdefault"></a>CreateDesktopShortcutDefault
+### CreateDesktopShortcutDefault
 #### 既定値のインストール時にデスクトップへのショートカットの作成を禁止する
 >Microsoft Edge Update 1.3.128.0 以降
 
@@ -277,7 +276,7 @@ Microsoft Edge が既にインストールされている場合、このポリ�
 [ページのトップへ](#microsoft-edge---update-policies)
 
 
-###  <a name="createdesktopshortcut"></a>CreateDesktopShortcut
+### CreateDesktopShortcut
 #### インストール時にデスクトップへのショートカットの作成を禁止する
 >Microsoft Edge Update 1.3.128.0 以降
 
@@ -313,7 +312,7 @@ Microsoft Edge が既にインストールされている場合、このポリ�
 [ページのトップへ](#microsoft-edge---update-policies)
 
 
-###  <a name="rollbacktotargetversion"></a>RollbackToTargetVersion
+### RollbackToTargetVersion
 #### ターゲットバージョンにロールバックする
 >Microsoft Edge Update 1.3.133.3以降
 
@@ -362,7 +361,7 @@ Microsoft Edge の更新プログラムで、Microsoft Edge のインストー�
 [ページのトップへ](#microsoft-edge---update-policies)
 
 
-###  <a name="targetversionprefix"></a>TargetVersionPrefix
+### TargetVersionPrefix
 #### ターゲット バージョンの上書き
 >Microsoft Edge Update 1.3.119.43 以降
 
@@ -403,10 +402,10 @@ Microsoft Edge の更新プログラムで、Microsoft Edge のインストー�
 [ページのトップへ](#microsoft-edge---update-policies)
 
 
-##  <a name="preferences-policies"></a>基本設定に関するポリシー
+## 基本設定に関するポリシー
 
 [ページのトップへ](#microsoft-edge---update-policies)
-###  <a name="autoupdatecheckperiodminutes"></a>AutoUpdateCheckPeriodMinutes
+### AutoUpdateCheckPeriodMinutes
 #### 自動更新チェック期間のオーバーライド
 >Microsoft Edge Update 1.2.145.5 以降
 
@@ -431,7 +430,7 @@ Microsoft Edge の更新プログラムで、Microsoft Edge のインストー�
 [ページのトップへ](#microsoft-edge---update-policies)
 
 
-###  <a name="updatessuppressed"></a>UpdatesSuppressed
+### UpdatesSuppressed
 #### 自動更新チェックを停止する 1 日あたりの時間帯
 >Microsoft Edge Update 1.3.33.5 以降
 
@@ -462,10 +461,10 @@ start min  : 0x00000002
 [ページのトップへ](#microsoft-edge---update-policies)
 
 
-##  <a name="proxy-server-policies"></a>プロキシ サーバーに関するポリシー
+## プロキシ サーバーに関するポリシー
 
 [ページのトップへ](#microsoft-edge---update-policies)
-###  <a name="proxymode"></a>ProxyMode
+### ProxyMode
 #### プロキシ サーバーの設定をどのように指定するかを選択する
 >Microsoft Edge Update 1.3.21.81 以降
 
@@ -498,7 +497,7 @@ fixed_servers
 [ページのトップへ](#microsoft-edge---update-policies)
 
 
-###  <a name="proxypacurl"></a>ProxyPacUrl
+### ProxyPacUrl
 #### プロキシ .pac ファイルへの URL
 >Microsoft Edge Update 1.3.21.81 以降
 
@@ -527,7 +526,7 @@ https://www.microsoft.com
 [ページのトップへ](#microsoft-edge---update-policies)
 
 
-###  <a name="proxyserver"></a>ProxyServer
+### ProxyServer
 #### プロキシ サーバーのアドレスまたは URL
 >Microsoft Edge Update 1.3.21.81 以降
 
@@ -556,10 +555,10 @@ https://www.microsoft.com
 [ページのトップへ](#microsoft-edge---update-policies)
 
 
-##  <a name="microsoft-edge-webview-policies"></a>Microsoft Edge WebView に関するポリシー
+## Microsoft Edge WebView に関するポリシー
 
 [ページのトップへ](#microsoft-edge---update-policies)
-###  <a name="install-(webview)"></a>インストール (WebView)
+### インストール (WebView)
 #### インストールを許可する
 >Microsoft Edge Update 1.3.127.1 以降
 
@@ -587,8 +586,8 @@ Microsoft Edge Update を使用して Microsoft Edge WebView をインストー�
 [ページのトップへ](#microsoft-edge---update-policies)
 
 
-###  <a name="update-(webview)"></a>更新 (WebView)
-####  <a name="update"></a>更新ポリシーのオーバーライド
+### 更新 (WebView)
+#### 更新ポリシーのオーバーライド
 >Microsoft Edge Update 1.3.127.1 以降
 
 #### 説明
@@ -596,8 +595,8 @@ Microsoft Edge WebView の自動更新を有効にするかどうかを指定で
 自動更新は、既定で有効になっています。 Microsoft Edge WebView の自動更新を無効にすると、このコンポーネントに依存するアプリケーションで互換性の問題が発生する可能性があります。
 
   このポリシーを有効にした場合、Microsoft Edge Update では、以下のオプションの構成方法に従って Microsoft Edge WebView の更新プログラムを処理します。
-  - [常に更新プログラムを許可する]: 更新プログラムは自動的にダウンロードされ、適用されるます
-  - [更新を無効にする]: 更新プログラムはダウンロードまたは適用されません
+  - 常に更新プログラムを許可する: 更新プログラムは自動的にダウンロードされ、適用されるます
+  - 更新を無効にする: 更新プログラムはダウンロードまたは適用されません
 
   このポリシーを有効にしないと、更新プログラムが自動的にダウンロードされ、適用されます。
 #### Windows の情報と設定
@@ -618,6 +617,6 @@ Microsoft Edge WebView の自動更新を有効にするかどうかを指定で
 [ページのトップへ](#microsoft-edge---update-policies)
 
 
-##  <a name="see-also"></a>関連項目
+## 関連項目
   - [Microsoft Edge の構成](configure-microsoft-edge.md)
   - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
