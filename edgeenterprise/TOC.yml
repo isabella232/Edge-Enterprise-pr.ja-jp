@@ -23,23 +23,23 @@
   items:
     - name: Microsoft Edge エンタープライズロードマップ
       href: microsoft-edge-roadmap.md
-    - name: Microsoft Edge 機能のプラットフォーム サポート
+    - name: Microsoft Edge 機能向けプラットフォーム サポート
       href: microsoft-edge-platform-feature-matrix.md
     - name: Microsoft Edge の展開を計画する
       href: deploy-edge-plan-deployment.md
-    - name: ユーザー環境内の Microsoft Edge
+    - name: お使いの環境での Microsoft Edge
       href: deploy-edge-prepare-to-deploy.md
-    - name: Microsoft ブラウザーの使用法レポート
+    - name: Microsoft ブラウザーの使用状況レポート
       href: microsoft-edge-browser-usage-report.md
     - name: Microsoft Edge の準備完了
       href: deploy-edge-ready-for-edge.md
     - name: Stable チャネルのリリース ノート
       href: microsoft-edge-relnote-stable-channel.md
-    - name: Stable Channel アーカイブリリース ノート
+    - name: Stable Channel のアーカイブ リリース ノート
       href: microsoft-edge-relnote-archive-stable-channel.md
     - name: Beta チャネルのリリース ノート
       href: microsoft-edge-relnote-beta-channel.md
-    - name: ベータ チャネルのアーカイブリリース ノート
+    - name: ベータ チャネルのアーカイブ リリース ノート
       href: microsoft-edge-relnote-archive-beta-channel.md
     - name: リリース スケジュール
       href: microsoft-edge-release-schedule.md
@@ -67,7 +67,7 @@
           href: microsoft-edge-sysupdate-windows-updates.md
 - name: Microsoft Edge の展開
   items:
-    - name: Windows 10 更新プログラムを適用した Microsoft Edge の展開
+    - name: Windows 10 更新プログラムを使用した Microsoft Edge の展開
       href: deploy-edge-with-windows-10-updates.md
     - name: Configuration Manager による Windows への展開
       href: /configmgr/apps/deploy-use/deploy-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
@@ -97,27 +97,27 @@
       href: microsoft-edge-security-identity.md
     - name: Microsoft Edge と Enterprise State Roaming
       href: microsoft-edge-enterprise-state-roaming.md
-    - name: キオスク モードの移行を計画する
+    - name: キオスク モードの切り替えを計画する
       href: microsoft-edge-kiosk-mode-transition-plan.md
     - name: Microsoft Edge キオスク モードを構成する
       href: microsoft-edge-configure-kiosk-mode.md
     - name: Microsoft Edge エンタープライズ同期
       items:
-        - name: Microsoft Edge を構成する
+        - name: Microsoft Edge の同期を構成する
           href: microsoft-edge-enterprise-sync.md
         - name: Microsoft Edge の同期の問題を診断して修正する
           href: microsoft-edge-troubleshoot-enterprise-sync.md
         - name: 同期に関する FAQ
           href: microsoft-edge-enterprise-sync-faq.md
-    - name: Active Directory ユーザー用のオンプレミス同期
+    - name: Active Directory ユーザー向けオンプレミス同期
       href: microsoft-edge-on-premises-sync.md
     - name: Microsoft Edge の PDF リーダー
       href: microsoft-edge-pdf.md
     - name: Microsoft Edge を既定のブラウザーとして設定する
       href: edge-default-browser.md
-    - name: Microsoft Edge を Internet Explorerモードで使用する
+    - name: Microsoft Edge を Internet Explorer モードで使用する
       items:
-        - name: (IE) Internet Explorerとは何ですか?
+        - name: Internet Explorer (IE) モードとは
           href: edge-ie-mode.md
         - name: エンタープライズ サイト構成戦略
           href: edge-ie-mode-sitelist.md
@@ -129,7 +129,7 @@
           items:
             - name: Enterprise Site Discovery ステップ バイ ステップ ガイド
               href: edge-ie-mode-site-discovery.md
-            - name: Microsoft Edge の Enterprise Site List Manager
+            - name: Microsoft Edge のエンタープライズ サイト リスト マネージャー
               href: edge-ie-mode-site-list-manager.md
         - name: IE モードでページ内ナビゲーションを保持する
           href: edge-learnmore-inpage-nav.md
@@ -143,17 +143,17 @@
           href: edge-ie-mode-faq.md
 - name: Microsoft Edge のセキュリティ
   items:
-    - name: ビジネスのセキュリティ
+    - name: ビジネス向けセキュリティ
       href: ms-edge-security-for-business.md
     - name: Microsoft Edge エンドポイントの許可リスト
       href: microsoft-edge-security-endpoints.md
     - name: データ損失防止 (DLP)
       href: microsoft-edge-security-dlp.md
-    - name: パスワード モニターがユーザーに対して自動的に有効にされます
+    - name: ユーザーにパスワード モニターを自動有効化
       href: microsoft-edge-security-password-monitor.md
     - name: 望ましくない可能性のあるアプリケーションから保護する
       href: microsoft-edge-potentially-unwanted-apps.md
-    - name: Azure の条件付きアクセスADサポート
+    - name: Azure AD 条件付きアクセスのサポート
       href: ms-edge-security-conditional-access.md
     - name: Application Guard のサポート
       href: microsoft-edge-security-windows-defender-application-guard.md
@@ -173,11 +173,11 @@
       href: microsoft-edge-policies.md
     - name: 更新ポリシー リファレンス
       href: microsoft-edge-update-policies.md
-    - name: WebView2 ポリシーリファレンス
+    - name: WebView2 ポリシー リファレンス
       href: microsoft-edge-webview-policies.md
     - name: 詳細情報
       items:
-        - name: '[エンタープライズ新規] タブ ページの下位互換性'
+        - name: 企業向け下位互換性の新規タブ ページ
           href: edge-learnmore-ntp-backward-compatibility.md
         - name: ClickOnce および DirectInvoke
           href: edge-learn-more-co-di.md
@@ -191,13 +191,13 @@
           href: microsoft-edge-update-progressive-rollout.md
         - name: Microsoft Edge のお気に入りをプロビジョニングする
           href: edge-learnmore-provision-favorites.md
-        - name: Microsoft Edge へのInternet Explorerリダイレクト
+        - name: Internet Explorer から Microsoft Edge にリダイレクト
           href: edge-learnmore-neededge.md
         - name: Regular Expression 2 (re2.h) の構文
           href: edge-learnmore-regex.md
         - name: Microsoft Edge データをリセットする
           href: edge-learnmore-reset-data-in-cloud.md
-        - name: エンタープライズ向け Microsoft Edge ロールバックの使用
+        - name: 企業向け Microsoft Edge ロールバックの使用
           href: edge-learnmore-rollback.md
 - name: Microsoft Edge ビデオ
   items:
@@ -215,9 +215,9 @@
       href: microsoft-edge-video-identity.md
     - name: ビデオ - Microsoft Edge バージョンのロールバック
       href: microsoft-edge-video-version-rollback.md
-    - name: ビデオ - Microsoft Edge の PDF リーダー
+    - name: ビデオ - Microsoft Edge での PDF リーダー
       href: microsoft-edge-video-pdf-reader.md
-    - name: ビデオ - Microsoft Edge での安全な参照
+    - name: ビデオ - Microsoft Edge での安全な閲覧
       href: microsoft-edge-video-security-smartscreen.md
     - name: ビデオ - セキュリティ、互換性、管理性
       href: microsoft-edge-video-security-compatibility-manageability.md
