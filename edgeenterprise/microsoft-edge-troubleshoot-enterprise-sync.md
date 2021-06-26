@@ -1,6 +1,6 @@
 ---
 title: Microsoft Edge の同期の問題を診断して修正する
-ms.author: scottbo
+ms.author: collw
 author: dan-wesley
 manager: silvanam
 ms.date: 03/08/2021
@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 管理者が一般的なエンタープライズ同期の問題のトラブルシューティングと修正に使用できるガイダンスとツール
-ms.openlocfilehash: 49fb0c5fc555e4f7ad4c728477387e931a5fbb5f
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: d934e1ad73500fcb7f15bcd7dd29cb0f905577c5
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447161"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617907"
 ---
 # <a name="diagnose-and-fix-microsoft-edge-sync-issues"></a><span data-ttu-id="1df8f-103">Microsoft Edge の同期の問題を診断して修正する</span><span class="sxs-lookup"><span data-stu-id="1df8f-103">Diagnose and fix Microsoft Edge sync issues</span></span>
 

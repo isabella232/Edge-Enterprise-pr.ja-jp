@@ -3,7 +3,7 @@ title: Microsoft Edge WebView2 ポリシードキュメント
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/18/2021
+ms.date: 06/17/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,18 +11,19 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
-ms.openlocfilehash: 38aac0e4ffd932583ad48a2dd13cf8e93df79e29
-ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
+ms.openlocfilehash: 78d4a610fd4d5ba5549ea1e2e4833acc9e686016
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "11442377"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617985"
 ---
 # <a name="microsoft-edge-webview2---policies"></a><span data-ttu-id="31050-103">Microsoft Edge WebView2 - ポリシー</span><span class="sxs-lookup"><span data-stu-id="31050-103">Microsoft Edge WebView2 - Policies</span></span>
 
 <span data-ttu-id="31050-104">最新バージョンの Microsoft Edge WebView2には、次のポリシーが含まれています。</span><span class="sxs-lookup"><span data-stu-id="31050-104">The latest version of Microsoft Edge WebView2 includes the following policies.</span></span> <span data-ttu-id="31050-105">これらのポリシーを使用して、組織内での Microsoft Edge WebView2の動作方法を構成することができます。</span><span class="sxs-lookup"><span data-stu-id="31050-105">You can use these policies to configure how Microsoft Edge WebView2 runs in your organization.</span></span>
 
 <span data-ttu-id="31050-106">Microsoft Edge WebView2の更新方法とタイミングを制御するために使用される追加のポリシー セットについては、「[Microsoft Edge更新ポリシーの参照](microsoft-edge-update-policies.md)」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="31050-106">For information about an additional set of policies used to control how and when Microsoft Edge WebView2 is updated, check out [Microsoft Edge update policy reference](microsoft-edge-update-policies.md).</span></span>
+
 
 > [!NOTE]
 > <span data-ttu-id="31050-107">この記事は Microsoft Edge version 87 以降に適用されます。</span><span class="sxs-lookup"><span data-stu-id="31050-107">This article applies to Microsoft Edge version 87 or later.</span></span>

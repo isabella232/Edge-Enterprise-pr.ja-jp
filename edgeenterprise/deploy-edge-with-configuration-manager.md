@@ -3,19 +3,19 @@ title: System Center Configuration Manager を使用して Microsoft Edge を展
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 09/30/2019
+ms.date: 06/08/2021
 audience: ITPro
-ms.topic: procedural
+ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: System Center Configuration Manager (SCCM) を使用して Microsoft Edge を展開する方法について説明します。
-ms.openlocfilehash: 64b26412c4596a9514227d41d1a4e753a66ed057
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: b403c8924a0f970aaadff2e1b20ebd05c0641a96
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447831"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617547"
 ---
 # <a name="deploy-microsoft-edge-using-system-center-configuration-manager"></a><span data-ttu-id="dbcf3-103">System Center Configuration Manager を使用して Microsoft Edge を展開する</span><span class="sxs-lookup"><span data-stu-id="dbcf3-103">Deploy Microsoft Edge using System Center Configuration Manager</span></span>
 
