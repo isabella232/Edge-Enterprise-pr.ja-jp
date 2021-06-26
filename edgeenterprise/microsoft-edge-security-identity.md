@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge の ID サポートと構成
-ms.openlocfilehash: 8b4fe3c46e0c8dd76d0e22051fb63465e34202f2
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 34a5a4aa958873a012d0a2da4184cb508af27a8a
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447541"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617917"
 ---
 # <a name="microsoft-edge-identity-support-and-configuration"></a>Microsoft Edge の ID サポートと構成
 
@@ -30,12 +30,12 @@ Microsoft Edge は、Azure AD、MSA、またはドメイン アカウントを�
 
 | 機能   | Azure AD Premium | Azure AD Free | 組織内の AD DS | MSA     |
 |----|------------------|---------------|----------------|---------|
-| 同期 | あり | × | × | あり |
-| プライマリ更新トークンによる SSO | あり | はい | × | あり |
-| シームレス SSO | あり | はい | あり | 該当せず |
-| 統合 Windows 認証 | あり | はい | あり | 該当せず |
-| Enterprise [新しいタブ] ページ | O365 が必要 |   O365 が必要 | × | 該当せず |
-| Microsoft Search | O365 が必要 | O365 が必要 | × | 該当せず |
+| 同期 | あり | なし | なし | あり |
+| プライマリ更新トークンによる SSO | あり | あり | なし | あり |
+| シームレス SSO | あり | あり | あり | 該当せず |
+| 統合 Windows 認証 | あり | あり | あり | 該当せず |
+| Enterprise [新しいタブ] ページ | O365 が必要 |   O365 が必要 | なし | 該当せず |
+| Microsoft Search | O365 が必要 | O365 が必要 | なし | 該当せず |
 
 ## <a name="how-users-can-sign-into-microsoft-edge"></a>ユーザーが Microsoft Edge にサインインする方法
 
@@ -91,7 +91,7 @@ Microsoft Edge (バージョン 77 以降) で WIA ベースの SSO をサポー
 
 ### <a name="proactive-authentication"></a>プロアクティブ認証
 
-プロアクティブ認証は、ブラウザーから Web サイト SSO への最適化であり、特定のファーストパーティ Web サイトに認証をフロント ロードします。 これにより、ユーザーが検索エンジンとして Bing を使用している場合、アドレス バーのパフォーマンスが向上します。 これにより、ユーザーはカスタマイズされた Microsoft Search for Business (MSB) 検索結果を取得できます。 また、Office の新しいタブ ページなど、重要なサービスへの認証を許可します。 これは、[ProactiveAuthEnabled]( https://docs.microsoft.com/deployedge/microsoft-edge-policies#proactiveauthenabled) ポリシーを使用して制御できます。
+プロアクティブ認証は、ブラウザーから Web サイト SSO への最適化であり、特定のファーストパーティ Web サイトに認証をフロント ロードします。 これにより、ユーザーが検索エンジンとして Bing を使用している場合、アドレス バーのパフォーマンスが向上します。 これにより、ユーザーはカスタマイズされた Microsoft Search for Business (MSB) 検索結果を取得できます。 また、Office の新しいタブ ページなど、重要なサービスへの認証を許可します。 これは、[ProactiveAuthEnabled]( /deployedge/microsoft-edge-policies#proactiveauthenabled) ポリシーを使用して制御できます。
 
 ### <a name="windows-hello-credui-for-ntlm-authentication"></a>Windows Hello CredUI for NTLM 認証
 

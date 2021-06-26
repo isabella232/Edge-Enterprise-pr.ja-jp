@@ -1,6 +1,6 @@
 ---
 title: 企業向け Microsoft Edge ロールバック
-ms.author: v-danwes
+ms.author: collw
 author: dan-wesley
 manager: srugh
 ms.date: 02/04/2021
@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge を以前のバージョンにロールバックする方法
-ms.openlocfilehash: 58323071fcbe4704f29819684bb5359d92c030b6
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 38954f4b293470758b5484591779a3af52c6992c
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11448161"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617377"
 ---
 # <a name="how-to-roll-back-microsoft-edge-to-a-previous-version"></a>Microsoft Edge を以前のバージョンにロールバックする方法
 

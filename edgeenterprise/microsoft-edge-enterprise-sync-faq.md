@@ -1,6 +1,6 @@
 ---
 title: Microsoft Edge のエンタープライズ向けの同期に関するよく寄せられる質問 (FAQ)
-ms.author: scottbo
+ms.author: collw
 author: dan-wesley
 manager: silvanam
 ms.date: 03/08/2021
@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge のエンタープライズ向けの同期に関してよく寄せられる質問。
-ms.openlocfilehash: e25ee985f65ee61dda5cacece73d43be7f1e6d7d
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 4bb41c8d7ded64fcc0b4fd4843ef2b7ec0adec23
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447871"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617767"
 ---
 # <a name="microsoft-edge-enterprise-sync-faq"></a>Microsoft Edge のエンタープライズ向けの同期に関するよく寄せられる質問 (FAQ)
 
@@ -59,7 +59,7 @@ Microsoft Edge 同期のサービス条件は、Microsoft ソフトウェア ラ
 
 ### <a name="is-microsoft-edge-sync-based-on-enterprise-state-roaming"></a>Microsoft Edge の同期は Enterprise State Roaming に依存していますか?
 
-いいえ、そうではありません。 ESR を使用して同期を有効にすることはできますが、Microsoft Edge の同期は ESR の一部ではありません。 詳細については、「[Microsoft Edge の同期](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-enterprise-sync)」と「[Microsoft Edge と Enterprise State Roaming](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-enterprise-state-roaming)」を参照してください。
+いいえ、そうではありません。 ESR を使用して同期を有効にすることはできますが、Microsoft Edge の同期は ESR の一部ではありません。 詳細については、「[Microsoft Edge の同期](/DeployEdge/microsoft-edge-enterprise-sync)」と「[Microsoft Edge と Enterprise State Roaming](/DeployEdge/microsoft-edge-enterprise-state-roaming)」を参照してください。
 
 ### <a name="will-microsoft-edge-ever-support-syncing-between-microsoft-edge-and-ie"></a>Microsoft Edge では、将来 Microsoft Edge と IE との同期はサポートされますか?
 

@@ -4,40 +4,37 @@ metadata:
   ms.author: jwhit
   author: jwhit-MSFT
   manager: laurawi
-  ms.date: 11/04/2020
+  ms.date: 05/19/2021
   audience: ITPro
   ms.topic: conceptual
   ms.prod: microsoft-edge
   ms.localizationpriority: high
   ms.collection: M365-modern-desktop
-  description: エンタープライズでの Microsoft Edge の展開に関するよく寄せられる質問 (FAQ)
-  ms.openlocfilehash: 6a0a3c508f36318c080b6ccc62271b0d79bb9630
-  ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+  description: エンタープライズでのアプリケーションの展開に関するよく寄せられるMicrosoft Edge質問 (FAQ)
+  ms.openlocfilehash: b9c1af51c8eb1898369bc4e3c52734736db5ebe3
+  ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 03/24/2021
-  ms.locfileid: "11448151"
-title: エンタープライズでの Microsoft Edge に関するよく寄せられる質問 (FAQ)
+  ms.lasthandoff: 06/25/2021
+  ms.locfileid: "11617257"
+title: 企業のユーザーに関するよくある質問 (FAQ) Microsoft Edge質問
 summary: >
   > [!NOTE]
 
-  > この記事は Microsoft Edge version 77 以降に適用されます。
+  > この記事は、Microsoft Edge version 77 以降に適用されます。
 sections:
 - name: 無視
   questions:
   - question: 所有している Microsoft Edge のバージョンを確認する方法を教えてください。
     answer: >
-      Microsoft Edge の右上隅で、省略記号アイコン (**...)** を選択し、[設定] を **選択します**。 **[Microsoft Edge について]** を選択して、Microsoft Edge のバージョンを確認します。
-  - question: Internet Explorer 11 の更新プログラムは引き続き提供されますか?
+      図形の右上隅で、省略Microsoft Edgeアイコン (**...)** を選択し、[省略記号] を選択**設定。** **[Microsoft Edge について]** を選択して、Microsoft Edge のバージョンを確認します。
+  - question: Internet Explore 11 について
     answer: >
-      Internet Explorer は、信頼できる安全なブラウザーとしてサポートされています。 Internet Explorer Windows のコンポーネントであり、インストールされているオペレーティング システムのサポート ライフサイクルに従います。 詳しくは、「[ライフサイクルに関する FAQ - Internet Explorer](https://support.microsoft.com/help/17454/)」をご覧ください。 Internet Explorer のサポートと更新は引き続き行われますが、最新の機能更新プログラムとプラットフォーム更新プログラムは Microsoft Edge のみで利用可能になります。
-  - question: 新しいバージョンを試しつつ、現在のバージョンの Microsoft Edge (Microsoft Edge レガシ) を並行して実行できますか?
-    answer: >
-      できます。 2020 年 1 月 15 日以降、Windows 10 Version 1803 以降を実行している Home および Pro エディションのデバイスには、Microsoft Edge の新しいバージョン (Chromium ベース) が配布されます。 ドメインに参加しているデバイスは、この更新から除外されます。 詳しくは、[Microsoft Edge 更新プログラムの概要](https://docs.microsoft.com/deployedge/microsoft-edge-blocker-toolkit#overview)をご覧ください。 次のバージョンの Microsoft Edge を評価する場合は、Microsoft Edge Legacy をサイド バイ サイドでインストールできます。 詳しくは、「[旧バージョンの Microsoft Edge にアクセスする方法](./microsoft-edge-sysupdate-access-old-edge.md)」をご覧ください。 さらに、新しい Microsoft Edge チャネルのそれぞれは、サイド バイ サイドインストールもサポートしています。 詳しくは、「[Microsoft Edge チャネルの概要](./microsoft-edge-channels.md)」をご覧ください。
+      Internet Explorer 11 デスクトップ アプリケーションは廃止され、2022 年 6 月 15 日にサポートが終了します (スコープ内の一覧については [、FAQ](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)を参照してください)。 現在使用しているのと同じ IE11 アプリとサイトは、Microsoft EdgeモードInternet Explorerできます。 [こちら](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)をご覧ください。
   - question: Microsoft Edge (Chromium ベース) では、ActiveX コントロールや、Silverlight や Java などの BHO をサポートしていますか。
     answer: >
-      いいえ、そうではありません。 Microsoft Edge では、Silverlight や ActiveXなど、ブラウザー のコントロールやブラウザー ヘルプ オブジェクト (HOS) はJava。 ただし、ActiveX コントロール、BHO、または従来のドキュメント モードを使用する Web アプリを Internet Explorer 11 上で実行している場合には、新しい Microsoft Edge 上で IE モードを実行するように構成できます。 詳しくは、「[Microsoft Edge で IE モードを設定する](./edge-ie-mode.md)」をご覧ください。
-  - question: お気に入りは現在のバージョンの Microsoft Edge から移植されますか、それとも再追加する必要がありますか?
+      いいえ、そうではありません。 Microsoft Edge Silverlight やブラウザー ActiveXなど、ブラウザー のコントロールやブラウザー ヘルプ オブジェクト (HOS) はJava。 ただし、ActiveX コントロール、BHO、または従来のドキュメント モードを使用する Web アプリを Internet Explorer 11 上で実行している場合には、新しい Microsoft Edge 上で IE モードを実行するように構成できます。 詳しくは、「[Microsoft Edge で IE モードを設定する](./edge-ie-mode.md)」をご覧ください。
+  - question: お気に入りは現在のバージョンの Microsoft Edgeから移植されますか、または再追加する必要がありますか?
     answer: "現時点では、Microsoft Edge では、Microsoft Edge、Chrome、Internet Explorer、Firefox (Win10) の既存のインストールからのインポートがサポートされています。 インポートには、ブックマーク、履歴、パスワード、自動入力 (支払い、住所、汎用フォーム) の設定がサポートされています。 インポートは、最初の実行エクスペリエンスで実行するか、ブラウザーの設定を使用して実行するかを選択できます。  \n"
   - question: チャネル/ビルドは Stable、Beta、Dev、Canary でどのように違いますか?
     answer: >
