@@ -3,19 +3,19 @@ title: Microsoft Edge キオスク モードを構成する
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 03/16/2021
+ms.date: 04/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: キオスク モード機能と Microsoft Edge キオスク モードのオプションを構成する方法について説明します。
-ms.openlocfilehash: 9d76bfcaebeaf56e627a401cc4f0375bce9d17a3
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 20cb32c0cd27ad6d7437ed8ae0440560f3ed71b2
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11448131"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617857"
 ---
 # <a name="configure-microsoft-edge-kiosk-mode"></a>Microsoft Edge キオスク モードを構成する
 
@@ -50,23 +50,23 @@ Microsoft Edge キオスク モードは、ブラウザーの 2 つのロック�
 |非アクティブ時のリセット|Y|Y|89|Y|
 |[読み取り専用アドレス バー](./microsoft-edge-policies.md#kioskaddressbareditingenabled) (ポリシー) |N|Y |89|N|
 |[終了時にダウンロードを削除する](./microsoft-edge-policies.md#kioskdeletedownloadsonexit) (ポリシー)  | Y|Y |89|N|
-|F11 がブロックされています (全画面に入る/終了する) | Y | Y | 89 |Y|
-|F12 がブロックされています (開発者ツールの起動) | Y | Y | 89 |Y|
-| 複数タブのサポート | N| Y| 89|Y|
+|F11 がブロックされています (全画面に入る/終了する) | Y | Y |89|Y|
+|F12 がブロックされています (開発者ツールの起動) | Y | Y |89|Y|
+| 複数タブのサポート | N| Y|89|Y|
 |[URL のサポートを許可する](./microsoft-edge-policies.md#urlallowlist) (ポリシー)|Y|Y|89|N|
 |[URL のサポートをブロックする](./microsoft-edge-policies.md#urlblocklist) (ポリシー)|Y|Y|89|N|
 |[[ホーム] ボタンを表示する](./microsoft-edge-policies.md#showhomebutton) (ポリシー)|N|Y|89|Y|
 |[お気に入りを管理する](./microsoft-edge-policies.md#managedfavorites) (ポリシー)|N|Y|89|Y|
 |[プリンターを有効化](./microsoft-edge-policies.md#printingenabled) (ポリシー)|Y|Y|89|Y|
-|[新しいタブ ページの URLを構成する](./microsoft-edge-policies.md#newtabpagelocation) (ポリシー)|N|Y||Y|
-|[セッションの終了] ボタン * | N| Y| 89|Y|
+|[新しいタブ ページの URLを構成する](./microsoft-edge-policies.md#newtabpagelocation) (ポリシー)|N|Y|89|Y|
+|[セッションの終了] ボタン * | N| Y|89|Y|
 |すべての内部 Microsoft Edge URL はブロックされます (*edge://downloads* および *edge://print* を除く) |N|Y|89|Y|
-| Ctrl + N がブロックされています (新しいウィンドウを開く) * | Y | Y | 89 |Y|
-| Ctrl + T がブロックされています (新しいタブを開く) |Y | N | 89 |Y|
-|設定と詳細 (...) では、必要なオプションだけが表示されます。  |Y |Y |89 |Y|
-|ブラウザーからの他のアプリケーションの起動を制限する|Y|Y|90/91|Y|
-|UI 印刷設定のロックダウン|Y|Y|90/91|Y|
-|[新しいタブ ページをホーム ページとして設定する](./microsoft-edge-policies.md#homepageisnewtabpage) (ポリシー)|-|-|TBD|Y|
+| Ctrl + N がブロックされています (新しいウィンドウを開く) * | Y | Y |89|Y|
+| Ctrl + T がブロックされています (新しいタブを開く) |Y | N |89|Y|
+|設定と詳細 (...) では、必要なオプションだけが表示されます。  |Y |Y |89|Y|
+|ブラウザーからの他のアプリケーションの起動を制限する|Y|Y|90|Y|
+|UI 印刷設定のロックダウン|Y|Y|90|Y|
+|[新しいタブ ページをホーム ページとして設定する](./microsoft-edge-policies.md#homepageisnewtabpage) (ポリシー)|N|Y|90|Y|
 
 > [!NOTE]
 > "*" に続く機能は、割り当てられたアクセス単一アプリのシナリオでのみ有効になります。
@@ -148,27 +148,34 @@ msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
 
 ### <a name="single-app-kiosk"></a>シングル アプリ キオスク
 
-Microsoft Edge は現在、次のロックダウン エクスペリエンス、つまりデジタル/対話型サイネージ、およびパブリックブラウジングを備えた、単一アプリに割り当てられたアクセス用の同じ Microsoft Edge レガシ キオスク モード タイプのサブセットをサポートしています。  
+Microsoft Edge バージョン 90 キオスク モードは、機能の広範なリストを提供します。 キオスク モードでサポートされている機能のセクションを参照してください。
+次の Windows 更新プログラムを使用すると、割り当てられたアクセス シングル アプリを介して Microsoft Edge を構成できます。
 
-割り当てられたアクセスを持つ Microsoft Edge キオスク モードは、現在、最新の [Windows 10 Insider Preview ビルド](https://insider.windows.com/)(バージョン 20215 以上)、 [および Microsoft Edge Beta チャネル](https://www.microsoftedgeinsider.com/download)(バージョン 89 以上) でテストできます。
+|オペレーティング システム|バージョン|更新プログラム|
+|--|--|--|
+|Windows 10 | 2004 以降|[KB4601382 以降](https://support.microsoft.com/topic/february-24-2021-kb4601382-os-builds-19041-844-and-19042-844-preview-1a7ed2b4-017d-2644-a1e8-dd6bf14cba76) |
+|Windows 10| 1909| [KB4601380 以降](https://support.microsoft.com/topic/february-16-2021-kb4601380-os-build-18363-1411-preview-2e3c38e1-a947-1033-8006-a30f3806da18)|
 
-**Windows Insiders Preview を入手するにはどうすればよいですか?**
-
-PC に Windows 10 Insider Preview ビルドをインストールするには、「 [Windows 10 Insider Preview ビルドの概要](/windows-insider/get-started)」の指示に従います。
+[Windows の設定](/deployedge/microsoft-edge-configure-kiosk-mode#configure-using-windows-settings)と Intune を介して、Microsoft Edge キオスク モードの割り当てられたアクセス シングル アプリを管理できます。
 
 ### <a name="multi-app-kiosk"></a>複数アプリ キオスク
 
-Microsoft Edge は、Windows 10 で[複数アプリの割り当てられたアクセス](/windows/configuration/lock-down-windows-10-to-specific-apps) によって実行できます。これは Microsoft Edge レガシでの "通常の閲覧" タイプのキオスク モードに相当します。 複数アプリの割り当てられたアクセスで Microsoft Edge を構成するには、[複数アプリ キオスクの設定](/windows/configuration/lock-down-windows-10-to-specific-apps)方法の手順に従います。 (Microsoft Edge Stable チャネルの AUMID は **MSEdge** です)。
-
-複数アプリが割り当てられたアクセスで Microsoft Edge を使用する場合は、Microsoft Edge キオスクを構成するには、[Microsoft Edge ブラウザー ポリシー](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-policies) を使用して、固有の要件を満たすように閲覧エクスペリエンスを構成します。
+Microsoft Edge は、Windows 10 で[複数アプリの割り当てられたアクセス](/windows/configuration/lock-down-windows-10-to-specific-apps) によって実行できます。これは Microsoft Edge レガシでの "通常の閲覧" タイプのキオスク モードに相当します。 複数アプリの割り当てられたアクセスで Microsoft Edge を構成するには、[複数アプリ キオスクの設定](/windows/configuration/lock-down-windows-10-to-specific-apps)方法の手順に従います。 (Microsoft Edge Stable チャネルの AUMID は **MSEdge** です。)
 
 ### <a name="configure-using-windows-settings"></a>Windows の設定を使用して構成する
 
 Windows の設定は、1 つか 2 つのシングル アプリのキオスク デバイスを設定する最も簡単な方法です。 シングル アプリのキオスク コンピューターをセットアップするには、次の手順に従います。
 
-1. 最新の Windows 10 Insider Preview (バージョン 20215 以降) をインストールします。 「[Windows 10 Insider Preview ビルドの概要](/windows-insider/get-started)」の指示に従います。
-2. 最新の機能をテストするには、最新の [Microsoft Edge Beta チャネル](https://www.microsoftedgeinsider.com/download)(バージョン 89 以上) をダウンロードできます。
-3. キオスク コンピューターで、[Windows の設定] を開き、検索フィールドに "キオスク" と入力します。 次のスクリーンショットに表示されている  **[Set up a kiosk (assigned access)]** (キオスク モードを設定する (割り当てられたアクセス)) を選択し、キオスクを作成するダイアログを開きます。
+1. 次の表に示すオペレーティング システムの最小システム更新プログラム。
+
+|オペレーティング システム|バージョン|更新プログラム|
+|--|--|--|
+|Windows 10 | 2004 以降|[KB4601382 以降](https://support.microsoft.com/topic/february-24-2021-kb4601382-os-builds-19041-844-and-19042-844-preview-1a7ed2b4-017d-2644-a1e8-dd6bf14cba76) |
+|Windows 10| 1909| [KB4601380 以降](https://support.microsoft.com/topic/february-16-2021-kb4601380-os-build-18363-1411-preview-2e3c38e1-a947-1033-8006-a30f3806da18)|
+
+2. 最新の機能をテストするには、最新の [Microsoft Edge Stable チャネル](https://www.microsoft.com/edge/business/download) (バージョン 89 以上) をダウンロードできます。
+
+3. キオスク コンピューターで、[Windows の設定] を開き、検索フィールドに「キオスク」と入力します。 次のスクリーンショットに表示されている  **[Set up a kiosk (assigned access)]** (キオスク モードを設定する (割り当てられたアクセス)) を選択し、キオスクを作成するダイアログを開きます。
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-1-assigned-access.png" alt-text="割り当てられたアクセスによるキオスクの設定":::
 
@@ -185,14 +192,14 @@ Windows の設定は、1 つか 2 つのシングル アプリのキオスク �
    > [!NOTE]
    > これは、Microsoft Edge Dev、Beta、Stable チャネルにのみ適用されます。
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="キオスク モード - アプリを選ぶ":::
+     :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5c-choose-a-kiosk-app.png" alt-text="キオスク モードの表示 - 全画面表示デジタル署名":::
 
 7. Microsoft Edge がキオスク モードで実行しているときの表示方法について、次のいずれかのオプションを選びます。
 
    - デジタル/対話型サイネージ - 全画面表示モードで特定のサイトを表示し、Microsoft Edge を実行します。
    - パブリック ブラウザー - Microsoft Edge の限定的な複数タブのバージョンを実行します。
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="キオスク モードの表示 - 全画面表示デジタル署名":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="キオスクの使い方 - 全画面表示デジタル署名":::
 
 8.  **[次へ]** を選択します。
 9. キオスクが起動したときに読み込む URL を入力します。
@@ -228,18 +235,6 @@ Windows の設定は、1 つか 2 つのシングル アプリのキオスク �
 - [拡張機能](./microsoft-edge-policies.md#extensions-policies)
 - [BackgroundModeEnabled](./microsoft-edge-policies.md#backgroundmodeenabled)
 - [UserFeedbackAllowed](./microsoft-edge-policies.md#userfeedbackallowed)
-
-## <a name="roadmap"></a>ロードマップ
-
-### <a name="in-early-2021"></a>2021 年初旬
-
-次のサポートと機能を追加します。
-
-- シングル アプリとして割り当てられたアクセスによる Microsoft Edge キオスク モードの Windows 10 1909 またはそれ以上での一般提供。
-- Microsoft Edge 従来版とのパリティのための追加機能。
-- キオスク モード プロファイル UX を使用してデバイスを構成するための Intune との統合。
-- ブラウザーからの他のアプリケーションの起動を制限します。
-- UI 印刷設定のロックダウン。
 
 ## <a name="see-also"></a>関連項目
 

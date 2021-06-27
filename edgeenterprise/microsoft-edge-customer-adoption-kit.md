@@ -1,21 +1,21 @@
 ---
 title: Microsoft Edge の顧客導入資料
 ms.author: collw
-author: dan-wesley
+author: AndreaLBarr
 manager: seanlynd
-ms.date: 03/01/2021
+ms.date: 06/23/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge の顧客導入資料
-ms.openlocfilehash: 4752b0b5221d0134c68a50153679979449d893ca
-ms.sourcegitcommit: 81383d92dba379d5e6073066c4cdcc2761390f8f
+ms.openlocfilehash: f8a37bceeee9b55587a14a97a5b64b73ec27d23f
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "11385381"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617843"
 ---
 # <a name="customer-adoption-materials-for-microsoft-edge"></a>Microsoft Edge のための顧客導入資料
 
@@ -26,17 +26,28 @@ Microsoft Edge の展開と導入をサポートするには、収集された�
 ## <a name="customer-adoption-kit"></a>顧客導入キット
 
 顧客導入キットには、次の内容が含まれます:
+- Internet Explorer 使用停止キット **(英語、ドイツ語、スペイン語、フランス語、日本語、韓国語、簡体中国語で利用可能)**
+    - 導入メール
+    - チラシ
+    - Infographic
+    - サイト コレクション フォーム
+- 一般的な導入キット
+    - IT 展開ガイド
+    - 入門ユーザーガイド
+    - 導入メール テンプレート
+    - 横断幕
+    - デジタル サイネージ
+    - ページャーメッセージ
+    - デモ ビデオと GIF
+    - Web リソース リンク
 
-- IT 展開ガイド
-- 入門ユーザーガイド
-- 導入メール テンプレート
-- 横断幕
-- デジタル サイネージ
-- ページャーメッセージ
-- デモ ビデオと GIF
-- Web リソース リンク
+導入キットは、英語、フランス語、ドイツ語、日本語を含むいくつかの言語で利用できます。 [Microsoft Edge 顧客導入キット ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=102119)で、ご希望の言語を選択します。
 
-導入キットは、英語、フランス語、ドイツ語、日本語を含むいくつかの言語で利用できます。 [Microsoft Edge Customer Adoption Kit ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=102119)で、ご希望の言語を選択します。
+### <a name="internet-explorer-ie-retirement-resources"></a>Internet Explorer (IE) 使用停止リソース
+
+組織が IE から Microsoft Edge に安全かつ迅速に移行するのに役立つ、貴重なリソースと専門家のガイダンスを見つけてください。
+
+:::image type="content" source="media/customer-adoption-not-md/Internet Explorer Retirement Screenshot.png" alt-text="Internet Explorer 使用停止":::
 
 ### <a name="it-deployment-guide"></a>IT 展開ガイド
 

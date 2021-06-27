@@ -3,23 +3,26 @@ title: Internet Explorer 11 を無効にする
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 03/09/2021
+ms.date: 05/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge で Internet Explorer 11 を無効にし、Internet Explorer モードを使用する方法をご紹介します。
-ms.openlocfilehash: 89fa6f81879be851f0036990a41e36e1eaee7fca
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: ae4d936df7e432eee250e1c7327acfd206d86410
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447391"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617487"
 ---
 # <a name="disable-internet-explorer-11"></a>Internet Explorer 11 を無効にする
 
-この記事では、お使いの環境でスタンドアロン ブラウザー Internet Explorer 11 を無効にする方法について説明します。
+>[!Note]
+> Internet Explorer 11 デスクトップ アプリケーションは廃止され、2022 年 6 月 15 日にサポートが終了します (スコープ内の一覧については、[FAQ を参照してください](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549))。 現在使用しているものと同じ IE11 アプリとサイトを、Internet Explorer モードの Microsoft Edge で開くことができます。 [こちらをご覧ください](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)。
+
+この記事では、お使いの環境でスタンドアロン ブラウザーとして Internet Explorer 11 を無効にする方法について説明します。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -61,7 +64,7 @@ IE モードを構成した後、グループ ポリシーを使用して組織�
 
 エンタープライズ モード サイト一覧に IE11 アプリで開くよう構成されたアプリケーションが含まれている場合、このポリシーを使用して IE11 を無効にすると、Microsoft Edge の IE モードで開きます。
 > [!NOTE]
-> サイトが IE11 で開くように構成されていて、かつ IE11 を無効にするポリシーが構成されている場合、ユーザー フローに問題があることが知られています。 積極的に調査している問題。
+> サイトが IE11 アプリケーションで開くように構成されていて、かつ IE11 を無効にするポリシーが構成されている場合、ユーザー フローに問題があることが知られています。 この問題は、Microsoft Edge バージョン 91.0.840.0 以降で修正されています。
 
 ## <a name="disable-internet-explorer-11-as-a-standalone-browser"></a>スタンドアロン ブラウザーとして Internet Explorer 11 を無効にする
 
