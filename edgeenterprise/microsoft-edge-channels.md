@@ -10,21 +10,23 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge チャネル概要
-ms.openlocfilehash: 4de456909df3cb5140abfb20ddb884ad9cc84c32
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: b9a2190fdff860d9bacf975882469d936891973f
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980519"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617807"
 ---
-# Microsoft Edge チャネルの概要
+# <a name="overview-of-the-microsoft-edge-channels"></a>Microsoft Edge チャネルの概要
 
 次のバージョンの Microsoft Edge の利点の 1 つは、Microsoft が定期的に新機能を提供できることです。 ただし、組織内のユーザーに Microsoft Edge を展開する管理者は、ユーザーがこれらの新機能を受け取る頻度を細かく制御できる方が良い場合があります。 Microsoft では、Microsoft Edge を新しい機能で更新する頻度を制御するために、チャネルと呼ばれる 4 つのオプションを提供しています。 ここでは、これら 4 つのオプションの概要を説明します。
+
+各チャネルのサポートの詳細については、「[Microsoft Edge のライフサイクル](/deployedge/microsoft-edge-support-lifecycle)」を参照してください。
   
 > [!NOTE]
-> この記事は Microsoft Edge version 77 以降に適用されます。
+> この記事は Microsoft Edge バージョン 77 以降に適用されます。
 
-##  <a name="channel-overview"></a>チャネルの概要
+## <a name="channel-overview"></a>チャネルの概要
 
 |チャネル|主な目的|新機能に更新される頻度|サポート|
 |:---:|---|:---:|:---:|
@@ -35,23 +37,23 @@ ms.locfileid: "10980519"
 
 どの更新チャネルをユーザーに展開するかについては、Microsoft Edge の更新されたバージョンでテストする必要がある、ユーザーが使用中の基幹業務アプリケーションの数など、いくつかの要因によって異なります。 この決定を行うには、Microsoft Edge で利用可能な 4 つの更新チャネルに関する次の情報をご確認ください。
 
-###  <a name="stable-channel"></a>Stable チャネル
+### <a name="stable-channel"></a>Stable チャネル
 
-Stable チャネルは、組織での広範な展開を目的としており、ほとんどのユーザーに適したチャネルです。 これはすべてのチャネルの中で最も安定しており、前の Beta チャネル リリースに含まれていた機能セットを安定させたものです。 約 6 週間ごとに新機能がリリースされます。 必要に応じて、セキュリティ更新プログラムと品質更新プログラムがリリースされます。 Stable チャネルからのリリースは、このチャネルからの次のリリースが利用可能になるまで、サポート対象と見なされます。
+Stable チャネルは、組織での広範な展開を目的としており、ほとんどのユーザーに適したチャネルです。 これはすべてのチャネルの中で最も安定しており、前の Beta チャネル リリースに含まれていた機能セットを安定させたものです。 約 6 週間ごとに新機能がリリースされます。 必要に応じて、セキュリティ更新プログラムと品質更新プログラムがリリースされます。 Stable チャネルからのリリースは、チャネルからの次のリリースが利用可能になるまでサービスが提供されます。
 
-###  <a name="beta-channel"></a>Beta チャネル
+### <a name="beta-channel"></a>Beta チャネル
 
-Beta チャネルは、組織内の実稼働環境への展開を目的とし、代表的なユーザーのグループを対象としています。 サポートされているリリースであり、Beta からの各リリースは、このチャネルからの次のリリースが利用可能になるまでサポートされます。 ご利用環境で想定どおりに動作するかどうかを検証するための絶好の機会であり、問題が発生した場合は、リリースが Stable チャネルに公開される前に報告することができます。 約 6 週間ごとに新機能がリリースされます。 必要に応じて、セキュリティ更新プログラムと品質更新プログラムがリリースされます。
+Beta チャネルは、組織内の実稼働環境への展開を目的とし、代表的なユーザーのグループを対象としています。 これはサポートされているリリースであり、Beta からの各リリースは、このチャネルからの次のリリースが利用可能になるまでサービスが提供されます。 ご利用環境で想定どおりに動作するかどうかを検証するための絶好の機会であり、問題が発生した場合は、リリースが Stable チャネルに公開される前に報告することができます。 約 6 週間ごとに新機能がリリースされます。 必要に応じて、セキュリティ更新プログラムと品質更新プログラムがリリースされます。
 
-###  <a name="dev-channel"></a>Dev チャネル
+### <a name="dev-channel"></a>Dev チャネル
 
 Dev チャネルは、Canary チャネルよりも高い品質で、Microsoft Edge の最新機能を計画および開発することを目的としています。 このチャネルでは、次の Beta リリースの前にいち早く新機能を確認し、準備できます。
 
-###  <a name="canary-channel"></a>Canary チャネル
+### <a name="canary-channel"></a>Canary チャネル
 
 Canary チャネルは毎日リリースされ、すべてのチャネル内でも最先端で試験的な内容です。 ここには、最新の投資内容が反映されます。 リリース頻度の性質上、長い目で見ると問題が発生することもあるため、Canary リリースを使用する場合は、別のチャネルを並行インストールすることもご検討ください。
 
-##  <a name="see-also"></a>関連項目
+## <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
 - [チャネル ダウンロード](https://aka.ms/EdgeEnterprise)

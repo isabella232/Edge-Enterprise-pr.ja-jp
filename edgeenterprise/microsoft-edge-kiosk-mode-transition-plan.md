@@ -3,19 +3,19 @@ title: キオスク モードの移行を計画する
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 02/05/2021
+ms.date: 02/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: キオスク モードの移行を計画する
-ms.openlocfilehash: 2a82852f10f2a842f28029738e72f72de4c53c41
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: b563f7ac773fb295d42e2b27b1259af321ce5f70
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447851"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617743"
 ---
 # <a name="plan-your-kiosk-mode-transition"></a>キオスク モードの移行を計画する
 
@@ -47,23 +47,29 @@ Microsoft Edge でキオスクをセットアップするためのガイドと�
 |[[ホーム] ボタンを表示する](./microsoft-edge-policies.md#showhomebutton) (ポリシー)|N|Y|89|Y|
 |[お気に入りを管理する](./microsoft-edge-policies.md#managedfavorites) (ポリシー)|N|Y|89|Y|
 |[プリンターを有効化](./microsoft-edge-policies.md#printingenabled) (ポリシー)|Y|Y|89|Y|
-|[新しいタブ ページの URLを構成する](./microsoft-edge-policies.md#newtabpagelocation) (ポリシー)|N|Y||Y|
+|[新しいタブ ページの URLを構成する](./microsoft-edge-policies.md#newtabpagelocation) (ポリシー)|N|Y|89|Y|
 |[セッションの終了] ボタン | N| Y| 89|Y|
 |すべての内部 Microsoft Edge URL はブロックされます (*edge://downloads* および *edge://print* を除く) |N|Y|89|Y|
 | Ctrl + N がブロックされています (新しいウィンドウを開く) | Y | Y | 89 |Y|
 | Ctrl + T がブロックされています (新しいタブを開く) |Y | Y | 89 |Y|
 |設定と詳細 (...) では、必要なオプションだけが表示されます。  |Y |Y |89 |Y|
-|ブラウザーからの他のアプリケーションの起動を制限する|Y|Y|90/91|Y|
-|UI 印刷設定のロックダウン|Y|Y|90/91|Y|
-|[新しいタブ ページをホーム ページとして設定する](./microsoft-edge-policies.md#homepageisnewtabpage) (ポリシー)|-|-|TBD|Y|
+|ブラウザーからの他のアプリケーションの起動を制限する|Y|Y|90|Y|
+|UI 印刷設定のロックダウン|Y|Y|90|Y|
+|[新しいタブ ページをホーム ページとして設定する](./microsoft-edge-policies.md#homepageisnewtabpage) (ポリシー)|N|Y|90|Y|
 
 > [!NOTE]
 > Microsoft Edge のリリース スケジュールについては、「[Microsoft Edge リリース スケジュール](microsoft-edge-release-schedule.md)」を参照してください。
 
 **手順 2: Microsoft Edge で新しいキオスクをテストします。** Microsoft Edge で、キオスク モードの設定をテストすることをお勧めします。 キオスク モードをすばやく簡単にテストする方法は、次に説明するように、Windows の設定を使ってシングル アプリとして割り当てられたアクセスを構成することです。
 
-1. 最新の Windows 10 Insider Preview (バージョン 20215 以降) をインストールします。 「[Windows 10 Insider Preview ビルドの概要](/windows-insider/get-started)」の指示に従います。
-2. 最新の [Microsoft Edge Stable チャネル](https://www.microsoft.com/edge) (バージョン 87 以降) をインストールします。  最新の機能をテストするには、最新の [Microsoft Edge Beta チャネル](https://www.microsoftedgeinsider.com/download) (バージョン 89 以降) をダウンロードできます。
+1. 次の表に示すオペレーティング システムの最小システム更新プログラム。
+
+|オペレーティング システム|バージョン|更新プログラム|
+|--|--|--|
+|Windows 10 | 2004 以降|[KB4601382 以降](https://support.microsoft.com/topic/february-24-2021-kb4601382-os-builds-19041-844-and-19042-844-preview-1a7ed2b4-017d-2644-a1e8-dd6bf14cba76) |
+|Windows 10| 1909| [KB4601380 以降](https://support.microsoft.com/topic/february-16-2021-kb4601380-os-build-18363-1411-preview-2e3c38e1-a947-1033-8006-a30f3806da18)|
+
+2. 最新の機能をテストするには、最新の [Microsoft Edge 安定チャネル](https://www.microsoftedgeinsider.com/download) (バージョン 89 以上) をダウンロードできます。
 
    > [!IMPORTANT]
    > デバイス レベルのインストールが必要であるため、Canary チャネルはサポートされていません。
@@ -82,13 +88,13 @@ Microsoft Edge でキオスクをセットアップするためのガイドと�
 
 6. **[キオスク アプリを選ぶ]**  ページで、**[Microsoft Edge]** を選択し、 **[次へ]** をクリックします。
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="キオスク モード - アプリを選ぶ":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5c-choose-a-kiosk-app.png" alt-text="キオスクを選択する - 画面全体のデジタル記号":::
 
 7. Microsoft Edge がキオスク モードで実行しているときの表示方法について、次のいずれかのオプションを選択します。
 
    - デジタル/対話型サイネージ - 全画面表示モードで特定のサイトを表示し、Microsoft Edge を実行します。
    - パブリック ブラウザー - Microsoft Edge の限定的な複数タブのバージョンを実行します。
-
+ 
     :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="キオスク モードの表示 - 全画面表示デジタル署名":::
 
 8.  **[次へ]** を選択します。

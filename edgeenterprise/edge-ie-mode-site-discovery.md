@@ -1,23 +1,26 @@
 ---
 title: Enterprise Site Discovery ステップ バイ ステップ ガイド
-ms.author: cjacks
+ms.author: collw
 author: appcompatguy
 manager: saudm
-ms.date: 04/07/2020
+ms.date: 05/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Enterprise Site Discovery を使用して IE モードを準備する
-ms.openlocfilehash: 2557544a93222b03aaa0961149aa0d3c5d7d8806
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: f6298b801cceeb96d9285f3597de2a6abe8ee36e
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447721"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617477"
 ---
 # <a name="enterprise-site-discovery-step-by-step-guide"></a>Enterprise Site Discovery ステップ バイ ステップ ガイド
+
+>[!Note]
+> Internet Explorer 11 デスクトップ アプリケーションは廃止され、2022 年 6 月 15 日にサポートが終了します (スコープ内の一覧については、[FAQ を参照してください](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549))。 現在使用しているものと同じ IE11 アプリとサイトを、Internet Explorer モードの Microsoft Edge で開くことができます。 [こちらをご覧ください](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)。
 
 この記事は、Microsoft Endpoint Configuration Manager で Enterprise Site Discovery を使用するためのステップ バイ ステップ ガイドです。
 

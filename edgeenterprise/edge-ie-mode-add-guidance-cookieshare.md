@@ -3,21 +3,24 @@ title: Microsoft Edge から Internet Explorer への Cookie の共有
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 12/21/2020
+ms.date: 05/19/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 'Microsoft Edge から Internet Explorer へと Cookie を共有する方法 '
-ms.openlocfilehash: d94c1337b7a3dbee789efb16e9c8b0a5ebc2c23b
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 563179852ff23142b540345222ba7e943547535d
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447741"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617467"
 ---
 # <a name="cookie-sharing-from-microsoft-edge-to-internet-explorer"></a>Microsoft Edge から Internet Explorer への Cookie の共有
+
+>[!Note]
+> Internet Explorer 11 デスクトップ アプリケーションは廃止され、2022 年 6 月 15 日にサポートが終了します (スコープ内の一覧については、[FAQ を参照してください](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549))。 現在使用しているものと同じ IE11 アプリとサイトを、Internet Explorer モードの Microsoft Edge で開くことができます。 [こちらをご覧ください](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)。
 
 この記事では、Internet Explorer モードの使用中に、Microsoft Edge プロセスから Internet Explorer プロセスへのセッション Cookie の共有を構成する方法について説明します。
 
