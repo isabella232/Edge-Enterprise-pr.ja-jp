@@ -1,4 +1,4 @@
-# last revised 03/31/2021
+# last revised 05/03/2021
 - name: Microsoft Edge エンタープライズのドキュメント
   href: index.yml
 - name: Microsoft Edge ドキュメント
@@ -49,8 +49,6 @@
       items:
         - name: ポリシー マッピングの概要
           href: microsoft-edge-policy-map-overview.md
-        - name: Microsoft Edge Legacy から Microsoft Edge ポリシーへのマッピング
-          href: microsoft-edge-policy-map-legacy-to-newedge.md
         - name: Google Chrome から Microsoft Edge ポリシーへのマッピング
           href: microsoft-edge-policy-map-chrome-to-newedge.md
     - name: サポートされるオペレーティング システム
@@ -61,8 +59,6 @@
       href: microsoft-edge-supported-languages.md
     - name: Microsoft Edge 用システム更新
       items:
-        - name: 旧バージョンの Microsoft Edge にアクセスする方法
-          href: microsoft-edge-sysupdate-access-old-edge.md
         - name: Microsoft Edge をサポートする Windows 更新プログラム
           href: microsoft-edge-sysupdate-windows-updates.md
 - name: Microsoft Edge の展開
@@ -83,6 +79,8 @@
       href: configure-microsoft-edge.md
     - name: Intune で Windows 用に構成する
       href: /mem/intune/configuration/administrative-templates-configure-edge/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
+    - name: ポリシーによるサイトごとの構成
+      href: Per-Site-Configuration-by-Policy.md
     - name: モバイル デバイス管理で Windows 用に構成する
       href: configure-edge-with-mdm.md
     - name: .plist を使用して macOS 用に構成する
@@ -91,6 +89,8 @@
       href: configure-microsoft-edge-on-mac-jamf.md
 - name: Microsoft Edge エンタープライズ機能を使用する
   items:
+    - name: 仮想化デスクトップ インフラストラクチャ用の Edge
+      href: edge-for-virtualized-desktop-infrastructure.md
     - name: 構成とテスト
       href: edge-configuration-and-experiments.md
     - name: ID サポートと構成
@@ -99,8 +99,20 @@
       href: microsoft-edge-enterprise-state-roaming.md
     - name: キオスク モードの切り替えを計画する
       href: microsoft-edge-kiosk-mode-transition-plan.md
-    - name: Microsoft Edge キオスク モードを構成する
+    - name: Microsoft Edge キオスク モードの構成
       href: microsoft-edge-configure-kiosk-mode.md
+    - name: Microsoft Edge 拡張機能の管理
+      items:
+        - name: エンタープライズ内の拡張機能の管理
+          href: microsoft-edge-manage-extensions.md
+        - name: グループ ポリシーを使用した拡張機能の管理
+          href: microsoft-edge-manage-extensions-policies.md
+        - name: セルフ ホスト Microsoft Edge 拡張機能
+          href: microsoft-edge-manage-extensions-webstore.md
+        - name: ExtensionSettings ポリシーの詳細ガイド
+          href: microsoft-edge-manage-extensions-ref-guide.md
+        - name: 拡張機能に関するよく寄せられる質問
+          href: microsoft-edge-manage-extensions-faq.md
     - name: Microsoft Edge エンタープライズ同期
       items:
         - name: Microsoft Edge の同期を構成する
@@ -140,17 +152,21 @@
         - name: ファイル拡張子と Internet Explorer モードの関連付け
           href: edge-ie-mode-add-guidance-filetype-associations.md
         - name: IE モードのトラブルシューティングと FAQ
-          href: edge-ie-mode-faq.md
+          href: edge-ie-mode-faq.yml
 - name: Microsoft Edge のセキュリティ
   items:
     - name: ビジネス向けセキュリティ
       href: ms-edge-security-for-business.md
+    - name: 潜在的に危険なファイルのダウンロード中断
+      href: microsoft-edge-security-downloads-interruptions.md
     - name: Microsoft Edge エンドポイントの許可リスト
       href: microsoft-edge-security-endpoints.md
     - name: データ損失防止 (DLP)
       href: microsoft-edge-security-dlp.md
     - name: ユーザーにパスワード モニターを自動有効化
       href: microsoft-edge-security-password-monitor.md
+    - name: Microsoft Edge マネージャーのセキュリティ
+      href: microsoft-edge-security-password-manager-security.md
     - name: 望ましくない可能性のあるアプリケーションから保護する
       href: microsoft-edge-potentially-unwanted-apps.md
     - name: Azure AD 条件付きアクセスのサポート
@@ -197,6 +213,8 @@
           href: edge-learnmore-regex.md
         - name: Microsoft Edge データをリセットする
           href: edge-learnmore-reset-data-in-cloud.md
+        - name: ユーザー データ ディレクトリ変数
+          href: edge-learnmore-create-user-directory-vars.md
         - name: 企業向け Microsoft Edge ロールバックの使用
           href: edge-learnmore-rollback.md
 - name: Microsoft Edge ビデオ
