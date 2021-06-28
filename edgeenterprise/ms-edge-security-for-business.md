@@ -1,21 +1,21 @@
 ---
 title: Microsoft Edge ビジネス向けのセキュリティ
-ms.author: seanlynd
+ms.author: collw
 author: seanongit
 manager: chuckf
-ms.date: 02/10/2021
+ms.date: 04/20/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge ビジネス向けのセキュリティ
-ms.openlocfilehash: 674fad396bed62058c3187e00f4938d99cc57868
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 59de0c5ddfa6b34b3d091e4832e2a8fe42dffd42
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447071"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617067"
 ---
 # <a name="microsoft-edge-security-for-your-business"></a>Microsoft Edge ビジネス向けのセキュリティ
 
@@ -27,9 +27,9 @@ Microsoft Edge は、Google Chrome の中核と同じプロジェクトである
 
 ### <a name="highest-rated-protection-against-phishing-and-malware"></a>フィッシングと悪意のあるソフトウェアに対する最も評価が高い保護
 
-Microsoft Edge に組み込まれた SmartScreen は、NSS Lab の独立した調査によると、Google Chrome の Safe Browsing よりも多くの [フィッシング](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Phishing_Report_Q2_2020.pdf) と [マルウェア](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Malware_Report_Q2_2020.pdf) の試みをブロックします。 SmartScreen はユーザーがオンラインで作業している間、サイトやダウンロードのリアルタイムの評判チェックを提供します。また、SmartScreen は [Microsoft インテリジェント セキュリティ グラフ](https://www.microsoft.com/microsoft-365/windows/intelligent-security)の一部です。これは、Microsoft のグローバルなアセット、研究者、パートナーによって生成された信号や分析情報を引き出します。 危険なサイトやダウンロードのクラウド ベースの動的リストに対してチェックを実行することで、Microsoft Edge はすぐに消える一時的な脅威さえも検出してブロックするのに役立ちます。  
+Microsoft Edge に組み込まれた SmartScreen は、NSS Lab の独立した調査によると、Google Chrome の Safe Browsing よりも多くの [フィッシング](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWASN1) と [マルウェア](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWANMW) の試みをブロックします。 SmartScreen はユーザーがオンラインで作業している間、サイトやダウンロードのリアルタイムの評判チェックを提供します。また、SmartScreen は [Microsoft インテリジェント セキュリティ グラフ](https://www.microsoft.com/microsoft-365/windows/intelligent-security)の一部です。これは、Microsoft のグローバルなアセット、研究者、パートナーによって生成された信号や分析情報を引き出します。 危険なサイトやダウンロードのクラウド ベースの動的リストに対してチェックを実行することで、Microsoft Edge はすぐに消える一時的な脅威さえも検出してブロックするのに役立ちます。  
 
-[SmartScreen が組み込まれている Microsoft Edge](//DeployEdge/microsoft-edge-security-smartscreen) は [NSS Labs のフィッシングに対する保護](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Phishing_Report_Q2_2020.pdf)テスト中にフィッシング試行を 95.5%、[NSSLabs のマルウェア対策](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Malware_Report_Q2_2020.pdf)テスト中に悪意のあるソフトウェアによる試行を 98.5% ブロックしました。一方、Chrome のセーフ ブラウジングの比率はそれぞれ 86.9% と 86.0% でした。
+[Microsoft Edge SmartScreen](//DeployEdge/microsoft-edge-security-smartscreen)は、[NSS Labs のフィッシング保護](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWASN1)テスト中にフィッシング試行の 95.5% と[NSS Labsのマルウェア保護](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWANMW)テスト中にマルウェアの試行の 98.5% をブロックしました。Chrome の Safe Browsing の同レートは、それぞれ 86.9% と 86.0% です。
 
 ### <a name="the-only-browser-on-windows-10-that-natively-supports-hardware-isolation"></a>Windows 10 でハードウェア分離をネイティブでサポートする唯一のブラウザー
 

@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 最新の Web サイトに対応するための Internet Explorer から Microsoft Edge へのリダイレクト
-ms.openlocfilehash: ffb295b5c844d15fee2b0fa23e78be9cd34ef03f
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 7cd74eda6d8ada7647862ea69f77a982713f0c14
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447591"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617297"
 ---
 # <a name="redirection-from-internet-explorer-to-microsoft-edge-for-compatibility-with-modern-web-sites"></a>最新の Web サイトに対応するための Internet Explorer から Microsoft Edge へのリダイレクト
 
@@ -23,6 +23,9 @@ ms.locfileid: "11447591"
 > この記事は Microsoft Edge 安定バージョン 87 以降に適用されます。
 
 ## <a name="overview"></a>概要
+
+>[!Note]
+> Internet Explorer 11 デスクトップ アプリケーションは廃止され、2022 年 6 月 15 日にサポートが終了します (スコープ内の一覧については、[「FAQ」](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)を参照してください)。 現在使用しているのと同じ IE11 アプリとサイトは、Microsoft Edge の Internet Explorer モードで開くことができます。 [詳細については、こちらを参照してください](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)。
 
 最新の Web サイトの多くが、Internet Explorer と互換性のないデザインを採用しています。 Internet Explorer のユーザーが互換性のないパブリック サイトにアクセスすると、そのサイトがブラウザーと互換性のないものであることを通知するメッセージが表示され、手動で別のブラウザーに切り替える必要があります。
 
@@ -32,6 +35,15 @@ Microsoft Edge 安定バージョン 87 から、手動で別のブラウザー�
 
 > [!NOTE]
 > Microsoft は、Internet Explorer との互換性がないことが知られているすべてのサイトの一覧を保持しています。 詳細については、「[互換性のないサイトの一覧の更新を要求する](/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)」を参照してください。
+
+## <a name="prerequisites"></a>前提条件
+- Microsoft Edge 安定版 87 以降
+- Windows のバージョン
+    - Windows 10 バージョン 1709 以降
+    - Windows 8.1
+    - Windows 7
+
+
 
 ## <a name="redirection-experience"></a>リダイレクト エクスペリエンス
 
@@ -88,7 +100,7 @@ BHO の必要性に加えて、**RedirectSitesFromInternetExplorerRedirectMode**
 >
 >ドメインに参加しているか、モバイル デバイス管理 (MDM) に登録されているデバイスを使用している場合、このオプションは表示されません。
 >
-> 代わりに、ユーザーに Internet Explorer モードでサイトを読み込ませる場合は、[Internet Explorer モード テストを許可する](./microsoft-edge-policies.md#allow-internet-explorer-mode-testing)ポリシーを構成します。
+> 代わりに、ユーザーに Internet Explorer モードでサイトを読み込ませる場合は、[Internet Explorer モード テストを許可する](./microsoft-edge-policies.md#intranetredirectbehavior)ポリシーを構成します。
 
 ### <a name="policy-hideinternetexplorerredirectuxforincompatiblesitesenabled"></a>ポリシー: HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
 

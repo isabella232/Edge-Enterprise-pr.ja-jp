@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Regular Expression 2 の構文
-ms.openlocfilehash: 9654a25d2c0474601fb719b145ebb1f59241a6d9
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 5d7026a034300e098497c63911f7516f72877c5d
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980438"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617317"
 ---
-# Regular Expression 2 (re2.h) の構文
+# <a name="regular-expression-2-re2h-syntax"></a>Regular Expression 2 (re2.h) の構文
 
 正規表現は、文字列のセットを記述するための表記法です。 文字列が正規表現で記述されたセット内にある場合、正規表現は多くの場合文字列と一致します。
 
@@ -35,7 +35,7 @@ ms.locfileid: "10980438"
 
 PCRE、PERL、VIM で利用できるいくつかの構文も一覧表示します。
 
-##  <a name="syntax-tables"></a>構文表
+## <a name="syntax-tables"></a>構文表
 
 | 単一文字式の種類 | 例 |
 | --- | --- |
@@ -51,12 +51,12 @@ PCRE、PERL、VIM で利用できるいくつかの構文も一覧表示しま�
 | 否定 Unicode 文字クラス (1 文字の名前) | \PN |
 | 否定 Unicode 文字クラス | \P{Greek} |
 
-| | 合成 |
+|&nbsp;| 合成 |
 | --- | --- |
 | xy | x の後に y が続く |
 | x\|y | x または y (x 優先) |
 
-| | 反復 |
+|&nbsp;| 反復 |
 | --- | --- |
 | x\* | ゼロ以上の x、より多くを優先 |
 | x+ | 1 以上の x、より多くを優先 |
@@ -77,7 +77,7 @@ PCRE、PERL、VIM で利用できるいくつかの構文も一覧表示しま�
 
 実装の制限：カウントフォーム x{n,m}、x{n,}、および x{n} は、1000を超える最小または最大の繰り返しカウントを作成するフォームを拒否します。 無制限の繰り返しはこの制限の対象ではありません。
 
-| | 所有格の繰り返し |
+|&nbsp;| 所有格の繰り返し |
 | --- | --- |
 | x\*+ | ゼロ以上の x、所有格 (サポートされていません) |
 | x++ | 1 以上の x、所有格 (サポートされていません) |
@@ -86,7 +86,7 @@ PCRE、PERL、VIM で利用できるいくつかの構文も一覧表示しま�
 | x{n,}+ | n 以上の x、所有格 (サポートされていません) |
 | x{n}+ | ちょうど n x、所有格 (サポートされていません) |
 
-| | グループ化 |
+|&nbsp;| グループ化 |
 | --- | --- |
 | (re) | 番号付きキャプチャグループ (サブマッチ) |
 | (?P&lt;name&gt;re) | 名前付きの &amp; 番号付きキャプチャグループ (サブマッチ) |
@@ -101,7 +101,7 @@ PCRE、PERL、VIM で利用できるいくつかの構文も一覧表示しま�
 | re@&gt; | re の所有格マッチ (サポートされていません) VIM |
 | %(re) | 非キャプチャグループ (サポートされていません) VIM |
 
-| | フラグ |
+|&nbsp;| フラグ |
 | --- | --- |
 | i | 大文字と小文字を区別しない (規定値は false) |
 | m | 複数行モード: ^ および $ は、開始/終了テキストに加えて開始/終了行に一致します (規定値は false) |
@@ -110,7 +110,7 @@ PCRE、PERL、VIM で利用できるいくつかの構文も一覧表示しま�
 
 フラグの構文は、xyz (設定) または -xyz (クリア) または xy-z (設定 xy、クリア z ) です。
 
-|  | 空の文字列 |
+|&nbsp;| 空の文字列 |
 | --- | --- |
 | ^ | テキストまたは行の先頭 (m=true) |
 | $ | テキスト (\Zではなく\z) または行 (m=true) の終わり |
@@ -141,7 +141,7 @@ PCRE、PERL、VIM で利用できるいくつかの構文も一覧表示しま�
 | \%23c | 23 列目 (サポートされていません) VIM |
 | \%23v | バーチャルの 23 列目 (サポートされていません) VIM |
 
-|  | エスケープ シーケンス |
+|&nbsp;| エスケープ シーケンス |
 | --- | --- |
 | \a | bell (≡ \007) |
 | \f | フォームフィード (≡ \014) |
@@ -182,16 +182,16 @@ PCRE、PERL、VIM で利用できるいくつかの構文も一覧表示しま�
 | \%u1234 | Unicode 文字 0x1234 (サポートされていません) VIM |
 | \%U12345678 | Unicode 文字 0x12345678 (サポートされていません) VIM |
 
-|  | 文字クラス要素 |
+|&nbsp;| 文字クラス要素 |
 | --- | --- |
-| 〇 | 1 文字 |
+| x | 1 文字 |
 | A-Z | 文字範囲 (両端を含む) |
 | \d | Perl 文字クラス |
 | [:foo:] | ASCII 文字クラス foo |
 | \p{Foo} | Unicode 文字クラス Foo |
 | \pF | Unicode 文字クラス F (1文字の名前) |
 
-|  | 文字クラス要素としての名前付き文字クラス |
+|&nbsp;| 文字クラス要素としての名前付き文字クラス |
 | --- | --- |
 | [\d] | 数字 (≡ \d) |
 | [^\d] | 数字以外 (≡ \D) |
@@ -232,7 +232,7 @@ PCRE、PERL、VIM で利用できるいくつかの構文も一覧表示しま�
 | [[:word:]] | 単語の文字 (≡ [0-9A-Za-z\_]) |
 | [[:xdigit:]] | 16 進数 (≡ [0-9A-Fa-f]) |
 
-| | Unicode文字クラス名 -- 一般カテゴリ |
+|&nbsp;| Unicode文字クラス名 -- 一般カテゴリ |
 | --- | --- |
 | C | その他 |
 | ［CC］ | control |
@@ -433,7 +433,7 @@ PCRE、PERL、VIM で利用できるいくつかの構文も一覧表示しま�
 | イー語 |
 | Zanabazar\_Square |
 
-|  | Vim 文字クラス |
+|&nbsp;| Vim 文字クラス |
 | --- | --- |
 | \i | 識別子文字 (サポートされていません) VIM |
 | \I | \i 数字を除く (サポートされていません) VIM |
@@ -470,7 +470,7 @@ PCRE、PERL、VIM で利用できるいくつかの構文も一覧表示しま�
 | \V | verynomagic (サポートされていません) VIM |
 | \Z | Unicode 結合文字の違いを無視する (サポートされていません) VIM |
 
-|  | Magic |
+| &nbsp; | Magic |
 | --- | --- |
 | (?{code}) | 任意の Perl コード (サポートされていません) PERL |
 | (??{code}) | 延期された任意のPerlコード (サポートされていません) PERL |
@@ -500,13 +500,13 @@ PCRE、PERL、VIM で利用できるいくつかの構文も一覧表示しま�
 | (\*BSR\_ANYCRLF) | \R 規則を設定する (サポートされていません) PCRE |
 | (\*BSR\_UNICODE) | (サポートされていません) PCRE |
 
-##  <a name="content-license"></a>コンテンツ ライセンス
+## <a name="content-license"></a>コンテンツ ライセンス
 
 > [!NOTE]
 > このページの一部の情報は、Chromium.org によって作成および共有されている著作物に基づいており、[Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/) に記載されている条項に従って使用されています。 元のページは[こちら](https://github.com/google/re2/wiki/Syntax)です。
   
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />この著作物は、<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a> に従って使用許諾されています。
 
-##  <a name="see-also"></a>関連項目
+## <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)

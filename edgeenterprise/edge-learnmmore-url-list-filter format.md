@@ -10,21 +10,21 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge の URLBlocklist ポリシーおよび URLAllowlist ポリシーで使用するフィルター形式について説明します。
-ms.openlocfilehash: 5a0eff1ca7be17fccd1087716d426b13ea302847
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 94378a9193269c73a7439dd019d6cb2d6ac547df
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980445"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617267"
 ---
-# URL 一覧ベースのポリシーのフィルター形式
+# <a name="filter-format-for-url-list-based-policies"></a>URL 一覧ベースのポリシーのフィルター形式
 
 この記事では、Microsoft Edge の URL 一覧ベースのポリシー ([URLBlocklist](microsoft-edge-policies.md#urlblocklist)、[URLAllowList](microsoft-edge-policies.md#urlallowlist)、[CertificateTransparencyEnforcementDisabledForUrls](microsoft-edge-policies.md#certificatetransparencyenforcementdisabledforurls) などのポリシー) に使用するフィルター形式について説明します。
 
 > [!NOTE]
 > この記事は、Microsoft Edge version 77 以降に適用されます。
 
-##  <a name="the-filter-format"></a>フィルター形式
+## <a name="the-filter-format"></a>フィルター形式
 
 フィルター形式は次のとおりです。
 
@@ -37,12 +37,12 @@ ms.locfileid: "10980445"
 | フィールド | 説明 |
 | --- | --- |
 | **scheme** (*オプション*) | http://、https://、ftp://、edge:// などを指定できます。 |
-| **host** (*必須*) | 有効なホスト名または IP アドレスを指定します。ワイルドカード ("\*") を使用できます。 サブドメインの照合を無効にするには、**host** の前にオプションのドット (".") を含めます。 |
+| **host** (*必須*) | 有効なホスト名である必要があります。ワイルドカード ("\*") を使用できます。 サブドメインの照合を無効にするには、**host** の前にオプションのドット (".") を含めます。 単一の IP アドレス リテラル ホスト名を指定できますが、IP アドレス リテラルホスト名に対してワイルドカードはサポートされていません。 |
 | **port** (*オプション*) | 有効な値は 1 ～ 65535 です。 |
 | **path** (*オプション*) | パスには任意の文字列を使用できます。 |
 | **query** (*オプション*) | **query** には、キーと値またはキーのみのトークンをアンパサンド ("&") で区切って指定します。 キーと値のトークンは、等号 ("=") で区切ります。 プレフィックスの一致を指定するには、**query** の最後にアスタリスク ("\*") を使用できます。 |
 
-##  <a name="comparing-the-filter-format-to-the-url-format"></a>フィルター形式と URL 形式の比較
+## <a name="comparing-the-filter-format-to-the-url-format"></a>フィルター形式と URL 形式の比較
 
 フィルター形式は URL 形式に似ていますが、次の点が異なります。
 
@@ -51,7 +51,7 @@ ms.locfileid: "10980445"
 - **host** としてワイルドカード ("*") を使用できます。また、プレフィックスとしてドット (".") を付けることができます。
 - **host** のサフィックスとして、スラッシュ ("/") またはドット (".") を使用できます。 この場合、サフィックスは無視されます。
 
-##  <a name="filter-selection-criteria"></a>フィルター選択条件
+## <a name="filter-selection-criteria"></a>フィルター選択条件
 
 URL 用に選択されるフィルターは、次のフィルター選択規則を処理した後に検出される、最も明確な一致です。
 
@@ -65,7 +65,7 @@ URL 用に選択されるフィルターは、次のフィルター選択規則�
    >[!NOTE]
    >フィルターの一致がない場合、既定の動作では、URL 要求が許可されます。
 
-##  <a name="example-filter-selection-criteria"></a>フィルター選択条件の例
+## <a name="example-filter-selection-criteria"></a>フィルター選択条件の例
 
 この例では、"https://sub.contoso.com/docs" との一致を検索するときに、フィルター選択で次の処理が行われます。
 
@@ -75,21 +75,21 @@ URL 用に選択されるフィルターは、次のフィルター選択規則�
 4. 残りのフィルターから、**path** のプレフィックスが "/docs" でないものはすべて削除されます。
 5. 残りのフィルターから、path のプレフィックスが最も長いフィルターが選択され、適用されます。 フィルターが見つからない場合は、選択プロセスが手順 1. から再び開始されます。 プロセスは、次のサブドメインで繰り返されます。
 
-###  <a name="additional-filter-information"></a>フィルターに関する追加情報
+### <a name="additional-filter-information"></a>フィルターに関する追加情報
 
 フィルターに、**host** のプレフィックスとしてドット (".") が含まれている場合は、**host** への正確な一致のみがフィルター選択されます。 次に、例を示します。
 
 - "contoso.com" (ドットなし) は "contoso.com"、"www.contoso.com"、および "sub.www.contoso.com" と一致します。
 - ".www.contoso.com" (ドットのプレフィックスあり) は、"www.contoso.com" にのみ一致します。
 
-標準またはカスタムの **schema** を使用できます。 サポートされている標準スキーマは次のとおりです。
+標準スキーマまたはカスタム **スキーマ**のいずれかを使用できます。 サポートされている標準スキーマは次のとおりです。
 
 - _about_、_blob_、_content_、_edge_、_cid_、_data_、_file_、_filesystem_、_ftp_、_gopher_、_http_、_https_、_javascript_、_mailto_、_ws_、_wss_
 
 その他の **schema** はカスタムの **schema** として処理されますが、許可されるパターンは _schema:*_ および _schema://*_ のみです。 次に、例を示します。
 
-- "custom:*" と "custom://*" は "custom:app" に一致します。
-- "custom:app" と "custom://app" は無効ですｌ
+- "custom:\*" または "custom://\*" は "custom:app" と一致します
+- "custom:app" と "custom://app" は無効です
 
 **schema** と **host** では、大文字と小文字が区別されません。 次に、例を示します。
 
@@ -99,13 +99,13 @@ URL 用に選択されるフィルターは、次のフィルター選択規則�
 
 - フィルター "http://contoso.com/path?query=A" は、"http://contoso.com/Path?query=A" または "http://contoso.com/path?Query=A" に一致しません。 "http://contoso.COM/path?query=A" には一致します。
 
-##  <a name="content-license"></a>コンテンツ ライセンス
+## <a name="content-license"></a>コンテンツ ライセンス
 
 > [!NOTE]
 > このページの一部の情報は、Chromium.org によって作成および共有されている著作物に基づいており、[Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/) に記載されている条項に従って使用されています。 元の [Chromium のページはこちら](https://www.chromium.org/administrators/url-blacklist-filter-format)です。
   
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />この著作物は、<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a> に従って使用許諾されています。
 
-##  <a name="see-also"></a>関連項目
+## <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)

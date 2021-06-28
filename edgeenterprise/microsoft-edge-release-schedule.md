@@ -1,21 +1,21 @@
 ---
 title: Microsoft Edge リリース スケジュール
 ms.author: aguta
-author: dan-wesley
+author: AndreaLBarr
 manager: srugh
-ms.date: 03/18/2021
+ms.date: 06/18/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge リリース スケジュール
-ms.openlocfilehash: a78c56d4c20da711eb73679dbe1c974bfac3c869
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 578a7a3c1a87aee1acc01715c735d5eea9ab67c0
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11448181"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617978"
 ---
 # <a name="microsoft-edge-release-schedule"></a>Microsoft Edge リリース スケジュール
 
@@ -41,10 +41,10 @@ Microsoft では、Microsoft Edge を新しい機能で更新する頻度を管�
 
 | バージョン | リリース状態 | Beta チャネル<br>リリースされる週 | Stable チャネル<br>リリースされる週 |
 |---------|-----|------|--------|
-| 88 | リリース日<br>バージョン | 2020 年 12 月 9 日<br>[88.0.705.18](./microsoft-edge-relnote-beta-channel.md#version-88070518-december-9) | 2021 年 1 月 21 日<br>[88.0.705.50](./microsoft-edge-relnote-stable-channel.md#version-88070550-january-21)|
-| **89** | リリース日<br>バージョン | 2021 年 2 月 3 日<br>[89.0.774.18](./microsoft-edge-relnote-beta-channel.md#version-89077418-february-3) | **2021 年 3 月 4 日**<br>**[89.0.774.45](./microsoft-edge-relnote-stable-channel.md#version-89077445-march-21)** |
-| **90** | リリース日<br>バージョン | **16-Mar-2021**<br>**[90.0.818.8](./microsoft-edge-relnote-beta-channel.md#version-9008188-march-16)** | 2021 年 4 月 15 日の週 |
-| 91 | ターゲットのリリース | 2021 年 4 月 27 日の週 | 2021 年 5 月 27 日の週 |
+| 88 | リリース日<br>バージョン | 2020 年 12 月 9 日<br>[88.0.705.18](/microsoft-edge-relnote-archive-beta-channel.md#version-88070518-december-9) | 2021 年 1 月 21 日<br>[88.0.705.50](/microsoft-edge-relnote-archive-stable-channel.md#version-88070550-january-21)|
+| 89 | リリース日<br>バージョン | 2021 年 2 月 3 日<br>[89.0.774.18](/microsoft-edge-relnote-beta-channel.md#version-89077423-february-8) | 2021 年 3 月 4 日<br>[89.0.774.45](/microsoft-edge-relnote-stable-channel.md#version-89077445-march-4) |
+| **90** | リリース日<br>バージョン | 16-Mar-2021<br>[90.0.818.8](/microsoft-edge-relnote-beta-channel.md#version-9008188-march-16) | **15-Apr-2021**<BR>**[90.0.818.39](/microsoft-edge-relnote-stable-channel#version-90081839-april-15)** |
+| **91** | リリース日<br>バージョン | **30-Apr-2021**<br>[91.0.864.11](/microsoft-edge-relnote-beta-channel.md#version-91086411-april-30) | **27-May-2021**<BR>**[91.0.864.37](/microsoft-edge-relnote-stable-channel#version-91086437-may-27)** |
 | 92 | ターゲットのリリース | 2021 年 6 月 8 日の週 | 2021 年 7 月 22 日の週 |
 | 93 | ターゲットのリリース | 2021 年 8 月 3 日の週 | 2021 年 9 月 2 日の週 |
 | 94 | ターゲットのリリース | 2021 年 9 月 1 日の週 | 2021 年 9 月 23 日の週 |
@@ -60,10 +60,10 @@ Microsoft では、Microsoft Edge を新しい機能で更新する頻度を管�
 
 Stable チャネルの日付参照（リリース済み/リリースされる週）は、プログレッシブ ロールアウトの開始を参照します。
 
-弊社はプログレッシブ ロールアウト モデルを使用しています。これは、特定のデバイスの新しいリリースの可用性が、今後数日にわたってずれる可能性があることを意味します。 詳細については、「[Microsoft Edge Stable チャネルのプログレッシブ ロールアウト](microsoft-edge-update-progressive-rollout.md)」を参照してください。
+弊社はプログレッシブ ロールアウト モデルを使用しています。これは、特定のデバイスの新しいリリースの可用性が、今後数日にわたってずれる可能性があることを意味します。 詳細については、「[Microsoft Edge Stable チャネルのプログレッシブ ロールアウト](/deployedge/microsoft-edge-update-progressive-rollout)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
-- [Microsoft Edge チャネル](microsoft-edge-channels.md)
+- [Microsoft Edge チャネル](/deployedge/microsoft-edge-channels)
 - [チャネル ダウンロード](https://www.microsoft.com/edge/business/download)
