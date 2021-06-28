@@ -1,21 +1,21 @@
 ---
 title: Microsoft Edge および Microsoft Defender Application Guard
 ms.author: srugh
-author: dan-wesley
+author: AndreaLBarr
 manager: seanlyn
-ms.date: 02/05/2021
+ms.date: 05/06/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge での Microsoft Defender Application Guard のサポート
-ms.openlocfilehash: 2dc1c5b35003c7de4fa474764c46a792bf1e3439
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 7374810eb19ada298963817844e52184c0271a8c
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447171"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617997"
 ---
 # <a name="microsoft-edge-support-for-microsoft-defender-application-guard"></a>Microsoft Edge での Microsoft Defender Application Guard のサポート
 
@@ -49,7 +49,25 @@ Application Guard は Windows 10 と Microsoft Edge 向けに設計されてお�
 
 ## <a name="whats-new"></a>新着情報
 
-新しい Microsoft Edge ブラウザーでの Application Guard のサポートは、Microsoft Edge 従来版と機能的に同等であり、いくつかの改善が含まれています。
+新しい Microsoft Edge ブラウザーでの Application Guard のサポートは、Microsoft Edge 従来版と機能的に同等ですが、いくつかの改善が含まれています。
+
+### <a name="favorites-synchronizing-from-the-host-to-the-container"></a>ホストからコンテナーに同期するお気に入り
+
+一部のお客様は、Application Guard のホスト ブラウザーとコンテナーの間でお気に入りの同期を求める場合があります。 Microsoft Edge 91 から、ユーザーはホストからコンテナーに自分のお気に入りを同期するために Application Guard を構成するオプションを使用できます。 これにより、コンテナーにも新しいお気に入りが表示されます。
+
+このサポートは、ポリシーを使用して制御できます。 Edge ポリシー [ApplicationGuardFavoritesSyncEnabled](/deployedge/microsoft-edge-policies#applicationguardfavoritessyncenabled) を更新して、お気に入りの同期を有効または無効にできます。
+
+> [!Note]
+> セキュリティ上の理由から、お気に入りの同期はホストからコンテナーの方向にのみ可能であり、それ以外の方法では可能ではありません。 ホストとコンテナー間で統一されたお気に入りの一覧を提供するために、コンテナー内でお気に入り管理を無効にしました。
+
+### <a name="identify-network-traffic-originating-from-the-container"></a>コンテナーから発信されるネットワーク トラフィックを識別する
+
+コンテナーから送信されるネットワーク トラフィックを識別する特定の構成で WDAG を使用しているお客様もいます。 このシナリオの一部は次のとおりです。
+
+- 一握りの信頼されていないサイトにのみアクセスを制限するには
+- コンテナーからのインターネット アクセスのみを許可するには
+
+Microsoft Edge バージョン 91 から、Application Guard コンテナーから発信されるネットワーク トラフィックにタグ付けするサポートが組み込まれたため、企業はプロキシを使用してトラフィックをフィルター処理し、特定のポリシーを適用できます。 ヘッダーを使用して [、ApplicationGuardTrafficIdentificationEnabled](/deployedge/microsoft-edge-policies#applicationguardtrafficidentificationenabled)を使用して、どのトラフィックがコンテナー経由か、ホスト経由かを識別できます。
 
 ### <a name="extension-support-inside-the-container"></a>コンテナー内の拡張機能サポート
 
@@ -111,7 +129,7 @@ Application Guard をインストールし、Microsoft Edge で構成および�
 
 ### <a name="does-application-guard-work-in-ie-mode"></a>Application Guard は IE モードで動作しますか?
 
-IE モードは Application Guard の機能をサポートしていますが、IE モードでのこの機能の使用はあまり想定されていません。 IE モードは信頼済み内部サイトのリストに対して展開されることが推奨されており、Application Guard は信頼されていないサイトのみを対象としています。 Application Guard によって信頼済みリソースとみなされるようにするため、すべての IE モードのサイトや IP アドレスが、ネットワークの分離ポリシーにも追加されていることを確認してください。
+IE モードでは Application Guard の機能がサポートされますが、IE モードではこの機能を多用することは想定していません。 IE モードは、信頼された内部サイトの一覧に展開することをお勧めします。Application Guardは信頼されていないサイト専用です。 Application Guard によって信頼済みリソースとみなされるようにするため、すべての IE モードのサイトや IP アドレスが、ネットワークの分離ポリシーにも追加されていることを確認してください。
 
 ### <a name="do-i-need-to-install-the-application-guard-chrome-extension"></a>Application Guard の Chrome 拡張機能をインストールする必要はありますか?
 
