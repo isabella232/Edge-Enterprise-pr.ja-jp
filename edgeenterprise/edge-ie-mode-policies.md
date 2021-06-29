@@ -1,23 +1,26 @@
 ---
 title: IE モード ポリシーの構成
 ms.author: collw
-author: dan-wesley
+author: AndreaLBarr
 manager: srugh
-ms.date: 03/29/2021
+ms.date: 05/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: IE モード ポリシーの構成
-ms.openlocfilehash: a2abf6f6ef71c1f30786031ef19b9633bfafc43f
-ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
+ms.openlocfilehash: d73a9649619a746fd1ef382f0911ad7e45255f06
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2021
-ms.locfileid: "11470165"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617437"
 ---
 # <a name="configure-ie-mode-policies"></a>IE モード ポリシーの構成
+
+>[!Note]
+> Internet Explorer 11 デスクトップ アプリケーションは廃止され、2022 年 6 月 15 日にサポートが終了します (スコープ内の一覧については、[FAQ を参照してください](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549))。 現在使用しているものと同じ IE11 アプリとサイトを、Internet Explorer モードの Microsoft Edge で開くことができます。 [こちらをご覧ください](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)。
 
 この記事では、IE モード ポリシーの構成方法について説明します。
 
@@ -30,8 +33,8 @@ IE モードを構成するには、次の3つの手順を実行する必要が�
 2. [サイトを Microsoft Edge から IE モードにリダイレクトする](#redirect-sites-from-microsoft-edge-to-ie-mode)
 3. (省略可能) [サイトを IE から Microsoft Edge にリダイレクトする](#redirect-sites-from-ie-to-microsoft-edge)
 
-    1. IE11 アプリを無効にする準備ができている場合は、「[Internet Explorer 11 を無効にする](https://docs.microsoft.com/deployedge/edge-ie-disable-ie11)」の手順に従います
-    2. それ以外の場合は、「[サイトを IE から Microsoft Edge にリダイレクトする](https://docs.microsoft.com/deployedge/edge-ie-mode-policies#redirect-sites-from-ie-to-microsoft-edge)」の残りの手順に従います
+    1. IE11 アプリを無効にする準備ができている場合は、「[Internet Explorer 11 を無効にする](/deployedge/edge-ie-disable-ie11)」の手順に従います
+    2. それ以外の場合は、「[サイトを IE から Microsoft Edge にリダイレクトする](/deployedge/edge-ie-mode-policies#redirect-sites-from-ie-to-microsoft-edge)」の残りの手順に従います
 
 > [!NOTE]
 > IE モードを有効にするポリシーは、Intune を使用して構成できます。 詳しくは、「[Microsoft Edge for Windows 10 を Microsoft Intune に追加する](/intune/apps/apps-windows-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json)」および「[Microsoft Intune を使って Microsoft Edge ポリシー設定を構成する](./configure-edge-with-intune.md)」をご覧ください。
@@ -44,7 +47,7 @@ Microsoft Edge (IE モード) 内で直接開くように、Internet Explorer �
 
 1. 最新の [Microsoft Edge ポリシー テンプレート](https://www.microsoft.com/en-us/edge/business/download)をダウンロードして使用します。
 2. グループ ポリシー エディターを開きます。
-3. **[コンピューターの構成]** > **[管理用テンプレート]** > **[Microsoft Edge]** をクリックします。
+3. **[ユーザーの構成/コンピューターの構成]** > **[管理用テンプレート]** > **[Microsoft Edge]** をクリックします。
 4. **[Internet Explorer 統合を構成する]** をダブルクリックします。
 5. **[有効]** を選択します。
 6. **[オプション]** で、ドロップダウンの値を次のように設定します。 
@@ -84,7 +87,7 @@ IE モードでは、Internet Explorer のエンタープライズ サイト リ
 1. サイト リスト XML を作成または再利用します。
     1. 要素 _\<open-in\>IE11\</open-in\>_ が含まれているすべてのサイトが IE モードで開くようになります。
 2. グループ ポリシー エディターを開きます。
-3. **[コンピューターの構成]** > **[管理用テンプレート]** > **[Windows コンポーネント]** > **[Internet Explorer]** をクリックします。
+3. **[ユーザーの構成/コンピューターの構成]** > **[管理用テンプレート]** > **[Windows コンポーネント]** > **[Internet Explorer]** をクリックします。
 4. **[エンタープライズ モードの IE Web サイト一覧を使う]** をダブルクリックします。
 5. **[有効]** を選択します。
 6. **[オプション]** で、Web サイト一覧の場所を入力します。 次のいずれかの場所を使用できます。
@@ -100,7 +103,7 @@ Microsoft Edge に対して別個のポリシーを使用して IE モードを�
 1. サイト リスト XML を作成または再利用します。
     1. 要素 _\<open-in\>IE11\</open-in\>_ が含まれているすべてのサイトが IE モードで開くようになります。
 2. グループ ポリシー エディターを開きます。
-3. **[コンピューターの構成]** > **[管理用テンプレート]** > **[Microsoft Edge]** をクリックします。
+3. **[ユーザーの構成/コンピューターの構成]** > **[管理用テンプレート]** > **[Microsoft Edge]** をクリックします。
 4. **[エンタープライズ モード サイト一覧を構成する]** をダブルクリックします。
 5. **[有効]** を選択します。
 6. **[オプション]** で、Web サイト一覧の場所を入力します。 次のいずれかの場所を使用できます。
@@ -118,7 +121,7 @@ IE モードは、ローカル イントラネット ゾーンのすべてのサ
 > ローカル イントラネット ゾーンには明示的に追加されたサイトが含まれますが、ヒューリスティックを使用してサイトをこのゾーンに割り当てます。 これには、ドットなしのホスト名 (**https**:**//payroll** など) や、プロキシ構成スクリプトでプロキシをバイパスするように構成されているサイトが含まれます。 外部関係者が DNS またはプロキシを制御している場合、Web サイトを強制的に IE モードにする可能性があります。
 
 1. ローカル グループ ポリシー エディターを開きます。
-2. **[コンピューターの構成]** > **[管理用テンプレート]** > **[Microsoft Edge]** をクリックします。
+2. **[ユーザーの構成/コンピューターの構成]** > **[管理用テンプレート]** > **[Microsoft Edge]** をクリックします。
 3. **[すべてのイントラネット サイトを Internet Explorer に送る]** をダブルクリックします。
 4. **[有効]** を選択し、**[OK]** または **[適用]** をクリックしてポリシー設定を保存します。
 
@@ -127,7 +130,7 @@ IE モードは、ローカル イントラネット ゾーンのすべてのサ
 Internet Explorer を必要としないサイトで、ユーザーが Internet Explorer を使用できないようにすることができます。 サイト リストにないサイトの場合、Internet Explorer ではそのサイトを自動的に Microsoft Edge にリダイレクトできます。
 
 1. グループ ポリシー エディターを開きます。
-2. **[コンピューターの構成]** > **[管理ツール]** > **[Windows コンポーネント]** > **[Internet Explorer]** の順にクリックします。
+2. **[ユーザーの構成/コンピューターの構成]** > **[管理用ツール]** > **[Windows コンポーネント]** > **[Internet Explorer]** をクリックします。
 3. **[エンタープライズ モード サイト一覧に含まれていないすべてのサイトを Microsoft Edge に送信します]** をダブルクリックします。
 4. **[有効]** を選択します。
 5. **[OK]** または **[適用]** をクリックして、これらの設定を保存します。

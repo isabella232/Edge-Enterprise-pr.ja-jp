@@ -1,25 +1,82 @@
 ---
 title: Microsoft Edge セキュリティ更新プログラムのリリースノート
 ms.author: aguta
-author: dan-wesley
+author: AndreaLBarr
 manager: srugh
-ms.date: 04/01/2021
+ms.date: 06/24/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge セキュリティ更新プログラムのリリースノート
-ms.openlocfilehash: 4598f71f940e996bc8dca6cb51ee0ef43cad3cc1
-ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
+ms.openlocfilehash: 128cda35223681adf582c7caa4d1ca6e21279fa1
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2021
-ms.locfileid: "11470215"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617927"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Microsoft Edge セキュリティ更新プログラムのリリースノート
 
 これらのリリース ノートでは、Microsoft Edge Stable チャネルの更新に含まれているセキュリティ修正プログラムに関する情報を提供します。
+
+## <a name="june-24-2021"></a>2021 年 6 月 24 日
+
+Microsoft は、Chromium プロジェクトの最新のセキュリティ更新プログラムを組み込んだ最新の  **Microsoft Edge Stable チャネル (バージョン 91.0.864.59)** をリリースしました。 詳細については、「[セキュリティ更新プログラム ガイド](https://msrc.microsoft.com/update-guide)」を参照してください
+
+この更新プログラムには、次の Microsoft Edge 固有の更新プログラムが含まれています:
+
+- [CVE-2021-34506](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-34506)
+- [CVE-2021-34475](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-34475)
+
+## <a name="june-18-2021"></a>2021 年 6 月 18 日
+
+Microsoft は、Chromium プロジェクトの最新のセキュリティ更新プログラムを組み込んだ最新の **Microsoft Edge Stable チャネル (バージョン 91.0.864.54)** をリリースしました。 この更新プログラムには、[CVE-2021-30554](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30554) が含まれています。これについては、Chromium チームにより実際に感染報告がある悪用が報告されています。 詳細については、「[セキュリティ更新プログラム ガイド](https://msrc.microsoft.com/update-guide)」を参照してください。
+
+## <a name="june-11-2021"></a>2021 年 6 月 11 日
+
+Microsoft は、Chromium プロジェクトの最新のセキュリティ更新プログラムを組み込んだ最新の **Microsoft Edge Stable チャネル (バージョン 91.0.864.48)** をリリースしました。 この更新プログラムには、[CVE-2021-30551](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30551) が含まれています。これについては、Chromium チームにより実際に感染報告がある悪用が報告されています。 詳細については、「[セキュリティ更新プログラム ガイド](https://msrc.microsoft.com/update-guide/)」を参照してください。
+
+## <a name="june-03-2021"></a>2021 年 6 月 3 日
+
+Microsoft は、Chromium プロジェクトの最新のセキュリティ更新プログラムを組み込んだ最新の  **Microsoft Edge Stable チャネル (バージョン 91.0.864.41)** をリリースしました。 詳細については、「[セキュリティ更新プログラム ガイド](https://msrc.microsoft.com/update-guide)」を参照してください。
+
+この更新プログラムには、次の Microsoft Edge 固有の更新プログラムが含まれています:
+- [CVE-2021-33741](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-33741)
+
+## <a name="may-27-2021"></a>2021 年 5 月 27 日
+
+Microsoft は、Chromium プロジェクトの最新のセキュリティ更新プログラムを組み込んだ最新の **Microsoft Edge Stable チャネル (バージョン 91.0.864.37)** をリリースしました。 詳細については、「[セキュリティ更新プログラム ガイド](https://msrc.microsoft.com/update-guide)」を参照してください。
+
+この更新プログラムには、次の Microsoft Edge 固有の更新プログラムが含まれています:
+- [CVE-2021-31982](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2021-31982)
+- [CVE-2021-31937](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2021-31937)
+
+## <a name="may-13-2021"></a>2021 年 5 月 13 日
+
+Microsoft は、Chromium プロジェクトの最新のセキュリティ更新プログラムを組み込んだ最新の **Microsoft Edge Stable チャネル (バージョン 90.0.818.62)** をリリースしました。 詳細については、「[セキュリティ更新プログラム ガイド](https://msrc.microsoft.com/update-guide)」を参照してください。
+
+## <a name="april-29-2021"></a>2021 年 4 月 29 日
+
+Microsoft は、Chromium プロジェクトの最新のセキュリティ更新プログラムを組み込んだ最新の **Microsoft Edge Stable チャネル (バージョン 90.0.818.51)** をリリースしました。 詳細については、「[セキュリティ更新プログラム ガイド](https://msrc.microsoft.com/update-guide)」を参照してください。
+
+## <a name="april-22-2021"></a>2021 年 4 月 22 日
+
+Microsoft は、Chromium プロジェクトの最新のセキュリティ更新プログラムを組み込んだ最新の **Microsoft Edge Stable チャネル (バージョン 90.0.818.46)** をリリースしました。 詳細については、「[セキュリティ更新プログラム ガイド](https://msrc.microsoft.com/update-guide)」を参照してください。
+
+## <a name="april-16-2021"></a>2021 年 4 月 16 日
+
+Microsoft は、Chromium プロジェクトの最新のセキュリティ更新プログラムを組み込んだ最新の **Microsoft Edge Stable チャネル (バージョン 90.0.818.41)** をリリースしました。 この更新プログラムには[CVE-2021-21224](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21224)が含まれているが、これは、Chromiumチームによって悪用されたと報告されています。 詳細については、「[セキュリティ更新プログラム ガイド](https://msrc.microsoft.com/update-guide)」を参照してください。
+
+
+## <a name="april-15-2021"></a>2021 年 4 月 15 日
+
+Microsoft は、Chromium プロジェクトの最新のセキュリティ更新プログラムを組み込んだ最新の **Microsoft Edge Stable チャネル (バージョン 90.0.818.39)** をリリースしました。 詳細については、「[セキュリティ更新プログラム ガイド](https://msrc.microsoft.com/update-guide)」を参照してください。
+
+## <a name="april-14-2021"></a>2021 年 4 月 14 日
+
+Microsoft は、Chromium プロジェクトの最新のセキュリティ更新プログラムを組み込んだ最新の **Microsoft Edge Stable チャネル (バージョン 89.0.774.77)** をリリースしました。 この更新プログラムには、[CVE-2021-21206](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21206) と [CVE-2021-21220](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21220) が含まれています。これについては、Chromium チームにより実際に感染報告がある悪用が報告されています。 詳細については、「[セキュリティ更新プログラム ガイド](https://msrc.microsoft.com/update-guide)」を参照してください。
 
 ## <a name="april-1-2021"></a>2021 年 4 月 1 日
 

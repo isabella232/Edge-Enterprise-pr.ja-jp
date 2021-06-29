@@ -3,21 +3,24 @@ title: エンタープライズ サイト構成戦略
 ms.author: shisub
 author: shisub
 manager: srugh
-ms.date: 03/29/2021
+ms.date: 05/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Internet Explorer モード用にエンタープライズ モードのサイト リストを構成する方法をステップごとに説明しているガイドです。
-ms.openlocfilehash: 1d0b80950439fce77513413c3f5d1143538487d1
-ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
+ms.openlocfilehash: 7369e4e14f33fc37c6ded0ebc7df57d64a34df50
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2021
-ms.locfileid: "11470155"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617397"
 ---
 # <a name="enterprise-site-configuration-strategy"></a>エンタープライズ サイト構成戦略
+
+>[!Note]
+> Internet Explorer 11 デスクトップ アプリケーションは廃止され、2022 年 6 月 15 日にサポートが終了します (スコープ内の一覧については、[FAQ を参照してください](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549))。 現在使用しているものと同じ IE11 アプリとサイトを、Internet Explorer モードの Microsoft Edge で開くことができます。 [こちらをご覧ください](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)。
 
 この記事では、Microsoft Edge バージョン 77 以降の Internet Explorer モードをサポートするエンタープライズ モード サイト リストの変更について説明します。
 
@@ -74,7 +77,7 @@ Step 3 – If that doesn’t cover your needs, then use Cookie sharing -->
 
 IE11 または Microsoft Edge 従来版のエンタープライズ モード サイトリストを既にお持ちの場合は、IE モードを構成するためにそれを再利用できます。
 
-ただし、サイトの一覧をお持ちでない場合は、 「[エンタープライズ サイト発見ツール](https://docs.microsoft.com/deployedge/edge-ie-mode-site-discovery)」を使用してリストを作成することができます。
+ただし、サイトの一覧をお持ちでない場合は、 「[エンタープライズ サイト発見ツール](/deployedge/edge-ie-mode-site-discovery)」を使用してリストを作成することができます。
 
 ## <a name="configure-neutral-sites"></a>ニュートラル サイトを構成する
 
@@ -92,14 +95,14 @@ Enterprise Mode Site List Manager ツールで [*開く*] ドロップダウン�
 </site>
 ```
 
-認証サーバーを識別するには、IE11 開発者ツールを使用して、アプリケーションからのネットワーク トラフィックを調べます。 認証サーバーを識別するために時間を割く時間が必要な場合は、ユーザーがワークフローを中断することなく継続できるよう、IE モードですべてのページ内ナビゲーションを維持するポリシーを構成し、ユーザーがワークフローを中断することなく続行できるようにすることができます。 不要な場合に IE モードの使用を最小限に抑えるには、認証サーバーを識別してサイト リストに追加したら、この設定を無効にします。 詳しくは、「[IE モードでページ内ナビゲーションを保持する](https://docs.microsoft.com/deployedge/edge-learnmore-inpage-nav)」をご覧ください。
+認証サーバーを識別するには、IE11 開発者ツールを使用して、アプリケーションからのネットワーク トラフィックを調べます。 認証サーバーを識別するために時間を割く時間が必要な場合は、ユーザーがワークフローを中断することなく継続できるよう、IE モードですべてのページ内ナビゲーションを維持するポリシーを構成し、ユーザーがワークフローを中断することなく続行できるようにすることができます。 不要な場合に IE モードの使用を最小限に抑えるには、認証サーバーを識別してサイト リストに追加したら、この設定を無効にします。 詳しくは、「[IE モードでページ内ナビゲーションを保持する](/deployedge/edge-learnmore-inpage-nav)」をご覧ください。
 
 >[!NOTE]
    >IE モード統合では、エンタープライズ モード スキーマ v.1 がサポートされていません。 現在、Internet Explorer 11 でスキーマ v.1 を使用している場合は、スキーマ v.2 にアップグレードする必要があります。 詳しくは、「[エンタープライズ モード スキーマ v.2 ガイダンス](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance)」をご覧ください。
 
 ## <a name="optional-use-cookie-sharing-if-necessary"></a>(省略可能) 必要に応じて Cookie の共有を使用する
 
-既定では、Microsoft Edge や Internet Explorer のプロセスはセッション Cookie を共有しません。この共有の欠如は、IE モードの使用時に、場合によっては不便になってしまう可能性があります。 たとえば、ユーザーが以前に IE モードで再認証する必要がある場合、または Microsoft Edge セッションからサインアウトしても、重要なトランザクションのために Internet Explorer モード セッションからサイン アウトしない場合があります。 これらのシナリオでは、SSO によって設定された特定の Cookie が Microsoft Edge から Internet Explorer へと送信されるように構成することで、再認証の必要性を排除し、認証エクスペリエンスをよりシームレスにすることができます。 詳しくは、「[Microsoft Edge から Internet Explorer に Cookie を共有する](https://docs.microsoft.com/deployedge/edge-ie-mode-add-guidance-cookieshare)」をご覧ください。
+既定では、Microsoft Edge や Internet Explorer のプロセスはセッション Cookie を共有しません。この共有の欠如は、IE モードの使用時に、場合によっては不便になってしまう可能性があります。 たとえば、ユーザーが以前に IE モードで再認証する必要がある場合、または Microsoft Edge セッションからサインアウトしても、重要なトランザクションのために Internet Explorer モード セッションからサイン アウトしない場合があります。 これらのシナリオでは、SSO によって設定された特定の Cookie が Microsoft Edge から Internet Explorer へと送信されるように構成することで、再認証の必要性を排除し、認証エクスペリエンスをよりシームレスにすることができます。 詳しくは、「[Microsoft Edge から Internet Explorer に Cookie を共有する](/deployedge/edge-ie-mode-add-guidance-cookieshare)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 

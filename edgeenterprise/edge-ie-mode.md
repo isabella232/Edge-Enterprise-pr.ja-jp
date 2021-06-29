@@ -3,21 +3,24 @@ title: Internet Explorer モードとは
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 02/26/2021
+ms.date: 05/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge の Internet Explorer モードが、Internet Explorer 11 を必要とするサイトへのアクセスと最新のサイトへのアクセスをどのように提供するかについて説明します。
-ms.openlocfilehash: 5ca14c4d448b573dc7de6781ce86ee62281a48a4
-ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
+ms.openlocfilehash: 39f8797049ac1051d49c63c880b8436dd611d9c2
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2021
-ms.locfileid: "11470225"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617417"
 ---
 # <a name="what-is-internet-explorer-ie-mode"></a>Internet Explorer (IE) モードとは
+
+>[!Note]
+> Internet Explorer 11 デスクトップ アプリケーションは廃止され、2022 年 6 月 15 日にサポートが終了します (スコープ内の一覧については、[FAQ を参照してください](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549))。 現在使用しているものと同じ IE11 アプリとサイトを、Internet Explorer モードの Microsoft Edge で開くことができます。 [こちらをご覧ください](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)。
 
 既存の Web サイトとの下位互換性のために Internet Explorer 11 が必要であるが、最新のブラウザーも必要な組織向けに、Microsoft Edge で Internet Explorer (IE) モードを作成しました。 この機能により、組織は 1 つのブラウザーを、従来の Web/アプリまたは最新の Web/アプリに簡単に使用できます。 この記事では、IE モードで Microsoft Edge を使用する方法を紹介します。
 
