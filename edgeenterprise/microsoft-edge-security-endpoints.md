@@ -3,19 +3,19 @@ title: Microsoft Edge エンドポイントの許可リスト
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 11/25/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge エンドポイントの許可リスト
-ms.openlocfilehash: b8f793edcc23798199fe5de1bfae912a63468464
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
-ms.translationtype: HT
+ms.openlocfilehash: 735e18e63095405dad4fdd51d51654956b564ca7
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11448201"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641333"
 ---
 # <a name="allow-list-for-microsoft-edge-endpoints"></a><span data-ttu-id="0e018-103">Microsoft Edge エンドポイントの許可リスト</span><span class="sxs-lookup"><span data-stu-id="0e018-103">Allow list for Microsoft Edge endpoints</span></span>
 

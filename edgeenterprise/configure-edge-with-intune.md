@@ -3,19 +3,19 @@ title: Microsoft Intune を使って Windows 用の Microsoft Edge ポリシー�
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 06/18/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Intune を使って Windows 用の Microsoft Edge ポリシー設定を構成します。
-ms.openlocfilehash: 0189a3fc2f9dc115563e7cf6dca1df960680bf22
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
-ms.translationtype: HT
+ms.openlocfilehash: adcd80f68250a9694b9bbaa21fb7941ebcbaf15a
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447561"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641673"
 ---
 # <a name="configure-microsoft-edge-policy-settings-with-microsoft-intune"></a><span data-ttu-id="bed7e-103">Microsoft Intune を使って Microsoft Edge ポリシー設定を構成する</span><span class="sxs-lookup"><span data-stu-id="bed7e-103">Configure Microsoft Edge policy settings with Microsoft Intune</span></span>
 

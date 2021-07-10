@@ -3,19 +3,19 @@ title: ExtensionSettings ポリシーの詳細なガイド
 ms.author: aspoddar
 author: dan-wesley
 manager: balajek
-ms.date: 03/31/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: ExtensionSettings ポリシーを使用して Microsoft Edge 拡張機能を構成するための詳細なリファレンス ガイド。
-ms.openlocfilehash: 89ff329d6e209a4e658907385ec24fd0d2f1d1c2
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 3acd798be6b2b56761991d8adaf014ae614a3fd4
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11618188"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641323"
 ---
 # <a name="detailed-guide-to-the-extensionsettings-policy"></a><span data-ttu-id="19f8a-103">ExtensionSettings ポリシーの詳細なガイド</span><span class="sxs-lookup"><span data-stu-id="19f8a-103">Detailed guide to the ExtensionSettings policy</span></span>
 

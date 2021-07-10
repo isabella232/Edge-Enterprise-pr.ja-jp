@@ -4,24 +4,24 @@ metadata:
   ms.author: jwhit
   author: jwhit-MSFT
   manager: laurawi
-  ms.date: 05/19/2021
+  ms.date: 06/29/2021
   audience: ITPro
   ms.topic: conceptual
   ms.prod: microsoft-edge
-  ms.localizationpriority: high
+  ms.localizationpriority: medium
   ms.collection: M365-modern-desktop
   description: エンタープライズでのアプリケーションの展開に関するよく寄せられるMicrosoft Edge質問 (FAQ)
-  ms.openlocfilehash: b9c1af51c8eb1898369bc4e3c52734736db5ebe3
-  ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
+  ms.openlocfilehash: a592a831f78c5d5e92c919112319120e0f0b3faf
+  ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 06/25/2021
-  ms.locfileid: "11617257"
+  ms.lasthandoff: 07/09/2021
+  ms.locfileid: "11641793"
 title: 企業のユーザーに関するよくある質問 (FAQ) Microsoft Edge質問
 summary: >
   > [!NOTE]
 
-  > この記事は、Microsoft Edge version 77 以降に適用されます。
+  > この記事は Microsoft Edge version 77 以降に適用されます。
 sections:
 - name: 無視
   questions:
@@ -30,7 +30,7 @@ sections:
       図形の右上隅で、省略Microsoft Edgeアイコン (**...)** を選択し、[省略記号] を選択**設定。** **[Microsoft Edge について]** を選択して、Microsoft Edge のバージョンを確認します。
   - question: Internet Explore 11 について
     answer: >
-      Internet Explorer 11 デスクトップ アプリケーションは廃止され、2022 年 6 月 15 日にサポートが終了します (スコープ内の一覧については [、FAQ](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)を参照してください)。 現在使用しているのと同じ IE11 アプリとサイトは、Microsoft EdgeモードInternet Explorerできます。 [こちら](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)をご覧ください。
+      Internet Explorer 11 デスクトップ アプリケーションは廃止され、2022 年 6 月 15 日にサポートが終了します (スコープ内の一覧については [、FAQ](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)を参照してください)。 現在使用しているものと同じ IE11 アプリとサイトを、Internet Explorer モードの Microsoft Edge で開くことができます。 [こちら](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)をご覧ください。
   - question: Microsoft Edge (Chromium ベース) では、ActiveX コントロールや、Silverlight や Java などの BHO をサポートしていますか。
     answer: >
       いいえ、そうではありません。 Microsoft Edge Silverlight やブラウザー ActiveXなど、ブラウザー のコントロールやブラウザー ヘルプ オブジェクト (HOS) はJava。 ただし、ActiveX コントロール、BHO、または従来のドキュメント モードを使用する Web アプリを Internet Explorer 11 上で実行している場合には、新しい Microsoft Edge 上で IE モードを実行するように構成できます。 詳しくは、「[Microsoft Edge で IE モードを設定する](./edge-ie-mode.md)」をご覧ください。

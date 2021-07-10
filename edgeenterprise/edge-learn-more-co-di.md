@@ -3,19 +3,19 @@ title: Microsoft Edge で ClickOnce と DirectInvoke を使用する
 ms.author: collw
 author: dan-wesley
 manager: srugh
-ms.date: 09/10/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge での ClickOnce と DirectInvoke の使用について説明します。
-ms.openlocfilehash: 528c9f39a2aa6a8b30e4ec92b6b0765fc04cb817
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 3d124f141e9212ba5ab25d4b725d32add62077a3
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617357"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642053"
 ---
 # <a name="understand-the-clickonce-and-directinvoke-features-in-microsoft-edge"></a><span data-ttu-id="1260d-103">Microsoft Edge での ClickOnce と DirectInvoke の機能について</span><span class="sxs-lookup"><span data-stu-id="1260d-103">Understand the ClickOnce and DirectInvoke features in Microsoft Edge</span></span>
 

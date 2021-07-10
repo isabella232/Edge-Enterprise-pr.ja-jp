@@ -3,19 +3,19 @@ title: Microsoft Edge の展開を計画する
 ms.author: collw
 author: dan-wesley
 manager: srugh
-ms.date: 06/08/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge の展開を計画する
-ms.openlocfilehash: 3c303893706d2fc8883da2599d5319d1bfcbc98b
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: be85aa5182bbee51f90fe42e80cdee0b9c793b4e
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617497"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641943"
 ---
 # <a name="plan-your-deployment-of-microsoft-edge"></a><span data-ttu-id="ceb6f-103">Microsoft Edge の展開を計画する</span><span class="sxs-lookup"><span data-stu-id="ceb6f-103">Plan your deployment of Microsoft Edge</span></span>
 
