@@ -3,21 +3,21 @@ title: Internet Explorer モードでページ内ナビゲーションを保持�
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 05/01/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Internet Explorer モードでページ内ナビゲーションを保持する
-ms.openlocfilehash: 0acca9e05a0d09b02fa61d5ddd7de3f7c6cabb92
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
-ms.translationtype: HT
+ms.openlocfilehash: 20b18d121c3babfaacffd4a08316b25be714d95e
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980452"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641363"
 ---
-# Internet Explorer モードでページ内ナビゲーションを保持する
+# <a name="keep-in-page-navigation-in-internet-explorer-mode"></a>Internet Explorer モードでページ内ナビゲーションを保持する
 
 このポリシーは、Internet Explorer モード (IE モード) サイトからのすべてのページ内ナビゲーションを強制的に IE モードにするための一時的なソリューションとして使用できます。
 
@@ -26,7 +26,7 @@ ms.locfileid: "10980452"
 >[!NOTE]
 >この記事は、Microsoft Edge version 81 以降に適用されます。
 
-##  <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>前提条件
 
 このポリシーには、次の Windows 更新プログラムが必要です。
 
@@ -36,13 +36,13 @@ ms.locfileid: "10980452"
 - Windows 10 Version 1709 ([KB4534318](https://support.microsoft.com/help/4534318))
 
 
-##  <a name="about-this-policy"></a>このポリシーの詳細
+## <a name="about-this-policy"></a>このポリシーの詳細
 
 このポリシーにより、IE モード サイトで使用されるすべての認証サーバーを識別して構成する時間が与えられます。 ただし、このポリシーを使用すると、一部のサイトが IE モードで表示されたり、Microsoft Edge モードで表示されたりする、一貫性のない閲覧エクスペリエンスが発生する可能性があります。 このエクスペリエンスは、サイトへのナビゲーションが IE モード ページから開始されたかどうかによって異なります。 特定のレンダリング エンジンで開くように明示的に構成されていないサイトはすべて、この矛盾の影響を受けます。
 
 このポリシーを有効にする場合は、すべての認証サーバーを識別し、それらをニュートラルとしてサイト リストに追加した後で、このポリシーを無効にすることを推奨します。 このアクションにより、最新のサイトが不注意に IE モードで表示されなくなります。
 
-##  <a name="keep-in-page-navigation-in-ie-mode"></a>IE モードでページ内ナビゲーションを保持する
+## <a name="keep-in-page-navigation-in-ie-mode"></a>IE モードでページ内ナビゲーションを保持する
 
 Internet Explorer モードで、自動またはすべてのページ内ナビゲーションを保持するには、次の手順を実行します。
 
@@ -60,10 +60,10 @@ Internet Explorer モードで、自動またはすべてのページ内ナビ�
 
    - **既定** - Internet Explorer モードで開くように構成されたサイトのみが、そのモードで開きます。 Internet Explorer モードで開くように構成されていないサイトは、Microsoft Edge にリダイレクトされます。
    - **Internet Explorer モードで自動ナビゲーションのみを保持する** - 未構成サイトへのすべての自動ナビゲーション （302 リダイレクトなど） が Internet Explorer モードで保持されることを除いて、既定のエクスペリエンスが必要な場合は、このオプションを使用します。
-   - **すべてのページ内ナビゲーションを Internet Explorer モードで保持する** ***(推奨しない)*** - IE モードで読み込まれたページから未構成サイトへのすべてのナビゲーションは、Internet Explorer モードで保持されます。
+   - **ページ内のすべてのナビゲーションをユーザー モードInternet Explorerする**  **_(最小推奨)_*_ - IE モードで読み込まれたページから未構成のサイトへのすべてのナビゲーションは、Internet Explorerされます。
 
-6. [**OK**] または [**適用**] をクリックして、このポリシー設定を保存します。
+6. *[_OK]** または [**適用] をクリック**して、ポリシー設定を保存します。
 
-##  <a name="see-also"></a>関連項目
+## <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)

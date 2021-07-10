@@ -3,31 +3,31 @@ title: Microsoft Edge エンタープライズ グレードの PDF リーダー
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 02/05/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge エンタープライズ グレードの PDF リーダー
-ms.openlocfilehash: fcbe33a87f5557e3d1fd917401b34bb6a6aaa90c
-ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
-ms.translationtype: HT
+ms.openlocfilehash: 5e2f70e9ab488be9ad392f0480d937cabcb45533
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "11314740"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642743"
 ---
-# ビデオ: Microsoft Edge エンタープライズ グレードの PDF リーダー
+# <a name="video-microsoft-edge-enterprise-grade-pdf-reader"></a>ビデオ: Microsoft Edge エンタープライズ グレードの PDF リーダー
 
 このビデオでは、Microsoft Edge エンタープライズ グレードの PDF リーダーを示します。 次のスクリーンショットをクリックすると、プログラム マネージャー 2 の Aditi Gangwar の動画を見ることができます。
 
 [![エンタープライズ グレードの PDF リーダー](media/microsoft-edge-video-pdf-reader/0.png)](http://www.youtube.com/watch?v=XWAqNQ0xAcE "Enterprise grade PDF reader")
 
-##  <a name="about-the-video"></a>ビデオについて
+## <a name="about-the-video"></a>ビデオについて
 
 このビデオでは、Microsoft Edge の組み込みの PDF リーダーの機能について説明します。 ユーザーが PDF にインクを付けて強調表示したり、保護されたドキュメントを開いたり、証明書ベースのデジタル署名を表示および検証したりする方法をご覧ください。
 
-##  <a name="see-also"></a>関連項目
+## <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
 - [Microsoft Edge の PDF リーダー](microsoft-edge-pdf.md)

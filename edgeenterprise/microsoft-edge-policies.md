@@ -3,20 +3,20 @@ title: Microsoft Edge ブラウザー ポリシーに関するドキュメント
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 06/17/2021
+ms.date: 06/28/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
-ms.openlocfilehash: 21933e81427b84d69f6d3ead4dfc911519e65bb3
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: eba448024e86cd0c0ceb733b6363317d7c6ca5fb
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617877"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642833"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - ポリシー
 
@@ -260,7 +260,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[SmartScreenEnabled](#smartscreenenabled)|Microsoft Defender SmartScreen を構成する|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|信頼のおけるソースからのダウンロードに対して Microsoft Defender SmartScreen のチェックを強制する|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Microsoft Defender SmartScreen を構成して望ましくない可能性のあるアプリをブロックする|
-### [*<a name="startup-home-page-and-new-tab-page"></a>スタートアップ &comma; ホーム ページ、新規タブ ページ*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startupcomma-home-page-and-new-tab-page"></a>スタートアップ &comma; ホーム ページ、新規タブ ページ*](#startup-home-page-and-new-tab-page-policies)
 
 |ポリシー名|キャプション|
 |-|-|
@@ -4234,7 +4234,7 @@ Microsoft Edge 84 以降、このポリシーは推奨されるポリシーと�
 
 この設定を無効にした場合、または未設定のままにした場合、外部拡張機能のインストールは許可されます。
 
-外部拡張機能とそのインストールについては、./microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options に記載されています。
+外部拡張機能とそのインストールは、ここに記載 [されています](/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options)。
 
 
   #### <a name="supported-features"></a>サポートされている機能:
@@ -4518,7 +4518,7 @@ macOS インスタンスでは、Microsoft Edge アドオン Web サイト以外
 
 ポリシーの各リスト アイテムは、拡張機能 ID と、セミコロン (;) で区切られたオプションの "更新" URL を含む文字列です。 拡張機能 ID は 32 文字の文字列で、たとえば開発者モードの場合には、edge://extensions で見つけることができます。 指定する場合には、"更新" URL は更新プログラム マニフェスト XML ドキュメント ([https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043)) を指している必要があります。 既定では、Microsoft Edge アドオン Web サイトの更新 URL が使用されます。 このポリシーで設定されている "更新" URL は、初回のインストールにのみ使用され、以降の拡張機能の更新では、拡張機能のマニフェスト内の更新 URL が使用されます。
 
-注: このポリシーは InPrivate モードには適用されません。 ホスト拡張機能 (./microsoft-edge/extensions-chromium/enterprise/hosting-and-updating) についての説明を参照します。
+注: このポリシーは InPrivate モードには適用されません。 拡張機能のホスティングについては、こちらを参照 [してください](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating)。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -8111,7 +8111,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
   [ページのトップへ](#microsoft-edge---policies)
 
-  ## <a name="startup-home-page-and-new-tab-page-policies"></a>スタートアップ &comma; ホーム ページ、新規タブ ページに関するポリシー
+  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>スタートアップ &comma; ホーム ページ、新規タブ ページに関するポリシー
 
   [ページのトップへ](#microsoft-edge---policies)
 
@@ -8345,7 +8345,7 @@ Microsoft Edge がロゴをダウンロードできる URL と、ダウンロー
 
 このポリシーを無効にしているか、構成していない場合、Microsoft Edge では新規タブ ページに会社のロゴや Microsoft のロゴは表示されません。
 
-SHA-256 ハッシュの決定に関するヘルプについては、./powershell/module/microsoft.powershell.utility/get-filehash を参照してください。
+SHA-256 ハッシュの決定に関するヘルプについては、こちらを参照 [してください](/powershell/module/microsoft.powershell.utility/get-filehash)。
 
   #### <a name="supported-features"></a>サポートされている機能:
 

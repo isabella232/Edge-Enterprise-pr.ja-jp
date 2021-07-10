@@ -3,19 +3,19 @@ title: Microsoft Edge 用 Windows 更新プログラム
 ms.author: jtkim
 author: dan-wesley
 manager: srugh
-ms.date: 02/05/2021
+ms.date: 06/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 用 Windows 更新プログラム。
-ms.openlocfilehash: 880e5a591ee23ff852981e73fe4fc4cd815be9ad
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: b99d3d7ed048cb829fd2328be9e4e7376334652c
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447151"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642383"
 ---
 # <a name="windows-updates-to-support-the-next-version-of-microsoft-edge"></a>次のバージョンの Microsoft Edge をサポートする Windows 更新プログラム
 

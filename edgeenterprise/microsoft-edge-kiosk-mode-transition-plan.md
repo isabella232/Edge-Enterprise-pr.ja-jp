@@ -3,19 +3,19 @@ title: キオスク モードの移行を計画する
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 02/26/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: キオスク モードの移行を計画する
-ms.openlocfilehash: b563f7ac773fb295d42e2b27b1259af321ce5f70
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 95c50b39eb6e844ae4309b260087931232276d45
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617743"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642913"
 ---
 # <a name="plan-your-kiosk-mode-transition"></a>キオスク モードの移行を計画する
 

@@ -3,19 +3,19 @@ title: Microsoft Edge ユーザー データ ディレクトリ変数を作成�
 ms.author: brianalt
 author: AndreaLBarr
 manager: srugh
-ms.date: 04/21/2021
+ms.date: 07/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge ユーザー データ ディレクトリ変数を作成する方法について説明します
-ms.openlocfilehash: 5ec78f16c7e5cd43f01845f35b8473494cd0c4bf
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 2e85e8eebac4a636d90fd0b5da7520c9a86a2de0
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11618175"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641453"
 ---
 # <a name="create-microsoft-edge-user-data-directory-variables"></a>Microsoft Edge ユーザー データ ディレクトリ変数を作成する
 
@@ -62,7 +62,7 @@ Microsoft Edge では、次のパス変数がサポートされています。
 | **${global_app_data}** | システム全体のアプリケーション データ フォルダー。 例: *C:\AppData* |
 | **${program_files}** | 現在のプロセスのプログラム ファイル フォルダー。 このフォルダーは、プロセスが 32 ビットか 64 ビットかによって異なります。 解決例: *C:\Program Files (x86)* |
 | **${windows}** | Windows フォルダー。 例: *C:\Windows* |
-| **${client_name)** | RDP または Citrix セッションに接続されているクライアント PC の名前。 ローカル セッションで使用する場合、この変数は空になります。 パス内で使用する場合は、プレフィックスとして、空でないと保証されるものを使用します。 例: *C:\edge_profiles\session_${client_name}* は、*C:\edge_profiles\session_&lt;ForlocalSessions&gt;* または *C:\edge_profiles\session_&lt;SomePCname&gt;* (リモート セッションの場合) に解決されます。 |
+| **${client_name}** | RDP または Citrix セッションに接続されているクライアント PC の名前。 ローカル セッションで使用する場合、この変数は空になります。 パス内で使用する場合は、プレフィックスとして、空でないと保証されるものを使用します。 例: *C:\edge_profiles\session_${client_name}* は、*C:\edge_profiles\session_&lt;ForlocalSessions&gt;* または *C:\edge_profiles\session_&lt;SomePCname&gt;* (リモート セッションの場合) に解決されます。 |
 | **${session_name}** | アクティブなセッションの名前。 この名前を使用して、単一のユーザー プロファイルを使用している、同時に接続された複数のリモートセッションを区別します。 例: *WinSta0* (ローカル デスクトップ セッションの場合) |
 
 #### <a name="macos-only"></a>macOS のみ

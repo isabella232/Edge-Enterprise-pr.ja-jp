@@ -3,19 +3,19 @@ title: 最新の Web サイトに対応するための Internet Explorer から 
 ms.author: laannade
 author: dan-wesley
 manager: ratetali
-ms.date: 11/16/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 最新の Web サイトに対応するための Internet Explorer から Microsoft Edge へのリダイレクト
-ms.openlocfilehash: 7cd74eda6d8ada7647862ea69f77a982713f0c14
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: ec59380b82dc975ba3075d6e008bc0da05136f72
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617297"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642113"
 ---
 # <a name="redirection-from-internet-explorer-to-microsoft-edge-for-compatibility-with-modern-web-sites"></a>最新の Web サイトに対応するための Internet Explorer から Microsoft Edge へのリダイレクト
 
@@ -25,7 +25,7 @@ ms.locfileid: "11617297"
 ## <a name="overview"></a>概要
 
 >[!Note]
-> Internet Explorer 11 デスクトップ アプリケーションは廃止され、2022 年 6 月 15 日にサポートが終了します (スコープ内の一覧については、[「FAQ」](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)を参照してください)。 現在使用しているのと同じ IE11 アプリとサイトは、Microsoft Edge の Internet Explorer モードで開くことができます。 [詳細については、こちらを参照してください](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)。
+> Internet Explorer 11 デスクトップ アプリケーションは廃止され、2022 年 6 月 15 日にサポートが終了します (スコープ内の一覧については、[「FAQ」](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)を参照してください)。 現在使用しているものと同じ IE11 アプリとサイトを、Internet Explorer モードの Microsoft Edge で開くことができます。 [詳細については、こちらを参照してください](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)。
 
 最新の Web サイトの多くが、Internet Explorer と互換性のないデザインを採用しています。 Internet Explorer のユーザーが互換性のないパブリック サイトにアクセスすると、そのサイトがブラウザーと互換性のないものであることを通知するメッセージが表示され、手動で別のブラウザーに切り替える必要があります。
 

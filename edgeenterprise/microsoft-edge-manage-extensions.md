@@ -3,19 +3,19 @@ title: 企業で Microsoft Edge 拡張機能を管理する
 ms.author: aspoddar
 author: AndreaLBarr
 manager: balajek
-ms.date: 04/08/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 企業で Microsoft Edge 拡張機能を管理する
-ms.openlocfilehash: c123deaed638004b380308fd0d29b40b132dbfd5
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 26134a8c352354c0c447518120f3d79332100c80
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11618183"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642923"
 ---
 # <a name="manage-microsoft-edge-extensions-in-the-enterprise"></a>企業で Microsoft Edge 拡張機能を管理する
 
@@ -128,6 +128,6 @@ ms.locfileid: "11618183"
 
 - [グループ ポリシーを使用して Microsoft Edge の拡張機能を管理する](microsoft-edge-manage-extensions-policies.md)
 - [Microsoft Edge 拡張機能をホストする Web ストアを作成する](microsoft-edge-manage-extensions-webstore.md)
-- [ExtensionSettings ポリシーの参照ガイド](microsoft-edge-manage-extensions-ref-guide.md)
+- [ExtensionSettings ポリシーのリファレンス ガイド](microsoft-edge-manage-extensions-ref-guide.md)
 - [Microsoft Edge の拡張機能についてのよくある質問](microsoft-edge-manage-extensions-faq.md)
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)

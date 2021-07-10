@@ -3,36 +3,36 @@ title: Microsoft Edge Stable チャネル更新プログラムのプログレッ
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 05/21/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge Stable チャネル更新プログラムのプログレッシブ ロールアウト
-ms.openlocfilehash: 5b0d2f58318b10538d0470b644d346b5b9b9489b
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
-ms.translationtype: HT
+ms.openlocfilehash: bdcefdc118125d67057fa77513bd732cff6882e3
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980470"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642293"
 ---
-# Microsoft Edge Stable チャネル更新プログラムのプログレッシブ ロールアウト
+# <a name="progressive-rollouts-for-microsoft-edge-stable-channel-updates"></a>Microsoft Edge Stable チャネル更新プログラムのプログレッシブ ロールアウト
 
 Microsoft Edge 83 リリース以降、Microsoft Edge Stable チャネルへのメジャーアップデートのプログレッシブ ロールアウトを数日間にわたって実行します。 このプログレッシブ ロールアウトにより、アップグレードを監視し、組織全体でブラウザーを安全に更新できます。
 
 > [!NOTE]
 > これは、Microsoft Edge Stable チャネルバージョン 83 以降に適用されます。
 
-##  <a name="why-do-we-need-progressive-rollout"></a>なぜプログレッシブ ロールアウトが必要なのですか。
+## <a name="why-do-we-need-progressive-rollout"></a>なぜプログレッシブ ロールアウトが必要なのですか。
 
 更新プログラムの状態を注意深く監視し、数日間にわたって更新プログラムを展開することにより、新しい更新プログラムで発生する可能性がある問題の影響を抑えることができます。 Microsoft Edgeリリース83では、Windows 7、Windows 8 と 8.1、および Windows 10 バージョンのすべての Microsoft Edge でプログレッシブロールアウトが有効になります。 準備ができ次第、Mac 上の Microsoft Edge もサポートします。
 
-##  <a name="how-will-the-updates-work"></a>更新プログラムはどのように機能しますか。
+## <a name="how-will-the-updates-work"></a>更新プログラムはどのように機能しますか。
 
 Microsoft Edge の各インストールには、アップグレード値が割り当てられます。 段階的なロールアウトを開始すると、デバイスの値がアップグレード値の範囲内にある場合は、更新プログラムが表示されます。 ロールアウトが (数日以内に) 進行して、最終的にすべてのユーザーが更新を取得します。 重要なセキュリティ修正が含まれているブラウザの更新は、重要なセキュリティ修正が含まれていない更新よりも展開の頻度が高くなります。 これは、脆弱性からの保護を迅速にするために行われます。
 
-##  <a name="how-does-this-affect-enterprises"></a>これは企業にどのように影響しますか。
+## <a name="how-does-this-affect-enterprises"></a>これは企業にどのように影響しますか。
 
 Microsoft Edge アーティファクト は、Microsoft Intune、Windows Server Update Service (WSUS)、Configuration Manager などの複数のメカニズムを使用して企業に配布されます。 これらの展開ツールは、プログレッシブロールアウトによって動作が異なります。
 
@@ -41,6 +41,6 @@ Microsoft Edge アーティファクト は、Microsoft Intune、Windows Server 
 
 懸念や質問がある場合は、ユーザーの声、アプリケーション内のフィードバックボタン、またはコメントの下部を利用して、貴重なフィードバックを共有してください。
 
-##  <a name="see-also"></a>関連項目
+## <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)

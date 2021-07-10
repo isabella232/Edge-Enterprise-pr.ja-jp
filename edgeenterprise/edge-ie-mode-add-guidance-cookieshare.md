@@ -3,19 +3,19 @@ title: Microsoft Edge から Internet Explorer への Cookie の共有
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 05/19/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 'Microsoft Edge から Internet Explorer へと Cookie を共有する方法 '
-ms.openlocfilehash: 563179852ff23142b540345222ba7e943547535d
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 8f1a38106e49f71aa9d27f32cfecbd0df44eaf9f
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617467"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641843"
 ---
 # <a name="cookie-sharing-from-microsoft-edge-to-internet-explorer"></a>Microsoft Edge から Internet Explorer への Cookie の共有
 

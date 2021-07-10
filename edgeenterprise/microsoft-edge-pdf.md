@@ -3,19 +3,19 @@ title: Microsoft Edge の PDF リーダー
 ms.author: adigan
 author: dan-wesley
 manager: balajek
-ms.date: 03/01/2021
+ms.date: 06/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge の PDF リーダーについて説明します。
-ms.openlocfilehash: 342f6702ff0da3305c037112555549b0d5503d3c
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 0b1cffceb63c1829c39bdd3fa658df2e5f776584
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447841"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11643183"
 ---
 # <a name="pdf-reader-in-microsoft-edge"></a>Microsoft Edge の PDF リーダー
 

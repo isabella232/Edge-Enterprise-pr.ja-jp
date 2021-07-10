@@ -3,27 +3,27 @@ title: ユーザー環境内の Microsoft Edge
 ms.author: ryhecht
 author: RyanHechtMSFT
 manager: tinad
-ms.date: 02/05/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: ユーザー環境内の Microsoft Edge
-ms.openlocfilehash: e1418d21ff9e541d83d5b86baf5ff25c50d2299d
-ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
-ms.translationtype: HT
+ms.openlocfilehash: 2381380cb399f6a1fbb5efa9378ffeba20fa774f
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "11313948"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641603"
 ---
-# ユーザー環境内の Microsoft Edge
+# <a name="microsoft-edge-in-your-environment"></a>ユーザー環境内の Microsoft Edge
 
 この記事では、Microsoft Edge レガシがサービスを終了したときに Microsoft Edge を展開する準備をする方法について説明します。
 
 Microsoft Edge 製品チームの[ブログ投稿](https://aka.ms/EdgeLegacyEOS)に示す通り、Microsoft Edge レガシ デスクトップ アプリケーションのサポートは 2021 年 3 月 9 日に終了します。 4 月に Update Tuesday (または "B") リリースを適用すると、Windows 10 RS4 ~ 20H1 を実行しているデバイスから Microsoft Edge レガシが削除され、Microsoft Edge に置き換えられます。
 
-##  <a name="how-to-prepare"></a>準備する方法
+## <a name="how-to-prepare"></a>準備する方法
 
 Microsoft Edge が 4 月の Update Tuesday リリースで Windows 10 RS4 ~ 20H1 デバイスにインストールされる準備を行う場合は、「[Microsoft Edgeの展開を計画する](deploy-edge-plan-deployment.md)」を参照することをお勧めします。
 
@@ -33,7 +33,7 @@ Microsoft Edge が 4 月の Update Tuesday リリースで Windows 10 RS4 ~ 20H1
 
 - **2021年 3 月 9 日のサービス終了日より前に Microsoft Edge レガシ デスクトップ アプリケーションを削除し、Microsoft Edge を展開します**。 Windows 10 RS4 ~ 20H1 の場合は、Windows 更新プログラムを使用して展開できます。 詳しくは、「[Windows 10 更新プログラムを適用した Microsoft Edge の展開](deploy-edge-with-windows-10-updates.md)」をご覧ください。
 
-##  <a name="see-also"></a>関連項目
+## <a name="see-also"></a>関連項目
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)
 - [Microsoft Edge の展開を計画する](deploy-edge-plan-deployment.md)

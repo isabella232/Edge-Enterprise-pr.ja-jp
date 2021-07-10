@@ -3,19 +3,19 @@ title: Internet Explorer 11 を無効にする
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 05/19/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge で Internet Explorer 11 を無効にし、Internet Explorer モードを使用する方法をご紹介します。
-ms.openlocfilehash: ae4d936df7e432eee250e1c7327acfd206d86410
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 9ea99c794dc06a0eb5167e56e72b6e7b6ee70212
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617487"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641513"
 ---
 # <a name="disable-internet-explorer-11"></a>Internet Explorer 11 を無効にする
 
@@ -72,8 +72,8 @@ IE モードを構成した後、グループ ポリシーを使用して組織�
 
 1. 前提条件のオペレーティング システムの更新プログラムがあることを確認してください。 この手順では、コンピューター上の ADMX ファイル (具体的には inetres.adml および inetres.admx) を直接更新します。 セントラル ストアを更新する場合は、前提条件の更新プログラムがあるコンピューターから .adml ファイルと .admx ファイルをコピーする必要があることに注意してください。 詳しくは、「[セントラル ストアの作成と管理](/troubleshoot/windows-client/group-policy/create-and-manage-central-store)」をご覧ください。
 2. グループ ポリシー エディターを開きます。
-3. ***[コンピューターの構成]、[管理用テンプレート]、[Windows コンポーネント/Internet Explorer] ***の順に移動します。 
-4.  **[スタンドアロン ブラウザーとして Internet Explorer 11 を無効にする] **をダブルクリックします。
+3. [**_Computer Configuration/Administrative Templates/Windows コンポーネント/Internet Explorer_] に移動_* します。 
+4. _*Disable Internet Explorer 11 をスタンドアロン ブラウザー**としてダブルクリックします。
 5.  **[有効化]** を選択します。
 6.  **[オプション] **で、次のいずれかの値を選択します。
 
