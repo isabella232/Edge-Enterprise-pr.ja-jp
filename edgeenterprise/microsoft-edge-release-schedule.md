@@ -3,19 +3,19 @@ title: Microsoft Edge リリース スケジュール
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 06/18/2021
+ms.date: 06/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge リリース スケジュール
-ms.openlocfilehash: 578a7a3c1a87aee1acc01715c735d5eea9ab67c0
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
+ms.openlocfilehash: 58a5948af71e5667152bd29200d993888e263a89
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617978"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642713"
 ---
 # <a name="microsoft-edge-release-schedule"></a>Microsoft Edge リリース スケジュール
 
@@ -41,10 +41,10 @@ Microsoft では、Microsoft Edge を新しい機能で更新する頻度を管�
 
 | バージョン | リリース状態 | Beta チャネル<br>リリースされる週 | Stable チャネル<br>リリースされる週 |
 |---------|-----|------|--------|
-| 88 | リリース日<br>バージョン | 2020 年 12 月 9 日<br>[88.0.705.18](/microsoft-edge-relnote-archive-beta-channel.md#version-88070518-december-9) | 2021 年 1 月 21 日<br>[88.0.705.50](/microsoft-edge-relnote-archive-stable-channel.md#version-88070550-january-21)|
-| 89 | リリース日<br>バージョン | 2021 年 2 月 3 日<br>[89.0.774.18](/microsoft-edge-relnote-beta-channel.md#version-89077423-february-8) | 2021 年 3 月 4 日<br>[89.0.774.45](/microsoft-edge-relnote-stable-channel.md#version-89077445-march-4) |
-| **90** | リリース日<br>バージョン | 16-Mar-2021<br>[90.0.818.8](/microsoft-edge-relnote-beta-channel.md#version-9008188-march-16) | **15-Apr-2021**<BR>**[90.0.818.39](/microsoft-edge-relnote-stable-channel#version-90081839-april-15)** |
-| **91** | リリース日<br>バージョン | **30-Apr-2021**<br>[91.0.864.11](/microsoft-edge-relnote-beta-channel.md#version-91086411-april-30) | **27-May-2021**<BR>**[91.0.864.37](/microsoft-edge-relnote-stable-channel#version-91086437-may-27)** |
+| 88 | リリース日<br>バージョン | 2020 年 12 月 9 日<br>[88.0.705.18](/deployedge/microsoft-edge-relnote-archive-beta-channel.md#version-88070518-december-9) | 2021 年 1 月 21 日<br>[88.0.705.50](/microsoft-edge-relnote-archive-stable-channel.md#version-88070550-january-21)|
+| 89 | リリース日<br>バージョン | 2021 年 2 月 3 日<br>[89.0.774.18](/deployedge/microsoft-edge-relnote-beta-channel.md#version-89077423-february-8) | 2021 年 3 月 4 日<br>[89.0.774.45](/microsoft-edge-relnote-stable-channel.md#version-89077445-march-4) |
+| **90** | リリース日<br>バージョン | 16-Mar-2021<br>[90.0.818.8](/deployedge/microsoft-edge-relnote-beta-channel.md#version-9008188-march-16) | **15-Apr-2021**<BR>**[90.0.818.39](/deployedge/microsoft-edge-relnote-stable-channel#version-90081839-april-15) |
+| **91** | リリース日<br>バージョン | **30-Apr-2021**<br>[91.0.864.11](/deployedge/microsoft-edge-relnote-beta-channel.md#version-91086411-april-30) | **27-May-2021**<BR>**[91.0.864.37](/deployedge/microsoft-edge-relnote-stable-channel#version-91086437-may-27) |
 | 92 | ターゲットのリリース | 2021 年 6 月 8 日の週 | 2021 年 7 月 22 日の週 |
 | 93 | ターゲットのリリース | 2021 年 8 月 3 日の週 | 2021 年 9 月 2 日の週 |
 | 94 | ターゲットのリリース | 2021 年 9 月 1 日の週 | 2021 年 9 月 23 日の週 |
