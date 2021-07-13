@@ -3,19 +3,19 @@ title: Internet Explorer 11 を無効にする
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 07/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge で Internet Explorer 11 を無効にし、Internet Explorer モードを使用する方法をご紹介します。
-ms.openlocfilehash: 9ea99c794dc06a0eb5167e56e72b6e7b6ee70212
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: b70da0ff7437d1f5e70cec40e31211046a66205a
+ms.sourcegitcommit: 2a00571483e1d169b2b3b59f4fce43262f460a9a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641513"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "11643752"
 ---
 # <a name="disable-internet-explorer-11"></a>Internet Explorer 11 を無効にする
 
@@ -30,12 +30,13 @@ ms.locfileid: "11641513"
 
 - Windows 更新プログラム
 
-  - Windows 10 バージョン 2004、Windows Server バージョン 2004、Windows 10 バージョン 20H2: [KB4598291](https://support.microsoft.com/topic/february-2-2021-kb4598291-os-builds-19041-789-and-19042-789-preview-6a766199-a4f1-616e-1f5c-58bdc3ca5e3b) 以降
-  - Windows 10 バージョン 1909、Windows Server バージョン 1909: [KB4598298](https://support.microsoft.com/topic/january-21-2021-kb4598298-os-build-18363-1350-preview-02dfd9ba-91a2-1b82-dede-42f288c02511) 以降
-  - Windows 10 バージョン 1809、Windows Server バージョン 1809、および Windows Server 2019: [KB4598296](https://support.microsoft.com/topic/january-21-2021-kb4598296-os-build-17763-1728-preview-4c0931ff-45b7-ff59-5e00-c03b5afb363d) 以降
-  - Windows 10 バージョン 1607、Windows Server 2016: [KB4601318](https://support.microsoft.com/topic/february-9-2021-kb4601318-os-build-14393-4225-c5e3de6c-e3e6-ffb5-6197-48b9ce16446e) 以降
-   - Windows 10 初期バージョン (2015 年 7 月): [KB4601331](https://support.microsoft.com/office/february-9-2021%e2%80%94kb4601331-os-build-10240-18842-6227d078-fef3-8d67-27e0-1882e6cb79ff?ui=en-US&rs=en-US&ad=US) 以降
-  - Windows 8.1: [KB4601384](https://support.microsoft.com/topic/february-9-2021-kb4601384-monthly-rollup-16bdbb75-dd4b-2910-abc5-7891c9756b96) 以降
+  - Windows 10バージョン 21H1 以降
+  - Windows 10バージョン 2004;Windowsサーバー バージョン 2004;Windows 10バージョン 20H2;Windowsサーバー バージョン 20H2: [KB4598291](https://support.microsoft.com/topic/february-2-2021-kb4598291-os-builds-19041-789-and-19042-789-preview-6a766199-a4f1-616e-1f5c-58bdc3ca5e3b)以降
+  - Windows 10バージョン 1909: [KB4598298](https://support.microsoft.com/topic/january-21-2021-kb4598298-os-build-18363-1350-preview-02dfd9ba-91a2-1b82-dede-42f288c02511)以降
+  - WindowsServer 2019;Windows 10 Enterprise 2019 LTSC: [KB4598296](https://support.microsoft.com/topic/january-21-2021-kb4598296-os-build-17763-1728-preview-4c0931ff-45b7-ff59-5e00-c03b5afb363d)以降
+  - Windows Server 2016;Windows 10 Enterprise 2016 LTSB: [KB4601318](https://support.microsoft.com/topic/february-9-2021-kb4601318-os-build-14393-4225-c5e3de6c-e3e6-ffb5-6197-48b9ce16446e)以降
+  - Windows 10 Enterprise 2015 LTSB: [KB4601331](https://support.microsoft.com/office/february-9-2021%e2%80%94kb4601331-os-build-10240-18842-6227d078-fef3-8d67-27e0-1882e6cb79ff?ui=en-US&rs=en-US&ad=US)以降
+  - Windows 8.1;Windows Server 2012R2: [KB4601384](https://support.microsoft.com/topic/february-9-2021-kb4601384-monthly-rollup-16bdbb75-dd4b-2910-abc5-7891c9756b96)以降
   - Windows Server 2012: [KB4601348](https://support.microsoft.com/topic/february-9-2021-kb4601348-monthly-rollup-2c338c0c-73d6-fb80-cc91-f1a86e80db0c) 以降
   
 - Microsoft Edge 安定チャネル
@@ -72,8 +73,8 @@ IE モードを構成した後、グループ ポリシーを使用して組織�
 
 1. 前提条件のオペレーティング システムの更新プログラムがあることを確認してください。 この手順では、コンピューター上の ADMX ファイル (具体的には inetres.adml および inetres.admx) を直接更新します。 セントラル ストアを更新する場合は、前提条件の更新プログラムがあるコンピューターから .adml ファイルと .admx ファイルをコピーする必要があることに注意してください。 詳しくは、「[セントラル ストアの作成と管理](/troubleshoot/windows-client/group-policy/create-and-manage-central-store)」をご覧ください。
 2. グループ ポリシー エディターを開きます。
-3. [**_Computer Configuration/Administrative Templates/Windows コンポーネント/Internet Explorer_] に移動_* します。 
-4. _*Disable Internet Explorer 11 をスタンドアロン ブラウザー**としてダブルクリックします。
+3. ***[コンピューターの構成]、[管理用テンプレート]、[Windows コンポーネント/Internet Explorer] ***の順に移動します。 
+4.  **[スタンドアロン ブラウザーとして Internet Explorer 11 を無効にする] **をダブルクリックします。
 5.  **[有効化]** を選択します。
 6.  **[オプション] **で、次のいずれかの値を選択します。
 

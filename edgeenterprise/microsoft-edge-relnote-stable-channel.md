@@ -3,19 +3,19 @@ title: Stable チャネルに関する Microsoft Edge リリース ノート
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 06/28/2021
+ms.date: 07/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Stable チャネルに関する Microsoft Edge リリース ノート
-ms.openlocfilehash: ab599e3995641290ed806acc241b00e808f7fc1b
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: f82fdbdddb45951fd9e1eca44f90270bc06c32d1
+ms.sourcegitcommit: 2a00571483e1d169b2b3b59f4fce43262f460a9a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642533"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "11643772"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Microsoft Edge Stable チャネルのリリース ノート
 
@@ -31,6 +31,9 @@ ms.locfileid: "11642533"
 >
 > Microsoft Edge Web プラットフォームは、ユーザー エクスペリエンス、セキュリティ、およびプライバシーを向上させるために絶えず進化しています。 詳細については、「[Microsoft Edge 向けのサイトの互換性に影響する変更点](/microsoft-edge/web-platform/site-impacting-changes)」を参照してください。
 
+## <a name="version-91086467-july-8"></a>バージョン 91.0.864.67: 7 月 8 日
+
+さまざまなバグとパフォーマンスの問題を修正しました。
 
 ## <a name="version-91086464-july-2"></a>バージョン 91.0.864.64: 7 月 2 日
 

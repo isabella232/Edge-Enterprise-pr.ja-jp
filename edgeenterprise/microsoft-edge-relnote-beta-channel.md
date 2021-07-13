@@ -3,19 +3,19 @@ title: Beta チャネルに関する Microsoft Edge のリリース ノート
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 07/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Beta チャネルに関する Microsoft Edge のリリース ノート
-ms.openlocfilehash: 1115c8d7822fef7e3784a465d5d4ddfd7b6bd6b1
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: d5e4a4807a12cfd50cd0efaeab672361c68a1508
+ms.sourcegitcommit: e3a30351b02226aa042153f17636d64a12c4518b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11643163"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "11643943"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Microsoft Edge Beta チャネルのリリースノート
 
@@ -24,9 +24,20 @@ ms.locfileid: "11643163"
 > [!NOTE]
 > Microsoft Edge Web プラットフォームは、ユーザー エクスペリエンス、セキュリティ、およびプライバシーを向上させるために絶えず進化しています。 詳細については、「[Microsoft Edge 向けのサイトの互換性に影響する変更点](/microsoft-edge/web-platform/site-impacting-changes)」を参照してください。
 
+## <a name="version-92090245-july-12"></a>バージョン 92.0.902.45: 7 月 12 日
+
+さまざまなバグとパフォーマンスの問題を修正しました。
+
+## <a name="version-92090240-july-6"></a>バージョン 92.0.902.40: 7 月 6 日
+
+さまざまなバグとパフォーマンスの問題を修正しました。
+
 ## <a name="version-92090222-june-21"></a>バージョン 92.0.902.22: 6 月 21 日
 
 ### <a name="feature-updates"></a>機能更新プログラム
+
+- **アドレス バーのブラウザー履歴の自然言語検索**。 探している記事/Web サイトを見つけることは、アドレス バーから自然言語検索を行うので簡単になりました。 タイトル/URL キーワードの一致だけでなく、ページのコンテンツ/説明/タイミング (「先週のケーキレシピ」など) に基づいて検索結果を検索できます。
+注: これは[制御された機能]ロールアウトです。 この機能が表示されない場合は、ロールアウトを続行しますので、しばらくしてからもう一度確認してください。
 
 - **ユーザーは、Microsoft Edge で Internet Explorer モードに簡単にアクセスできます**。 Microsoft Edge バージョン 92 から、ユーザーは、Enterprise モード サイト一覧でサイトが構成されるのを待っている間、スタンドアロンの IE 11 アプリケーションに依存する代わりに、Microsoft Edge の Internet Explorer モードでサイトを再読み込みできます。 ユーザーは、サイトをローカル サイト リストに追加するように求められます。Microsoft Edge で同じページに移動すると、次の 30 日間 IE モードで自動的にレンダリングされます。 *[InternetExplorerIntegrationReloadInIEModeAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed)* ポリシーを使用して、このエクスペリエンスを構成し、IE モードのエントリ ポイントへのアクセスと、ローカル サイト リストにサイトを追加する機能を許可できます。 *[InternetExplorerIntegrationLocalSiteListExpirationDays](/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays)* ポリシーを使用して、サイトをローカル サイト リストに保持する日数を調整できます。
 Windows 10 バージョン 1909 の場合、KB5003698 以降が必要であることに注意してください。エンド ツー エンドのエクスペリエンスを実現するには、Windows 10 バージョン 2004、Windows 10 バージョン 20H2、または Windows 10 バージョン 21H1 の場合、 KB5003690 以降が必要です。
@@ -34,19 +45,19 @@ Windows 10 バージョン 1909 の場合、KB5003698 以降が必要である�
 - **MHTML ファイルは、既定では Internet Explorer モードで開きます**。 Microsoft Edge バージョン 92 Stable 以降、MHTML ファイルの種類は、Internet Explorer (IE11) アプリケーションではなく、Microsoft Edge の Internet Explorer モードで自動的に開きます。 これは、ブラウザーで Outlook のメールを表示しようとしているときに最もよく見られます。 この変更は、IE11 がこのファイルの種類の既定のハンドラーである場合にのみ発生します。 これを変更したい場合は、[このガイダンス](/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration)を使用して、Stable バージョン 92 更新プログラムをインストールする前に実行できます。
 
 - **支払い手段がデバイス間で同期されるようになりました**。 Microsoft Edge バージョン 92 以降には、サインインしたデバイス間で支払い情報を同期するオプションがあります。
-注: これは制御された機能ロールアウトであり、現在 50% です。 この機能が表示されない場合は、ロールアウトを続行しますので、しばらくしてからもう一度確認してください。
+注: これは[制御された機能]ロールアウトです。 この機能が表示されない場合は、ロールアウトを続行しますので、しばらくしてからもう一度確認してください。
 
 - **"開発者モード拡張機能を無効にする" という警告は完全に無視できます**。 Microsoft Edge バージョン 92 以降では、[これを再度表示しない] オプションをクリックして、"開発者モード拡張機能を無効にする" という警告をオフにすることができます。
-注: これは制御された機能ロールアウトであり、現在 25% です。 この機能が表示されない場合は、ロールアウトを続行しますので、しばらくしてからもう一度確認してください。
+注: これは[制御された機能]ロールアウトです。 この機能が表示されない場合は、ロールアウトを続行しますので、しばらくしてからもう一度確認してください。
 
 - **ツール バーから直接拡張機能を管理します**。 ツール バーのまったく新しい拡張機能メニューを使用すると、拡張機能を簡単に非表示またはピン留めできます。 拡張機能を管理し、新しい拡張機能を検索するためのクイック リンクでは、新しい拡張機能を簡単に見つけて、既存の拡張機能を管理できます。
-注: これは制御された機能ロールアウトであり、現在 25% です。 この機能が表示されない場合は、ロールアウトを続行しますので、しばらくしてからもう一度確認してください。
+注: これは[制御された機能]ロールアウトです。 この機能が表示されない場合は、ロールアウトを続行しますので、しばらくしてからもう一度確認してください。
 
 - **自動 HTTPS**。 ユーザーには、このより安全なプロトコルをサポートする可能性が高いドメインで、ナビゲーションを HTTP から HTTPS にアップグレードするオプションがあります。 このサポートは、すべてのドメインに対して HTTPS 経由での配信を試行するように構成することもできます。
 注: この機能は実験中です。実験をオプトアウトした場合、この動作は見られません。
 
 - **フォント レンダリングパフォーマンスの改善**。 テキストのレンダリングが改善され、明瞭性が向上し、ぼやけ感が軽減されました。
-注: これは制御された機能ロールアウトであり、現在 25% です。 この機能が表示されない場合は、ロールアウトを続行しますので、しばらくしてからもう一度確認してください。
+注: これは[制御された機能]ロールアウトです。 この機能が表示されない場合は、ロールアウトを続行しますので、しばらくしてからもう一度確認してください。
 
 ### <a name="policy-updates"></a>ポリシーの更新
 
@@ -66,7 +77,6 @@ Windows 10 バージョン 1909 の場合、KB5003698 以降が必要である�
 #### <a name="obsoleted-policy"></a>非推奨ポリシー
 
 - [EnableSha1ForLocalAnchors](/DeployEdge/microsoft-edge-policies#enablesha1forlocalanchors) ローカル信頼アンカーによって発行された SHA-1 を使用して署名された証明書を許可します。
-
 
 ## <a name="version-9209029-june-8"></a>バージョン 92.0.902.9: 6 月 8 日
 

@@ -1,21 +1,21 @@
 ---
 title: パスワード モニターがユーザーに対して自動的に有効にされます
 ms.author: supalsul
-author: dan-wesley
+author: AndreLBarr
 manager: tulasim
-ms.date: 06/29/2021
+ms.date: 07/12/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: パスワード モニターがユーザーに対して自動的に有効にされます
-ms.openlocfilehash: 76fc4f0c0ce4bb59ba6b2d4d8a82b61592585918
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: bd1fe390b972c66cd9b4c20ab3a9fabde76c7e03
+ms.sourcegitcommit: 65530c0bad3097a510f507503eae9c5c67db47a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11643093"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "11643884"
 ---
 # <a name="password-monitor-auto-enabled-for-users"></a>パスワード モニターがユーザーに対して自動的に有効にされます
 
@@ -31,12 +31,6 @@ ms.locfileid: "11643093"
 ### <a name="benefits"></a>利点
 
 これらのオンラインからの攻撃の頻度と範囲を考慮すると、このような保護をすべてのユーザーが入手する必要があります。 Microsoft Edge には、侵害されたことが判明しているパスワードに対して、保存されたユーザーのパスワードを安全に確認し、一致が見つかった場合にはユーザーに警告する組み込みの機能が用意されています。  
-
-### <a name="availability"></a>可用性
-
-パスワード モニターは、1/21 以降の安定チャネル バージョン 88 で使用できます。 ロールアウトは段階的に行われるため、**[設定]** > **[プロファイル]** > **[パスワード]** ページに次のメッセージと制御が表示されるまでに数週間かかる場合があります。
-
-:::image type="content" source="media/microsoft-edge-security-password-monitor/monitor-enable-option.png" alt-text="パスワード モニターを有効にするオプション":::
 
 ## <a name="configure-group-policy-for-password-monitor"></a>パスワード モニターのグループ ポリシーを構成する
 
