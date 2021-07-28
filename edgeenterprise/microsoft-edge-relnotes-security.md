@@ -3,23 +3,37 @@ title: Microsoft Edge セキュリティ更新プログラムのリリースノ�
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 06/28/2021
+ms.date: 07/22/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge セキュリティ更新プログラムのリリースノート
-ms.openlocfilehash: 27ac597b4570fd92b6938691fbf08b0bdd20ca43
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: e88d0a3726eca4acca519e51ff2d552240ee7ef8
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641343"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11676094"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Microsoft Edge セキュリティ更新プログラムのリリースノート
 
 これらのリリース ノートでは、Microsoft Edge Stable チャネルの更新に含まれているセキュリティ修正プログラムに関する情報を提供します。
+
+## <a name="july-22-2021"></a>2021 年 7 月 22 日
+
+Microsoft は、Chromium プロジェクトの最新のセキュリティ更新プログラムを組み込んだ最新の  **Microsoft Edge Stable チャネル (バージョン 92.0.902.55)** をリリースしました。 詳細については、「[セキュリティ更新プログラム ガイド](https://msrc.microsoft.com/update-guide)」を参照してください
+
+この更新プログラムには、次の Microsoft Edge 固有の更新プログラムが含まれています。
+
+- [CVE-2021-36928](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-36928)
+- [CVE-2021-36929](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-36929)
+- [CVE-2021-36931](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-36931)
+
+## <a name="july-19-2021"></a>2021 年 7 月 19 日
+
+Microsoft は、Chromium プロジェクトの最新のセキュリティ更新プログラムを組み込んだ最新の **Microsoft Edge Stable チャネル (バージョン 91.0.864.71)** をリリースしました。 この更新プログラムには、[CVE-2021-30563](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30563) が含まれています。これについては、Chromium チームより実際に悪用されたと報告されています。 詳細については、「[セキュリティ更新プログラム ガイド](https://msrc.microsoft.com/update-guide)」を参照してください。
 
 ## <a name="june-24-2021"></a>2021 年 6 月 24 日
 

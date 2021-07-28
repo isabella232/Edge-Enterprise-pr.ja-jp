@@ -1,9 +1,9 @@
 ---
 title: Microsoft Edge Update のポリシーに関するドキュメント
 ms.author: stmoody
-author: dan-wesley
+author: AndreaLBarr
 manager: tahills
-ms.date: 06/29/2021
+ms.date: 07/23/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge アップデーターでサポートされているすべてのポリシーに関するドキュメント
-ms.openlocfilehash: a9808981acad544042c6e0ccb59ff755a670c848
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 9c7eca4d5bdd7c87bea141a422dce3b17f22067c
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642323"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11675944"
 ---
 # <a name="microsoft-edge---update-policies"></a>Microsoft Edge - 更新ポリシー
 
@@ -41,7 +41,7 @@ Microsoft Edge で使用できるその他のポリシーについて詳しく�
 |[CreateDesktopShortcut](#createdesktopshortcut)|インストール時にデスクトップへのショートカットの作成を禁止する (チャネル単位)|
 |[RollbackToTargetVersion](#rollbacktotargetversion)|ターゲットバージョンにロールバック (チャネル単位)|
 |[TargetVersionPrefix](#targetversionprefix)|ターゲットバージョンの上書き (チャネルごと) |
-
+|[UpdaterExperimentationAndConfigurationServiceControl](#UpdaterExperimentationAndConfigurationServiceControl)| 構成と実験の取得|
 ### [<a name="preferences"></a>基本設定](#preferences-policies)
 |ポリシー名|キャプション|
 |-|-|
@@ -104,7 +104,7 @@ Microsoft Edge で利用できる更新プログラムを Microsoft Edge Update 
 
   このポリシーを有効にした場合、Microsoft Edge Update では、以下のオプションの構成方法に従って Microsoft Edge の更新プログラムを処理します。
    - 常に更新を許可する: 定期的な更新チェックまたは手動更新チェックで検出された場合に、更新プログラムを必ず適用します。
-   - 自動サイレント更新のみ: 更新プログラムは、定期的な更新チェックで検出された場合にのみ適用されます。
+   - [自動サイレント更新のみ]: 更新プログラムは、定期的な更新チェックで検出された場合にのみ適用されます。
    - 手動更新のみ: 更新プログラムは、ユーザーが実行した手動更新チェックで検出された場合にのみ適用されます。
    - 更新を無効にする: 更新プログラムは適用されません。
 
@@ -178,7 +178,7 @@ Microsoft Edge で利用できる更新プログラムを Microsoft Edge Update 
 
 このポリシーを有効にした場合、Microsoft Edge Update では、以下のオプションの構成方法に従って Microsoft Edge の更新プログラムを処理します。
   - 常に更新を許可する: 定期的な更新チェックまたは手動更新チェックで検出された場合に、更新プログラムを必ず適用します。
-  - 自動サイレント更新のみ: 更新プログラムは、定期的な更新チェックで検出された場合にのみ適用されます。
+  - [自動サイレント更新のみ]: 更新プログラムは、定期的な更新チェックで検出された場合にのみ適用されます。
   - 手動更新のみ: 更新プログラムは、ユーザーが実行した手動更新チェックで検出された場合にのみ適用されます。 (アプリによっては、このオプション用のインターフェイスがない場合もあります。)
   - 更新を無効にする: 更新プログラムは適用されません。
 
@@ -201,7 +201,7 @@ Microsoft Edge で利用できる更新プログラムを Microsoft Edge Update 
 - GP ADMX ファイル名:  msedgeupdate.admx
 ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
 - パス: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
-- 値の名前:  
+- 値の名前: 
   - (Stable): Update{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
   - (Beta): Update{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}
   - (Canary): Update{65C35B14-6C1D-4122-AC46-7148CC9D6497}
@@ -246,7 +246,6 @@ updates disabled 0x00000000
 0x00000001
 ```
 [ページのトップへ](#microsoft-edge---update-policies)
-
 
 ### <a name="createdesktopshortcutdefault"></a>CreateDesktopShortcutDefault
 #### <a name="prevent-desktop-shortcut-creation-upon-install-default"></a>既定値のインストール時にデスクトップへのショートカットの作成を禁止する
@@ -401,6 +400,38 @@ Microsoft Edge の更新プログラムで、Microsoft Edge のインストー�
 ```
 [ページのトップへ](#microsoft-edge---update-policies)
 
+### <a name="updaterexperimentationandconfigurationservicecontrol"></a>UpdaterExperimentationAndConfigurationServiceControl
+#### <a name="retrieve-configurations-and-experiments"></a>構成と実験の取得
+>Microsoft Edge Update 1.3.145.1 以降
+
+#### <a name="description"></a>説明
+実験Microsoft Edge Update、実験ペイロードの展開には、実験および構成サービスが使用されます。
+
+実験ペイロードは、Microsoft がフィードバックのテストを可能にしている初期の開発機能の一覧で構成されます。
+
+このポリシーを有効にした場合、実験ペイロードは実験および構成サービスからダウンロードされます。
+
+このポリシーを無効にすると、Experimentation and Configuration Service との通信が完全に停止します。
+
+このポリシーを構成しない場合、管理対象デバイスでは、動作はポリシー 'disabled' と同じです。
+
+このポリシーを構成しない場合、管理されていないデバイスでは、動作はポリシー 'enabled' と同じです。
+
+#### <a name="windows-information-and-settings"></a>Windows の情報と設定
+##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
+- GP 一意の名前: UpdateExperimentationAndConfigureationServiceControl
+- GP 名: 実験および構成サービスとの Controle updater の通信
+- GP パス: 管理用テンプレート/Microsoftt Edge Update/Microsoft Edge Update
+- GP ADMX ファイル名:  msedgeupdate.admx
+##### <a name="windows-registry-settings"></a>Windows レジストリの設定
+- パス: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- 値の名前: UpdaterExperimentationAndConfigurationServiceControl
+- 値の種類: REG_DWORD
+##### <a name="example-value"></a>サンプル値:
+```
+0x00000001
+```
+[ページのトップへ](#microsoft-edge---update-policies)
 
 ## <a name="preferences-policies"></a>基本設定に関するポリシー
 
@@ -459,7 +490,6 @@ start hour : 0x00000001
 start min  : 0x00000002
 ```
 [ページのトップへ](#microsoft-edge---update-policies)
-
 
 ## <a name="proxy-server-policies"></a>プロキシ サーバーに関するポリシー
 

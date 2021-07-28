@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: エンタープライズ内の拡張機能をパッケージ化し、Microsoft Edge をセルフホストする方法について説明します。
-ms.openlocfilehash: aef4438212829006e39572fa938462f13721c580
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 8b0e9ed346848f7ee9330c51f6a1c9274df89371
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642873"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11676114"
 ---
 # <a name="self-host-microsoft-edge-extensions"></a>セルフホスト型 Microsoft Edge 拡張機能
 
@@ -82,7 +82,7 @@ ms.locfileid: "11642873"
    > [!IMPORTANT]
    > CRX ファイルが初めて作成されたときに、生成され保存されたのと同じ PEM ファイルを使用します。 同じ PEM ファイルを使用しない場合は、拡張機能のアプリ ID が変更され、更新プログラムは新しい拡張機能として扱われます。
 
-5. CRX ファイルを [拡張機能] ウィンドウにドラッグ アンド ドロップし、読み込まれることを確認します。
+5. CRX ファイルを [拡張機能] ウィンドウにドラッグ アンド ドロップし、読み込まれることを確認します。 この操作の後、拡張機能は無効になります。 有効にするには、拡張機能の CRX ID を ExtensionInstallAllowList ポリシーに追加します。 
 6. 更新された拡張機能をテストします。
 7. 古い CRX ファイルと XML ファイルを、更新された拡張子の新しいファイルに置き換えます。
 
@@ -90,7 +90,7 @@ ms.locfileid: "11642873"
 
 ## <a name="distribute-a-privately-hosted-extension"></a>プライベート ホスト拡張機能の配布
 
-CRX ファイルがホストされている場所のリンクを共有し、ユーザーがブラウザーで URL を入力するとすぐに拡張機能がダウンロードおよびインストールされます。 ユーザーは、[edge://extensions] ページから拡張機能を有効にできます。 ユーザーがセルフホスト型拡張機能をインストールするには、拡張機能 CRX ID を [[ExtensionInstallAllowList ]](/deployedge/microsoft-edge-policies#extensioninstallallowlist)ポリシーに追加する必要があります。
+CRX ファイルがホストされている場所のリンクを共有し、ユーザーがブラウザーで URL を入力するとすぐに拡張機能がダウンロードおよびインストールされます。 ユーザーは、[edge://extensions] ページから拡張機能を有効にできます。 ユーザーが自己ホスト型拡張機能をインストールするには、拡張 CRX ID を [ExtensionInstallAllowList](/deployedge/microsoft-edge-policies#extensioninstallallowlist) ポリシーに追加し、CRX ファイルがホストされている場所の URL を [ExtensionInstallSources](/deployedge/microsoft-edge-policies#extensioninstallsources) ポリシーに追加する必要があります。
 
 または、グループ ポリシー [ExtensionInstallForceList](/deployedge/microsoft-edge-manage-extensions-policies#force-install-an-extension) を使用して、ユーザーのデバイスに拡張機能を強制的にインストールすることもできます。
 

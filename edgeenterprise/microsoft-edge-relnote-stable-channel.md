@@ -3,19 +3,19 @@ title: Stable チャネルに関する Microsoft Edge リリース ノート
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/09/2021
+ms.date: 07/22/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Stable チャネルに関する Microsoft Edge リリース ノート
-ms.openlocfilehash: f82fdbdddb45951fd9e1eca44f90270bc06c32d1
-ms.sourcegitcommit: 2a00571483e1d169b2b3b59f4fce43262f460a9a
+ms.openlocfilehash: 02d4f2fc96215902000d30f37b589ea126496e47
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "11643772"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11676064"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Microsoft Edge Stable チャネルのリリース ノート
 
@@ -29,7 +29,66 @@ ms.locfileid: "11643772"
 > [!NOTE]
 > 安定チャネルの場合、更新は 1 日以上かけて段階的に公開されます。 詳細については、「[Microsoft Edge 更新プログラムの段階的なロールアウト](microsoft-edge-update-progressive-rollout.md)」を参照してください。
 >
-> Microsoft Edge Web プラットフォームは、ユーザー エクスペリエンス、セキュリティ、およびプライバシーを向上させるために絶えず進化しています。 詳細については、「[Microsoft Edge 向けのサイトの互換性に影響する変更点](/microsoft-edge/web-platform/site-impacting-changes)」を参照してください。
+> Microsoft Edge Web プラットフォームは、ユーザー エクスペリエンス、セキュリティ、およびプライバシーを向上させるために絶えず進化しています。 詳細については、「[Microsoft Edge のサイトの互換性に影響する変更点](/microsoft-edge/web-platform/site-impacting-changes)」を参照してください。
+
+## <a name="version-92090255-july-22"></a>バージョン 92.0.902.55: 7 月 22 日
+
+Stable チャネルのセキュリティ更新プログラムは[こちら](/deployedge/microsoft-edge-relnotes-security#july-22-2021)に記載されています。
+
+### <a name="feature-updates"></a>機能更新プログラム
+
+**ユーザーは、Microsoft Edge で Internet Explorer モードに簡単にアクセスできます**。 Microsoft Edge バージョン 92 から、ユーザーは、Enterprise モード サイト一覧でサイトが構成されるのを待っている間、スタンドアロンの IE 11 アプリケーションに依存する代わりに、Microsoft Edge の Internet Explorer モードでサイトを再読み込みできます。 ユーザーは、サイトをローカル サイト リストに追加するように求められます。Microsoft Edge で同じページに移動すると、次の 30 日間 IE モードで自動的にレンダリングされます。 [InternetExplorerIntegrationReloadInIEModeAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed) ポリシーを使用して、このエクスペリエンスを構成し、IE モードのエントリ ポイントへのアクセスと、ローカル サイト リストにサイトを追加する機能を許可できます。 [InternetExplorerIntegrationLocalSiteListExpirationDays](/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationday) ポリシーを使用して、サイトをローカル サイト リストに保持する日数を調整できます。 Windows 10 バージョン 1909 の場合、KB5003698 以降が必要であることに注意してください。エンド ツー エンドのエクスペリエンスを実現するには、Windows 10 バージョン 2004、Windows 10 バージョン 20H2、または Windows 10 バージョン 21H1 の場合、 KB5003690 以降が必要です。
+
+**MHTML ファイルは、既定では Internet Explorer モードで開きます**。 Microsoft Edge バージョン 92 Stable 以降、MHTML ファイルの種類は、Internet Explorer (IE11) アプリケーションではなく、Microsoft Edge の Internet Explorer モードで自動的に開きます。 これは、ブラウザーで Outlook のメールを表示しようとしているときに最もよく見られます。 この変更は、IE11 がこのファイルの種類の既定のハンドラーである場合にのみ発生します。 これを変更したい場合は、[このガイダンス](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration)を使用して、Stable バージョン 92 更新プログラムをインストールする前に実行できます。
+
+**"開発者モード拡張機能を無効にする" という警告は完全に無視できます**。 Microsoft Edge バージョン 92 以降では、[これを再度表示しない] オプションをクリックして、"開発者モード拡張機能を無効にする" という警告をオフにすることができます。
+
+**直接ツール バーから拡張機能を管理します**。 ツール バーのまったく新しい拡張機能メニューを使用すると、拡張機能を簡単に非表示またはピン留めできます。 拡張機能を管理し、新しい拡張機能を検索するためのクイック リンクでは、新しい拡張機能を簡単に見つけて、既存の拡張機能を管理できます。
+
+**自動再生の既定値は [制限] に設定されます**。  持続的にオンラインへフォーカスしていくために、Microsoft Edge バージョン 92 から、メディアの自動再生の既定値が [許可] から [制限] に変更されます。
+
+**支払い手段がデバイス間で同期されるようになりました**。 Microsoft Edge バージョン 92 以降には、サインインしたデバイス間で支払い情報を同期するオプションがあります。 注: これは「制御された機能ロールアウト」です。 この機能が表示されない場合、ロールアウトは続行しますので、しばらくしてからもう一度確認してください。
+現在、この機能は米国でのみ使用可能で、MSA ユーザー向けのみ (AAD ではありません) 使用可能です
+
+**フォント レンダリングの改善**。 テキストのレンダリングが改善され、明瞭性が向上し、ぼやけ感が軽減されました。 注: これは「制御された機能ロールアウト」です。 この機能が表示されない場合、ロールアウトは続行しますので、しばらくしてからもう一度確認してください。
+
+**[お気に入り] や [コレクション] のようなツール バー ボタン 機能は、ウィンドウの側面にピン留めして、ユーザーの選択を保存します**。 既定で有効になっています。ユーザーがツール バー ボタンをピン留めする選択をした場合、ピン留めを解除するまで、常にピン留め状態で開きます。
+
+**ユーザーは、グループ ポリシーを使用して [このプロファイルを使用して、職場または学校サイトにシングル サインオンを許可する] オプションを管理できます**。  [このプロファイルを使用して、職場または学校サイトにシングル サインオンを許可する] は、AAD 以外のプロファイルには、コンピューターにある職場または学校の資格情報を使用して、職場または学校サイトでシングル サインオンを使用できるようになります。 このオプションは、AAD 以外のプロファイルに対してのみ、エンド ユーザー向けにトグルとして、[設定] -> [プロファイル] -> [プロファイルのユーザー設定] に表示されます。  [AADWebSiteSSOUsingThisProfileEnabled](/deployedge/microsoft-edge-policies#aadwebsitessousingthisprofileenabled)ポリシーを使用して動作を構成できます。  
+
+**パスワードの正常性** オンラインで安全を保つには、さまざまなアカウントのすべてに渡って強力で個別にパスワードを使用することが重要です。 ただし、これは行うよりも言うは易しで、ほとんどのユーザーは、推測しやすい弱いパスワードの使用や、複数のアカウントに跨って強力だが同一のパスワードを再利用するなど、脆弱なパスワード習慣の傾向を示します。
+
+この最新バージョンの Microsoft Edge で、強力で個別のパスワードを使用するタスクが少しだけ簡単になります。 Microsoft Edge は、保存されたパスワードが十分に強力であるかどうかを示し、そして複数のサイトで使用されたかどうかを指摘することで、オンラインでの安全性の維持に役立ちます。 パスワードの正常性は、 edge://settings/passwords にある保存済みパスワードの一覧で確認できます。
+  
+**保存したパスワードのプライバシーを追加しました** 他のユーザーと共有しているデバイスを使用している場合や、何らかの理由でコンピューターのロックを解除したまま離席した場合に、他のユーザーが Web サイトのパスワードにアクセスできないように、デバイスのパスワードを使用した 2 段階検証を選択できます。 シンプル!
+
+**Outlook 拡張子**。  Microsoft Outlook の受信箱、予定表、タスクその他を、新規のブラウザ ウィンドウを開かずとも、その上部に表示します。  新しい Outlook 拡張機能はこちらで入手できます: [Microsoft Outlook - Microsoft Edge Addons](https://microsoftedge.microsoft.com/addons/detail/microsoft-outlook/kkpalkknhlklpbflpcpkepmmbnmfailf?hl=en-US)
+
+### <a name="new-policies"></a>新しいポリシー
+
+- [AADWebSiteSSOUsingThisProfileEnabled](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#aadwebsitessousingthisprofileenabled) 職場または学校サイトへのシングル サインオンを有効化したプロファイル
+- [AutomaticHttpsDefault](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#automatichttpsdefault) 自動 HTTPS を構成する
+- [HeadlessModeEnabled](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#headlessmodeenabled) ヘッドレス モードの使用を制御する
+- [InsecurePrivateNetworkRequestsAllowed](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) 安全でない Web サイトが、よりプライベートなネットワーク エンドポイントに対して要求を行うことを許可するかどうかを指定します。
+- [InsecurePrivateNetworkRequestsAllowedForUrls](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls) リストされたサイトが安全でないコンテキストから、よりプライベートなネットワーク エンドポイントに要求を行うことを許可する
+- [InternetExplorerIntegrationLocalSiteListExpirationDays](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays) サイトがローカル IE モード サイト リストに残る日数を指定する
+- [InternetExplorerIntegrationReloadInIEModeAllowed](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed) Internet Explorer モードで未構成のサイトを再度読み込みできるようにする
+- [SharedArrayBufferUnrestrictedAccessAllowed](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#sharedarraybufferunrestrictedaccessallowed) 非クロスオリジン分離コンテキストで SharedArrayBuffers を使用できるかどうかを指定する
+
+### <a name="deprecated-policy"></a>非推奨のポリシー
+
+- [InternetExplorerIntegrationTestingAllowed](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#internetexplorerintegrationtestingallowed) Internet Explorer モードのテストを許可する
+
+### <a name="obsoleted-policy"></a>廃止されたポリシー
+
+- [EnableSha1ForLocalAnchors](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#enablesha1forlocalanchors) ローカル トラスト アンカーによって発行され、SHA-1 を使用して署名された証明書を許可する
+
+## <a name="version-91086471-july-19"></a>バージョン 91.0.864.71: 7 月 19 日
+
+> [!Important]
+>この更新プログラムには、[CVE-2021-30563](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30563) が含まれています。これについては、Chromium チームより実際に悪用された事例が報告されています。 詳細については、「[セキュリティ更新プログラム ガイド](https://msrc.microsoft.com/update-guide/vulnerability/ADV200002)」を参照してください。
+
+Stable チャネルのセキュリティ更新プログラムは[こちら](/deployedge/microsoft-edge-relnotes-security#july-19-2021)に記載されています。
 
 ## <a name="version-91086467-july-8"></a>バージョン 91.0.864.67: 7 月 8 日
 

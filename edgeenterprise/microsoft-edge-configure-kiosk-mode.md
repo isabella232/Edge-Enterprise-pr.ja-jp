@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: キオスク モード機能と Microsoft Edge キオスク モードのオプションを構成する方法について説明します。
-ms.openlocfilehash: 38d94a5dfac15f810a463e43ad2fe44d51ee66c7
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 3483c402d9cd7e0d4a7542bcda98672523c0dfb6
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642193"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11676124"
 ---
 # <a name="configure-microsoft-edge-kiosk-mode"></a>Microsoft Edge キオスク モードを構成する
 
@@ -99,7 +99,7 @@ msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
   msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing --no-first-run
   ```
 
-- **--kiosk-idle-timeout-minutes=**: Microsoft Edge キオスク モードがユーザーのセッションをリセットする前に、最後のユーザー アクティビティからの時間 (分) を変更します。 次の例の "value" を分数に置き換えます。
+- **--kiosk-idle-timeout-minutes=**: Microsoft Edge キオスク モードがブラウザーを閉じ、ユーザーのセッションをリセットする前に、最後のユーザー アクティビティから時間 (分) を変更します。 注: このフラグは、閉じた後Microsoft Edgeを再起動しない。 アイドル タイムアウト後にエッジを自動的に再起動するには、割り当てられたアクセスやシェル起動などの別のテクノロジが必要です。 次の例の "value" を分数に置き換えます。
 
    ```
    --kiosk-idle-timeout-minutes=value
@@ -160,7 +160,9 @@ Microsoft Edge バージョン 90 キオスク モードは、機能の広範な
 
 ### <a name="multi-app-kiosk"></a>複数アプリ キオスク
 
-Microsoft Edge は、Windows 10 で[複数アプリの割り当てられたアクセス](/windows/configuration/lock-down-windows-10-to-specific-apps) によって実行できます。これは Microsoft Edge レガシでの "通常の閲覧" タイプのキオスク モードに相当します。 複数アプリの割り当てられたアクセスで Microsoft Edge を構成するには、[複数アプリ キオスクの設定](/windows/configuration/lock-down-windows-10-to-specific-apps)方法の手順に従います。 (Microsoft Edge Stable チャネルの AUMID は **MSEdge** です。)
+Microsoft Edge は、Windows 10 で[複数アプリの割り当てられたアクセス](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) によって実行できます。これは Microsoft Edge レガシでの "通常の閲覧" タイプのキオスク モードに相当します。 複数アプリの割り当てられたアクセスで Microsoft Edge を構成するには、[複数アプリ キオスクの設定](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps)方法の手順に従います。 (AUMID Microsoft Edge Stable チャネルが**Microsoft.MicrosoftEdge.Stable_8wekyb3d8bbwe!MSEDGE**)。
+
+複数アプリが割り当てられたアクセスで Microsoft Edge を使用する場合は、Microsoft Edge キオスクを構成するには、[Microsoft Edge ブラウザー ポリシー](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-policies) を使用して、固有の要件を満たすように閲覧エクスペリエンスを構成します。
 
 ### <a name="configure-using-windows-settings"></a>Windows の設定を使用して構成する
 

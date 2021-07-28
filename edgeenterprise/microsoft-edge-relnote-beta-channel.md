@@ -3,19 +3,19 @@ title: Beta チャネルに関する Microsoft Edge のリリース ノート
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/09/2021
+ms.date: 07/21/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Beta チャネルに関する Microsoft Edge のリリース ノート
-ms.openlocfilehash: d5e4a4807a12cfd50cd0efaeab672361c68a1508
-ms.sourcegitcommit: e3a30351b02226aa042153f17636d64a12c4518b
+ms.openlocfilehash: 4bedc609fd150b77b72590f0e16c97f6fb74ed7e
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "11643943"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11675954"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Microsoft Edge Beta チャネルのリリースノート
 
@@ -23,6 +23,10 @@ ms.locfileid: "11643943"
 
 > [!NOTE]
 > Microsoft Edge Web プラットフォームは、ユーザー エクスペリエンス、セキュリティ、およびプライバシーを向上させるために絶えず進化しています。 詳細については、「[Microsoft Edge 向けのサイトの互換性に影響する変更点](/microsoft-edge/web-platform/site-impacting-changes)」を参照してください。
+
+## <a name="version-92090255-july-21"></a>バージョン 92.0.902.55: 7 月 21 日
+
+さまざまなバグとパフォーマンスの問題を修正しました。
 
 ## <a name="version-92090245-july-12"></a>バージョン 92.0.902.45: 7 月 12 日
 

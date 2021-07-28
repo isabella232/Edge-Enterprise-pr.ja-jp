@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge での Microsoft Defender Application Guard のサポート
-ms.openlocfilehash: e6498ecdb0f2bf0ecb3ae12a602b73704c6c4599
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 6273204cc66fa90b1840f279106b3a26d895ca96
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642543"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11675964"
 ---
 # <a name="microsoft-edge-support-for-microsoft-defender-application-guard"></a>Microsoft Edge での Microsoft Defender Application Guard のサポート
 
@@ -134,6 +134,32 @@ IE モードでは Application Guard の機能がサポートされますが、I
 ### <a name="do-i-need-to-install-the-application-guard-chrome-extension"></a>Application Guard の Chrome 拡張機能をインストールする必要はありますか?
 
 いいえ。Application Guard 機能は Microsoft Edge でネイティブでサポートされています。 事実、Application Guard の Chrome 拡張機能の構成は、Microsoft Edge ではサポートされていません。
+
+### <a name="can-employees-download-documents-from-the-application-guard-edge-session-onto-host-devices"></a>従業員は、Application Guard Edge セッションからホスト デバイスにドキュメントをダウンロードできますか。
+
+バージョン Windows 10 Enterpriseバージョン 1803 では、ユーザーは分離された Application Guard コンテナーからホスト PC にドキュメントをダウンロードできます。 この機能はポリシーによって管理されます。
+
+Windows 10 Enterprise バージョン 1709、または Windows 10 Professional エディションバージョン 1803 では、分離された Application Guard コンテナーからホスト コンピューターにファイルをダウンロードできません。 ただし、従業員は [Print as PDF] (PDF 形式で印刷) または [Print as XPS] (XPS 形式で印刷) オプションを使って、それらのファイルをホスト デバイスに保存できます。
+
+### <a name="can-employees-copy-and-paste-between-the-host-device-and-the-application-guard-edge-session"></a>従業員は、ホスト デバイスと Application Guard Edge セッション間でコピーや貼り付けを実行できますか。
+
+組織の設定に応じて、従業員はイメージ (.bmp) とテキストを分離コンテナーにコピーして貼り付けることができます。
+
+### <a name="why-dont-employees-see-their-favorites-in-the-application-guard-edge-session"></a>従業員が Application Guard Edge セッションで自分のお気に入りを表示しない理由
+
+組織の設定によっては、[お気に入り同期] がオフになっている可能性があります。 ポリシーを管理するには、「Microsoft EdgeとMicrosoft Defender Application Guard |Microsoft Docs。
+
+### <a name="why-arent-employees-able-to-see-their-extensions-in-the-application-guard-edge-session"></a>従業員が Application Guard Edge セッションで拡張機能を表示できない理由
+
+Application Guard 構成で拡張機能ポリシーを有効にしてください。
+
+### <a name="my-extension-doesnt-seem-to-work-in-edge-application-guard"></a>拡張機能が Edge Application Guard で動作していないように見える
+
+構成で MDAG に対して拡張機能ポリシーが有効になっている場合は、拡張機能にネイティブ メッセージ処理コンポーネントが必要な場合、それらの拡張機能は Application Guard コンテナーではサポートされません。
+
+### <a name="im-trying-to-watch-playback-video-with-hdr-why-is-the-hdr-option-missing"></a>HDR で再生ビデオを見ようとしているのに、なぜ HDR オプションが見つからないのですか?
+
+コンテナー内で HDR ビデオ再生を機能するには、Application Guard で vGPU ハードウェア アクセラレータを有効にする必要があります。
 
 ### <a name="are-there-any-other-platform-related-faqs"></a>FAQ に関連する他のプラットフォームはありますか?
 

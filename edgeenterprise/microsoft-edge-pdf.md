@@ -1,21 +1,21 @@
 ---
 title: Microsoft Edge の PDF リーダー
 ms.author: adigan
-author: dan-wesley
+author: AndreaLBarr
 manager: balajek
-ms.date: 06/28/2021
+ms.date: 07/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge の PDF リーダーについて説明します。
-ms.openlocfilehash: 0b1cffceb63c1829c39bdd3fa658df2e5f776584
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: e8cf690f818e0fa103aa4f17154d9f95431287b5
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11643183"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11675984"
 ---
 # <a name="pdf-reader-in-microsoft-edge"></a>Microsoft Edge の PDF リーダー
 
@@ -35,16 +35,17 @@ Microsoft Edge には、組み込みの PDF リーダーが用意されていま
 | ローカル、オンライン、および埋め込みの PDF ファイルを表示して印刷する | 79.0.309.71                |
 | 基本フォームの入力<br>(JavaScript フォームはサポートされていません) | 79.0.309.71           |
 |目次| 86.0.622.38 |
-| ページ ビュー |現在、[Microsoft Edge Insider](https://www.microsoftedgeinsider.com/) チャネルで宣伝中 |
+| ページ ビュー | 88.0.705.50 |
 | キャレット モードのブラウジング |87.0.664.41 |
 | インク操作  | 80.0.361.48            |
 | インク操作のカスタマイズ | 83.0.478.54  |
 | Highlight  | 81.0.416.53         |
-| テキスト ノート | 現在、[Microsoft Edge Insider](https://www.microsoftedgeinsider.com/) チャネルで宣伝中 |
+| テキスト ノート | 88.0.705.50 |
 | 音声読み上げ | 84.0.522.63  |
-| Microsoft Information Protection (MIP) で保護されたファイルの表示 | 80.0.361.48 で Windows をサポート<br>81.0.416.53 で Mac をサポート |
+| 同じビジネス テナント内での Microsoft Information Protection (MIP) で保護されたファイルの表示 | 80.0.361.48 で Windows をサポート<br>81.0.416.53 で Mac をサポート |
+| ビジネス テナント間での Microsoft Information Protection (MIP) で保護されたファイルの表示 | 91.0.864.37  |
 |  Information Rights Management (IRM) で保護されたファイルの表示  | 83.0.478.37            |
-| デジタル署名の表示と検証 | Canary チャネルと Dev チャネルで利用できます。 アクティブな改善が行われています。 |
+
 
 ### <a name="constraints"></a>制約
 
@@ -115,6 +116,7 @@ PDF の音声読み上げは、ユーザーが重要なタスクを実行しな�
 > MIP にはライセンスが必要です。 詳細については、この「[Microsoft 365 ライセンス ガイダンス](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)」を参照してください。
 
 これらのファイルは、他のソフトウェアをダウンロードしたり、アドインをインストールしたりすることなく、ブラウザーで直接開くことができます。 この機能により、MIP が提供するセキュリティが直接ブラウザーに統合され、シームレスなワークフローを実現します。
+MIP で保護されたファイルをビジネス テナント間で表示できます。 現在、コンシューマー ID を使用してファイルを表示する機能はサポートされていません。
 
 ![保護された PDF ドキュメント。](media/microsoft-edge-pdf/pdf-reader-protected-pdf2.png)
 

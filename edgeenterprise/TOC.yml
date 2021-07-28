@@ -1,4 +1,4 @@
-# last revised 05/03/2021
+# last revised 05/03/2021 
 - name: Microsoft Edge エンタープライズのドキュメント
   href: index.yml
 - name: Microsoft Edge ドキュメント
@@ -135,6 +135,8 @@
           href: edge-ie-mode-sitelist.md
         - name: IE モード ポリシーの構成
           href: edge-ie-mode-policies.md
+        - name: IE モードのローカル サイト一覧
+          href: edge-ie-mode-local-site-list.md
         - name: Internet Explorer 11 を無効にする
           href: edge-ie-disable-ie11.md
         - name: サイトの検出とリストの管理
@@ -239,5 +241,5 @@
       href: microsoft-edge-video-security-smartscreen.md
     - name: ビデオ - セキュリティ、互換性、管理性
       href: microsoft-edge-video-security-compatibility-manageability.md
-- name: よく寄せられる質問
-  href: faqs-edge-in-the-enterprise.yml
+    - name: よく寄せられる質問
+      href: faqs-edge-in-the-enterprise.yml
