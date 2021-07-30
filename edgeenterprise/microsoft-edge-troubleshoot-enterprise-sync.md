@@ -1,21 +1,21 @@
 ---
 title: Microsoft Edge の同期の問題を診断して修正する
 ms.author: collw
-author: dan-wesley
+author: AndreaLBarr
 manager: silvanam
-ms.date: 06/29/2021
+ms.date: 07/27/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 管理者が一般的なエンタープライズ同期の問題のトラブルシューティングと修正に使用できるガイダンスとツール
-ms.openlocfilehash: 0aca8c98492aead0673b5738aa5dba85c3a34314
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: c46fc716424faf361ea0a3bfab68737b64725473
+ms.sourcegitcommit: cb264068ccad14eb8ca8393ea04dd3dc8682527a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642233"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "11708656"
 ---
 # <a name="diagnose-and-fix-microsoft-edge-sync-issues"></a>Microsoft Edge の同期の問題を診断して修正する
 
@@ -52,10 +52,10 @@ Azure Active Directory アカウントでこのエラーが発生した場合、
 1. エンタープライズ テナントにサポートされている M365 サブスクリプションがあるかどうか確認します。 利用可能なサブスクリプションの種類の最新の一覧は [ここに表示されています](/azure/information-protection/activate-office365)。 テナントにサポートされているサブスクリプションが存在しない場合は、Azure Information Protection を個別に購入するか、サポートされているサブスクリプションにアップグレードすることが必要です。
 2. サポートされているサブスクリプションが利用可能な場合は、テナントが Azure Information Protection (AIP) を使用できる構成にしているかどうかを確認します。 AIP の状態を確認し、必要に応じて、AIP をアクティブ化するための手順については、 [ここ](/azure/information-protection/activate-office365)をご覧ください。
 3. 手順 2 で AIP がアクティブであるのに同期が機能しない場合は、Enterprise State Roaming (ESR) をオンにします。 ESR を有効にする手順は [ここ](/azure/active-directory/devices/enterprise-state-roaming-enable)をご覧ください。 ESR を使用し続ける必要はない点に注意してください。 この手順で問題が解決した場合は、ESR をオフにします。
-4. Azure Information Protection が登録ポリシーによって範囲を設定されていないか確認します。 [Get-AadrmOnboardingControlPolicy](/powershell/module/aadrm/get-aadrmonboardingcontrolpolicy?view=azureipps) PowerShell アプレットを使用して、範囲が設定されているかどうかを確認できます。 次の 2 つの例では、範囲が設定されていない構成の例と、特定のセキュリティ グループを対象に範囲が設定されている構成の例を示します。
+4. Azure Information Protection が登録ポリシーによって範囲を設定されていないか確認します。 [Get-AIPServiceOnboardingControlPolicy](/powershell/module/aipservice/get-aipserviceonboardingcontrolpolicy?view=azureipps) PowerShell コマンドレットを使用して、スコープが有効になっているか確認できます。 aIPService PowerShell モニターがインストールされていることを確認します。 ここで取得できます [。Azure Information Protection 用の AIPService PowerShell モジュールをインストールします](/azure/information-protection/install-powershell) 。 次の 2 つの例では、範囲が設定されていない構成の例と、特定のセキュリティ グループを対象に範囲が設定されている構成の例を示します。
 
    ```powershell
-    PS C:\Work\scripts\PowerShell> Get-AadrmOnboardingControlPolicy
+    PS C:\Work\scripts\PowerShell> Get-AIPServiceOnboardingControlPolicy
  
     UseRmsUserLicense SecurityGroupObjectId                Scope
     ----------------- ---------------------                -----
@@ -64,16 +64,16 @@ Azure Active Directory アカウントでこのエラーが発生した場合、
 
    ```powershell
 
-    PS C:\Work\scripts\PowerShell> Get-AadrmOnboardingControlPolicy
+    PS C:\Work\scripts\PowerShell> Get-AIPServiceOnboardingControlPolicy
  
     UseRmsUserLicense SecurityGroupObjectId                Scope
     ----------------- ---------------------                -----
                 False f1488a05-8196-40a6-9483-524948b90282   All
    ```
 
-   範囲指定が有効な場合、影響を受けるユーザーを、範囲のセキュリティ グループに追加するか、または範囲を削除する必要があります。 次の例では、登録で AIP の範囲が指定されたセキュリティ グループに設定されています。[Set-AadrmOnboardingControlPolicy](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy?view=azureipps) PowerShell アプレットを使用して範囲を削除する必要があります。
+   範囲指定が有効な場合、影響を受けるユーザーを、範囲のセキュリティ グループに追加するか、または範囲を削除する必要があります。 次の例では、オンボーディングで指定されたセキュリティ グループに対して AIP をスコープ設定し、スコープは [Set-AIPServiceOnboardingControlPolicy](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy?view=azureipps) PowerShell アプレットで削除する必要があります。
 
-5. テナントで IIPCv3Service が有効になっていることを確認します。 [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration?view=azureipps)  PowerShell のアプレットがサービスの状態を表示します。
+5. テナントで IIPCv3Service が有効になっていることを確認します。 [Get-AIPServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration?view=azureipps) PowerShell コマンドレットは、サービスの状態を示します。
 
    :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-scoped-cfg-example.png" alt-text="IPCv3Service が有効になっているどうか確認します。":::
 
