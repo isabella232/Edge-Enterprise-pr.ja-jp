@@ -1,7 +1,7 @@
 ---
 title: パスワード モニターがユーザーに対して自動的に有効にされます
 ms.author: supalsul
-author: AndreLBarr
+author:
 manager: tulasim
 ms.date: 07/12/2021
 audience: ITPro
