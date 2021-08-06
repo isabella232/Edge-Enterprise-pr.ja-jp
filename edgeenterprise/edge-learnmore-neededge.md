@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 最新の Web サイトに対応するための Internet Explorer から Microsoft Edge へのリダイレクト
-ms.openlocfilehash: ec59380b82dc975ba3075d6e008bc0da05136f72
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 0d60dd2bdef87942087399afd5034454eead66ddc8e244df04c6e86ae2a73700
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642113"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11724252"
 ---
 # <a name="redirection-from-internet-explorer-to-microsoft-edge-for-compatibility-with-modern-web-sites"></a>最新の Web サイトに対応するための Internet Explorer から Microsoft Edge へのリダイレクト
 

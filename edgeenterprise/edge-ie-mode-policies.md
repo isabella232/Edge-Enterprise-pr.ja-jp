@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: IE モード ポリシーの構成
-ms.openlocfilehash: 98d05af8769e25cfe2782a1e273f3b487afcead0
-ms.sourcegitcommit: c6452a458f825dab5638db9ff31268c2dc27f8db
+ms.openlocfilehash: a4b5e029935aed7e5d3cf23cc681448464b2f4e4a96d9d380d9cfb60ced88b2b
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2021
-ms.locfileid: "11677124"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11726110"
 ---
 # <a name="configure-ie-mode-policies"></a>IE モード ポリシーの構成
 

@@ -11,17 +11,17 @@ metadata:
   ms.localizationpriority: medium
   ms.collection: M365-modern-desktop
   description: Microsoft Edge Internet Explorer モードのトラブルシューティングと FAQ
-  ms.openlocfilehash: 6248632a430f9c342624794b595f1cccc3d7d6a8
-  ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+  ms.openlocfilehash: b5fa1666a83b4e687faf1075ea57a9f65dbbeffb3242eb2bce5ea13dd42c422f
+  ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 07/09/2021
-  ms.locfileid: "11641863"
+  ms.lasthandoff: 08/05/2021
+  ms.locfileid: "11724590"
 title: IE モードのトラブルシューティングと FAQ
 summary: >
   >[!Note]
 
-  > Internet Explorer 11 デスクトップ アプリケーションは廃止され、2022 年 6 月 15 日にサポートが終了します (スコープ内の一覧については、[FAQ を参照してください](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549))。 現在使用しているものと同じ IE11 アプリとサイトを、Internet Explorer モードの Microsoft Edge で開くことができます。 [こちらをご覧ください](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)。
+  > Internet Explorer 11 デスクトップ アプリケーションは廃止され、2022 年 6 月 15 日にサポートが終了します (スコープ内の一覧については、[FAQ を参照してください](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549))。 現在使用しているものと同じ IE11 アプリとサイトを、Internet Explorer モードの Microsoft Edge で開くことができます。 [詳細については、こちらを参照してください](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)。
 
 
   この記事では、Microsoft Edge バージョン 77 以降に関するトラブルシューティングのヒントと FAQ を示します。
@@ -96,7 +96,7 @@ sections:
   - question: >
       IE モードは Internet Explorer 11 に代わる機能ですか?
     answer: >
-      はい、Internet Explorer 11 デスクトップ アプリケーションは廃止され、2022 年 6 月 15 日にサポートが終了します (範囲の一覧については、「ライフサイクルに関する[FAQ - Internet Explorer」を参照してください](https://support.microsoft.com/help/17454/)。現在使用しているのと同じ IE11 アプリとサイトは、Microsoft EdgeモードInternet Explorerできます。 [こちらをご覧ください](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)。
+      はい、Internet Explorer 11 デスクトップ アプリケーションは廃止され、2022 年 6 月 15 日にサポートが終了します (範囲の一覧については、「ライフサイクルに関する[FAQ - Internet Explorer」を参照してください](https://support.microsoft.com/help/17454/)。現在使用しているのと同じ IE11 アプリとサイトは、Microsoft EdgeモードInternet Explorerできます。 [詳細については、こちらを参照してください](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)。
   - question: >
       IE モードで SharePoint で [エクスプローラー​​で開く] または [エクスプローラーで表示] を使用できますか?
     answer: >

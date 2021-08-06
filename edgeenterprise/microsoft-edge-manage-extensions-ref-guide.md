@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: ExtensionSettings ポリシーを使用して Microsoft Edge 拡張機能を構成するための詳細なリファレンス ガイド。
-ms.openlocfilehash: 67e3cffaa842f591a3d4c3035104addd19e34fd8
-ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
+ms.openlocfilehash: 8634d16c9519ccc5fbdb61baf7f3c4282ff44d995311c6eab2931683bca58309
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "11676104"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11726730"
 ---
 # <a name="detailed-guide-to-the-extensionsettings-policy"></a>ExtensionSettings ポリシーの詳細なガイド
 

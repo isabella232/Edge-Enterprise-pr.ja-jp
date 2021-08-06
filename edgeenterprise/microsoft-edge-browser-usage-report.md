@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 組織のブラウザーの使用法レポートを取得する方法について説明します。
-ms.openlocfilehash: 6592ee04439fb37a034f148bcbef00ad967d3f7e
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 90227be3d5d5372227e24b62e63d09e70e229e51b34e9143d92afb6d9ebfbd0c
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641353"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11726630"
 ---
 # <a name="microsoft-browser-usage-report"></a>Microsoft ブラウザーの使用法レポート
 

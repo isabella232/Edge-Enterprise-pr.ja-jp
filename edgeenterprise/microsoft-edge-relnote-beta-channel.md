@@ -3,19 +3,19 @@ title: Beta チャネルに関する Microsoft Edge のリリース ノート
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/29/2021
+ms.date: 08/03/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Beta チャネルに関する Microsoft Edge のリリース ノート
-ms.openlocfilehash: 6816d420668673cdfefb303cc6765f9a22afce0f
-ms.sourcegitcommit: c74caed21e18d5d211a7fa6cb4f0cb3a14446f42
+ms.openlocfilehash: 8b76fc92fc5db3433990435e78ee14dcbe306b4096a6c1a6ba919faebc074768
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "11710365"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11725760"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Microsoft Edge Beta チャネルのリリースノート
 
@@ -23,6 +23,59 @@ ms.locfileid: "11710365"
 
 > [!NOTE]
 > Microsoft Edge Web プラットフォームは、ユーザー エクスペリエンス、セキュリティ、およびプライバシーを向上させるために絶えず進化しています。 詳細については、「[Microsoft Edge のサイトの互換性に影響する変更点](/microsoft-edge/web-platform/site-impacting-changes)」を参照してください。
+
+## <a name="version-93096111-august-3"></a>バージョン 93.0.961.11: 8 月 3 日
+
+### <a name="feature-updates"></a>機能更新プログラム
+
+- **[ユーザー設定] の初期Microsoft Edge。**  エンタープライズにMicrosoft Edgeを展開すると、バージョン 93 より簡単になり、[初期設定] が追加されます。
+
+- **IE モードでは、Microsoft Edge "nomerge" 動作がサポートされます。**  エッジ 93 から、サーバー上の IE Microsoft Edgeは nomerge をサポートします。 エンド ユーザーの場合、IE モード アプリケーションから新しいブラウザー ウィンドウを起動すると、IE11 の nomerge 動作と同様に、別のセッションになります。 セッション共有を "nomerge" として防止する必要があるサイトを構成するには、サイト一覧を調整する必要があります。 Microsoft Edge のウィンドウごとに、指定された "nomerge" サイトの 1 つである場合、そのウィンドウ内で初めて IE モード タブが表示された場合、そのウィンドウは、少なくともそのウィンドウで最後の IE モード タブが閉じるまで、他のすべての Microsoft Edge ウィンドウとは異なる "nomerge" IE セッションにロックされます。 これは、ユーザーが nomerge を使用して IE を起動し、他のメカニズムを介してMicrosoft Edgeを起動できる以前の動作に従います。
+
+- **タブ グループ。**  タブをユーザー定義グループに分類する機能は、複数のワークストリーム間でタブを効率的に検索、切り替え、管理するのに役立ちます。 これを有効にするには、バージョン 93 で始まるタブ グループMicrosoft Edgeオンにします。
+
+- **垂直タブを使用している間は、タイトル バーを非表示にしてください。**  [垂直タブ] でブラウザーのタイトル バーを非表示にすることで、余分な数ピクセルを取得します。 Microsoft Edge バージョン 93 から、edge://settings/appearance に移動し、[ツールバーのカスタマイズ] セクションで、垂直タブ モードの間にタイトル バーを非表示にするオプションを選択します。
+
+- **ホバー ツールバーからのピクチャ (PiP) のビデオピクチャ。**  エッジ バージョン 93 では、ピクチャ (PiP) モードに入る方がさらに簡単になります。 サポートされているビデオの上にマウス ポインターを置くと、ツール バーが表示され、そのビデオを PiP ウィンドウで表示できます。  注意: これは現在、macOS のユーザー Microsoft Edge使用できます。  ユーザーに対するロールアウトを続行する場合は、Windowsしてください。
+
+- **TLS での 3DES の削除。**  Edge v93 から、暗号化スイートTLS_RSA_WITH_3DES_EDE_CBC_SHAサポートが削除されます。 この変更は、プロジェクトのChromiumプロジェクトでMicrosoft Edge発生します。 詳細については、「Chrome プラットフォームの状態」 [エントリに移動します](https://chromestatus.com/feature/6678134168485888)。 さらに、Edge v93 では、古いサーバーとの互換性を維持する必要があるシナリオをサポートするために [TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled) ポリシーを使用できます。 この互換性ポリシーは廃止され、Edge v95 での動作が停止します。 その前に、影響を受けるサーバーを更新してください。
+
+### <a name="new-policies"></a>新しいポリシー
+
+- [AutoplayAllowlist](/DeployEdge/microsoft-edge-policies#autoplayallowlist) 特定のサイトでメディアの自動再生を許可する
+- [CECPQ2Enabled](/DeployEdge/microsoft-edge-policies#cecpq2enabled) TLS に対して有効な CECPQ2 ポストクォンタム キーアグリーメント
+- [ConfigureViewInFileExplorer](/DeployEdge/microsoft-edge-policies#configureviewinfileexplorer)[エクスプローラーで表示] 機能を構成して、SharePointページのページMicrosoft Edge
+- [DefaultJavaScriptJitSetting](/DeployEdge/microsoft-edge-policies#defaultjavascriptjitsetting) JavaScript JIT の使用を制御する
+- [ShowPDFDefaultRecommendationsEnabled](/DeployEdge/microsoft-edge-policies#showpdfdefaultrecommendationsenabled)既定の PDF リーダーとしてMicrosoft Edge通知の設定を許可する
+- [FeatureFlagOverridesControl](/DeployEdge/microsoft-edge-policies#featureflagoverridescontrol) ユーザーが機能フラグを上書きする機能を構成する
+- [ImplicitSignInEnabled](/DeployEdge/microsoft-edge-policies#implicitsigninenabled) 暗黙的なサインインを有効にする
+- [InternetExplorerIntegrationCloudSiteList](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcloudsitelist)クラウド モード Enterprise一覧を構成する
+- [InternetExplorerIntegrationSiteListRefreshInterval](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationsitelistrefreshinterval)[モード サイト一覧Enterprise更新する頻度を構成する
+- [JavaScriptJitAllowedForSites](/DeployEdge/microsoft-edge-policies#javascriptjitallowedforsites) JavaScript がこれらのサイトで JIT を使用するを許可する
+- [JavaScriptJitBlockedForSites](/DeployEdge/microsoft-edge-policies#javascriptjitblockedforsites) これらのサイトで JavaScript による JIT の使用をブロックする
+- [LocalBrowserDataShareEnabled](/DeployEdge/microsoft-edge-policies#localbrowserdatashareenabled)ローカル Windows閲覧データを検索Microsoft Edge有効にする
+- [MAUEnabled](/DeployEdge/microsoft-edge-policies#mauenabled)Microsoft AutoUpdate を常に更新プログラムとして使用Microsoft Edge
+- [MSAWebSiteSSOUsingThisProfileAllowed](/DeployEdge/microsoft-edge-policies#msawebsitessousingthisprofileallowed) このプロファイルを使用して Microsoft サイトのシングル サインオンを許可する
+- [OneAuthAuthenticationEnforced](/DeployEdge/microsoft-edge-policies#oneauthauthenticationenforced)OneAuth 認証Flowサインインに適用される
+- [PasswordGeneratorEnabled](/DeployEdge/microsoft-edge-policies#passwordgeneratorenabled) ユーザーがオンラインでアカウントを作成するたびに強力なパスワードの提案を受け取る
+- [PrimaryPasswordSetting](/DeployEdge/microsoft-edge-policies#primarypasswordsetting) パスワード自動入力の使用中にユーザーにデバイス パスワードの入力を求める設定を構成します。
+- [PrintingWebpageLayout](/DeployEdge/microsoft-edge-policies#printingwebpagelayout) 印刷のレイアウトを設定する
+- [RemoteDebuggingAllowed](/DeployEdge/microsoft-edge-policies#remotedebuggingallowed) リモート デバッグを許可する
+- [RelaunchWindow](/DeployEdge/microsoft-edge-policies#relaunchwindow) 再起動の時間間隔を設定する
+- [TravelAssistanceEnabled](/DeployEdge/microsoft-edge-policies#travelassistanceenabled) 旅行支援を有効にする
+- [TripleDESEnabled](/DeployEdge/microsoft-edge-policies#tripledesenabled) TLS で 3DES 暗号スイートを有効にする
+
+#### <a name="deprecated-policy"></a>非推奨のポリシー
+
+- [LegacySameSiteCookieBehaviorEnabled](/DeployEdge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) 従来の SameSite Cookie の既定の動作設定を有効にする
+
+#### <a name="obsoleted-policy"></a>非推奨ポリシー
+
+- [NewTabPageSetFeedType](/DeployEdge/microsoft-edge-policies#newtabpagesetfeedtype)新しいタブ Microsoft Edgeエクスペリエンスを構成する
+
+#### <a name="additional-change"></a>その他の変更
+
+- [ConfigureShare](/DeployEdge/microsoft-edge-policies#configureshare) Mac プラットフォームのサポートを追加する
 
 ## <a name="version-92090262-july-29"></a>バージョン 92.0.902.62: 7 月 29 日
 

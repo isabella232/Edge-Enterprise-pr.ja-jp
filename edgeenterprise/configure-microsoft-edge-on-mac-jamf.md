@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Jamf を使用して Mac デバイスの Microsoft Edge ポリシー設定を構成する
-ms.openlocfilehash: 8556a5b1d0fc01feb67fc86cb016a9ed47061b55
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: be706795d093b9dcecf33ee1bf7071286082fad1fea98a98b34145e87a9b7393
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641633"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11725326"
 ---
 # <a name="configure-microsoft-edge-policy-settings-on-macos-with-jamf"></a>Jamf を使用して macOS の Microsoft Edge ポリシー設定を構成する
 
@@ -45,8 +45,8 @@ Jamf Pro 10.19 では、ユーザーが「カスタム スキーマ」として 
 ポリシー マニフェストを取得するには:
 
 - [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)に移動します。
-- [チャネル/バージョン] ドロップダウン リストで、**バージョン 81 以降の任意のチャネルを選択します。**_。
-- [ビルド] ドロップダウン リストで、_*81 以降の任意のビルドを選択します。**_。
+- [チャネル/バージョン] ドロップダウンリストで、**バージョン 81 以降の任意のチャネル***を選択します。
+- [ビルド] ドロップダウンリストで、任意の **81 ビルド以降***を選択します。
 - [ポリシー ファイルの取得] をクリックして、ポリシー テンプレートのバンドルをダウンロードします。
 
   > [!NOTE]
@@ -61,7 +61,7 @@ CAB ファイルを展開してから、ZIP ファイルを展開して、最上
 次の手順を使用して、Jamf Pro にポリシー マニフェストをアップロードし、macOS 用のポリシー プロファイルを作成します。
 
 1. Jamf にサインインします。
-2. [_*Computer**] タブを選択します。
+2. **[Computer]** (コンピューター) タブを選択します。
 3. **[Content Management]** (コンテンツ管理) にある **[Configuration Profiles]** (構成プロファイル) をクリックします。
 4. **[Configuration Profiles]** ページで、**[+ New]** (+ 新規) をクリックします。
 

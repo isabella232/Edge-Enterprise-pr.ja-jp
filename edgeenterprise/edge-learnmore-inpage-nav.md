@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Internet Explorer モードでページ内ナビゲーションを保持する
-ms.openlocfilehash: 20b18d121c3babfaacffd4a08316b25be714d95e
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: f1c40977ba07f0a85bc64aab8e609163f9a68dd2eb7487adff6b6a1fcbd110f2
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641363"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11724292"
 ---
 # <a name="keep-in-page-navigation-in-internet-explorer-mode"></a>Internet Explorer モードでページ内ナビゲーションを保持する
 
@@ -60,9 +60,9 @@ Internet Explorer モードで、自動またはすべてのページ内ナビ�
 
    - **既定** - Internet Explorer モードで開くように構成されたサイトのみが、そのモードで開きます。 Internet Explorer モードで開くように構成されていないサイトは、Microsoft Edge にリダイレクトされます。
    - **Internet Explorer モードで自動ナビゲーションのみを保持する** - 未構成サイトへのすべての自動ナビゲーション （302 リダイレクトなど） が Internet Explorer モードで保持されることを除いて、既定のエクスペリエンスが必要な場合は、このオプションを使用します。
-   - **ページ内のすべてのナビゲーションをユーザー モードInternet Explorerする**  **_(最小推奨)_*_ - IE モードで読み込まれたページから未構成のサイトへのすべてのナビゲーションは、Internet Explorerされます。
+   - **すべてのページ**内ナビゲーションを Internet Explorer モード (最小推奨 **_)_** に保持する - IE モードで読み込まれたページから未構成のサイトへのすべてのナビゲーションは、Internet Explorer モードで保持されます。
 
-6. *[_OK]** または [**適用] をクリック**して、ポリシー設定を保存します。
+6. [**OK**] または [**適用**] をクリックして、このポリシー設定を保存します。
 
 ## <a name="see-also"></a>関連項目
 

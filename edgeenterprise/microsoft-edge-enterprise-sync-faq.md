@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge のエンタープライズ向けの同期に関してよく寄せられる質問。
-ms.openlocfilehash: a13e1f02f6e871004d45f81159d5cf0a3397b6ad
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 87925b4e112c3fdf6012d3da6b39b790d436ea99aa4aaf392a2e635e98a9c4e3
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11643143"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11726780"
 ---
 # <a name="microsoft-edge-enterprise-sync-faq"></a>Microsoft Edge のエンタープライズ向けの同期に関するよく寄せられる質問 (FAQ)
 

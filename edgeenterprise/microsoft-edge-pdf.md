@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge の PDF リーダーについて説明します。
-ms.openlocfilehash: e8cf690f818e0fa103aa4f17154d9f95431287b5
-ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
+ms.openlocfilehash: b15632f75499e8271d38d85fd1a713a03f9171f896febbd59093fcc2585b3f37
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "11675984"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11724990"
 ---
 # <a name="pdf-reader-in-microsoft-edge"></a>Microsoft Edge の PDF リーダー
 

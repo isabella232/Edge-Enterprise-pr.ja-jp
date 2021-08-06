@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge のライフサイクル
-ms.openlocfilehash: 941b77920978bba82dd5edcb192ddfab898f4053
-ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
+ms.openlocfilehash: c9967a093168e0a289cd26f8c3927fc4188f916564e221b66394c6a510083ed1
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "11676089"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11726960"
 ---
 # <a name="microsoft-edge-lifecycle-policy"></a>Microsoft Edge のライフサイクル ポリシー
 
@@ -25,7 +25,7 @@ ms.locfileid: "11676089"
 > この記事は Microsoft Edge version 77 以上に適用されます。
 
 > [!NOTE]
-> 安定したチャネル バージョン 94 から、Microsoft Edge は 4 週間のメジャー リリース サイクルに移行します。 ただし、複雑な環境を管理する企業のお客様は、Microsoft Edge の更新プログラムの計画とテストにより多くの時間が必要なことを認識しています。 更新プログラムを管理するために拡張タイムラインが必要な企業のお客様を支援するために、Microsoft Edge は、より長い**8**週間のメジャー リリース サイクルに合わせて拡張安定オプションを提供します。このオプションは、管理環境を持つお客様にのみ使用できます。 [お知らせブログの投稿を参照してください](https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/)
+> 安定したチャネル バージョン 94 から、Microsoft Edge は 4 週間のメジャー リリース サイクルに移行します。 ただし、複雑な環境を管理する企業のお客様は、Microsoft Edge の更新プログラムの計画とテストにより多くの時間が必要なことを認識しています。 更新プログラムを管理するために拡張タイムラインが必要な企業のお客様を支援するために、Microsoft Edge は、より長い**8**週間のメジャー リリース サイクルに合わせて拡張安定オプションを提供します。このオプションは、管理環境を持つお客様にのみ使用できます。 [お知らせのブログ投稿を参照してください](https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/)
 
 ## <a name="overview-of-the-lifecycle-policy-for-microsoft-edge"></a>Microsoft Edge ライフサイクル ポリシーの概要
 
