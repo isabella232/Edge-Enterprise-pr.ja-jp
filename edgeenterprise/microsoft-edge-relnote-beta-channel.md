@@ -3,19 +3,19 @@ title: Beta チャネルに関する Microsoft Edge のリリース ノート
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 08/03/2021
+ms.date: 08/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Beta チャネルに関する Microsoft Edge のリリース ノート
-ms.openlocfilehash: 8b76fc92fc5db3433990435e78ee14dcbe306b4096a6c1a6ba919faebc074768
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: bea9c325471617c0ad680b0dabe8cd0d847d5ac0d95941f773471f74ffd0f771
+ms.sourcegitcommit: b5093c47bd5e927cde1d486eb71e0ee2483a8bd8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11725760"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "11810471"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Microsoft Edge Beta チャネルのリリースノート
 
@@ -28,17 +28,17 @@ ms.locfileid: "11725760"
 
 ### <a name="feature-updates"></a>機能更新プログラム
 
-- **[ユーザー設定] の初期Microsoft Edge。**  エンタープライズにMicrosoft Edgeを展開すると、バージョン 93 より簡単になり、[初期設定] が追加されます。
+- **[ユーザー設定] の初期Microsoft Edge。**  バージョン 93 Microsoft Edgeでは、初期の基本Microsoft Edgeを追加すると、エンタープライズへの展開が容易になります。
 
-- **IE モードでは、Microsoft Edge "nomerge" 動作がサポートされます。**  エッジ 93 から、サーバー上の IE Microsoft Edgeは nomerge をサポートします。 エンド ユーザーの場合、IE モード アプリケーションから新しいブラウザー ウィンドウを起動すると、IE11 の nomerge 動作と同様に、別のセッションになります。 セッション共有を "nomerge" として防止する必要があるサイトを構成するには、サイト一覧を調整する必要があります。 Microsoft Edge のウィンドウごとに、指定された "nomerge" サイトの 1 つである場合、そのウィンドウ内で初めて IE モード タブが表示された場合、そのウィンドウは、少なくともそのウィンドウで最後の IE モード タブが閉じるまで、他のすべての Microsoft Edge ウィンドウとは異なる "nomerge" IE セッションにロックされます。 これは、ユーザーが nomerge を使用して IE を起動し、他のメカニズムを介してMicrosoft Edgeを起動できる以前の動作に従います。
+- **IE モードでは、Microsoft Edge "nomerge" 動作がサポートされます。**  バージョン 93 Microsoft Edgeから、バージョン 93 の IE モードでは、Microsoft Edgeが_サポートされます_。 エンド ユーザーの場合、IE モード アプリケーションから新しいブラウザー ウィンドウを起動すると、IE11 の動作と同様に、別のセッションになります。 セッション共有を防止する必要があるサイトを構成するには、サイト一覧を調整する必要があります。 Microsoft Edge のウィンドウごとに、指定された "nomerge" サイトの 1 つである場合、そのウィンドウ内で初めて IE モード タブが表示された場合、そのウィンドウは、少なくともそのウィンドウで最後の IE モード タブが閉じるまで、他のすべての Microsoft Edge ウィンドウとは異なる "nomerge" IE セッションにロックされます。 [こちら](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--nomerge--option-that-was-supported-in-internet-explorer-11-)をご覧ください。
 
 - **タブ グループ。**  タブをユーザー定義グループに分類する機能は、複数のワークストリーム間でタブを効率的に検索、切り替え、管理するのに役立ちます。 これを有効にするには、バージョン 93 で始まるタブ グループMicrosoft Edgeオンにします。
 
 - **垂直タブを使用している間は、タイトル バーを非表示にしてください。**  [垂直タブ] でブラウザーのタイトル バーを非表示にすることで、余分な数ピクセルを取得します。 Microsoft Edge バージョン 93 から、edge://settings/appearance に移動し、[ツールバーのカスタマイズ] セクションで、垂直タブ モードの間にタイトル バーを非表示にするオプションを選択します。
 
-- **ホバー ツールバーからのピクチャ (PiP) のビデオピクチャ。**  エッジ バージョン 93 では、ピクチャ (PiP) モードに入る方がさらに簡単になります。 サポートされているビデオの上にマウス ポインターを置くと、ツール バーが表示され、そのビデオを PiP ウィンドウで表示できます。  注意: これは現在、macOS のユーザー Microsoft Edge使用できます。  ユーザーに対するロールアウトを続行する場合は、Windowsしてください。
+- **ホバー ツールバーからのピクチャ (PiP) のビデオピクチャ。**  バージョン 93 Microsoft Edge、ピクチャ (PiP) モードに入る方がさらに簡単になります。 サポートされているビデオの上にマウス ポインターを置くと、ツール バーが表示され、そのビデオを PiP ウィンドウで表示できます。  注: これは現在、macOS のユーザー Microsoft Edge使用できます。  ユーザーへのロールアウトを続行する場合は、Windowsしてください。
 
-- **TLS での 3DES の削除。**  Edge v93 から、暗号化スイートTLS_RSA_WITH_3DES_EDE_CBC_SHAサポートが削除されます。 この変更は、プロジェクトのChromiumプロジェクトでMicrosoft Edge発生します。 詳細については、「Chrome プラットフォームの状態」 [エントリに移動します](https://chromestatus.com/feature/6678134168485888)。 さらに、Edge v93 では、古いサーバーとの互換性を維持する必要があるシナリオをサポートするために [TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled) ポリシーを使用できます。 この互換性ポリシーは廃止され、Edge v95 での動作が停止します。 その前に、影響を受けるサーバーを更新してください。
+- **TLS での 3DES の削除。**  バージョン 93 Microsoft Edge、暗号化スイートのサポートTLS_RSA_WITH_3DES_EDE_CBC_SHA削除されます。 この変更は、プロジェクトのChromiumプロジェクトでMicrosoft Edge発生します。 詳細については、「Chrome プラットフォームの状態」 [エントリに移動します](https://chromestatus.com/feature/6678134168485888)。 さらに、Microsoft Edgeバージョン 93 では[、TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled)ポリシーを使用して、古いサーバーとの互換性を維持する必要があるシナリオをサポートできます。 この互換性ポリシーは廃止され、バージョン 95 でのMicrosoft Edge停止します。 その前に、影響を受けるサーバーを更新してください。
 
 ### <a name="new-policies"></a>新しいポリシー
 
@@ -106,19 +106,19 @@ Windows 10 バージョン 1909 の場合、KB5003698 以降が必要である�
 - **MHTML ファイルは、既定では Internet Explorer モードで開きます**。 Microsoft Edge バージョン 92 Stable 以降、MHTML ファイルの種類は、Internet Explorer (IE11) アプリケーションではなく、Microsoft Edge の Internet Explorer モードで自動的に開きます。 これは、ブラウザーで Outlook のメールを表示しようとしているときに最もよく見られます。 この変更は、IE11 がこのファイルの種類の既定のハンドラーである場合にのみ発生します。 これを変更したい場合は、[このガイダンス](/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration)を使用して、Stable バージョン 92 更新プログラムをインストールする前に実行できます。
 
 - **支払い手段がデバイス間で同期されるようになりました**。 Microsoft Edge バージョン 92 以降には、サインインしたデバイス間で支払い情報を同期するオプションがあります。
-注: これは「制御された機能ロールアウト」です。 この機能が表示されない場合、ロールアウトは続行しますので、しばらくしてからもう一度確認してください。
+注: これは「制御された機能ロールアウト」です。 この機能が表示しない場合は、ロールアウトを続行する間にもう一度確認してください。
 
 - **"開発者モード拡張機能を無効にする" という警告は完全に無視できます**。 Microsoft Edge バージョン 92 以降では、[これを再度表示しない] オプションをクリックして、"開発者モード拡張機能を無効にする" という警告をオフにすることができます。
-注: これは「制御された機能ロールアウト」です。 この機能が表示されない場合、ロールアウトは続行しますので、しばらくしてからもう一度確認してください。
+注: これは「制御された機能ロールアウト」です。 この機能が表示しない場合は、ロールアウトを続行する間にもう一度確認してください。
 
-- **ツール バーから直接拡張機能を管理します**。 ツール バーのまったく新しい拡張機能メニューを使用すると、拡張機能を簡単に非表示またはピン留めできます。 拡張機能を管理し、新しい拡張機能を検索するためのクイック リンクでは、新しい拡張機能を簡単に見つけて、既存の拡張機能を管理できます。
-注: これは「制御された機能ロールアウト」です。 この機能が表示されない場合、ロールアウトは続行しますので、しばらくしてからもう一度確認してください。
+- **直接ツール バーから拡張情報を管理します**。 ツール バーのまったく新しい拡張機能メニューを使用すると、拡張機能を簡単に非表示またはピン留めできます。 拡張機能を管理し、新しい拡張機能を検索するためのクイック リンクでは、新しい拡張機能を簡単に見つけて、既存の拡張機能を管理できます。
+注: これは「制御された機能ロールアウト」です。 この機能が表示しない場合は、ロールアウトを続行する間にもう一度確認してください。
 
 - **自動 HTTPS**。 ユーザーには、このより安全なプロトコルをサポートする可能性が高いドメインで、ナビゲーションを HTTP から HTTPS にアップグレードするオプションがあります。 このサポートは、すべてのドメインに対して HTTPS 経由での配信を試行するように構成することもできます。
 注: この機能は実験中です。実験をオプトアウトした場合、この動作は見られません。
 
 - **フォント レンダリングパフォーマンスの改善**。 テキストのレンダリングが改善され、明瞭性が向上し、ぼやけ感が軽減されました。
-注: これは「制御された機能ロールアウト」です。 この機能が表示されない場合、ロールアウトは続行しますので、しばらくしてからもう一度確認してください。
+注: これは「制御された機能ロールアウト」です。 この機能が表示しない場合は、ロールアウトを続行する間にもう一度確認してください。
 
 ### <a name="policy-updates"></a>ポリシーの更新
 

@@ -79,6 +79,8 @@
       href: configure-microsoft-edge.md
     - name: Intune で Windows 用に構成する
       href: /mem/intune/configuration/administrative-templates-configure-edge/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
+    - name: 初回実行時のユーザー設定を使用して Microsoft Edge を構成する
+      href: Initial-preferences-support-on-Microsoft-Edge-browser.md
     - name: ポリシーによるサイトごとの構成
       href: Per-Site-Configuration-by-Policy.md
     - name: モバイル デバイス管理で Windows 用に構成する

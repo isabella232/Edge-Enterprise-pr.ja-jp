@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge の Internet Explorer モードが、Internet Explorer 11 を必要とするサイトへのアクセスと最新のサイトへのアクセスをどのように提供するかについて説明します。
-ms.openlocfilehash: 5903e8a50f0afa50daa5921f3c97f3dbcbf0c3c5
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 7d1d9d201abee9cd9f0d648f2757e3276945d2f4dcf635ea0cd17a64e684aec4
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641393"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11726066"
 ---
 # <a name="what-is-internet-explorer-ie-mode"></a>Internet Explorer (IE) モードとは
 

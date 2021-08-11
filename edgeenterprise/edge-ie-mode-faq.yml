@@ -4,24 +4,24 @@ metadata:
   ms.author: shisub
   author: dan-wesley
   manager: srugh
-  ms.date: 06/29/2021
+  ms.date: 08/05/2021
   audience: ITPro
   ms.topic: conceptual
   ms.prod: microsoft-edge
   ms.localizationpriority: medium
   ms.collection: M365-modern-desktop
   description: Microsoft Edge Internet Explorer モードのトラブルシューティングと FAQ
-  ms.openlocfilehash: b5fa1666a83b4e687faf1075ea57a9f65dbbeffb3242eb2bce5ea13dd42c422f
-  ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+  ms.openlocfilehash: 7facf29ed4abab85ef0abadc1bc85778c4bdac07b2e30493e588b62394fd861a
+  ms.sourcegitcommit: 1d5a9ed583c91939dc9443594e1d5cffda5d3fbe
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 08/05/2021
-  ms.locfileid: "11724590"
+  ms.lasthandoff: 08/07/2021
+  ms.locfileid: "11810495"
 title: IE モードのトラブルシューティングと FAQ
 summary: >
   >[!Note]
 
-  > Internet Explorer 11 デスクトップ アプリケーションは廃止され、2022 年 6 月 15 日にサポートが終了します (スコープ内の一覧については、[FAQ を参照してください](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549))。 現在使用しているものと同じ IE11 アプリとサイトを、Internet Explorer モードの Microsoft Edge で開くことができます。 [詳細については、こちらを参照してください](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)。
+  > Internet Explorer 11 デスクトップ アプリケーションは廃止され、2022 年 6 月 15 日にサポートが終了します (スコープ内の一覧については、[FAQ を参照してください](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549))。 現在使用しているものと同じ IE11 アプリとサイトを、Internet Explorer モードの Microsoft Edge で開くことができます。 [こちらをご覧ください](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)。
 
 
   この記事では、Microsoft Edge バージョン 77 以降に関するトラブルシューティングのヒントと FAQ を示します。
@@ -96,31 +96,18 @@ sections:
   - question: >
       IE モードは Internet Explorer 11 に代わる機能ですか?
     answer: >
-      はい、Internet Explorer 11 デスクトップ アプリケーションは廃止され、2022 年 6 月 15 日にサポートが終了します (範囲の一覧については、「ライフサイクルに関する[FAQ - Internet Explorer」を参照してください](https://support.microsoft.com/help/17454/)。現在使用しているのと同じ IE11 アプリとサイトは、Microsoft EdgeモードInternet Explorerできます。 [詳細については、こちらを参照してください](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)。
+      はい、Internet Explorer 11 デスクトップ アプリケーションは廃止され、2022 年 6 月 15 日にサポートが終了します (範囲の一覧については、「ライフサイクルに関する[FAQ - Internet Explorer」を参照してください](https://support.microsoft.com/help/17454/)。現在使用しているのと同じ IE11 アプリとサイトは、Microsoft EdgeモードInternet Explorerできます。 [こちらをご覧ください](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)。
+  - question: >
+      デバイスで IE モードを使用している間に、従来のアプリケーションをデバッグMicrosoft Edge?
+    answer: "IEChooser を使用して、DevTools Internet Explorerを起動して、IE モード タブのコンテンツをデバッグできます。 IEChooser を使用するには、次の手順を実行します。\n1. IEChooser を開きます。\n    - [ファイル名を指定して実行] ダイアログ ボックスを開きます。 たとえば、 を押 `Windows logo key`  +  `R` します。\n    - を `%systemroot%\\system32\\f12\\IEChooser.exe` 入力し **、[OK] を選択します**。\n2. IEChooser で、[IE モード] タブのエントリを選択します。\n  \n"
   - question: >
       IE モードで SharePoint で [エクスプローラー​​で開く] または [エクスプローラーで表示] を使用できますか?
     answer: >
       はい。スタンドアロン Internet Explorer 11 で動作する場合は、IE モードで動作します。 ただし、[エクスプローラー​​で開く] オプションを使用するのではなく、SharePoint 外部のファイルやフォルダを管理するための推奨アプローチは、[SharePoint ファイルの同期](https://support.office.com/en-us/article/sync-sharepoint-files-with-the-onedrive-sync-app-6de9ede8-5b6e-4503-80b2-6190f3354a88)または [SharePoint でのファイルの移動またはコピー](https://support.office.com/en-us/article/move-or-copy-files-in-sharepoint-00e2f483-4df3-46be-a861-1f5f0c1a87bc)です。
   - question: >
       IE モードは、Microsoft Edge 11 でサポートされた 'nomerge' オプションInternet Explorerしますか?
-    answer: >
-      Microsoft Edge には、*nomerge* オプションをミラーリングする明示的なコマンドはありませんが、この機能性を提供する、推奨される代替方法がいくつかあります。
-
-
-      1. Microsoft Edge のプロファイルを使用すると、各プロファイルが異なる IE セッションにマッピングされ、*nomerge* オプションと同様に動作します。
-
-      2. `--user-data-dir=<path>` のコマンド ラインを使用しますが、各セッションには異なるパスを使用します。 必要な場合は、Microsoft Edge の起動とセッション用パスの変更を両方実行するユーティリティを作成することが可能です。
-
-
-      上記のどちらのオプションもシナリオで機能しない場合は、Microsoft サポートまたは [TechCommunity フォーラム](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise)のいずれかのフィードバック チャネルから問い合わせください。
+    answer: "次に示す nomerge 機能Microsoft Edge推奨される選択肢は、\n1. Microsoft Edge のプロファイルを使用すると、各プロファイルが異なる IE セッションにマッピングされ、*nomerge* オプションと同様に動作します。\n2. `--user-data-dir=<path>` のコマンド ラインを使用しますが、各セッションには異なるパスを使用します。 必要な場合は、Microsoft Edge の起動とセッション用パスの変更を両方実行するユーティリティを作成することが可能です。\n\nどちらのオプションもシナリオで動作しない場合は、Microsoft Edge バージョン**93**から始まると、Microsoft Edgeがサポートされます。 エンド ユーザーの場合、IE モード アプリケーションから新しいブラウザー ウィンドウを起動すると、IE11 の nomerge 動作のように、別のセッションになります。 \n\nMicrosoft Edge の各ウィンドウで、指定された \"nomerge\" サイトの 1 つである場合、そのウィンドウ内で初めて IE モード タブが表示された場合、そのウィンドウは、少なくともそのウィンドウで最後の IE モード タブが閉じるまで、他のすべての Microsoft Edge ウィンドウとは異なる *\"nomerge\"* IE セッションにロックされます。 これは、ユーザーが nomerge を使用して IE を起動し、他のメカニズムを介してMicrosoft Edgeを起動できる以前の動作に従います。 新しいウィンドウ (window.open 経由) で開いているすべてのサイトは、親プロセスのマージの性質を尊重します。 セッションの切り替えはサポートされていません。 同じ IE モード タブ内のナビゲーションでは、同じセッションが使用されます。\n\n次の手順に従って、Microsoft Edge **Beta**チャネル (バージョン 93 以降) で動作を検証できます。\n1. バージョン 93 以降で IE モードMicrosoft Edge確認します。 \n2. merge-type 属性の値を \"nomerge\" に設定することで、Enterprise モード サイト一覧でセッション共有を防止する必要があるサイトを構成できます。 この属性は、open-in 要素がユーザー設定に設定されている場合にのみMicrosoft Edge。 既定では、すべてのサイトに差し込み印刷の種類の値があります。 \n   (**注**: このオプションは、edge://compat/sitelistmanager 93 Stable リリースと組み合Microsoft Edge統合サイト リスト*マネージャー*ツール)\n\n   ```\n   <site url=\"contoso.com\">\n   <open-in merge-type=\"no-merge\">IE11</open-in>\n   </site>\n   ```\n    \n3. コマンド ラインを使用します `--enable-features=msAllowNoMergeIEMode` 。 (**注**: このコマンド ラインは、検証の目的で現在存在しており、93 Stable リリース以降はMicrosoft Edge*必要*ありません)\n4. nomerge として構成されている任意のサイトに移動します。 サイトは、独自の結合されていない IE セッションに含む必要があります。 別のインスタンスまたはウィンドウMicrosoft Edge開き、同じサイトに移動すると、そのサイトは独自の IE セッション (タスク マネージャーの複数の iexplore.exe プロセスに注意してください)。\n\nフィードバックがある場合は、Microsoft サポートまたは TechCommunity フォーラムのいずれかのフィードバック [チャネルから問い合わせください](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise)。\n"
   - question: >
       Internet Explorer モードでリンクを Web ページとして保存できますか?
-    answer: "はい。Microsoft Edge のInternet Explorer モードで、コンテキスト メニューの [名前を付けて保存] オプションを有効にできます。 これを行うには、*[コンピューターの構成] > [管理用テンプレート] > [Windows コンポーネント] > [Internet Explorer]* にあるグループポリシー *\"Internet Explorer モードで「名前をつけて保存」を許可する\"* を構成します。\n保存メカニズムは Internet Explorer の場合と同じように動作し、ターゲットが html ファイルとして保存されている場合は、ファイルを再び開くと Microsoft Edge でページをレンダリングします。\n \nこの機能には、次の最小限のオペレーティング システム更新プログラムが必要です。\n- Windows 10、バージョン 2004、Windows Server バージョン 2004、Windows 10、バージョン 20H2 : [KB4580364](https://support.microsoft.com/help/4580364/windows-10-update-kb4580364)\n- Windows 10、バージョン 1903、Windows 10、 バージョン 1909、Windows Server バージョン 1903: [KB4580386](https://support.microsoft.com/help/4580386/windows-10-update-kb4580386)\n- Windows 10、バージョン 1809、Windows Server バージョン 1809、Windows Server 2019: [KB4580390](https://support.microsoft.com/help/4580390/windows-10-update-kb4580390)\n- Windows 10、バージョン 1803: [KB4586785](https://support.microsoft.com/help/4586785/windows-10-update-kb4586785)\n- Windows 10、バージョン 1607: [KB4586830](https://support.microsoft.com/help/4586830/windows-10-update-kb4586830)\n- Windows 10、バージョン 1507: [KB4586787](https://support.microsoft.com/help/4586787/windows-10-update-kb4586787)\n"
-  - question: >
-      IE モードでサイトを開き、Enterpriseリストを開くことができませんか?
-    answer: >
-      はい、テストの目的で、IE モードは特定のブラウザー インスタンスに対して切り替えできます。
-
-
-      コマンド Microsoft Edgeを `--ie-mode-test` 使用してコマンド ライン フラグを実行します。 `msedge.exe --ie-mode-test`をクリックし、[... .. ->その他のツール - >開く ]を選択Internet Explorerします。
+    answer: "はい。Microsoft Edge のInternet Explorer モードで、コンテキスト メニューの [名前を付けて保存] オプションを有効にできます。 これを行うには、*[コンピューターの構成] > [管理用テンプレート] > [Windows コンポーネント] > [Internet Explorer]* にあるグループポリシー *\"Internet Explorer モードで「名前をつけて保存」を許可する\"* を構成します。\n保存メカニズムは Internet Explorer の場合と同じように動作し、ターゲットが html ファイルとして保存されている場合は、ファイルを再び開くと Microsoft Edge でページをレンダリングします。\n \nこの機能には、次の最小限のオペレーティング システム更新プログラムが必要です。\n- Windows 10、バージョン 2004、Windows Server バージョン 2004、Windows 10、バージョン 20H2 : [KB4580364](https://support.microsoft.com/help/4580364/windows-10-update-kb4580364)\n- Windows 10、バージョン 1903、Windows 10、 バージョン 1909、Windows Server バージョン 1903: [KB4580386](https://support.microsoft.com/help/4580386/windows-10-update-kb4580386)\n- Windows 10、バージョン 1809、Windows Server バージョン 1809、Windows Server 2019: [KB4580390](https://support.microsoft.com/help/4580390/windows-10-update-kb4580390)\n- Windows 10、バージョン 1803: [KB4586785](https://support.microsoft.com/help/4586785/windows-10-update-kb4586785)\n- Windows 10、バージョン 1607: [KB4586830](https://support.microsoft.com/help/4586830/windows-10-update-kb4586830)\n- Windows 10、バージョン 1507: [KB4586787](https://support.microsoft.com/help/4586787/windows-10-update-kb4586787)\n\n\n          \n"
 additionalContent: "\n## <a name=\"see-also\"></a>関連項目\n\n- [Microsoft Edge Enterprise ランディング ページ](https://aka.ms/EdgeEnterprise)\n- [IE モードの概要](./edge-ie-mode.md)\n- [その他のエンタープライズ モード情報](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)"
