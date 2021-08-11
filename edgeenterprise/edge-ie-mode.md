@@ -3,19 +3,19 @@ title: Internet Explorer モードとは
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 06/28/2021
+ms.date: 08/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge の Internet Explorer モードが、Internet Explorer 11 を必要とするサイトへのアクセスと最新のサイトへのアクセスをどのように提供するかについて説明します。
-ms.openlocfilehash: 7d1d9d201abee9cd9f0d648f2757e3276945d2f4dcf635ea0cd17a64e684aec4
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: cc88c6745d40bfd33a345d76e2b2090f0f33243271350e4449d698d4a0fab71e
+ms.sourcegitcommit: 6e9ce486955bd90db09744307b72245dd4890d01
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726066"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "11810197"
 ---
 # <a name="what-is-internet-explorer-ie-mode"></a>Internet Explorer (IE) モードとは
 
@@ -47,16 +47,16 @@ Microsoft Edge で IE モードを利用すると、組織が必要とするす�
 ### <a name="ie-mode-supports-the-following-internet-explorer-functionality"></a>IE モードでサポートされる Internet Explorer 機能
 
 - すべてのドキュメント モードとエンタープライズ モード
-- ActiveX コントロール (Java や Silverlight など)
+- ActiveX コントロール (Java、Silverlight など)。 **注**: Silverlight は 2021 年 10 月 12 日に[サポート終了](https://support.microsoft.com/windows/silverlight-end-of-support-0a3be3c7-bead-e203-2dfd-74f0a64f1788)に達します。 
 - ブラウザー ヘルパー オブジェクト 
-- セキュリティ ゾーン設定と保護モードに影響を与える Internet Explorer 設定とグループ ポリシー
-- [IEChooser](/office/dev/add-ins/testing/debug-add-ins-using-f12-developer-tools-on-windows-10) で起動する場合、IE 用の F12 開発者ツール
+- セキュリティ ゾーンの設定と保護モードに影響する Internet Explorer の設定とグループ ポリシー
+- [IEChooser](/deployedge/edge-ie-mode-faq#how-can-i-debug-my-legacy-application-while-using-ie-mode-on-microsoft-edge-) で起動した場合の IE 用 F12 開発者ツール
 - Microsoft Edge の拡張機能 (IE ページのコンテンツを直接操作する拡張機能はサポートされていません)
 
 ### <a name="ie-mode-doesnt-support-the-following-internet-explorer-functionality"></a>IE モードでサポートされない Internet Explorer 機能
 
-- Internet Explorer ツール バー
-- ナビゲーション メニュー (検索エンジン、ホーム ページなど) に影響する Internet Explorer 設定とグループ ポリシー
+- Internet Explorer のツール バー
+- ナビゲーション メニューを制御する Internet Explorer の設定とグループ ポリシー。
 - IE11 または Microsoft Edge の F12 開発者ツール
 
 ## <a name="prerequisites"></a>前提条件
