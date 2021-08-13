@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 最初の基本設定は、Microsoft Edgeでサポートされます。
-ms.openlocfilehash: 4ac5e69ad1efa61752097348324f917d9155d4f823d520895296c8ab01d7065c
-ms.sourcegitcommit: 6e9ce486955bd90db09744307b72245dd4890d01
+ms.openlocfilehash: 39af88d21107ad548166c749c3ba765754270b48
+ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2021
-ms.locfileid: "11810233"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "11882263"
 ---
-# <a name="configure-microsoft-edge-using-initial-preferences-settings-for-the-first-run"></a>最初のMicrosoft Edge設定を使用して、ユーザー設定を構成する
+# <a name="configure-microsoft-edge-using-initial-preferences-settings-for-the-first-run"></a>初回実行時のユーザー設定を使用して Microsoft Edge を構成する
 
 次の情報を使用して、デバイスMicrosoft Edge初期設定を構成Windowsします。
 

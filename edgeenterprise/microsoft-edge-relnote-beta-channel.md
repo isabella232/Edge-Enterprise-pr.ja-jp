@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Beta チャネルに関する Microsoft Edge のリリース ノート
-ms.openlocfilehash: bea9c325471617c0ad680b0dabe8cd0d847d5ac0d95941f773471f74ffd0f771
-ms.sourcegitcommit: b5093c47bd5e927cde1d486eb71e0ee2483a8bd8
+ms.openlocfilehash: 8d76d11f40f179534120429d3494a50cc19f4a32
+ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "11810471"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "11882233"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Microsoft Edge Beta チャネルのリリースノート
 
@@ -76,6 +76,10 @@ ms.locfileid: "11810471"
 #### <a name="additional-change"></a>その他の変更
 
 - [ConfigureShare](/DeployEdge/microsoft-edge-policies#configureshare) Mac プラットフォームのサポートを追加する
+
+## <a name="version-93096118-august-10"></a>バージョン 93.0.961.18: 8 月 10 日
+
+さまざまなバグとパフォーマンスの問題を修正しました。
 
 ## <a name="version-92090262-july-29"></a>バージョン 92.0.902.62: 7 月 29 日
 

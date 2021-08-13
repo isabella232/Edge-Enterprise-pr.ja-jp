@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: IE モード ポリシーの構成
-ms.openlocfilehash: a4b5e029935aed7e5d3cf23cc681448464b2f4e4a96d9d380d9cfb60ced88b2b
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 7ca8dffb0bc20acf954cf0f272f3894b39355846
+ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726110"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "11882133"
 ---
 # <a name="configure-ie-mode-policies"></a>IE モード ポリシーの構成
 
@@ -75,10 +75,8 @@ IE モードで開くサイトを識別するには、次の2つのオプショ�
     > [!NOTE]
     > Microsoft Edge ポリシーの構成は必須ではありません。 多くの組織では、これをオーバーライドとして使用します。これにより、最新のサイト リストで IE ポリシーが有効なすべてのユーザーを対象とし、より簡単に更新バージョンを対象として Microsoft Edge ポリシーの使用をパイロットすることができます。
 
-エンタープライズ モード サイト一覧について詳しくは、以下をご覧ください。
+ユーザー モード サイト リストのEnterprise詳細については[、「Use the site List Manager」をEnterprise参照してください](/deployedge/edge-ie-mode-site-list-manager)。
 
-- [Enterprise Mode Site List Manager の使用](/internet-explorer/ie11-deploy-guide/use-the-enterprise-mode-site-list-manager)
-- [ファイルと Enterprise Mode Site List Manager (スキーマ v.2) を使ってエンタープライズ モード サイト一覧に複数のサイトを追加する](/internet-explorer/ie11-deploy-guide/add-multiple-sites-to-enterprise-mode-site-list-using-the-version-2-schema-and-enterprise-mode-tool)
 
 ### <a name="configure-using-the-use-the-enterprise-mode-ie-website-list-policy"></a>[エンタープライズ モードの IE Web サイト一覧を使う] ポリシーの使用を構成する
 

@@ -1,33 +1,33 @@
 ---
 title: Regular Expression 2 の構文
 ms.author: comanea
-author: dan-wesley
+author: AndreaLBarr
 manager: seanlyn
-ms.date: 06/29/2021
+ms.date: 08/12/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Regular Expression 2 の構文
-ms.openlocfilehash: 48c19aaf039d239c05ef1b7e35faa8cfd6cb37349e53066b45d8183f6c64638d
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 78f21846c142d67470cd421a34baafa9d0021bd0
+ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726000"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "11882143"
 ---
 # <a name="regular-expression-2-re2h-syntax"></a>Regular Expression 2 (re2.h) の構文
 
 正規表現は、文字列のセットを記述するための表記法です。 文字列が正規表現で記述されたセット内にある場合、正規表現は多くの場合文字列と一致します。
 
-最も簡単な正規表現は単一のリテラル文字です。 *\*+?()|* のようなメタ文字を除き、文字自体が一致します。 メタ文字に一致させるには、バックスラッシュでエスケープします。 \+ はリテラル文字のプラスに一致します。
+最も簡単な正規表現は単一のリテラル文字です。 `\*+?()|` のようなメタ文字を除き、文字自体が一致します。 メタ文字に一致するには、バックスラッシュでエスケープします。リテラルのプラス `\+` 文字と一致します。
 
 2つの正規表現を変更または連結して、新しい正規表現を作成できます。*e<sub>1</sub>* が_s_に一致し、*e<sub>2</sub>* が _t_に一致する場合、*e<sub>1</sub>* | *e<sub>2</sub>* は _s_ または _t_に一致し、*e<sub>1</sub>* *e<sub>2</sub>* は _st_ に一致します。
 
-メタ文字は _\*_ , _+_ 、および _?_ です。 反復演算子: *e<sub>1</sub>* _\*_ は、0個以上の (異なる可能性がある) 文字列のシーケンスに一致します。各文字列は *e<sub>1</sub>* に一致します。*e<sub>1</sub>* _+_ は1つ以上に一致します。*e<sub>1</sub>* _?_ 0または1と一致します。
+メタ文字は _`\`_ , _+_ 、および _?_ です。 反復演算子: *e<sub>1</sub>* _`\`_ は、0個以上の (異なる可能性がある) 文字列のシーケンスに一致します。各文字列は *e<sub>1</sub>* に一致します。*e<sub>1</sub>* _+_ は1つ以上に一致します。*e<sub>1</sub>* _?_ 0または1と一致します。
 
-演算子の優先順位は、最も弱いものから最も強いものまで、最初は交互、次に連結、最後に反復演算子の順です。 明示的な括弧は、算術式の場合と同様に、異なる意味を強制的に指定するために使用できます。 いくつかの例を次に示します。_ab|cd_ は _(ab)|(cd)_ と同等です。_ab\*_ は _a(b\*)_ と同等です。
+演算子の優先順位は、最も弱いものから最も強いものまで、最初は交互、次に連結、最後に反復演算子の順です。 明示的な括弧は、算術式の場合と同様に、異なる意味を強制的に指定するために使用できます。 いくつかの例: _ab|cd_ は _(ab)|(cd)_ ; _`ab\`_ は に相当します _`a(b\)`_ 。
 
 これまでに説明した構文は、従来の Unix_egrep_ 正規表現構文の大部分です。 このサブセットは、すべての通常の言語を説明するのに十分です。大まかに言えば、通常の言語は、固定量のメモリのみを使用してテキストを1回パスすることで照合できる文字列のセットです。 新しい正規表現機能 (特に Perl とそれをコピーしたもの) は、多くの新しい演算子とエスケープシーケンスを追加しました。これにより、正規表現がより簡潔になり、時にはわかりにくくなることもありますが、通常はそれほど強力ではありません。
 
