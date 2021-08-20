@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Intune を使って Windows 用の Microsoft Edge ポリシー設定を構成します。
-ms.openlocfilehash: cd11c8c92d67197d9cf1a24691615b0a56dd727626b9741b5664a5d1080ba950
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 63eb29018bf4ec9c5a32d11b215f422e150383c9
+ms.sourcegitcommit: e811be46e3236534c5fa17c728ffc1005c5cc295
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11725498"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "11907261"
 ---
 # <a name="configure-microsoft-edge-policy-settings-with-microsoft-intune"></a>Microsoft Intune を使って Microsoft Edge ポリシー設定を構成する
 
@@ -53,7 +53,8 @@ Microsoft Intune の管理用テンプレートを使用すると、クラウド
 3. [**Devices**] | [**概要**] で [**構成プロファイル**] を選択します (ポリシーの見出しの下)。
 4. 上部のコマンド バーで、**[プロファイルの作成]** を選択します。
 5. [**プラットフォーム**] の下にあるドロップダウン リストで、[**Windows 10 以降**] を選択します。
-6. [**プロファイル**] の下にあるドロップダウン リストで、[**管理用テンプレート**] を選択して、[**作成**] ボタンをクリックします。 次のスクリーンショットは、プラットフォームとプロファイルの種類を選択できるドロップダウン リストを示しています。
+6. [プロファイルの種類] の下のドロップダウン **リストで、[テンプレート**] **を選択します**。
+7. [テンプレート名 **] で**、[管理 **用テンプレート] を選択し** 、[作成] ボタン **をクリック** します。 次のスクリーンショットは、プラットフォームとプロファイルの種類を選択できるドロップダウン リストを示しています。
 
     ![プラットフォームとプロファイルの種類を選択する](./media/configure-edge-with-intune/create-profile-platform.png)
 
