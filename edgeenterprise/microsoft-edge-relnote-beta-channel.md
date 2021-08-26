@@ -3,19 +3,19 @@ title: Beta チャネルに関する Microsoft Edge のリリース ノート
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 08/20/2021
+ms.date: 08/25/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Beta チャネルに関する Microsoft Edge のリリース ノート
-ms.openlocfilehash: 5bf7a834343c4a5531f1c73cc77996e6e016eb2e
-ms.sourcegitcommit: 81ecf79c5fd604cae91aaec3786859172c83ec79
+ms.openlocfilehash: d6912d275ca74bdd46b4d5997e34d62502562986
+ms.sourcegitcommit: 43e123dcb1a871e3fb9e0fdab096b8ea3d372bc7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "11909912"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "11925324"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Microsoft Edge Beta チャネルのリリースノート
 
@@ -47,6 +47,14 @@ ms.locfileid: "11909912"
 - **ホバー ツールバーからのピクチャ (PiP) のビデオピクチャ。**  バージョン 93 Microsoft Edge、ピクチャ (PiP) モードに入る方がさらに簡単になります。 サポートされているビデオの上にマウス ポインターを置くと、ツール バーが表示され、そのビデオを PiP ウィンドウで表示できます。  注: これは現在、macOS のユーザー Microsoft Edge使用できます。  ユーザーへのロールアウトを続行する場合は、Windowsしてください。
 
 - **TLS での 3DES の削除。**  バージョン 93 Microsoft Edge、暗号化スイートのサポートTLS_RSA_WITH_3DES_EDE_CBC_SHA削除されます。 この変更は、プロジェクトのChromiumプロジェクトでMicrosoft Edge発生します。 詳細については、「Chrome プラットフォームの状態」 [エントリに移動します](https://chromestatus.com/feature/6678134168485888)。 さらに、Microsoft Edgeバージョン 93 では[、TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled)ポリシーを使用して、古いサーバーとの互換性を維持する必要があるシナリオをサポートできます。 この互換性ポリシーは廃止され、バージョン 95 でのMicrosoft Edge停止します。 その前に、影響を受けるサーバーを更新してください。
+
+- **ユーザーと DirectInvoke ClickOnceバイパスするポリシー。**  ポリシーが更新され、ClickOnceのプロンプトと DirectInvoke のアプリが指定されたドメインから指定された種類のファイルに対してバイパスされます。 これを行うには、次の操作を行う必要があります。
+
+  - [ClickOnceEnabled または](/deployedge/microsoft-edge-policies#clickonceenabled) [DirectInvokeEnabled を有効にする](/deployedge/microsoft-edge-policies#directinvokeenabled)
+  - [AutoOpenFileTypes ポリシーを有効](/deployedge/microsoft-edge-policies#autoopenfiletypes)にし、ユーザーと DirectInvoke を無効ClickOnceファイルの種類の一覧を設定する
+  - [AutoOpenAllowedForURLs](/deployedge/microsoft-edge-policies#autoopenallowedforurls)ポリシーを有効にし、ユーザーと DirectInvoke が無効になる特定ClickOnceの一覧を設定する
+
+  注: AutoOpenAllowedForURLs は、AutoOpenFileTypes のサポート ポリシーです。 AutoOpenAllowedForURLs が設定されていない場合、AutoOpenFileTypes が設定されている場合、リストされているファイルの種類は、すべての URL から自動的に開きます。
 
 ### <a name="new-policies"></a>新しいポリシー
 
