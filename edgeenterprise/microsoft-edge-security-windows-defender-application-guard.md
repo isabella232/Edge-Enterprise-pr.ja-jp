@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge での Microsoft Defender Application Guard のサポート
-ms.openlocfilehash: 4bb8f48bd5ccdfd555d44cecc8cfe9253a6ba17e42f60e2b8a0086411c10e9fb
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 4d9f5b0590199a9938b19e60fdd38e7c0098ac76
+ms.sourcegitcommit: 51a858ee4b1f837df85dbcca335f4abebae7771b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11727028"
+ms.lasthandoff: 08/27/2021
+ms.locfileid: "11925993"
 ---
 # <a name="microsoft-edge-support-for-microsoft-defender-application-guard"></a>Microsoft Edge での Microsoft Defender Application Guard のサポート
 
@@ -50,6 +50,13 @@ Application Guard は Windows 10 と Microsoft Edge 向けに設計されてお�
 ## <a name="whats-new"></a>新着情報
 
 新しい Microsoft Edge ブラウザーでの Application Guard のサポートは、Microsoft Edge 従来版と機能的に同等ですが、いくつかの改善が含まれています。
+
+### <a name="enable-application-guard-in-passive-mode-and-browse-edge-normally"></a>パッシブ モードで Application Guard を有効にし、通常はエッジを参照する
+
+94 Microsoft Edgeから、ユーザーはパッシブ モードを構成するオプションが提供され、Application Guard はサイト リストの構成を無視し、ユーザーは通常はエッジを参照できます。 このサポートは、ポリシーを使用して制御できます。 エッジ ポリシー [ApplicationGuardPassiveModeEnabled](/deployedge/microsoft-edge-policies#applicationguardpassivemodeenabled) を更新して、パッシブ モードを有効または無効にできます。
+
+> [!Note]
+> このポリシーはエッジにのみ影響を与えるので、対応する拡張機能を有効にしている場合、他のブラウザーからのナビゲーションが Application Guard コンテナーにリダイレクトされる可能性があります。
 
 ### <a name="favorites-synchronizing-from-the-host-to-the-container"></a>ホストからコンテナーに同期するお気に入り
 
