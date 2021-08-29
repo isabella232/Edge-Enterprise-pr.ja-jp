@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Stable チャネルに関する Microsoft Edge リリース ノート
-ms.openlocfilehash: 6a4c65d253a88384da7393ab846777093dc86e86
-ms.sourcegitcommit: 584a6a9877ae0c3fcb9acc0b8c158e280b0360ff
+ms.openlocfilehash: 3c21b06358d4aa563b67027d65a1aa5fec5f5dfc
+ms.sourcegitcommit: 51a858ee4b1f837df85dbcca335f4abebae7771b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2021
-ms.locfileid: "11912062"
+ms.lasthandoff: 08/27/2021
+ms.locfileid: "11926013"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Microsoft Edge Stable チャネルのリリース ノート
 
@@ -30,6 +30,10 @@ ms.locfileid: "11912062"
 > 安定チャネルの場合、更新は 1 日以上かけて段階的に公開されます。 詳細については、「[Microsoft Edge 更新プログラムの段階的なロールアウト](microsoft-edge-update-progressive-rollout.md)」を参照してください。
 >
 > Microsoft Edge Web プラットフォームは、ユーザー エクスペリエンス、セキュリティ、およびプライバシーを向上させるために絶えず進化しています。 詳細については、「[Microsoft Edge のサイトの互換性に影響する変更点](/microsoft-edge/web-platform/site-impacting-changes)」を参照してください。
+
+## <a name="version-92090284-august-26"></a>バージョン 92.0.902.84: 8 月 26 日
+
+様々なバグとパフォーマンスの問題を修正しました。
 
 ## <a name="version-92090278-august-19"></a>バージョン 92.0.902.78: 8 月 19 日
 

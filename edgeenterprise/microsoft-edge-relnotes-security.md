@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge セキュリティ更新プログラムのリリースノート
-ms.openlocfilehash: b4f4a217a56bfb37a7f623e5040876ac268ff561
-ms.sourcegitcommit: 81ecf79c5fd604cae91aaec3786859172c83ec79
+ms.openlocfilehash: 28069b5693e0314ec5c99ea41f3ddedef9fe5ff2
+ms.sourcegitcommit: af1b1bad562dfd71c20bfab4fe00512cf956beb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "11909922"
+ms.lasthandoff: 08/27/2021
+ms.locfileid: "11926033"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Microsoft Edge セキュリティ更新プログラムのリリースノート
 
@@ -104,7 +104,6 @@ Microsoft は、Chromium プロジェクトの最新のセキュリティ更新�
 
 Microsoft は、Chromium プロジェクトの最新のセキュリティ更新プログラムを組み込んだ最新の **Microsoft Edge Stable チャネル (バージョン 89.0.774.68)** をリリースしました。 詳細については、「[セキュリティ更新プログラム ガイド](https://msrc.microsoft.com/update-guide)」を参照してください。
 
-
 ## <a name="march-13-2021"></a>2021 年 3 月 13 日
 
 Microsoft は、クロム プロジェクトの最新のセキュリティ更新プログラムを組み込んだ最新の Microsoft Edge Stable チャネル (バージョン **89.0.774.54)** をリリースしました。 この更新プログラムには [CVE-2021-21193](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21193) が含まれているが、これはクロム チームによって悪用されたと報告されています。 詳細については、「[セキュリティ更新プログラム ガイド](https://msrc.microsoft.com/update-guide)」を参照してください。
@@ -123,7 +122,11 @@ Microsoft は、Chromium プロジェクトの最新のセキュリティ更新�
 
 ## <a name="february-4-2021"></a>2021 年 2 月 4 日
 
-Microsoft は、Chromium プロジェクトの最新のセキュリティ更新プログラムを組み込んでいる最新の **Microsoft Edge Stable チャネル (バージョン 88.0.705.62)** をリリースしました。 詳細については、「[セキュリティ更新プログラム ガイド](https://msrc.microsoft.com/update-guide)」を参照してください。
+Microsoft は、Chromium プロジェクトの最新のセキュリティ更新プログラムを組み込んだ最新の  **Microsoft Edge Stable チャネル (バージョン 88.0.705.62)** をリリースしました。 詳細については、「[セキュリティ更新プログラム ガイド](https://msrc.microsoft.com/update-guide)」を参照してください。
+
+この更新プログラムには、次の Microsoft Edge 固有の更新プログラムが含まれています。
+
+- [CVE-2021-24113](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-24113)
 
 ## <a name="january-21-2021"></a>2021 年 1 月 21 日
 
