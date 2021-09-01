@@ -3,19 +3,19 @@ title: Beta チャネルに関する Microsoft Edge のリリース ノート
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 08/25/2021
+ms.date: 08/31/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Beta チャネルに関する Microsoft Edge のリリース ノート
-ms.openlocfilehash: dc2eebb2faabd4c04e0db4a5be4ffaaaff8aebcf
-ms.sourcegitcommit: 51a858ee4b1f837df85dbcca335f4abebae7771b
+ms.openlocfilehash: 1fad7c52819ce5ca6516d400ea00151a54bc66e7
+ms.sourcegitcommit: 822db9d312a13a13928ff1c10c2b35b6b46598fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2021
-ms.locfileid: "11926003"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "11934627"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Microsoft Edge Beta チャネルのリリースノート
 
@@ -42,7 +42,7 @@ ms.locfileid: "11926003"
 
 - **[ユーザー設定] の初期Microsoft Edge。**  バージョン 93 Microsoft Edgeでは、初期の基本Microsoft Edgeを追加すると、エンタープライズへの展開が容易になります。
 
-- **IE モードでは、Microsoft Edge "nomerge" 動作がサポートされます。**  バージョン 93 Microsoft Edgeから、バージョン 93 の IE モードでは、Microsoft Edgeが_サポートされます_。 エンド ユーザーの場合、IE モード アプリケーションから新しいブラウザー ウィンドウを起動すると、IE11 の動作と同様に、別のセッションになります。 セッション共有を防止する必要があるサイトを構成するには、サイト一覧を調整する必要があります。 Microsoft Edge のウィンドウごとに、指定された "nomerge" サイトの 1 つである場合、そのウィンドウ内で初めて IE モード タブが表示された場合、そのウィンドウは、少なくともそのウィンドウで最後の IE モード タブが閉じるまで、他のすべての Microsoft Edge ウィンドウとは異なる "nomerge" IE セッションにロックされます。 [こちら](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--nomerge--option-that-was-supported-in-internet-explorer-11-)をご覧ください。
+- **IE モードでは、Microsoft Edge "マージなし" 動作がサポートされます。**  バージョン 93 Microsoft Edgeから、IE モードは Microsoft Edge"no-merge" をサポートします。 エンド ユーザーの場合、IE モード アプリケーションから新しいブラウザー ウィンドウを起動すると、IE11 の動作と同様に、別のセッションになります。 セッション共有を防止する必要があるサイトを構成するには、サイト一覧を調整する必要があります。 Microsoft Edge のウィンドウごとに、指定された "マージなし" サイトの 1 つである場合、そのウィンドウ内で IE モード タブが初めてアクセスされた場合、そのウィンドウは、少なくともそのウィンドウで最後の IE モード タブが閉じるまで、他のすべての Microsoft Edge ウィンドウとは異なる "マージなし" IE セッションにロックされます。 [こちら](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--no-merge--option-that-was-supported-in-internet-explorer-11-)をご覧ください。
 
 - **タブ グループ。**  タブをユーザー定義グループに分類する機能は、複数のワークストリーム間でタブを効率的に検索、切り替え、管理するのに役立ちます。 これを有効にするには、バージョン 93 で始まるタブ グループMicrosoft Edgeオンにします。
 
@@ -89,7 +89,7 @@ ms.locfileid: "11926003"
 
 - [LegacySameSiteCookieBehaviorEnabled](/DeployEdge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) 従来の SameSite Cookie の既定の動作設定を有効にする
 
-#### <a name="obsoleted-policy"></a>非推奨ポリシー
+#### <a name="obsoleted-policy"></a>廃止されたポリシー
 
 - [NewTabPageSetFeedType](/DeployEdge/microsoft-edge-policies#newtabpagesetfeedtype)新しいタブ Microsoft Edgeエクスペリエンスを構成する
 

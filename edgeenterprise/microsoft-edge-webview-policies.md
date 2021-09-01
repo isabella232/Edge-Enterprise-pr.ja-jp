@@ -3,20 +3,20 @@ title: Microsoft Edge WebView2 ポリシードキュメント
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 08/01/2021
+ms.date: 08/27/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
-ms.openlocfilehash: e8af12f6c8093ca06a39527659c61f5a3941cc1d
-ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
-ms.translationtype: MT
+ms.openlocfilehash: e1cef7c960dd9ac51916499281f6247e09078fee
+ms.sourcegitcommit: 5aeaeb85eba7572d1871ad55568a8bea4d4a4e5f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "11882273"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "11934586"
 ---
 # <a name="microsoft-edge-webview2---policies"></a>Microsoft Edge WebView2 - ポリシー
 
