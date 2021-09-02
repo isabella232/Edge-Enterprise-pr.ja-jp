@@ -1,22 +1,22 @@
 ---
 title: Microsoft Edge ブラウザー ポリシーに関するドキュメント
 ms.author: stmoody
-author: dan-wesley
+author: AndreaLBarr
 manager: tahills
-ms.date: 08/01/2021
+ms.date: 08/31/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
-ms.openlocfilehash: 9693195b466da999c7ada8f6a4453401e684326f
-ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
-ms.translationtype: MT
+ms.openlocfilehash: 9b71e641af62b0ad56e4f2e9bf52a061dafa52a3
+ms.sourcegitcommit: 5aeaeb85eba7572d1871ad55568a8bea4d4a4e5f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "11882253"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "11934576"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - ポリシー
 
@@ -33,11 +33,12 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 
 次の表は、このリリースの Microsoft Edge で使用可能な、ブラウザー関連のすべてのグループ ポリシーの一覧を示しています。 個々のポリシーに関する詳しい情報を取得するには、表内のリンクをお使いください。
 
+- [画面キャプチャを許可または拒否する](#allow-or-deny-screen-capture)
 - [Application Guard の設定](#application-guard-settings)
 - [キャスト](#cast)
 - [コンテンツの設定](#content-settings)
 - [既定の検索プロバイダー](#default-search-provider)
-- [Experimentation](#experimentation)
+- [実験](#experimentation)
 - [拡張機能](#extensions)
 - [HTTP 認証](#http-authentication)
 - [ID とサインイン](#identity-and-sign-in)
@@ -55,12 +56,18 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 - [補足](#additional)
 
 
+### [*<a name="allow-or-deny-screen-capture"></a>画面キャプチャを許可または拒否する*](#allow-or-deny-screen-capture-policies)
+
+|ポリシー名|キャプション|
+|-|-|
+|[ScreenCaptureAllowed](#screencaptureallowed)|画面キャプチャを許可または拒否する|
 ### [*<a name="application-guard-settings"></a>Application Guard の設定*](#application-guard-settings-policies)
 
 |ポリシー名|キャプション|
 |-|-|
 |[ApplicationGuardContainerProxy](#applicationguardcontainerproxy)|Application Guard コンテナー プロキシ|
-|[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|Application Guard のお気に入りの同期の有効化|
+|[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|Application Guard のお気に入りの同期が有効|
+|[ApplicationGuardPassiveModeEnabled](#applicationguardpassivemodeenabled)|Application Guard サイト一覧の構成を無視し、通常は Edge を参照する|
 |[ApplicationGuardTrafficIdentificationEnabled](#applicationguardtrafficidentificationenabled)|Application Guard トラフィックの識別|
 ### [*<a name="cast"></a>キャスト*](#cast-policies)
 
@@ -99,7 +106,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[InsecureContentBlockedForUrls](#insecurecontentblockedforurls)|特定のサイトでの安全でないコンテンツのブロック|
 |[JavaScriptAllowedForUrls](#javascriptallowedforurls)|特定のサイトでの JavaScript を許可する|
 |[JavaScriptBlockedForUrls](#javascriptblockedforurls)|特定のサイトでの JavaScript のブロック|
-|[JavaScriptJitAllowedForSites](#javascriptjitallowedforsites)|JavaScript がこれらのサイトで JIT を使用するを許可する|
+|[JavaScriptJitAllowedForSites](#javascriptjitallowedforsites)|JavaScript がこれらのサイトで JIT を使用するのを許可する|
 |[JavaScriptJitBlockedForSites](#javascriptjitblockedforsites)|これらのサイトで JavaScript による JIT の使用をブロックする|
 |[LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled)|従来の SameSite Cookie の既定の動作設定を有効にする (非推奨)|
 |[LegacySameSiteCookieBehaviorEnabledForDomainList](#legacysamesitecookiebehaviorenabledfordomainlist)|特定のサイトで Cookie のレガシ SameSite の動作に戻す|
@@ -109,8 +116,8 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[PluginsBlockedForUrls](#pluginsblockedforurls)|特定のサイトでの Adobe Flash プラグインの使用をブロックする (不使用)|
 |[PopupsAllowedForUrls](#popupsallowedforurls)|特定のサイトでのポップアップ ウィンドウの表示を許可する|
 |[PopupsBlockedForUrls](#popupsblockedforurls)|特定のサイトでのポップアップ ウィンドウのブロック|
-|[RegisteredProtocolHandlers](#registeredprotocolhandlers)|プロトコル ハンドラーを登録する|
-|[ShowPDFDefaultRecommendationsEnabled](#showpdfdefaultrecommendationsenabled)|既定の PDF リーダーとしてMicrosoft Edge通知の設定を許可する|
+|[RegisteredProtocolHandlers](#registeredprotocolhandlers)|プロトコル ハンドラーの登録|
+|[ShowPDFDefaultRecommendationsEnabled](#showpdfdefaultrecommendationsenabled)|Microsoft Edge を既定の PDF リーダーとして設定する通知を許可する|
 |[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|ユーザーがカスタマイズされた背景画像およびテキスト、提案、通知、Microsoft サービスのヒントを受信できるかどうかを選択します|
 |[WebUsbAllowDevicesForUrls](#webusballowdevicesforurls)|特定の USB デバイスに接続するために、特定のサイトへのアクセスを許可する|
 |[WebUsbAskForUrls](#webusbaskforurls)|特定のサイトでの WebUSB を許可する|
@@ -127,12 +134,12 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[DefaultSearchProviderName](#defaultsearchprovidername)|既定の検索プロバイダー名|
 |[DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl)|既定の検索プロバイダーの検索 URL|
 |[DefaultSearchProviderSuggestURL](#defaultsearchprovidersuggesturl)|検索候補用の既定の検索プロバイダーの URL|
-|[NewTabPageSearchBox](#newtabpagesearchbox)|新しいタブページ検索ボックスの機能を構成する|
-### [*<a name="experimentation"></a>Experimentation*](#experimentation-policies)
+|[NewTabPageSearchBox](#newtabpagesearchbox)|新しいタブ ページ検索ボックスの機能を構成する|
+### [*<a name="experimentation"></a>実験*](#experimentation-policies)
 
 |ポリシー名|キャプション|
 |-|-|
-|[FeatureFlagOverridesControl](#featureflagoverridescontrol)|ユーザーが機能フラグを上書きする機能を構成する|
+|[FeatureFlagOverridesControl](#featureflagoverridescontrol)|ユーザーが機能フラグをオーバーライドする機能を構成する|
 ### [*<a name="extensions"></a>拡張機能*](#extensions-policies)
 
 |ポリシー名|キャプション|
@@ -156,13 +163,15 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[DisableAuthNegotiateCnameLookup](#disableauthnegotiatecnamelookup)|Kerberos 認証をネゴシエートするときの CNAME ルックアップを無効にする|
 |[EnableAuthNegotiatePort](#enableauthnegotiateport)|Kerberos SPN に標準以外のポートを含める|
 |[NtlmV2Enabled](#ntlmv2enabled)|NTLMv2 認証を有効にするかどうかを制御する|
-|[WindowsHelloForHTTPAuthEnabled](#windowshelloforhttpauthenabled)|HTTP 認証用 Windows Hello を有効にする|
+|[WindowsHelloForHTTPAuthEnabled](#windowshelloforhttpauthenabled)|HTTP 認証用 Windows Hello が有効|
 ### [*<a name="identity-and-sign-in"></a>ID とサインイン*](#identity-and-sign-in-policies)
 
 |ポリシー名|キャプション|
 |-|-|
 |[ImplicitSignInEnabled](#implicitsigninenabled)|暗黙的なサインインを有効にする|
-|[OneAuthAuthenticationEnforced](#oneauthauthenticationenforced)|OneAuth 認証Flowサインインに適用される|
+|[OneAuthAuthenticationEnforced](#oneauthauthenticationenforced)|OneAuth 認証フローがサインインに強制される|
+|[OnlyOnPremisesImplicitSigninEnabled](#onlyonpremisesimplicitsigninenabled)|暗黙的なサインインにはオンプレミス アカウントのみが有効|
+|[WAMAuthBelowWin10RS3Enabled](#wamauthbelowwin10rs3enabled)|Windows 10 RS3 以下の認証用 WAM が有効になっている|
 ### [*<a name="kiosk-mode-settings"></a>キオスク モードの設定*](#kiosk-mode-settings-policies)
 
 |ポリシー名|キャプション|
@@ -192,7 +201,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[PasswordProtectionLoginURLs](#passwordprotectionloginurls)|パスワード保護サービスがパスワードのソルト化ハッシュをキャプチャする必要があるエンタープライズ ログイン URL のリストを構成する|
 |[PasswordProtectionWarningTrigger](#passwordprotectionwarningtrigger)|パスワード保護の警告トリガーを構成する|
 |[PasswordRevealEnabled](#passwordrevealenabled)|[パスワードの表示] ボタンを有効にする|
-|[PrimaryPasswordSetting](#primarypasswordsetting)|パスワード自動入力の使用中にユーザーにデバイス パスワードの入力を求める設定を構成します。|
+|[PrimaryPasswordSetting](#primarypasswordsetting)|パスワード自動入力の使用中にユーザーにデバイス パスワードの入力を求める設定を構成する|
 ### [*<a name="performance"></a>パフォーマンス*](#performance-policies)
 
 |ポリシー名|キャプション|
@@ -210,7 +219,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)|バックグラウンド グラフィックス印刷モードを制限する|
 |[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)|既定の背景グラフィックス印刷モード|
 |[PrintingEnabled](#printingenabled)|印刷を有効にする|
-|[PrintingPaperSizeDefault](#printingpapersizedefault)|印刷の既定のページ サイズ|
+|[PrintingPaperSizeDefault](#printingpapersizedefault)|既定の印刷ページ サイズ|
 |[PrintingWebpageLayout](#printingwebpagelayout)|印刷のレイアウトを設定する|
 |[UseSystemPrintDialog](#usesystemprintdialog)|システムの印刷ダイアログを使用して印刷する|
 ### [*<a name="private-network-request-settings"></a>プライベート ネットワーク要求設定*](#private-network-request-settings-policies)
@@ -245,7 +254,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[SmartScreenEnabled](#smartscreenenabled)|Microsoft Defender SmartScreen を構成する|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|信頼のおけるソースからのダウンロードに対して Microsoft Defender SmartScreen のチェックを強制する|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Microsoft Defender SmartScreen を構成して望ましくない可能性のあるアプリをブロックする|
-### [*<a name="startup-home-page-and-new-tab-page"></a>スタートアップ &comma; ホーム ページ、新規タブ ページ*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startupcomma-home-page-and-new-tab-page"></a>スタートアップ &comma; ホーム ページ、新規タブ ページ*](#startup-home-page-and-new-tab-page-policies)
 
 |ポリシー名|キャプション|
 |-|-|
@@ -320,7 +329,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[ConfigureOnPremisesAccountAutoSignIn](#configureonpremisesaccountautosignin)|Azure AD ドメイン アカウントがない場合、Active Directory ドメイン アカウントで自動サインインを構成する|
 |[ConfigureOnlineTextToSpeech](#configureonlinetexttospeech)|オンラインでの音声合成を構成する|
 |[ConfigureShare](#configureshare)|共有エクスペリエンスを構成する|
-|[ConfigureViewInFileExplorer](#configureviewinfileexplorer)|[エクスプローラーで表示] 機能を構成して、SharePointページのページMicrosoft Edge|
+|[ConfigureViewInFileExplorer](#configureviewinfileexplorer)|Microsoft Edge で SharePoint ページの "エクスプローラーで表示" 機能を構成する|
 |[CustomHelpLink](#customhelplink)|カスタム ヘルプリンクを指定する|
 |[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled)|DNS の傍受チェックを有効にする|
 |[DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)|Microsoft Edge を既定のブラウザーとして設定する|
@@ -389,7 +398,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[InPrivateModeAvailability](#inprivatemodeavailability)|InPrivate モードの可用性を構成する|
 |[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|セキュリティのないフォームに対する警告を有効にする|
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|IntensiveWakeUpThrottling 機能を制御する|
-|[InternetExplorerIntegrationCloudSiteList](#internetexplorerintegrationcloudsitelist)|クラウド モード Enterprise一覧を構成する|
+|[InternetExplorerIntegrationCloudSiteList](#internetexplorerintegrationcloudsitelist)|エンタープライズ モード クラウド サイト一覧を構成する|
 |[InternetExplorerIntegrationEnhancedHangDetection](#internetexplorerintegrationenhancedhangdetection)|Internet Explorer モードの拡張ハング検出を構成する|
 |[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)|Internet Explorer 統合を構成する|
 |[InternetExplorerIntegrationLocalFileAllowed](#internetexplorerintegrationlocalfileallowed)|Internet Explorer モードでローカル ファイルを起動できるようにする|
@@ -398,14 +407,14 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[InternetExplorerIntegrationLocalSiteListExpirationDays](#internetexplorerintegrationlocalsitelistexpirationdays)|サイトをローカル IE モードのサイト リストに表示する日数を指定する|
 |[InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed)|Internet Explorer モードで未構成のサイトを再度読み込みできるようにする|
 |[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|エンタープライズ モード サイト一覧を構成する|
-|[InternetExplorerIntegrationSiteListRefreshInterval](#internetexplorerintegrationsitelistrefreshinterval)|[モード サイト一覧Enterprise更新する頻度を構成する|
+|[InternetExplorerIntegrationSiteListRefreshInterval](#internetexplorerintegrationsitelistrefreshinterval)|エンタープライズ モード サイト一覧を更新する頻度を構成する|
 |[InternetExplorerIntegrationSiteRedirect](#internetexplorerintegrationsiteredirect)|Internet Explorer モード ページから起動したときに未構成サイトへの「ページ内」ナビゲーションの動作を指定する|
 |[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Internet Explorer モードのテストを許可する (非推奨)|
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|イントラネット リダイレクトの動作|
 |[IsolateOrigins](#isolateorigins)|特定のオリジンでのサイトの分離を有効にする|
 |[LocalBrowserDataShareEnabled](#localbrowserdatashareenabled)|Microsoft を有効にして、ローカル Windows Edge 閲覧データを検索する|
 |[LocalProvidersEnabled](#localprovidersenabled)|ローカル プロバイダーからのおすすめを許可する|
-|[MAUEnabled](#mauenabled)|Microsoft AutoUpdate を常に更新プログラムとして使用Microsoft Edge|
+|[MAUEnabled](#mauenabled)|Microsoft Edge のアップデーターとして Microsoft AutoUpdate を常に使用する|
 |[MSAWebSiteSSOUsingThisProfileAllowed](#msawebsitessousingthisprofileallowed)|このプロファイルを使用して Microsoft サイトのシングル サインオンを許可する|
 |[ManagedConfigurationPerOrigin](#managedconfigurationperorigin)|Web サイトの管理された構成値を特定のオリジンに設定する|
 |[ManagedFavorites](#managedfavorites)|お気に入りを構成する|
@@ -445,7 +454,6 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[SSLVersionMin](#sslversionmin)|TLS の最小バージョンが有効 (非推奨)|
 |[SaveCookiesOnExit](#savecookiesonexit)|Microsoft Edge の終了時に cookie を保存する|
 |[SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)|ブラウザー履歴の保存を無効にする|
-|[ScreenCaptureAllowed](#screencaptureallowed)|画面キャプチャを許可または拒否する|
 |[ScrollToTextFragmentEnabled](#scrolltotextfragmentenabled)|URL フラグメントで指定されたテキストへのスクロールを有効にする|
 |[SearchSuggestEnabled](#searchsuggestenabled)|検索候補を有効にする|
 |[SecurityKeyPermitAttestation](#securitykeypermitattestation)|直接的なセキュリティ キーの構成証明を使用するためのアクセス許可を必要としない Web サイトやドメイン|
@@ -483,7 +491,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[URLAllowlist](#urlallowlist)|許可されている URL の一覧を定義する|
 |[URLBlocklist](#urlblocklist)|URL の一覧へのアクセスをブロックする|
 |[UpdatePolicyOverride](#updatepolicyoverride)|Microsoft Edge で利用できる更新プログラムを Microsoft Edge Update でどのように処理するかを指定します|
-|[UserAgentClientHintsEnabled](#useragentclienthintsenabled)|ユーザー エージェント クライアント ヒント機能を有効にする (非推奨)|
+|[UserAgentClientHintsEnabled](#useragentclienthintsenabled)|ユーザー エージェント クライアント ヒント機能を有効にする|
 |[UserDataDir](#userdatadir)|ユーザー データ ディレクトリを設定する|
 |[UserDataSnapshotRetentionLimit](#userdatasnapshotretentionlimit)|緊急ロールバック時の使用のために保持するユーザーデータのスナップショット数を制限します。|
 |[UserFeedbackAllowed](#userfeedbackallowed)|ユーザー フィードバックを許可する|
@@ -498,6 +506,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[WebRtcAllowLegacyTLSProtocols](#webrtcallowlegacytlsprotocols)|WebRTC で従来の TLS/DTLS ダウングレードを許可する (非推奨)|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|WebRTC によるローカル IP アドレスの公開を管理する|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|WebRTC によるローカル IP アドレスの公開を制限する|
+|[WebRtcRespectOsRoutingTableEnabled](#webrtcrespectosroutingtableenabled)|WebRTC 経由でピア ツー ピア接続を Windows OS ルーティング テーブル ルールのサポートを有効にする|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|WebRTC が使用するローカル UDP ポートの範囲を制限する|
 |[WebWidgetAllowed](#webwidgetallowed)|Web ウィジェットを有効にする|
 |[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Windows の起動時に Web ウィジェットを許可する|
@@ -506,6 +515,69 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 
 
 
+
+  ## <a name="allow-or-deny-screen-capture-policies"></a>画面キャプチャ方針を許可または拒否する
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### <a name="screencaptureallowed"></a>ScreenCaptureAllowed
+
+  #### <a name="allow-or-deny-screen-capture"></a>画面キャプチャを許可または拒否する
+
+  
+  
+  #### <a name="supported-versions"></a>サポートされているバージョン:
+
+  - Windows と macOS での 83 以降
+
+  #### <a name="description"></a>説明
+
+  このポリシーを有効にしているか、構成していない場合、Web ページは画面キャプチャに画面の共有 API (たとえば、getDisplayMedia() や デスクトップ キャプチャ拡張 API) を使用することができます。
+このポリシーを無効にしている場合、画面の共有 API の呼び出しは失敗します。 たとえば、Web ベースのオンライン会議を使用している場合、ビデオや画面共有は機能しません。
+
+  #### <a name="supported-features"></a>サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### <a name="data-type"></a>［データの種類］:
+
+  - ブール値
+
+  #### <a name="windows-information-and-settings"></a>Windows の情報と設定
+
+  ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
+
+  - GP 固有の名前: ScreenCaptureAllowed
+  - GP 名: 画面キャプチャを許可または拒否する
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/画面キャプチャの許可または拒否
+  - GP パス (推奨): N/A
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): なし
+  - 値の名前: ScreenCaptureAllowed
+  - 値の種類: REG_DWORD
+
+  ##### <a name="example-value"></a>サンプル値:
+
+```
+0x00000000
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac の情報と設定
+  
+  - 基本設定キーの名前: ScreenCaptureAllowed
+  - サンプル値:
+``` xml
+<false/>
+```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
 
   ## <a name="application-guard-settings-policies"></a>Application Guard の設定ポリシー
 
@@ -639,6 +711,62 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
   - パス (必須): SOFTWARE\Policies\Microsoft\Edge
   - パス (推奨): なし
   - 値の名前: ApplicationGuardFavoritesSyncEnabled
+  - 値の種類: REG_DWORD
+
+  ##### <a name="example-value"></a>サンプル値:
+
+```
+0x00000001
+```
+
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### <a name="applicationguardpassivemodeenabled"></a>ApplicationGuardPassiveModeEnabled
+
+  #### <a name="ignore-application-guard-site-list-configuration-and-browse-edge-normally"></a>Application Guard サイト一覧の構成を無視し、通常は Edge を参照する
+
+  
+  
+  #### <a name="supported-versions"></a>サポートされているバージョン:
+
+  - 94 以降の Windows の場合
+
+  #### <a name="description"></a>説明
+
+  信頼済みサイトと信頼されていないサイトの Application Guard サイト一覧構成をエッジで無視するかどうかを設定します。
+
+このポリシーを有効にした場合、Edge からのナビゲーション (信頼されていないサイトへのナビゲーションを含む) はすべて、Application Guard コンテナーにリダイレクトすることなく、Edge 内で通常にアクセスされます。 注: このポリシーは Edge にのみ影響するため、対応する拡張機能を有効にしている場合、他のブラウザーからのナビゲーションが Application Guard コンテナーにリダイレクトされる可能性があります。
+
+このポリシーを無効にした場合、または構成しない場合でも、Edge は Application Guard サイト リストを無視しません。 ユーザーがホスト内の信頼されていないサイトに移動しようとする場合、サイトはコンテナーで開きます。
+
+
+  #### <a name="supported-features"></a>サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### <a name="data-type"></a>［データの種類］:
+
+  - ブール値
+
+  #### <a name="windows-information-and-settings"></a>Windows の情報と設定
+
+  ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
+
+  - GP 固有名: ApplicationGuardPassiveModeEnabled
+  - GP 名: Application Guard サイト リストの構成を無視し、通常は Edge を参照する
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/Application Guard の設定
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): N/A
+  - 値の名前: ApplicationGuardPassiveModeEnabled
   - 値の種類: REG_DWORD
 
   ##### <a name="example-value"></a>サンプル値:
@@ -1574,13 +1702,13 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
   #### <a name="description"></a>説明
 
-  JIT (Just In Time) コンパイラがMicrosoft Edge v8 JavaScript エンジンを実行するかどうかを設定できます。
+  JIT (Just In Time) コンパイラを有効にした v8 JavaScript エンジンを Microsoft Edge が実行するかどうかを設定できます。
 
-JavaScript JIT を無効にすると、Microsoft Edgeコンテンツのレンダリングが遅くなる可能性があります。また、WebAssembly を含む JavaScript の一部が無効にされる可能性があります。 JavaScript JIT を無効にすると、Microsoft Edge構成で Web コンテンツをレンダリングできる場合があります。
+JavaScript JIT を無効にすると、Microsoft Edge Web コンテンツのレンダリングが遅くなる可能性があり、WebAssembly を含む JavaScript の一部も無効になる可能性があります。 JavaScript JIT を無効にすると、Microsoft Edge 構成で Web コンテンツをレンダリングできる場合があります。
 
-このポリシーは [、JavaScriptJitAllowedForSites](#javascriptjitallowedforsites) および [JavaScriptJitBlockedForSites](#javascriptjitblockedforsites) ポリシーを使用して、特定の URL パターンに対してオーバーライドできます。
+[JavaScriptJitAllowedForSites](#javascriptjitallowedforsites) および [JavaScriptJitBlockedForSites](#javascriptjitblockedforsites) ポリシーを使用して、特定の URL パターンに対してこのポリシーをオーバーライドできます。
 
-このポリシーを構成しない場合は、JavaScript JIT が有効になります。
+このポリシーを構成しない場合、JavaScript JIT が有効になります。
 
 ポリシー オプション マッピング:
 
@@ -1604,8 +1732,8 @@ JavaScript JIT を無効にすると、Microsoft Edgeコンテンツのレンダ
 
   ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
 
-  - GP 一意の名前: DefaultJavaScriptJitSetting
-  - GP 名: JavaScript JIT の使用を制御する
+  - GP 固有の名前: DefaultJavaScriptJitSetting
+  - GP 名: JavaScript JIT を制御する
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/コンテンツの設定
   - GP パス (推奨): なし
   - GP ADMX ファイル名: MSEdge.admx
@@ -1613,7 +1741,7 @@ JavaScript JIT を無効にすると、Microsoft Edgeコンテンツのレンダ
   ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
 
   - パス (必須): SOFTWARE\Policies\Microsoft\Edge
-  - パス (推奨): なし
+  - パス (推奨): N/A
   - 値の名前: DefaultJavaScriptJitSetting
   - 値の種類: REG_DWORD
 
@@ -1625,7 +1753,7 @@ JavaScript JIT を無効にすると、Microsoft Edgeコンテンツのレンダ
 
   #### <a name="mac-information-and-settings"></a>Mac の情報と設定
   
-  - 基本設定キー名: DefaultJavaScriptJitSetting
+  - 基本設定キーの名前: DefaultJavaScriptJitSetting
   - サンプル値:
 ``` xml
 <integer>1</integer>
@@ -2472,7 +2600,7 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
   #### <a name="description"></a>説明
 
-  安全でない混在するコンテンツ（つまり、HTTPS サイトにある HTTP コンテンツ）を表示できるサイトを指定するための URL パターンの一覧を作成します。
+  URL パターンの一覧を作成して、表示できるサイトを指定するか、バージョン 94 の時点で、安全でない混合コンテンツ (つまり、HTTPS サイト上の HTTP コンテンツ) をダウンロードできます。
 
 このポリシーを構成していない場合、ブロック可能な混在するコンテンツがブロックされ、オプションでブロック可能な混在するコンテンツがアップグレードされます。 ただし、ユーザーは特定のサイトで安全でない混在するコンテンツを許可する例外を設定することができます。
 
@@ -2730,7 +2858,7 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
   ### <a name="javascriptjitallowedforsites"></a>JavaScriptJitAllowedForSites
 
-  #### <a name="allow-javascript-to-use-jit-on-these-sites"></a>JavaScript がこれらのサイトで JIT を使用するを許可する
+  #### <a name="allow-javascript-to-use-jit-on-these-sites"></a>JavaScript がこれらのサイトで JIT を使用するのを許可する
 
   
   
@@ -2742,13 +2870,13 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
   JIT (Just In Time) コンパイラを有効にした JavaScript を実行できるサイトを指定するサイト URL パターンの一覧を設定できます。
 
-有効なサイト URL パターンの詳細については、を参照してください [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) 。 * は、このポリシーで承認された値ではありません。
+有効なサイト URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) を参照してください。 * は、このポリシーで承認された値ではありません。
 
-JavaScript JIT ポリシーの例外は、サイトの粒度 (eTLD+1) でのみ適用されます。 subdomain.contoso.com に対するポリシー セットは、contoso.com または subdomain.contoso.com に正しく適用されません。どちらもポリシーがない同じ eTLD+1 (contoso.com) に解決されます。 この場合、ポリシーを設定して、contoso.com とポリシーの両方に contoso.com する subdomain.contoso.com。
+JavaScript JIT ポリシーの例外は、サイトの粒度 (eTLD+1) でのみ強制されます。 subdomain.contoso.com に対するポリシー セットは、contoso.com または subdomain.contoso.com に正しく適用されません。いずれもポリシーがない同じ eTLD+1 (contoso.com) に解決されます。 この場合、contoso.com と subdomain.contoso.com の両方に正しく適用するには、contoso.com にポリシーを設定する必要があります。
 
-このポリシーは、フレーム単位で適用され、トップ レベルのオリジン URL に基づいていないので、contoso.com が JavaScriptJitAllowedForSites ポリシーにリストされているが、contoso.com が fabrikam.com を含むフレームを読み込む場合、contoso.com は JavaScript JIT を有効にしますが、fabrikam.com は [DefaultJavaScriptJitSetting](#defaultjavascriptjitsetting)(設定されている場合) または既定で JavaScript JIT が有効になっている場合にポリシーを使用します。
+このポリシーは、最上位レベルの配信元 URL のみに基づいくのではなく、フレーム単位で適用されます。たとえば、contoso.com が JavaScriptJitAllowedForSites ポリシーに一覧表示されているが、contoso.com が fabrikam.com を含むフレームを読み込む場合、contoso.com は JavaScript JIT が有効になりますが、fabrikam.com は [DefaultJavaScriptJitSetting](#defaultjavascriptjitsetting) のポリシーを使用します (設定されている場合、または JavaScript JIT が有効な場合)。
 
-サイトに対してこのポリシーを構成しない場合は [、DefaultJavaScriptJitSetting](#defaultjavascriptjitsetting) のポリシーがサイトに適用されます 。設定されている場合は、それ以外の場合は Javascript JIT がサイトに対して有効になります。
+サイトに対してこのポリシーを構成しない場合は、[DefaultJavaScriptJitSetting](#defaultjavascriptjitsetting) のポリシーがサイトに適用されます。設定されている場合は、Javascript JIT がサイトに対して有効になります。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -2764,7 +2892,7 @@ JavaScript JIT ポリシーの例外は、サイトの粒度 (eTLD+1) でのみ�
 
   ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
 
-  - GP 一意の名前: JavaScriptJitAllowedForSites
+  - GP 固有の名前: JavaScriptJitAllowedForSites
   - GP 名: これらのサイトで JavaScript で JIT を使用する許可
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/コンテンツの設定
   - GP パス (推奨): なし
@@ -2773,7 +2901,7 @@ JavaScript JIT ポリシーの例外は、サイトの粒度 (eTLD+1) でのみ�
   ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
 
   - パス (必須): SOFTWARE\Policies\Microsoft\Edge\JavaScriptJitAllowedForSites
-  - パス (推奨): なし
+  - パス (推奨): N/A
   - 値の名前: 1、2、3、...
   - 値の種類: REG_SZ の一覧
 
@@ -2809,17 +2937,17 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptJitAllowedForSites\1 = "[*.]example.e
 
   #### <a name="description"></a>説明
 
-  JavaScript JIT (Just In Time) コンパイラの実行が許可されていないサイトを指定するサイト URL パターンの一覧を設定できます。
+  有効になっている JavaScript JIT (Just-In-Time) コンパイラの実行が許可されていないサイトを指定するサイト URL パターンの一覧を設定できます。
 
-JavaScript JIT を無効にすると、Microsoft Edgeコンテンツのレンダリングが遅くなる可能性があります。また、WebAssembly を含む JavaScript の一部が無効にされる可能性があります。 JavaScript JIT を無効にすると、Microsoft Edge構成で Web コンテンツをレンダリングできる場合があります。
+JavaScript JIT を無効にすると、Microsoft Edge Web コンテンツのレンダリングが遅くなる可能性があり、WebAssembly を含む JavaScript の一部も無効になる可能性があります。 JavaScript JIT を無効にすると、Microsoft Edge 構成で Web コンテンツをレンダリングできる場合があります。
 
 有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。 * は、このポリシーで承認された値ではありません。
 
-JavaScript JIT ポリシーの例外は、サイトの粒度 (eTLD+1) でのみ適用されます。 subdomain.contoso.com に対するポリシー セットは、contoso.com または subdomain.contoso.com に正しく適用されません。どちらもポリシーがない同じ eTLD+1 (contoso.com) に解決されます。 この場合、ポリシーを設定して、contoso.com とポリシーの両方に contoso.com する subdomain.contoso.com。
+JavaScript JIT ポリシーの例外は、サイトの粒度 (eTLD+1) でのみ強制されます。 subdomain.contoso.com に対するポリシー セットは、contoso.com または subdomain.contoso.com に正しく適用されません。いずれもポリシーがない同じ eTLD+1 (contoso.com) に解決されます。 この場合、contoso.com と subdomain.contoso.com の両方に正しく適用するには、contoso.com にポリシーを設定する必要があります。
 
 このポリシーは、フレーム単位で適用され、トップ レベルのオリジン URL に基づいていないので、contoso.com が JavaScriptJitBlockedForSites ポリシーにリストされているが、contoso.com が fabrikam.com を含むフレームを読み込む場合、contoso.com は JavaScript JIT を無効にしますが、fabrikam.com は [DefaultJavaScriptJitSetting](#defaultjavascriptjitsetting)(設定されている場合) または既定で JavaScript JIT が有効になっている場合にポリシーを使用します。
 
-サイトに対してこのポリシーを構成しない場合 [、DefaultJavaScriptJitSetting](#defaultjavascriptjitsetting) のポリシーがサイトに適用されます 。設定されている場合は、それ以外の場合は JavaScript JIT がサイトに対して有効になります。
+サイトに対してこのポリシーを構成しない場合、 [DefaultJavaScriptJitSetting](#defaultjavascriptjitsetting) のポリシーがサイトに適用されます。設定されている場合は、JavaScript JIT がサイトに対して有効になります。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -2835,7 +2963,7 @@ JavaScript JIT ポリシーの例外は、サイトの粒度 (eTLD+1) でのみ�
 
   ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
 
-  - GP 一意の名前: JavaScriptJitBlockedForSites
+  - GP 固有の名前: JavaScriptJitBlockedForSites
   - GP 名: これらのサイトで JavaScript による JIT の使用をブロックする
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/コンテンツの設定
   - GP パス (推奨): なし
@@ -2844,7 +2972,7 @@ JavaScript JIT ポリシーの例外は、サイトの粒度 (eTLD+1) でのみ�
   ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
 
   - パス (必須): SOFTWARE\Policies\Microsoft\Edge\JavaScriptJitBlockedForSites
-  - パス (推奨): なし
+  - パス (推奨): N/A
   - 値の名前: 1、2、3、...
   - 値の種類: REG_SZ の一覧
 
@@ -2857,7 +2985,7 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptJitBlockedForSites\1 = "[*.]example.e
 
   #### <a name="mac-information-and-settings"></a>Mac の情報と設定
   
-  - 基本設定キー名: JavaScriptJitBlockedForSites
+  - 基本設定キーの名前: JavaScriptJitBlockedForSites
   - サンプル値:
 ``` xml
 <array>
@@ -3499,7 +3627,7 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
 
   ### <a name="showpdfdefaultrecommendationsenabled"></a>ShowPDFDefaultRecommendationsEnabled
 
-  #### <a name="allow-notifications-to-set-microsoft-edge-as-default-pdf-reader"></a>既定の PDF リーダーとしてMicrosoft Edge通知の設定を許可する
+  #### <a name="allow-notifications-to-set-microsoft-edge-as-default-pdf-reader"></a>Microsoft Edge を既定の PDF リーダーとして設定する通知を許可する
 
   
   
@@ -3509,11 +3637,11 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
 
   #### <a name="description"></a>説明
 
-  このポリシー設定では、従業員が PDF ハンドラーとして設定する推奨事項を受け取Microsoft Edge決定できます。
+  このポリシーを設定すると、従業員が PDF ハンドラーとして Microsoft Edge を設定するための推奨事項を受け取るかどうかを決定できます。
 
-この設定を有効または構成しない場合、従業員は既定の PDF ハンドラーとして自分自身を設定Microsoft Edgeの推奨事項を受け取る必要があります。
+この設定を有効にした場合、または構成しなかった場合、従業員は既定の PDF ハンドラーとして設定するための推奨事項を Microsoft Edge から受け取ります。
 
-この設定を無効にすると、従業員は既定の PDF ハンドラーとして設定Microsoft Edge通知を受信しません。
+この設定を無効にした場合、従業員は Microsoft Edge から既定の PDF ハンドラーとして設定するための通知を受け取りません。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -3529,8 +3657,8 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
 
   ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
 
-  - GP 一意の名前: ShowPDFDefaultRecommendationsEnabled
-  - GP 名: 既定の PDF リーダーとしてMicrosoft Edge通知の設定を許可する
+  - GP 固有の名前: ShowPDFDefaultRecommendationsEnabled
+  - GP 名: Microsoft Edge を既定の PDF リーダーとして設定する通知を許可する
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/コンテンツの設定
   - GP パス (推奨): なし
   - GP ADMX ファイル名: MSEdge.admx
@@ -3538,7 +3666,7 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
   ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
 
   - パス (必須): SOFTWARE\Policies\Microsoft\Edge
-  - パス (推奨): なし
+  - パス (推奨): N/A
   - 値の名前: ShowPDFDefaultRecommendationsEnabled
   - 値の種類: REG_DWORD
 
@@ -4482,11 +4610,11 @@ Microsoft Edge 84 以降、このポリシーは推奨されるポリシーと�
 
   ## <a name="experimentation-policies"></a>実験ポリシー
 
-  [トップに戻る](#microsoft-edge---policies)
+  [ページのトップへ](#microsoft-edge---policies)
 
   ### <a name="featureflagoverridescontrol"></a>FeatureFlagOverridesControl
 
-  #### <a name="configure-users-ability-to-override-feature-flags"></a>ユーザーが機能フラグを上書きする機能を構成する
+  #### <a name="configure-users-ability-to-override-feature-flags"></a>ユーザーが機能フラグをオーバーライドする機能を構成する
 
   
   
@@ -4497,21 +4625,21 @@ Microsoft Edge 84 以降、このポリシーは推奨されるポリシーと�
   #### <a name="description"></a>説明
 
   ユーザーが機能フラグの状態を上書きする機能を構成します。
-このポリシーを 'CommandLineOverridesEnabled' に設定すると、ユーザーはコマンド ライン引数を使用して機能フラグの状態を上書きできますが、edge://flags できません。
+このポリシーを 'CommandLineOverridesEnabled' に設定すると、ユーザーは edge://flags ページではなくコマンド ライン引数を使用して機能フラグの状態をオーバーライドできます。
 
-このポリシーを 'OverridesEnabled' に設定すると、ユーザーはコマンド ラインの引数またはページを使用して機能フラグの状態 edge://flags できます。
+このポリシーを 'OverridesEnabled' に設定すると、ユーザーはコマンド ラインの引数または edge://flags ページを使用して機能フラグの状態をオーバーライドできます。
 
-このポリシーを 'OverridesDisabled' に設定した場合、ユーザーはコマンド ラインの引数またはページを使用して機能フラグの状態 edge://flags できません。
+このポリシーを 'OverridesDisabled' に設定した場合、ユーザーはコマンド ラインの引数または edge://flags ページを使用して機能フラグの状態をオーバーライドできます。
 
 このポリシーを構成しない場合、動作は 'OverridesEnabled' と同じです。
 
 ポリシー オプション マッピング:
 
-* CommandLineOverridesEnabled (2) = ユーザーがコマンド ライン引数のみを使用して機能フラグを上書きできます
+* CommandLineOverridesEnabled (2) = ユーザーがコマンド ライン引数のみを使用して機能フラグをオーバーライドできる
 
 * OverridesEnabled (1) = ユーザーに機能フラグの上書きを許可する
 
-* OverridesDisabled (0) = ユーザーによる機能フラグの上書きを防止する
+* OverridesDisabled (0) = ユーザーによる機能フラグのオーバーライドを防止する
 
 このポリシーを構成する場合は、上記の情報を使用します。
 
@@ -4529,16 +4657,16 @@ Microsoft Edge 84 以降、このポリシーは推奨されるポリシーと�
 
   ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
 
-  - GP の一意の名前: FeatureFlagOverridesControl
+  - GP 固有の名前: FeatureFlagOverridesControl
   - GP 名: ユーザーが機能フラグを上書きする機能を構成する
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/実験
-  - GP パス (推奨): なし
+  - GP パス (推奨): N/A
   - GP ADMX ファイル名: MSEdge.admx
 
   ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
 
   - パス (必須): SOFTWARE\Policies\Microsoft\Edge
-  - パス (推奨): なし
+  - パス (推奨): N/A
   - 値の名前: FeatureFlagOverridesControl
   - 値の種類: REG_DWORD
 
@@ -4550,7 +4678,7 @@ Microsoft Edge 84 以降、このポリシーは推奨されるポリシーと�
 
   #### <a name="mac-information-and-settings"></a>Mac の情報と設定
   
-  - 基本設定キー名: FeatureFlagOverridesControl
+  - 基本設定キーの名前: FeatureFlagOverridesControl
   - サンプル値:
 ``` xml
 <integer>1</integer>
@@ -4857,7 +4985,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
 このポリシーは、[ExtensionInstallBlocklist](#extensioninstallblocklist) ポリシーよりも優先されます。 以前に強制インストールされたアプリや拡張機能がこの一覧から削除された場合、Microsoft Edge はそのアプリや拡張機能を自動的にアンインストールします。
 
-Microsoft Active Directory Windowsに参加していないインスタンスの場合、強制インストールは、Microsoft Edge アドオン Web サイトに記載されているアプリと拡張機能に制限されます。
+注: Microsoft Active Directory ドメインに参加していない Windows インスタンスの場合、強制インストールは Microsoft Edge アドオン Web サイトに記載されているアプリと拡張機能に限定されます。
 
 macOS インスタンスでは、Microsoft Edge アドオン Web サイト以外からのアプリや拡張機能については、インスタンスが MDM 経由で管理されているか、MCX 経由でドメインに参加している場合にのみ、強制的にインストールすることができます。
 
@@ -4997,7 +5125,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 
   このポリシーを設定すると、既存の拡張機能関連ポリシーによって制御される設定を含め、Microsoft Edge の拡張機能管理設定が制御されます。 このポリシーは、設定されている可能性がある従来のポリシーより優先されます。
 
-このポリシーは、拡張機能 ID または更新 URL を特定の設定にのみマップします。 特別な ID "*" に対して既定の構成を設定できます。この構成は、このポリシーのカスタム構成なしですべての拡張機能に適用されます。 更新 URL を使用すると、拡張機能マニフェストに記載されている正確な更新 URL を持つ拡張機能に構成が適用されます。 'override_update_url' フラグが true に設定されている場合、拡張機能は、このポリシーの [ExtensionInstallForcelist](#extensioninstallforcelist) ポリシーまたは 'update_url' フィールドで指定された更新 URL を使用してインストールおよび更新されます。 'override_update_url' がエッジ アドオン web サイト更新 URL の場合update_urlフラグ 'override_update_url' は無視されます。 詳細については、[https://go.microsoft.com/fwlink/?linkid=2161555](https://go.microsoft.com/fwlink/?linkid=2161555) で利用できる ExtensionSettings ポリシーの詳細ガイドを確認します。
+このポリシーは、拡張機能 ID または更新 URL を特定の設定にのみマップします。 特別な ID "*" に対して既定の構成を設定できます。この構成は、このポリシーのカスタム構成なしですべての拡張機能に適用されます。 更新 URL を使用すると、拡張機能マニフェストに記載されている正確な更新 URL を持つ拡張機能に構成が適用されます。 'override_update_url' フラグが true に設定されている場合、拡張機能は、このポリシーの [ExtensionInstallForcelist](#extensioninstallforcelist) ポリシーまたは 'update_url' フィールドで指定された更新 URL を使用してインストールおよび更新されます。 'update_url' が Edge アドオン Web サイトの更新 URL の場合、フラグ 'override_update_url' は無視されます。 詳細については、[https://go.microsoft.com/fwlink/?linkid=2161555](https://go.microsoft.com/fwlink/?linkid=2161555) で利用できる ExtensionSettings ポリシーの詳細ガイドを確認します。
 
 特定のサード パーティ ストアの拡張機能をブロックするには、そのストアの update_url をブロックする必要があります。 たとえば、Chrome Web ストアの拡張機能をブロックする場合は、次の JSON を使用できます。
 
@@ -5078,6 +5206,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
     "runtime_blocked_hosts": [
       "*://*.contoso.com"
     ],
+    "toolbar_state": "force_shown",
     "update_url": "https://contoso.com/update_url"
   },
   "cdefghijklmnopabcdefghijklmnopab": {
@@ -5107,7 +5236,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   ##### <a name="compact-example-value"></a>コンパクト サンプル値:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {"*": {"allowed_types": ["hosted_app"], "blocked_install_message": "Custom error message.", "blocked_permissions": ["downloads", "bookmarks"], "install_sources": ["https://company-intranet/apps"], "installation_mode": "blocked", "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"]}, "abcdefghijklmnopabcdefghijklmnop": {"blocked_permissions": ["history"], "installation_mode": "allowed", "minimum_version_required": "1.0.1"}, "bcdefghijklmnopabcdefghijklmnopa": {"allowed_permissions": ["downloads"], "installation_mode": "force_installed", "override_update_url": true, "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"], "update_url": "https://contoso.com/update_url"}, "cdefghijklmnopabcdefghijklmnopab": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "defghijklmnopabcdefghijklmnopabc,efghijklmnopabcdefghijklmnopabcd": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "fghijklmnopabcdefghijklmnopabcde": {"blocked_install_message": "Custom removal message.", "installation_mode": "removed"}, "update_url:https://www.contoso.com/update.xml": {"allowed_permissions": ["downloads"], "blocked_permissions": ["wallpaper"], "installation_mode": "allowed"}}
+  SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {"*": {"allowed_types": ["hosted_app"], "blocked_install_message": "Custom error message.", "blocked_permissions": ["downloads", "bookmarks"], "install_sources": ["https://company-intranet/apps"], "installation_mode": "blocked", "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"]}, "abcdefghijklmnopabcdefghijklmnop": {"blocked_permissions": ["history"], "installation_mode": "allowed", "minimum_version_required": "1.0.1"}, "bcdefghijklmnopabcdefghijklmnopa": {"allowed_permissions": ["downloads"], "installation_mode": "force_installed", "override_update_url": true, "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"], "toolbar_state": "force_shown", "update_url": "https://contoso.com/update_url"}, "cdefghijklmnopabcdefghijklmnopab": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "defghijklmnopabcdefghijklmnopabc,efghijklmnopabcdefghijklmnopabcd": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "fghijklmnopabcdefghijklmnopabcde": {"blocked_install_message": "Custom removal message.", "installation_mode": "removed"}, "update_url:https://www.contoso.com/update.xml": {"allowed_permissions": ["downloads"], "blocked_permissions": ["wallpaper"], "installation_mode": "allowed"}}
   ```
   
 
@@ -5175,6 +5304,8 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
     <array>
       <string>*://*.contoso.com</string>
     </array>
+    <key>toolbar_state</key>
+    <string>force_shown</string>
     <key>update_url</key>
     <string>https://contoso.com/update_url</string>
   </dict>
@@ -5750,7 +5881,7 @@ Samba と Windows Server の最新バージョンは、すべて NTLMv2 をサ�
 
   ## <a name="identity-and-sign-in-policies"></a>ID ポリシーとサインイン ポリシー
 
-  [トップに戻る](#microsoft-edge---policies)
+  [ページのトップへ](#microsoft-edge---policies)
 
   ### <a name="implicitsigninenabled"></a>ImplicitSignInEnabled
 
@@ -5766,9 +5897,9 @@ Samba と Windows Server の最新バージョンは、すべて NTLMv2 をサ�
 
   暗黙的なサインインを許可/禁止するには、このポリシーを構成します。
 
-[BrowserSignin ポリシーを [ブラウザー](#browsersignin)サインインを無効にする] に構成した場合、このポリシーは無効になります。
+[BrowserSignin](#browsersignin) ポリシーを 'ブラウザーサインインを無効にする' に構成した場合、このポリシーは無効になります。
 
-この設定を有効または構成しない場合、暗黙的なサインインが有効になると、Edge は、ユーザーが自分の OS にサインインする方法と方法に基づいて、ユーザーのプロファイルへのサインインを試行します。
+この設定を有効にした場合、または構成しなかった場合、暗黙的なサインインが有効になり、Edge は、ユーザーが OS にサインインする内容と方法に基づいて、ユーザーをプロファイルにサインインしようとします。
 
 この設定を無効にすると、暗黙的なサインインは無効になります。
 
@@ -5786,16 +5917,16 @@ Samba と Windows Server の最新バージョンは、すべて NTLMv2 をサ�
 
   ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
 
-  - GP 一意の名前: ImplicitSignInEnabled
+  - GP 固有の名前: ImplicitSignInEnabled
   - GP 名: 暗黙的なサインインを有効にする
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/ID とサインイン
-  - GP パス (推奨): なし
+  - GP パス (推奨): N/A
   - GP ADMX ファイル名: MSEdge.admx
 
   ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
 
   - パス (必須): SOFTWARE\Policies\Microsoft\Edge
-  - パス (推奨): なし
+  - パス (推奨): N/A
   - 値の名前: ImplicitSignInEnabled
   - 値の種類: REG_DWORD
 
@@ -5811,7 +5942,7 @@ Samba と Windows Server の最新バージョンは、すべて NTLMv2 をサ�
 
   ### <a name="oneauthauthenticationenforced"></a>OneAuthAuthenticationEnforced
 
-  #### <a name="oneauth-authentication-flow-enforced-for-signin"></a>OneAuth 認証Flowサインインに適用される
+  #### <a name="oneauth-authentication-flow-enforced-for-signin"></a>OneAuth 認証フローがサインインに強制される
 
   
   
@@ -5821,12 +5952,13 @@ Samba と Windows Server の最新バージョンは、すべて NTLMv2 をサ�
 
   #### <a name="description"></a>説明
 
-  このポリシーを使用すると、ユーザーは、RS3 以上でサインインおよびトークンフェッチに OneAuth ライブラリを使用Microsoft EdgeをWindows 10できます。
+  このポリシーを使用すると、ユーザーは、Windows 10 RS3 以降の Microsoft Edge でのサインインとトークン取得に OneAuth ライブラリを使用するかどうかを決定できます。
 
-このポリシーを無効にするか構成しない場合、signin プロセスはアカウント マネージャー Windows使用します。 Microsoft Edgeパスワードを必要とせずに、Windows、Microsoft Office、または他の Microsoft アプリケーションにログインしたアカウントを使用できます。 または、サインインに有効なアカウントとパスワードを指定することもできます。これは、将来の使用のために、Windowsアカウント マネージャーに保存されます。 [メールとアカウント] ページの Windows -Windows 設定 -> を>して、アカウント マネージャーに保存されているすべてのアカウントを調査できます。
+このポリシーを無効にした場合、または構成しなかった場合、サインイン プロセスでは Windows アカウント マネージャーが使用されます。 Microsoft Edge は、Windows、Microsoft Office、またはその他の Microsoft アプリケーションにログインしたアカウントをパスワードなしで使用できます。 または、サインインに有効なアカウントとパスワードを指定することもできます。これは、将来の使用のために、Windows アカウント マネージャーに保存されます。 Windows アカウント マネージャーに保存されているすべてのアカウントは、Windows 設定 -> [アカウント] -> [メールとアカウント] ページを使用して調査できます。
 
-このポリシーを有効にした場合、アカウントサインインに OneAuth 認証フローが使用されます。 OneAuth 認証フローの依存関係は少なく、シェルを使用せずにWindowsできます。 使用するアカウントは、[メールとアカウント] ページには保存されません。
+このポリシーを有効にした場合、アカウントサインインに OneAuth 認証フローが使用されます。 OneAuth 認証フローの依存関係は少なく、Windows シェルなしで動作できます。 使用するアカウントは、[メールとアカウント] ページには保存されません。
 
+このポリシーは、Windows 10 RS3 以降でのみ有効になります。 RS3 以下の Windows 10 では、OneAuth は既定で Microsoft Edge での認証に使用されます。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -5843,15 +5975,15 @@ Samba と Windows Server の最新バージョンは、すべて NTLMv2 をサ�
   ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
 
   - GP 固有の名前: OneAuthAuthenticationEnforced
-  - GP 名: OneAuth 認証Flowサインインに適用される
+  - GP 名: サインインに強制される OneAuth 認証フロー
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/ID とサインイン
-  - GP パス (推奨): なし
+  - GP パス (推奨): N/A
   - GP ADMX ファイル名: MSEdge.admx
 
   ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
 
   - パス (必須): SOFTWARE\Policies\Microsoft\Edge
-  - パス (推奨): なし
+  - パス (推奨): N/A
   - 値名: OneAuthAuthenticationEnforced
   - 値の種類: REG_DWORD
 
@@ -5859,6 +5991,122 @@ Samba と Windows Server の最新バージョンは、すべて NTLMv2 をサ�
 
 ```
 0x00000000
+```
+
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### <a name="onlyonpremisesimplicitsigninenabled"></a>OnlyOnPremisesImplicitSigninEnabled
+
+  #### <a name="only-on-premises-account-enabled-for-implicit-sign-in"></a>暗黙的なサインインにはオンプレミス アカウントのみが有効
+
+  
+  
+  #### <a name="supported-versions"></a>サポートされているバージョン:
+
+  - 94 以降の Windows の場合
+
+  #### <a name="description"></a>説明
+
+  暗黙的なサインインに対してオンプレミス アカウントのみを有効にするかどうかを決定するには、このポリシーを構成します。
+
+このポリシーを有効にすると、暗黙的なサインインに対してオンプレミス アカウントだけが有効になります。 Microsoft Edge は、MSA または AAD アカウントに暗黙的にサインインしようとしません。 オンプレミス アカウントから AAD アカウントへのアップグレードも停止されます。
+
+このポリシーを無効にした場合、または構成しなかった場合、すべてのアカウントで暗黙的なサインインが有効になります。
+
+このポリシーは [ConfigureOnPremisesAccountAutoSignIn](#configureonpremisesaccountautosignin) が有効で 'SignInAndMakeDomainAccountNonRemovable' に設定されている場合にのみ有効になります。
+
+  #### <a name="supported-features"></a>サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: いいえ - ブラウザの再起動が必要
+
+  #### <a name="data-type"></a>［データの種類］:
+
+  - ブール値
+
+  #### <a name="windows-information-and-settings"></a>Windows の情報と設定
+
+  ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
+
+  - GP 固有の名前: OnlyOnPremisesImplicitSigninEnabled
+  - GP 名: 暗黙的なサインインに対して有効になっているオンプレミス アカウントのみ
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/ID とサインイン
+  - GP パス (推奨): N/A
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): N/A
+  - 値の名前: OnlyOnPremisesImplicitSigninEnabled
+  - 値の種類: REG_DWORD
+
+  ##### <a name="example-value"></a>サンプル値:
+
+```
+0x00000000
+```
+
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### <a name="wamauthbelowwin10rs3enabled"></a>WAMAuthBelowWin10RS3Enabled
+
+  #### <a name="wam-for-authentication-below-windows-10-rs3-enabled"></a>Windows 10 RS3 以下の認証用 WAM が有効になっている
+
+  
+  
+  #### <a name="supported-versions"></a>サポートされているバージョン:
+
+  - 93 以降の Windows の場合
+
+  #### <a name="description"></a>説明
+
+  このポリシーを構成して、Windows 10 RS1 および RS2 の Microsoft Edge で WAM を認証に使用するかどうかを決定します。
+
+この設定を有効にすると、WAM は Windows 10 RS1 および RS2 の認証フローで使用されます。
+
+この設定を無効にした場合、または構成しなかった場合は、Windows 10 RS1 および RS2 で WAM の代わりに OneAuth ライブラリが使用されます。
+
+このポリシーが有効になっている場合は、以前のサインイン セッション (既定で OneAuth を使用) を使用できないことに注意してください。 これらのプロファイルからサインアウトしてください。
+
+このポリシーは、Windows 10 の RS1 と RS2 のWindows 10 でのみ有効になります。 Windows 10 RS3 以降では、WAM は既定で Microsoft Edge での認証に使用されます。
+
+  #### <a name="supported-features"></a>サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: いいえ - ブラウザの再起動が必要
+
+  #### <a name="data-type"></a>［データの種類］:
+
+  - ブール値
+
+  #### <a name="windows-information-and-settings"></a>Windows の情報と設定
+
+  ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
+
+  - GP 固有の名前: WAMAuthBelowWin10RS3Enabled
+  - GP 名: Windows 10 RS3 以下が有効になっている認証用 WAM
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/ID とサインイン
+  - GP パス (推奨): N/A
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): N/A
+  - 値の名前: WAMAuthBelowWin10RS3Enabled
+  - 値の種類: REG_DWORD
+
+  ##### <a name="example-value"></a>サンプル値:
+
+```
+0x00000001
 ```
 
   
@@ -6262,15 +6510,15 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
   
   #### <a name="supported-versions"></a>サポートされているバージョン:
 
-  - 93 以降の Windows の場合
+  - 93 以降の Windows および macOS の場合
 
   #### <a name="description"></a>説明
 
-  ユーザーの機能を有効設定無効にするパスワード ジェネレーター のトグルを構成します。
+  ユーザーの機能を有効または無効にするパスワード ジェネレーターの設定トグルを構成します。
 
-このポリシーを有効または構成しない場合、パスワード ジェネレーターは、[サインアップ] ページと [パスワードの変更] ページでユーザーに強力で一意のパスワード候補を (ドロップダウンを介して) 提供します。
+このポリシーを有効にした場合、または構成しなかった場合、パスワード ジェネレーターはサインアップ ページと [パスワードの変更] ページで強力で一意のパスワード候補をユーザーに提供します (ドロップダウンから)。
 
-このポリシーを無効にすると、[サインアップ] ページまたは [パスワードの変更] ページに強力なパスワード候補が表示されなくなりました。
+このポリシーを無効にすると、[サインアップ] ページまたは [パスワードの変更] ページで強力なパスワード候補が表示されなくなります。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -6286,7 +6534,7 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 
   ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
 
-  - GP の一意の名前: PasswordGeneratorEnabled
+  - GP 固有の名前: PasswordGeneratorEnabled
   - GP 名: ユーザーがオンラインでアカウントを作成するたびに強力なパスワード候補を取得できます
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/パスワード マネージャーと保護
   - GP パス (推奨): なし
@@ -6295,7 +6543,7 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
   ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
 
   - パス (必須): SOFTWARE\Policies\Microsoft\Edge
-  - パス (推奨): なし
+  - パス (推奨): N/A
   - 値の名前: PasswordGeneratorEnabled
   - 値の種類: REG_DWORD
 
@@ -6305,6 +6553,13 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 0x00000000
 ```
 
+  #### <a name="mac-information-and-settings"></a>Mac の情報と設定
+  
+  - 基本設定キー名: PasswordGeneratorEnabled
+  - サンプル値:
+``` xml
+<false/>
+```
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -6381,7 +6636,8 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
   
   #### <a name="supported-versions"></a>サポートされているバージョン:
 
-  - Windows での 85 以降
+  - 85 以降の Windows の場合
+  - 93 以降の macOS の場合
 
   #### <a name="description"></a>説明
 
@@ -6440,6 +6696,13 @@ Microsoft Edge が安全でないパスワードを検出する方法の詳細�
 0x00000001
 ```
 
+  #### <a name="mac-information-and-settings"></a>Mac の情報と設定
+  
+  - 基本設定キーの名前: PasswordMonitorAllowed
+  - サンプル値:
+``` xml
+<true/>
+```
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -6723,27 +6986,27 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 
   ### <a name="primarypasswordsetting"></a>PrimaryPasswordSetting
 
-  #### <a name="configures-a-setting-that-asks-users-to-enter-their-device-password-while-using-password-autofill"></a>パスワード自動入力の使用中にユーザーにデバイス パスワードの入力を求める設定を構成します。
+  #### <a name="configures-a-setting-that-asks-users-to-enter-their-device-password-while-using-password-autofill"></a>パスワード自動入力の使用中にユーザーにデバイス パスワードの入力を求める設定を構成する
 
   
   
   #### <a name="supported-versions"></a>サポートされているバージョン:
 
-  - 93 以降の Windows の場合
+  - 93 以降の Windows および macOS の場合
 
   #### <a name="description"></a>説明
 
-  この機能は、保存されたパスワードが Web フォームに自動入力される前にデバイス認証 (ユーザーの ID を確認する方法) を要求することで、ユーザーがオンライン アカウントにプライバシー層を追加するのに役立ちます。 これにより、承認されていないユーザーは、自動入力に保存されたパスワードを使用できません。
+  この機能は、保存されたパスワードが Web フォームに自動入力される前にデバイス認証 (ユーザーの ID を確認する方法) を要求することで、ユーザーがオンライン アカウントにプライバシー レイヤを追加するのに役立ちます。 これにより、承認されていないユーザーは、自動入力に保存されたパスワードを使用できなくなります。
 
 このグループ ポリシーは、ユーザーに対してこの機能を有効にするラジオ ボタン セレクターを構成します。 また、ユーザーが認証を求める頻度を指定できる頻度制御も用意されています。
 
-このポリシーを "自動、このポリシーを無効にする、またはこのポリシーを構成しない" に設定した場合、自動入力には認証フローが適用されません。
+このポリシーを '自動的に、このポリシーを無効にする、またはこのポリシーを構成しない' に設定した場合、オートフィルには認証フローがありません。
 
-このポリシーを [デバイス パスワードを使用する] に設定した場合、ユーザーは自分の ID を証明するために、デバイス パスワード (Windows - PIN、顔認識、指紋、および同等のオプションがある場合は Windows Hello の優先認証モード) を入力して、パスワードが自動入力される必要があります。 また、認証プロンプトの頻度は既定で [常に] に設定されます。ただし、ユーザーは別のオプションに変更することもできます。これは [すべてのブラウズ セッションに 1 回] です。
+このポリシーを 'デバイス パスワードを使用する' に設定した場合、ユーザーは自分の ID を証明するためにデバイス パスワード (または Windows の場合は Windows Hello で認証の優先モード) を入力して ID を証明する必要があり、その後で初めてパスワードが自動的に入力されます。 また、認証プロンプトの頻度は既定で '常に' に設定されます。ただし、ユーザーは別のオプションに変更することもできます。これは 'すべての閲覧セッションあたり 1 回' です。
 
 ポリシー オプション マッピング:
 
-* 自動 (0) = 自動
+* Automatically (0) = 自動
 
 * WithDevicePassword (1) = デバイス パスワード付き
 
@@ -6763,7 +7026,7 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 
   ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
 
-  - GP の一意の名前: PrimaryPasswordSetting
+  - GP 固有の名前: PrimaryPasswordSetting
   - GP 名: パスワード自動入力の使用中にユーザーにデバイス パスワードの入力を求める設定を構成します。
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/パスワード マネージャーと保護
   - GP パス (推奨): なし
@@ -6772,7 +7035,7 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
   ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
 
   - パス (必須): SOFTWARE\Policies\Microsoft\Edge
-  - パス (推奨): なし
+  - パス (推奨): N/A
   - 値の名前: PrimaryPasswordSetting
   - 値の種類: REG_DWORD
 
@@ -6782,6 +7045,13 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 0x00000000
 ```
 
+  #### <a name="mac-information-and-settings"></a>Mac の情報と設定
+  
+  - 基本設定キー名: PrimaryPasswordSetting
+  - サンプル値:
+``` xml
+<integer>0</integer>
+```
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -7131,17 +7401,17 @@ Windows で PostScript に対応していないプリンターに印刷する場
 このポリシーを構成しない場合、またはプリンター リストが空の場合、すべての種類のプリンターを検出できます。
 
 プリンター出力先には、内線プリンターとローカル プリンターが含まれます。 拡張プリンターは、印刷プロバイダーの出力先とも呼ばれ、Microsoft Edge 拡張機能に属するすべての出力先が含まれます。
-ローカル プリンターは、ネイティブの出力先とも呼ばれ、ローカル コンピューターと共有ネットワーク プリンターで利用可能な出力先が含まれます。
+ローカル プリンターはネイティブ印刷先とも呼ばれ、ローカル コンピューターと共有ネットワーク プリンターで使用できる出力先が含まれます。
 
-Microsoft バージョン 93 以降では、このポリシーを 'pdf' に設定すると、右クリックコンテキスト メニューから [Pdf として保存] オプションも無効になります。
+Microsoft バージョン 93 以降では、このポリシーを 'pdf' に設定すると、右クリック コンテキスト メニューから 'Pdf として保存' オプションも無効になります。
 
 ポリシー オプション マッピング:
 
 * privet (privet) = Zeroconf ベース (mDNS + DNS-SD) プロトコルの出力先
 
-* extension (extension) = Extension ベースの出力先
+* extension (extension) = 拡張機能ベースの保存先
 
-* pdf (pdf) = 'PDF として保存' 先。 (93 以降、コンテキスト メニューも無効にします)
+* pdf (pdf) = 'PDF として保存' の保存先。 (93 以降、コンテキスト メニューからも無効にします)
 
 * local (local) = ローカル プリンター出力先
 
@@ -7520,8 +7790,8 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
 
-  - GP の一意の名前: PrintingWebpageLayout
-  - GP 名: 印刷用のレイアウトを設定します。
+  - GP 固有の名前: PrintingWebpageLayout
+  - GP 名: 印刷用のレイアウトを設定する
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/印刷
   - GP パス (推奨): 管理用テンプレート/Microsoft Edge - 既定の設定 (ユーザーが上書き可能)/印刷
   - GP ADMX ファイル名: MSEdge.admx
@@ -7541,7 +7811,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   #### <a name="mac-information-and-settings"></a>Mac の情報と設定
   
-  - 基本設定キー名: PrintingWebpageLayout
+  - 基本設定キーの名前: PrintingWebpageLayout
   - サンプル値:
 ``` xml
 <integer>0</integer>
@@ -7628,9 +7898,9 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   #### <a name="description"></a>説明
 
-  安全でない Web サイトによるよりプライベートなネットワーク エンドポイントへの要求を許可するかどうかを制御します。
+  セキュリティで保護されていない Web サイトが、よりプライベートなネットワーク エンドポイントへの要求を許可するかどうかを制御します。
 
-このポリシーは、CORS-RFC1918 仕様に関連します。 詳細については、https://wicg.github.io/cors-rfc1918 を参照してください。
+このポリシーは、プライベート ネットワーク アクセスの仕様に関連します。 詳細については、https://wicg.github.io/private-network-access/ を参照してください。
 
 次の場合には、ネットワーク エンドポイントは別のエンドポイントよりもプライベートになります。
 1) IP アドレスがローカル ホストで、もう一方がローカル ホストでない場合。
@@ -7705,9 +7975,9 @@ https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts で保護�
 
 ここで指定したパターンで説明されていないソースの場合、グローバル既定値が設定されている場合は [InsecurePrivateNetworkRequestsAllowed](#insecureprivatenetworkrequestsallowed) ポリシーで使用されるか、それ以外の場合はユーザーの個人構成で使用されます。
 
-注: このポリシーは安全でないソースにだけ影響を与えるので、このリストにある https://example.com) などの安全なソースは無視されます。
+このポリシーはセキュリティ保護されていないオリジンにだけ影響を与えることに留意してください (このリストにある https://example.com) などは無視されます。
 
-有効な URL パターンの詳細情報は、[こちら](/DeployEdge/edge-learnmmore-url-list-filter%20format) を参照してください。
+有効な URL パターンの詳細については、https://docs.microsoft.com/en-us/DeployEdge/edge-learnmmore-url-list-filter%20format をご覧ください。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -8081,7 +8351,7 @@ Microsoft Edge がプロキシをバイパスするホストの一覧を定義�
 [ProxySettings](#proxysettings) ポリシーの設定は、以下のフィールドを受け入れます。
   * Microsoft Edge で使用するプロキシ サーバーを指定し、ユーザーがプロキシの設定を変更できないようにする ProxyMode
   * ProxyPacUrl、プロキシ .pac ファイルへの URL
-  * ProxyPacMandatory: ネットワーク スタックが無効または使用できない PAC スクリプトを使用して直接接続に戻るのを防ぐ
+  * ProxyPacMandatory。無効な PAC スクリプトまたは使用できない PAC スクリプトを使用して、ネットワーク スタックが直接接続にフォールバックするのを防ぎます
   * ProxyServer、プロキシ サーバーの URL
   * ProxyBypassList、Microsoft Edge がバイパスするプロキシ ホストの一覧
 
@@ -8090,7 +8360,7 @@ ProxyMode の場合に、以下の値を選択すると:
   * system の場合、システムのプロキシが使用され、その他すべてのフィールドは無視されます。
   * auto_detect の場合、その他すべてのフィールドは無視されます。
   * fixed_server の場合、ProxyServer と ProxyBypassList フィールドが使用されます。
-  * pac_script、ProxyPacUrl、ProxyPacMandatory、ProxyBypassList フィールドが使用されます。
+  * pac_script の場合、ProxyPacUrl と ProxyBypassList フィールドが使用されます。
 
 より詳細な例については、「[https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936)」を参照してください。
 
@@ -8771,7 +9041,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
   [ページのトップへ](#microsoft-edge---policies)
 
-  ## <a name="startup-home-page-and-new-tab-page-policies"></a>スタートアップ &comma; ホーム ページ、新規タブ ページに関するポリシー
+  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>スタートアップ &comma; ホーム ページ、新規タブ ページに関するポリシー
 
   [ページのトップへ](#microsoft-edge---policies)
 
@@ -8787,15 +9057,15 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
   #### <a name="description"></a>説明
 
-  Microsoft Edge の既定のホーム ページを構成します。 ホーム ページを指定した URL に設定したり、新規タブ ページに設定したりすることができます。
+  Microsoft Edge の既定のホーム ページを構成します。 ホーム ページを指定した URL に設定したり、新規のタブ ページに設定したりすることができます。
 
-このポリシーを有効にしている場合、新規タブ ページが常にホーム ページに使用され、ホーム ページの URL の場所は無視されます。
+このポリシーを有効にした場合、[ホーム] ボタンは、ユーザーまたはポリシー [NewTabPageLocation](#newtabpagelocation) で構成された新しいタブ ページに設定され、ポリシー [HomepageLocation](#homepagelocation) で設定された URL は考慮されません。
 
-このポリシーを無効にしている場合、URL が "edge://newtab" に設定されていない限り、新規タブ ページをユーザーのホーム ページにすることはできません。
+このポリシーを無効にした場合、[ホーム] ボタンは、ユーザーが構成したセット URL、または [HomepageLocation](#homepagelocation) で構成された設定 URL です。
 
-構成されていない場合、ユーザーは新規タブ ページを自分のホーム ページにするかどうかを選択することができます。
+このポリシーを構成しない場合、ユーザーは設定 URL と新しいタブ ページのどちらをホーム ページにするかを選択できます。
 
-このポリシーは、Microsoft Active Directory ドメインに参加している Windows インスタンス、デバイス管理用に登録されている Windows 10 Pro または Enterprise インスタンス、もしくは MDM を使用するか MDM を使用してドメインに参加する macOS インスタンスでのみ利用可能です。
+このポリシーは、Microsoft Active Directory ドメインに参加している Windows インスタンスか、デバイス管理用に登録されている Windows 10 Pro または Enterprise インスタンスでのみ利用可能です。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -8857,13 +9127,13 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
 ホーム ページとは、[ホーム] ボタンから開いたページのことです。 起動時に開くページは、[RestoreOnStartup](#restoreonstartup) ポリシーによって制御されます。
 
-ここに URL を設定するか、新規タブ ページを開くホーム ページを設定します。 新規タブ ページのオープンを選択した場合、このポリシーは有効になりません。
+ここで URL を設定するか、ホーム ページを設定して新しいタブ ページ 'edge://newtab' を開くことができます。 既定では、[ホーム] ボタンは新しいタブ ページ (ユーザーまたは ポリシー [NewTabPageLocation](#newtabpagelocation) で構成) を開き、ユーザーはこのポリシーで構成された URL と新しいタブ ページを選択できます。
 
-このポリシーを有効にしている場合、ホーム ページの URL をユーザーが変更することはできませんが、ユーザーは新規タブ ページをホーム ページとして使用することができます。
+このポリシーを有効にした場合、ユーザーはホーム ページの URL を変更できませんが、[ホーム] ボタンの動作を選択して、設定された URL または新しいタブ ページを開くことができます。 設定 URL の使用を強制する場合は [HomepageIsNewTabPage](#homepageisnewtabpage)=Disabled も構成する必要があります。
 
 このポリシーを無効にしているか、構成していない場合、[HomepageIsNewTabPage](#homepageisnewtabpage) ポリシーが有効になっていない限り、ユーザーは自分のホーム ページを選択することができます。
 
-このポリシーは、Microsoft Active Directory ドメインに参加している Windows インスタンス、デバイス管理用に登録されている Windows 10 Pro または Enterprise インスタンス、もしくは MDM を使用するか MDM を使用してドメインに参加する macOS インスタンスでのみ利用可能です。
+このポリシーは、Microsoft Active Directory ドメインに参加している Windows インスタンスか、デバイス管理用に登録されている Windows 10 Pro または Enterprise インスタンスでのみ利用可能です。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -11557,9 +11827,9 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 既定の設定である "未構成" は、現在のメディア自動再生の設定を尊重し、ユーザーが自動再生の設定を構成できるようにします。
 
-"有効" に設定すると、メディア自動再生が "許可" に設定されます。  すべての Web サイトでのメディア自動再生が許可されます。 ユーザーがこのポリシーを上書きすることはできません。
+"有効" に設定すると、メディア自動再生が "許可" に設定されます。  すべての Web サイトでのメディア自動再生が許可されます。 ユーザーはこのポリシーをオーバーライドすることはできません。
 
-[無効] に設定すると、メディアの自動再生が "制限" に設定されます。  これにより、メディアの自動再生が許可されている Web サイトは、メディアエンゲージメントが高く、アクティブな WebRTC ストリームを持つ Web ページに制限されます。 バージョン 92 Microsoft Edge以前は、メディアの自動再生が "ブロック" に設定されました。 ユーザーがこのポリシーを上書きすることはできません。
+"無効" に設定すると、メディア自動再生が "制限" に設定されます。  これにより、メディアの自動再生が許可される Web サイトは、高いメディア エンゲージメントとアクティブな WebRTC ストリームを含む Web ページに制限されます。 Microsoft Edge バージョン 92 より前のバージョンでは、メディアの自動再生が "ブロック" に設定されます。 ユーザーはこのポリシーをオーバーライドすることはできません。
 
 このポリシーを有効にするには、一度タブを閉じてから、もう一度開く必要があります。
 
@@ -11620,13 +11890,13 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   #### <a name="description"></a>説明
 
-  メディアの自動再生が許可されている URL パターンに基づいてサイトの一覧を定義します。
+  メディアの自動再生を許可するサイトの一覧を URL パターンに基づいて定義します。
 
 このポリシーを構成しない場合は [、AutoplayAllowed](#autoplayallowed) ポリシーのグローバル既定値 (設定されている場合) またはユーザーの個人用構成がすべてのサイトで使用されます。
 
-有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。
+有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) を参照してください。
 
-注: * は、このポリシーで受け入れられる値ではありません。
+注: * は、このポリシーで承認された値ではありません。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -11642,7 +11912,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
 
-  - GP の一意の名前: AutoplayAllowlist
+  - GP 固有の名前: AutoplayAllowlist
   - GP 名: 特定のサイトでメディアの自動再生を許可する
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/
   - GP パス (推奨): なし
@@ -11651,7 +11921,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
   ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
 
   - パス (必須): SOFTWARE\Policies\Microsoft\Edge\AutoplayAllowlist
-  - パス (推奨): なし
+  - パス (推奨): N/A
   - 値の名前: 1、2、3、...
   - 値の種類: REG_SZ の一覧
 
@@ -11665,7 +11935,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoplayAllowlist\2 = "[*.]contoso.edu"
 
   #### <a name="mac-information-and-settings"></a>Mac の情報と設定
   
-  - 基本設定キー名: AutoplayAllowlist
+  - 基本設定キーの名前: AutoplayAllowlist
   - サンプル値:
 ``` xml
 <array>
@@ -13047,6 +13317,11 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\7 = "sen
 
 ただし、一部のコンポーネントはこのポリシーの対象外となります。 これには、実行可能なコードが含まれておらず、ブラウザーの動作を大幅に変更しない、セキュリティ上重要なコンポーネントが含まれています。 つまり、このポリシーを無効にしても、"セキュリティ上重要" であると判断された更新プログラムは適用されます。
 
+このようなコンポーネントの例としては、証明書失効リストや、追跡防止リストなどのセキュリティ リストがあります。
+
+このポリシーを無効にすると、Microsoft Edge 開発者が重要なセキュリティ修正プログラムを提供できない可能性があります。そのため、お勧めしません。
+
+
   #### <a name="supported-features"></a>サポートされている機能:
 
   - 必須にすることができるか: はい
@@ -13260,9 +13535,11 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\7 = "sen
 
 このポリシーを "無効" に設定しているか、設定していない場合、Microsoft Edge は、Active Directory アカウントを持ちドメインに参加しているコンピューター上のユーザーを自動的にサインインさせません。
 
-Microsoft Edge 89 以降、[RoamingProfileSupportEnabled](#roamingprofilesupportenabled) ポリシーが無効になっている既存のオンプレミスのプロファイルが存在し、コンピューターがハイブリッドに参加している場合の例 Azure AD アカウントを所有する場合は、オンプレミスのプロファイルを Azure AD プロファイルに自動アップグレードして、Azure AD 同期機能を完全に取得します。
+Microsoft Edge 89 以降、[RoamingProfileSupportEnabled](#roamingprofilesupportenabled) ポリシーが無効になっている既存のオンプレミスのプロファイルが存在し、コンピューターがハイブリッドに参加している場合の例 Azure AD アカウントを所有する場合は、オンプレミスのプロファイルを Azure AD プロファイルに自動アップグレードして、完全な Azure AD 同期機能を取得します。
 
-93 Microsoft Edge以降[、ImplicitSignInEnabled](#implicitsigninenabled)ポリシーが無効になっている場合、このポリシーは無効になります。
+Microsoft Edge 93 以降では、ポリシー [ImplicitSignInEnabled](#implicitsigninenabled) が無効になっている場合、このポリシーは無効になります。
+
+Microsoft Edge 94 以降、ポリシー [OnlyOnPremisesImplicitSigninEnabled](#onlyonpremisesimplicitsigninenabled)が有効で、このポリシーが 'SignInAndMakeDomainAccountNonRemovable' に設定されている場合、ハイブリッド参加環境でも有効になります。 Microsoft Edge は、MSA または AAD アカウントがある場合でも、Active Directory ドメイン アカウントを使用してユーザーに自動的にサインインします。
 
 ポリシー オプション マッピング:
 
@@ -13381,14 +13658,14 @@ Microsoft Edge 89 以降、[RoamingProfileSupportEnabled](#roamingprofilesupport
   
   #### <a name="supported-versions"></a>サポートされているバージョン:
 
-  - Windows での 83 以降
-  - 93 以降の macOS 上
+  - 83 以降の Windows の場合
+  - 93 以降の macOS の場合
 
   #### <a name="description"></a>説明
 
-  このポリシーを 'ShareAllowed' (既定) に設定すると、ユーザーは Microsoft Edge の 設定 と More Menu から共有エクスペリエンスにアクセスして、システム上の他のアプリと共有できます。
+  このポリシーを "ShareAllowed" (既定値) に設定している場合、ユーザーは Microsoft Edge の [設定] と [その他] メニューから共有エクスペリエンスにアクセスして、システム上の別のアプリと共有することができるようになります。
 
-このポリシーを 'ShareDisallowed' に設定すると、ユーザーは共有エクスペリエンスにアクセスできます。 [共有] ボタンがツール バーにある場合には、それも非表示になります。
+このポリシーを "ShareDisallowed" に設定している場合、ユーザーは共有エクスペリエンスにアクセスできなくなります。 [共有] ボタンがツール バーにある場合には、それも非表示になります。
 
 ポリシー オプション マッピング:
 
@@ -13444,7 +13721,7 @@ Microsoft Edge 89 以降、[RoamingProfileSupportEnabled](#roamingprofilesupport
 
   ### <a name="configureviewinfileexplorer"></a>ConfigureViewInFileExplorer
 
-  #### <a name="configure-the-view-in-file-explorer-feature-for-sharepoint-pages-in-microsoft-edge"></a>[エクスプローラーで表示] 機能を構成して、SharePointページのページMicrosoft Edge
+  #### <a name="configure-the-view-in-file-explorer-feature-for-sharepoint-pages-in-microsoft-edge"></a>Microsoft Edge で SharePoint ページの "エクスプローラーで表示" 機能を構成する
 
   
   
@@ -13454,18 +13731,18 @@ Microsoft Edge 89 以降、[RoamingProfileSupportEnabled](#roamingprofilesupport
 
   #### <a name="description"></a>説明
 
-  この設定を使用すると、ファイル を使用している間に、SharePoint Online でファイル管理用のエクスプローラーの表示機能をMicrosoft Edge。
+  この設定を使用すると、Microsoft Edge の使用中に SharePoint Online でファイル管理の "エクスプローラーで表示" 機能を構成できます。
 
-これを許可する特定のドメインを一覧表示し、認証 (rtFa と FedAuth) に必要SharePoint Cookie を一覧表示する必要があります。
+これが許可されている特定のドメインを一覧表示し、SharePoint 認証 (rtFa と FedAuth) に必要な Cookie を一覧表示する必要があります。
 
-このポリシーでは、ドメインの一覧に一致するページで Windows エクスプローラーで WebDAV URL を開き、WebDAV 認証用に指定した Cookie を使用する viewinfileexplorer を含む URL を許可します。
+このポリシーでは、バックグラウンドで viewinfileexplorer: scheme を使用して、ドメインの一覧に一致するページで Windows エクスプローラーで WebDAV URL を開き、WebDAV 認証に指定した Cookie を使用できます。
 
-このポリシーを有効にした場合は、一覧表示するドキュメント ライブラリの [エクスプローラーで表示] 機能SharePoint使用できます。 ドメインと認証 cookie のSharePointする必要があります。 以下の値の例を参照してください。
+このポリシーを有効にした場合は、一覧表示する SharePoint ドキュメント ライブラリの "エクスプローラーで表示" 機能を使用できます。 SharePoint ドメインと認証 Cookie を指定する必要があります。 下の例を参照してください。
 
-このポリシーを無効にした場合、または構成しない場合は、ドキュメント ライブラリで "エクスプローラーで表示" 機能SharePoint使用できません。
+このポリシーを無効にした場合、または構成しない場合は、SharePoint ドキュメント ライブラリで "エクスプローラーで表示" 機能を使用できません。
 
-これは Microsoft Edge で使用可能なオプションですが、[エクスプローラーで表示] オプションを使用するのではなく、SharePoint の外部でファイルとフォルダーを管理する方法として、SharePoint ファイルを同期するか、SharePoint でファイルを移動またはコピーする方法が推奨されます。
-ファイルを同期SharePoint: https://go.microsoft.com/fwlink/p/?linkid=2166983 次の手順でファイルを移動またはコピー SharePoint。https://go.microsoft.com/fwlink/p/?linkid=2167123
+これは Microsoft Edge で使用可能なオプションですが、"エクスプローラーで表示" オプションを使用するのではなく、SharePoint の外部でファイルとフォルダーを管理する方法として、SharePoint ファイルを同期するか、SharePoint でファイルを移動またはコピーする方法が推奨されるということに留意してください。
+SharePoint ファイルの同期: https://go.microsoft.com/fwlink/p/?linkid=2166983 SharePoint でファイルを移動またはコピーする: https://go.microsoft.com/fwlink/p/?linkid=2167123
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -13481,8 +13758,8 @@ Microsoft Edge 89 以降、[RoamingProfileSupportEnabled](#roamingprofilesupport
 
   ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
 
-  - GP の一意の名前: ConfigureViewInFileExplorer
-  - GP 名: [ファイル エクスプローラーで表示] 機能を構成し、SharePointページを構成Microsoft Edge
+  - GP 固有の名前: ConfigureViewInFileExplorer
+  - GP 名: Microsoft Edge の SharePoint ページの ”エクスプローラーで表示” 機能を構成する
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/
   - GP パス (推奨): なし
   - GP ADMX ファイル名: MSEdge.admx
@@ -13490,7 +13767,7 @@ Microsoft Edge 89 以降、[RoamingProfileSupportEnabled](#roamingprofilesupport
   ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
 
   - パス (必須): SOFTWARE\Policies\Microsoft\Edge
-  - パス (推奨): なし
+  - パス (推奨): N/A
   - 値の名前: ConfigureViewInFileExplorer
   - 値の種類: REG_SZ
 
@@ -15483,7 +15760,7 @@ Microsoft は、互換性の理由から特定のドメインで選択するア�
 
   #### <a name="data-type"></a>［データの種類］:
 
-  - 文字列のリスト
+  - Dictionary
 
   #### <a name="windows-information-and-settings"></a>Windows の情報と設定
 
@@ -15497,27 +15774,62 @@ Microsoft は、互換性の理由から特定のドメインで選択するア�
 
   ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
 
-  - パス (必須): SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
-  - パス (推奨): なし
-  - 値の名前: 1、2、3、...
-  - 値の種類: REG_SZ の一覧
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): N/A
+  - 値の名前: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
+  - 値の種類: REG_SZ
 
   ##### <a name="example-value"></a>サンプル値:
 
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {"file_extension": "jnlp", "domains": ["https://contoso.com", "contoso2.com"]}
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"file_extension": "swf", "domains": ["*"]}
-
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings = [
+  {
+    "domains": [
+      "https://contoso.com",
+      "contoso2.com"
+    ],
+    "file_extension": "jnlp"
+  },
+  {
+    "domains": [
+      "*"
+    ],
+    "file_extension": "swf"
+  }
+]
 ```
+
+  ##### <a name="compact-example-value"></a>コンパクト サンプル値:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings = [{"domains": ["https://contoso.com", "contoso2.com"], "file_extension": "jnlp"}, {"domains": ["*"], "file_extension": "swf"}]
+  ```
+  
 
   #### <a name="mac-information-and-settings"></a>Mac の情報と設定
   
   - 基本設定キーの名前: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
   - サンプル値:
 ``` xml
+<key>ExemptDomainFileTypePairsFromFileTypeDownloadWarnings</key>
 <array>
-  <string>{'file_extension': 'jnlp', 'domains': ['https://contoso.com', 'contoso2.com']}</string>
-  <string>{'file_extension': 'swf', 'domains': ['*']}</string>
+  <dict>
+    <key>domains</key>
+    <array>
+      <string>https://contoso.com</string>
+      <string>contoso2.com</string>
+    </array>
+    <key>file_extension</key>
+    <string>jnlp</string>
+  </dict>
+  <dict>
+    <key>domains</key>
+    <array>
+      <string>*</string>
+    </array>
+    <key>file_extension</key>
+    <string>swf</string>
+  </dict>
 </array>
 ```
   
@@ -15620,13 +15932,13 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
   #### <a name="description"></a>説明
 
-  制限付きポートの一覧は、Microsoft Edge。 これらのポートへの接続は失敗します。 このポリシーでは、そのリストをバイパスできます。 一連のポートはコンマ区切りリストとして定義され、発信接続を許可する必要があります。
+  Microsoft Edge に組み込まれている制限付きポートの一覧があります。 これらのポートへの接続は失敗します。 このポリシーでは、そのリストをバイパスできます。 ポートのセットは、送信接続が許可されるコンマ区切りリストとして定義されます。
 
 ポートは、さまざまなネットワークの脆弱性を悪用するベクターとして Microsoft Edge を使用できないように制限されています。 このポリシーを設定すると、ネットワークが危険になることがあります。 このポリシーは、ブロックされたポートで実行されているサービスを標準ポート (たとえば、ポート 80 または 443) に移行する場合のエラー コード "ERR_UNSAFE_PORT" に対する一時的な回避策です。
 
-悪意のある Web サイトではこのポリシーが設定されていること、設定されているポートが簡単に検出でき、その情報を使用して攻撃を仕掛けることができます。
+悪意のある Web サイトは、このポリシーが設定されていることと、どのポートに対して設定されているかを簡単に検出し、その情報を使用して攻撃を標的にすることができます。
 
-このポリシーに記載されている各ポートには、それまでブロック解除できる日付のラベルが付けされます。 この日付以降、ポートは、このポリシーの値で指定されている場合に関係なく制限されます。
+このポリシーに記載されている各ポートには、ブロックを解除できる日付がラベル付けされています。 この日付以降、ポートは、このポリシーの値で指定されている場合に関係なく制限されます。
 
 値を空または未設定のままにすると、すべての制限付きポートがブロックされます。 このポリシーで設定された無効なポートの値は無視され、有効なポートの値が適用されます。
 
@@ -18067,7 +18379,7 @@ Internet Explorer で互換性のない Web サイトに遭遇した場合、ユ
 
   ### <a name="internetexplorerintegrationcloudsitelist"></a>InternetExplorerIntegrationCloudSiteList
 
-  #### <a name="configure-the-enterprise-mode-cloud-site-list"></a>クラウド モード Enterprise一覧を構成する
+  #### <a name="configure-the-enterprise-mode-cloud-site-list"></a>エンタープライズ モード クラウド サイト一覧を構成する
 
   
   
@@ -18077,13 +18389,13 @@ Internet Explorer で互換性のない Web サイトに遭遇した場合、ユ
 
   #### <a name="description"></a>説明
 
-  M365 管理センターの Microsoft Edge サイト リスト設定を使用すると、準拠するクラウドの場所でサイト リストをホストし、組み込みのエクスペリエンスを通じてサイト リストのコンテンツを管理できます。 この設定では、ユーザーに展開する M365 管理センター内のサイト 一覧を指定できます。 ユーザーは、有効な仕事用またはMicrosoft Edgeアカウントを使用してユーザーにサインインする必要があります。 それ以外の場合Microsoft Edgeは、クラウドの場所からサイト リストをダウンロードされません。
+  M365 管理センターの Microsoft Edge サイト一覧設定を使用すると、準拠するクラウドの場所でサイト一覧をホストし、組み込みのエクスペリエンスを通してサイト一覧のコンテンツを管理できます。 この設定では、ユーザーに展開する M365 管理センター内のサイト一覧を指定できます。 ユーザーは、有効な職場または学校アカウントを使用して Microsoft Edge にサインインする必要があります。 それ以外の場合、Microsoft Edge は、クラウドの場所からサイト一覧をダウンロードしません。
 
-この設定は [、InternetExplorerIntegrationLevel 設定が構成されている場合](#internetexplorerintegrationlevel) にのみ適用されます。
+この設定は [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) 設定が構成されている場合にのみ適用されます。
 
-このポリシーを構成する場合、Microsoft Edgeリストを使用します。 有効にすると、M365 管理センターで作成してクラウドに発行したサイト リストの識別子を入力できます。
+このポリシーを構成する場合、Microsoft Edge は指定されたサイト一覧を使用します。 有効にすると、M365 管理センターで作成してクラウドに発行したサイト一覧の識別子を入力できます。
 
-この設定は、Microsoft Edge の[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)ポリシーと Internet Explorer のサイト 一覧設定 ([Enterprise モードの IE Web サイト リストを使用する] よりも優先されます。 このポリシーを無効にするか構成しない場合は、代Microsoft Edge [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)ポリシーを使用します。
+この設定は、Microsoft Edge の [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) ポリシーと Internet Explorer のサイト一覧設定 (エンタープライズ モードの IE Web サイト一覧を使用) よりも優先されます。 このポリシーを無効にした場合、または構成しなかった場合、Microsoft Edge は代わりに [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) ポリシーを使用します。
 
 Internet Explorer モードの詳細については、[https://go.microsoft.com/fwlink/?linkid=2165707](https://go.microsoft.com/fwlink/?linkid=2165707) を参照してください
 
@@ -18101,8 +18413,8 @@ Internet Explorer モードの詳細については、[https://go.microsoft.com/
 
   ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
 
-  - GP 一意の名前: InternetExplorerIntegrationCloudSiteList
-  - GP 名: クラウド モード Enterprise一覧を構成する
+  - GP 固有の名前: InternetExplorerIntegrationCloudSiteList
+  - GP 名: エンタープライズ モード サイト一覧を構成する
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/
   - GP パス (推奨): なし
   - GP ADMX ファイル名: MSEdge.admx
@@ -18110,7 +18422,7 @@ Internet Explorer モードの詳細については、[https://go.microsoft.com/
   ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
 
   - パス (必須): SOFTWARE\Policies\Microsoft\Edge
-  - パス (推奨): なし
+  - パス (推奨): N/A
   - 値名: InternetExplorerIntegrationCloudSiteList
   - 値の種類: REG_SZ
 
@@ -18615,7 +18927,7 @@ Internet Explorer モードの詳細については、[https://go.microsoft.com/
 
   ### <a name="internetexplorerintegrationsitelistrefreshinterval"></a>InternetExplorerIntegrationSiteListRefreshInterval
 
-  #### <a name="configure-how-frequently-the-enterprise-mode-site-list-is-refreshed"></a>[モード サイト一覧Enterprise更新する頻度を構成する
+  #### <a name="configure-how-frequently-the-enterprise-mode-site-list-is-refreshed"></a>エンタープライズ モード サイト一覧を更新する頻度を構成する
 
   
   
@@ -18625,13 +18937,13 @@ Internet Explorer モードの詳細については、[https://go.microsoft.com/
 
   #### <a name="description"></a>説明
 
-  この設定を使用すると、ユーザー設定モード サイト一覧Enterprise更新間隔を指定できます。 更新間隔は分で指定されます。
+  この設定では、エンタープライズ モード サイト一覧のカスタム更新間隔を指定できます。 更新間隔は分単位で指定されます。
 
-この設定は [、InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) または [InternetExplorerIntegrationCloudSiteList](#internetexplorerintegrationcloudsitelist) 設定が構成されている場合にのみ適用されます。
+この設定は [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) または [InternetExplorerIntegrationCloudSiteList](#internetexplorerintegrationcloudsitelist) 設定が構成されている場合にのみ適用されます。
 
-このポリシーを構成すると、Microsoft Edgeの更新間隔を使用して、構成済みの Enterprise サイト 一覧の更新バージョンの取得が試行されます。
+このポリシーを構成した場合、Microsoft Edge は、指定された更新間隔を使用して、構成されたエンタープライズ モード サイト一覧の更新バージョンの取得を試みます。
 
-このポリシーを無効にした場合、または構成しない場合Microsoft Edge既定の更新間隔 (現在は 120 分) が使用されます。
+このポリシーを無効にした場合、または構成しない場合、Microsoft Edge 既定の更新間隔 (現在は 120 分) が使用されます。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -18647,8 +18959,8 @@ Internet Explorer モードの詳細については、[https://go.microsoft.com/
 
   ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
 
-  - GP 一意の名前: InternetExplorerIntegrationSiteListRefreshInterval
-  - GP 名: モード サイト一覧Enterprise更新する頻度を構成する
+  - GP 固有の名前: InternetExplorerIntegrationSiteListRefreshInterval
+  - GP 名: エンタープライズ モード サイト一覧を更新する頻度を構成する
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/
   - GP パス (推奨): なし
   - GP ADMX ファイル名: MSEdge.admx
@@ -18656,7 +18968,7 @@ Internet Explorer モードの詳細については、[https://go.microsoft.com/
   ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
 
   - パス (必須): SOFTWARE\Policies\Microsoft\Edge
-  - パス (推奨): なし
+  - パス (推奨): N/A
   - 値名: InternetExplorerIntegrationSiteListRefreshInterval
   - 値の種類: REG_DWORD
 
@@ -19077,21 +19389,21 @@ Internet Explorer モードの詳細については、[https://go.microsoft.com/
 
   ### <a name="mauenabled"></a>MAUEnabled
 
-  #### <a name="always-use-microsoft-autoupdate-as-the-updater-for-microsoft-edge"></a>Microsoft AutoUpdate を常に更新プログラムとして使用Microsoft Edge
+  #### <a name="always-use-microsoft-autoupdate-as-the-updater-for-microsoft-edge"></a>Microsoft Edge のアップデーターとして Microsoft AutoUpdate を常に使用する
 
   
   
   #### <a name="supported-versions"></a>サポートされているバージョン:
 
-  - 93 以降の macOS 上
+  - 93 以降の macOS の場合
 
   #### <a name="description"></a>説明
 
-  このポリシーでは、ユーザーが使用するアップデータMicrosoft Edgeできます。
+  このポリシーでは、Microsoft Edge が使用するアップデーターを構成できます。
 
-このポリシーを有効にした場合、Microsoft Edgeは Microsoft AutoUpdate によってのみ更新されます。
+このポリシーを有効にした場合、Microsoft Edge は Microsoft AutoUpdate によってのみ更新されます。
 
-このポリシーを無効にした場合、または構成しない場合は、Microsoft Edgeによって更新Microsoft Edge Update。
+このポリシーを無効にした場合、または構成しなかった場合、Microsoft Edge は Microsoft Edge Update によって更新されます。
 
 
   #### <a name="supported-features"></a>サポートされている機能:
@@ -19129,11 +19441,11 @@ Internet Explorer モードの詳細については、[https://go.microsoft.com/
 
   #### <a name="description"></a>説明
 
-  [このプロファイルを使用して Microsoft サイトにシングル サインオンを許可する] オプションを使用すると、MSA 以外のプロファイルでは、コンピューター上に存在する MSA 資格情報を使用して Microsoft サイトのシングル サインオンを使用できます。 このオプションは、MSA 以外のプロファイルの場合のみ、設定 -> プロファイル -> プロファイルの基本設定に切り替えとしてエンド ユーザーに表示されます。
+  [このプロファイルを使用して Microsoft サイトのシングル サインオンを許可する] オプションを選択すると、MSA 以外のプロファイルは、コンピューター上にある MSA 資格情報を使用して Microsoft サイトのシングル サインオンを使用できるようになります。 このオプションは、MSA 以外のプロファイルに対してのみ、[設定] -> [プロファイル] -> [プロファイルの基本設定] のトグルとしてエンドユーザーに表示されます。
 
-このポリシーを無効にすると、MSA 以外のプロファイルでは、コンピューター上に存在する MSA 資格情報を使用して Microsoft サイトにシングル サインオンを使用することはできません。
+このポリシーを無効にすると、MSA 以外のプロファイルでコンピューター上に存在する他の資格情報を使用して Microsoft サイトにシングル サインオンを使用することはできません。
 
-このポリシーを有効にした場合、または構成しない場合、ユーザーは 設定 オプションを使用して、MSA 以外のプロファイルがコンピューター上に存在する MSA 資格情報を使用して Microsoft サイトにシングル サインオンを使用することを確認できます。コンピューター上に MSA アカウントが 1 つしか存在しない場合。
+このポリシーを有効にした場合、または構成しなかった場合、ユーザーは [設定] オプションを使用して、MSA 以外のプロファイルが、コンピューター上にある MSA アカウントが 1 つだけ存在するコンピューター上にある MSA 資格情報を使用して、Microsoft サイトのシングル サインオンを使用できます。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -19149,7 +19461,7 @@ Internet Explorer モードの詳細については、[https://go.microsoft.com/
 
   ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
 
-  - GP 一意の名前: MSAWebSiteSSOUsingThisProfileAllowed
+  - GP 固有の名前: MSAWebSiteSSOUsingThisProfileAllowed
   - GP 名: このプロファイルを使用して Microsoft サイトにシングル サインオンを許可する
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/
   - GP パス (推奨): 管理用テンプレート/Microsoft Edge - 既定の設定 (ユーザーが上書き可能)/
@@ -19159,7 +19471,7 @@ Internet Explorer モードの詳細については、[https://go.microsoft.com/
 
   - パス (必須): SOFTWARE\Policies\Microsoft\Edge
   - パス (推奨): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - 値名: MSAWebSiteSSOUsingThisProfileAllowed
+  - 値の名前: MSAWebSiteSSOUsingThisProfileAllowed
   - 値の種類: REG_DWORD
 
   ##### <a name="example-value"></a>サンプル値:
@@ -20047,7 +20359,7 @@ Microsoft Edge のネイティブ ウィンドウ オクルージョンを有効
 
 Microsoft Edge 89 以降、同期が無効になっている既存のオンプレミス プロファイルが存在し、コンピューターがハイブリッドに参加している場合は、新しい非リムーバブルの Azure AD プロファイルを作成する代わりにオンプレミス プロファイルを Azure AD プロファイルに自動アップグレードして非リムーバブルにします。
 
-93 Microsoft Edge以降[、ImplicitSignInEnabled](#implicitsigninenabled)ポリシーが無効になっている場合、このポリシーは無効になります。
+Microsoft Edge 93 以降では、ポリシー [ImplicitSignInEnabled](#implicitsigninenabled) が無効になっている場合、このポリシーは無効になります。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -20928,13 +21240,13 @@ IE からサイトをロードするために Microsoft Edge を起動すると�
 
   #### <a name="description"></a>説明
 
-  再起動通知期間の終了の対象となるタイム ウィンドウを指定します。
+  再起動通知期間の終了のターゲット時間枠を指定します。
 
-ユーザーには [、RelaunchNotification および RelaunchNotificationPeriod](#relaunchnotification) ポリシー設定に基づいて、ブラウザーの再起動またはデバイスの再起動 [の必要性が](#relaunchnotificationperiod) 通知されます。 [RelaunchNotification](#relaunchnotification)ポリシーが [必須] に設定されている場合、ブラウザーとデバイスは通知期間の終わりに強制的に再起動されます。 この RelaunchWindow ポリシーを使用すると、通知期間の終了を延期して、特定のタイム ウィンドウ内に入ります。
+ユーザーには [RelaunchNotification](#relaunchnotification) ポリシーと [RelaunchNotificationPeriod](#relaunchnotificationperiod) ポリシー設定に基づいて、ブラウザーの再起動またはデバイスの再起動の必要性が通知されます。 [RelaunchNotification](#relaunchnotification) ポリシーが '必須' に設定されている場合、ブラウザーとデバイスは通知期間の終わりに強制的に再起動されます。 この RelaunchWindow ポリシーを使用すると、通知期間の終了を延期して、特定の時間枠内に収めることができます。
 
-このポリシーを構成しない場合、このポリシーの既定のターゲット タイム Microsoft Edge午前 2 時から午前 4 時の間です。 通知の既定のMicrosoft Edgeは、1 日 (つまり、通知期間の終了は延期されません) です。
+このポリシーを構成しない場合、Microsoft Edge 既定のターゲット時間枠は、午前 2 時から午前 4 時の間です。 Microsoft Edge 既定のターゲット時間枠は 1 日です (つまり、通知期間の終了は延期されません)。
 
-注: ポリシーはエントリ内の複数のアイテムを受け入れできますが、最初のアイテムを含むすべてが無視されます。
+注: ポリシーはエントリ内の複数のアイテムを受け入れることができますが、最初のアイテム以外はすべて無視されます。
 警告: このポリシーを設定すると、ソフトウェア更新プログラムの適用が遅れる場合があります。
 
   #### <a name="supported-features"></a>サポートされている機能:
@@ -20951,7 +21263,7 @@ IE からサイトをロードするために Microsoft Edge を起動すると�
 
   ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
 
-  - GP の一意の名前: RelaunchWindow
+  - GP 固有の名前: RelaunchWindow
   - GP 名: 再起動の時間間隔を設定する
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/
   - GP パス (推奨): なし
@@ -20960,7 +21272,7 @@ IE からサイトをロードするために Microsoft Edge を起動すると�
   ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
 
   - パス (必須): SOFTWARE\Policies\Microsoft\Edge
-  - パス (推奨): なし
+  - パス (推奨): N/A
   - 値の名前: RelaunchWindow
   - 値の種類: REG_SZ
 
@@ -21055,7 +21367,7 @@ SOFTWARE\Policies\Microsoft\Edge\RelaunchWindow = {
   ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
 
   - パス (必須): SOFTWARE\Policies\Microsoft\Edge
-  - パス (推奨): なし
+  - パス (推奨): N/A
   - 値の名前: RemoteDebuggingAllowed
   - 値の種類: REG_DWORD
 
@@ -21635,7 +21947,7 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
   #### <a name="description"></a>説明
 
-  バージョン 91 以降の Microsoft Edge から TLS 1.0/1.1 の警告を抑制するサポートが削除され、その後、このポリシーは機能しなくなった。
+  TLS 1.0/1.1 の警告を抑制するサポートは、バージョン 91 以降 Microsoft Edge から削除され、このポリシーは動作を停止します。
 
 TLS の最小限のサポート バージョンを設定します。 このポリシーを構成しない場合、Microsoft Edge では TLS 1.0 と TLS 1.1 にエラーが表示されますが、ユーザーはこれを回避することができます。
 
@@ -21826,65 +22138,6 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
   - サンプル値:
 ``` xml
 <true/>
-```
-  
-
-  [ページのトップへ](#microsoft-edge---policies)
-
-  ### <a name="screencaptureallowed"></a>ScreenCaptureAllowed
-
-  #### <a name="allow-or-deny-screen-capture"></a>画面キャプチャを許可または拒否する
-
-  
-  
-  #### <a name="supported-versions"></a>サポートされているバージョン:
-
-  - Windows と macOS での 83 以降
-
-  #### <a name="description"></a>説明
-
-  このポリシーを有効にしているか、構成していない場合、Web ページは画面キャプチャに画面の共有 API (たとえば、getDisplayMedia() や デスクトップ キャプチャ拡張 API) を使用することができます。
-このポリシーを無効にしている場合、画面の共有 API の呼び出しは失敗します。 たとえば、Web ベースのオンライン会議を使用している場合、ビデオや画面共有は機能しません。
-
-  #### <a name="supported-features"></a>サポートされている機能:
-
-  - 必須にすることができるか: はい
-  - 推奨にすることができるか: いいえ
-  - 動的なポリシーの更新: はい
-
-  #### <a name="data-type"></a>［データの種類］:
-
-  - ブール値
-
-  #### <a name="windows-information-and-settings"></a>Windows の情報と設定
-
-  ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
-
-  - GP 固有の名前: ScreenCaptureAllowed
-  - GP 名: 画面キャプチャを許可または拒否する
-  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
-  - GP パス (推奨): なし
-  - GP ADMX ファイル名: MSEdge.admx
-
-  ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
-
-  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
-  - パス (推奨): なし
-  - 値の名前: ScreenCaptureAllowed
-  - 値の種類: REG_DWORD
-
-  ##### <a name="example-value"></a>サンプル値:
-
-```
-0x00000000
-```
-
-  #### <a name="mac-information-and-settings"></a>Mac の情報と設定
-  
-  - 基本設定キーの名前: ScreenCaptureAllowed
-  - サンプル値:
-``` xml
-<false/>
 ```
   
 
@@ -22496,11 +22749,11 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   非クロスオリジン分離コンテキストで SharedArrayBuffers を使用できるかどうかを指定します。  SharedArrayBuffer はバイナリ データ バッファーの 1 つで、共有メモリ上のビューを作成するために使用できます。  SharedArrayBuffers には、複数の一般的な CPU にメモリ アクセスの脆弱性があります。
 
-このポリシーを有効にした場合、サイトは制限なしで SharedArrayBuffers を使用できます。
+このポリシーを有効にした場合、サイトは制限なしに SharedArrayBuffers を使用できます。
 
-このポリシーを無効にするか構成しない場合、サイトはクロスオリジンが分離されている場合にのみ SharedArrayBuffers を使用できます。
+このポリシーを無効にした場合、または構成しなかった場合、サイトで SharedArrayBuffers を使用できるのは、クロスオリジンが分離されている場合のみです。
 
-Web 互換性上の理由から、Microsoft Edge 91 以降の SharedArrayBuffers を使用する場合、Microsoft Edge ではクロスオリジン分離が必要になります。
+Web 互換性上の理由から、Microsoft Edge 91 以降、SharedArrayBuffers を使用する場合、Microsoft Edge ではクロスオリジン分離が必要になります。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -23978,9 +24231,9 @@ Microsoft Edge がバックグラウンドにあるタブを 5 分以上フリ�
 
   このポリシーを構成して、旅行支援を許可/禁止します。
 
-旅行支援機能は、ブラウザー内で Travel 関連タスクを実行するユーザーに役立つ関連性の高い情報を提供します。 この機能は、Microsoft が収集した複数のソースから、信頼できる検証済み候補/情報をユーザーに提供します。
+旅行支援機能は、ブラウザー内で旅行関連タスクを実行するユーザーに役立つ関連性の高い情報を提供します。 この機能は、Microsoft が収集した複数のソースから、信頼できる検証済みの候補/情報をユーザーに提供します。
 
-この設定を有効または構成しない場合、ユーザーが旅行関連のタスクを実行するときに、ユーザーに対して旅行支援が有効になります。
+この設定を有効にした場合、または構成しなかった場合、ユーザーが旅行関連のタスクを実行するときに、旅行支援が有効になります。
 
 この設定を無効にすると、旅行支援は無効になり、ユーザーは旅行関連の推奨事項を表示できなくなります。
 
@@ -24310,17 +24563,17 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
   ### <a name="useragentclienthintsenabled"></a>UserAgentClientHintsEnabled
 
-  #### <a name="enable-the-user-agent-client-hints-feature-deprecated"></a>ユーザー エージェント クライアント ヒント機能を有効にする (非推奨)
+  #### <a name="enable-the-user-agent-client-hints-feature-obsolete"></a>ユーザー エージェント クライアント ヒント機能を有効にする
 
-  >非推奨: このポリシーは推奨されなくなっています。 現在はサポートされていますが、将来のリリースで廃止されます。
   
+  >不使用: このポリシーは廃止されており、Microsoft Edge 93 以降は機能しません。
   #### <a name="supported-versions"></a>サポートされているバージョン:
 
-  - Windows と macOS での 86 以降
+  - 86 以降 93 以前の Windows および macOS の場合
 
   #### <a name="description"></a>説明
 
-  このポリシーは、企業の Web コンテンツが ユーザーエージェント クライアントのヒント機能と互換していないことが判明した場合に、Web コンテンツの更新に時間を割くための短期のメカニズムとしてのみ機能することを目的としているため、推奨されていません。 Microsoft Edge バージョン 94 では機能しません。
+  このポリシーは、短期的な適応のみを目的としていたため、廃止されています。 Microsoft Edge バージョン 93 では機能しません。
 
 ユーザー エージェント クライアント ヒント機能を有効にすると、ユーザー ブラウザー (ブラウザーのバージョンなど) と環境 (システム アーキテクチャなど) に関する情報を提供する細かな要求ヘッダーが送信されます。
 
@@ -24343,7 +24596,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
   ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
 
   - GP 固有の名前: UserAgentClientHintsEnabled
-  - GP 名: ユーザー エージェント クライアント ヒント機能を有効にする (非推奨)
+  - GP 名: ユーザー エージェント クライアント ヒント機能を有効にする (廃止)
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/
   - GP パス (推奨): なし
   - GP ADMX ファイル名: MSEdge.admx
@@ -25314,6 +25567,64 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 ``` xml
 <string>default</string>
 ```
+  
+
+  [ページのトップへ](#microsoft-edge---policies)
+
+  ### <a name="webrtcrespectosroutingtableenabled"></a>WebRtcRespectOsRoutingTableEnabled
+
+  #### <a name="enable-support-for-windows-os-routing-table-rules-when-making-peer-to-peer-connections-via-webrtc"></a>WebRTC 経由でピア ツー ピア接続を Windows OS ルーティング テーブル ルールのサポートを有効にする
+
+  
+  
+  #### <a name="supported-versions"></a>サポートされているバージョン:
+
+  - 94 以降の Windows の場合
+
+  #### <a name="description"></a>説明
+
+  ピア ツー ピア接続を行う際 Windows OS ルーティング テーブル ルールを WebRTC が尊重するかどうかを制御します。
+
+このポリシーを無効にした場合、または構成しない場合、WebRTC はルーティング テーブルを考慮し、使用可能なネットワーク上でピア ツー ピア接続を行う可能性があります。
+
+このポリシーを有効にした場合、WebRTC はルーティング テーブルに示されているリモート アドレスの指定されたネットワーク インターフェイスを使用してピア ツー ピア接続を行います。
+
+このポリシーは Windows でのみ使用できます。
+
+
+  #### <a name="supported-features"></a>サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### <a name="data-type"></a>［データの種類］:
+
+  - ブール値
+
+  #### <a name="windows-information-and-settings"></a>Windows の情報と設定
+
+  ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
+
+  - GP 固有の名前: WebRtcRespectOsRoutingTableEnabled
+  - GP 名: WebRTC 経由でピア ツー ピア接続を行うときに Windows OS ルーティング テーブル ルールのサポートを有効にする
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): N/A
+  - 値の名前: WebRtcRespectOsRoutingTableEnabled
+  - 値の種類: REG_DWORD
+
+  ##### <a name="example-value"></a>サンプル値:
+
+```
+0x00000001
+```
+
   
 
   [ページのトップへ](#microsoft-edge---policies)
