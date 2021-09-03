@@ -3,19 +3,19 @@ title: Stable チャネルに関する Microsoft Edge リリース ノート
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 08/19/2021
+ms.date: 09/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Stable チャネルに関する Microsoft Edge リリース ノート
-ms.openlocfilehash: 3c21b06358d4aa563b67027d65a1aa5fec5f5dfc
-ms.sourcegitcommit: 51a858ee4b1f837df85dbcca335f4abebae7771b
+ms.openlocfilehash: e759a78587c594460b49d6858f127bcac90ff8d3
+ms.sourcegitcommit: a74b88408fcf820706c1ca2fd19d7ef83a1ddd76
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2021
-ms.locfileid: "11926013"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "11938209"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Microsoft Edge Stable チャネルのリリース ノート
 
@@ -30,6 +30,34 @@ ms.locfileid: "11926013"
 > 安定チャネルの場合、更新は 1 日以上かけて段階的に公開されます。 詳細については、「[Microsoft Edge 更新プログラムの段階的なロールアウト](microsoft-edge-update-progressive-rollout.md)」を参照してください。
 >
 > Microsoft Edge Web プラットフォームは、ユーザー エクスペリエンス、セキュリティ、およびプライバシーを向上させるために絶えず進化しています。 詳細については、「[Microsoft Edge のサイトの互換性に影響する変更点](/microsoft-edge/web-platform/site-impacting-changes)」を参照してください。
+
+## <a name="version-93096138-september-02"></a>バージョン 93.0.961.38: 9 月 2 日
+
+安定したチャネルのセキュリティ更新プログラムは[こちら](/deployedge/microsoft-edge-relnotes-security#september-02-2021)に記載されています。
+
+### <a name="feature-updates"></a>機能更新プログラム
+
+- **Microsoft Edge での初期ユーザー設定。**  Microsoft Edge は、限られた数の初期ユーザー設定 (以前はマスター ユーザー設定) をサポートしています。 IT 管理者は、ユーザーがブラウザーを初めて実行する前に、これらの設定を既定として展開できます。 追加情報はこちら: [初回実行時のユーザー設定を使用して Microsoft Edge を構成する](/deployedge/initial-preferences-support-on-microsoft-edge-browser)。
+
+- **Microsoft Edge の IE モードでは、"マージなし" 動作がサポートされます。**  エンドユーザーの場合、IE モード アプリケーションで新しいブラウザー ウィンドウを起動すると、IE11 のマージなし動作と同様に別のセッションになります。 セッション共有を "マージなし" として回避する必要があるサイトを構成するには、サイト一覧を調整する必要があります。 Microsoft Edge のウィンドウごとに、指定された "マージなし" サイトの 1 つである場合、そのウィンドウ内で IE モード タブに初めてアクセスした場合、少なくともそのウィンドウで最後の IE モード タブが閉じるまで、そのウィンドウは他のすべての Microsoft Edge ウィンドウとは異なる "マージなし" IE セッションにロックされます。 これは、以前の動作に従って、ユーザーがマージなしを使用して IE を起動し、他のメカニズムを介してマージなしを使用することなく Microsoft Edge を起動する可能性があります。  追加情報はこちら: [IE モードのトラブルシューティングと FAQ |Microsoft Docs](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--nomerge--option-that-was-supported-in-internet-explorer-11-)
+
+- **暗黙的なサインインを停止する新しいポリシー。**  [ImplicitSignInEnabled](/deployedge/microsoft-edge-policies#implicitsigninenabled) ポリシーを使用すると、システム管理者は、Microsoft Edge ブラウザーで暗黙的なサインインを無効にすることができます。
+
+- **ClickOnce および DirectInvoke プロンプトをバイパスするポリシー。** ポリシーを更新して、ClickOnce のプロンプトと DirectInvoke のアプリが指定されたドメインから指定されたファイルの種類にバイパスできるようになりました。 これを行うには、次の手順を実行します。
+
+  - [ClickOnceEnabled](/deployedge/microsoft-edge-policies#clickonceenabled) または [DirectInvokeEnabled](/deployedge/microsoft-edge-policies#directinvokeenabled) を有効にする
+  - [AutoOpenFileTypes](/deployedge/microsoft-edge-policies#autoopenfiletypes) ポリシーを有効にし、DirectInvoke と ClickOnce を無効にする必要がある特定のファイルの種類の一覧を設定する
+  - [AutoOpenAllowedForURLs](/deployedge/microsoft-edge-policies#autoopenallowedforurls) ポリシーを有効にし、ClickOnce と DirectInvoke を無効にする特定のドメインの一覧を設定する
+
+  注: AutoOpenAllowedForURLs は、AutoOpenFileTypes 用のサポート ポリシーです。 AutoOpenAllowedForURLs が設定されておらず、AutoOpenFileTypes が設定されている場合、一覧表示されているファイルの種類は、すべての URL で自動的に開きます。
+
+- **タブ グループ。**  タブをユーザー定義グループに分類し、複数のワークストリーム間でタブを効率的に検索し、切り替え、管理するのに役立つタブのグループ化を有効にします。  
+
+- **垂直タブを使用している間は、タイトル バーを非表示にします。**  垂直タブでブラウザーのタイトル バーを非表示にすることで、余分な数ピクセルを取得します。 これで、edge://settings/appearance に移動し、[ツールバーのカスタマイズ] セクションの下にある 垂直タブ モードでタイトル バーを非表示にするオプションを選択します。
+
+- **ホバー ツールバーからのピクチャ イン ピクチャ (PiP) のビデオ。**  サポートされているビデオにカーソルを合わせると、ツール バーが表示され、そのビデオを PiP ウィンドウで表示できます。  注意: これは現在、macOS の Microsoft Edge ユーザー向けに使用できます。  
+
+- **TLS での 3DES の削除。 暗号スイート TLS_RSA_WITH_3DES_EDE_CBC_SHA のサポートは削除されます。** この変更は、Microsoft Edge に基づく Chromium プロジェクトで発生します。 詳細については、「[Chrome プラットフォームの状態エントリ](https://chromestatus.com/feature/6678134168485888)」に移動します。 さらに、Microsoft Edge バージョン 93 では、[TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled) ポリシーを使用すると、旧型のサーバーとの互換性を維持する必要があるシナリオをサポートできます。 この互換性ポリシーは廃止され、Microsoft Edge バージョン 95 で機能を停止します。 その前に、影響を受けるサーバーを更新してください。
 
 ## <a name="version-92090284-august-26"></a>バージョン 92.0.902.84: 8 月 26 日
 
