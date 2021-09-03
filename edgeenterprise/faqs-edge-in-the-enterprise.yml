@@ -11,12 +11,12 @@ metadata:
   ms.localizationpriority: medium
   ms.collection: M365-modern-desktop
   description: エンタープライズでのアプリケーションの展開に関するよく寄せられるMicrosoft Edge質問 (FAQ)
-  ms.openlocfilehash: edf0ec730ece83126619519cdd45d20f3271dd99845f4786f29dde32befec2b6
-  ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+  ms.openlocfilehash: d4d707533c8733059e8fadc8fe8de9a85b8dc64d
+  ms.sourcegitcommit: 0b23434b719dbeb302edf200a47550ee7b62a86a
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 08/05/2021
-  ms.locfileid: "11725960"
+  ms.lasthandoff: 09/03/2021
+  ms.locfileid: "11938834"
 title: 企業のユーザーに関するよくある質問 (FAQ) Microsoft Edge質問
 summary: >
   > [!NOTE]
@@ -28,7 +28,7 @@ sections:
   - question: 所有している Microsoft Edge のバージョンを確認する方法を教えてください。
     answer: >
       図形の右上隅で、省略Microsoft Edgeアイコン (**...)** を選択し、[省略記号] を選択**設定。** **[Microsoft Edge について]** を選択して、Microsoft Edge のバージョンを確認します。
-  - question: Internet Explore 11 について
+  - question: 11 Internet Explorerは?
     answer: >
       Internet Explorer 11 デスクトップ アプリケーションは廃止され、2022 年 6 月 15 日にサポートが終了します (スコープ内の一覧については [、FAQ](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)を参照してください)。 現在使用しているものと同じ IE11 アプリとサイトを、Internet Explorer モードの Microsoft Edge で開くことができます。 [こちら](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)をご覧ください。
   - question: Microsoft Edge (Chromium ベース) では、ActiveX コントロールや、Silverlight や Java などの BHO をサポートしていますか。
