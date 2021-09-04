@@ -1,9 +1,9 @@
 ---
 title: Microsoft Edge ブラウザー ポリシーに関するドキュメント
 ms.author: stmoody
-author: AndreaLBarr
+author: dan-wesley
 manager: tahills
-ms.date: 08/31/2021
+ms.date: 08/30/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
-ms.openlocfilehash: 9b71e641af62b0ad56e4f2e9bf52a061dafa52a3
-ms.sourcegitcommit: 5aeaeb85eba7572d1871ad55568a8bea4d4a4e5f
+ms.openlocfilehash: cd59eca6d07284c61a0c61537f45d36771d133f3
+ms.sourcegitcommit: e83b355a9d95f2c8ec858b05e5b7cf8837f8a82b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "11934576"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "11936565"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - ポリシー
 
@@ -254,7 +254,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[SmartScreenEnabled](#smartscreenenabled)|Microsoft Defender SmartScreen を構成する|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|信頼のおけるソースからのダウンロードに対して Microsoft Defender SmartScreen のチェックを強制する|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Microsoft Defender SmartScreen を構成して望ましくない可能性のあるアプリをブロックする|
-### [*<a name="startup-home-page-and-new-tab-page"></a>スタートアップ &comma; ホーム ページ、新規タブ ページ*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startupcomma-home-page-and-new-tab-page"></a>スタートアップ &comma; ホーム ページ、新規タブ ページ*](#startup-home-page-and-new-tab-page-policies)
 
 |ポリシー名|キャプション|
 |-|-|
@@ -9041,7 +9041,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
   [ページのトップへ](#microsoft-edge---policies)
 
-  ## <a name="startup-home-page-and-new-tab-page-policies"></a>スタートアップ &comma; ホーム ページ、新規タブ ページに関するポリシー
+  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>スタートアップ &comma; ホーム ページ、新規タブ ページに関するポリシー
 
   [ページのトップへ](#microsoft-edge---policies)
 
@@ -21244,7 +21244,7 @@ IE からサイトをロードするために Microsoft Edge を起動すると�
 
 ユーザーには [RelaunchNotification](#relaunchnotification) ポリシーと [RelaunchNotificationPeriod](#relaunchnotificationperiod) ポリシー設定に基づいて、ブラウザーの再起動またはデバイスの再起動の必要性が通知されます。 [RelaunchNotification](#relaunchnotification) ポリシーが '必須' に設定されている場合、ブラウザーとデバイスは通知期間の終わりに強制的に再起動されます。 この RelaunchWindow ポリシーを使用すると、通知期間の終了を延期して、特定の時間枠内に収めることができます。
 
-このポリシーを構成しない場合、Microsoft Edge 既定のターゲット時間枠は、午前 2 時から午前 4 時の間です。 Microsoft Edge 既定のターゲット時間枠は 1 日です (つまり、通知期間の終了は延期されません)。
+このポリシーを構成しない場合、既定のターゲット時間枠は 1 日です (つまり、通知期間の終了は延期されません)。
 
 注: ポリシーはエントリ内の複数のアイテムを受け入れることができますが、最初のアイテム以外はすべて無視されます。
 警告: このポリシーを設定すると、ソフトウェア更新プログラムの適用が遅れる場合があります。
