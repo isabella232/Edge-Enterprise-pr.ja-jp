@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge ユーザー データ ディレクトリ変数を作成する方法について説明します
-ms.openlocfilehash: e314f23334390fa45efa58daefac0730d8b849732fde75aeacffe4a486c50762
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 2e85e8eebac4a636d90fd0b5da7520c9a86a2de0
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11724270"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979876"
 ---
 # <a name="create-microsoft-edge-user-data-directory-variables"></a>Microsoft Edge ユーザー データ ディレクトリ変数を作成する
 

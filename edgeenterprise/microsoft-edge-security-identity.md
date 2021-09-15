@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge の ID サポートと構成
-ms.openlocfilehash: 5829082ba52b026acd53164cce82ed04d843d53c10aaff1e1e9552cac82f06f9
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 18b82c3f0c4af0e383dd50266c3d9184c76b23af
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11727120"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979646"
 ---
 # <a name="microsoft-edge-identity-support-and-configuration"></a>Microsoft Edge の ID サポートと構成
 

@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 用 Windows 更新プログラム。
-ms.openlocfilehash: a9751b45a76ec52aca034e62b06cec4e7d7f5e30abafdfebd10595a0c50e6e32
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: b99d3d7ed048cb829fd2328be9e4e7376334652c
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11727610"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979639"
 ---
 # <a name="windows-updates-to-support-the-next-version-of-microsoft-edge"></a>次のバージョンの Microsoft Edge をサポートする Windows 更新プログラム
 

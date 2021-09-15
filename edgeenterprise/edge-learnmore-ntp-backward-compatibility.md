@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: '[エンタープライズ新規] タブページの下位互換性'
-ms.openlocfilehash: 9643a7009fdc60859efaadc2adff6e47ce0918567195e9745a4a93c151aefc80
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: e2534f9df82aa81843d7cd292ada99a4c7574a3c
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11724222"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979756"
 ---
 # <a name="backwards-compatibility-for-the-enterprise-new-tab-page"></a>[エンタープライズ新規] タブページの下位互換性
 

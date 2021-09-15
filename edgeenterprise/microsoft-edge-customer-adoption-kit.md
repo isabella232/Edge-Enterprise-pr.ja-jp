@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge の顧客導入資料
-ms.openlocfilehash: e3af7fb7c6ba3cb1b376e6e7d69c30ac10b897ffb8edda6e7f8ce90fa08519e6
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: d3c3fc426cf67e054aa37cabb3ac1ca42c1ab5d9
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11725812"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11980327"
 ---
 # <a name="customer-adoption-materials-for-microsoft-edge"></a>Microsoft Edge のための顧客導入資料
 

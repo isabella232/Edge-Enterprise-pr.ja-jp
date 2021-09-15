@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: ユーザー環境内の Microsoft Edge
-ms.openlocfilehash: 2bcf47330da87775204db700c3f2eb5fe77c10326e6fad89b85ddf546a3002c7
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 2381380cb399f6a1fbb5efa9378ffeba20fa774f
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726610"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979663"
 ---
 # <a name="microsoft-edge-in-your-environment"></a>ユーザー環境内の Microsoft Edge
 

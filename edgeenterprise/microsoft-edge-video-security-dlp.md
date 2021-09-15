@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge とデータ損失防止 (DLP)
-ms.openlocfilehash: 95c5fe9470e4cb04c76691b2603192326297a811db36d609a97d8f02652ccd0b
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 53804ac83d3ce9d26eb9410fd0ba06f3c620871f
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11727576"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979654"
 ---
 # <a name="video-microsoft-edge-and-data-loss-prevention-dlp"></a>ビデオ: Microsoft Edge とデータ損失防止 (DLP)
 

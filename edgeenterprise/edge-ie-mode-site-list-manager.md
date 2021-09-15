@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 'Microsoft Edge で Enterprise Site List Manager を有効にして使用する '
-ms.openlocfilehash: 01922c63164fbbca99edccc8d0c3e5e61fcb4695a528837f16b9b481ca696bf5
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: add635a17d05cb4be94e710fd99ab480b992a579
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726090"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979916"
 ---
 # <a name="enterprise-site-list-manager-in-microsoft-edge"></a>Microsoft Edge の Enterprise Site List Manager
 

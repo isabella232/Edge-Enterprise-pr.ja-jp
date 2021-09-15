@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Enterprise Site Discovery を使用して IE モードを準備する
-ms.openlocfilehash: c3f8cbd18c4353bfa32e379c26038ced432b6ac5bbdbb0ed1579add7ad0b74da
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: bbcf829e8c2504286ea68df673dabd9b296887c9
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11724540"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979917"
 ---
 # <a name="enterprise-site-discovery-step-by-step-guide"></a>Enterprise Site Discovery ステップ バイ ステップ ガイド
 

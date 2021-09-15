@@ -1,7 +1,7 @@
 ---
 title: パスワード モニターがユーザーに対して自動的に有効にされます
 ms.author: supalsul
-author:
+author: AndreLBarr
 manager: tulasim
 ms.date: 07/12/2021
 audience: ITPro
@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: パスワード モニターがユーザーに対して自動的に有効にされます
-ms.openlocfilehash: 19008283cb687cb903da63d74277cc0b326b91ad14e48d1e14861d765d61479a
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: bd1fe390b972c66cd9b4c20ab3a9fabde76c7e03
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11727098"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11980337"
 ---
 # <a name="password-monitor-auto-enabled-for-users"></a>パスワード モニターがユーザーに対して自動的に有効にされます
 
