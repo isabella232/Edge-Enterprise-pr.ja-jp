@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 最初の基本設定は、Microsoft Edgeでサポートされます。
-ms.openlocfilehash: 39af88d21107ad548166c749c3ba765754270b48
-ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
+ms.openlocfilehash: 7a497fd2f3305b0c027a396936ef86bacbcb5b20
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "11882263"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979817"
 ---
 # <a name="configure-microsoft-edge-using-initial-preferences-settings-for-the-first-run"></a>初回実行時のユーザー設定を使用して Microsoft Edge を構成する
 
@@ -52,7 +52,7 @@ Intial Preferences 設定の例としては、既定のホームページの初�
 
 ## <a name="1-download-an-example-initial_preferences-file"></a>1: ファイルの例をinitial_preferencesする
 
-開始するには、この場所にあるファイル*形式のinitial_preferences*をダウンロードし、Microsoft Edge Enterprise手順[](https://www.microsoft.com/edge/business/download)**** に従います。
+開始するには、リンク先のランディング ページから["Policy" ファイルMicrosoft Edge Enterpriseダウンロードします](https://www.microsoft.com/edge/business/download)。 ファイルを抽出し、フォルダー `initial_preferences` 内でファイルを開 `examples` きます。
 
 ## <a name="2-customize-and-validate-the-initial_preferences-file"></a>2: ファイルのカスタマイズとinitial_preferencesする
 
