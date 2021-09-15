@@ -11,12 +11,12 @@ ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge アップデーターでサポートされているすべてのポリシーに関するドキュメント
-ms.openlocfilehash: 7b6043ecb96cb30ee9b51fc9966f925b223e72f29ac325ad06208d743f60e18f
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 9c7eca4d5bdd7c87bea141a422dce3b17f22067c
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11724870"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11980077"
 ---
 # <a name="microsoft-edge---update-policies"></a>Microsoft Edge - 更新ポリシー
 
@@ -400,7 +400,7 @@ Microsoft Edge の更新プログラムで、Microsoft Edge のインストー�
 ```
 [ページのトップへ](#microsoft-edge---update-policies)
 
-### <a name="UpdaterExperimentationAndConfigurationServiceControl"></a>UpdaterExperimentationAndConfigurationServiceControl
+### <a name="updaterexperimentationandconfigurationservicecontrol"></a>UpdaterExperimentationAndConfigurationServiceControl
 #### <a name="retrieve-configurations-and-experiments"></a>構成と実験の取得
 >Microsoft Edge Update 1.3.145.1 以降
 

@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Google Chrome から Microsoft Edge ポリシーへのマッピング
-ms.openlocfilehash: a0e0678d1a658804099e7106164806dbea61187dad87b13d5cd9b4831d2b71fc
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 9c422c66df9f2892e54ad9d935f4d6de6f88eae3
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11724050"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979927"
 ---
 # <a name="google-chrome-to-microsoft-edge-policy-mapping"></a>Google Chrome から Microsoft Edge ポリシーへのマッピング
 

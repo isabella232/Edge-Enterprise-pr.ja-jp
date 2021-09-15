@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge エンドポイントの許可リスト
-ms.openlocfilehash: e7d7a527356452805e279775fc03a9e1a34baf5a301c34f2c9ed0301e05c6201
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 735e18e63095405dad4fdd51d51654956b564ca7
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11727180"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11980457"
 ---
 # <a name="allow-list-for-microsoft-edge-endpoints"></a>Microsoft Edge エンドポイントの許可リスト
 

@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge を使用して、望ましくない可能性のあるアプリケーションから保護する
-ms.openlocfilehash: 677ca79b66f23e166461340876e9ce9da64c6cdd814be9eacb613c053e4ec858
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 68cd87e85408933212c4b25baa01a9ff8d994089
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11724892"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11980437"
 ---
 # <a name="protect-against-potentially-unwanted-applications-puas"></a>望ましくない可能性のあるアプリケーションから保護する (PUA)
 

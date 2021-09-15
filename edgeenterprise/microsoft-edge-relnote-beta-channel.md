@@ -3,19 +3,19 @@ title: Beta チャネルに関する Microsoft Edge のリリース ノート
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/02/2021
+ms.date: 09/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Beta チャネルに関する Microsoft Edge のリリース ノート
-ms.openlocfilehash: 993e91faeadf9e734af421bf46c4fca9953fa320
-ms.sourcegitcommit: 9f7324ff156de0a0c75e2217104e543f182649f2
+ms.openlocfilehash: d455b2ccab734ba8792754b81994ac381b974f73
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "11938308"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11980227"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Microsoft Edge Beta チャネルのリリースノート
 
@@ -23,6 +23,10 @@ ms.locfileid: "11938308"
 
 > [!NOTE]
 > Microsoft Edge Web プラットフォームは、ユーザー エクスペリエンス、セキュリティ、およびプライバシーを向上させるために絶えず進化しています。 詳細については、「[Microsoft Edge のサイトの互換性に影響する変更点](/microsoft-edge/web-platform/site-impacting-changes)」を参照してください。
+
+## <a name="version-94099214-september-7"></a>バージョン 94.0.992.14: 9 月 7 日
+
+さまざまなバグとパフォーマンスの問題を修正しました。
 
 ## <a name="version-9409929-september-2"></a>バージョン 94.0.992.9: 9 月 2 日
 
@@ -34,9 +38,9 @@ ms.locfileid: "11938308"
 
 - **MHTML ファイルを開く既定の動作の改善。**  MHTML ファイルが Microsoft Edge から保存されていない限り (Microsoft Edge の [名前を付けて保存] または [ページに名前を付けて保存] オプションを使用して) IE モードが有効になっている場合、MHTML ファイルは IE モードで開き続けます。 ファイルがファイルから保存されている場合Microsoft Edge、ファイルは新しいファイルで開Microsoft Edge。  この変更により、MHTML ファイルを IE モードで開く際に発生したレンダリングの問題が修正Microsoft Edge。
 
-- **プライベート ネットワーク要求をセキュリティで保護されたコンテキストに制限します。** インターネット上のページからローカル (イントラネット) ネットワーク上のリソースにアクセスするには、それらのページを HTTPS 経由で配信する必要があります。 この変更は、プロジェクトのChromiumプロジェクトでMicrosoft Edge発生します。 詳細については、「Chrome プラットフォームの状態」 [エントリに移動します](https://chromestatus.com/feature/5436853517811712)。 セキュリティ保護されていないページとの互換性を維持する必要があるシナリオをサポートするには [、InsecurePrivateNetworkRequestAllowed](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) と [InsecurePrivateNetworkRequestAllowedForUrls](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls)の 2 つの互換性ポリシーを使用できます。
+- **プライベート ネットワーク要求をセキュリティで保護されたコンテキストに制限します。** インターネット上のページからローカル (イントラネット) ネットワーク上のリソースにアクセスするには、それらのページを HTTPS 経由で配信する必要があります。 この変更は、Microsoft Edge に基づく Chromium プロジェクトで発生します。 詳細については、「[Chrome プラットフォームの状態エントリ](https://chromestatus.com/feature/5436853517811712)」に移動します。 セキュリティ保護されていないページとの互換性を維持する必要があるシナリオをサポートするには [、InsecurePrivateNetworkRequestAllowed](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) と [InsecurePrivateNetworkRequestAllowedForUrls](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls)の 2 つの互換性ポリシーを使用できます。
 
-- **混在コンテンツのダウンロードをブロックします。** セキュリティで保護されたページは、他のセキュリティで保護されたページでホストされているファイルのみをダウンロードし、セキュリティで保護されていない (HTTPS 以外の) ページでホストされているダウンロードは、セキュリティで保護されたページから開始されるとブロックされます。 この変更は、プロジェクトのChromiumプロジェクトでMicrosoft Edge発生します。 詳細については、Google セキュリティ ブログ エントリ [に移動します](https://security.googleblog.com/2020/02/protecting-users-from-insecure_6.html)。
+- **混在コンテンツのダウンロードをブロックします。** セキュリティで保護されたページは、他のセキュリティで保護されたページでホストされているファイルのみをダウンロードし、セキュリティで保護されていない (HTTPS 以外の) ページでホストされているダウンロードは、セキュリティで保護されたページから開始されるとブロックされます。 この変更は、Microsoft Edge に基づく Chromium プロジェクトで発生します。 詳細については、Google セキュリティ ブログ エントリ [に移動します](https://security.googleblog.com/2020/02/protecting-users-from-insecure_6.html)。
 
 - **オンプレミス アカウントの暗黙的なサインインを有効にする。**   OnlyOnPremisesImplicitSigninEnabled ポリシーを有効にすると、暗黙的なサインインに対してオンプレミス アカウントだけが有効になります。  Microsoft Edge は、MSA または AAD アカウントに暗黙的にサインインしようとしません。 オンプレミス アカウントから AAD アカウントへのアップグレードも停止されます。
 
@@ -45,6 +49,16 @@ ms.locfileid: "11938308"
 - **パスワードを簡単に更新します。**  ブラウザーは、特定の Web サイトの [パスワードの変更] ページに直接移動し、ページに手動で移動する必要が生じなく、時間とクリックを節約します。 このページにアクセスすると、ブラウザーは既存のパスワードを自動入力し、強力で一意の新しいパスワードを提案します。  注: 現在、この機能は限られた数のサイトで利用できます。  
 
 - **新しいアクセシビリティ設定ページ。** アクセシビリティ関連の設定を 1 つのページにまとめました。 メインの設定リストの下 edge://settings/accessibility 新しいページが表示されます。 ここでは、Web ページを大きくするための設定、フォーカス領域の周囲に高い可視性のアウトラインを表示する設定、および Web 閲覧エクスペリエンスの向上に役立つその他の設定を示します。 今後のバージョンの新しい設定は、引き続きここに追加Microsoft Edge。
+
+***新しいポリシー***
+
+- [ApplicationGuardPassiveModeEnabled](/DeployEdge/microsoft-edge-policies#applicationguardpassivemodeenabled) Application Guard サイト一覧の構成を無視し、通常はエッジを参照する
+- [OnlyOnPremisesImplicitSigninEnabled](/DeployEdge/microsoft-edge-policies#onlyonpremisesimplicitsigninenabled) 暗黙的なサインインに対して有効になっているオンプレミス アカウントのみ
+- [WebRtcRespectOsRoutingTableEnabled](/DeployEdge/microsoft-edge-policies#webrtcrespectosroutingtableenabled)WebRTC 経由でピアツーピア接続をWindows OS ルーティング テーブル ルールのサポートを有効にする
+
+***非推奨ポリシー***
+
+- [UserAgentClientHintsEnabled](/DeployEdge/microsoft-edge-policies#useragentclienthintsenabled) クライアント ヒントUser-Agent有効にする
 
 ## <a name="version-93096133-august-27"></a>バージョン 93.0.961.33: 8 月 27 日
 
@@ -62,25 +76,25 @@ ms.locfileid: "11938308"
 
 ### <a name="feature-updates"></a>機能更新プログラム
 
-- **[ユーザー設定] の初期Microsoft Edge。**  バージョン 93 Microsoft Edgeを開始すると、初期Microsoft Edgeが追加されたと、エンタープライズへの展開が[容易になります](/deployedge/initial-preferences-support-on-microsoft-edge-browser)。
+- **Microsoft Edge での初期ユーザー設定。**  バージョン 93 Microsoft Edgeを開始すると、初期Microsoft Edgeが追加されたと、エンタープライズへの展開が[容易になります](/deployedge/initial-preferences-support-on-microsoft-edge-browser)。
 
-- **IE モードでは、Microsoft Edge "マージなし" 動作がサポートされます。**  バージョン 93 Microsoft Edgeから、IE モードは Microsoft Edge"no-merge" をサポートします。 エンド ユーザーの場合、IE モード アプリケーションから新しいブラウザー ウィンドウを起動すると、IE11 の動作と同様に、別のセッションになります。 セッション共有を防止する必要があるサイトを構成するには、サイト一覧を調整する必要があります。 Microsoft Edge のウィンドウごとに、指定された "マージなし" サイトの 1 つである場合、そのウィンドウ内で IE モード タブが初めてアクセスされた場合、そのウィンドウは、少なくともそのウィンドウで最後の IE モード タブが閉じるまで、他のすべての Microsoft Edge ウィンドウとは異なる "マージなし" IE セッションにロックされます。 [こちら](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--no-merge--option-that-was-supported-in-internet-explorer-11-)をご覧ください。
+- **Microsoft Edge の IE モードでは、"マージなし" 動作がサポートされます。**  バージョン 93 Microsoft Edgeから、IE モードは Microsoft Edge"no-merge" をサポートします。 エンド ユーザーの場合、IE モード アプリケーションから新しいブラウザー ウィンドウを起動すると、IE11 の動作と同様に、別のセッションになります。 セッション共有を防止する必要があるサイトを構成するには、サイト一覧を調整する必要があります。 Microsoft Edge のウィンドウごとに、指定された "マージなし" サイトの 1 つである場合、そのウィンドウ内で IE モード タブに初めてアクセスした場合、少なくともそのウィンドウで最後の IE モード タブが閉じるまで、そのウィンドウは他のすべての Microsoft Edge ウィンドウとは異なる "マージなし" IE セッションにロックされます。 [こちら](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--no-merge--option-that-was-supported-in-internet-explorer-11-)をご覧ください。
 
 - **タブ グループ。**  タブをユーザー定義グループに分類する機能は、複数のワークストリーム間でタブを効率的に検索、切り替え、管理するのに役立ちます。 これを有効にするには、バージョン 93 で始まるタブ グループMicrosoft Edgeオンにします。
 
-- **垂直タブを使用している間は、タイトル バーを非表示にしてください。**  [垂直タブ] でブラウザーのタイトル バーを非表示にすることで、余分な数ピクセルを取得します。 Microsoft Edge バージョン 93 から、edge://settings/appearance に移動し、[ツールバーのカスタマイズ] セクションで、垂直タブ モードの間にタイトル バーを非表示にするオプションを選択します。
+- **垂直タブを使用している間は、タイトル バーを非表示にします。**  垂直タブでブラウザーのタイトル バーを非表示にすることで、余分な数ピクセルを取得します。 Microsoft Edge バージョン 93 から、edge://settings/appearance に移動し、[ツールバーのカスタマイズ] セクションで、垂直タブ モードの間にタイトル バーを非表示にするオプションを選択します。
 
-- **ホバー ツールバーからのピクチャ (PiP) のビデオピクチャ。**  バージョン 93 Microsoft Edge、ピクチャ (PiP) モードに入る方がさらに簡単になります。 サポートされているビデオの上にマウス ポインターを置くと、ツール バーが表示され、そのビデオを PiP ウィンドウで表示できます。  注: これは現在、macOS のユーザー Microsoft Edge使用できます。  ユーザーへのロールアウトを続行する場合は、Windowsしてください。
+- **ホバー ツールバーからのピクチャ イン ピクチャ (PiP) のビデオ。**  バージョン 93 Microsoft Edge、ピクチャ (PiP) モードに入る方がさらに簡単になります。 サポートされているビデオにカーソルを合わせると、ツール バーが表示され、そのビデオを PiP ウィンドウで表示できます。  注: これは現在、macOS のユーザー Microsoft Edge使用できます。  ユーザーへのロールアウトを続行する場合は、Windowsしてください。
 
-- **TLS での 3DES の削除。**  バージョン 93 Microsoft Edge、暗号化スイートのサポートTLS_RSA_WITH_3DES_EDE_CBC_SHA削除されます。 この変更は、プロジェクトのChromiumプロジェクトでMicrosoft Edge発生します。 詳細については、「Chrome プラットフォームの状態」 [エントリに移動します](https://chromestatus.com/feature/6678134168485888)。 さらに、Microsoft Edgeバージョン 93 では[、TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled)ポリシーを使用して、古いサーバーとの互換性を維持する必要があるシナリオをサポートできます。 この互換性ポリシーは廃止され、バージョン 95 でのMicrosoft Edge停止します。 その前に、影響を受けるサーバーを更新してください。
+- **TLS での 3DES の削除。**  バージョン 93 Microsoft Edge、暗号化スイートのサポートTLS_RSA_WITH_3DES_EDE_CBC_SHA削除されます。 この変更は、Microsoft Edge に基づく Chromium プロジェクトで発生します。 詳細については、「[Chrome プラットフォームの状態エントリ](https://chromestatus.com/feature/6678134168485888)」に移動します。 さらに、Microsoft Edge バージョン 93 では、[TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled) ポリシーを使用すると、旧型のサーバーとの互換性を維持する必要があるシナリオをサポートできます。 この互換性ポリシーは廃止され、Microsoft Edge バージョン 95 で機能を停止します。 その前に、影響を受けるサーバーを更新してください。
 
-- **ユーザーと DirectInvoke ClickOnceバイパスするポリシー。**  ポリシーが更新され、ClickOnceのプロンプトと DirectInvoke のアプリが指定されたドメインから指定された種類のファイルに対してバイパスされます。 これを行うには、次の操作を行う必要があります。
+- **ClickOnce および DirectInvoke プロンプトをバイパスするポリシー。**  ポリシーを更新して、ClickOnce のプロンプトと DirectInvoke のアプリが指定されたドメインから指定されたファイルの種類にバイパスできるようになりました。 これを行うには、次の手順を実行します。
 
-  - [ClickOnceEnabled または](/deployedge/microsoft-edge-policies#clickonceenabled) [DirectInvokeEnabled を有効にする](/deployedge/microsoft-edge-policies#directinvokeenabled)
-  - [AutoOpenFileTypes ポリシーを有効](/deployedge/microsoft-edge-policies#autoopenfiletypes)にし、ユーザーと DirectInvoke を無効ClickOnceファイルの種類の一覧を設定する
+  - [ClickOnceEnabled](/deployedge/microsoft-edge-policies#clickonceenabled) または [DirectInvokeEnabled](/deployedge/microsoft-edge-policies#directinvokeenabled) を有効にする
+  - [AutoOpenFileTypes](/deployedge/microsoft-edge-policies#autoopenfiletypes) ポリシーを有効にし、DirectInvoke と ClickOnce を無効にする必要がある特定のファイルの種類の一覧を設定する
   - [AutoOpenAllowedForURLs](/deployedge/microsoft-edge-policies#autoopenallowedforurls)ポリシーを有効にし、ユーザーと DirectInvoke が無効になる特定ClickOnceの一覧を設定する
 
-  注: AutoOpenAllowedForURLs は、AutoOpenFileTypes のサポート ポリシーです。 AutoOpenAllowedForURLs が設定されていない場合、AutoOpenFileTypes が設定されている場合、リストされているファイルの種類は、すべての URL から自動的に開きます。
+  注: AutoOpenAllowedForURLs は、AutoOpenFileTypes 用のサポート ポリシーです。 AutoOpenAllowedForURLs が設定されておらず、AutoOpenFileTypes が設定されている場合、一覧表示されているファイルの種類は、すべての URL で自動的に開きます。
 
 ### <a name="new-policies"></a>新しいポリシー
 
@@ -111,7 +125,7 @@ ms.locfileid: "11938308"
 
 - [LegacySameSiteCookieBehaviorEnabled](/DeployEdge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) 従来の SameSite Cookie の既定の動作設定を有効にする
 
-#### <a name="obsoleted-policy"></a>廃止されたポリシー
+#### <a name="obsoleted-policy"></a>非推奨ポリシー
 
 - [NewTabPageSetFeedType](/DeployEdge/microsoft-edge-policies#newtabpagesetfeedtype)新しいタブ Microsoft Edgeエクスペリエンスを構成する
 

@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 企業で Microsoft Edge 拡張機能を管理する
-ms.openlocfilehash: 69c10bfa1e041d48f99594e6ac85dd39ba66379ca8d6d7fe12f1bdef6f3b54fe
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 26134a8c352354c0c447518120f3d79332100c80
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11724916"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979937"
 ---
 # <a name="manage-microsoft-edge-extensions-in-the-enterprise"></a>企業で Microsoft Edge 拡張機能を管理する
 

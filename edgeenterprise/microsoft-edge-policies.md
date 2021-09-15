@@ -12,11 +12,11 @@ ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
 ms.openlocfilehash: cd59eca6d07284c61a0c61537f45d36771d133f3
-ms.sourcegitcommit: e83b355a9d95f2c8ec858b05e5b7cf8837f8a82b
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "11936565"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979946"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - ポリシー
 
@@ -254,7 +254,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[SmartScreenEnabled](#smartscreenenabled)|Microsoft Defender SmartScreen を構成する|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|信頼のおけるソースからのダウンロードに対して Microsoft Defender SmartScreen のチェックを強制する|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Microsoft Defender SmartScreen を構成して望ましくない可能性のあるアプリをブロックする|
-### [*<a name="startup-home-page-and-new-tab-page"></a>スタートアップ &comma; ホーム ページ、新規タブ ページ*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startupcomma-home-page-and-new-tab-page"></a>スタートアップ &comma; ホーム ページ、新規タブ ページ*](#startup-home-page-and-new-tab-page-policies)
 
 |ポリシー名|キャプション|
 |-|-|
@@ -9041,7 +9041,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
   [ページのトップへ](#microsoft-edge---policies)
 
-  ## <a name="startup-home-page-and-new-tab-page-policies"></a>スタートアップ &comma; ホーム ページ、新規タブ ページに関するポリシー
+  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>スタートアップ &comma; ホーム ページ、新規タブ ページに関するポリシー
 
   [ページのトップへ](#microsoft-edge---policies)
 

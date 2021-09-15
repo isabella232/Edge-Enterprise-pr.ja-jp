@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 管理者が一般的なエンタープライズ同期の問題のトラブルシューティングと修正に使用できるガイダンスとツール
-ms.openlocfilehash: 61ef4b69e16ecc2955f3f4dc46b9a22e3a8563a1e5c691430fe0645ceb23ad79
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: c46fc716424faf361ea0a3bfab68737b64725473
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11725728"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11980427"
 ---
 # <a name="diagnose-and-fix-microsoft-edge-sync-issues"></a>Microsoft Edge の同期の問題を診断して修正する
 

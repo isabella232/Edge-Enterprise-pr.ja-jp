@@ -12,11 +12,11 @@ ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
 ms.openlocfilehash: b0a7949d71ca037e1adf02b71637f5b1e7351cce
-ms.sourcegitcommit: e83b355a9d95f2c8ec858b05e5b7cf8837f8a82b
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "11936545"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11980477"
 ---
 # <a name="microsoft-edge-webview2---policies"></a>Microsoft Edge WebView2 - ポリシー
 
