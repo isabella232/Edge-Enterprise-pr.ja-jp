@@ -3,19 +3,19 @@ title: IE モードのローカル サイト一覧
 ms.author: shisub
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/20/2021
+ms.date: 09/13/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: ローカル サイト一覧および IE モードへの簡単アクセスを有効にする方法について説明します。
-ms.openlocfilehash: 0c79622a1f96cad83a2436f5e79e69914f4a2c40
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 8130a835cd803f5cdeb50f825ccee895f35f62e3
+ms.sourcegitcommit: c3d63d913eb15e7dbeb9f45b5f28fc841b46bce1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979757"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "12016566"
 ---
 ## <a name="local-site-list-for-ie-mode"></a>IE モードのローカル サイト一覧
 
@@ -53,9 +53,10 @@ Microsoft Edge バージョン 92 以降、*構成されていない* IE モー�
 
 :::image type="content" source="media/Edge-hybrid-IE-mode/internet-explorer-compatibilitiy.png" alt-text="Internet Explorer の互換性":::
 
->[!注:]  
-
->1. *InternetExplorerIntegrationTestingAllowed* ポリシーを使用して IE モード テストを有効にした場合、この設定は表示されますが、*InternetExplorerIntegrationReloadInIEModeAllowed* ポリシーを明示的に有効にしない限り、灰色表示されます。  
+>[!Note]  
+>
+>1. *InternetExplorerIntegrationTestingAllowed* ポリシーを使用して IE モード テストを有効にした場合、この設定は表示されますが、*InternetExplorerIntegrationReloadInIEModeAllowed* ポリシーを明示的に有効にしない限り、灰色表示されます。
+>
 >2. **[Internet Explorer モードでサイトの再読み込みを許可する]** が **[既定]** に設定されていると、ユーザーが Internet Explorer 11 を既に使用している場合、IE モードでサイトを再読み込みできる場合があります。  
 
 この設定を有効にすると、ユーザーは **[設定など] (省略記号アイコン ...) > [Internet Explorer モードで再読み込み]** を選択して IE モードでサイトを再読み込みできます。 ユーザーは、タブを右クリックして **[Internet Explorer モードでタブを再読み込み]** を選択するか、リンクを右クリックして **[新しい Internet Explorer モード タブでリンクを開く]** を選択することもできます。

@@ -3,19 +3,19 @@ title: Stable チャネルに関する Microsoft Edge リリース ノート
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/02/2021
+ms.date: 09/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Stable チャネルに関する Microsoft Edge リリース ノート
-ms.openlocfilehash: e759a78587c594460b49d6858f127bcac90ff8d3
-ms.sourcegitcommit: a74b88408fcf820706c1ca2fd19d7ef83a1ddd76
+ms.openlocfilehash: 4feb2ae1b1d819e4c8c52421bee68bec6c5cb97c
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "11938209"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11980226"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Microsoft Edge Stable チャネルのリリース ノート
 
@@ -31,7 +31,11 @@ ms.locfileid: "11938209"
 >
 > Microsoft Edge Web プラットフォームは、ユーザー エクスペリエンス、セキュリティ、およびプライバシーを向上させるために絶えず進化しています。 詳細については、「[Microsoft Edge のサイトの互換性に影響する変更点](/microsoft-edge/web-platform/site-impacting-changes)」を参照してください。
 
-## <a name="version-93096138-september-02"></a>バージョン 93.0.961.38: 9 月 2 日
+## <a name="version-93096144-september-9"></a>バージョン 93.0.961.44: 9 月 9 日
+
+安定したチャネルのセキュリティ更新プログラムは[こちら](/deployedge/microsoft-edge-relnotes-security#september-09-2021)に記載されています。
+
+## <a name="version-93096138-september-2"></a>バージョン 93.0.961.38: 9 月 2 日
 
 安定したチャネルのセキュリティ更新プログラムは[こちら](/deployedge/microsoft-edge-relnotes-security#september-02-2021)に記載されています。
 
@@ -41,13 +45,17 @@ ms.locfileid: "11938209"
 
 - **Microsoft Edge の IE モードでは、"マージなし" 動作がサポートされます。**  エンドユーザーの場合、IE モード アプリケーションで新しいブラウザー ウィンドウを起動すると、IE11 のマージなし動作と同様に別のセッションになります。 セッション共有を "マージなし" として回避する必要があるサイトを構成するには、サイト一覧を調整する必要があります。 Microsoft Edge のウィンドウごとに、指定された "マージなし" サイトの 1 つである場合、そのウィンドウ内で IE モード タブに初めてアクセスした場合、少なくともそのウィンドウで最後の IE モード タブが閉じるまで、そのウィンドウは他のすべての Microsoft Edge ウィンドウとは異なる "マージなし" IE セッションにロックされます。 これは、以前の動作に従って、ユーザーがマージなしを使用して IE を起動し、他のメカニズムを介してマージなしを使用することなく Microsoft Edge を起動する可能性があります。  追加情報はこちら: [IE モードのトラブルシューティングと FAQ |Microsoft Docs](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--nomerge--option-that-was-supported-in-internet-explorer-11-)
 
-- **暗黙的なサインインを停止する新しいポリシー。**  [ImplicitSignInEnabled](/deployedge/microsoft-edge-policies#implicitsigninenabled) ポリシーを使用すると、システム管理者は、Microsoft Edge ブラウザーで暗黙的なサインインを無効にすることができます。
+- **暗黙的なサインインを停止する新しいポリシー。**  
+            [ImplicitSignInEnabled](/deployedge/microsoft-edge-policies#implicitsigninenabled) ポリシーを使用すると、システム管理者は、Microsoft Edge ブラウザーで暗黙的なサインインを無効にすることができます。
 
 - **ClickOnce および DirectInvoke プロンプトをバイパスするポリシー。** ポリシーを更新して、ClickOnce のプロンプトと DirectInvoke のアプリが指定されたドメインから指定されたファイルの種類にバイパスできるようになりました。 これを行うには、次の手順を実行します。
 
-  - [ClickOnceEnabled](/deployedge/microsoft-edge-policies#clickonceenabled) または [DirectInvokeEnabled](/deployedge/microsoft-edge-policies#directinvokeenabled) を有効にする
-  - [AutoOpenFileTypes](/deployedge/microsoft-edge-policies#autoopenfiletypes) ポリシーを有効にし、DirectInvoke と ClickOnce を無効にする必要がある特定のファイルの種類の一覧を設定する
-  - [AutoOpenAllowedForURLs](/deployedge/microsoft-edge-policies#autoopenallowedforurls) ポリシーを有効にし、ClickOnce と DirectInvoke を無効にする特定のドメインの一覧を設定する
+  - 
+            [ClickOnceEnabled](/deployedge/microsoft-edge-policies#clickonceenabled) または [DirectInvokeEnabled](/deployedge/microsoft-edge-policies#directinvokeenabled) を有効にする
+  - 
+            [AutoOpenFileTypes](/deployedge/microsoft-edge-policies#autoopenfiletypes) ポリシーを有効にし、DirectInvoke と ClickOnce を無効にする必要がある特定のファイルの種類の一覧を設定する
+  - 
+            [AutoOpenAllowedForURLs](/deployedge/microsoft-edge-policies#autoopenallowedforurls) ポリシーを有効にし、ClickOnce と DirectInvoke を無効にする特定のドメインの一覧を設定する
 
   注: AutoOpenAllowedForURLs は、AutoOpenFileTypes 用のサポート ポリシーです。 AutoOpenAllowedForURLs が設定されておらず、AutoOpenFileTypes が設定されている場合、一覧表示されているファイルの種類は、すべての URL で自動的に開きます。
 
@@ -58,6 +66,73 @@ ms.locfileid: "11938209"
 - **ホバー ツールバーからのピクチャ イン ピクチャ (PiP) のビデオ。**  サポートされているビデオにカーソルを合わせると、ツール バーが表示され、そのビデオを PiP ウィンドウで表示できます。  注意: これは現在、macOS の Microsoft Edge ユーザー向けに使用できます。  
 
 - **TLS での 3DES の削除。 暗号スイート TLS_RSA_WITH_3DES_EDE_CBC_SHA のサポートは削除されます。** この変更は、Microsoft Edge に基づく Chromium プロジェクトで発生します。 詳細については、「[Chrome プラットフォームの状態エントリ](https://chromestatus.com/feature/6678134168485888)」に移動します。 さらに、Microsoft Edge バージョン 93 では、[TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled) ポリシーを使用すると、旧型のサーバーとの互換性を維持する必要があるシナリオをサポートできます。 この互換性ポリシーは廃止され、Microsoft Edge バージョン 95 で機能を停止します。 その前に、影響を受けるサーバーを更新してください。
+
+***新しいポリシー***
+
+- 
+            [AutoplayAllowlist](/DeployEdge/microsoft-edge-policies#autoplayallowlist) 特定のサイトでメディアの自動再生を許可する
+- 
+            [CECPQ2Enabled](/DeployEdge/microsoft-edge-policies#cecpq2enabled) TLS の CECPQ2 ポスト量子暗号鍵交換​が有効になりました
+- 
+            [ConfigureViewInFileExplorer](/DeployEdge/microsoft-edge-policies#configureviewinfileexplorer) Microsoft Edge の SharePoint ページの "エクスプローラーで表示" 機能を構成する
+- 
+            [DefaultJavaScriptJitSetting](/DeployEdge/microsoft-edge-policies#defaultjavascriptjitsetting) JavaScript JIT の使用を制御する
+- 
+            [ShowPDFDefaultRecommendationsEnabled](/DeployEdge/microsoft-edge-policies#showpdfdefaultrecommendationsenabled) Microsoft Edge を既定の PDF リーダーとして設定する通知を許可する
+- 
+            [FeatureFlagOverridesControl](/DeployEdge/microsoft-edge-policies#featureflagoverridescontrol) ユーザーが機能フラグを上書きする機能を構成する
+- 
+            [ImplicitSignInEnabled](/DeployEdge/microsoft-edge-policies#implicitsigninenabled) 暗黙的なサインインを有効にする
+- 
+            [InternetExplorerIntegrationCloudSiteList](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcloudsitelist) エンタープライズ モードのクラウド サイト リストを構成する
+- 
+            [InternetExplorerIntegrationSiteListRefreshInterval](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationsitelistrefreshinterval) エンタープライズ モードのサイト リストを更新する頻度を構成する
+- 
+            [JavaScriptJitAllowedForSites](/DeployEdge/microsoft-edge-policies#javascriptjitallowedforsites) これらのサイトで JavaScript による JIT の使用を許可する
+- 
+            [JavaScriptJitBlockedForSites](/DeployEdge/microsoft-edge-policies#javascriptjitblockedforsites) これらのサイトで JavaScript による JIT の使用をブロックする
+- 
+            [LocalBrowserDataShareEnabled](/DeployEdge/microsoft-edge-policies#localbrowserdatashareenabled) Windows を有効にして、ローカル Microsoft Edge 閲覧データを検索する
+- 
+            [MAUEnabled](/DeployEdge/microsoft-edge-policies#mauenabled) Microsoft Edge のアップデーターとして常に Microsoft 自動更新を使用する
+- 
+            [MSAWebSiteSSOUsingThisProfileAllowed](/DeployEdge/microsoft-edge-policies#msawebsitessousingthisprofileallowed) このプロファイルを使用して Microsoft サイトにシングル サインオンを許可する
+- 
+            [OneAuthAuthenticationEnforced](/DeployEdge/microsoft-edge-policies#oneauthauthenticationenforced) サインインのために適用される OAuth 認証フロー
+- 
+            [PasswordGeneratorEnabled](/DeployEdge/microsoft-edge-policies#passwordgeneratorenabled) ユーザーがオンラインでアカウントを作成するたびに強力なパスワード候補を取得できる
+- 
+            [PrimaryPasswordSetting](/DeployEdge/microsoft-edge-policies#primarypasswordsetting) パスワード自動入力の使用中にユーザーにデバイス パスワードの入力を求める設定を構成する
+- 
+            [PrintingWebpageLayout](/DeployEdge/microsoft-edge-policies#printingwebpagelayout) 印刷のレイアウトを設定する
+- 
+            [RemoteDebuggingAllowed](/DeployEdge/microsoft-edge-policies#remotedebuggingallowed) リモート デバッグを許可する
+- 
+            [RelaunchWindow](/DeployEdge/microsoft-edge-policies#relaunchwindow) 再起動の時間間隔を設定する
+- 
+            [TravelAssistanceEnabled](/DeployEdge/microsoft-edge-policies#travelassistanceenabled) 旅行支援を有効にする
+- 
+            [TripleDESEnabled](/DeployEdge/microsoft-edge-policies#tripledesenabled) TLS で 3DES 暗号スイートを有効にする
+- 
+            [WAMAuthBelowWin10RS3Enabled](/DeployEdge/microsoft-edge-policies#wamauthbelowwin10rs3enabled) Windows 10 RS3 以下の認証用 WAM が有効
+
+***非推奨のポリシー***
+
+- 
+            [LegacySameSiteCookieBehaviorEnabled](/DeployEdge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) 従来の SameSite Cookie の既定の動作設定を有効にする
+
+***廃止されたポリシー***
+
+- 
+            [NewTabPageSetFeedType](/DeployEdge/microsoft-edge-policies#newtabpagesetfeedtype) Microsoft Edge の新規タブ ページのエクスペリエンスを設定する
+
+***その他の変更***
+
+- 
+            [ConfigureShare](/DeployEdge/microsoft-edge-policies#configureshare) Mac プラットフォームのサポートを追加する
+- 
+            [PasswordMonitorAllowed](/DeployEdge/microsoft-edge-policies#passwordmonitorallowed) Mac プラットフォームのサポートを追加する
+
 
 ## <a name="version-92090284-august-26"></a>バージョン 92.0.902.84: 8 月 26 日
 
@@ -89,53 +164,79 @@ Stable チャネルのセキュリティ更新プログラムは[こちら](/dep
 
 ### <a name="feature-updates"></a>機能更新プログラム
 
-**ユーザーは、Microsoft Edge で Internet Explorer モードに簡単にアクセスできます**。 Microsoft Edge バージョン 92 から、ユーザーは、Enterprise モード サイト一覧でサイトが構成されるのを待っている間、スタンドアロンの IE 11 アプリケーションに依存する代わりに、Microsoft Edge の Internet Explorer モードでサイトを再読み込みできます。 ユーザーは、サイトをローカル サイト リストに追加するように求められます。Microsoft Edge で同じページに移動すると、次の 30 日間 IE モードで自動的にレンダリングされます。 [InternetExplorerIntegrationReloadInIEModeAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed) ポリシーを使用して、このエクスペリエンスを構成し、IE モードのエントリ ポイントへのアクセスと、ローカル サイト リストにサイトを追加する機能を許可できます。 [InternetExplorerIntegrationLocalSiteListExpirationDays](/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays) ポリシーを使用して、サイトをローカル サイト リストに保持する日数を調整できます。 Windows 10 バージョン 1909 の場合、KB5003698 以降が必要であることに注意してください。エンド ツー エンドのエクスペリエンスを実現するには、Windows 10 バージョン 2004、Windows 10 バージョン 20H2、または Windows 10 バージョン 21H1 の場合、 KB5003690 以降が必要です。 詳細については、[「IE モードのローカル サイト一覧」](/deployedge/edge-ie-mode-local-site-list)を参照してください。
 
-**MHTML ファイルは、既定では Internet Explorer モードで開きます**。 Microsoft Edge バージョン 92 Stable 以降、MHTML ファイルの種類は、Internet Explorer (IE11) アプリケーションではなく、Microsoft Edge の Internet Explorer モードで自動的に開きます。 これは、ブラウザーで Outlook のメールを表示しようとしているときに最もよく見られます。 この変更は、IE11 がこのファイルの種類の既定のハンドラーである場合にのみ発生します。 これを変更したい場合は、[このガイダンス](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration)を使用して、Stable バージョン 92 更新プログラムをインストールする前に実行できます。
+            **ユーザーは、Microsoft Edge で Internet Explorer モードに簡単にアクセスできます**。 Microsoft Edge バージョン 92 から、ユーザーは、Enterprise モード サイト一覧でサイトが構成されるのを待っている間、スタンドアロンの IE 11 アプリケーションに依存する代わりに、Microsoft Edge の Internet Explorer モードでサイトを再読み込みできます。 ユーザーは、サイトをローカル サイト リストに追加するように求められます。Microsoft Edge で同じページに移動すると、次の 30 日間 IE モードで自動的にレンダリングされます。 
+            [InternetExplorerIntegrationReloadInIEModeAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed) ポリシーを使用して、このエクスペリエンスを構成し、IE モードのエントリ ポイントへのアクセスと、ローカル サイト リストにサイトを追加する機能を許可できます。 
+            [InternetExplorerIntegrationLocalSiteListExpirationDays](/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays) ポリシーを使用して、サイトをローカル サイト リストに保持する日数を調整できます。 Windows 10 バージョン 1909 の場合、KB5003698 以降が必要であることに注意してください。エンド ツー エンドのエクスペリエンスを実現するには、Windows 10 バージョン 2004、Windows 10 バージョン 20H2、または Windows 10 バージョン 21H1 の場合、 KB5003690 以降が必要です。 詳細については、[「IE モードのローカル サイト一覧」](/deployedge/edge-ie-mode-local-site-list)を参照してください。
 
-**"開発者モード拡張機能を無効にする" という警告は 2 週間の間完全に無視できます**。 Microsoft Edge バージョン 92 以降、警告ダイアログのドロップダウンでオプションを選択することで、"開発者モードの拡張機能を無効にする "という警告を 2 週間スヌーズすることができます。
 
-**直接ツール バーから拡張情報を管理します**。 ツール バーのまったく新しい拡張機能メニューを使用すると、拡張機能を簡単に非表示またはピン留めできます。 拡張機能を管理し、新しい拡張機能を検索するためのクイック リンクでは、新しい拡張機能を簡単に見つけて、既存の拡張機能を管理できます。
+            **MHTML ファイルは、既定では Internet Explorer モードで開きます**。 Microsoft Edge バージョン 92 Stable 以降、MHTML ファイルの種類は、Internet Explorer (IE11) アプリケーションではなく、Microsoft Edge の Internet Explorer モードで自動的に開きます。 これは、ブラウザーで Outlook のメールを表示しようとしているときに最もよく見られます。 この変更は、IE11 がこのファイルの種類の既定のハンドラーである場合にのみ発生します。 これを変更したい場合は、[このガイダンス](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration)を使用して、Stable バージョン 92 更新プログラムをインストールする前に実行できます。
 
-**自動再生の既定値は [制限] に設定されます**。  持続的にオンラインへフォーカスしていくために、Microsoft Edge バージョン 92 から、メディアの自動再生の既定値が [許可] から [制限] に変更されます。
 
-**支払い手段がデバイス間で同期されるようになりました**。 Microsoft Edge バージョン 92 以降には、サインインしたデバイス間で支払い情報を同期するオプションがあります。 注: これは「制御された機能ロールアウト」です。 この機能が表示されない場合、ロールアウトは続行しますので、しばらくしてからもう一度確認してください。
+            **"開発者モード拡張機能を無効にする" という警告は 2 週間の間完全に無視できます**。 Microsoft Edge バージョン 92 以降、警告ダイアログのドロップダウンでオプションを選択することで、"開発者モードの拡張機能を無効にする "という警告を 2 週間スヌーズすることができます。
+
+
+            **直接ツール バーから拡張情報を管理します**。 ツール バーのまったく新しい拡張機能メニューを使用すると、拡張機能を簡単に非表示またはピン留めできます。 拡張機能を管理し、新しい拡張機能を検索するためのクイック リンクでは、新しい拡張機能を簡単に見つけて、既存の拡張機能を管理できます。
+
+
+            **自動再生の既定値は [制限] に設定されます**。  持続的にオンラインへフォーカスしていくために、Microsoft Edge バージョン 92 から、メディアの自動再生の既定値が [許可] から [制限] に変更されます。
+
+
+            **支払い手段がデバイス間で同期されるようになりました**。 Microsoft Edge バージョン 92 以降には、サインインしたデバイス間で支払い情報を同期するオプションがあります。 注: これは「制御された機能ロールアウト」です。 この機能が表示されない場合、ロールアウトは続行しますので、しばらくしてからもう一度確認してください。
 現在、この機能は米国でのみ使用可能で、MSA ユーザー向けのみ (AAD ではありません) 使用可能です
 
-**フォント レンダリングの改善**。 テキストのレンダリングが改善され、明瞭性が向上し、ぼやけ感が軽減されました。 注: これは「制御された機能ロールアウト」です。 この機能が表示されない場合、ロールアウトは続行しますので、しばらくしてからもう一度確認してください。
 
-**[お気に入り] や [コレクション] のようなツール バー ボタン 機能は、ウィンドウの側面にピン留めして、ユーザーの選択を保存します**。 既定で有効になっています。ユーザーがツール バー ボタンをピン留めする選択をした場合、ピン留めを解除するまで、常にピン留め状態で開きます。
+            **フォント レンダリングの改善**。 テキストのレンダリングが改善され、明瞭性が向上し、ぼやけ感が軽減されました。 注: これは「制御された機能ロールアウト」です。 この機能が表示されない場合、ロールアウトは続行しますので、しばらくしてからもう一度確認してください。
 
-**ユーザーは、グループ ポリシーを使用して [このプロファイルを使用して、職場または学校サイトにシングル サインオンを許可する] オプションを管理できます**。  [このプロファイルを使用して、職場または学校サイトにシングル サインオンを許可する] は、AAD 以外のプロファイルには、コンピューターにある職場または学校の資格情報を使用して、職場または学校サイトでシングル サインオンを使用できるようになります。 このオプションは、AAD 以外のプロファイルに対してのみ、エンド ユーザー向けにトグルとして、[設定] -> [プロファイル] -> [プロファイルのユーザー設定] に表示されます。  [AADWebSiteSSOUsingThisProfileEnabled](/deployedge/microsoft-edge-policies#aadwebsitessousingthisprofileenabled)ポリシーを使用して動作を構成できます。  
 
-**パスワードの正常性** オンラインで安全を保つには、さまざまなアカウントのすべてに渡って強力で個別にパスワードを使用することが重要です。 ただし、これは行うよりも言うは易しで、ほとんどのユーザーは、推測しやすい弱いパスワードの使用や、複数のアカウントに跨って強力だが同一のパスワードを再利用するなど、脆弱なパスワード習慣の傾向を示します。
+            **[お気に入り] や [コレクション] のようなツール バー ボタン 機能は、ウィンドウの側面にピン留めして、ユーザーの選択を保存します**。 既定で有効になっています。ユーザーがツール バー ボタンをピン留めする選択をした場合、ピン留めを解除するまで、常にピン留め状態で開きます。
+
+
+            **ユーザーは、グループ ポリシーを使用して [このプロファイルを使用して、職場または学校サイトにシングル サインオンを許可する] オプションを管理できます**。  [このプロファイルを使用して、職場または学校サイトにシングル サインオンを許可する] は、AAD 以外のプロファイルには、コンピューターにある職場または学校の資格情報を使用して、職場または学校サイトでシングル サインオンを使用できるようになります。 このオプションは、AAD 以外のプロファイルに対してのみ、エンド ユーザー向けにトグルとして、[設定] -> [プロファイル] -> [プロファイルのユーザー設定] に表示されます。  
+            [AADWebSiteSSOUsingThisProfileEnabled](/deployedge/microsoft-edge-policies#aadwebsitessousingthisprofileenabled)ポリシーを使用して動作を構成できます。  
+
+
+            **パスワードの正常性** オンラインで安全を保つには、さまざまなアカウントのすべてに渡って強力で個別にパスワードを使用することが重要です。 ただし、これは行うよりも言うは易しで、ほとんどのユーザーは、推測しやすい弱いパスワードの使用や、複数のアカウントに跨って強力だが同一のパスワードを再利用するなど、脆弱なパスワード習慣の傾向を示します。
 
 この最新バージョンの Microsoft Edge で、強力で個別のパスワードを使用するタスクが少しだけ簡単になります。 Microsoft Edge は、保存されたパスワードが十分に強力であるかどうかを示し、そして複数のサイトで使用されたかどうかを指摘することで、オンラインでの安全性の維持に役立ちます。 パスワードの正常性は、 edge://settings/passwords にある保存済みパスワードの一覧で確認できます。
   
-**保存したパスワードのプライバシーを追加しました** 他のユーザーと共有しているデバイスを使用している場合や、何らかの理由でコンピューターのロックを解除したまま離席した場合に、他のユーザーが Web サイトのパスワードにアクセスできないように、デバイスのパスワードを使用した 2 段階検証を選択できます。 シンプル!
 
-**Outlook 拡張子**。  Microsoft Outlook の受信箱、予定表、タスクその他を、新規のブラウザ ウィンドウを開かずとも、その上部に表示します。  新しい Outlook 拡張機能はこちらで入手できます: [Microsoft Outlook - Microsoft Edge Addons](https://microsoftedge.microsoft.com/addons/detail/microsoft-outlook/kkpalkknhlklpbflpcpkepmmbnmfailf?hl=en-US)
+            **保存したパスワードのプライバシーを追加しました** 他のユーザーと共有しているデバイスを使用している場合や、何らかの理由でコンピューターのロックを解除したまま離席した場合に、他のユーザーが Web サイトのパスワードにアクセスできないように、デバイスのパスワードを使用した 2 段階検証を選択できます。 シンプル!
 
-**Chromium オープン ソース プロジェクトに合わせて、Microsoft Edge では表のレンダリング方法を更新しています**。 この変更で既知の問題が修正され、Microsoft Edge では表を改善し Web やその他のブラウザー間で適切にレンダリングできるようにしました。 予期しない問題が発生した場合は、環境内の重要なワークフローをテストすることをお勧めします。 詳細な説明については、[こちら](https://docs.google.com/document/d/16PFD1GtMI9Zgwu0jtPaKZJ75Q2wyZ9EZnVbBacOfiNA/edit) を参照してください。
+
+            **Outlook 拡張子**。  Microsoft Outlook の受信箱、予定表、タスクその他を、新規のブラウザ ウィンドウを開かずとも、その上部に表示します。  新しい Outlook 拡張機能はこちらで入手できます: [Microsoft Outlook - Microsoft Edge Addons](https://microsoftedge.microsoft.com/addons/detail/microsoft-outlook/kkpalkknhlklpbflpcpkepmmbnmfailf?hl=en-US)
+
+
+            **Chromium オープン ソース プロジェクトに合わせて、Microsoft Edge では表のレンダリング方法を更新しています**。 この変更で既知の問題が修正され、Microsoft Edge では表を改善し Web やその他のブラウザー間で適切にレンダリングできるようにしました。 予期しない問題が発生した場合は、環境内の重要なワークフローをテストすることをお勧めします。 詳細な説明については、[こちら](https://docs.google.com/document/d/16PFD1GtMI9Zgwu0jtPaKZJ75Q2wyZ9EZnVbBacOfiNA/edit) を参照してください。
 
 ### <a name="new-policies"></a>新しいポリシー
 
-- [AADWebSiteSSOUsingThisProfileEnabled](/DeployEdge/microsoft-edge-policies#aadwebsitessousingthisprofileenabled) 職場または学校サイトへのシングル サインオンを有効化したプロファイル
-- [AutomaticHttpsDefault](/DeployEdge/microsoft-edge-policies#automatichttpsdefault) 自動 HTTPS を構成する
-- [HeadlessModeEnabled](/DeployEdge/microsoft-edge-policies#headlessmodeenabled) ヘッドレス モードの使用を制御する
-- [InsecurePrivateNetworkRequestsAllowed](/DeployEdge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) 安全でない Web サイトが、よりプライベートなネットワーク エンドポイントに対して要求を行うことを許可するかどうかを指定します。
-- [InsecurePrivateNetworkRequestsAllowedForUrls](/DeployEdge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls) リストされたサイトが安全でないコンテキストから、よりプライベートなネットワーク エンドポイントに要求を行うことを許可する
-- [InternetExplorerIntegrationLocalSiteListExpirationDays](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays) サイトがローカル IE モード サイト リストに残る日数を指定する
-- [InternetExplorerIntegrationReloadInIEModeAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed) Internet Explorer モードで未構成のサイトを再度読み込みできるようにする
-- [SharedArrayBufferUnrestrictedAccessAllowed](/DeployEdge/microsoft-edge-policies#sharedarraybufferunrestrictedaccessallowed) 非クロスオリジン分離コンテキストで SharedArrayBuffers を使用できるかどうかを指定する
+- 
+            [AADWebSiteSSOUsingThisProfileEnabled](/DeployEdge/microsoft-edge-policies#aadwebsitessousingthisprofileenabled) 職場または学校サイトへのシングル サインオンを有効化したプロファイル
+- 
+            [AutomaticHttpsDefault](/DeployEdge/microsoft-edge-policies#automatichttpsdefault) 自動 HTTPS を構成する
+- 
+            [HeadlessModeEnabled](/DeployEdge/microsoft-edge-policies#headlessmodeenabled) ヘッドレス モードの使用を制御する
+- 
+            [InsecurePrivateNetworkRequestsAllowed](/DeployEdge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) 安全でない Web サイトが、よりプライベートなネットワーク エンドポイントに対して要求を行うことを許可するかどうかを指定します。
+- 
+            [InsecurePrivateNetworkRequestsAllowedForUrls](/DeployEdge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls) リストされたサイトが安全でないコンテキストから、よりプライベートなネットワーク エンドポイントに要求を行うことを許可する
+- 
+            [InternetExplorerIntegrationLocalSiteListExpirationDays](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays) サイトがローカル IE モード サイト リストに残る日数を指定する
+- 
+            [InternetExplorerIntegrationReloadInIEModeAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed) Internet Explorer モードで未構成のサイトを再度読み込みできるようにする
+- 
+            [SharedArrayBufferUnrestrictedAccessAllowed](/DeployEdge/microsoft-edge-policies#sharedarraybufferunrestrictedaccessallowed) 非クロスオリジン分離コンテキストで SharedArrayBuffers を使用できるかどうかを指定する
 
 ### <a name="deprecated-policy"></a>非推奨のポリシー
 
-- [InternetExplorerIntegrationTestingAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationtestingallowed) Internet Explorer モードのテストを許可する
+- 
+            [InternetExplorerIntegrationTestingAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationtestingallowed) Internet Explorer モードのテストを許可する
 
 ### <a name="obsoleted-policy"></a>廃止されたポリシー
 
-- [EnableSha1ForLocalAnchors](/DeployEdge/microsoft-edge-policies#enablesha1forlocalanchors) ローカル トラスト アンカーによって発行され、SHA-1 を使用して署名された証明書を許可する
+- 
+            [EnableSha1ForLocalAnchors](/DeployEdge/microsoft-edge-policies#enablesha1forlocalanchors) ローカル トラスト アンカーによって発行され、SHA-1 を使用して署名された証明書を許可する
 
 ## <a name="version-91086471-july-19"></a>バージョン 91.0.864.71: 7 月 19 日
 
@@ -180,18 +281,24 @@ Stable チャネルのセキュリティ更新プログラムは[こちら](/dep
 
 ### <a name="feature-updates"></a>機能更新プログラム
 
-- **プロキシ レベルで Microsoft Defender Application Guard コンテナーから発信されたネットワーク トラフィックを特定します**。 Microsoft Edge バージョン 91 以降、Application Guard コンテナーから発信されるネットワーク トラフィックにタグ付けするためのサポートが組み込まれたため、企業はそれらを識別し、特定のポリシーを適用できます。
+- 
+            **プロキシ レベルで Microsoft Defender Application Guard コンテナーから発信されたネットワーク トラフィックを特定します**。 Microsoft Edge バージョン 91 以降、Application Guard コンテナーから発信されるネットワーク トラフィックにタグ付けするためのサポートが組み込まれたため、企業はそれらを識別し、特定のポリシーを適用できます。
 
-- **ホストから Edge Application Guard コンテナーへのお気に入りの同期を許可するサポート オプション**。 Microsoft Edge バージョン 91 以降、ユーザーには、ホストからコンテナーにお気に入りを同期するように Application Guard を構成するオプションがあります。 これにより、新しいお気に入りがコンテナーにも表示されます。
+- 
+            **ホストから Edge Application Guard コンテナーへのお気に入りの同期を許可するサポート オプション**。 Microsoft Edge バージョン 91 以降、ユーザーには、ホストからコンテナーにお気に入りを同期するように Application Guard を構成するオプションがあります。 これにより、新しいお気に入りがコンテナーにも表示されます。
 
-- **Microsoft Edge バージョン 91 以降、ブラウザーは、ユーザー操作なしでダウンロードが開始され、SmartScreen アプリケーション評価チェックでサポートされない場合に、コンピューターに害を及ぼす可能性のある種類のダウンロードを自動的に中断します**。 ユーザーは、ダウンロード アイテムを右クリックして [保持] を選択することにより、上書きしてダウンロードを続行できます。 企業の管理者は、次のポリシーを構成することにより、この動作をオプトアウトできます。
-  - [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](/deployedge/microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings.md) - ドメイン上の指定されたファイルの種類のダウンロード ファイルの種類の拡張子に基づいた警告を無効にする
+- 
+            **Microsoft Edge バージョン 91 以降、ブラウザーは、ユーザー操作なしでダウンロードが開始され、SmartScreen アプリケーション評価チェックでサポートされない場合に、コンピューターに害を及ぼす可能性のある種類のダウンロードを自動的に中断します**。 ユーザーは、ダウンロード アイテムを右クリックして [保持] を選択することにより、上書きしてダウンロードを続行できます。 企業の管理者は、次のポリシーを構成することにより、この動作をオプトアウトできます。
+  - 
+            [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](/deployedge/microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings.md) - ドメイン上の指定されたファイルの種類のダウンロード ファイルの種類の拡張子に基づいた警告を無効にする
 
     詳細については、「[Microsoft Edge セキュリティのダウンロードの中断](microsoft-edge-security-downloads-interruptions.md)」を参照してください。
 
-- **音声認識 API のサポート**。 Microsoft Edge バージョン 91 以降、Google.com および同様のサイトでの音声認識コマンドの API サポートが追加されます。 この機能は、実験を有効にしたユーザーのランダムに選択されたグループに限定されます。 これらのユーザーは、機能チームにフィードバックを提供しています。
+- 
+            **音声認識 API のサポート**。 Microsoft Edge バージョン 91 以降、Google.com および同様のサイトでの音声認識コマンドの API サポートが追加されます。 この機能は、実験を有効にしたユーザーのランダムに選択されたグループに限定されます。 これらのユーザーは、機能チームにフィードバックを提供しています。
 
-- **新しいテーマの色でブラウザーをカスタマイズします**。 [設定] > [デザイン ページ] にある 14 の新しいテーマ カラーの 1 つを使用して、Microsoft Edge を独自のものにします。 Microsoft Edge アドオン サイトからカスタム テーマをインストールすることもできます。 [詳細情報](https://techcommunity.microsoft.com/t5/articles/make-microsoft-edge-your-own-with-themes/m-p/2083165)
+- 
+            **新しいテーマの色でブラウザーをカスタマイズします**。 [設定] > [デザイン ページ] にある 14 の新しいテーマ カラーの 1 つを使用して、Microsoft Edge を独自のものにします。 Microsoft Edge アドオン サイトからカスタム テーマをインストールすることもできます。 [詳細情報](https://techcommunity.microsoft.com/t5/articles/make-microsoft-edge-your-own-with-themes/m-p/2083165)
 
 ### <a name="policy-updates"></a>ポリシーの更新
 
@@ -199,16 +306,23 @@ Stable チャネルのセキュリティ更新プログラムは[こちら](/dep
 
 6 つの新しいポリシーが追加されました。 更新された管理用テンプレートを、[Microsoft Edge Enterprise のランディング ページ](https://www.microsoft.com/edge/business/download)からダウンロードしてください。 次の新しいポリシーが追加されました。
 
-- [ApplicationGuardTrafficIdentificationEnabled](/DeployEdge/microsoft-edge-policies#applicationguardtrafficidentificationenabled) - Application Guard トラフィック ID
-- [ExplicitlyAllowedNetworkPorts](/DeployEdge/microsoft-edge-policies#explicitlyallowednetworkports) - 明示的に許可されたネットワーク ポート
-- [ImportStartupPageSettings](/DeployEdge/microsoft-edge-policies#importstartuppagesettings) - スタートアップ ページ設定のインポートを許可する
-- [MathSolverEnabled](/DeployEdge/microsoft-edge-policies#mathsolverenabled) - ユーザーが数学の問題を切り取って、Microsoft Edge の段階的な説明で解決策を得ることができる
-- [NewTabPageContentEnabled](/DeployEdge/microsoft-edge-policies#newtabpagecontentenabled) - 新しいタブ ページで Microsoft ニュース コンテンツを許可する
-- [NewTabPageQuickLinksEnabled](/DeployEdge/microsoft-edge-policies#newtabpagequicklinksenabled) - 新しいタブ ページでクイック リンクを許可する
+- 
+            [ApplicationGuardTrafficIdentificationEnabled](/DeployEdge/microsoft-edge-policies#applicationguardtrafficidentificationenabled) - Application Guard トラフィック ID
+- 
+            [ExplicitlyAllowedNetworkPorts](/DeployEdge/microsoft-edge-policies#explicitlyallowednetworkports) - 明示的に許可されたネットワーク ポート
+- 
+            [ImportStartupPageSettings](/DeployEdge/microsoft-edge-policies#importstartuppagesettings) - スタートアップ ページ設定のインポートを許可する
+- 
+            [MathSolverEnabled](/DeployEdge/microsoft-edge-policies#mathsolverenabled) - ユーザーが数学の問題を切り取って、Microsoft Edge の段階的な説明で解決策を得ることができる
+- 
+            [NewTabPageContentEnabled](/DeployEdge/microsoft-edge-policies#newtabpagecontentenabled) - 新しいタブ ページで Microsoft ニュース コンテンツを許可する
+- 
+            [NewTabPageQuickLinksEnabled](/DeployEdge/microsoft-edge-policies#newtabpagequicklinksenabled) - 新しいタブ ページでクイック リンクを許可する
 
 #### <a name="obsoleted-policy"></a>非推奨ポリシー
 
-- [ProactiveAuthEnabled](./microsoft-edge-policies.md#proactiveauthenabled) - プロアクティブ認証を有効にする
+- 
+            [ProactiveAuthEnabled](./microsoft-edge-policies.md#proactiveauthenabled) - プロアクティブ認証を有効にする
 <!-- end major 91 -->
 
 ## <a name="version-90081866-may-20"></a>バージョン 90.0.818.66: 5 月 20 日
@@ -256,11 +370,14 @@ Stable チャネルのセキュリティ更新プログラムは[こちら](/dep
 
 - **キオスク モード。** Microsoft Edge バージョン 90 以降、UI の印刷設定をロックダウンして、構成済みのプリンターと [PDFに印刷] オプションのみを許可しました。 また、割り当てられたアクセスのシングル アプリ キオスク モード内で改善を行い、ブラウザーからの他のアプリケーションの起動を制限しました。 キオスク モードの機能の詳細については、[こちら](/deployedge/microsoft-edge-configure-kiosk-mode#kiosk-mode-supported-features)をご覧ください。
 
-- **ダウンロードの中断** Microsoft Edge バージョン 91 以降、ブラウザーは、ユーザー操作なしでダウンロードが開始され、SmartScreen アプリケーション評価チェックでサポートされない場合に、コンピューターに害を及ぼす可能性のある種類のダウンロードを自動的に中断します。 ユーザーは、ダウンロード アイテムを右クリックして [保持] を選択することにより、上書きしてダウンロードを続行できます。
+- 
+            **ダウンロードの中断** Microsoft Edge バージョン 91 以降、ブラウザーは、ユーザー操作なしでダウンロードが開始され、SmartScreen アプリケーション評価チェックでサポートされない場合に、コンピューターに害を及ぼす可能性のある種類のダウンロードを自動的に中断します。 ユーザーは、ダウンロード アイテムを右クリックして [保持] を選択することにより、上書きしてダウンロードを続行できます。
 企業の管理者は、次の 2 つのポリシーのいずれかでこの動作をオプトアウトできます。
-- [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](/deployedge/microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings) - ドメイン上の指定されたファイルの種類のダウンロード ファイルの種類の拡張子に基づいた警告を無効にする 詳細については、「[Microsoft Edge セキュリティのダウンロードの中断](/deployedge/microsoft-edge-security-downloads-interruptions)」を参照してください
+- 
+            [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](/deployedge/microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings) - ドメイン上の指定されたファイルの種類のダウンロード ファイルの種類の拡張子に基づいた警告を無効にする 詳細については、「[Microsoft Edge セキュリティのダウンロードの中断](/deployedge/microsoft-edge-security-downloads-interruptions)」を参照してください
 
-- **印刷**:
+- 
+            **印刷**:
 
     - **PostScript プリンターではないプリンター向けの新しい印刷ラスタライズ モード。** Microsoft Edge バージョン 90 より、管理者は新しいポリシーを使用して、ユーザーの印刷ラスタライズ モードを定義できます。 このポリシーは、Microsoft Edge が Windows 上の PostScript プリンターではないプリンターに印刷する方法を制御します。 PostScript プリンターではないプリンターの印刷ジョブが正しく印刷されるようにラスター化する必要がある場合があります。 印刷オプションには "Full (フル)" と "Fast (高速)"が表示されます。
     
@@ -272,7 +389,8 @@ Stable チャネルのセキュリティ更新プログラムは[こちら](/dep
 
     -   **ユーザーは、フォームやフィールドが候補として検出されない場合でも、オートフィル候補を検索できます。** 現在、Microsoft Edge に情報を保存している場合、オートフィル候補が自動的にポップアップ表示され、フォームに入力する時間を節約できます。 オートフィルでフォームが見つからない場合や、通常オートフィルを設定しないフォーム (一時的なフォームなど) のデータを取得する場合は、オートフィルを使用して情報を検索することができます。
 
--   **Access はメニュー バーのフライアウトからダウンロードしています。** ダウンロードは右上隅に表示され、アクティブなすべてのダウンロードが 1 か所に表示されます。 このメニューは簡単に閉じることができるので、ユーザーは作業を中断することなく、閲覧を続けることができます。また、ダウンロードの全体的な進行状況をツールバーからすぐに監視できます。 [詳しくはこちらをご覧ください](https://techcommunity.microsoft.com/t5/articles/introducing-the-new-downloads-experience/m-p/2111551)。
+-   **Access はメニュー バーのフライアウトからダウンロードしています。** ダウンロードは右上隅に表示され、アクティブなすべてのダウンロードが 1 か所に表示されます。 このメニューは簡単に閉じることができるので、ユーザーは作業を中断することなく、閲覧を続けることができます。また、ダウンロードの全体的な進行状況をツールバーからすぐに監視できます。 
+            [詳しくはこちらをご覧ください](https://techcommunity.microsoft.com/t5/articles/introducing-the-new-downloads-experience/m-p/2111551)。
 
 -   **フォント レンダリングパフォーマンスの改善。** Microsoft Edge バージョン 90 より、テキストのレンダリング機能が改善され、テキストの明瞭度が向上し、ぼやけた感じが軽減されました。 フォント レンダリングの改善の一部はベータ バージョン 90 にて適用されますが、既定では無効になっています。
 
@@ -283,26 +401,43 @@ Stable チャネルのセキュリティ更新プログラムは[こちら](/dep
 ## <a name="new-policies"></a>新しいポリシー
 
 8 つの新しいポリシーが追加されました。 更新された管理用テンプレートを、[Microsoft Edge Enterprise のランディング ページ](https://www.microsoft.com/edge/business/download)からダウンロードしてください。 次の新しいポリシーが追加されました。
--   [ApplicationGuardFaitesSyncEnabled](/DeployEdge/microsoft-edge-policies#applicationguardfavoritessyncenabled) - Application Guard のお気に入りの同期の有効化
-- [ApplicationGuardTrafficIdentificationEnabled](/DeployEdge/microsoft-edge-policies#applicationguardtrafficidentificationenabled) Application Guard トラフィック ID
-- [ExplicitlyAllowedNetworkPorts](/DeployEdge/microsoft-edge-policies#explicitlyallowednetworkports) 明示的に許可されたネットワーク ポート
-- [ImportStartupPageSettings](/DeployEdge/microsoft-edge-policies#importstartuppagesettings) スタートアップ ページ設定のインポートを許可する
-- [MathSolverEnabled](/DeployEdge/microsoft-edge-policies#mathsolverenabled) ユーザーが数学の問題を切り取って、Microsoft Edge の段階的な説明で解決策を得ることができる
-- [NewTabPageContentEnabled](/DeployEdge/microsoft-edge-policies#newtabpagecontentenabled) 新しいタブ ページで Microsoft ニュース コンテンツを許可する
-- [NewTabPageQuickLinksEnabled](/DeployEdge/microsoft-edge-policies#newtabpagequicklinksenabled) 新しいタブ ページでクイック リンクを許可する
--   [FetchKeepaliveDurationSecondsOnShutdown](/DeployEdge/microsoft-edge-policies#fetchkeepalivedurationsecondsonshutdown) - シャットダウン時にキープアライブ期間をフェッチする
--   [ManagedConfigurationPerOrigin](/DeployEdge/microsoft-edge-policies#managedconfigurationperorigin) - Web サイトの管理された構成値を特定のオリジンに設定する
--   [PrintRasterizationMode](/DeployEdge/microsoft-edge-policies#printrasterizationmode) - 印刷ラスタライズ モード
--   [QuickViewOfficeFilesEnabled](/DeployEdge/microsoft-edge-policies#quickviewofficefilesenabled) - Microsoft Edge で QuickView Office ファイル機能を管理する
--   [SSLErrorOvererrorallowedForOrigins](/DeployEdge/microsoft-edge-policies#sslerroroverrideallowedfororigins) - 特定の生成元の HTTPS 警告ページからユーザーが進むのを許可する
--   [WindowOcclusionEnabled](/DeployEdge/microsoft-edge-policies#windowocclusionenabled) - Window Occlusion を有効にする
--   [WindowsHelloForHTTPAuthEnabled](/DeployEdge/microsoft-edge-policies#windowshelloforhttpauthenabled) - HTTP 認証用 Windows Hello を有効にする
+-   
+            [ApplicationGuardFaitesSyncEnabled](/DeployEdge/microsoft-edge-policies#applicationguardfavoritessyncenabled) - Application Guard のお気に入りの同期の有効化
+- 
+            [ApplicationGuardTrafficIdentificationEnabled](/DeployEdge/microsoft-edge-policies#applicationguardtrafficidentificationenabled) Application Guard トラフィック ID
+- 
+            [ExplicitlyAllowedNetworkPorts](/DeployEdge/microsoft-edge-policies#explicitlyallowednetworkports) 明示的に許可されたネットワーク ポート
+- 
+            [ImportStartupPageSettings](/DeployEdge/microsoft-edge-policies#importstartuppagesettings) スタートアップ ページ設定のインポートを許可する
+- 
+            [MathSolverEnabled](/DeployEdge/microsoft-edge-policies#mathsolverenabled) ユーザーが数学の問題を切り取って、Microsoft Edge の段階的な説明で解決策を得ることができる
+- 
+            [NewTabPageContentEnabled](/DeployEdge/microsoft-edge-policies#newtabpagecontentenabled) 新しいタブ ページで Microsoft ニュース コンテンツを許可する
+- 
+            [NewTabPageQuickLinksEnabled](/DeployEdge/microsoft-edge-policies#newtabpagequicklinksenabled) 新しいタブ ページでクイック リンクを許可する
+-   
+            [FetchKeepaliveDurationSecondsOnShutdown](/DeployEdge/microsoft-edge-policies#fetchkeepalivedurationsecondsonshutdown) - シャットダウン時にキープアライブ期間をフェッチする
+-   
+            [ManagedConfigurationPerOrigin](/DeployEdge/microsoft-edge-policies#managedconfigurationperorigin) - Web サイトの管理された構成値を特定のオリジンに設定する
+-   
+            [PrintRasterizationMode](/DeployEdge/microsoft-edge-policies#printrasterizationmode) - 印刷ラスタライズ モード
+-   
+            [QuickViewOfficeFilesEnabled](/DeployEdge/microsoft-edge-policies#quickviewofficefilesenabled) - Microsoft Edge で QuickView Office ファイル機能を管理する
+-   
+            [SSLErrorOvererrorallowedForOrigins](/DeployEdge/microsoft-edge-policies#sslerroroverrideallowedfororigins) - 特定の生成元の HTTPS 警告ページからユーザーが進むのを許可する
+-   
+            [WindowOcclusionEnabled](/DeployEdge/microsoft-edge-policies#windowocclusionenabled) - Window Occlusion を有効にする
+-   
+            [WindowsHelloForHTTPAuthEnabled](/DeployEdge/microsoft-edge-policies#windowshelloforhttpauthenabled) - HTTP 認証用 Windows Hello を有効にする
 
 ## <a name="deprecated-policies"></a>廃止されたポリシー
 
-- [ProactiveAuthEnabled](/DeployEdge/microsoft-edge-policies#proactiveauthenabled) プロアクティブ認証を有効にする
--   [NativeWindowOcclusionEnabled](/DeployEdge/microsoft-edge-policies#nativewindowocclusionenabled) - ネイティブ ウィンドウ オクルージョンを有効にする
--   [SSLVersionMin](/DeployEdge/microsoft-edge-policies#sslversionmin) - 最小限の TLS バージョンを有効にする
+- 
+            [ProactiveAuthEnabled](/DeployEdge/microsoft-edge-policies#proactiveauthenabled) プロアクティブ認証を有効にする
+-   
+            [NativeWindowOcclusionEnabled](/DeployEdge/microsoft-edge-policies#nativewindowocclusionenabled) - ネイティブ ウィンドウ オクルージョンを有効にする
+-   
+            [SSLVersionMin](/DeployEdge/microsoft-edge-policies#sslversionmin) - 最小限の TLS バージョンを有効にする
 
 ## <a name="version-89077477-april-14"></a>バージョン 89.0.774.77: 4 月 14 日
 
@@ -363,19 +498,28 @@ Stable チャネルのセキュリティ更新プログラムは[こちら](/dep
 
 ### <a name="feature-updates"></a>機能更新プログラム
 
-- **キオスク モードでは、追加のロックダウン機能が有効になります**。 Microsoft Edge バージョン 89 から、キオスク モード内にロックダウン機能が追加され、お客様は生産性が高く、より安全なエクスペリエンスでジョブを実行できます。 [詳細はこちらをご覧ください](microsoft-edge-configure-kiosk-mode.md#kiosk-mode-supported-features)。
+- 
+            **キオスク モードでは、追加のロックダウン機能が有効になります**。 Microsoft Edge バージョン 89 から、キオスク モード内にロックダウン機能が追加され、お客様は生産性が高く、より安全なエクスペリエンスでジョブを実行できます。 
+            [詳細はこちらをご覧ください](microsoft-edge-configure-kiosk-mode.md#kiosk-mode-supported-features)。
 
-- **Enterprise Mode Site List Manager ツールは、*edge://compat* ページを経由したブラウザーで使用可能です**。 このツールを使用して、Microsoft Edge で Internet Explorer モード向けのサイト一覧 XML を作成、編集、およびエクスポートできます。 必要に応じて、グループ ポリシーを経由してこのツールへのアクセスを有効にできます。 [詳細はこちらをご覧ください](./edge-ie-mode-site-list-manager.md)。
+- 
+            **Enterprise Mode Site List Manager ツールは、*edge://compat* ページを経由したブラウザーで使用可能です**。 このツールを使用して、Microsoft Edge で Internet Explorer モード向けのサイト一覧 XML を作成、編集、およびエクスポートできます。 必要に応じて、グループ ポリシーを経由してこのツールへのアクセスを有効にできます。 
+            [詳細はこちらをご覧ください](./edge-ie-mode-site-list-manager.md)。
 
-- **タブをスリープ状態にし、ブラウザーのパフォーマンスを向上させます**。 タブをスリープすると、アクティブでないタブをスリープ状態にすることでブラウザーのパフォーマンスが向上し、メモリや CPU などのシステム リソースが解放され、アクティブなタブや他のアプリケーションで使用できます。 ユーザーは、サイトがスリープ状態になるのを防ぎ、非アクティブなタブがスリープ状態になる前の時間の長さを構成できます。 ユーザーのフローを維持するために、イントラネット サイトなど、特定のサイトがスリープ状態になるのを防ぐための[ヒューリスティック](https://techcommunity.microsoft.com/t5/articles/sleeping-tabs-faq/m-p/1705434)も用意されています。 この機能は、グループ ポリシーを使用して管理できます。
+- 
+            **タブをスリープ状態にし、ブラウザーのパフォーマンスを向上させます**。 タブをスリープすると、アクティブでないタブをスリープ状態にすることでブラウザーのパフォーマンスが向上し、メモリや CPU などのシステム リソースが解放され、アクティブなタブや他のアプリケーションで使用できます。 ユーザーは、サイトがスリープ状態になるのを防ぎ、非アクティブなタブがスリープ状態になる前の時間の長さを構成できます。 ユーザーのフローを維持するために、イントラネット サイトなど、特定のサイトがスリープ状態になるのを防ぐための[ヒューリスティック](https://techcommunity.microsoft.com/t5/articles/sleeping-tabs-faq/m-p/1705434)も用意されています。 この機能は、グループ ポリシーを使用して管理できます。
 
-- **クラウド内の Microsoft Edge 同期データを手動でリセットします**。 Microsoft Edge の同期データを製品内からリセットする方法を導入しています。 これにより、お使いのデータは、Microsoft サービスからクリアされます。また、以前ならサポートチケットを必要としていたような特定の製品の問題を解決することもできます。
+- 
+            **クラウド内の Microsoft Edge 同期データを手動でリセットします**。 Microsoft Edge の同期データを製品内からリセットする方法を導入しています。 これにより、お使いのデータは、Microsoft サービスからクリアされます。また、以前ならサポートチケットを必要としていたような特定の製品の問題を解決することもできます。
 
-- **すべての WindowsAzure Active Directory (Azure AD) アカウントに対するシングル サインオン (SSO) のインテリジェントな有効化は、単一の非 Azure AD Microsoft Edge プロファイルを持つユーザーを対象としています**。  この機能で最も便利になる可能性のあるユーザーに対して、この設定を自動的にオンにします。 ユーザーが Microsoft Edge プロファイルを 1 つしか持っていない場合 (Azure AD またはキッズ モードではない場合)、Microsoft Edge の起動時に設定が自動的にオンになります。 この自動切り替えは、ユーザーが後で Azure AD アカウントを使用して別の Microsoft Edge プロファイルにサインインすることを選択した場合にも自動的にオフになります。 ユーザーは、**[設定]、[プロファイル]、[プロファイルの設定]、[このプロファイルを使用して職場または学校のサイトへのシングル サインオンを許可する]** の順に移動し、この機能の設定を手動で更新できます。
+- 
+            **すべての WindowsAzure Active Directory (Azure AD) アカウントに対するシングル サインオン (SSO) のインテリジェントな有効化は、単一の非 Azure AD Microsoft Edge プロファイルを持つユーザーを対象としています**。  この機能で最も便利になる可能性のあるユーザーに対して、この設定を自動的にオンにします。 ユーザーが Microsoft Edge プロファイルを 1 つしか持っていない場合 (Azure AD またはキッズ モードではない場合)、Microsoft Edge の起動時に設定が自動的にオンになります。 この自動切り替えは、ユーザーが後で Azure AD アカウントを使用して別の Microsoft Edge プロファイルにサインインすることを選択した場合にも自動的にオフになります。 ユーザーは、**[設定]、[プロファイル]、[プロファイルの設定]、[このプロファイルを使用して職場または学校のサイトへのシングル サインオンを許可する]** の順に移動し、この機能の設定を手動で更新できます。
 
-- **PDF ドキュメント内でのテキストの選択エクスペリエンスが向上しました**。 ユーザーは、Microsoft Edge バージョン 89 以降で開いた PDF ドキュメント全体で、よりスムーズでより一貫性の高いテキスト選択エクスペリエンスを実現できるようになります。
+- 
+            **PDF ドキュメント内でのテキストの選択エクスペリエンスが向上しました**。 ユーザーは、Microsoft Edge バージョン 89 以降で開いた PDF ドキュメント全体で、よりスムーズでより一貫性の高いテキスト選択エクスペリエンスを実現できるようになります。
 
-- **オートフィルでサポートされる生年月日フィールド**。 現在、Microsoft Edge は、住所、名前、電話番号などのデータを自動入力することで、フォームに入力し、オンラインでアカウントを作成する場合に時間と労力を節約するのに役立ちます。Microsoft Edge バージョン 89 以降で、保存して自動入力できる別のフィールド (生年月日) のサポートが追加されています。 この情報は、プロファイル設定でいつでも表示、編集、削除できます。
+- 
+            **オートフィルでサポートされる生年月日フィールド**。 現在、Microsoft Edge は、住所、名前、電話番号などのデータを自動入力することで、フォームに入力し、オンラインでアカウントを作成する場合に時間と労力を節約するのに役立ちます。Microsoft Edge バージョン 89 以降で、保存して自動入力できる別のフィールド (生年月日) のサポートが追加されています。 この情報は、プロファイル設定でいつでも表示、編集、削除できます。
 
 ### <a name="policy-updates"></a>ポリシーの更新
 
@@ -383,21 +527,31 @@ Stable チャネルのセキュリティ更新プログラムは[こちら](/dep
 
 7 個の新しいポリシーが追加されました。 更新された管理用テンプレートを、[Microsoft Edge Enterprise のランディング ページ](https://www.microsoft.com/edge/business/download)からダウンロードしてください。 次の新しいポリシーが追加されました。
 
-- [BrowsingDataLifetime](./microsoft-edge-policies.md#browsingdatalifetime) - データの有効期間設定の参照
-- [MAMEnabled](./microsoft-edge-policies.md#mamenabled) - モバイル アプリ管理の有効化
-- [DefinePreferredLanguages](./microsoft-edge-policies.md#definepreferredlanguages) - サイトが言語をサポートしている場合に Web サイトが表示する優先言語の順序付きリストを定義する
-- [ShowRecommendationsEnabled](./microsoft-edge-policies.md#showrecommendationsenabled) - Edge からの推奨事項とプロモーション通知を許可する
-- [PrintingAllowedBackgroundGraphicsModes](./microsoft-edge-policies.md#printingallowedbackgroundgraphicsmodes) - バックグラウンド グラフィックス印刷モードを制限する
-- [PrintingBackgroundGraphicsDefault](./microsoft-edge-policies.md#printingbackgroundgraphicsdefault) - 既定の背景グラフィックス印刷モード
-- [SmartActionsBlockList](./microsoft-edge-policies.md#smartactionsblocklist) - サービスの一覧に対するスマート アクションをブロックする
+- 
+            [BrowsingDataLifetime](./microsoft-edge-policies.md#browsingdatalifetime) - データの有効期間設定の参照
+- 
+            [MAMEnabled](./microsoft-edge-policies.md#mamenabled) - モバイル アプリ管理の有効化
+- 
+            [DefinePreferredLanguages](./microsoft-edge-policies.md#definepreferredlanguages) - サイトが言語をサポートしている場合に Web サイトが表示する優先言語の順序付きリストを定義する
+- 
+            [ShowRecommendationsEnabled](./microsoft-edge-policies.md#showrecommendationsenabled) - Edge からの推奨事項とプロモーション通知を許可する
+- 
+            [PrintingAllowedBackgroundGraphicsModes](./microsoft-edge-policies.md#printingallowedbackgroundgraphicsmodes) - バックグラウンド グラフィックス印刷モードを制限する
+- 
+            [PrintingBackgroundGraphicsDefault](./microsoft-edge-policies.md#printingbackgroundgraphicsdefault) - 既定の背景グラフィックス印刷モード
+- 
+            [SmartActionsBlockList](./microsoft-edge-policies.md#smartactionsblocklist) - サービスの一覧に対するスマート アクションをブロックする
 
 #### <a name="obsoleted-policies"></a>非推奨ポリシー
 
 次のポリシーは廃止されました。
 
-- [ForceLegacyDefaultReferrerPolicy](./microsoft-edge-policies.md#forcelegacydefaultreferrerpolicy) - no-referrer-when-downgrade の既定の参照元ポリシーを使用します
-- [MetricsReportingEnabled](./microsoft-edge-policies.md#metricsreportingenabled) - 使用状況とクラッシュ関連のデータ レポートを有効にします
-- [SendSiteInfoToImproveServices](./microsoft-edge-policies.md#sendsiteinfotoimproveservices) - Microsoft サービスを向上させるためにサイト情報を送信する
+- 
+            [ForceLegacyDefaultReferrerPolicy](./microsoft-edge-policies.md#forcelegacydefaultreferrerpolicy) - no-referrer-when-downgrade の既定の参照元ポリシーを使用します
+- 
+            [MetricsReportingEnabled](./microsoft-edge-policies.md#metricsreportingenabled) - 使用状況とクラッシュ関連のデータ レポートを有効にします
+- 
+            [SendSiteInfoToImproveServices](./microsoft-edge-policies.md#sendsiteinfotoimproveservices) - Microsoft サービスを向上させるためにサイト情報を送信する
 <!-- end major 89 -->
 
 <!-- Archive from 86.0.622.43: October 15 to beta 88.0.705.81: February 25  ->

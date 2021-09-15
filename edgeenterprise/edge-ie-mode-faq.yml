@@ -4,19 +4,19 @@ metadata:
   ms.author: shisub
   author: AndreaLBarr
   manager: srugh
-  ms.date: 08/31/2021
+  ms.date: 09/31/2021
   audience: ITPro
   ms.topic: conceptual
   ms.prod: microsoft-edge
   ms.localizationpriority: medium
   ms.collection: M365-modern-desktop
   description: Microsoft Edge Internet Explorer モードのトラブルシューティングと FAQ
-  ms.openlocfilehash: 591d963ed807c65b580e74fe10ad989bdceb852e
-  ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+  ms.openlocfilehash: b332f6b7399627e91d7dd51c624c3d56f9317ee5
+  ms.sourcegitcommit: c3d63d913eb15e7dbeb9f45b5f28fc841b46bce1
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 09/12/2021
-  ms.locfileid: "11980026"
+  ms.lasthandoff: 09/15/2021
+  ms.locfileid: "12016536"
 title: IE モードのトラブルシューティングと FAQ
 summary: >
   >[!Note]
@@ -79,8 +79,7 @@ sections:
 
 
       Microsoft Edge がシステム レベルでインストールされていることを確認するには、Microsoft Edge アドレス バーに「edge://version」と入力します。 [実行可能ファイルのパス] に、*C:\Program Files...* から始まるパスが表示されます。これは、システム インストールであることを示します。 [実行可能ファイルのパス] が *C:\Users\* から始まっている場合は、Microsoft Edge をアンインストールしてから、管理者特権で再インストールします。
-  - question: >
-      エラー メッセージ: 「このページを IE モードで開くには、Microsoft Edge を再起動してみてください。」
+  - question: "\"IE モードでこのページを開く場合は、このページを再起動Microsoft Edge。"
     answer: >
       Internet Explorer で予期しないエラーが発生した場合、このエラーが表示されることがあります。 Microsoft Edge を再起動すると、通常はこのエラーが解決されます。
   - question: >
@@ -99,7 +98,18 @@ sections:
       はい、Internet Explorer 11 デスクトップ アプリケーションは廃止され、2022 年 6 月 15 日にサポートが終了します (範囲の一覧については、「ライフサイクルに関する[FAQ - Internet Explorer」を参照してください](https://support.microsoft.com/help/17454/)。現在使用しているのと同じ IE11 アプリとサイトは、Microsoft EdgeモードInternet Explorerできます。 [こちらをご覧ください](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)。
   - question: >
       デバイスで IE モードを使用している間に、従来のアプリケーションをデバッグMicrosoft Edge?
-    answer: "IEChooser を使用して、DevTools Internet Explorerを起動して、IE モード タブのコンテンツをデバッグできます。 IEChooser を使用するには、次の手順を実行します。\n1. IEChooser を開きます。\n    - [ファイル名を指定して実行] ダイアログ ボックスを開きます。 たとえば、 を押 `Windows logo key`  +  `R` します。\n    - を `%systemroot%\\system32\\f12\\IEChooser.exe` 入力し **、[OK] を選択します**。\n2. IEChooser で、[IE モード] タブのエントリを選択します。\n  \n"
+    answer: >
+      IEChooser を使用して、DevTools Internet Explorerを起動して、IE モード タブのコンテンツをデバッグできます。 IEChooser を使用するには、次の手順を実行します。
+
+      1. IEChooser を開きます。
+          - [ファイル名を指定して実行] ダイアログ ボックスを開きます。 たとえば、 を押 `Windows logo key`  +  `R` します。
+          - を `%systemroot%\system32\f12\IEChooser.exe` 入力し **、[OK] を選択します**。
+      2. IEChooser で、[IE モード] タブのエントリを選択します。
+  - question: ネットワーク モード サイト一覧で IE Microsoft Edge開く構成の間に、サイトをテストEnterpriseできますか?
+    answer: >-
+      はい、従来のサイトを最新化している間は、IE モードで構成されたアプリケーションをテストMicrosoft Edge。 これを実現するには、コマンド ライン フラグMicrosoft Edgeを `--ie-mode-test` 実行します。 他のインスタンスが実行Microsoft Edgeしてください。
+
+      次に、[その他のツール設定エッジ モードでサイトを開く> >を選択します(省略記号アイコン ...)。
   - question: >
       IE モードで SharePoint で [エクスプローラー​​で開く] または [エクスプローラーで表示] を使用できますか?
     answer: >

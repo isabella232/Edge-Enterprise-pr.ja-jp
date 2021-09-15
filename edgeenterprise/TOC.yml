@@ -1,10 +1,8 @@
-# last revised 05/03/2021 
+# last revised 09/09/2021 
 - name: Microsoft Edge エンタープライズのドキュメント
   href: index.yml
 - name: Microsoft Edge ドキュメント
   href: /microsoft-edge/
-- name: Microsoft Edge コンテンツの更新プログラム
-  href: microsoft-edge-content-updates.md
 - name: Microsoft Edge の使用を開始する
   items:
     - name: Microsoft Edge チャネルの詳細

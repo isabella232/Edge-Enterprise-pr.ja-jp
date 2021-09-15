@@ -1,25 +1,26 @@
 ---
 title: Microsoft Edge エンタープライズの同期を構成する
 ms.author: collw
-author: dan-wesley
+author: AndreaLBarr
 manager: silvanam
-ms.date: 06/28/2021
+ms.date: 09/07/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: お気に入り、パスワード、およびその他のブラウザー データを同期するように Microsoft Edge を構成するための管理者およびユーザー オプション。
-ms.openlocfilehash: ea5a9c3b4433aef1c87e2416da90774f7efce85582334c30cd5174b62b1cd0eb
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 5caec237eebcd18a83b8f32d638ace2fa2914e38
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11727350"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11980276"
 ---
 # <a name="configure-microsoft-edge-enterprise-sync"></a>Microsoft Edge エンタープライズの同期を構成する
 
-この記事では、管理者が Microsoft Edge を構成して、サインインしているすべてのデバイス間でユーザーのお気に入り、パスワード、その他のブラウザー データを同期する方法について説明します。管理者でない場合は、サインインしてデバイス間で Microsoft Edge を同期する方法についてこの記事にアクセスしてください。 [サインインして、デバイス間で Microsoft Edge を同期します](https://support.microsoft.com/microsoft-edge/sign-in-to-sync-microsoft-edge-across-devices-e6ffa79b-ed52-aa32-47e2-5d5597fe4674)。
+この記事では、管理者が Microsoft Edge を構成して、サインインしているすべてのデバイス間でユーザーのお気に入り、パスワード、その他のブラウザー データを同期する方法について説明します。管理者でない場合は、サインインしてデバイス間で Microsoft Edge を同期する方法についてこの記事にアクセスしてください。 
+            [サインインして、デバイス間で Microsoft Edge を同期します](https://support.microsoft.com/microsoft-edge/sign-in-to-sync-microsoft-edge-across-devices-e6ffa79b-ed52-aa32-47e2-5d5597fe4674)。
 
 > [!NOTE]
 > この記事は、特に指定されない限り、Microsoft Edge バージョン 77 以降に適用されます。
@@ -47,7 +48,7 @@ Microsoft Edge の同期を使用すると、ユーザーは、サインイン�
 Azure Active Directory (Azure AD) アカウントでの Microsoft Edge の同期は、次のサブスクリプションのいずれかで使用できます。
 
 - Azure AD Premium (P1 または P2)
-- Microsoft 365 Business Premium
+- M365 Business プレミアム、Business Standard、または Business Basic
 - Office 365 E1 以上
 - Azure Information Protection (AIP) (P1 または P2)
 - すべての EDU サブスクリプション (学生または教職員向けの Microsoft Apps、学生または教職員向けの Exchange Online、O365 A1 以上、M365 A1 以上、学生または教職員向けの Azure Information Protection P1 または P2)
@@ -56,12 +57,18 @@ Azure Active Directory (Azure AD) アカウントでの Microsoft Edge の同期
 
 管理者は、Microsoft Edge の同期を構成および管理するために、次のグループ ポリシーを使用できます。
 
-- [SyncDisabled](./microsoft-edge-policies.md#syncdisabled): 同期を完全に無効にします。
-- [SavingBrowserHistoryDisabled](./microsoft-edge-policies.md#savingbrowserhistorydisabled): 閲覧の履歴と同期の保存を無効にします。このポリシーにより、オープン タブの同期も無効になります。
-- [AllowDeletingBrowserHistory](./microsoft-edge-policies.md#allowdeletingbrowserhistory): このポリシーを無効に設定すると、履歴の同期も無効になります。
-- [SyncTypesListDisabled](./microsoft-edge-policies.md#synctypeslistdisabled): 同期から除外されるタイプの一覧を構成します。
-- [RoamingProfileSupportEnabled](./microsoft-edge-policies.md#roamingprofilesupportenabled): Active Directory (AD) プロファイルがオンプレミスの記憶域を使用できるようにします。 詳細については、「[Active Directory (AD) ユーザー用のオンプレミス同期](./microsoft-edge-on-premises-sync.md)」を参照してください。
-- [ForceSync](/deployedge/microsoft-edge-policies#forcesync): 既定で同期をオンにします。同期にはユーザーの同意を必要としません。  
+- 
+            [SyncDisabled](./microsoft-edge-policies.md#syncdisabled): 同期を完全に無効にします。
+- 
+            [SavingBrowserHistoryDisabled](./microsoft-edge-policies.md#savingbrowserhistorydisabled): 閲覧の履歴と同期の保存を無効にします。このポリシーにより、オープン タブの同期も無効になります。
+- 
+            [AllowDeletingBrowserHistory](./microsoft-edge-policies.md#allowdeletingbrowserhistory): このポリシーを無効に設定すると、履歴の同期も無効になります。
+- 
+            [SyncTypesListDisabled](./microsoft-edge-policies.md#synctypeslistdisabled): 同期から除外されるタイプの一覧を構成します。
+- 
+            [RoamingProfileSupportEnabled](./microsoft-edge-policies.md#roamingprofilesupportenabled): Active Directory (AD) プロファイルがオンプレミスの記憶域を使用できるようにします。 詳細については、「[Active Directory (AD) ユーザー用のオンプレミス同期](./microsoft-edge-on-premises-sync.md)」を参照してください。
+- 
+            [ForceSync](/deployedge/microsoft-edge-policies#forcesync): 既定で同期をオンにします。同期にはユーザーの同意を必要としません。  
 
 ## <a name="configure-microsoft-edge-sync"></a>Microsoft Edge を構成する
 
