@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
-ms.openlocfilehash: cd59eca6d07284c61a0c61537f45d36771d133f3
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 44dac3dd6bb489ac43e50433319b0a7908495df5
+ms.sourcegitcommit: 6eefb7cb134f25a1e2d1f515a3a8600524a4b6e3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979946"
+ms.lasthandoff: 09/16/2021
+ms.locfileid: "12017991"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - ポリシー
 
@@ -254,7 +254,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[SmartScreenEnabled](#smartscreenenabled)|Microsoft Defender SmartScreen を構成する|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|信頼のおけるソースからのダウンロードに対して Microsoft Defender SmartScreen のチェックを強制する|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Microsoft Defender SmartScreen を構成して望ましくない可能性のあるアプリをブロックする|
-### [*<a name="startup-home-page-and-new-tab-page"></a>スタートアップ &comma; ホーム ページ、新規タブ ページ*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startupcomma-home-page-and-new-tab-page"></a>スタートアップ &comma; ホーム ページ、新規タブ ページ*](#startup-home-page-and-new-tab-page-policies)
 
 |ポリシー名|キャプション|
 |-|-|
@@ -680,7 +680,8 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
 
   このポリシーにより、アプリケーションガードが有効になっている Microsoft Edge コンピューター/デバイスは、お気に入りが一致するように、ホストからコンテナーにお気に入りを同期できます。
 
-[Managed Favorites](#managedfavorites) が構成されている場合、それらのお気に入りもコンテナーに同期されます。
+
+            [Managed Favorites](#managedfavorites) が構成されている場合、それらのお気に入りもコンテナーに同期されます。
 
 このポリシーを有効にした場合、コンテナー内のお気に入りの編集は無効になります。 そのため、コンテナー ブラウザーの UI で[お気に入りの追加]、および [お気に入りフォルダーの追加] ボタンがぼやけて表示されます。
 
@@ -1223,7 +1224,8 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
 
 有効な URL パターンの詳細については、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) をご覧ください。 * は、このポリシーで承認された値ではありません。
 
-[RestoreOnStartup](#restoreonstartup) ポリシーを設定して以前のセッションから URL を復元する場合、このポリシーは無視され、それらのサイトについての Cookie は永続的に保管されます。
+
+            [RestoreOnStartup](#restoreonstartup) ポリシーを設定して以前のセッションから URL を復元する場合、このポリシーは無視され、それらのサイトについての Cookie は永続的に保管されます。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -1706,7 +1708,8 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 JavaScript JIT を無効にすると、Microsoft Edge Web コンテンツのレンダリングが遅くなる可能性があり、WebAssembly を含む JavaScript の一部も無効になる可能性があります。 JavaScript JIT を無効にすると、Microsoft Edge 構成で Web コンテンツをレンダリングできる場合があります。
 
-[JavaScriptJitAllowedForSites](#javascriptjitallowedforsites) および [JavaScriptJitBlockedForSites](#javascriptjitblockedforsites) ポリシーを使用して、特定の URL パターンに対してこのポリシーをオーバーライドできます。
+
+            [JavaScriptJitAllowedForSites](#javascriptjitallowedforsites) および [JavaScriptJitBlockedForSites](#javascriptjitblockedforsites) ポリシーを使用して、特定の URL パターンに対してこのポリシーをオーバーライドできます。
 
 このポリシーを構成しない場合、JavaScript JIT が有効になります。
 
@@ -1914,7 +1917,8 @@ JavaScript JIT を無効にすると、Microsoft Edge Web コンテンツのレ�
 
   Flash は Microsoft Edge でサポートされなくなったため、このポリシーは機能しません。
 
-[PluginsAllowedForUrls](#pluginsallowedforurls) と [PluginsBlockedForUrls](#pluginsblockedforurls) が最初にチェックされ、その後、このポリシーがあります。 [ClickToPlay] と [BlockPlugins] のどちらかを選択できます。 このポリシーを ' BlockPlugins ' に設定すると、すべての web サイトでこのプラグインが拒否されます。 [ClickToPlay] は、フラッシュプラグインを実行しますが、ユーザーはプレースホルダーをクリックして起動します。
+
+            [PluginsAllowedForUrls](#pluginsallowedforurls) と [PluginsBlockedForUrls](#pluginsblockedforurls) が最初にチェックされ、その後、このポリシーがあります。 [ClickToPlay] と [BlockPlugins] のどちらかを選択できます。 このポリシーを ' BlockPlugins ' に設定すると、すべての web サイトでこのプラグインが拒否されます。 [ClickToPlay] は、フラッシュプラグインを実行しますが、ユーザーはプレースホルダーをクリックして起動します。
 
 このポリシーを構成していない場合、ユーザーはこの設定を手動で変更することができます。
 
@@ -3086,7 +3090,8 @@ Microsoft Edge バージョン 95 では機能しません。 従来の Cookie �
 
 このポリシーを設定していない場合、グローバルな既定値が使用されます。 グローバルな既定値では、指定したパターンの対象外ドメインの Cookie にも使用されます。
 
-グローバル既定値は、非推奨 Microsoft Edge [LegacySameSiteBehaviorEnabled](#legacysamesitecookiebehaviorenabled)ポリシーを使用してバージョン 95 から構成できます。 [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled) が設定されていない場合、グローバルな既定値がその他の構成ソースにフォールバックします。
+グローバル既定値は、非推奨 Microsoft Edge [LegacySameSiteBehaviorEnabled](#legacysamesitecookiebehaviorenabled)ポリシーを使用してバージョン 95 から構成できます。 
+            [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled) が設定されていない場合、グローバルな既定値がその他の構成ソースにフォールバックします。
 
 このポリシーにリスト化したパターンは URL ではなくドメインとして扱われるので、スキームやポートを指定することはできません。
 
@@ -5062,7 +5067,8 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 
 このリストの各項目は、拡張子スタイルの一致パターンです ([https://go.microsoft.com/fwlink/?linkid=2095039](https://go.microsoft.com/fwlink/?linkid=2095039) を参照してください)。 ユーザーは、このリストの項目に一致する URL から簡単にアイテムをインストールすることができます。 *.crx ファイルの場所と、ダウンロードを開始するページ (つまり参照元) の両方が、これらのパターンで許可されている必要があります。 認証が必要な場所では、ファイルをホストしないでください。
 
-[ExtensionInstallBlocklist](#extensioninstallblocklist) ポリシーは、このポリシーよりも優先されます。 ブロック リストに登録されている拡張機能は、このリストに登録されているサイトからのものであっても、インストールされません。
+
+            [ExtensionInstallBlocklist](#extensioninstallblocklist) ポリシーは、このポリシーよりも優先されます。 ブロック リストに登録されている拡張機能は、このリストに登録されているサイトからのものであっても、インストールされません。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -5615,7 +5621,8 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
 このポリシーを無効にした場合は、基本認証スキームでセキュリティ保護されていない HTTP 要求はブロックされ、セキュリティで保護された HTTPS だけが許可されます。
 
-[AuthSchemes](#authschemes) ポリシーが設定され、「基本」 がない場合、このポリシー設定は無視されます (さらに、「基本」 は常時許可されません)。
+
+            [AuthSchemes](#authschemes) ポリシーが設定され、「基本」 がない場合、このポリシー設定は無視されます (さらに、「基本」 は常時許可されません)。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -5897,7 +5904,8 @@ Samba と Windows Server の最新バージョンは、すべて NTLMv2 をサ�
 
   暗黙的なサインインを許可/禁止するには、このポリシーを構成します。
 
-[BrowserSignin](#browsersignin) ポリシーを 'ブラウザーサインインを無効にする' に構成した場合、このポリシーは無効になります。
+
+            [BrowserSignin](#browsersignin) ポリシーを 'ブラウザーサインインを無効にする' に構成した場合、このポリシーは無効になります。
 
 この設定を有効にした場合、または構成しなかった場合、暗黙的なサインインが有効になり、Edge は、ユーザーが OS にサインインする内容と方法に基づいて、ユーザーをプロファイルにサインインしようとします。
 
@@ -6856,7 +6864,8 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 
   パスワード保護の警告をいつトリガーするかを制御することができます。 パスワード保護は、保護されたパスワードを疑わしい可能性があるサイトで再利用する場合にユーザーに警告を表示します。
 
-[PasswordProtectionLoginURLs](#passwordprotectionloginurls) と [PasswordProtectionChangePasswordURL](#passwordprotectionchangepasswordurl) ポリシーを使用して、保護するパスワードを構成することができます。
+
+            [PasswordProtectionLoginURLs](#passwordprotectionloginurls) と [PasswordProtectionChangePasswordURL](#passwordprotectionchangepasswordurl) ポリシーを使用して、保護するパスワードを構成することができます。
 
 例外: [PasswordProtectionLoginURLs](#passwordprotectionloginurls)、[PasswordProtectionChangePasswordURL](#passwordprotectionchangepasswordurl)、[SmartScreenAllowListDomains](#smartscreenallowlistdomains) にリストされているサイトのパスワードは、パスワード保護の警告をトリガーしません。
 
@@ -7907,7 +7916,8 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 2) IP アドレスがプライベートで、もう一方がパブリックの場合。
 今後、仕様の変化に応じて、このポリシーがプライベート IP、またはローカル ホストに移行するすべてのクロスオリジン要求に適用されることがあります。
 
-https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts で保護されたコンテキストの定義を満たす場合、Web サイトがセキュリティで保護されていると見なされます。 それ以外の場合は、安全でないコンテキストとして扱われます。
+
+            https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts で保護されたコンテキストの定義を満たす場合、Web サイトがセキュリティで保護されていると見なされます。 それ以外の場合は、安全でないコンテキストとして扱われます。
 
 このポリシーが設定されていないか、false に設定されている場合、安全でないコンテキストからの要求に対する既定の動作は、ユーザーの BlockInsecurePrivateNetworkRequests 機能の個人用構成によって異なります。これは、フィールド試用版またはコマンド ラインで設定できます。
 
@@ -8122,8 +8132,10 @@ Microsoft Edge がプロキシをバイパスするホストの一覧を定義�
   * auto_detect = プロキシ サーバーを自動検出する
 
 以下を選択して使用する場合:
-  * fixed_servers = 固定プロキシ サーバー。 [ProxyServer](#proxyserver) と [ProxyBypassList](#proxybypasslist) を使用してさらにオプションを指定することができます。
-  * pac_script = .pac プロキシ スクリプト。 [ProxyPacUrl](#proxypacurl) を使用して、プロキシ .pac ファイルの URL を設定します。
+  * fixed_servers = 固定プロキシ サーバー。 
+            [ProxyServer](#proxyserver) と [ProxyBypassList](#proxybypasslist) を使用してさらにオプションを指定することができます。
+  * pac_script = .pac プロキシ スクリプト。 
+            [ProxyPacUrl](#proxypacurl) を使用して、プロキシ .pac ファイルの URL を設定します。
 
 詳細な例については、「[https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936)」を参照してください。
 
@@ -8343,12 +8355,21 @@ Microsoft Edge がプロキシをバイパスするホストの一覧を定義�
 
 このポリシーは以下のポリシーを個別に上書きします。
 
-[ProxyMode](#proxymode)
-[ProxyPacUrl](#proxypacurl)
-[ProxyServer](#proxyserver)
-[ProxyBypassList](#proxybypasslist)
 
-[ProxySettings](#proxysettings) ポリシーの設定は、以下のフィールドを受け入れます。
+            [ProxyMode](#proxymode)
+            
+
+            [ProxyPacUrl](#proxypacurl)
+            
+
+            [ProxyServer](#proxyserver)
+            
+
+            [ProxyBypassList](#proxybypasslist)
+          
+
+
+            [ProxySettings](#proxysettings) ポリシーの設定は、以下のフィールドを受け入れます。
   * Microsoft Edge で使用するプロキシ サーバーを指定し、ユーザーがプロキシの設定を変更できないようにする ProxyMode
   * ProxyPacUrl、プロキシ .pac ファイルへの URL
   * ProxyPacMandatory。無効な PAC スクリプトまたは使用できない PAC スクリプトを使用して、ネットワーク スタックが直接接続にフォールバックするのを防ぎます
@@ -9041,7 +9062,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
   [ページのトップへ](#microsoft-edge---policies)
 
-  ## <a name="startup-home-page-and-new-tab-page-policies"></a>スタートアップ &comma; ホーム ページ、新規タブ ページに関するポリシー
+  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>スタートアップ &comma; ホーム ページ、新規タブ ページに関するポリシー
 
   [ページのトップへ](#microsoft-edge---policies)
 
@@ -11475,7 +11496,8 @@ SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
 
   #### <a name="description"></a>説明
 
-  [AutoOpenFileTypes](#autoopenfiletypes) が適用される URL の一覧。 このポリシーは、ダウンロード シェルフ... > [常にこの種類のファイルを開く] メニュー エントリを介してユーザーが設定した自動的に開く値には影響しません。
+  
+            [AutoOpenFileTypes](#autoopenfiletypes) が適用される URL の一覧。 このポリシーは、ダウンロード シェルフ... > [常にこの種類のファイルを開く] メニュー エントリを介してユーザーが設定した自動的に開く値には影響しません。
 
 このポリシーで URL を設定すると、URL がこのセットの一部であり、ファイルの種類が [AutoOpenFileTypes](#autoopenfiletypes) に記載されている場合にのみ、ポリシーによってファイルが自動的に開きます。 いずれかの条件が false の場合、ダウンロードはポリシーによって自動的に開かれません。
 
@@ -11552,7 +11574,8 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = ".exact.hostname.com
 
   このポリシーは、ダウンロード時に自動的に開く必要があるファイルの種類の一覧を設定します。 注: ファイルの種類を記載するときは、先頭の区切り記号を含めないでください。したがって、".txt" の代わりに "txt" のようにしてください。
 
-既定では、これらのファイルの種類はすべての URL で自動的に開かれます。 [AutoOpenAllowedForURLs](#autoopenallowedforurls) ポリシーを使用して、これらのファイルの種類を自動的に開く URL を制限できます。
+既定では、これらのファイルの種類はすべての URL で自動的に開かれます。 
+            [AutoOpenAllowedForURLs](#autoopenallowedforurls) ポリシーを使用して、これらのファイルの種類を自動的に開く URL を制限できます。
 
 自動的に開く必要があるファイルの種類は、有効になっている Microsoft Defender SmartScreen チェックに従い、チェックに失敗した場合は開きません。
 
@@ -12214,7 +12237,8 @@ SOFTWARE\Policies\Microsoft\Edge\AutoplayAllowlist\2 = "[*.]contoso.edu"
 
   #### <a name="description"></a>説明
 
-  **プロファイルの追加**オプションを使用して、ユーザーが新しいプロファイルを作成できるようにします。
+  
+            **プロファイルの追加**オプションを使用して、ユーザーが新しいプロファイルを作成できるようにします。
 このポリシーを有効にしているか、構成していない場合、Microsoft Edge では、ユーザーが [ID] ポップアップ メニューの**プロファイルの追加**や [設定] ページを使用して新しいプロファイルを作成できるようになります。
 
 このポリシーを無効にしている場合、ユーザーは [ID] ポップアップ メニューや [設定] ページから新しいプロファイルを追加することができなくなります。
@@ -12405,7 +12429,8 @@ SOFTWARE\Policies\Microsoft\Edge\AutoplayAllowlist\2 = "[*.]contoso.edu"
 
 このポリシーを 「有効にする」 に設定している場合、ユーザーはブラウザーにサインインできるようになります。 ブラウザーにサインインしても、既定で同期がオンになっているわけではありません。この機能を使用するには、ユーザーが別途オプトインする必要があります。
 
-このポリシーを "強制する" に設定している場合、ユーザーがブラウザーを使用するには、プロファイルにサインインする必要があります。 ドメイン管理者によって同期が無効にされているか、または [SyncDisabled](#syncdisabled) ポリシーで同期が無効にされていない限り、既定ではこれによりユーザーが自分のアカウントに同期するかどうかを選択できるようになります。 [BrowserGuestModeEnabled](#browserguestmodeenabled) ポリシーの既定値は、false に設定されています。
+このポリシーを "強制する" に設定している場合、ユーザーがブラウザーを使用するには、プロファイルにサインインする必要があります。 ドメイン管理者によって同期が無効にされているか、または [SyncDisabled](#syncdisabled) ポリシーで同期が無効にされていない限り、既定ではこれによりユーザーが自分のアカウントに同期するかどうかを選択できるようになります。 
+            [BrowserGuestModeEnabled](#browserguestmodeenabled) ポリシーの既定値は、false に設定されています。
 
 このポリシーを構成していない場合、ユーザーはブラウザーへのサインイン オプションを有効にするかどうかを決定し、適切な方法で使用することができます。
 
@@ -12894,7 +12919,10 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
 
 このポリシーでは、指定された URL のホスト名のついての証明書を、証明書の透明性を介して開示しないようにします。 これにより、適適切に開示されていなかったために信頼されていなかった証明書を使用することができるようになりますが、これらのホストに対して発行された証明書の誤発行を検出することが難しくなります。
 
-[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) に従って、URL パターンを形成します。 証明書は、スキーム、ポート、パスに関係なく指定されたホスト名に対して有効であるため、URL のホスト名の部分のみが考慮されます。 ワイルドカード ホストはサポートされていません。
+
+            [
+              https://go.microsoft.com/fwlink/?linkid=2095322
+            ](https://go.microsoft.com/fwlink/?linkid=2095322) に従って、URL パターンを形成します。 証明書は、スキーム、ポート、パスに関係なく指定されたホスト名に対して有効であるため、URL のホスト名の部分のみが考慮されます。 ワイルドカード ホストはサポートされていません。
 
 このポリシーを構成していない場合、証明書の透明性を介して公開されている必要がある証明書が、公開されていない場合、信頼されていないものとして扱われます。
 
@@ -13529,7 +13557,8 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\7 = "sen
 
 起動させるたびに、実行された最初のプロファイルがサインインしていないか、または以前に自動サインインが行われていない限り、Microsoft Edge はこのポリシーを使用してサインインを試みようとします。
 
-[BrowserSignin](#browsersignin) ポリシーを無効として構成している場合、このポリシーは有効になりません。
+
+            [BrowserSignin](#browsersignin) ポリシーを無効として構成している場合、このポリシーは有効になりません。
 
 このポリシーを有効にし、"SignInAndMakeDomainAccountNonRemovable" に設定している場合、Microsoft Edge は、ドメインに参加しているコンピューターにいるユーザーを Active Directory アカウントを使用して自動的にサインインさせます。
 
@@ -13723,7 +13752,9 @@ Microsoft Edge 94 以降、ポリシー [OnlyOnPremisesImplicitSigninEnabled](#o
 
   #### <a name="configure-the-view-in-file-explorer-feature-for-sharepoint-pages-in-microsoft-edge"></a>Microsoft Edge で SharePoint ページの "エクスプローラーで表示" 機能を構成する
 
-  
+> [!NOTE]
+> 現在のところ、ConfigureViewInFileExplorer ポリシーは、Microsoft Active Directory ドメインに参加している Windows インスタンス、デバイス管理に登録されている Windows 10 Pro または Enterprise インスタンスにのみ適用できます。
+
   
   #### <a name="supported-versions"></a>サポートされているバージョン:
 
@@ -14068,7 +14099,8 @@ Windows 管理者への注意: このポリシーは、Windows 7 を実行して
 
 ポリシーを1に設定すると、web サイトがセンサーにアクセスして使用できるようになります。 ポリシーを2に設定すると、センサーへのアクセスが拒否されます。
 
-[SensorsAllowedForUrls](#sensorsallowedforurls)および[SensorsBlockedForUrls](#sensorsblockedforurls)ポリシーを使用して、 特定の URL パターンに対するこのポリシーを上書きできます。
+
+            [SensorsAllowedForUrls](#sensorsallowedforurls)および[SensorsBlockedForUrls](#sensorsblockedforurls)ポリシーを使用して、 特定の URL パターンに対するこのポリシーを上書きできます。
 
 このポリシーを構成していない場合、web サイトはセンサーにアクセスして使用することができますが、ユーザーはこの設定を変更できます。 これは、 [SensorsAllowedForUrls](#sensorsallowedforurls)および [SensorsBlockedForUrls](#sensorsblockedforurls)のグローバル既定値です。
 
@@ -14617,7 +14649,8 @@ DirectInvoke の詳細については、「[https://go.microsoft.com/fwlink/?lin
 
 このポリシーを設定していないか、無効にしている場合、Web ページが WebGL API を使用したり、プラグインが Pepper 3D API を使用したりすることができるようになる可能性があります。 既定では、Microsoft Edge にはこれらの API を使用するためにコマンドライン引数を渡す必要がある可能性があります。
 
-[HardwareAccelerationModeEnabled](#hardwareaccelerationmodeenabled) ポリシーが false に設定されている場合、"Disable3DAPIs" ポリシーの設定は無視されます。これは、"Disable3DAPIs" ポリシーを true に設定した場合と同じです。
+
+            [HardwareAccelerationModeEnabled](#hardwareaccelerationmodeenabled) ポリシーが false に設定されている場合、"Disable3DAPIs" ポリシーの設定は無視されます。これは、"Disable3DAPIs" ポリシーを true に設定した場合と同じです。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -14945,9 +14978,11 @@ DirectInvoke の詳細については、「[https://go.microsoft.com/fwlink/?lin
 
   目的の DNS over HTTPS リゾルバーの URI テンプレートです。 複数の DNS over HTTPS リゾルバーを指定するには、対応する URI テンプレートをスペースで区切ります。
 
-[DnsOverHttpsMode](#dnsoverhttpsmode) を "保護" に設定している場合、このポリシーを設定する必要があり、空にすることはできません。
 
-[DnsOverHttpsMode](#dnsoverhttpsmode) を "自動" に設定し、このポリシーが設定されている場合、指定された URI テンプレートが使用されます。 このポリシーを設定していない場合、ハードコードされたマッピングを使用して、ユーザーの現在の DNS リゾルバーを同じプロバイダーが運用している DoH リゾルバーへとアップグレードしようとします。
+            [DnsOverHttpsMode](#dnsoverhttpsmode) を "保護" に設定している場合、このポリシーを設定する必要があり、空にすることはできません。
+
+
+            [DnsOverHttpsMode](#dnsoverhttpsmode) を "自動" に設定し、このポリシーが設定されている場合、指定された URI テンプレートが使用されます。 このポリシーを設定していない場合、ハードコードされたマッピングを使用して、ユーザーの現在の DNS リゾルバーを同じプロバイダーが運用している DoH リゾルバーへとアップグレードしようとします。
 
 URI テンプレートが dns 変数を含んでいる場合、リゾルバーへの要求は GET を使用します。それ以外の場合には、要求は POST を使用します。
 
@@ -16660,9 +16695,11 @@ Microsoft Edge の既定の参照元ポリシーは、no-referrer-when-downgrade
 
 このポリシーを構成しない場合、ユーザーは同期をオンまたはオフにすることができます。 このポリシーを有効にした場合、ユーザーは同期をオフにすることはできません。
 
-このポリシーが意図したとおりに動作するためには、 [BrowserSignin](#browsersignin) ポリシーが構成されていないか、または有効に設定する必要があります。 [BrowserSignin](#browsersignin) が無効に設定されている場合、[ForceSync](#forcesync) は有効になりません。
+このポリシーが意図したとおりに動作するためには、 [BrowserSignin](#browsersignin) ポリシーが構成されていないか、または有効に設定する必要があります。 
+            [BrowserSignin](#browsersignin) が無効に設定されている場合、[ForceSync](#forcesync) は有効になりません。
 
-[SyncDisabled](#syncdisabled)を構成することはできません。または False に設定する必要があります。  この設定が True に設定されている場合、 [ForceSync](#forcesync) は有効になりません。
+
+            [SyncDisabled](#syncdisabled)を構成することはできません。または False に設定する必要があります。  この設定が True に設定されている場合、 [ForceSync](#forcesync) は有効になりません。
 
 0 = 自動的に同期が開始されず、同期の同意が表示されない(既定) 1 = Azure AD/Azure AD-Degradedユーザープロファイルに対して強制的に同期を有効にする-同期の同意のプロンプトが表示されない
 
@@ -17182,25 +17219,47 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 - Windows アカウントが Azure AD または MSA の種類の場合でも、ユーザーは自動的に Microsoft Edge へとサインインします。
 
-- 同期は既定では有効になりません。ユーザーはブラウザーの起動時に同期するかどうかを選択するように求められます。 [ForceSync](#forcesync) または [SyncDisabled](#syncdisabled) ポリシーを使用して、同期および同期の同意プロンプトを構成できます。
+- 同期は既定では有効になりません。ユーザーはブラウザーの起動時に同期するかどうかを選択するように求められます。 
+            [ForceSync](#forcesync) または [SyncDisabled](#syncdisabled) ポリシーを使用して、同期および同期の同意プロンプトを構成できます。
 
 このポリシーを無効にしているか、構成していない場合、初回実行時のエクスペリエンスとスプラッシュ画面は表示されます。
 
 注: 初回実行時のエクスペリエンスでユーザーに表示される特定の構成オプションは、その他の特定のポリシーを使用して管理することもできます。 これらのポリシーと組み合わせて HideFirstRunExperience ポリシーを使用して、管理対象デバイスで特定のブラウザー エクスペリエンスを構成することができます。 その他のポリシーには、次のものがあります。
 
--[AutoImportAtFirstRun](#autoimportatfirstrun)
 
--[NewTabPageLocation](#newtabpagelocation)
+            -
+            [AutoImportAtFirstRun](#autoimportatfirstrun)
+          
 
--[NewTabPageSetFeedType](#newtabpagesetfeedtype)
 
--[ForceSync](#forcesync)
+            -
+            [NewTabPageLocation](#newtabpagelocation)
+          
 
--[SyncDisabled](#syncdisabled)
 
--[BrowserSignin](#browsersignin)
+            -
+            [NewTabPageSetFeedType](#newtabpagesetfeedtype)
+          
 
--[NonRemovableProfileEnabled](#nonremovableprofileenabled)
+
+            -
+            [ForceSync](#forcesync)
+          
+
+
+            -
+            [SyncDisabled](#syncdisabled)
+          
+
+
+            -
+            [BrowserSignin](#browsersignin)
+          
+
+
+            -
+            [NonRemovableProfileEnabled](#nonremovableprofileenabled)
+          
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -17325,7 +17384,8 @@ Internet Explorer で互換性のない Web サイトに遭遇した場合、ユ
 
 このポリシーは、推奨として設定することができます。 これは、Microsoft Edge が初回実行時にオートフィルのデータをインポートすることを意味しますが、ユーザーは手動インポート中に**オートフィルのデータ** オプションを選択するか、クリアすることができます。
 
-**注**: このポリシーは現在、Google Chrome (Windows 7、8、10、macOS 上)、Mozilla Firefox (Windows 7、8、10、macOS 上) ブラウザーからのインポートを管理しています。
+
+            **注**: このポリシーは現在、Google Chrome (Windows 7、8、10、macOS 上)、Mozilla Firefox (Windows 7、8、10、macOS 上) ブラウザーからのインポートを管理しています。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -17393,7 +17453,8 @@ Internet Explorer で互換性のない Web サイトに遭遇した場合、ユ
 
 このポリシーは推奨として設定することもできます。 これは、Microsoft Edge が初回実行時に設定をインポートすることを意味しますが、ユーザーは手動インポート中に**ブラウザーの設定** オプションを選択するか、クリアすることができます。
 
-**注**: このポリシーは現在、Google Chrome (Windows 7、8、10、macOS 上) のインポートを管理しています。
+
+            **注**: このポリシーは現在、Google Chrome (Windows 7、8、10、macOS 上) のインポートを管理しています。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -17459,7 +17520,8 @@ Internet Explorer で互換性のない Web サイトに遭遇した場合、ユ
 
 このポリシーは推奨として設定することもできます。 これは、Microsoft Edge が初回実行時に Cookie をインポートすることを意味します。
 
-**注**: このポリシーは現在、Google Chrome (Windows 7、8、10、macOS 上) のインポートを管理しています。
+
+            **注**: このポリシーは現在、Google Chrome (Windows 7、8、10、macOS 上) のインポートを管理しています。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -17527,7 +17589,8 @@ Internet Explorer で互換性のない Web サイトに遭遇した場合、ユ
 
 このポリシーは推奨として設定することもできます。 これは、Microsoft Edge が初回実行時に拡張機能をインポートすることを意味しますが、ユーザーは手動インポート中に**お気に入り** オプションを選択するか、クリアすることができます。
 
-**注**: このポリシーは現在、Google Chrome (Windows 7、8、10、macOS 上) からのインポートのみをサポートしています。
+
+            **注**: このポリシーは現在、Google Chrome (Windows 7、8、10、macOS 上) からのインポートのみをサポートしています。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -17595,7 +17658,8 @@ Internet Explorer で互換性のない Web サイトに遭遇した場合、ユ
 
 このポリシーは推奨として設定することもできます。 これは、Microsoft Edge が初回実行時にお気に入りをインポートすることを意味しますが、ユーザーは手動インポート中に**お気に入り** オプションを選択するか、クリアすることができます。
 
-**注**: このポリシーは現在、Internet Explorer (Windows 7、8、10 上)、Google Chrome (Windows 7、8、10、macOS 上)、Mozilla Firefox (Windows 7、8、10、macOS 上)、Apple Safari (macOS 上) ブラウザーからのインポートを管理しています。
+
+            **注**: このポリシーは現在、Internet Explorer (Windows 7、8、10 上)、Google Chrome (Windows 7、8、10、macOS 上)、Mozilla Firefox (Windows 7、8、10、macOS 上)、Apple Safari (macOS 上) ブラウザーからのインポートを管理しています。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -17663,7 +17727,8 @@ Internet Explorer で互換性のない Web サイトに遭遇した場合、ユ
 
 このポリシーは推奨として設定することもできます。 これは、Microsoft Edge が初回実行時に閲覧の履歴をインポートすることを意味しますが、ユーザーは手動インポート中に**履歴** オプションを選択するか、クリアすることができます。
 
-**注**: このポリシーは現在、Internet Explorer (Windows 7、8、10 上)、Google Chrome (Windows 7、8、10、macOS 上)、Mozilla Firefox (Windows 7、8、10、macOS 上)、Apple Safari (macOS) ブラウザーからのインポートを管理しています。
+
+            **注**: このポリシーは現在、Internet Explorer (Windows 7、8、10 上)、Google Chrome (Windows 7、8、10、macOS 上)、Mozilla Firefox (Windows 7、8、10、macOS 上)、Apple Safari (macOS) ブラウザーからのインポートを管理しています。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -17731,7 +17796,8 @@ Internet Explorer で互換性のない Web サイトに遭遇した場合、ユ
 
 このポリシーは、推奨として設定することができます。 これは、Microsoft Edge が初回実行時にホーム ページの設定をインポートすることを意味しますが、ユーザーは手動インポート中に**ホーム ページ** オプションを選択するか、クリアすることができます。
 
-**注**: このポリシーは現在、Internet Explorer (Windows 7、8、10 上) からのインポートを管理しています。
+
+            **注**: このポリシーは現在、Internet Explorer (Windows 7、8、10 上) からのインポートを管理しています。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -17799,7 +17865,8 @@ Internet Explorer で互換性のない Web サイトに遭遇した場合、ユ
 
 このポリシーは推奨として設定することもできます。 これは、Microsoft Edge が初回実行時に開いているタブをインポートすることを意味しますが、ユーザーは手動インポート中に**開いているタブ** オプションを選択するか、クリアすることができます。
 
-**注**: このポリシーは現在、Google Chrome (Windows 7、8、10、macOS 上) からのインポートのみをサポートしています。
+
+            **注**: このポリシーは現在、Google Chrome (Windows 7、8、10、macOS 上) からのインポートのみをサポートしています。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -17867,7 +17934,8 @@ Internet Explorer で互換性のない Web サイトに遭遇した場合、ユ
 
 このポリシーは推奨として設定することもできます。 これは、Microsoft Edge が初回実行時に支払い情報をインポートすることを意味しますが、ユーザーは手動インポート中に**支払い情報** オプションを選択するか、クリアすることができます。
 
-**注**: このポリシーは現在、Google Chrome (Windows 7、8、10、macOS 上) からのインポートを管理しています。
+
+            **注**: このポリシーは現在、Google Chrome (Windows 7、8、10、macOS 上) からのインポートを管理しています。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -17935,7 +18003,8 @@ Internet Explorer で互換性のない Web サイトに遭遇した場合、ユ
 
 このポリシーは、推奨として設定することができます。 これは、Microsoft Edge が初回実行時にパスワードをインポートすることを意味しますが、ユーザーは手動インポート中に**パスワード** オプションを選択するか、クリアすることができます。
 
-**注**: このポリシーは現在、Internet Explorer (Windows 7、8、10 上)、Google Chrome (Windows 7、8、10、macOS 上)、Mozilla Firefox (Windows 7、8、10、macOS 上) ブラウザーからのインポートを管理しています。
+
+            **注**: このポリシーは現在、Internet Explorer (Windows 7、8、10 上)、Google Chrome (Windows 7、8、10、macOS 上)、Mozilla Firefox (Windows 7、8、10、macOS 上) ブラウザーからのインポートを管理しています。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -18003,7 +18072,8 @@ Internet Explorer で互換性のない Web サイトに遭遇した場合、ユ
 
 このポリシーは、推奨として設定することができます。 これは、Microsoft Edge が初回実行時に検索エンジンの設定をインポートすることを意味しますが、ユーザーは手動インポート中に**検索エンジン** オプションを選択するか、クリアすることができます。
 
-**注**: このポリシーは現在、Internet Explorer (Windows 7、8、10 上) からのインポートを管理しています。
+
+            **注**: このポリシーは現在、Internet Explorer (Windows 7、8、10 上) からのインポートを管理しています。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -18069,7 +18139,8 @@ Internet Explorer で互換性のない Web サイトに遭遇した場合、ユ
 
 このポリシーは推奨として設定することもできます。 これは、Microsoft Edge が初回実行時にショートカットをインポートすることを意味します。
 
-**注**: このポリシーは現在、Google Chrome (Windows 7、8、10、macOS 上) からのインポートを管理しています。
+
+            **注**: このポリシーは現在、Google Chrome (Windows 7、8、10、macOS 上) からのインポートを管理しています。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -18137,7 +18208,8 @@ Internet Explorer で互換性のない Web サイトに遭遇した場合、ユ
 
 このポリシーは、推奨として設定することができます。 これは、Microsoft Edge が初回実行時にスタートアップ設定をインポートすることを意味しますが、手動インポート中に **ブラウザーの設定** オプションを選択またはクリアできます。
 
-**注**: このポリシーでは現在 Microsoft Edge 従来版 ブラウザーと Google Chrome (Windows 7、8、10) ブラウザーからのインポートを管理しています。
+
+            **注**: このポリシーでは現在 Microsoft Edge 従来版 ブラウザーと Google Chrome (Windows 7、8、10) ブラウザーからのインポートを管理しています。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -18707,7 +18779,8 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
 
 このポリシーを false に設定するか、構成しない場合、コンテキスト メニュー項目は追加されません。
 
-[InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) ポリシーでユーザーが Internet Explorer モードでサイトを再読み込みできる場合は、新しい Internet Explorer でリンクを開きます。モード タブのコンテクスト メニュー アイテムは、明示的に Microsoft Edge モードを使用するサイト リストによる構成が行われているサイトへのリンクを除き、すべてのサイトで利用できます。 この場合、このポリシーを true に設定すると、コンテキスト メニュー アイテムは、Microsoft Edge を使用して構成されたサイトへのリンク ファイルでも利用できます。 このポリシーを false に設定した場合、または構成しない場合、このポリシーでは何も行われません。
+
+            [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) ポリシーでユーザーが Internet Explorer モードでサイトを再読み込みできる場合は、新しい Internet Explorer でリンクを開きます。モード タブのコンテクスト メニュー アイテムは、明示的に Microsoft Edge モードを使用するサイト リストによる構成が行われているサイトへのリンクを除き、すべてのサイトで利用できます。 この場合、このポリシーを true に設定すると、コンテキスト メニュー アイテムは、Microsoft Edge を使用して構成されたサイトへのリンク ファイルでも利用できます。 このポリシーを false に設定した場合、または構成しない場合、このポリシーでは何も行われません。
 
 Internet Explorer モードの詳細については、「[https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)」を参照してください
 
@@ -18760,11 +18833,13 @@ Internet Explorer モードの詳細については、「[https://go.microsoft.c
 
   #### <a name="description"></a>説明
 
-  [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) ポリシーが有効または構成されていない場合、限られた期間内 Internet Explorer モードで特定のページを読み込むことができるように Microsoft Edge へ依頼することができます。
+  
+            [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) ポリシーが有効または構成されていない場合、限られた期間内 Internet Explorer モードで特定のページを読み込むことができるように Microsoft Edge へ依頼することができます。
 
 この設定を使用して、ブラウザーで構成が記憶される日数を決定できます。 この期間が経過すると、各ページは IE モードで自動的に読み込まれなくなります。
 
-[InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) ポリシーを無効にした場合、このポリシーでは何も行われません。
+
+            [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) ポリシーを無効にした場合、このポリシーでは何も行われません。
 
 このポリシーを無効にした場合、または構成しない場合は、既定値である 30 日が使用されます。
 
@@ -18825,9 +18900,11 @@ Internet Explorer モードの詳細については、「[https://go.microsoft.c
 
 サイトが Internet Explorer モードで再読み込みされた後、"ページ内" ナビゲーションは Internet Explorer モード (ページ上のリンク、スクリプト、フォームや別の "ページ内" ナビゲーションからのサーバー側リダイレクトなど) のままになります。 ユーザーは、"ページ内" にないナビゲーションが発生した場合 (たとえば、アドレス バー、戻るボタン、お気に入りのリンクを使用する場合など)、ユーザーが Internet Explorer モードから終了することができるか、Microsoft Edge で自動的に Internet Explorer モードを終了します。
 
-必要に応じて今後 Microsoft Edge で Internet Explorer モードの使用を伝えることもできます。 [InternetExplorerIntegrationLocalSiteListExpirationDays](#internetexplorerintegrationlocalsitelistexpirationdays) ポリシーで管理されている期間中、この選択肢が適用されます。
+必要に応じて今後 Microsoft Edge で Internet Explorer モードの使用を伝えることもできます。 
+            [InternetExplorerIntegrationLocalSiteListExpirationDays](#internetexplorerintegrationlocalsitelistexpirationdays) ポリシーで管理されている期間中、この選択肢が適用されます。
 
-[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) ポリシーが 'IEMode' に設定され、[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) ポリシーのサイト リストで明示的に Microsoft Edge を使用するように構成されたサイトでは Internet Explorer モードでは再読み込みできず、サイト リストまたは [SendIntranetToInternetExplorer](#sendintranettointernetexplorer) ポリシーによって Internet Explorer を使用するように構成されたサイトでは、Internet Explorer モードから終了できません。
+
+            [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) ポリシーが 'IEMode' に設定され、[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) ポリシーのサイト リストで明示的に Microsoft Edge を使用するように構成されたサイトでは Internet Explorer モードでは再読み込みできず、サイト リストまたは [SendIntranetToInternetExplorer](#sendintranettointernetexplorer) ポリシーによって Internet Explorer を使用するように構成されたサイトでは、Internet Explorer モードから終了できません。
 
 このポリシーを有効にした場合、Internet Explorer モードで構成されていないサイトを再読み込みすることができます。
 
@@ -19008,7 +19085,8 @@ Internet Explorer モードの詳細については、[https://go.microsoft.com/
 
 このポリシーを [AllInPageNavigations] に設定している場合、IE モードで読み込まれたページから未構成サイトへのすべてのナビゲーションは、Internet Explorer モードで保持されます (推奨しません)。
 
-[InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) ポリシーで Internet Explorer モードでサイトを再読み込みできる場合、ユーザーが Internet Explorer モードで再読み込みを選択した未構成のサイトからのすべての "ページ内" ナビゲーションでは、このポリシーの構成方法に関係なく、Internet Explorer モードのままになります。
+
+            [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) ポリシーで Internet Explorer モードでサイトを再読み込みできる場合、ユーザーが Internet Explorer モードで再読み込みを選択した未構成のサイトからのすべての "ページ内" ナビゲーションでは、このポリシーの構成方法に関係なく、Internet Explorer モードのままになります。
 
 Internet Explorer モードの詳細については、[https://go.microsoft.com/fwlink/?linkid=2105106](https://go.microsoft.com/fwlink/?linkid=2105106) を参照してください
 
@@ -19138,8 +19216,10 @@ Internet Explorer モードの詳細については、[https://go.microsoft.com/
 
 このポリシーが構成されていない場合、ブラウザーは DNS の傍受チェックとイントラネット リダイレクトの提案の既定の動作を使用します。 M88 では、これらは既定で有効になっていますが、将来のリリースでは既定で無効になる予定です。
 
-[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled) は、DNS の傍受チェックも無効にする可能性のある関連ポリシーです。 ただし、このポリシーはより柔軟なバージョンであり、イントラネット リダイレクト情報バーを個別に制御する可能性があり、将来拡張される可能性があります。
-[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled) またはこのポリシーのいずれかが傍受チェックを無効にするように要求すると、チェックは無効になります。
+
+            [DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled) は、DNS の傍受チェックも無効にする可能性のある関連ポリシーです。 ただし、このポリシーはより柔軟なバージョンであり、イントラネット リダイレクト情報バーを個別に制御する可能性があり、将来拡張される可能性があります。
+
+            [DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled) またはこのポリシーのいずれかが傍受チェックを無効にするように要求すると、チェックは無効になります。
 このポリシーによって DNS の傍受チェックが無効になっているが、[GoToIntranetSiteForSingleWordEntryInAddressBar](#gotointranetsiteforsinglewordentryinaddressbar) が有効になっている場合でも、シングル ワード クエリはイントラネット ナビゲーションになります。
 
 ポリシー オプション マッピング:
@@ -19742,7 +19822,8 @@ Microsoft Edge 83 以降では、allow_search_engine_discovery というオプ�
 
 このポリシーを無効にしているか、構成していない場合、ユーザーは検索エンジンの一覧を必要に応じて変更することができます。
 
-[DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl) ポリシーが設定されている場合、このポリシー (ManagedSearchEngines) は無視されます。 このポリシーの適用を完了するには、ユーザーはブラウザーを再起動する必要があります。
+
+            [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl) ポリシーが設定されている場合、このポリシー (ManagedSearchEngines) は無視されます。 このポリシーの適用を完了するには、ユーザーはブラウザーを再起動する必要があります。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -20029,7 +20110,8 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 
 このポリシーを構成していない場合、CastAllowAllIPs 機能を有効にしない限り、Google Cast は RFC1918/RFC4193 のプライベート アドレス上の Cast デバイスにのみ接続します。
 
-[EnableMediaRouter](#enablemediarouter) ポリシーが無効になっている場合、このポリシーには何の効果もありません。
+
+            [EnableMediaRouter](#enablemediarouter) ポリシーが無効になっている場合、このポリシーには何の効果もありません。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -20097,7 +20179,8 @@ Windows 10 では、このポリシーを構成していない場合、Microsoft
 
 Windows 7、Windows 8、macOS では、このポリシーによって、使用状況とクラッシュに関連するデータの送信が制御されます。 このポリシーを構成しない場合、Microsoft Edge は既定でユーザーの設定に従います。
 
-このポリシーを有効にするには、[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) を有効に設定する必要があります。 [MetricsReportingEnabled](#metricsreportingenabled) または [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) が構成されていないか、または無効になっている場合は、このデータは Microsoft に送信されません。
+このポリシーを有効にするには、[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) を有効に設定する必要があります。 
+            [MetricsReportingEnabled](#metricsreportingenabled) または [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) が構成されていないか、または無効になっている場合は、このデータは Microsoft に送信されません。
 
 このポリシーは、Microsoft Active Directory ドメインに参加している Windows インスタンス、デバイス管理用に登録されている Windows 10 Pro または Enterprise インスタンス、もしくは MDM を使用するか MDM を使用してドメインに参加する macOS インスタンスでのみ利用可能です。
 
@@ -21180,7 +21263,8 @@ IE からサイトをロードするために Microsoft Edge を起動すると�
 
   保留中の更新プログラムを適用するために Microsoft Edge の再起動が必要な場合に、その内容をユーザーに通知する期間をミリ秒単位で設定することができます。
 
-この期間の間、ユーザーには更新が必要であることが繰り返し通知されます。 Microsoft Edge では、通知期間の 3 分の 1 が経過するとアプリ メニューが変化し、再起動が必要であることを通知します。 この通知は、通知期間の 3 分の 2 が経過すると色が変化し、全通知期間が経過すると再び色が変化します。 [RelaunchNotification](#relaunchnotification) ポリシーで有効になっている追加の通知は、これと同じスケジュールに従います。
+この期間の間、ユーザーには更新が必要であることが繰り返し通知されます。 Microsoft Edge では、通知期間の 3 分の 1 が経過するとアプリ メニューが変化し、再起動が必要であることを通知します。 この通知は、通知期間の 3 分の 2 が経過すると色が変化し、全通知期間が経過すると再び色が変化します。 
+            [RelaunchNotification](#relaunchnotification) ポリシーで有効になっている追加の通知は、これと同じスケジュールに従います。
 
 設定されていない場合、既定の期間である 604800000 ミリ秒 (1週間) が使用されます。
 
@@ -21242,7 +21326,8 @@ IE からサイトをロードするために Microsoft Edge を起動すると�
 
   再起動通知期間の終了のターゲット時間枠を指定します。
 
-ユーザーには [RelaunchNotification](#relaunchnotification) ポリシーと [RelaunchNotificationPeriod](#relaunchnotificationperiod) ポリシー設定に基づいて、ブラウザーの再起動またはデバイスの再起動の必要性が通知されます。 [RelaunchNotification](#relaunchnotification) ポリシーが '必須' に設定されている場合、ブラウザーとデバイスは通知期間の終わりに強制的に再起動されます。 この RelaunchWindow ポリシーを使用すると、通知期間の終了を延期して、特定の時間枠内に収めることができます。
+ユーザーには [RelaunchNotification](#relaunchnotification) ポリシーと [RelaunchNotificationPeriod](#relaunchnotificationperiod) ポリシー設定に基づいて、ブラウザーの再起動またはデバイスの再起動の必要性が通知されます。 
+            [RelaunchNotification](#relaunchnotification) ポリシーが '必須' に設定されている場合、ブラウザーとデバイスは通知期間の終わりに強制的に再起動されます。 この RelaunchWindow ポリシーを使用すると、通知期間の終了を延期して、特定の時間枠内に収めることができます。
 
 このポリシーを構成しない場合、既定のターゲット時間枠は 1 日です (つまり、通知期間の終了は延期されません)。
 
@@ -21513,7 +21598,8 @@ SOFTWARE\Policies\Microsoft\Edge\RelaunchWindow = {
 
 このポリシーを無効にしている場合、Microsoft Edge はネイティブ API を使用して、ネットワークの接続性とナビゲーションの問題の解決を試みます。
 
-**注**: Windows 8 以降のバージョンの Windows を除き、Microsoft Edge は*常に*ネイティブ API を使用して接続性の問題を解決します。
+
+            **注**: Windows 8 以降のバージョンの Windows を除き、Microsoft Edge は*常に*ネイティブ API を使用して接続性の問題を解決します。
 
 このポリシーを構成していない場合、Microsoft Edge は、edge://settings/privacy のサービスで設定されているユーザー設定を尊重します。
 具体的には、ユーザーがオン/オフを切り替えることができる [**Use a web service to help resolve navigation errors**] (Web サービスを使用してナビゲーション エラーを解決する) トグルがあります。 このポリシー (ResolveNavigationErrorsUseWebService) を有効にしている場合、[**Use a web service to help resolve navigation errors**] (Web サービスを使用してナビゲーション エラーを解決する) の設定はオンになっていますが、ユーザーがトグルを使用して設定を変更することはできません。 このポリシーを無効にしている場合、[**Use a web service to help resolve navigation errors**] (Web サービスを使用してナビゲーション エラーを解決する) の設定はオフになっており、ユーザーがトグルを使用して設定を変更することはできません。
@@ -21638,7 +21724,8 @@ SOFTWARE\Policies\Microsoft\Edge\RelaunchWindow = {
 
   プロファイルのローミング コピーを格納するために使用するディレクトリを構成します。
 
-このポリシーを有効にすると、[RoamingProfileSupportEnabled](#roamingprofilesupportenabled) ポリシーも有効にしている限り、Microsoft Edge は提供されたディレクトリを使用してプロファイルのローミング コピーを保存します。 [RoamingProfileSupportEnabled](#roamingprofilesupportenabled) ポリシーを無効にするか、構成しない場合、このポリシーに格納されている値は使用されません。
+このポリシーを有効にすると、[RoamingProfileSupportEnabled](#roamingprofilesupportenabled) ポリシーも有効にしている限り、Microsoft Edge は提供されたディレクトリを使用してプロファイルのローミング コピーを保存します。 
+            [RoamingProfileSupportEnabled](#roamingprofilesupportenabled) ポリシーを無効にするか、構成しない場合、このポリシーに格納されている値は使用されません。
 
 使用できる変数の一覧については、「[https://go.microsoft.com/fwlink/?linkid=2095041](https://go.microsoft.com/fwlink/?linkid=2095041)」を参照してください。
 
@@ -21697,7 +21784,8 @@ SOFTWARE\Policies\Microsoft\Edge\RelaunchWindow = {
 
 このポリシーを無効にした場合、または構成しない場合は、通常のローカル プロファイルだけが使用されます。
 
-[SyncDisabled](#syncdisabled) はクラウド同期を無効にするだけで、このポリシーには影響しません。
+
+            [SyncDisabled](#syncdisabled) はクラウド同期を無効にするだけで、このポリシーには影響しません。
 
 ローミング ユーザー プロファイルの使用の詳細については、[https://go.microsoft.com/fwlink/?linkid=2150058](https://go.microsoft.com/fwlink/?linkid=2150058) を参照してください。
 
@@ -21878,9 +21966,11 @@ Adobe Flash の実行を許可する Web サイトを制御するには、[Defau
 
   Microsoft Edge では、SSL エラーが発生しているサイトにユーザーがアクセスすると、警告ページが表示されます。
 
-[SSLErrorOverrideAllowed](#sslerroroverrideallowed) ポリシーを有効にした場合、または構成していない場合、このポリシーは何も行いません。
 
-[SSLErrorOverrideAllowed](#sslerroroverrideallowed) ポリシーを無効にした場合、このポリシーを構成すると、ユーザーが引き続き SSL エラー ページをクリックできるサイトの生成元パターンの一覧を構成できます。 ユーザーは、この一覧に記載されていない生成元の SSL エラー ページをクリックできません。
+            [SSLErrorOverrideAllowed](#sslerroroverrideallowed) ポリシーを有効にした場合、または構成していない場合、このポリシーは何も行いません。
+
+
+            [SSLErrorOverrideAllowed](#sslerroroverrideallowed) ポリシーを無効にした場合、このポリシーを構成すると、ユーザーが引き続き SSL エラー ページをクリックできるサイトの生成元パターンの一覧を構成できます。 ユーザーは、この一覧に記載されていない生成元の SSL エラー ページをクリックできません。
 
 このポリシーを構成しない場合、[SSLErrorOverrideAllowed](#sslerroroverrideallowed) ポリシーはすべてのサイトに適用されます。
 
@@ -22405,7 +22495,8 @@ Windows 10 では、このポリシーを構成していない場合、Microsoft
 
 Windows 7、windows 8、macOS では、このポリシーはアクセスした Web サイトに関する情報の送信を制御します。 このポリシーを構成しない場合、Microsoft Edge は既定でユーザーの設定に従います。
 
-このポリシーを有効にするには、 [MetricsReportingEnabled](#metricsreportingenabled) を有効に設定する必要があります。 [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) または [MetricsReportingEnabled](#metricsreportingenabled) が構成されていないか、または無効になっている場合は、このデータは Microsoft に送信されません。
+このポリシーを有効にするには、 [MetricsReportingEnabled](#metricsreportingenabled) を有効に設定する必要があります。 
+            [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) または [MetricsReportingEnabled](#metricsreportingenabled) が構成されていないか、または無効になっている場合は、このデータは Microsoft に送信されません。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -23065,7 +23156,8 @@ Web 互換性上の理由から、Microsoft Edge 91 以降、SharedArrayBuffers 
 
   #### <a name="description"></a>説明
 
-  "SitePerProcess" ポリシーは、すべてのサイトを分離する既定の動作をユーザーがオプトアウトしないようにするために使用することができます。 [IsolateOrigins](#isolateorigins) ポリシーを使用して、さらに詳細な追加のオリジンを分離することもできます。
+  "SitePerProcess" ポリシーは、すべてのサイトを分離する既定の動作をユーザーがオプトアウトしないようにするために使用することができます。 
+            [IsolateOrigins](#isolateorigins) ポリシーを使用して、さらに詳細な追加のオリジンを分離することもできます。
 
 このポリシーを有効にしている場合、各サイトが独自のプロセスで実行する既定の動作をユーザーがオプトアウトすることができなくなります。
 
@@ -23335,7 +23427,8 @@ If you disable this policy, Speech Recognition is not available through the Web 
 
 このポリシーを構成していないか、または無効の場合、ユーザーのスペルチェックの設定は変更されません。
 
-[SpellcheckEnabled](#spellcheckenabled) ポリシーが無効になっている場合、このポリシーには何の効果もありません。
+
+            [SpellcheckEnabled](#spellcheckenabled) ポリシーが無効になっている場合、このポリシーには何の効果もありません。
 
 "SpellcheckLanguage" ポリシーと [SpellcheckLanguageBlocklist](#spellchecklanguageblocklist) ポリシーの両方に言語が含まれている場合、スペルチェック言語は有効になります。
 
@@ -23396,9 +23489,11 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = "es"
 
 このポリシーを構成しないか、または無効にする場合、ユーザーのスペルチェックの設定は変更されません。
 
-[SpellcheckEnabled](#spellcheckenabled) ポリシーが無効に設定されている場合、このポリシーには何の効果もありません。
 
-[SpellcheckLanguage](#spellchecklanguage) ポリシーと "SpellcheckLanguageBlocklist" ポリシーの両方に言語が含まれている場合、スペルチェック言語は有効になります。
+            [SpellcheckEnabled](#spellcheckenabled) ポリシーが無効に設定されている場合、このポリシーには何の効果もありません。
+
+
+            [SpellcheckLanguage](#spellchecklanguage) ポリシーと "SpellcheckLanguageBlocklist" ポリシーの両方に言語が含まれている場合、スペルチェック言語は有効になります。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -24355,7 +24450,10 @@ Microsoft Edge がバックグラウンドにあるタブを 5 分以上フリ�
 
   ポリシーを設定すると、[URLBlocklist](#urlblocklist) の例外として、リストされた URL へのアクセスが提供されます。
 
-[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) に従って、URL パターンを書式設定します。
+
+            [
+              https://go.microsoft.com/fwlink/?linkid=2095322
+            ](https://go.microsoft.com/fwlink/?linkid=2095322) に従って、URL パターンを書式設定します。
 
 このポリシーを使用して、制限付きブロック一覧の例外を開くことができます。 たとえば、ブロック一覧に "\*" を含めることですべての要求をブロックし、その上でこのポリシーを使用して限定した URL 一覧へのアクセスを許可することができます。 このポリシーを使用して、特定のスキーム、他のドメインのサブドメイン、ポート、特定のパスに対する例外を開くことができます。
 
@@ -24436,9 +24534,13 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 
   ブロックされている (ユーザーが読み込むことができない) サイトの一覧を URL パターンに基づいて定義します。
 
-[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) に従って、URL パターンを書式設定します。
 
-[URLAllowlist](#urlallowlist) ポリシーで、例外を定義することができます。 これらのポリシーは 1000 エントリに制限されており、それ以降のエントリは無視されます。
+            [
+              https://go.microsoft.com/fwlink/?linkid=2095322
+            ](https://go.microsoft.com/fwlink/?linkid=2095322) に従って、URL パターンを書式設定します。
+
+
+            [URLAllowlist](#urlallowlist) ポリシーで、例外を定義することができます。 これらのポリシーは 1000 エントリに制限されており、それ以降のエントリは無視されます。
 
 内部の "edge://*" URL をブロックすることは、お勧めできません。予期しないエラーを引き起こす場合があります。
 
@@ -25709,7 +25811,8 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 Microsoft Edge の設定では、ウィジェットを起動するためのオプションが表示されます。
 Microsoft Edge の設定では、ユーザーに対して Windows の起動時にウィジェットを実行するためのメニュー項目が表示されます (自動起動)。
 起動時にウィジェットを有効にするオプションは、[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) ポリシーが有効な場合に切り替えられます。
-[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) が無効になっているか、または構成されていない場合、起動時にウィジェットを有効にするオプションはオフに切り替えられます。
+
+            [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) が無効になっているか、または構成されていない場合、起動時にウィジェットを有効にするオプションはオフに切り替えられます。
 ユーザーに対しては、Microsoft Edge の [その他のツール] メニューからウィジェットを起動するためのメニュー項目が表示されます。 ユーザーは [その他のツール] からウィジェットを起動することができます。
 ウィジェットは、システム トレイの "終了" オプションでオフにするか、タスク バーからウィジェットを閉じることでオフにすることができます。 自動起動が有効になっている場合、システムの再起動時にウィジェットも再起動されます。
 
@@ -25770,7 +25873,8 @@ Microsoft Edge の [その他のツール] メニューからウィジェット�
   Windows の起動時に Web ウィジェットが起動するようにします。
 
 有効にしている場合: 既定で Windows の起動時に Web ウィジェットが起動します。
-[WebWidgetAllowed](#webwidgetallowed) ポリシーを介してウィジェットが無効化されている場合、このポリシーは Windows の起動時にウィジェットを起動しません。
+
+            [WebWidgetAllowed](#webwidgetallowed) ポリシーを介してウィジェットが無効化されている場合、このポリシーは Windows の起動時にウィジェットを起動しません。
 
 このポリシーを無効している場合: Web ウィジェットはすべてのプロファイルで Windows の起動時に起動しません。
 Windows の起動時にウィジェットを起動するオプションは、Microsoft Edge の設定で無効化され、オフに切り替えられます。
@@ -25831,7 +25935,8 @@ Windows の起動時にウィジェットを起動するオプションは、Mic
 
 Windows を使用して、Microsoft Edge に組み込まれているプロキシ リゾルバーの代わりに、すべてのブラウザー ネットワークのプロキシを解決します。 Windows プロキシ リゾルバーは、DirectAccess/NRPT などの Windows プロキシ機能を有効にします。
 
-このポリシーには、https://crbug.com/644030 で説明される問題が含まれます。 [ProxyPacUrl](#proxypacurl) ポリシーを介して設定された PAC ファイルを含む、PAC ファイルが Windows コードによりフェッチおよび実行されます。 PAC ファイルのネットワーク フェッチは Microsoft Edge コードの代わりに Windows 経由で発生するので、[DnsOverHttpsMode](#dnsoverhttpsmode) などのネットワーク ポリシーは PAC ファイルのネットワーク フェッチには適用されません。
+このポリシーには、https://crbug.com/644030 で説明される問題が含まれます。 
+            [ProxyPacUrl](#proxypacurl) ポリシーを介して設定された PAC ファイルを含む、PAC ファイルが Windows コードによりフェッチおよび実行されます。 PAC ファイルのネットワーク フェッチは Microsoft Edge コードの代わりに Windows 経由で発生するので、[DnsOverHttpsMode](#dnsoverhttpsmode) などのネットワーク ポリシーは PAC ファイルのネットワーク フェッチには適用されません。
 
 このポリシーを有効にすると、Windows プロキシ リゾルバーが使用されます。
 
