@@ -10,20 +10,24 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge セキュリティ更新プログラムのリリースノート
-ms.openlocfilehash: 04efca8825edd3764954dbf1455321bd1b4475ef
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 16d5bde6800bae3bb48b8698c332fdc4201c223a
+ms.sourcegitcommit: c3d63d913eb15e7dbeb9f45b5f28fc841b46bce1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11980216"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "12016546"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Microsoft Edge セキュリティ更新プログラムのリリースノート
 
-これらのリリース ノートでは、Microsoft Edge Stable チャネルの更新に含まれているセキュリティ修正プログラムに関する情報を提供します。
+これらのリリース ノートでは、Microsoft Edge 安定チャネルの更新に組み込まれているセキュリティ修正プログラムに関する情報を提供します。
+
+## <a name="september-11-2021"></a>2021 年 9 月 11 日
+
+Microsoft は、Chromium プロジェクトの最新のセキュリティ更新プログラムを組み込んだ最新の **Microsoft Edge 安定チャネル (バージョン 93.0.961.47)** をリリースしました。この更新プログラムには、Chromium チームによって悪用が報告された [CVE-2021-30632](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30632) が含まれています。  詳細については、「[セキュリティ更新プログラム ガイド](https://msrc.microsoft.com/update-guide)」を参照してください
 
 ## <a name="september-9-2021"></a>2021 年 9 月 9 日
 
-Microsoft は、Chromium プロジェクトの最新のセキュリティ更新プログラムを組み込んだ最新の  **Microsoft Edge Stable チャネル (バージョン 93.0.961.44)** をリリースしました。 詳細については、「[セキュリティ更新プログラム ガイド](https://msrc.microsoft.com/update-guide)」を参照してください
+Microsoft は、Chromium プロジェクトの最新のセキュリティ更新プログラムを組み込んだ最新の  **Microsoft Edge 安定チャネル (バージョン 93.0.961.44)** をリリースしました。 詳細については、「[セキュリティ更新プログラム ガイド](https://msrc.microsoft.com/update-guide)」を参照してください
 
 この更新プログラムには、次の Microsoft Edge 固有の更新プログラムが含まれています。
 
