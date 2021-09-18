@@ -3,19 +3,19 @@ title: Stable チャネルに関する Microsoft Edge リリース ノート
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/09/2021
+ms.date: 09/16/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Stable チャネルに関する Microsoft Edge リリース ノート
-ms.openlocfilehash: e13778ee9a93a4621ad77a00da1d85def3f97225
-ms.sourcegitcommit: 6eefb7cb134f25a1e2d1f515a3a8600524a4b6e3
+ms.openlocfilehash: cf37c34aa1c0d61e2118acf8a599ff574d6ff156
+ms.sourcegitcommit: dbe3fb9932022554c118ac02d4e9ab5f09c53709
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2021
-ms.locfileid: "12017971"
+ms.lasthandoff: 09/17/2021
+ms.locfileid: "12018987"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Microsoft Edge Stable チャネルのリリース ノート
 
@@ -30,6 +30,13 @@ ms.locfileid: "12017971"
 > 安定チャネルの場合、更新は 1 日以上かけて段階的に公開されます。 詳細については、「[Microsoft Edge 更新プログラムの段階的なロールアウト](microsoft-edge-update-progressive-rollout.md)」を参照してください。
 >
 > Microsoft Edge Web プラットフォームは、ユーザー エクスペリエンス、セキュリティ、およびプライバシーを向上させるために絶えず進化しています。 詳細については、「[Microsoft Edge のサイトの互換性に影響する変更点](/microsoft-edge/web-platform/site-impacting-changes)」を参照してください。
+
+## <a name="version-93096152-september-16"></a>バージョン 93.0.961.52: 9 月 16 日
+
+>[!Important]
+>この更新プログラムには、[CVE-2021-30633](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30632) の修正プログラムが含まれています。これについては、Chromium チームにより実際に感染報告がある悪用が報告されています。 詳細については、「[セキュリティ更新プログラム ガイド](https://msrc.microsoft.com/update-guide)」を参照してください。
+
+安定したチャネルのセキュリティ更新プログラムは[こちら](/deployedge/microsoft-edge-relnotes-security#september-16-2021)に記載されています。
 
 ## <a name="version-93096147-september-11"></a>バージョン 93.0.961.47: 9 月 11 日
 
