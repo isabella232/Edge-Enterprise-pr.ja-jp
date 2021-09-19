@@ -3,19 +3,19 @@ title: Beta チャネルに関する Microsoft Edge のリリース ノート
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/13/2021
+ms.date: 09/17/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Beta チャネルに関する Microsoft Edge のリリース ノート
-ms.openlocfilehash: 93fbb135befd1691220a1d9b4499d0713b1740f3
-ms.sourcegitcommit: c3d63d913eb15e7dbeb9f45b5f28fc841b46bce1
+ms.openlocfilehash: 95f3f02401d00e59eed1df20688d0069db1e8b06
+ms.sourcegitcommit: 93e141b725a08727b030332ea82f983d35c2a745
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "12016466"
+ms.lasthandoff: 09/19/2021
+ms.locfileid: "12019176"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Microsoft Edge Beta チャネルのリリースノート
 
@@ -23,6 +23,10 @@ ms.locfileid: "12016466"
 
 > [!NOTE]
 > Microsoft Edge Web プラットフォームは、ユーザー エクスペリエンス、セキュリティ、およびプライバシーを向上させるために絶えず進化しています。 詳細については、「[Microsoft Edge のサイトの互換性に影響する変更点](/microsoft-edge/web-platform/site-impacting-changes)」を参照してください。
+
+## <a name="version-94099223-september-17"></a>バージョン 94.0.992.23: 9 月 17 日
+
+さまざまなバグとパフォーマンスの問題を修正しました。
 
 ## <a name="version-94099219-september-13"></a>バージョン 94.0.992.19: 9 月 13 日
 
@@ -103,22 +107,22 @@ ms.locfileid: "12016466"
 ### <a name="new-policies"></a>新しいポリシー
 
 - [AutoplayAllowlist](/DeployEdge/microsoft-edge-policies#autoplayallowlist) 特定のサイトでメディアの自動再生を許可する
-- [CECPQ2Enabled](/DeployEdge/microsoft-edge-policies#cecpq2enabled) TLS に対して有効な CECPQ2 ポストクォンタム キーアグリーメント
-- [ConfigureViewInFileExplorer](/DeployEdge/microsoft-edge-policies#configureviewinfileexplorer)[エクスプローラーで表示] 機能を構成して、SharePointページのページMicrosoft Edge
+- [CECPQ2Enabled](/DeployEdge/microsoft-edge-policies#cecpq2enabled) TLS の CECPQ2 ポスト量子暗号鍵交換​が有効になりました
+- [ConfigureViewInFileExplorer](/DeployEdge/microsoft-edge-policies#configureviewinfileexplorer) Microsoft Edge の SharePoint ページの "エクスプローラーで表示" 機能を構成する
 - [DefaultJavaScriptJitSetting](/DeployEdge/microsoft-edge-policies#defaultjavascriptjitsetting) JavaScript JIT の使用を制御する
-- [ShowPDFDefaultRecommendationsEnabled](/DeployEdge/microsoft-edge-policies#showpdfdefaultrecommendationsenabled)既定の PDF リーダーとしてMicrosoft Edge通知の設定を許可する
+- [ShowPDFDefaultRecommendationsEnabled](/DeployEdge/microsoft-edge-policies#showpdfdefaultrecommendationsenabled) Microsoft Edge を既定の PDF リーダーとして設定する通知を許可する
 - [FeatureFlagOverridesControl](/DeployEdge/microsoft-edge-policies#featureflagoverridescontrol) ユーザーが機能フラグを上書きする機能を構成する
 - [ImplicitSignInEnabled](/DeployEdge/microsoft-edge-policies#implicitsigninenabled) 暗黙的なサインインを有効にする
-- [InternetExplorerIntegrationCloudSiteList](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcloudsitelist)クラウド モード Enterprise一覧を構成する
-- [InternetExplorerIntegrationSiteListRefreshInterval](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationsitelistrefreshinterval)[モード サイト一覧Enterprise更新する頻度を構成する
-- [JavaScriptJitAllowedForSites](/DeployEdge/microsoft-edge-policies#javascriptjitallowedforsites) JavaScript がこれらのサイトで JIT を使用するを許可する
+- [InternetExplorerIntegrationCloudSiteList](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcloudsitelist) エンタープライズ モードのクラウド サイト リストを構成する
+- [InternetExplorerIntegrationSiteListRefreshInterval](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationsitelistrefreshinterval) エンタープライズ モードのサイト リストを更新する頻度を構成する
+- [JavaScriptJitAllowedForSites](/DeployEdge/microsoft-edge-policies#javascriptjitallowedforsites) これらのサイトで JavaScript による JIT の使用を許可する
 - [JavaScriptJitBlockedForSites](/DeployEdge/microsoft-edge-policies#javascriptjitblockedforsites) これらのサイトで JavaScript による JIT の使用をブロックする
-- [LocalBrowserDataShareEnabled](/DeployEdge/microsoft-edge-policies#localbrowserdatashareenabled)ローカル Windows閲覧データを検索Microsoft Edge有効にする
-- [MAUEnabled](/DeployEdge/microsoft-edge-policies#mauenabled)Microsoft AutoUpdate を常に更新プログラムとして使用Microsoft Edge
-- [MSAWebSiteSSOUsingThisProfileAllowed](/DeployEdge/microsoft-edge-policies#msawebsitessousingthisprofileallowed) このプロファイルを使用して Microsoft サイトのシングル サインオンを許可する
-- [OneAuthAuthenticationEnforced](/DeployEdge/microsoft-edge-policies#oneauthauthenticationenforced)OneAuth 認証Flowサインインに適用される
-- [PasswordGeneratorEnabled](/DeployEdge/microsoft-edge-policies#passwordgeneratorenabled) ユーザーがオンラインでアカウントを作成するたびに強力なパスワードの提案を受け取る
-- [PrimaryPasswordSetting](/DeployEdge/microsoft-edge-policies#primarypasswordsetting) パスワード自動入力の使用中にユーザーにデバイス パスワードの入力を求める設定を構成します。
+- [LocalBrowserDataShareEnabled](/DeployEdge/microsoft-edge-policies#localbrowserdatashareenabled) Windows を有効にして、ローカル Microsoft Edge 閲覧データを検索する
+- [MAUEnabled](/DeployEdge/microsoft-edge-policies#mauenabled) Microsoft Edge のアップデーターとして常に Microsoft 自動更新を使用する
+- [MSAWebSiteSSOUsingThisProfileAllowed](/DeployEdge/microsoft-edge-policies#msawebsitessousingthisprofileallowed) このプロファイルを使用して Microsoft サイトにシングル サインオンを許可する
+- [OneAuthAuthenticationEnforced](/DeployEdge/microsoft-edge-policies#oneauthauthenticationenforced) サインインのために適用される OAuth 認証フロー
+- [PasswordGeneratorEnabled](/DeployEdge/microsoft-edge-policies#passwordgeneratorenabled) ユーザーがオンラインでアカウントを作成するたびに強力なパスワード候補を取得できる
+- [PrimaryPasswordSetting](/DeployEdge/microsoft-edge-policies#primarypasswordsetting) パスワード自動入力の使用中にユーザーにデバイス パスワードの入力を求める設定を構成する
 - [PrintingWebpageLayout](/DeployEdge/microsoft-edge-policies#printingwebpagelayout) 印刷のレイアウトを設定する
 - [RemoteDebuggingAllowed](/DeployEdge/microsoft-edge-policies#remotedebuggingallowed) リモート デバッグを許可する
 - [RelaunchWindow](/DeployEdge/microsoft-edge-policies#relaunchwindow) 再起動の時間間隔を設定する
@@ -129,9 +133,9 @@ ms.locfileid: "12016466"
 
 - [LegacySameSiteCookieBehaviorEnabled](/DeployEdge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) 従来の SameSite Cookie の既定の動作設定を有効にする
 
-#### <a name="obsoleted-policy"></a>非推奨ポリシー
+#### <a name="obsoleted-policy"></a>廃止されたポリシー
 
-- [NewTabPageSetFeedType](/DeployEdge/microsoft-edge-policies#newtabpagesetfeedtype)新しいタブ Microsoft Edgeエクスペリエンスを構成する
+- [NewTabPageSetFeedType](/DeployEdge/microsoft-edge-policies#newtabpagesetfeedtype) Microsoft Edge の新規タブ ページのエクスペリエンスを設定する
 
 #### <a name="additional-change"></a>その他の変更
 
