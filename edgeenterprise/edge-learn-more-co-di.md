@@ -3,23 +3,25 @@ title: Microsoft Edge で ClickOnce と DirectInvoke を使用する
 ms.author: collw
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/16/2021
+ms.date: 09/21/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge での ClickOnce と DirectInvoke の使用について説明します。
-ms.openlocfilehash: 2da2892a958946ad73d362e6ea929bcfbc2af6a8
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 48702082dc3c352519c8003e226bf99c63765150
+ms.sourcegitcommit: 85818deae134b48d7f2766e53b4400a1b4d4277d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979583"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "12034436"
 ---
 # <a name="understand-the-clickonce-and-directinvoke-features-in-microsoft-edge"></a>Microsoft Edge での ClickOnce と DirectInvoke の機能について
 
 ClickOnce DirectInvoke は、IE および web サイトからファイルをダウンロードするファイル ハンドラー Microsoft Edgeをサポートする機能です。 この 2 つの機能は異なる目的で使用されますが、どちらの場合も Web サイトでは、ダウンロードが要求されたファイルをユーザー デバイス上のファイル ハンドラーに渡すことを指定できます。 ClickOnce 要求は、Windows のネイティブ ファイル ハンドラーによって処理されます。 DirectInvoke 要求は、ファイルをホストしている Web サイトで指定された登録済みのファイル ハンドラーによって処理されます。
+
+管理者または DirectInvoke をClickOnce、追加のエンタープライズ ポリシーを設定することで、ClickOnce または DirectInvoke のプロンプトをバイパスできます。 これらのポリシーでは、すべてのドメインで指定したファイルの種類に対して ClickOnce プロンプトまたは DirectInvoke プロンプトをバイパスするか、指定したドメインから指定したファイルの種類をバイパスできます。
 
 これらの機能について詳しくは、以下をご覧ください。
 
@@ -88,6 +90,10 @@ Microsoft Defender SmartScreen URL レピュテーション サービスによ�
 ## <a name="clickonce-and-directinvoke-policies"></a>ClickOnce と DirectInvoke のポリシー
 
 エンタープライズ ユーザー用に ClickOnce と DirectInvoke を有効または無効にするには、2 つのグループ ポリシーを使用できます。 [ClickOnceEnabled](./microsoft-edge-policies.md#clickonceenabled) と [DirectInvokeEnabled](./microsoft-edge-policies.md#directinvokeenabled) です。 これら 2 つのポリシーには、グループ ポリシー エディターで、"ユーザーが ClickOnce プロトコルを使用してファイルを開けるようにする" と "ユーザーが DirectInvoke プロトコルを使用してファイルを開けるようにする" というラベルがそれぞれ付けられています。
+
+ClickOnce または DirectInvoke のプロンプトをバイパスするファイルの種類を指定するには、グループ ポリシー エディターで 「ダウンロード時に自動的に開く必要があるファイルの種類の一覧」というラベルの付いたポリシーを使用します。 これにより、すべてのドメインのダウンロード後に指定したファイルの種類を自動的に開くできます。  
+
+「ダウンロード時に自動的に開く必要があるファイルの種類の一覧」と「AutoOpen-FileTypes が適用できる URL」としてグループ ポリシー エディターでラベル付けされた 2 つの追加ポリシーを設定して、特定のドメインの特定の種類に対する ClickOnce または DirectInvoke のプロンプトをバイパスするには。 ポリシー "AutoOpen- FileTypes が適用できる URL" は、"ダウンロード時に自動的に開く必要があるファイルの種類の一覧" のサポート ポリシーであり、それ自体では何も行いません。  
 
 ## <a name="clickonce-and-directinvoke-behavior"></a>ClickOnce と DirectInvoke の動作
 
