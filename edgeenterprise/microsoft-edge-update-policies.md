@@ -1,9 +1,9 @@
 ---
 title: Microsoft Edge Update のポリシーに関するドキュメント
 ms.author: stmoody
-author: AndreaLBarr
+author: RyanHechtMSFT
 manager: tahills
-ms.date: 07/23/2021
+ms.date: 09/23/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge アップデーターでサポートされているすべてのポリシーに関するドキュメント
-ms.openlocfilehash: 9c7eca4d5bdd7c87bea141a422dce3b17f22067c
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: b96fc0e44434b5ab36a16b1bc14f0aebe0deacf4
+ms.sourcegitcommit: 8e5294e82cf62abc916cfd24692f55925330d42b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11980077"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "12037217"
 ---
 # <a name="microsoft-edge---update-policies"></a>Microsoft Edge - 更新ポリシー
 
@@ -41,6 +41,7 @@ Microsoft Edge で使用できるその他のポリシーについて詳しく�
 |[CreateDesktopShortcut](#createdesktopshortcut)|インストール時にデスクトップへのショートカットの作成を禁止する (チャネル単位)|
 |[RollbackToTargetVersion](#rollbacktotargetversion)|ターゲットバージョンにロールバック (チャネル単位)|
 |[TargetVersionPrefix](#targetversionprefix)|ターゲットバージョンの上書き (チャネルごと) |
+|[TargetChannelOverride](#targetchanneloverride)|ターゲット チャネルのオーバーライド (Stable のみ)|
 |[UpdaterExperimentationAndConfigurationServiceControl](#UpdaterExperimentationAndConfigurationServiceControl)| 構成と実験の取得|
 ### [<a name="preferences"></a>基本設定](#preferences-policies)
 |ポリシー名|キャプション|
@@ -397,6 +398,42 @@ Microsoft Edge の更新プログラムで、Microsoft Edge のインストー�
 ##### <a name="example-value"></a>サンプル値:
 ```
 83.0.499.12
+```
+[ページのトップへ](#microsoft-edge---update-policies)
+
+### <a name="targetchanneloverride"></a>TargetChannelOverride
+>Microsoft Edge Update 1.3.147.1 以降
+
+#### <a name="description"></a>説明
+更新するチャネル Microsoft Edgeを指定します。 
+
+この poicy を有効にした場合、Microsoft Edgeオプションの構成方法に従ってチャネルに更新されます。
+
+  - Stable: Microsoft Edgeの安定したバージョンに更新されます。
+  - ベータ: Microsoft Edgeベータ版に更新されます。
+  - 開発: Microsoft Edge最新の開発バージョンに更新されます。
+  - 拡張安定: Microsoft Edgeの拡張安定版に更新されます。これは、stable よりも長いリリースのケイデンスに従います。 詳細については、を参照してください https://go.microsoft.com/fwlink/?linkid=2163508 。
+
+このポリシーを構成しない場合、Microsoft Edge安定チャネルで使用可能な最新バージョンに更新されます。
+
+このポリシーは、Stable のMicrosoft Edge使用できます。
+
+このポリシーは、Microsoft® Active Directory®ドメインに参加している Windows インスタンスでのみ使用できます。
+#### <a name="windows-information-and-settings"></a>Windows の情報と設定
+##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
+- GP 固有の名前: TargetChannelOverride
+- GP 名: ターゲット チャネルのオーバーライド
+- GP パス:  
+  - 管理用テンプレート/Microsoft Edge Update/アプリケーション/Microsoft Edge
+- GP ADMX ファイル名:  msedgeupdate.admx
+##### <a name="windows-registry-settings"></a>Windows レジストリの設定
+- パス: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- キーの値:  
+  - (Stable): TargetChannel{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
+- 値の種類: REG_SZ
+##### <a name="example-value"></a>サンプル値:
+```
+extended
 ```
 [ページのトップへ](#microsoft-edge---update-policies)
 
