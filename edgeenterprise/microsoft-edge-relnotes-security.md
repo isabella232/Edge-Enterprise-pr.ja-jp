@@ -3,23 +3,27 @@ title: Microsoft Edge セキュリティ更新プログラムのリリースノ�
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/22/2021
+ms.date: 09/24/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge セキュリティ更新プログラムのリリースノート
-ms.openlocfilehash: d58c2e4b9cde8724b36eeb92c02112762fe5a7be
-ms.sourcegitcommit: 85818deae134b48d7f2766e53b4400a1b4d4277d
+ms.openlocfilehash: 3d90844417994b7941b4e27122ef9564cc40e19f
+ms.sourcegitcommit: 6ef4b2e1dee45f33edb7fa8f83c93b4d169adca9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "12034466"
+ms.lasthandoff: 09/25/2021
+ms.locfileid: "12044829"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Microsoft Edge セキュリティ更新プログラムのリリースノート
 
 これらのリリース ノートでは、Microsoft Edge 安定チャネルの更新に組み込まれているセキュリティ修正プログラムに関する情報を提供します。
+
+## <a name="september-24-2021"></a>2021 年 9 月 24 日
+
+Microsoft は、Microsoft Edge プロジェクトの最新のセキュリティ更新プログラムを組み込んだ最新の Microsoft Edge Stable チャネル  **(バージョン 94.0.992.31)** をリリースしました。 この更新プログラムには、Chromium チームによって実際に感染報告がある悪用が報告されている [CVE-2021-37973](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37973) の修正プログラムが含まれています。 詳細については、「[セキュリティ更新プログラム ガイド](https://msrc.microsoft.com/update-guide)」を参照してください
 
 ## <a name="september-16-2021"></a>2021 年 9 月 16 日
 

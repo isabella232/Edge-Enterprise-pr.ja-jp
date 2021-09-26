@@ -3,19 +3,19 @@ title: Stable チャネルに関する Microsoft Edge リリース ノート
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/22/2021
+ms.date: 09/24/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Stable チャネルに関する Microsoft Edge リリース ノート
-ms.openlocfilehash: ffd0beb7533edf88fdab9402cb2486e71b1773e6
-ms.sourcegitcommit: 85818deae134b48d7f2766e53b4400a1b4d4277d
+ms.openlocfilehash: 491debce74949c9e146acdcf825c99edf2f7f81e
+ms.sourcegitcommit: 6ef4b2e1dee45f33edb7fa8f83c93b4d169adca9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "12034446"
+ms.lasthandoff: 09/25/2021
+ms.locfileid: "12044839"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Microsoft Edge Stable チャネルのリリース ノート
 
@@ -29,7 +29,45 @@ ms.locfileid: "12034446"
 > [!NOTE]
 > 安定チャネルの場合、更新は 1 日以上かけて段階的に公開されます。 詳細については、「[Microsoft Edge 更新プログラムの段階的なロールアウト](microsoft-edge-update-progressive-rollout.md)」を参照してください。
 >
-> Microsoft Edge Web プラットフォームは、ユーザー エクスペリエンス、セキュリティ、およびプライバシーを向上させるために絶えず進化しています。 詳細については、「[Microsoft Edge のサイトの互換性に影響する変更点](/microsoft-edge/web-platform/site-impacting-changes)」を参照してください。
+> Microsoft Edge Web プラットフォームは、ユーザー エクスペリエンス、セキュリティ、およびプライバシーを向上させるために絶えず進化しています。 詳細については、「[Microsoft Edge 向けのサイトの互換性に影響する変更点](/microsoft-edge/web-platform/site-impacting-changes)」を参照してください。
+
+## <a name="version-94099231-september-24"></a>バージョン 94.0.992.31: 9 月 24 日
+
+> [!Important]
+> この更新プログラムには、Chromium チームによって実際に感染報告がある悪用が報告されている [CVE-2021-37973](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37973) の修正プログラムが含まれています。 詳細については、「[セキュリティ更新プログラム ガイド](https://msrc.microsoft.com/update-guide)」を参照してください。
+
+安定したチャネルのセキュリティ更新プログラムは[こちら](/deployedge/microsoft-edge-relnotes-security#september-24-2021)に記載されています。
+
+### <a name="feature-updates"></a>機能更新プログラム
+
+- **Microsoft Edge の更新のための 4 週間のサイクルへの移行が完了しました。**  メジャー バージョンに新しい 4 週間のリリース サイクルを採用しました。 詳細については、次の記事を参照してください。https://blogs.windows.com/msedgedev/2021/03/12/new-release-cycles-microsoft-edge-extended-stable/
+
+- **新しい拡張安定オプションが提供されています。**  管理されたエンタープライズ顧客向けに、新しい拡張安定オプションを提供しています。 拡張安定オプションは偶数番目の改定にとどまり、8 週間ごとに更新されます。 セキュリティ更新プログラムは隔週で適用されます。  詳細については、以下を参照してください。https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/
+
+- **MHTML ファイルを開く既定の動作の改善。**  MHTML ファイルが (Microsoft Edge の [名前を付けて保存] または [ページに名前を付けて保存] オプションを使用して) Microsoft Edge から保存されていない限り、IE モードが有効になっている場合には MHTML ファイルは引き続き IE モードで開かれます。 Microsoft Edge からファイルを保存した場合、Microsoft Edge でファイルが開かれるようになりました。  この変更により、Microsoft Edge から保存した MHTML ファイルを IE モードで開いたときに発生していたレンダリングの問題が修正されます。
+
+- **プライベートネットワークの要求が、安全なコンテキストに限定されました。** インターネット上のページからローカル (イントラネット) ネットワーク上のリソースにアクセスする場合には、そのページが HTTPS で配信されている必要があります。 この変更は、Microsoft Edge に基づく Chromium プロジェクトで発生します。 詳細については、「[Chrome プラットフォームの状態エントリ](https://chromestatus.com/feature/5436853517811712)」に移動します。 セキュリティで保護されていないページとの互換性を維持する必要があるシナリオをサポートする場合、[InsecurePrivateNetworkRequestAllowed](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) および [InsecurePrivateNetworkRequestAllowedForUrls](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls) の 2 つの互換性ポリシーを使用できます。
+
+- **混在したコンテンツのダウンロードをブロックします。** セキュリティで保護されているページでは他のセキュリティで保護されているページでホストされているファイルのみがダウンロードされ、セキュリティで保護されていない (非 HTTPS) ページでホストされているダウンロードについては、セキュリティで保護されているページから開始された場合にはブロックされます。 この変更は、Microsoft Edge に基づく Chromium プロジェクトで発生します。 詳細については、「[Google セキュリティ ブログ エントリ](https://security.googleblog.com/2020/02/protecting-users-from-insecure_6.html)」を参照してください。
+
+- **オンプレミス アカウントの暗黙的なサインインが有効になりました。** 
+            [OnlyOnPremisesImplicitSigninEnabled](/deployedge/microsoft-edge-policies#onlyonpremisesimplicitsigninenabled) ポリシーを有効にすることで、暗黙的なサインインがオンプレミス アカウントに対してのみ有効となります。  Microsoft Edge は、MSA または AAD アカウントに暗黙的にサインインしようとしません。 オンプレミス アカウントから AAD アカウントへのアップグレードも停止されます。
+
+- **新しいアクセシビリティ設定ページ。**  アクセシビリティ関連の設定を 1 つのページへとまとめました。 新しい edge://settings/accessibility ページは、主な設定リストの下にあります。 ここには、Web ページを大きくするための設定、フォーカス領域の周囲に可視性の高いアウトラインを表示するための設定、Web 閲覧エクスペリエンスの改善に役立つその他の設定などが含まれています。 Microsoft Edge の今後のバージョンでも、ここに新しい設定を追加していく予定です。
+
+***新しいポリシー***
+
+- 
+            [ApplicationGuardPassiveModeEnabled](/DeployEdge/microsoft-edge-policies#applicationguardpassivemodeenabled) Application Guard サイト リストの構成を無視し、通常どおり Edge を参照する
+- 
+            [OnlyOnPremisesImplicitSigninEnabled](/DeployEdge/microsoft-edge-policies#onlyonpremisesimplicitsigninenabled) 暗黙的なサインインに対して有効になっているオンプレミス アカウントのみ
+- 
+            [WebRtcRespectOsRoutingTableEnabled](/DeployEdge/microsoft-edge-policies#webrtcrespectosroutingtableenabled) WebRTC 経由でピア ツー ピア接続を行うときに Windows OS ルーティング テーブル ルールのサポートを有効にする
+
+***廃止されたポリシー***
+
+- 
+            [UserAgentClientHintsEnabled](/DeployEdge/microsoft-edge-policies#useragentclienthintsenabled) ユーザー エージェント クライアント ヒント機能を有効にする
 
 ## <a name="version-93096152-september-16"></a>バージョン 93.0.961.52: 9 月 16 日
 
