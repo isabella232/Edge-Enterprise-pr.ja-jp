@@ -1,21 +1,21 @@
 ---
 title: Microsoft Edge 用 Windows 更新プログラム
 ms.author: jtkim
-author: dan-wesley
+author: RyanHechtMSFT
 manager: srugh
-ms.date: 06/28/2021
+ms.date: 09/23/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 用 Windows 更新プログラム。
-ms.openlocfilehash: b99d3d7ed048cb829fd2328be9e4e7376334652c
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 0232e269861430df9a152006d2a8476c353eae46
+ms.sourcegitcommit: 8e5294e82cf62abc916cfd24692f55925330d42b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979639"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "12037207"
 ---
 # <a name="windows-updates-to-support-the-next-version-of-microsoft-edge"></a>次のバージョンの Microsoft Edge をサポートする Windows 更新プログラム
 
@@ -29,7 +29,7 @@ ms.locfileid: "11979639"
 
 ## <a name="microsoft-edge-and-the-windows-release-cycle"></a>Microsoft Edge と Windows のリリース サイクル
 
-次のバージョンの Microsoft Edge では、より柔軟で頻度の高い更新の機能が提供されます。 ブラウザーのリリースは Windows のメジャー リリースにバインドされていないため、次のバージョンの Microsoft Edge が Windows にシームレスに適合するように、オペレーティング システムに変更が加えられます。 その結果、機能の更新プログラムは約 6 週間のサイクルでリリースされます。 セキュリティと互換性の更新プログラムは、必要に応じて出荷されます。
+次のバージョンの Microsoft Edge では、より柔軟で頻度の高い更新の機能が提供されます。 ブラウザーのリリースは Windows のメジャー リリースにバインドされていないため、次のバージョンの Microsoft Edge が Windows にシームレスに適合するように、オペレーティング システムに変更が加えられます。 その結果、機能の更新プログラムは約 4 週間のサイクルでリリースされます。 セキュリティと互換性の更新プログラムは、必要に応じて出荷されます。
 
 ## <a name="updates-and-the-user-experience"></a>更新プログラムとユーザー エクスペリエンス
 

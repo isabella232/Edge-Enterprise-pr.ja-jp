@@ -3,19 +3,19 @@ title: Microsoft Edge でサポートされているオペレーティング シ
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 06/28/2021
+ms.date: 09/23/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge でサポートされているオペレーティング システム
-ms.openlocfilehash: 3c5af933e6a9e6bf66f0f486f77c8ddd9364a53e
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 7d8381e81fc3b74c1849d02a117943f3cb8bf389
+ms.sourcegitcommit: 0d71862fe4f6550f7910618872a174b95695df4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11980137"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "12044475"
 ---
 # <a name="microsoft-edge-supported-operating-systems"></a>Microsoft Edge でサポートされているオペレーティング システム
 
@@ -28,7 +28,6 @@ ms.locfileid: "11980137"
 
 > [!NOTE]
 > 製品の機能とその可用性は、以前のオペレーティング システムでは異なる場合があります。 Microsoft Edge が正常にインストールされるようにするには、次に示すオペレーティング システムの最新バージョンを使用します。 このガイダンスには、該当する最新の累積更新プログラムが含まれています。
-
 
 Microsoft Edge は最新のライフサイクル ポリシーに準拠しており、以下のオペレーティング システムでサポートされています。
 
@@ -51,6 +50,7 @@ Microsoft Edge は最新のライフサイクル ポリシーに準拠してお�
 - Windows Server 2012 R2
 - Windows Server 2016 (LTSC)
 - Windows Server 2019 (LTSC)
+- Windows Server 2022 (LTSC)
 - Windows Server (SAC)
 
 > [!IMPORTANT]
@@ -86,8 +86,10 @@ Microsoft Edge は Chromebook をサポートしていません。
 
 ## <a name="recent-changes"></a>最近の変更点
 
-- **2020 年 12 月 17 日** - Windows 7 および Windows Server 2008 R2 での Microsoft Edge のサポートは、2022 年 1 月 15 日まで延長されました。
-- **2021 年 1 月 28 日** - Apple Silicon Mac の Microsoft Edge サポート。
+- 
+            **2020 年 12 月 17 日** - Windows 7 および Windows Server 2008 R2 での Microsoft Edge のサポートは、2022 年 1 月 15 日まで延長されました。
+- 
+            **2021 年 1 月 28 日** - Apple Silicon Mac の Microsoft Edge サポート。
 
 ## <a name="see-also"></a>関連項目
 
