@@ -3,19 +3,19 @@ title: Microsoft Edge リリース スケジュール
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 08/24/2021
+ms.date: 09/27/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge リリース スケジュール
-ms.openlocfilehash: 8a9438b8031f0f850ca284aeca61f90dfd8fa7a9
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 3a6a4e825d902b1b5377845d47d546ff2fb6fc24
+ms.sourcegitcommit: 0d5255246b485a8b231cc624e261742a526f6769
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11980467"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "12044913"
 ---
 # <a name="microsoft-edge-release-schedule"></a>Microsoft Edge リリース スケジュール
 
@@ -47,7 +47,7 @@ Microsoft では、Microsoft Edge を新しい機能で更新する頻度を管�
 | 91 | リリース日<br>バージョン | 30-Apr-2021<br>[91.0.864.11](/deployedge/microsoft-edge-relnote-beta-channel#version-91086411-april-30) | 27-May-2021<BR>[91.0.864.37](/deployedge/microsoft-edge-relnote-stable-channel#version-91086437-may-27) |
 | 92 | リリース日<br>バージョン | 08-Jun-2021<br>[92.0.902.9](/deployedge/microsoft-edge-relnote-beta-channel#version-9209029-june-08) | 2021 年 7 月 22 日<BR>[92.0.902.55](/deployedge/microsoft-edge-relnote-stable-channel#version-92090255-july-22) |
 | 93 | リリース済み<br>バージョン | 03-Aug-2021<br>[93.0.961.11](/deployedge/microsoft-edge-relnote-beta-channel#version-93096111-August-03) | 02-Sep-2021<BR>[93.0.961.38](/deployedge/microsoft-edge-relnote-stable-channel#version-93096138-September-02) |
-| 94 | リリース済み<br>バージョン | 02-Sep-2021<br>[94.0.992.9](/deployedge/microsoft-edge-relnote-beta-channel#version-9409929-September-02) | 2021 年 9 月 23 日の週 |
+| 94 | リリース済み<br>バージョン | 02-Sep-2021<br>[94.0.992.9](/deployedge/microsoft-edge-relnote-beta-channel#version-9409929-September-02) | 24-Sep-2021<BR>[94.0.992.31](/deployedge/microsoft-edge-relnote-stable-channel#version-94099231-September-24) |
 | 95 | ターゲットのリリース | 2021 年 9 月 28 日の週 | 2021 年 10 月 21 日の週 |
 | 96 | ターゲットのリリース | 2021 年 10 月 26 日の週 | 2021 年 11 月 18日の週 |
 | 97 | ターゲットのリリース | 2021 年 11 月 30 日の週 | 2022 年 1 月 6 日の週 |
