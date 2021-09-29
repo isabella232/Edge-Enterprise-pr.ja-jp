@@ -3,26 +3,56 @@ title: Beta チャネルに関する Microsoft Edge のリリース ノート
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/17/2021
+ms.date: 09/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Beta チャネルに関する Microsoft Edge のリリース ノート
-ms.openlocfilehash: 95f3f02401d00e59eed1df20688d0069db1e8b06
-ms.sourcegitcommit: 93e141b725a08727b030332ea82f983d35c2a745
+ms.openlocfilehash: c62d540b014a47f1240d542c68ee52822719239f
+ms.sourcegitcommit: 4442aa94d4ff2fef8dd6f389ec0c6823b150d04f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2021
-ms.locfileid: "12019176"
+ms.lasthandoff: 09/28/2021
+ms.locfileid: "12053316"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Microsoft Edge Beta チャネルのリリースノート
 
 これらのリリース ノートでは、Microsoft Edge Beta チャネルに含まれている新機能とセキュリティ以外の更新プログラムに関する情報を提供します。 これらのリリース ノートのアーカイブ バージョンは、[こちら](microsoft-edge-relnote-archive-beta-channel.md)から入手できます。
 
 > [!NOTE]
-> Microsoft Edge Web プラットフォームは、ユーザー エクスペリエンス、セキュリティ、およびプライバシーを向上させるために絶えず進化しています。 詳細については、「[Microsoft Edge のサイトの互換性に影響する変更点](/microsoft-edge/web-platform/site-impacting-changes)」を参照してください。
+> Microsoft Edge Web プラットフォームは、ユーザー エクスペリエンス、セキュリティ、およびプライバシーを向上させるために絶えず進化しています。 詳細については、「[Microsoft Edge 向けのサイトの互換性に影響する変更点](/microsoft-edge/web-platform/site-impacting-changes)」を参照してください。
+
+## <a name="version-95010209-september-28"></a>バージョン 95.0.1020.9: 9 月 28 日
+
+### <a name="feature-updates"></a>機能更新プログラム
+
+- **[エクスプローラー] の [オンライン ライブラリのSharePointを表示Microsoft Edge。**  これで、[オンラインモダン ドキュメント ライブラリ] の [エクスプローラーで表示SharePointを有効にできます。 このエクスペリエンスをユーザーに表示して機能するには、Microsoft Edge ポリシー "Microsoft Edge の SharePoint ページのエクスプローラー機能の構成["](/deployedge/microsoft-edge-policies#configureviewinfileexplorer)を有効にし、SharePoint Online テナント構成を更新する必要があります。 詳細: [ファイル エクスプローラーをSharePointファイルを表示する] [Microsoft Edge - SharePoint Microsoft 365 |Microsoft Docs](/SharePoint/sharepoint-view-in-edge).
+
+- **イントラネット ゾーン ファイルの URL リンクは、ファイル エクスプローラー Windows開きます。**  イントラネット ゾーン HTTPS Web サイトから発信されたイントラネット ゾーン ファイルへのファイル URL リンクを、そのファイルまたはディレクトリWindowsエクスプローラーで開くことを許可できます。 このエクスペリエンスは、 [イントラネットFileLinksEnabled ポリシーを使用して有効](/deployedge/microsoft-edge-policies#intranetfilelinksenabled) にできます。
+
+- **ダウンロード エクスペリエンスの改善。**  ダウンロード ユーザー エクスペリエンスのサポートは、プログレッシブ Web アプリケーションの PWA と WebView に拡張されています。 また、エクスプローラーとデスクトップへのドラッグ アンド ドロップのサポートも開始します。
+
+- **PDF ドキュメントでオフにした場所を選択します。**  これで、PDF ドキュメントを最後に閉じた場所から読み取りを再開できます。
+
+- **効率モードでは、ラップトップがバッテリー セーバー モードに入った場合のバッテリ寿命が延長されます。**  効率モードは、ラップトップがバッテリー セーバー モードに入った場合にアクティブになり、ブラウザーがリソース使用量を管理してコンピューターのバッテリ寿命を延ばします。 効率モードがアクティブになるとき、プラグを抜き、バッテリーが少ない、プラグを抜いた、常に、および Never の 4 つのオプションがあります。 注: これは「制御された機能ロールアウト」です。 バッテリーを持つデバイスでは、機能が有効になっている必要があります。
+
+***新しいポリシー***
+
+- [BrowserLegacyExtensionPointsBlockingEnabled](/DeployEdge/microsoft-edge-policies#browserlegacyextensionpointsblockingenabled) ブラウザーの従来の拡張ポイントのブロックを有効にする
+- [CrossOriginWebAssemblyModuleSharingEnabled](/DeployEdge/microsoft-edge-policies#crossoriginwebassemblymodulesharingenabled) WebAssembly モジュールをクロスオリジンで送信できるかどうかを指定します。
+- [DisplayCapturePermissionsPolicyEnabled](/DeployEdge/microsoft-edge-policies#displaycapturepermissionspolicyenabled) 表示キャプチャのアクセス許可ポリシーがチェックまたはスキップされるかどうかを指定します。
+- [InternetExplorerIntegrationWindowOpenHeightAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenheightadjustment) IE モード ページとエッジ モード ページから取得される window.open の高さのピクセル調整を構成する
+- [InternetExplorerIntegrationWindowOpenWidthAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenwidthadjustment) IE モード ページから取得した window.open 幅とエッジ モード ページのピクセル調整を構成する
+- [イントラネットFileLinksEnabled](/DeployEdge/microsoft-edge-policies#intranetfilelinksenabled)ファイル エクスプローラーでイントラネット ゾーン ファイルの URL リンクMicrosoft Edge開Windows許可する
+- [ShadowStackCrashRollbackBehavior](/DeployEdge/microsoft-edge-policies#shadowstackcrashrollbackbehavior) ShadowStack クラッシュロールバックの動作を構成する
+- [VisualSearchEnabled](/DeployEdge/microsoft-edge-policies#visualsearchenabled) ビジュアル検索が有効
+
+***非推奨ポリシー***
+
+- [InternetExplorerIntegrationTestingAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationtestingallowed) Internet Explorer モードのテストを許可する
+- [LegacySameSiteCookieBehaviorEnabled](/DeployEdge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) 従来の SameSite Cookie の既定の動作設定を有効にする
 
 ## <a name="version-94099223-september-17"></a>バージョン 94.0.992.23: 9 月 17 日
 
@@ -42,31 +72,31 @@ ms.locfileid: "12019176"
 
 - **Microsoft Edgeと安定したチャネルの更新プログラムの 4 週間のケイデンスに移行します。**  メジャー バージョンには、新しい 4 週間のリリース サイクルを採用します。 決定の詳細については、次の記事を参照してください。 https://blogs.windows.com/msedgedev/2021/03/12/new-release-cycles-microsoft-edge-extended-stable/
 
-- **新しい拡張された安定したオプションが提供されています。**  お客様の管理下の顧客に新しい Extended Stable オプションをEnterpriseしています。 [拡張安定] オプションは、番号が付いたリビジョンでも維持され、8 週間ごとに更新されます。 隔年でセキュリティ更新プログラムが適用されます。  詳細については、次の情報を参照してください。 https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/
+- **新しい拡張安定オプションが提供されています。**  管理されたエンタープライズ顧客向けに、新しい拡張安定オプションを提供しています。 拡張安定オプションは偶数番目の改定にとどまり、8 週間ごとに更新されます。 セキュリティ更新プログラムは隔週で適用されます。  詳細については、以下を参照してください。https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/
 
-- **MHTML ファイルを開く既定の動作の改善。**  MHTML ファイルが Microsoft Edge から保存されていない限り (Microsoft Edge の [名前を付けて保存] または [ページに名前を付けて保存] オプションを使用して) IE モードが有効になっている場合、MHTML ファイルは IE モードで開き続けます。 ファイルがファイルから保存されている場合Microsoft Edge、ファイルは新しいファイルで開Microsoft Edge。  この変更により、MHTML ファイルを IE モードで開く際に発生したレンダリングの問題が修正Microsoft Edge。
+- **MHTML ファイルを開く既定の動作の改善。**  MHTML ファイルが (Microsoft Edge の [名前を付けて保存] または [ページに名前を付けて保存] オプションを使用して) Microsoft Edge から保存されていない限り、IE モードが有効になっている場合には MHTML ファイルは引き続き IE モードで開かれます。 Microsoft Edge からファイルを保存した場合、Microsoft Edge でファイルが開かれるようになりました。  この変更により、Microsoft Edge から保存した MHTML ファイルを IE モードで開いたときに発生していたレンダリングの問題が修正されます。
 
-- **プライベート ネットワーク要求をセキュリティで保護されたコンテキストに制限します。** インターネット上のページからローカル (イントラネット) ネットワーク上のリソースにアクセスするには、それらのページを HTTPS 経由で配信する必要があります。 この変更は、Microsoft Edge に基づく Chromium プロジェクトで発生します。 詳細については、「[Chrome プラットフォームの状態エントリ](https://chromestatus.com/feature/5436853517811712)」に移動します。 セキュリティ保護されていないページとの互換性を維持する必要があるシナリオをサポートするには [、InsecurePrivateNetworkRequestAllowed](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) と [InsecurePrivateNetworkRequestAllowedForUrls](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls)の 2 つの互換性ポリシーを使用できます。
+- **プライベートネットワークの要求が、安全なコンテキストに限定されました。** インターネット上のページからローカル (イントラネット) ネットワーク上のリソースにアクセスする場合には、そのページが HTTPS で配信されている必要があります。 この変更は、Microsoft Edge に基づく Chromium プロジェクトで発生します。 詳細については、「[Chrome プラットフォームの状態エントリ](https://chromestatus.com/feature/5436853517811712)」に移動します。 セキュリティで保護されていないページとの互換性を維持する必要があるシナリオをサポートする場合、[InsecurePrivateNetworkRequestAllowed](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) および [InsecurePrivateNetworkRequestAllowedForUrls](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls) の 2 つの互換性ポリシーを使用できます。
 
-- **混在コンテンツのダウンロードをブロックします。** セキュリティで保護されたページは、他のセキュリティで保護されたページでホストされているファイルのみをダウンロードし、セキュリティで保護されていない (HTTPS 以外の) ページでホストされているダウンロードは、セキュリティで保護されたページから開始されるとブロックされます。 この変更は、Microsoft Edge に基づく Chromium プロジェクトで発生します。 詳細については、Google セキュリティ ブログ エントリ [に移動します](https://security.googleblog.com/2020/02/protecting-users-from-insecure_6.html)。
+- **混在したコンテンツのダウンロードをブロックします。** セキュリティで保護されているページでは他のセキュリティで保護されているページでホストされているファイルのみがダウンロードされ、セキュリティで保護されていない (非 HTTPS) ページでホストされているダウンロードについては、セキュリティで保護されているページから開始された場合にはブロックされます。 この変更は、Microsoft Edge に基づく Chromium プロジェクトで発生します。 詳細については、「[Google セキュリティ ブログ エントリ](https://security.googleblog.com/2020/02/protecting-users-from-insecure_6.html)」を参照してください。
 
-- **オンプレミス アカウントの暗黙的なサインインを有効にする。**   OnlyOnPremisesImplicitSigninEnabled ポリシーを有効にすると、暗黙的なサインインに対してオンプレミス アカウントだけが有効になります。  Microsoft Edge は、MSA または AAD アカウントに暗黙的にサインインしようとしません。 オンプレミス アカウントから AAD アカウントへのアップグレードも停止されます。
+- **オンプレミス アカウントの暗黙的なサインインが有効になりました。**   OnlyOnPremisesImplicitSigninEnabled ポリシーを有効にすることで、暗黙的なサインインがオンプレミス アカウントに対してのみ有効となります。  Microsoft Edge は、MSA または AAD アカウントに暗黙的にサインインしようとしません。 オンプレミス アカウントから AAD アカウントへのアップグレードも停止されます。
 
 - **PDF ドキュメントに追加された自由形式のテキスト ボックス。**  フォームに入力し、目に見えるメモを追加するために使用できる無料のフォーム テキスト ボックスを PDF ドキュメントに追加する機能がサポートされています。
 
 - **パスワードを簡単に更新します。**  ブラウザーは、特定の Web サイトの [パスワードの変更] ページに直接移動し、ページに手動で移動する必要が生じなく、時間とクリックを節約します。 このページにアクセスすると、ブラウザーは既存のパスワードを自動入力し、強力で一意の新しいパスワードを提案します。  注: 現在、この機能は限られた数のサイトで利用できます。  
 
-- **新しいアクセシビリティ設定ページ。** アクセシビリティ関連の設定を 1 つのページにまとめました。 メインの設定リストの下 edge://settings/accessibility 新しいページが表示されます。 ここでは、Web ページを大きくするための設定、フォーカス領域の周囲に高い可視性のアウトラインを表示する設定、および Web 閲覧エクスペリエンスの向上に役立つその他の設定を示します。 今後のバージョンの新しい設定は、引き続きここに追加Microsoft Edge。
+- **新しいアクセシビリティ設定ページ。** アクセシビリティ関連の設定を 1 つのページへとまとめました。 新しい edge://settings/accessibility ページは、主な設定リストの下にあります。 ここには、Web ページを大きくするための設定、フォーカス領域の周囲に可視性の高いアウトラインを表示するための設定、Web 閲覧エクスペリエンスの改善に役立つその他の設定などが含まれています。 Microsoft Edge の今後のバージョンでも、ここに新しい設定を追加していく予定です。
 
 ***新しいポリシー***
 
-- [ApplicationGuardPassiveModeEnabled](/DeployEdge/microsoft-edge-policies#applicationguardpassivemodeenabled) Application Guard サイト一覧の構成を無視し、通常はエッジを参照する
+- [ApplicationGuardPassiveModeEnabled](/DeployEdge/microsoft-edge-policies#applicationguardpassivemodeenabled) Application Guard サイト リストの構成を無視し、通常どおり Edge を参照する
 - [OnlyOnPremisesImplicitSigninEnabled](/DeployEdge/microsoft-edge-policies#onlyonpremisesimplicitsigninenabled) 暗黙的なサインインに対して有効になっているオンプレミス アカウントのみ
-- [WebRtcRespectOsRoutingTableEnabled](/DeployEdge/microsoft-edge-policies#webrtcrespectosroutingtableenabled)WebRTC 経由でピアツーピア接続をWindows OS ルーティング テーブル ルールのサポートを有効にする
+- [WebRtcRespectOsRoutingTableEnabled](/DeployEdge/microsoft-edge-policies#webrtcrespectosroutingtableenabled) WebRTC 経由でピア ツー ピア接続を行うときに Windows OS ルーティング テーブル ルールのサポートを有効にする
 
-***非推奨ポリシー***
+***廃止されたポリシー***
 
-- [UserAgentClientHintsEnabled](/DeployEdge/microsoft-edge-policies#useragentclienthintsenabled) クライアント ヒントUser-Agent有効にする
+- [UserAgentClientHintsEnabled](/DeployEdge/microsoft-edge-policies#useragentclienthintsenabled) ユーザー エージェント クライアント ヒント機能を有効にする
 
 ## <a name="version-93096133-august-27"></a>バージョン 93.0.961.33: 8 月 27 日
 
