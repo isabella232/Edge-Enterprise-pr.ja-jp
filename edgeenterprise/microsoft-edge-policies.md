@@ -3,7 +3,7 @@ title: Microsoft Edge ブラウザー ポリシーに関するドキュメント
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 08/30/2021
+ms.date: 09/26/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge ブラウザーでサポートされているすべてのポリシーに関する Windows と Mac のドキュメント
-ms.openlocfilehash: 44dac3dd6bb489ac43e50433319b0a7908495df5
-ms.sourcegitcommit: 6eefb7cb134f25a1e2d1f515a3a8600524a4b6e3
+ms.openlocfilehash: 5e4deb6e75ab44c1706e17fe57232c703f2374dc
+ms.sourcegitcommit: 884bdb6ef9484ed3b080b4c5ab091f5f29ba2928
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2021
-ms.locfileid: "12017991"
+ms.lasthandoff: 09/29/2021
+ms.locfileid: "12056733"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - ポリシー
 
@@ -104,11 +104,12 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[ImagesBlockedForUrls](#imagesblockedforurls)|特定のサイトでの 画像 のブロック|
 |[InsecureContentAllowedForUrls](#insecurecontentallowedforurls)|特定のサイトでの安全でないコンテンツの使用を許可する|
 |[InsecureContentBlockedForUrls](#insecurecontentblockedforurls)|特定のサイトでの安全でないコンテンツのブロック|
+|[IntranetFileLinksEnabled](#intranetfilelinksenabled)|Microsoft Edge からのイントラネット ゾーン ファイル URL リンクを Windows エ クスプローラーで開くことを許可する|
 |[JavaScriptAllowedForUrls](#javascriptallowedforurls)|特定のサイトでの JavaScript を許可する|
 |[JavaScriptBlockedForUrls](#javascriptblockedforurls)|特定のサイトでの JavaScript のブロック|
 |[JavaScriptJitAllowedForSites](#javascriptjitallowedforsites)|JavaScript がこれらのサイトで JIT を使用するのを許可する|
 |[JavaScriptJitBlockedForSites](#javascriptjitblockedforsites)|これらのサイトで JavaScript による JIT の使用をブロックする|
-|[LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled)|従来の SameSite Cookie の既定の動作設定を有効にする (非推奨)|
+|[LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled)|既定のレガシ SameSite Cookie の動作設定を有効にする (廃止)|
 |[LegacySameSiteCookieBehaviorEnabledForDomainList](#legacysamesitecookiebehaviorenabledfordomainlist)|特定のサイトで Cookie のレガシ SameSite の動作に戻す|
 |[NotificationsAllowedForUrls](#notificationsallowedforurls)|特定のサイトで通知を許可する|
 |[NotificationsBlockedForUrls](#notificationsblockedforurls)|特定のサイトでの通知のブロック|
@@ -213,8 +214,10 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |-|-|
 |[DefaultPrinterSelection](#defaultprinterselection)|通常使うプリンターの選択ルール|
 |[PrintHeaderFooter](#printheaderfooter)|ヘッダーとフッターを印刷する|
+|[PrintPostScriptMode](#printpostscriptmode)|PostScript 印刷モード|
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|システムの既定のプリンターを通常使うプリンターに設定する|
 |[PrintRasterizationMode](#printrasterizationmode)|印刷ラスタライズ モード|
+|[PrintRasterizePdfDpi](#printrasterizepdfdpi)|印刷ラスター化 PDF DPI|
 |[PrinterTypeDenyList](#printertypedenylist)|拒否リストのプリンターの種類を無効にする|
 |[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)|バックグラウンド グラフィックス印刷モードを制限する|
 |[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)|既定の背景グラフィックス印刷モード|
@@ -293,6 +296,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[ApplicationLocaleValue](#applicationlocalevalue)|アプリケーション ロケールを設定する|
 |[AudioCaptureAllowed](#audiocaptureallowed)|オーディオ キャプチャの許可またはブロック|
 |[AudioCaptureAllowedUrls](#audiocaptureallowedurls)|アクセス許可を要求することなくオーディオ キャプチャ デバイスにアクセスできるサイト|
+|[AudioProcessHighPriorityEnabled](#audioprocesshighpriorityenabled)|Windows のオーディオ プロセスを通常より高い優先度で実行することを許可する|
 |[AudioSandboxEnabled](#audiosandboxenabled)|オーディオ サンドボックスの実行を許可する|
 |[AutoImportAtFirstRun](#autoimportatfirstrun)|初回実行時に、別のブラウザーのデータや設定を自動的にインポートする|
 |[AutoLaunchProtocolsFromOrigins](#autolaunchprotocolsfromorigins)|ユーザーにプロンプ​​トを表示せずに、リストされたオリジンから外部アプリケーションを起動できるプロトコルのリストを定義する|
@@ -309,6 +313,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[BlockThirdPartyCookies](#blockthirdpartycookies)|サード パーティの Cookie のブロック|
 |[BrowserAddProfileEnabled](#browseraddprofileenabled)|ID のポップアップ メニューまたは [設定] ページからプロファイルの作成を有効にする|
 |[BrowserGuestModeEnabled](#browserguestmodeenabled)|ゲスト モードを有効にする|
+|[BrowserLegacyExtensionPointsBlockingEnabled](#browserlegacyextensionpointsblockingenabled)|ブラウザーのレガシ拡張ポイントのブロックを有効にする|
 |[BrowserNetworkTimeQueriesEnabled](#browsernetworktimequeriesenabled)|ブラウザー ネットワーク時間サービスへのクエリを許可する|
 |[BrowserSignin](#browsersignin)|ブラウザーへのサインイン設定|
 |[BrowsingDataLifetime](#browsingdatalifetime)|データの有効期間設定の参照|
@@ -330,6 +335,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[ConfigureOnlineTextToSpeech](#configureonlinetexttospeech)|オンラインでの音声合成を構成する|
 |[ConfigureShare](#configureshare)|共有エクスペリエンスを構成する|
 |[ConfigureViewInFileExplorer](#configureviewinfileexplorer)|Microsoft Edge で SharePoint ページの "エクスプローラーで表示" 機能を構成する|
+|[CrossOriginWebAssemblyModuleSharingEnabled](#crossoriginwebassemblymodulesharingenabled)|WebAssembly モジュールをクロスオリジンで送信できるかどうかを指定します|
 |[CustomHelpLink](#customhelplink)|カスタム ヘルプリンクを指定する|
 |[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled)|DNS の傍受チェックを有効にする|
 |[DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)|Microsoft Edge を既定のブラウザーとして設定する|
@@ -345,7 +351,8 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[Disable3DAPIs](#disable3dapis)|3D グラフィック API のサポートを無効にする|
 |[DisableScreenshots](#disablescreenshots)|スクリーンショットの撮影を無効にする|
 |[DiskCacheDir](#diskcachedir)|ディスク キャッシュ ディレクトリを設定する|
-|[DiskCacheSize](#diskcachesize)|ディスク キャッシュ サイズをバイトに設定する|
+|[DiskCacheSize](#diskcachesize)|ディスク キャッシュ サイズをバイト単位で設定する|
+|[DisplayCapturePermissionsPolicyEnabled](#displaycapturepermissionspolicyenabled)|ディスプレイ キャプチャ アクセス許可ポリシー をチェックするかスキップするかを指定する|
 |[DnsOverHttpsMode](#dnsoverhttpsmode)|DNS over HTTPS モードを制御する|
 |[DnsOverHttpsTemplates](#dnsoverhttpstemplates)|目的の DNS over HTTPS リゾルバーの URI テンプレートを指定する|
 |[DownloadDirectory](#downloaddirectory)|ダウンロード ディレクトリを設定する|
@@ -409,7 +416,9 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|エンタープライズ モード サイト一覧を構成する|
 |[InternetExplorerIntegrationSiteListRefreshInterval](#internetexplorerintegrationsitelistrefreshinterval)|エンタープライズ モード サイト一覧を更新する頻度を構成する|
 |[InternetExplorerIntegrationSiteRedirect](#internetexplorerintegrationsiteredirect)|Internet Explorer モード ページから起動したときに未構成サイトへの「ページ内」ナビゲーションの動作を指定する|
-|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Internet Explorer モードのテストを許可する (非推奨)|
+|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Internet Explorer モードのテストを許可 (廃止)|
+|[InternetExplorerIntegrationWindowOpenHeightAdjustment](#internetexplorerintegrationwindowopenheightadjustment)|IE モード ページから取得した window.open の高さと Edge モード ページから取得した window.open の高さの間でピクセル調整を構成する|
+|[InternetExplorerIntegrationWindowOpenWidthAdjustment](#internetexplorerintegrationwindowopenwidthadjustment)|IE モード ページから取得した window.open の幅と Edge モード ページから取得した window.open の幅の間でピクセル調整を構成する|
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|イントラネット リダイレクトの動作|
 |[IsolateOrigins](#isolateorigins)|特定のオリジンでのサイトの分離を有効にする|
 |[LocalBrowserDataShareEnabled](#localbrowserdatashareenabled)|Microsoft を有効にして、ローカル Windows Edge 閲覧データを検索する|
@@ -463,6 +472,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|特定のサイトでのセンサーへのアクセスをブロックする|
 |[SerialAskForUrls](#serialaskforurls)|特定のサイトでのシリアル API を許可する|
 |[SerialBlockedForUrls](#serialblockedforurls)|特定のサイトでのシリアル API をブロックする|
+|[ShadowStackCrashRollbackBehavior](#shadowstackcrashrollbackbehavior)|ShadowStack クラッシュ ロールバックの動作を構成する|
 |[SharedArrayBufferUnrestrictedAccessAllowed](#sharedarraybufferunrestrictedaccessallowed)|非クロスオリジン分離コンテキストで SharedArrayBuffers を使用できるかどうかを指定します。|
 |[ShowMicrosoftRewards](#showmicrosoftrewards)|Microsoft Rewards のエクスペリエンスを表示する|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|お気に入り バーにMicrosoft Office のショートカットを表示する (非推奨)|
@@ -498,6 +508,7 @@ Microsoft Edge に推奨されるセキュリティ構成のベースライン�
 |[VerticalTabsAllowed](#verticaltabsallowed)|ブラウザーの側面にあるタブの垂直レイアウトの可用性を構成する|
 |[VideoCaptureAllowed](#videocaptureallowed)|ビデオ キャプチャの許可またはブロック|
 |[VideoCaptureAllowedUrls](#videocaptureallowedurls)|アクセス許可を要求することなくビデオ キャプチャ デバイスにアクセスできるサイト|
+|[VisualSearchEnabled](#visualsearchenabled)|ビジュアル検索対応|
 |[WPADQuickCheckEnabled](#wpadquickcheckenabled)|WPAD の最適化を設定する|
 |[WebAppInstallForceList](#webappinstallforcelist)|強制インストールする Web アプリの一覧を構成する|
 |[WebCaptureEnabled](#webcaptureenabled)|Microsoft Edge で Web キャプチャ機能を有効にする|
@@ -2724,6 +2735,66 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.
 ```
   
 
+  [トップに戻る](#microsoft-edge---policies)
+
+  ### <a name="intranetfilelinksenabled"></a>IntranetFileLinksEnabled
+
+  #### <a name="allow-intranet-zone-file-url-links-from-microsoft-edge-to-open-in-windows-file-explorer"></a>Microsoft Edge からのイントラネット ゾーン ファイル URL リンクを Windows エ クスプローラーで開くことを許可する
+
+  
+  
+  #### <a name="supported-versions"></a>サポートされているバージョン:
+
+  - 95 以降の Windows の場合
+
+  #### <a name="description"></a>説明
+
+  この設定を使用すると、イントラネット ゾーンの HTTPS Web サイトからイントラネット ゾーン ファイルへのファイル URL リンクを使用して、そのファイルまたはディレクトリの Windows エクスプローラーを開くことができます。
+
+このポリシーを有効にすると、イントラネット ゾーンの HTTPS ページから発せられたイントラネット ゾーン ファイル URL リンクによって、そのファイルまたはディレクトリの Windows エクスプローラーを開くことができます。
+
+このポリシーを無効にした場合、または構成しなかった場合、ファイル URL リンクは開かなくなります。
+
+Microsoft Edgeは、Internet Explorer 用に構成されたイントラネット ゾーンの定義を使用します。 
+            https://localhost/ は許可されたイントラネット ゾーン ホストの例外として特にブロックされますが、ループバック アドレス (127.0.0.*、[::1]) は既定でインターネット ゾーンと見なされることに注意してください。
+
+ユーザーは、[External Protocol DialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox) ポリシーが [無効] に設定されていない限り、プロトコルごとまたはサイトごとにプロンプトをオプトアウトすることができます。
+
+  #### <a name="supported-features"></a>サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### <a name="data-type"></a>［データの種類］:
+
+  - ブール値
+
+  #### <a name="windows-information-and-settings"></a>Windows の情報と設定
+
+  ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
+
+  - GP 一意の名前: IntranetFileLinksEnabled
+  - Microsoft Edge からのイントラネット ゾーン ファイル URL リンクを Windows エクスプローラーで開くことを許可する
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/コンテンツの設定
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): N/A
+  - 値の名前: IntranetFileLinksEnabled
+  - 値の種類: REG_DWORD
+
+  ##### <a name="example-value"></a>サンプル値:
+
+```
+0x00000000
+```
+
+  
+
   [ページのトップへ](#microsoft-edge---policies)
 
   ### <a name="javascriptallowedforurls"></a>JavaScriptAllowedForUrls
@@ -3002,19 +3073,19 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptJitBlockedForSites\1 = "[*.]example.e
 
   ### <a name="legacysamesitecookiebehaviorenabled"></a>LegacySameSiteCookieBehaviorEnabled
 
-  #### <a name="enable-default-legacy-samesite-cookie-behavior-setting-deprecated"></a>従来の SameSite Cookie の既定の動作設定を有効にする (非推奨)
+  #### <a name="enable-default-legacy-samesite-cookie-behavior-setting-obsolete"></a>既定のレガシ SameSite Cookie の動作設定を有効にする (廃止)
 
-  >非推奨: このポリシーは推奨されなくなっています。 現在はサポートされていますが、将来のリリースで廃止されます。
   
+  >廃止: このポリシーは廃止されており、Microsoft Edge 94 以降は機能しません。
   #### <a name="supported-versions"></a>サポートされているバージョン:
 
-  - Windows と macOS での 80 以降
+  - Windows と macOS での 80 以降、94 まで
 
   #### <a name="description"></a>説明
 
-  このポリシーは、SameSite の動作変更と互換していないことが判明した場合に、環境の更新に時間を割くための短期のメカニズムとしてのみ機能することを目的としているため、推奨されません。
+  このポリシーは、SameSite の動作の変更と互換性がないことが判明した企業が、環境を更新する時間を稼げるよう短期的なメカニズムとしてのみ機能することを目的としていたものであり、すでに機能しません。
 
-Microsoft Edge バージョン 95 では機能しません。 従来の Cookie 動作が必要な場合は、[LegacySameSiteCookieBehaviorEnabledForDomainList](#legacysamesitecookiebehaviorenabledfordomainlist) を使用して、ドメイン単位で動作を構成してください。
+レガシ Cookie 動作が必要な場合は、[LegacySameSiteCookieBehaviorEnabledForDomainList](#legacysamesitecookiebehaviorenabledfordomainlist) を使用して、ドメイン単位で動作を構成してください。
 
 すべての Cookie をレガシ SameSite の動作に戻します。 従来の動作に戻すと、SameSite 属性を指定しない Cookie は、"SameSite=None" であるかのように扱われ、"SameSite=None" Cookie が "Secure" 属性を保持する必要がなくなり、2 つのサイトが同じサイトであるかどうかを評価するときにスキームの比較がスキップされます。
 
@@ -3042,8 +3113,8 @@ Microsoft Edge バージョン 95 では機能しません。 従来の Cookie �
 
   ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
 
-  - GP 固有の名前: LegacySameSiteCookieBehaviorEnabled
-  - GP 名: 従来の SameSite Cookie の既定の動作設定を有効にする (非推奨)
+  - GP 一意の名前: LegacySameSiteCookieBehaviorEnabled
+  - GP 名: 既定のレガシ SameSite Cookie の動作設定を有効にする (廃止)
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/コンテンツの設定
   - GP パス (推奨): なし
   - GP ADMX ファイル名: MSEdge.admx
@@ -3090,7 +3161,7 @@ Microsoft Edge バージョン 95 では機能しません。 従来の Cookie �
 
 このポリシーを設定していない場合、グローバルな既定値が使用されます。 グローバルな既定値では、指定したパターンの対象外ドメインの Cookie にも使用されます。
 
-グローバル既定値は、非推奨 Microsoft Edge [LegacySameSiteBehaviorEnabled](#legacysamesitecookiebehaviorenabled)ポリシーを使用してバージョン 95 から構成できます。 
+グローバルな既定値は、[LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled) ポリシーを使用して構成することができます。 
             [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled) が設定されていない場合、グローバルな既定値がその他の構成ソースにフォールバックします。
 
 このポリシーにリスト化したパターンは URL ではなくドメインとして扱われるので、スキームやポートを指定することはできません。
@@ -6133,7 +6204,7 @@ Samba と Windows Server の最新バージョンは、すべて NTLMv2 をサ�
   
   #### <a name="supported-versions"></a>サポートされているバージョン:
 
-  - Windows と macOS での 87 以降
+  - Windows での 87 以降
 
   #### <a name="description"></a>説明
 
@@ -6178,13 +6249,6 @@ Samba と Windows Server の最新バージョンは、すべて NTLMv2 をサ�
 0x00000001
 ```
 
-  #### <a name="mac-information-and-settings"></a>Mac の情報と設定
-  
-  - 設定キー名: KioskAddressBarEditingEnabled
-  - サンプル値:
-``` xml
-<true/>
-```
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -7262,6 +7326,73 @@ Microsoft Edge がバックグラウンド モードで実行されている場�
 ```
   
 
+  [トップに戻る](#microsoft-edge---policies)
+
+  ### <a name="printpostscriptmode"></a>PrintPostScriptMode
+
+  #### <a name="print-postscript-mode"></a>PostScript 印刷モード
+
+  
+  
+  #### <a name="supported-versions"></a>サポートされているバージョン:
+
+  - 95 以降の Windows の場合
+
+  #### <a name="description"></a>説明
+
+  Windows で Microsoft Edge の印刷方法を制御します。
+
+Microsoft Windows のさまざまな PostScript 生成方法で PostScript プリンターに印刷すると、印刷のパフォーマンスに影響を与える可能性があります。
+
+このポリシーを [既定] に設定すると、postScript の生成時に Microsoft Edge で既定のオプションのセットが使用されます。 特にテキストの場合、テキストは常に Type 3 フォントを使用してレンダリングされます。
+
+このポリシーを Type42 に設定すると、可能な場合、Microsoft Edge は Type 42 フォントを使用してテキストをレンダリングします。 これにより、一部の PostScript プリンターの印刷速度が向上します。
+
+このポリシーを構成しない場合、Microsoft Edge は既定モードになります。
+
+ポリシー オプション マッピング:
+
+* Default (0) = 既定値
+
+* Type42 (1) = Type42
+
+このポリシーを構成する場合は、上記の情報を使用します。
+
+  #### <a name="supported-features"></a>サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### <a name="data-type"></a>［データの種類］:
+
+  - Integer
+
+  #### <a name="windows-information-and-settings"></a>Windows の情報と設定
+
+  ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
+
+  - GP 一意の名前: PrintPostScriptMode
+  - GP 名: PostScript 印刷モード
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/印刷
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): N/A
+  - 値の名前: PrintPostScriptMode
+  - 値の種類: REG_DWORD
+
+  ##### <a name="example-value"></a>サンプル値:
+
+```
+0x00000001
+```
+
+  
+
   [ページのトップへ](#microsoft-edge---policies)
 
   ### <a name="printpreviewusesystemdefaultprinter"></a>PrintPreviewUseSystemDefaultPrinter
@@ -7387,6 +7518,70 @@ Windows で PostScript に対応していないプリンターに印刷する場
 0x00000001
 ```
 
+  
+
+  [トップに戻る](#microsoft-edge---policies)
+
+  ### <a name="printrasterizepdfdpi"></a>PrintRasterizePdfDpi
+
+  #### <a name="print-rasterize-pdf-dpi"></a>印刷ラスター化 PDF DPI
+
+  
+  
+  #### <a name="supported-versions"></a>サポートされているバージョン:
+
+  - Windows と macOS の 95 以降
+
+  #### <a name="description"></a>説明
+
+  Microsoft Edge がラスタライズで PDF を印刷するときの印刷画像の解像度を制御します。
+
+[画像に印刷] オプションを使用して PDF を印刷する場合は、デバイスのプリンター設定または PDF の既定値以外の印刷解像度を指定すると便利です。  高解像度にすると、処理と印刷時間が大幅に長くなりますが、解像度が低くすると、画質が低下する可能性があります。
+
+このポリシーを設定すると、印刷用に PDF をラスタライズするときに使用する特定の解像度を指定できます。
+
+このポリシーを 0 に設定した場合、または構成しなかった場合は、ページ画像のラスタライズ中にシステム既定の解像度が使用されます。
+
+  #### <a name="supported-features"></a>サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### <a name="data-type"></a>［データの種類］:
+
+  - Integer
+
+  #### <a name="windows-information-and-settings"></a>Windows の情報と設定
+
+  ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
+
+  - GP 一意の名前: PrintRasterizePdfDpi
+  - GP 名: 印刷のラスタライズ PDF DPI
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/印刷
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): N/A
+  - 値の名前: PrintRasterizePdfDpi
+  - 値の種類: REG_DWORD
+
+  ##### <a name="example-value"></a>サンプル値:
+
+```
+0x0000012c
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac の情報と設定
+  
+  - 基本設定キー名: PrintRasterizePdfDpi
+  - サンプル値:
+``` xml
+<integer>300</integer>
+```
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -11174,6 +11369,62 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contos
 ```
   
 
+  [トップに戻る](#microsoft-edge---policies)
+
+  ### <a name="audioprocesshighpriorityenabled"></a>AudioProcessHighPriorityEnabled
+
+  #### <a name="allow-the-audio-process-to-run-with-priority-above-normal-on-windows"></a>Windows のオーディオ プロセスを通常より高い優先度で実行することを許可する
+
+  
+  
+  #### <a name="supported-versions"></a>サポートされているバージョン:
+
+  - 96 以降の Windows の場合
+
+  #### <a name="description"></a>説明
+
+  このポリシーは、Windows でのオーディオ プロセスの優先順位を制御します。
+このポリシーが有効になっている場合、オーディオ プロセスは通常の優先順位を上回って実行されます。
+このポリシーが無効になっている場合、オーディオ プロセスは通常の優先順位で実行されます。
+このポリシーが構成されていない場合は、オーディオ プロセスの既定の構成が使用されます。
+このポリシーは、企業がオーディオ キャプチャに関する特定のパフォーマンスの問題に対処できるよう、優先順位の高いオーディオを実行する機能を提供するための一時的な手段として意図されたものです。
+このポリシーは、将来削除されます。
+
+  #### <a name="supported-features"></a>サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: いいえ - ブラウザの再起動が必要
+
+  #### <a name="data-type"></a>［データの種類］:
+
+  - ブール値
+
+  #### <a name="windows-information-and-settings"></a>Windows の情報と設定
+
+  ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
+
+  - GP 一意の名前: AudioProcessHighPriorityEnabled
+  - Windows のオーディオ プロセスを通常より高い優先度で実行することを許可
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): N/A
+  - 値の名前: AudioProcessHighPriorityEnabled
+  - 値の種類: REG_DWORD
+
+  ##### <a name="example-value"></a>サンプル値:
+
+```
+0x00000001
+```
+
+  
+
   [ページのトップへ](#microsoft-edge---policies)
 
   ### <a name="audiosandboxenabled"></a>AudioSandboxEnabled
@@ -11382,7 +11633,9 @@ Microsoft Edge のバージョン 83 以降で、このポリシーを [FromMozi
 
 オリジンの一致パターンは、[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) で文書化されている [URLBlocklist](#urlblocklist) ポリシーの場合と同様の形式を使用します。
 
-ただし、このポリシーのオリジンの一致パターンには、「/path」または「@query」要素を含めることはできません。 「/path」または「@query」要素を含むパターンは無視されます。
+ただし、このポリシーのオリジンの一致パターンには、「/path」または「@query」要素を含めることはできません。 "/path" または "@query" 要素を含むパターンは無視されます。
+
+このポリシーは、file://* ワイルドカードでは期待どおりに機能しません。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -11504,6 +11757,8 @@ SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
 このポリシーを設定しない場合、ファイルの種類が [AutoOpenFileTypes](#autoopenfiletypes) にあるすべてのダウンロードが自動的に開きます。
 
 URL パターンは [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) に応じて書式設定する必要があります。
+
+このポリシーは、file://* ワイルドカードでは期待どおりに機能しません。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -12347,6 +12602,61 @@ SOFTWARE\Policies\Microsoft\Edge\AutoplayAllowlist\2 = "[*.]contoso.edu"
 ```
   
 
+  [トップに戻る](#microsoft-edge---policies)
+
+  ### <a name="browserlegacyextensionpointsblockingenabled"></a>BrowserLegacyExtensionPointsBlockingEnabled
+
+  #### <a name="enable-browser-legacy-extension-point-blocking"></a>ブラウザーのレガシ拡張ポイントのブロックを有効にする
+
+  
+  
+  #### <a name="supported-versions"></a>サポートされているバージョン:
+
+  - 95 以降の Windows の場合
+
+  #### <a name="description"></a>説明
+
+  Microsoft Edgeのブラウザー プロセスで ProcessExtensionPointDisablePolicy を設定して、レガシのサード パーティ 製アプリケーションからのコード インジェクションをブロックします。
+
+このポリシーを有効にした場合、または構成しなかった場合は、ProcessExtensionPointDisablePolicy が適用され、ブラウザー プロセスのレガシ拡張ポイントがブロックされます。
+
+このポリシーを無効にした場合、ProcessExtensionPointDisablePolicy はブラウザー プロセスのレガシ拡張ポイントをブロックするために適用されません。 これは、Microsoft Edge のセキュリティと安定性に悪影響を及ぼす可能性があります。これは、不明な悪潜在的に悪意のあるコードが Microsoft Edge のブラウザー プロセス内に読み込まれる可能性があるからです。 Microsoft Edge のブラウザー プロセス内で実行する必要があるサード パーティ製ソフトウェアとの互換性の問題がある場合にのみ、ポリシーをオフにします。
+
+  #### <a name="supported-features"></a>サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: いいえ - ブラウザの再起動が必要
+
+  #### <a name="data-type"></a>［データの種類］:
+
+  - ブール値
+
+  #### <a name="windows-information-and-settings"></a>Windows の情報と設定
+
+  ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
+
+  - GP 一意の名前: BrowserLegacyExtensionPointsBlockingEnabled
+  - GP 名: ブラウザーのレガシ拡張ポイントのブロックを有効化
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): N/A
+  - 値の名前: BrowserLegacyExtensionPointsBlockingEnabled
+  - 値の種類: REG_DWORD
+
+  ##### <a name="example-value"></a>サンプル値:
+
+```
+0x00000000
+```
+
+  
+
   [ページのトップへ](#microsoft-edge---policies)
 
   ### <a name="browsernetworktimequeriesenabled"></a>BrowserNetworkTimeQueriesEnabled
@@ -12924,7 +13234,9 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
               https://go.microsoft.com/fwlink/?linkid=2095322
             ](https://go.microsoft.com/fwlink/?linkid=2095322) に従って、URL パターンを形成します。 証明書は、スキーム、ポート、パスに関係なく指定されたホスト名に対して有効であるため、URL のホスト名の部分のみが考慮されます。 ワイルドカード ホストはサポートされていません。
 
-このポリシーを構成していない場合、証明書の透明性を介して公開されている必要がある証明書が、公開されていない場合、信頼されていないものとして扱われます。
+このポリシーを構成していない場合、証明書の透明性を介して公開されるべき証明書が、公開されていない場合、信頼されていないものとして扱われます。
+
+このポリシーは、file://* ワイルドカードでは期待どおりに機能しません。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -13823,6 +14135,68 @@ SOFTWARE\Policies\Microsoft\Edge\ConfigureViewInFileExplorer = [
   ```
   
 
+  
+
+  [トップに戻る](#microsoft-edge---policies)
+
+  ### <a name="crossoriginwebassemblymodulesharingenabled"></a>CrossOriginWebAssemblyModuleSharingEnabled
+
+  #### <a name="specifies-whether-webassembly-modules-can-be-sent-cross-origin"></a>WebAssembly モジュールをクロスオリジンで送信できるかどうかを指定します
+
+  
+  
+  #### <a name="supported-versions"></a>サポートされているバージョン:
+
+  - Windows と macOS の 95 以降
+
+  #### <a name="description"></a>説明
+
+  WebAssembly モジュールを別のウィンドウまたはワーカーにオリジン間で送信できるかどうかを指定します。 document.domain を非推奨にする取り組みの一環として、オリジン間の WebAssembly モジュールの共有は非推奨になります。「https://github.com/mikewest/deprecating-document-domain」を参照してください。 このポリシーを使用すると、オリジン間の WebAssembly モジュール共有を再度有効にできます。 これにより、非推奨プロセスでの移行期間が長くなります。
+
+このポリシーを有効にした場合、サイトは WebAssembly モジュール を制限なくオリジン間で送信できます。
+
+このポリシーを無効にした場合、または構成しなかった場合、サイトは WebAssembly モジュールを同じオリジンのウィンドウとワーカーにのみ送信できます。
+
+  #### <a name="supported-features"></a>サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: いいえ - ブラウザの再起動が必要
+
+  #### <a name="data-type"></a>［データの種類］:
+
+  - ブール値
+
+  #### <a name="windows-information-and-settings"></a>Windows の情報と設定
+
+  ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
+
+  - GP 一意の名前: CrossOriginWebAssemblyModuleSharingEnabled
+  - WebAssembly モジュールをオリジン間で送信できるかどうかを指定します
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): N/A
+  - 値の名前: CrossOriginWebAssemblyModuleSharingEnabled
+  - 値の種類: REG_DWORD
+
+  ##### <a name="example-value"></a>サンプル値:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac の情報と設定
+  
+  - 基本設定キー名: CrossOriginWebAssemblyModuleSharingEnabled
+  - サンプル値:
+``` xml
+<true/>
+```
   
 
   [ページのトップへ](#microsoft-edge---policies)
@@ -14883,6 +15257,70 @@ DirectInvoke の詳細については、「[https://go.microsoft.com/fwlink/?lin
   - サンプル値:
 ``` xml
 <integer>104857600</integer>
+```
+  
+
+  [トップに戻る](#microsoft-edge---policies)
+
+  ### <a name="displaycapturepermissionspolicyenabled"></a>DisplayCapturePermissionsPolicyEnabled
+
+  #### <a name="specifies-whether-the-display-capture-permissions-policy-is-checked-or-skipped"></a>ディスプレイ キャプチャ アクセス許可ポリシー をチェックするかスキップするかを指定する
+
+  
+  
+  #### <a name="supported-versions"></a>サポートされているバージョン:
+
+  - Windows と macOS の 95 以降
+
+  #### <a name="description"></a>説明
+
+  この仕様に従って、ディスプレイ キャプチャ アクセス許可ポリシーは、 getDisplayMedia() へのアクセスのゲートとなります: https://www.w3.org/TR/screen-capture/#feature-policy-integration ただし、このポリシーが無効の場合、この要件は適用されず、それ以外の場合は禁止されるコンテキストから getDisplayMedia() が許可されます。 このエンタープライズ ポリシーは一時的なものです。これは、Microsoft Edge バージョン 100 以降は削除される予定です。
+これは、アプリケーションが仕様に準拠していないが、修正するのに時間が必要なエンタープライズ ユーザーのブロックを解除することを目的としています。
+
+このポリシーを有効にした場合、または構成しなかった場合、サイトは、表示キャプチャ アクセス許可ポリシーの許可リストに登録されているコンテキストからのみ getDisplayMedia() を呼び出すことができます。
+
+このポリシーを無効にした場合、サイトは、表示キャプチャ アクセス許可ポリシーで許可リストに含まれていないコンテキストからでも getDisplayMedia() を呼び出すことができます。
+他の制限が引き続き適用される場合があることに注意してください。
+
+  #### <a name="supported-features"></a>サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: いいえ - ブラウザの再起動が必要
+
+  #### <a name="data-type"></a>［データの種類］:
+
+  - ブール値
+
+  #### <a name="windows-information-and-settings"></a>Windows の情報と設定
+
+  ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
+
+  - GP 一意の名前: DisplayCapturePermissionsPolicyEnabled
+  - ディスプレイ キャプチャ アクセス許可ポリシーをチェックするかスキップするかを指定します
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): N/A
+  - 値の名前: DisplayCapturePermissionsPolicyEnabled
+  - 値の種類: REG_DWORD
+
+  ##### <a name="example-value"></a>サンプル値:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac の情報と設定
+  
+  - 基本設定キーの名前: DisplayCapturePermissionsPolicyEnabled
+  - サンプル値:
+``` xml
+<true/>
 ```
   
 
@@ -19139,17 +19577,17 @@ Internet Explorer モードの詳細については、[https://go.microsoft.com/
 
   ### <a name="internetexplorerintegrationtestingallowed"></a>InternetExplorerIntegrationTestingAllowed
 
-  #### <a name="allow-internet-explorer-mode-testing-deprecated"></a>Internet Explorer モードのテストを許可する (非推奨)
+  #### <a name="allow-internet-explorer-mode-testing-obsolete"></a>Internet Explorer モードのテストを許可 (廃止)
 
-  >非推奨: このポリシーは推奨されなくなっています。 現在はサポートされていますが、将来のリリースで廃止されます。
   
+  >廃止: このポリシーは廃止されており、Microsoft Edge 94 以降は機能しません。
   #### <a name="supported-versions"></a>サポートされているバージョン:
 
-  - Windows での 86 以降
+  - Windows の 86 以降 94 まで
 
   #### <a name="description"></a>説明
 
-  このポリシーは非推奨です。代わりに [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) ポリシーを使用します。 Microsoft Edge バージョン 95 では機能しません。
+  このポリシーは、改善された機能によって置き換えられたため、廃止されています。 Microsoft Edge バージョン 94 以降では機能しません。 ユーザーが Internet Explorer モードでアプリケーションを開くことを許可するには、代わりに [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) ポリシーを使用します。 または、ユーザーは引き続き --ie-mode-test フラグを使用できます。
 
 このポリシーでは、ユーザーが Microsoft Edge で Internet Explorer モードのタブを開き、Internet Explorer モードでアプリケーションをテストできるようにします。
 
@@ -19177,8 +19615,8 @@ Internet Explorer モードの詳細については、[https://go.microsoft.com/
 
   ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
 
-  - GP 固有の名前: InternetExplorerIntegrationTestingAllowed
-  - GP 名: Internet Explorer モードのテストを許可する (非推奨)
+  - GP 一意の名前: InternetExplorerIntegrationTestingAllowed
+  - GP 名: Internet Explorer モード テストを許可する
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/
   - GP パス (推奨): なし
   - GP ADMX ファイル名: MSEdge.admx
@@ -19194,6 +19632,116 @@ Internet Explorer モードの詳細については、[https://go.microsoft.com/
 
 ```
 0x00000000
+```
+
+  
+
+  [トップに戻る](#microsoft-edge---policies)
+
+  ### <a name="internetexplorerintegrationwindowopenheightadjustment"></a>InternetExplorerIntegrationWindowOpenHeightAdjustment
+
+  #### <a name="configure-the-pixel-adjustment-between-windowopen-heights-sourced-from-ie-mode-pages-vs-edge-mode-pages"></a>IE モード ページから取得した window.open の高さと Edge モード ページから取得した window.open の高さの間でピクセル調整を構成する
+
+  
+  
+  #### <a name="supported-versions"></a>サポートされているバージョン:
+
+  - 95 以降の Windows の場合
+
+  #### <a name="description"></a>説明
+
+  この設定では、Internet Explorer モード サイトから window.open を介して生成されるポップアップ ウィンドウの高さに対するカスタム調整を指定できます。
+
+このポリシーを構成すると、Microsoft Edge は調整値を高さ (ピクセル単位) に追加します。 正確な違いは、IE と Edge の両方の UI 構成によって異なりますが、一般的な違いは 5 です。
+
+このポリシーを無効にした場合、または構成しなかった場合、ウィンドウの高さの計算において、Microsoft Edge は IE モードの window.open を Edge モードの window.open と同じように取り扱います。
+
+  #### <a name="supported-features"></a>サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: いいえ - ブラウザの再起動が必要
+
+  #### <a name="data-type"></a>［データの種類］:
+
+  - Integer
+
+  #### <a name="windows-information-and-settings"></a>Windows の情報と設定
+
+  ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
+
+  - GP 一意の名前: InternetExplorerIntegrationWindowOpenHeightAdjustment
+  - GP 名: IE モード ページと Edge モード ページからそれぞれ取得した window.open の高さのピクセル調整を構成する
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): N/A
+  - 値の名前: InternetExplorerIntegrationWindowOpenHeightAdjustment
+  - 値の種類: REG_DWORD
+
+  ##### <a name="example-value"></a>サンプル値:
+
+```
+0x00000005
+```
+
+  
+
+  [トップに戻る](#microsoft-edge---policies)
+
+  ### <a name="internetexplorerintegrationwindowopenwidthadjustment"></a>InternetExplorerIntegrationWindowOpenWidthAdjustment
+
+  #### <a name="configure-the-pixel-adjustment-between-windowopen-widths-sourced-from-ie-mode-pages-vs-edge-mode-pages"></a>IE モード ページから取得した window.open の幅と Edge モード ページから取得した window.open の幅の間でピクセル調整を構成する
+
+  
+  
+  #### <a name="supported-versions"></a>サポートされているバージョン:
+
+  - 95 以降の Windows の場合
+
+  #### <a name="description"></a>説明
+
+  この設定では、Internet Explorer モード サイトから window.open を介して生成されるポップアップ ウィンドウの幅に対するカスタム調整を指定できます。
+
+このポリシーを構成すると、Microsoft Edge は調整値を幅 (ピクセル単位) に追加します。 正確な違いは、IE と Edge の両方の UI 構成によって異なりますが、一般的な違いは 4 です。
+
+このポリシーを無効にした場合、または構成しなかった場合、Microsoft Edgeは IE モードの window.open を、ウィンドウ幅の計算において Edge モードの window.open と同じように扱います。
+
+  #### <a name="supported-features"></a>サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: いいえ - ブラウザの再起動が必要
+
+  #### <a name="data-type"></a>［データの種類］:
+
+  - Integer
+
+  #### <a name="windows-information-and-settings"></a>Windows の情報と設定
+
+  ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
+
+  - GP 一意の名前: InternetExplorerIntegrationWindowOpenWidthAdjustment
+  - GP 名: IE モード ページと Edge モード ページからそれぞれ取得した window.open の幅のピクセル調整を構成する
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): N/A
+  - 値の名前: InternetExplorerIntegrationWindowOpenWidthAdjustment
+  - 値の種類: REG_DWORD
+
+  ##### <a name="example-value"></a>サンプル値:
+
+```
+0x00000004
 ```
 
   
@@ -22824,6 +23372,75 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 ```
   
 
+  [トップに戻る](#microsoft-edge---policies)
+
+  ### <a name="shadowstackcrashrollbackbehavior"></a>ShadowStackCrashRollbackBehavior
+
+  #### <a name="configure-shadowstack-crash-rollback-behavior"></a>ShadowStack クラッシュ ロールバックの動作を構成する
+
+  
+  
+  #### <a name="supported-versions"></a>サポートされているバージョン:
+
+  - 95 以降の Windows の場合
+
+  #### <a name="description"></a>説明
+
+  この機能によって発生したクラッシュの後に、Microsoft Edge でハードウェア強制のスタック保護機能を有効にするかどうかを指定します。
+
+このポリシーを構成しない場合、Microsoft Edge はハードウェア強制のスタック保護を安全にロールアウトするための設定を管理し、最終的には、すべてのユーザーに対してこの機能を必須として有効にします。
+
+この機能によって発生したクラッシュの後、ハードウェア強制のスタック保護を常に無効化するには、このポリシーを 'Disable' に設定します。
+
+このポリシーを 'DisableUntilUpdate' に設定して、この機能によってトリガーされたクラッシュの後にハードウェア強制のスタック保護を無効にしますが、Microsoft Edge によって問題が解決された可能性がある場合にはスタック保護を有効にします。
+
+この機能によってトリガーされたクラッシュの後にハードウェア強制スタック保護を常に有効にするには、このポリシーを 'Enable' に設定します。
+
+ポリシー オプション マッピング:
+
+* Disable (0) = ハードウェア強制のスタック保護を無効にする
+
+* DisableUntilUpdate (1) = 次の Microsoft Edge 更新までハードウェア強制されたスタック保護を無効にする
+
+* Enable (2) = ハードウェア強制されたスタック保護を有効にする
+
+このポリシーを構成する場合は、上記の情報を使用します。
+
+  #### <a name="supported-features"></a>サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: いいえ
+  - 動的なポリシーの更新: はい
+
+  #### <a name="data-type"></a>［データの種類］:
+
+  - Integer
+
+  #### <a name="windows-information-and-settings"></a>Windows の情報と設定
+
+  ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
+
+  - GP 一意の名前: ShadowStackCrashRollbackBehavior
+  - GP 名: ShadowStack クラッシュ ロールバックの動作を構成する
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): なし
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): N/A
+  - 値の名前: ShadowStackCrashRollbackBehavior
+  - 値の種類: REG_DWORD
+
+  ##### <a name="example-value"></a>サンプル値:
+
+```
+0x00000000
+```
+
+  
+
   [ページのトップへ](#microsoft-edge---policies)
 
   ### <a name="sharedarraybufferunrestrictedaccessallowed"></a>SharedArrayBufferUnrestrictedAccessAllowed
@@ -24463,7 +25080,9 @@ Microsoft Edge がバックグラウンドにあるタブを 5 分以上フリ�
 
 このポリシーを使用すると、ブラウザーは、"tel:" や "ssh:" のようなプロトコルのプロトコル ハンドラーとして登録されている外部アプリケーションを自動的に呼び出すことができます。
 
-このポリシーを構成していない場合、[URLBlocklist](#urlblocklist) ポリシーのブロック リストに例外はなくなります。
+このポリシーを構成しない場合、[URLBlocklist](#urlblocklist) ポリシーのブロック リストに例外はなくなります。
+
+このポリシーは、file://* ワイルドカードでは期待どおりに機能しません。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -24548,6 +25167,8 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 
 このポリシーを構成していない場合、ブロックされる URL はなくなります。
 
+このポリシーは、file://* ワイルドカードでは期待どおりに機能しません。
+
   #### <a name="supported-features"></a>サポートされている機能:
 
   - 必須にすることができるか: はい
@@ -24583,9 +25204,8 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\2 = "https://ssl.server.com"
 SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\3 = "hosting.com/bad_path"
 SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\4 = "https://server:8080/path"
 SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\5 = ".exact.hostname.com"
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\6 = "file://*"
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\7 = "custom_scheme:*"
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\6 = "custom_scheme:*"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\7 = "*"
 
 ```
 
@@ -24600,7 +25220,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
   <string>hosting.com/bad_path</string>
   <string>https://server:8080/path</string>
   <string>.exact.hostname.com</string>
-  <string>file://*</string>
   <string>custom_scheme:*</string>
   <string>*</string>
 </array>
@@ -25099,6 +25718,61 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 ```
   
 
+  [トップに戻る](#microsoft-edge---policies)
+
+  ### <a name="visualsearchenabled"></a>VisualSearchEnabled
+
+  #### <a name="visual-search-enabled"></a>ビジュアル検索対応
+
+  
+  
+  #### <a name="supported-versions"></a>サポートされているバージョン:
+
+  - 95 以降の Windows の場合
+
+  #### <a name="description"></a>説明
+
+  ビジュアル検索を使用すると、画像内のエンティティに関するより多くの関連コンテンツをすばやく探索することができます。
+
+このポリシーを有効にした場合、または構成しなかった場合は、画像のホバー、コンテキスト メニュー、サイドバーでの検索を使用してビジュアル検索が有効になります。
+
+このポリシーを無効にすると、ビジュアル検索が無効になり、ホバー、コンテキスト メニュー、サイドバーでの検索を使用して画像に関する詳細情報を取得できなくなります。
+
+  #### <a name="supported-features"></a>サポートされている機能:
+
+  - 必須にすることができるか: はい
+  - 推奨にすることができるか: はい
+  - 動的なポリシーの更新: はい
+
+  #### <a name="data-type"></a>［データの種類］:
+
+  - ブール値
+
+  #### <a name="windows-information-and-settings"></a>Windows の情報と設定
+
+  ##### <a name="group-policy-admx-info"></a>グループ ポリシー (ADMX) 情報
+
+  - GP 一意の名前: VisualSearchEnabled
+  - GP 名: ビジュアル検索が有効
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (推奨): 管理用テンプレート/Microsoft Edge - 既定の設定 (ユーザーが上書き可能)/
+  - GP ADMX ファイル名: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows レジストリの設定
+
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (推奨): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - 値の名前: VisualSearchEnabled
+  - 値の種類: REG_DWORD
+
+  ##### <a name="example-value"></a>サンプル値:
+
+```
+0x00000000
+```
+
+  
+
   [ページのトップへ](#microsoft-edge---policies)
 
   ### <a name="wpadquickcheckenabled"></a>WPADQuickCheckEnabled
@@ -25179,14 +25853,18 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 
   このポリシーを構成して、ユーザーの操作なしでサイレント インストールし、ユーザーがアンインストールまたはオフにできない Web アプリの一覧を指定します。
 
-ポリシーの各リスト アイテムは、必須のメンバー URL (インストールする Web アプリの URL) を持つオブジェクトです。
+ポリシーの各リスト アイテムは、必須のメンバー: URL (インストールする Web アプリの URL) を持つオブジェクトです。
 
-3 つのオプション メンバー:
+および 5 つのオプション メンバー:
 - default_launch_container (新しいタブで Web アプリが開くウィンドウ モードが既定に指定されます。)
 
 - create_desktop_shortcut (Linux および Microsoft Windows デスクトップ ショートカットを作成する場合は True)。
 
-- fallback_app_name (Microsoft Edge 90 から開始すると、アプリ名が段階的な Web アプリ (PWA) ではない場合は上書きできます。また、PWA の場合は一時的にインストールされるが、インストールを完了する前に認証が必要なアプリ名を上書きできます)。
+- fallback_app_name (Microsoft Edge 90 以降、アプリ名が段階的な Web アプリ (PWA) ではない場合は上書きできます。また、PWA の場合は一時的にインストールされるが、インストールを完了する前に認証が必要なアプリ名を上書きできます)。 custom_name と fallback_app_name の両方が指定されている場合、後者は無視されます)。
+
+- custom_name (Microsoft Edge バージョン 96 以降では、すべての Web アプリと PWA のアプリ名を完全にオーバーライドできます)。
+
+- custom_icon (Microsoft Edge バージョン 96 以降では、インストールされているアプリのアプリ アイコンをオーバーライドできます。 アイコンは正方形で、最大 1 MB のサイズで、jpeg、png、gif、webp、ico のいずれかの形式である必要があります。 ハッシュ値は、アイコン ファイルの SHA256 ハッシュである必要があります)。
 
   #### <a name="supported-features"></a>サポートされている機能:
 
@@ -25231,7 +25909,19 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   {
     "default_launch_container": "window",
     "fallback_app_name": "Editor",
-    "url": "https://app.contoso.com/editor"
+    "url": "https://app.contoso.edu/editor"
+  },
+  {
+    "custom_name": "Spreadsheets",
+    "default_launch_container": "window",
+    "url": "https://app.contoso.edu/sheets"
+  },
+  {
+    "custom_icon": {
+      "hash": "c28f469c450e9ab2b86ea47038d2b324c6ad3b1e9a4bd8960da13214afd0ca38",
+      "url": "https://mydomain.example.com/sunny_icon.png"
+    },
+    "url": "https://weather.example.com"
   }
 ]
 ```
@@ -25239,7 +25929,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ##### <a name="compact-example-value"></a>コンパクト サンプル値:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "fallback_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
+  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "fallback_app_name": "Editor", "url": "https://app.contoso.edu/editor"}, {"custom_name": "Spreadsheets", "default_launch_container": "window", "url": "https://app.contoso.edu/sheets"}, {"custom_icon": {"hash": "c28f469c450e9ab2b86ea47038d2b324c6ad3b1e9a4bd8960da13214afd0ca38", "url": "https://mydomain.example.com/sunny_icon.png"}, "url": "https://weather.example.com"}]
   ```
   
 
@@ -25270,7 +25960,26 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
     <key>fallback_app_name</key>
     <string>Editor</string>
     <key>url</key>
-    <string>https://app.contoso.com/editor</string>
+    <string>https://app.contoso.edu/editor</string>
+  </dict>
+  <dict>
+    <key>custom_name</key>
+    <string>Spreadsheets</string>
+    <key>default_launch_container</key>
+    <string>window</string>
+    <key>url</key>
+    <string>https://app.contoso.edu/sheets</string>
+  </dict>
+  <dict>
+    <key>custom_icon</key>
+    <dict>
+      <key>hash</key>
+      <string>c28f469c450e9ab2b86ea47038d2b324c6ad3b1e9a4bd8960da13214afd0ca38</string>
+      <key>url</key>
+      <string>https://mydomain.example.com/sunny_icon.png</string>
+    </dict>
+    <key>url</key>
+    <string>https://weather.example.com</string>
   </dict>
 </array>
 ```
