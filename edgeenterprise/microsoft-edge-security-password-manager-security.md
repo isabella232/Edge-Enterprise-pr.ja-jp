@@ -3,19 +3,19 @@ title: 'Microsoft Edge　パスワード マネージャーのセキュリティ
 ms.author: v-andreabarr
 author: AndreaLBarr
 manager: collw
-ms.date: 06/29/2021
+ms.date: 09/30/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge　パスワード マネージャーのセキュリティ
-ms.openlocfilehash: 816bbd2c18fcae0a20a19fb0feab199454aa67b6
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 6f9dadab36c755113ad647e7e78a0bbbb2f8c965
+ms.sourcegitcommit: 2bf511511f131b8497b3e162c44286c217508885
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11980456"
+ms.lasthandoff: 10/01/2021
+ms.locfileid: "12057353"
 ---
 # <a name="microsoft-edge-password-manager-security"></a>Microsoft Edge　パスワード マネージャーのセキュリティ 
 
@@ -141,7 +141,7 @@ Microsoft セキュリティ チームは現在、Enterprise PCS のネットワ
 マスター パスワード機能 (データを自動入力する前にユーザーを認証する機能) は、より広範な脅威の軽減のための利便性のトレードオフを提供します。 具体的には、潜在的なマルウェアや物理的にローカルな攻撃者に対するデータ漏洩の期間を短縮するのに役立ちます。 ただし、マスター パスワードは万能型ではなく、ローカルの攻撃者と専用のマルウェアには、マスター パスワードの保護を回避するためのさまざまな戦略があります。
 
 > [!Note]
-> Microsoft は、オートフィルの前にユーザーを認証する価値を認識しており、この機能は将来のリリースで Microsoft Edge に追加される予定です。
+> Microsoft Edge、自動入力機能の前に認証を有効にする機能が提供されます。これにより、ユーザーはプライバシーの層を追加し、保存されたパスワードが他のユーザーによって使用されるのを防ぐ。 詳細については、「保存した [パスワードの追加プライバシー」を参照してください](https://support.microsoft.com/topic/additional-privacy-for-your-saved-passwords-31dbd670-e314-4901-a546-6f302548502e)。  
 
 ## <a name="can-using-a-password-manager-impact-my-privacy"></a>パスワード マネージャーを使用するとプライバシーに影響しますか?
 
