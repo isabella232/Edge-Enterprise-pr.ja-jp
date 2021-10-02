@@ -3,19 +3,19 @@ title: Stable チャネルに関する Microsoft Edge リリース ノート
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/24/2021
+ms.date: 10/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Stable チャネルに関する Microsoft Edge リリース ノート
-ms.openlocfilehash: 491debce74949c9e146acdcf825c99edf2f7f81e
-ms.sourcegitcommit: 6ef4b2e1dee45f33edb7fa8f83c93b4d169adca9
+ms.openlocfilehash: 37580e9f434729990a9bc00b7c9fe787a6735184
+ms.sourcegitcommit: 5d74bb2117eff722272b4fa61a42b3e8f3805ca7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2021
-ms.locfileid: "12044839"
+ms.lasthandoff: 10/02/2021
+ms.locfileid: "12060200"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Microsoft Edge Stable チャネルのリリース ノート
 
@@ -29,7 +29,18 @@ ms.locfileid: "12044839"
 > [!NOTE]
 > 安定チャネルの場合、更新は 1 日以上かけて段階的に公開されます。 詳細については、「[Microsoft Edge 更新プログラムの段階的なロールアウト](microsoft-edge-update-progressive-rollout.md)」を参照してください。
 >
-> Microsoft Edge Web プラットフォームは、ユーザー エクスペリエンス、セキュリティ、およびプライバシーを向上させるために絶えず進化しています。 詳細については、「[Microsoft Edge 向けのサイトの互換性に影響する変更点](/microsoft-edge/web-platform/site-impacting-changes)」を参照してください。
+> Microsoft Edge Web プラットフォームは、ユーザー エクスペリエンス、セキュリティ、およびプライバシーを向上させるために絶えず進化しています。 詳細については、「[Microsoft Edge 向けのサイトの互換性に影響する変更点](https://docs.microsoft.com/microsoft-edge/web-platform/site-impacting-changes)」を参照してください。
+
+## <a name="version-94099238-october-1"></a>バージョン 94.0.992.38: 10 月 1 日
+
+> [!Important]
+> この更新プログラムには、[CVE-2021-37975](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37975) および [CVE-2021-37976](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37976) の修正プログラムが含まれています。これについては、Chromium チームにより実際に感染報告がある悪用が報告されています。 詳細については、「[セキュリティ更新プログラム ガイド](https://msrc.microsoft.com/update-guide)」を参照してください
+
+安定したチャネルのセキュリティ更新プログラムは[こちら](/deployedge/microsoft-edge-relnotes-security#october-01-2021)に記載されています。
+
+## <a name="version-94099237-september-30"></a>バージョン 94.0.992.37: 9 月 30 日
+
+いくつかのバグとパフォーマンスの問題を修正しました。
 
 ## <a name="version-94099231-september-24"></a>バージョン 94.0.992.31: 9 月 24 日
 
