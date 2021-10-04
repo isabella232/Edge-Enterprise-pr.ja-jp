@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: ExtensionSettings ポリシーを使用して Microsoft Edge 拡張機能を構成するための詳細なリファレンス ガイド。
-ms.openlocfilehash: 67e3cffaa842f591a3d4c3035104addd19e34fd8
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 3660910a252377efe8dff47dec8f811ecdd2018e
+ms.sourcegitcommit: b67ebf9a68205407f5eaec343cb0722cfdd17396
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979966"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "12061106"
 ---
 # <a name="detailed-guide-to-the-extensionsettings-policy"></a>ExtensionSettings ポリシーの詳細なガイド
 
@@ -52,7 +52,35 @@ ExtensionSettings ポリシーは、グループ ポリシー内の別の場所�
 | **runtime_allowed_hosts**| 拡張機能が runtime_blocked_hosts で定義されている場合でも、指定された Web サイトと対話できるようにします。 最大 100 個のエントリを指定できます。 余分なエントリは破棄されます。<br>ホスト パターンの形式は、パスを定義できないことを除いて、 [一致パターン](/microsoft-edge/extensions-chromium/enterprise/match-patterns) に似ています。 次に、例を示します。<br>- *://*.example.com<br>- *://example。*—eTLD ワイルドカードがサポートされています     |
 | **runtime_blocked_hosts**| 拡張機能が、指定した Web サイトと対話したり、指定した Web サイトを変更したりすることを防ぎます。 変更には、JavaScript インジェクションのブロック、Cookie アクセス、および Web 要求の変更が含まれます。<br>最大 100 個のエントリを指定できます。 余分なエントリは破棄されます。<br>ホスト パターンの形式は、パスを定義できないことを除いて、一致パターンに似ています。 次に、例を示します。<br>- *://*.example.com<br>- *://example。*—eTLD ワイルドカードがサポートされています   |
 | **override_update_url**| エッジ 93 から利用可能<br>これがに設定されている場合、Edge は、以降の拡張機能の更新のために、ExtensionSettings ポリシーまたは ExtensionInstallForcelist ポリシーで指定された更新 `true` URL を使用します。<br>これが設定されていないか、またはに設定されている場合、Edge は拡張機能のマニフェストで指定された `false` URL を更新に使用します。|
+| **toolbar_state**| エッジ 94 から利用可能<br>このポリシー設定を使用すると、ツールバーにインストールされている拡張機能を強制的に表示できます。 既定の状態は `default_shown` 、すべての拡張機能です。 この設定では、次の状態が可能です<br>-`force_shown`: ツールバーにインストールされている拡張機能を強制的に表示するように選択できます。 ユーザーは、特定の拡張機能アイコンをツールバーから非表示にできます。<br>-`default_hidden`: この状態では、拡張機能はインストール時にツールバーから非表示になります。 必要に応じて、ユーザーはツールバーに表示できます。<br>-`default_shown`: これは、ブラウザーにインストールされているすべての拡張機能の聴覚障害者設定です。
 
+グローバル スコープ (*)で許可されるキーは次のとおりです。 
+
+- blocked_permissions
+- installation_mode - このスコープの有効な値は、'blocked'、'allowed'、または 'removed' のみです。
+- runtime_blocked_hosts
+- blocked_install_message
+- allowed_types
+- runtime_allowed_hosts
+- install_sources
+
+これらは、個々の拡張スコープで許可されるキーです。 
+
+- blocked_permissions
+- minimum_version_required
+- blocked_install_message
+- toolbar_state (エッジ 94 から利用可能)
+- installation_mode - `"blocked"` `"allowed"` `"removed"` `"force_installed"` 、、、 `"normal_installed"` 可能な値です。
+- runtime_allowed_hosts
+- update_url
+- override_update_url
+- runtime_blocked_hosts
+- toolbar_state
+
+更新 URL スコープで許可されるキーは次のとおりです。 
+
+- blocked_permissions
+- installation_mode - のみ `"blocked"` 、 `"allowed"` または `"removed"` 、このスコープ内の有効な値です。
 
 ## <a name="configure-using-a-json-string-in-windows-group-policy-editor"></a>Windows グループ ポリシー エディターで JSON 文字列を使用して構成する
 
