@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: ExtensionSettings ポリシーを使用して Microsoft Edge 拡張機能を構成するための詳細なリファレンス ガイド。
-ms.openlocfilehash: 3660910a252377efe8dff47dec8f811ecdd2018e
-ms.sourcegitcommit: b67ebf9a68205407f5eaec343cb0722cfdd17396
+ms.openlocfilehash: 7dceff78172626d70863883e0762be2f4cb7e51c
+ms.sourcegitcommit: e825c6a1b0e63004288e13f6bb672743b0ecfafb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "12061106"
+ms.lasthandoff: 10/05/2021
+ms.locfileid: "12069013"
 ---
 # <a name="detailed-guide-to-the-extensionsettings-policy"></a>ExtensionSettings ポリシーの詳細なガイド
 
@@ -57,7 +57,7 @@ ExtensionSettings ポリシーは、グループ ポリシー内の別の場所�
 グローバル スコープ (*)で許可されるキーは次のとおりです。 
 
 - blocked_permissions
-- installation_mode - このスコープの有効な値は、'blocked'、'allowed'、または 'removed' のみです。
+- installation_mode - のみ `"blocked"` 、 `"allowed"` または `"removed"` 、このスコープ内の有効な値です。
 - runtime_blocked_hosts
 - blocked_install_message
 - allowed_types
@@ -69,7 +69,6 @@ ExtensionSettings ポリシーは、グループ ポリシー内の別の場所�
 - blocked_permissions
 - minimum_version_required
 - blocked_install_message
-- toolbar_state (エッジ 94 から利用可能)
 - installation_mode - `"blocked"` `"allowed"` `"removed"` `"force_installed"` 、、、 `"normal_installed"` 可能な値です。
 - runtime_allowed_hosts
 - update_url
