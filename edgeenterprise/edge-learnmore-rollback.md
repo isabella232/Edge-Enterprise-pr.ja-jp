@@ -12,7 +12,7 @@ ms.collection: M365-modern-desktop
 description: Microsoft Edge を以前のバージョンにロールバックする方法
 ms.openlocfilehash: 1d20cfe920f8c0b5a8c1c253276555acb11e7916
 ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/12/2021
 ms.locfileid: "11979574"
